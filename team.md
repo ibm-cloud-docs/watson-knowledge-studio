@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-12-18"
+lastupdated: "2017-12-19"
 
 ---
 
@@ -30,11 +30,8 @@ The creation of an annotator component requires input from subject matter expert
 
 ## Before you begin
 
-If you haven't already, complete these tasks:
-
 - Make sure you're using a supported browser. For information, see [Browser requirements](/docs/services/watson-knowledge-studio/system-requirements.html).
-- Sign up for an {{site.data.keyword.ibmid}} and create an account for [{{site.data.keyword.cloud_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net){: new_window}.
-- From the [{{site.data.keyword.cloud_notm}} catalog page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/knowledge-studio){: new_window}, sign up for a {{site.data.keyword.knowledgestudioshort}} plan.
+- [Create an instance of {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/tutorials-create-project.html#instance).
 - If you signed up for a Standard or Premium plan, from the {{site.data.keyword.cloud_notm}} **Manage** tab, invite other users to your organization that you want to add as users in {{site.data.keyword.knowledgestudioshort}}. For more information about inviting users, see [Inviting users and assigning access ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/iam/iamuserinv.html){: new_window}.
 
 **Important**: The first user to launch {{site.data.keyword.knowledgestudioshort}} is granted the Admin role for the {{site.data.keyword.knowledgestudioshort}} instance. This task assumes you are the first person to launch {{site.data.keyword.knowledgestudioshort}} after you sign up for a plan, which means that you have the Admin role.

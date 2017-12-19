@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-12-17"
+lastupdated: "2017-12-19"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2017-12-17"
 This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/knowledge-studio/tutorials-bootstrap-annotation.html){: new_window}.
 {: tip}
 
-# Tutorial: Bootstrapping annotation
+# Bootstrapping annotation
 {: #wks_tutboot_intro}
 
 This tutorial helps you understand how to pre-annotate documents, which simplifies the annotation job of human annotators.

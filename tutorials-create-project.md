@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-12-17"
+lastupdated: "2017-12-19"
 
 ---
 
@@ -20,32 +20,34 @@ lastupdated: "2017-12-17"
 This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/knowledge-studio/tutorials-create-project.html){: new_window}.
 {: tip}
 
-# Tutorial: Creating a workspace
+# Getting started with {{site.data.keyword.knowledgestudioshort}}
 {: #wks_tutintro}
 
-The {{site.data.keyword.knowledgestudiofull}} *Creating a workspace* tutorial helps you perform prerequisite tasks that must be completed before you can start any of the other tutorials.
+This {{site.data.keyword.knowledgestudiofull}} tutorial helps you perform prerequisite tasks that must be completed before you can start any of the other tutorials.
 {: shortdesc}
 
-## Learning objectives
-
-After you complete the lessons in this tutorial, you will know how to do the following tasks:
-
-- Create workspaces
-- Create type systems
-- Add dictionaries
-
-This tutorial should take approximately 15 minutes to finish. If you explore other concepts related to this tutorial, it could take longer to complete.
-
 ## Before you begin
+{: #prereq}
 
-- Sign up for an {{site.data.keyword.ibmid}} and create an account for [{{site.data.keyword.cloud_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net){: new_window}
-- From [{{site.data.keyword.cloud_notm}} Catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/knowledge-studio){: new_window}, sign up for a {{site.data.keyword.knowledgestudioshort}} plan.
-- You're using a supported browser. For information, see [Browser requirements](/docs/services/watson-knowledge-studio/system-requirements.html).
-- To complete this tutorial, you must have at least one user ID that you can use in {{site.data.keyword.knowledgestudioshort}}. This user ID must have the Admin role. If you signed up for a free plan, as the subscription owner, you have the Admin role. For information about user roles, see [Assembling a team](/docs/services/watson-knowledge-studio/team.html).
+Confirm you're using a supported browser. For information, see [Browser requirements](/docs/services/watson-knowledge-studio/system-requirements.html).
 
-## Results
+## Creating a service instance
+{: #instance}
 
-After completing this tutorial, you will be ready to start creating a model.
+1. [Sign up for an {{site.data.keyword.ibmid}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net){: new_window} and log in to {{site.data.keyword.cloud_notm}}.
+1. From the [Dashboard page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/apps){: new_window}, sign up for a {{site.data.keyword.knowledgestudioshort}} plan.
+
+  1. Click **Catalog**.
+  1. In the search field, delete the **label:lite** filter and search for `{{site.data.keyword.knowledgestudioshort}}`.
+  1. Select **{{site.data.keyword.knowledgestudioshort}}**.
+  1. On the {{site.data.keyword.knowledgestudioshort}} catalog page, click **Upgrade** to upgrade your account to a Pay-As-You-Go account. You are prompted to provide credit card information.
+
+    If you sign up for a {{site.data.keyword.knowledgestudioshort}} Free plan, your credit card will not be charged. You can use the Free plan for an unlimited time at no cost.
+    {: tip}
+
+1. After you sign up for a plan, launch {{site.data.keyword.knowledgestudioshort}}.
+
+  To complete this tutorial, you must have at least one user ID that you can use in {{site.data.keyword.knowledgestudioshort}}. This user ID must have the Admin role. If you signed up for a free plan, as the only user, you have the Admin role. For information about user roles, see [Assembling a team](/docs/services/watson-knowledge-studio/team.html).
 
 ## Lesson 1: Assigning user roles
 {: #wks_tutless1}
