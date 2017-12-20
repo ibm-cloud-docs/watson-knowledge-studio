@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-12-19"
+lastupdated: "2017-12-20"
 
 ---
 
@@ -34,15 +34,15 @@ Confirm you're using a supported browser. For information, see [Browser requirem
 ## Creating a service instance
 {: #instance}
 
-1. [Sign up for an {{site.data.keyword.ibmid}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net){: new_window} and log in to {{site.data.keyword.cloud_notm}}.
+1. If you haven't already, [sign up for an {{site.data.keyword.ibmid}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net){: new_window} and log in to {{site.data.keyword.cloud_notm}}.
 1. From the [Dashboard page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/apps){: new_window}, sign up for a {{site.data.keyword.knowledgestudioshort}} plan.
 
   1. Click **Catalog**.
-  1. In the search field, delete the **label:lite** filter and search for `{{site.data.keyword.knowledgestudioshort}}`.
+  1. In the search field, delete the **label:lite** filter (if present) and search for `{{site.data.keyword.knowledgestudioshort}}`.
   1. Select **{{site.data.keyword.knowledgestudioshort}}**.
-  1. On the {{site.data.keyword.knowledgestudioshort}} catalog page, click **Upgrade** to upgrade your account to a Pay-As-You-Go account. You are prompted to provide credit card information.
+  1. If you don't already have a [Pay-As-You-Go account or Subscription account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/pricing/index.html){: new_window}, on the {{site.data.keyword.knowledgestudioshort}} catalog page, click **Upgrade**. You are prompted to provide credit card information.
 
-    If you sign up for a {{site.data.keyword.knowledgestudioshort}} Free plan, your credit card will not be charged. You can use the Free plan for an unlimited time at no cost.
+    If you choose a {{site.data.keyword.knowledgestudioshort}} Free plan, your credit card will not be charged. You can use the Free plan for an unlimited time at no cost.
     {: tip}
 
 1. After you sign up for a plan, launch {{site.data.keyword.knowledgestudioshort}}.
