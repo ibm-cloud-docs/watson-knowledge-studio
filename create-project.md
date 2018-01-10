@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-11"
+  years: 2015, 2018
+lastupdated: "2018-01-10"
 
 ---
 
@@ -264,8 +264,8 @@ IBM Watson Explorer
     you must have a valid AlchemyLanguage
     Advanced plan key ID.</p>
   <p class="p">To deploy to Watson Discovery
-    service, you must know the service IBM&reg;
-    Bluemix&reg; space and instance names.</p>
+    service, you must know the service {{site.data.keyword.cloud_notm}}
+    space and instance names.</p>
 </td>
 </tr>
 </table>
@@ -319,7 +319,7 @@ Watson Discovery
     you must have a valid AlchemyLanguage
     Advanced plan key ID.</p>
   <p class="p">To deploy to Watson Discovery
-    service, you must know the service IBM Bluemix
+    service, you must know the service {{site.data.keyword.cloud_notm}}
     space and instance names.</p>
 </td>
 </tr>

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-11"
+  years: 2015, 2018
+lastupdated: "2018-01-10"
 
 ---
 
@@ -139,7 +139,7 @@ To add documents to a workspace:
               CAS XMI format, you can
               import the <code>ZIP</code> file that contains the analyzed content. Specify that this is
               the type of content you want to import before you click <b>Import</b>. For details
-              about how to create these files and requirements for importing them, see [Importing pre-annotated documents ![External link icon](../../icons/launch-glyph.svg "External link icon")](wks_preannotate.html#wks_uima){: new_window}.</p>
+              about how to create these files and requirements for importing them, see [Importing pre-annotated documents ![External link icon](../../icons/launch-glyph.svg "External link icon")](preannotation.html#wks_uima){: new_window}.</p>
           </td>
         </tr>
       </tbody>
