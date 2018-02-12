@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-19"
+  years: 2015, 2018
+lastupdated: "2018-02-02"
 
 ---
 
@@ -34,7 +34,10 @@ The creation of an annotator component requires input from subject matter expert
 - [Create an instance of {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/tutorials-create-project.html#instance).
 - If you signed up for a Standard or Premium plan, from the {{site.data.keyword.cloud_notm}} **Manage** tab, invite other users to your organization that you want to add as users in {{site.data.keyword.knowledgestudioshort}}. For more information about inviting users, see [Inviting users and assigning access ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/iam/iamuserinv.html){: new_window}.
 
-**Important**: The first user to launch {{site.data.keyword.knowledgestudioshort}} is granted the Admin role for the {{site.data.keyword.knowledgestudioshort}} instance. This task assumes you are the first person to launch {{site.data.keyword.knowledgestudioshort}} after you sign up for a plan, which means that you have the Admin role.
+  **Important**:
+
+  - Ensure that invited users have the Cloud Foundry role of **Developer**. For more information, see [Cloud Foundry access ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window}.
+  - The first user to launch {{site.data.keyword.knowledgestudioshort}} is granted the Admin role for the {{site.data.keyword.knowledgestudioshort}} instance. This task assumes you are the first person to launch {{site.data.keyword.knowledgestudioshort}} after you sign up for a plan, which means that you have the Admin role.
 
 ## About this task
 
