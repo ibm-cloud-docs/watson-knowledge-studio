@@ -37,7 +37,7 @@ Before creating a workspace, answer these questions:
     - Machine-learning model: Uses statistical approach to finding entities and relationships in documents. This type of model can adapt as the amount of data grows.
     - Rule-based model: Uses a declarative approach to finding entities in documents. This type of model is more predictable, and is easier to comprehend and maintain. However, it does not learn from new data. It can only find patterns it has been taught to look for.
 
-    > **Note:** You can also create one workspace that contains both one rule-based model and one machine-learning model.
+    > **Note:** You can also create one workspace that contains both one rule-based model and one machine learning model.
 
 - **What services will use the model?**
 
@@ -100,7 +100,7 @@ The tokenization process is important because it determines the groups of charac
 
     This tokenizer is based on linguistic dictionaries. It finds tokens that follow the rules of the source document language. Only advanced users can customize this tokenizer.
 
-You must choose the tokenizer that you want to use when you create the workspace. You cannot switch to a different tokenizer later. For best results, use the default tokenizer. Only advanced users who want to modify the tokenizer behavior through a deterministic dictionary mechanism can choose the dictionary-based tokenizer. They can then customize it by adding new entries to the dictionary. However, customization must be done carefully because when you add new words to the dictionary, the changes can impact the machine-learning annotator in unintended ways.
+You must choose the tokenizer that you want to use when you create the workspace. You cannot switch to a different tokenizer later. For best results, use the default tokenizer. Only advanced users who want to modify the tokenizer behavior through a deterministic dictionary mechanism can choose the dictionary-based tokenizer. They can then customize it by adding new entries to the dictionary. However, customization must be done carefully because when you add new words to the dictionary, the changes can impact the machine learning annotator in unintended ways.
 
 ## Summary of inputs, outputs, and limitations
 {: #wks_formats}
@@ -173,7 +173,7 @@ Term entries file:</p><ul class="ul bullets"><li class="li"><p class="p wrapper"
 </tr>
 <tr class="strow"><td valign="top" headers="d25459e331" class="stentry"><p class="p wrapper">Document management </p></td>
 <td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Import a small, representative subset of documents </p><p class="p">Import documents that contain
-annotations previously added by a human annotator, a machine-learning annotator, or a 
+annotations previously added by a human annotator, a machine learning annotator, or a 
 UIMA
  analysis engine</p>
 <p class="p">You
@@ -227,16 +227,16 @@ ground truth</p>
 </td>
 </tr>
 <tr class="strow"><td valign="top" headers="d25459e331" class="stentry"><p class="p wrapper">Training and refinement</p></td>
-<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Train a supervised machine-learning annotator to extract domain-specific information from
-unstructured text.</p><p class="p">Evaluate and improve a supervised machine-learning annotator.</p>
+<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Train a supervised machine learning annotator to extract domain-specific information from
+unstructured text.</p><p class="p">Evaluate and improve a supervised machine learning annotator.</p>
 <p class="p">You cannot
-create a semi-supervised or unsupervised machine-learning annotator.</p>
+create a semi-supervised or unsupervised machine learning annotator.</p>
 <p class="p">You cannot
 do extensive feature engineering.</p>
 </td>
 <td valign="top" headers="d25459e335" class="stentry"><p class="p wrapper">Not applicable</p></td>
 <td valign="top" headers="d25459e337" class="stentry"><p class="p wrapper">Machine-learning model</p></td>
-<td valign="top" headers="d25459e339" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">1 machine-learning annotator component per workspace</p></li>
+<td valign="top" headers="d25459e339" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">1 machine learning annotator component per workspace</p></li>
 <li class="li"><p class="p wrapper">10 annotator component versions per workspace</p></li>
 <li class="li"><p class="p wrapper">Maximum number of workspaces is determined by your subscription plan.</p></li>
 <li class="li"><p class="p wrapper">The maximum number of training actions you can perform per month is determined by your subscription plan. </p></li>
@@ -244,7 +244,7 @@ do extensive feature engineering.</p>
 </td>
 </tr>
 <tr class="strow"><td valign="top" headers="d25459e331" class="stentry"><p class="p wrapper">Publication</p></td>
-<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Publish a machine-learning annotator to use for performing text extraction in other
+<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Publish a machine learning annotator to use for performing text extraction in other
 
 Watson
  applications. </p></td>

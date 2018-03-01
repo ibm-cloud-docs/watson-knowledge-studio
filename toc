@@ -44,7 +44,7 @@ Watson Knowledge Studio
         rule-annotator-model-use.md
 
     {: topicgroup}
-    Creating a machine-learning model
+    Creating a machine learning model
         ml-annotator.md
         documents-for-annotation.md
         preannotation.md

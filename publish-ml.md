@@ -20,13 +20,13 @@ lastupdated: "2017-12-11"
 This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/knowledge-studio/publish-ml.html){: new_window}.
 {: tip}
 
-# Using the machine-learning model
+# Using the machine learning model
 {: #publish-ml}
 
-Leverage a machine-learning model that you trained with {{site.data.keyword.watson}}&trade; {{site.data.keyword.knowledgestudioshort}} by making it available to other {{site.data.keyword.watson}} applications.
+Leverage a machine learning model that you trained with {{site.data.keyword.watson}}&trade; {{site.data.keyword.knowledgestudioshort}} by making it available to other {{site.data.keyword.watson}} applications.
 {: shortdesc}
 
-You can deploy or export a machine-learning annotator. A dictionary or {{site.data.keyword.alchemylanguageshort}} pre-annotator can only be used to pre-annotate documents within {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}}.
+You can deploy or export a machine learning annotator. A dictionary or {{site.data.keyword.alchemylanguageshort}} pre-annotator can only be used to pre-annotate documents within {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}}.
 
 Before a model can be deployed for use by a service, you must have a subscription to the service. {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} services are hosted on {{site.data.keyword.Bluemix_short}}, which is the cloud platform for {{site.data.keyword.IBM_notm}}. See [What is {{site.data.keyword.Bluemix_notm}}? ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/docs/overview/whatisbluemix.html){: new_window} for more information about the platform. To subscribe to one of the {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} services, create an account from the [{{site.data.keyword.Bluemix_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/){: new_window} website.
 
@@ -34,12 +34,12 @@ For some of the services, you must know details about the service instance that 
 
 ![Illustration of the {{site.data.keyword.cloud_notm}} Watson Services page. Shows that the instance name is listed in the NAME column, and the region and space information is displayed in the account details box.](images/bluemix-helper-marked0.jpg)
 
-You can also pre-annotate new documents with the machine-learning annotator component. See [Pre-annotating documents with a machine-learning annotator](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannotsire) for details.
+You can also pre-annotate new documents with the machine learning annotator component. See [Pre-annotating documents with a machine learning annotator](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannotsire) for details.
 
-## Deploying a machine-learning annotator to IBM AlchemyLanguage
+## Deploying a machine learning annotator to IBM AlchemyLanguage
 {: #wks_mabluemix}
 
-When you are satisfied with the performance of the annotator component, you can deploy a version of it to {{site.data.keyword.IBM_notm}} {{site.data.keyword.alchemylanguageshort}}. This feature, which requires you to provide an {{site.data.keyword.alchemyapishort}} access key, enables your applications to use the deployed machine-learning annotator to annotate documents in your domain.
+When you are satisfied with the performance of the annotator component, you can deploy a version of it to {{site.data.keyword.IBM_notm}} {{site.data.keyword.alchemylanguageshort}}. This feature, which requires you to provide an {{site.data.keyword.alchemyapishort}} access key, enables your applications to use the deployed machine learning annotator to annotate documents in your domain.
 
 ### Before you begin
 
@@ -48,13 +48,13 @@ You must have the {{site.data.keyword.alchemylanguageshort}} service Advanced pl
 
 ### About this task
 
-When you deploy the machine-learning annotator, you select the version of it that you want to deploy. To deploy to this service, you must have an access key from {{site.data.keyword.IBM_notm}} {{site.data.keyword.alchemylanguageshort}}.
+When you deploy the machine learning annotator, you select the version of it that you want to deploy. To deploy to this service, you must have an access key from {{site.data.keyword.IBM_notm}} {{site.data.keyword.alchemylanguageshort}}.
 
 The key must belong to an account that is authorized to publish custom models or the model will be deployed successfully, but you will not be able to use it.
 
 You must specify the key the first time you deploy a model to {{site.data.keyword.alchemylanguageshort}}. You can then reuse the key with multiple versions of the model that you deploy. Each key has a maximum number of models that can be deployed at the same time.
 
-Click the image to see how to deploy a machine-learning annotator.
+Click the image to see how to deploy a machine learning annotator.
 
 <div id="wks_mabluemix__imagemap_mmz_41v_jw">
   <img usemap="#d17752e211" border="0" class="image" src="images/deploy.jpg" alt="Shows the Annotator Component user interface." />
@@ -65,7 +65,7 @@ Click the image to see how to deploy a machine-learning annotator.
 
 ### Procedure
 
-To deploy a machine-learning annotator to {{site.data.keyword.alchemylanguageshort}} :
+To deploy a machine learning annotator to {{site.data.keyword.alchemylanguageshort}} :
 
 1. Log in as a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} administrator or project manager, open the **Annotator Component** page, and click **Details**.
 1. On the **Versions** tab, choose the version of the model that you want to deploy.
@@ -76,7 +76,7 @@ To deploy a machine-learning annotator to {{site.data.keyword.alchemylanguagesho
 1. Either enter the key that you obtained from {{site.data.keyword.alchemylanguageshort}} or select a previously deployed version of the model that has a key that you want to reuse, and click **Deploy**. If the key is valid, a confirmation that contains the model ID is displayed. This confirmation does not mean that the model is ready for use by your applications.
 1. The deployment process might take a few minutes. To check the status of the deployment, click **Status** on the **Versions** tab next to the version that you deployed. If the model is still being deployed, the status indicates "publishing". After deployment completes, the status changes to "available" if the deployment was successful, or "error" if problems occurred.
 
-    Status information includes the model ID, the last four digits of the {{site.data.keyword.alchemyapishort}} key, and a log of the deployment process. The model ID (model_id) is how your applications call the machine-learning model. Use the {{site.data.keyword.alchemyapishort}} key to keep track of the number of deployments per key.
+    Status information includes the model ID, the last four digits of the {{site.data.keyword.alchemyapishort}} key, and a log of the deployment process. The model ID (model_id) is how your applications call the machine learning model. Use the {{site.data.keyword.alchemyapishort}} key to keep track of the number of deployments per key.
 
 ### What to do next
 
@@ -104,7 +104,7 @@ To use the deployed model, you must copy and paste the model ID into your applic
     ```
     {: pre}
 
-    The response returns `Mary` and `lamb` if those are mentions that are recognized by your machine-learning model.
+    The response returns `Mary` and `lamb` if those are mentions that are recognized by your machine learning model.
 
 - The following API call looks for known relationships in the text string that is passed in the POST body. The request specifies the ID of the model that was created and an Alchemy API key that has rights to run custom models.
 
@@ -128,10 +128,10 @@ For more information, see the [{{site.data.keyword.alchemylanguageshort}} docume
 
 [{{site.data.keyword.alchemylanguageshort}} model issues](/docs/services/watson-knowledge-studio/troubleshooting.html#wks_ts_deployed_model_deleted)
 
-## Deploying a machine-learning annotator to IBM Watson Discovery
+## Deploying a machine learning annotator to IBM Watson Discovery
 {: #wks_madiscovery}
 
-When you are satisfied with the performance of the annotator component, you can deploy a version of it to {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}}. This feature enables your applications to use the deployed machine-learning model to enrich the insights that you get from your data to include the recognition of concepts and relations that are relevant to your domain.
+When you are satisfied with the performance of the annotator component, you can deploy a version of it to {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}}. This feature enables your applications to use the deployed machine learning model to enrich the insights that you get from your data to include the recognition of concepts and relations that are relevant to your domain.
 
 ### Before you begin
 
@@ -139,11 +139,11 @@ You must have administrative access to a {{site.data.keyword.watson}} {{site.dat
 
 ### About this task
 
-When you deploy the machine-learning annotator, you select the version of it that you want to deploy.
+When you deploy the machine learning annotator, you select the version of it that you want to deploy.
 
 ### Procedure
 
-To deploy a machine-learning annotator to {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}}, complete the following steps:
+To deploy a machine learning annotator to {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}}, complete the following steps:
 
 1. Log in as a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} administrator or project manager, open the **Annotator Component** page, and click **Details** on the Machine-learning annotator tile.
 1. On the **Versions** tab, choose the version of the model that you want to deploy.
@@ -163,10 +163,10 @@ To deploy a machine-learning annotator to {{site.data.keyword.watson}} {{site.da
 
 To use the deployed model, you must provide the model ID when it is requested during the {{site.data.keyword.discoveryshort}} service enrichment configuration process. For more details, see the [{{site.data.keyword.discoveryshort}} service documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/watson/developercloud/doc/discovery/integrate-wks.shtml){: new_window}.
 
-## Deploying a machine-learning annotator to IBM Watson Natural Language Understanding
+## Deploying a machine learning annotator to IBM Watson Natural Language Understanding
 {: #wks_manlu}
 
-When you are satisfied with the performance of the annotator component, you can deploy a version of it to {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} {{site.data.keyword.nlushort}}. This feature enables your applications to use the deployed machine-learning annotator to analyze semantic features of text input, including entities and relations.
+When you are satisfied with the performance of the annotator component, you can deploy a version of it to {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} {{site.data.keyword.nlushort}}. This feature enables your applications to use the deployed machine learning annotator to analyze semantic features of text input, including entities and relations.
 
 ### Before you begin
 
@@ -174,11 +174,11 @@ You must have a {{site.data.keyword.nlushort}} service to deploy to. And you mus
 
 ### About this task
 
-When you deploy the machine-learning annotator, you select the version of it that you want to deploy.
+When you deploy the machine learning annotator, you select the version of it that you want to deploy.
 
 ### Procedure
 
-To deploy a machine-learning annotator to the {{site.data.keyword.nlushort}} service, complete the following steps:
+To deploy a machine learning annotator to the {{site.data.keyword.nlushort}} service, complete the following steps:
 
 1. Log in as a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} administrator or project manager, open the **Annotator Component** page, and click **Details**.
 1. On the **Versions** tab, choose the version of the model that you want to deploy.
@@ -344,10 +344,10 @@ You can use the model with the {{site.data.keyword.nlushort}} `GET /analyze` req
 
 See the [{{site.data.keyword.nlushort}} documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/doc/natural-language-understanding/index.html){: new_window} for more details.
 
-## Leveraging a machine-learning annotator in IBM Watson Explorer
+## Leveraging a machine learning annotator in IBM Watson Explorer
 {: #wks_maexport}
 
-Export the trained machine-learning annotator so it can be used in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
+Export the trained machine learning annotator so it can be used in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
 
 ### Before you begin
 
@@ -361,7 +361,7 @@ Click [this link ![External link icon](../../icons/launch-glyph.svg "External li
 
 ### Procedure
 
-To leverage a machine-learning annotator in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer, complete the following steps.
+To leverage a machine learning annotator in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer, complete the following steps.
 
 1. Log in to {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} as an administrator or project manager, open the **Annotator Component** page, and click **Export** on the Machine Learning annotator component.
 
@@ -372,7 +372,7 @@ To leverage a machine-learning annotator in {{site.data.keyword.IBM_notm}} {{sit
 1. Download the file to your local system.
 1. From the {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer application, import the model.
 
-    You can then map the model to a machine-learning annotator in {{site.data.keyword.watson}} Explorer Content Analytics. After you perform the mapping step, when you crawl documents, the annotator finds instances of the entities and relations that your model understands. To learn how to import and configure the model in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer, see the technical document that describes the integration: [http://www.ibm.com/support/docview.wss?uid=swg27048147 ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/support/docview.wss?uid=swg27048147){: new_window}.
+    You can then map the model to a machine learning annotator in {{site.data.keyword.watson}} Explorer Content Analytics. After you perform the mapping step, when you crawl documents, the annotator finds instances of the entities and relations that your model understands. To learn how to import and configure the model in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer, see the technical document that describes the integration: [http://www.ibm.com/support/docview.wss?uid=swg27048147 ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/support/docview.wss?uid=swg27048147){: new_window}.
 
 #### Related tasks
 

@@ -42,13 +42,13 @@ You can train an annotator component in the following languages:
 - Korean
 - Spanish
 
-Support includes the ability to add documents in these languages to a workspace, add dictionaries, run pre-annotation, use the Ground Truth Editor to annotate documents, and train a machine-learning annotator. When you select a language, the system applies language-specific templates to handle dictionary entries, text tokenization, and sentence segmentation. For information about how the system handles dictionaries in different languages, see [Dictionaries](/docs/services/watson-knowledge-studio/dictionaries.html#wks_dictionaries).
+Support includes the ability to add documents in these languages to a workspace, add dictionaries, run pre-annotation, use the Ground Truth Editor to annotate documents, and train a machine learning annotator. When you select a language, the system applies language-specific templates to handle dictionary entries, text tokenization, and sentence segmentation. For information about how the system handles dictionaries in different languages, see [Dictionaries](/docs/services/watson-knowledge-studio/dictionaries.html#wks_dictionaries).
 
 > **Note:** The rule editor and rule annotator cannot handle bidirectional text, so cannot be used with Arabic documents.
 
 > **Restrictions:**
 >
-> Because of character restrictions in the underlying machine-learning technology, entries in the type system cannot contain spaces and can include only the following ASCII characters:
+> Because of character restrictions in the underlying machine learning technology, entries in the type system cannot contain spaces and can include only the following ASCII characters:
 >
 > - A through Z and a through z
 > - 0 through 9

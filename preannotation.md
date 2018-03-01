@@ -28,7 +28,7 @@ Simplify the job of the human annotator by pre-annotating the documents in a wor
 
 Pre-annotation makes the job of human annotators easier because it covers the straight-forward annotations, and gets the job of annotating the documents underway.
 
-The method that you use to pre-annotate documents in no way restricts the ways that you can use the resulting model. For example, just because you use the {{site.data.keyword.alchemylanguageshort}} service to pre-annotate documents does not mean you must deploy the final machine-learning model that you build to the {{site.data.keyword.alchemylanguageshort}} service. Pre-annotation is solely meant to bootstrap the human annotation process.
+The method that you use to pre-annotate documents in no way restricts the ways that you can use the resulting model. For example, just because you use the {{site.data.keyword.alchemylanguageshort}} service to pre-annotate documents does not mean you must deploy the final machine learning model that you build to the {{site.data.keyword.alchemylanguageshort}} service. Pre-annotation is solely meant to bootstrap the human annotation process.
 
 ## Important notes
 
@@ -46,17 +46,17 @@ The following pre-annotators are available:
 
 - **Dictionary**
 
-    Uses a dictionary of terms that you provide and associate with an entity type to find mentions of that entity type in the documents. This choice is best for fields with unique or specialized terminology because this pre-annotator does not analyze the context in which the term is used in the way a machine-learning pre-annotator does; it instead relies on the term being distinct enough to have a decipherable meaning regardless of the context in which it is used. For example, it is easier to recognize *asbestos* as a mineral entity type than to determine the entity type of *squash*, which can refer to a vegetable, a sport, or a verb meaning to crush something.
+    Uses a dictionary of terms that you provide and associate with an entity type to find mentions of that entity type in the documents. This choice is best for fields with unique or specialized terminology because this pre-annotator does not analyze the context in which the term is used in the way a machine learning pre-annotator does; it instead relies on the term being distinct enough to have a decipherable meaning regardless of the context in which it is used. For example, it is easier to recognize *asbestos* as a mineral entity type than to determine the entity type of *squash*, which can refer to a vegetable, a sport, or a verb meaning to crush something.
 
 - **Machine-learning**
 
-    Uses a machine-learning model to automatically annotate documents. This option is only available to you if you have created a machine learning model with {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} already. If you add a new document set, you can run the machine-learning annotator that you created previously to pre-annotate the new documents. If the new set of documents are similar to the documents that were used to train the machine-learning annotator originally, then this is probably your best choice for pre-annotation.
+    Uses a machine learning model to automatically annotate documents. This option is only available to you if you have created a machine learning model with {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} already. If you add a new document set, you can run the machine learning annotator that you created previously to pre-annotate the new documents. If the new set of documents are similar to the documents that were used to train the machine learning annotator originally, then this is probably your best choice for pre-annotation.
 
 - **Rule**
 
     Uses a rule-based model to automatically annotate documents. This option is only available if you have created a rule-based model with {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} already. If your documents contain common patterns of tokens from which you can derive meaning, this model might be a good choice. It can incorporate some of the function of the dictionary pre-annotator if you enable it, by identifying class types for dictionary terms that it finds in the documents also.
 
-Alternatively, you can import already-annotated documents, and use them to start training the machine-learning model. You cannot run a pre-annotator on annotated documents that you import or the existing annotations will be stripped from the documents and replaced with annotations produced by the pre-annotator only.
+Alternatively, you can import already-annotated documents, and use them to start training the machine learning model. You cannot run a pre-annotator on annotated documents that you import or the existing annotations will be stripped from the documents and replaced with annotations produced by the pre-annotator only.
 
 > **Note:** You *can* run a pre-annotator on documents that were added to the ground truth as part of the current workspace. Annotations that were added to the documents, reviewed, accepted, and promoted to ground truth within the current workspace are not stripped out.
 
@@ -131,7 +131,7 @@ To use the {{site.data.keyword.alchemylanguageshort}} service to pre-annotate do
 ### Results
 {: #wks_preannotalchemy__export-warning}
 
-Ground truth that is produced by documents that were pre-annotated by the {{site.data.keyword.alchemylanguageshort}} service cannot be used directly outside of {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}}. You can export the ground truth (in non-readable form) to move it from one {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace to another. And you can continue to develop the ground truth and use it to build a machine-learning or rule-based model that can be deployed for use in services outside of the {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} tool.
+Ground truth that is produced by documents that were pre-annotated by the {{site.data.keyword.alchemylanguageshort}} service cannot be used directly outside of {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}}. You can export the ground truth (in non-readable form) to move it from one {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace to another. And you can continue to develop the ground truth and use it to build a machine learning or rule-based model that can be deployed for use in services outside of the {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} tool.
 
 > **Restriction:** Only documents that were pre-annotated with {{site.data.keyword.alchemylanguageshort}} are obscured into a non-readable format at export time. But, all annotations in those documents are obscured, including annotations that were added to the documents by human annotators.
 
@@ -175,29 +175,29 @@ To create a Dictionary annotator and pre-annotate documents:
 
 [Dictionaries](/docs/services/watson-knowledge-studio/dictionaries.html#wks_dictionaries)
 
-## Pre-annotating documents with a machine-learning annotator
+## Pre-annotating documents with a machine learning annotator
 {: #wks_preannotsire}
 
-You can use an existing machine-learning annotator to pre-annotate documents that you add to your corpus.
+You can use an existing machine learning annotator to pre-annotate documents that you add to your corpus.
 
 ### About this task
 
-After 10 to 30 documents are annotated, a machine-learning model can be trained on the data. Such a minimally-trained model should not be used in a production, but can be used as a pre-annotation model that can help speed up the human annotation of subsequent documents. For example, if you add documents to the corpus after you train a machine-learning annotator, you can use the trained annotator to pre-annotate the new document sets. Never run a pre-annotator on the same documents that have been annotated by a person; it removes the human annotation.
+After 10 to 30 documents are annotated, a machine learning model can be trained on the data. Such a minimally-trained model should not be used in a production, but can be used as a pre-annotation model that can help speed up the human annotation of subsequent documents. For example, if you add documents to the corpus after you train a machine learning annotator, you can use the trained annotator to pre-annotate the new document sets. Never run a pre-annotator on the same documents that have been annotated by a person; it removes the human annotation.
 
 ### Procedure
 
-To use an existing machine-learning annotator to pre-annotate documents:
+To use an existing machine learning annotator to pre-annotate documents:
 
 1. Log in as a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} administrator and open the **Annotator Component** page.
 1. In the **Machine Learning** annotator area, select the document sets that you added to the corpus and click **Run** to start the pre-annotation process. You don't need to select the existing document sets because these documents have already been annotated by human annotators.
-1. After pre-annotation is completed, open the **Human Annotation** page. Create a new task and assign the new document sets to human annotators. Human annotation should require much less time because the machine-learning annotator applied annotations based on the learning it acquired through training.
+1. After pre-annotation is completed, open the **Human Annotation** page. Create a new task and assign the new document sets to human annotators. Human annotation should require much less time because the machine learning annotator applied annotations based on the learning it acquired through training.
 1. After human annotators complete their work, approve and adjudicate the document sets, as usual.
-1. On the **Annotator Component** page, click **Details** to view machine-learning annotator details. On the Training/Test/Blind page, click **Edit Sets** and ensure that the document sets that you added are included in the data that you use to train the annotator component.
+1. On the **Annotator Component** page, click **Details** to view machine learning annotator details. On the Training/Test/Blind page, click **Edit Sets** and ensure that the document sets that you added are included in the data that you use to train the annotator component.
 
-    Initially, a typical goal is to improve the machine-learning annotator by adding more training data. In this case, add the new document sets to the Training set. In future iterations, also add new document sets to the Test set and Blind set. See [Document set management](/docs/services/watson-knowledge-studio/improve-ml.html#wks_mamanagedata) for more information.
+    Initially, a typical goal is to improve the machine learning annotator by adding more training data. In this case, add the new document sets to the Training set. In future iterations, also add new document sets to the Test set and Blind set. See [Document set management](/docs/services/watson-knowledge-studio/improve-ml.html#wks_mamanagedata) for more information.
     {: tip}
 
-1. Click **Train** to re-train the machine-learning annotator, or click **Train &amp; Evaluate** to re-train and evaluate the performance results.
+1. Click **Train** to re-train the machine learning annotator, or click **Train &amp; Evaluate** to re-train and evaluate the performance results.
 
 ## Pre-annotating documents with the rule annotator
 {: #wks_preannotrule}
@@ -237,7 +237,7 @@ The pre-annotated documents must be in the XMI serialization form of UIMA Common
 
 UIMA CAS XMI is a standard format of Apache UIMA. Guidelines are provided for how to create files in the correct format from analyzed collections in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}}&trade; Explorer. If you use another Apache UIMA implementation, adapt these guidelines for your purposes. Regardless of how you create the XMI files, the requirements for creating the type system mapping file and ZIP file are the same for everyone.
 
-If you assign the imported documents to human annotators, the documents appear pre-annotated in the Ground Truth Editor and a number of mentions might already be annotated. The human annotator thus has more time to focus on applying the annotation guidelines to unmarked mentions. Alternatively, you can bypass the human annotation step and use the pre-annotated documents to immediately start training and evaluating a machine-learning annotator.
+If you assign the imported documents to human annotators, the documents appear pre-annotated in the Ground Truth Editor and a number of mentions might already be annotated. The human annotator thus has more time to focus on applying the annotation guidelines to unmarked mentions. Alternatively, you can bypass the human annotation step and use the pre-annotated documents to immediately start training and evaluating a machine learning annotator.
 
 ### Exporting analyzed documents from Watson Explorer Content Analytics
 {: #wks_uimawexca}
@@ -253,8 +253,8 @@ To get analyzed documents from a {{site.data.keyword.watson}} Explorer Content A
 1. In the **Analyzed document export options** area, select **Export documents as XML files**, select the **Enable CAS as XMI format export** check box, specify the output path for where the exported data is to be written, and click **OK**.
 1. Stop and restart the parse and index services for the collection, and then do one of the following steps:
 
-    - If the collection already contains indexed documents that you want to use for training the machine-learning annotator in the document cache, restart a full index build.
-    - If the collection does not contain indexed documents that you want to use for training the machine-learning annotator, import documents, configure at least one crawler to crawl the documents, and start the crawler.
+    - If the collection already contains indexed documents that you want to use for training the machine learning annotator in the document cache, restart a full index build.
+    - If the collection does not contain indexed documents that you want to use for training the machine learning annotator, import documents, configure at least one crawler to crawl the documents, and start the crawler.
 
 1. In the **Export** area, check the status of the export request. The progress indicates how many documents are exported.
 1. Go to the output folder that you specified when you configured export options. When documents are exported as XML files, the output folder name is based on the time stamp when the export occurs. The output folder contains XMI files (`*.xmi`) and the UIMA TypeSystem descriptor file (`exported_typesystem.xml`).
@@ -280,7 +280,7 @@ You can export a collection of analyzed documents from {{site.data.keyword.IBM_n
 To get analyzed documents from a Content Analytics Studio collection:
 
 1. Launch Content Analytics Studio and open the Studio project.
-1. Right-click a folder that contains documents that you want to use for training a machine-learning annotator and select **Analyze Collection**.
+1. Right-click a folder that contains documents that you want to use for training a machine learning annotator and select **Analyze Collection**.
 1. Select a UIMA pipeline configuration file.
 1. Go to the Collection Analysis view and click the **Save** icon in the Collection Analysis view. Specify the folder where the saved results are to be written and specify the file name.
 1. Open the folder that you specified. The file extension of the saved file is `.annotations`.

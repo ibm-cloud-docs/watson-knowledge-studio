@@ -68,13 +68,13 @@ To deploy a rule-based annotator to {{site.data.keyword.alchemylanguageshort}} :
 1. Either enter the key that you obtained from {{site.data.keyword.alchemylanguageshort}} or select a previously deployed version of the model that has a key that you want to reuse, and click **Deploy**. If the key is valid, a confirmation that contains the model ID is displayed. This confirmation does not mean that the model is ready for use by your applications.
 1. The deployment process might take a few minutes. To check the status of the deployment, click **Status** on the **Versions** tab next to the version that you deployed. If the model is still being deployed, the status indicates "publishing". After deployment completes, the status changes to "available" if the deployment was successful, or "error" if problems occurred.
 
-    Status information includes the model ID, the last four digits of the {{site.data.keyword.alchemyapishort}} key, and a log of the deployment process. The model ID (model_id) is how your applications call the machine-learning model. Make a note of this model ID because there is no programmatic way to access it later. Use the {{site.data.keyword.alchemyapishort}} key to keep track of the number of deployments per key.
+    Status information includes the model ID, the last four digits of the {{site.data.keyword.alchemyapishort}} key, and a log of the deployment process. The model ID (model_id) is how your applications call the machine learning model. Make a note of this model ID because there is no programmatic way to access it later. Use the {{site.data.keyword.alchemyapishort}} key to keep track of the number of deployments per key.
 
 ### What to do next
 
 To use the deployed model, you must copy and paste the model ID into your application's API call.
 
-> **Attention:** You cannot use the `GET /info/models` {{site.data.keyword.alchemylanguageshort}} API call to get the model ID of rule-based models programmatically. You can access the model ID of machine-learning models with this call, but not the rule-based model ID. The only way to get the rule-based model ID is to check the deployment status of the model from the **Annotator Component** page of the application.
+> **Attention:** You cannot use the `GET /info/models` {{site.data.keyword.alchemylanguageshort}} API call to get the model ID of rule-based models programmatically. You can access the model ID of machine learning models with this call, but not the rule-based model ID. The only way to get the rule-based model ID is to check the deployment status of the model from the **Annotator Component** page of the application.
 
 The call must also specify the {{site.data.keyword.alchemylanguageshort}} service that you want to use with the model and your {{site.data.keyword.alchemyapishort}} access key.
 

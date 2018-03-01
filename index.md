@@ -23,14 +23,14 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 # About
 {: #wks_overview_full}
 
-Use {{site.data.keyword.knowledgestudiofull}} to create a machine-learning model that understands the linguistic nuances, meaning, and relationships specific to your industry or to create a rule-based model that finds entities in documents based on rules that you define.
+Use {{site.data.keyword.knowledgestudiofull}} to create a machine learning model that understands the linguistic nuances, meaning, and relationships specific to your industry or to create a rule-based model that finds entities in documents based on rules that you define.
 {: shortdesc}
 
 To become a subject matter expert in a given industry or domain, {{site.data.keyword.watson}} must be trained. You can facilitate the task of training {{site.data.keyword.watson}} with {{site.data.keyword.watson}}&trade; {{site.data.keyword.knowledgestudioshort}}.
 
-## Build a machine-learning model
+## Build a machine learning model
 
-{{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} provides easy-to-use tools for annotating unstructured domain literature, and uses those annotations to create a custom machine-learning model that understands the language of the domain. The accuracy of the model improves through iterative testing, ultimately resulting in an algorithm that can learn from the patterns that it sees and recognize those patterns in large collections of new documents. You can deploy the finished machine-learning model to other {{site.data.keyword.watson}} cloud-based offerings and cognitive solutions to find and extract mentions of relations and entities, including entity coreferences.
+{{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} provides easy-to-use tools for annotating unstructured domain literature, and uses those annotations to create a custom machine learning model that understands the language of the domain. The accuracy of the model improves through iterative testing, ultimately resulting in an algorithm that can learn from the patterns that it sees and recognize those patterns in large collections of new documents. You can deploy the finished machine learning model to other {{site.data.keyword.watson}} cloud-based offerings and cognitive solutions to find and extract mentions of relations and entities, including entity coreferences.
 
 The following diagram illustrates how it works.
 
@@ -41,7 +41,7 @@ The following diagram illustrates how it works.
 1. {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} uses the ground truth to train a model.
 1. The trained model is used to find entities, relations, and coreferences in new, never-seen-before documents.
 
-See [Creating a machine-learning annotator](/docs/services/watson-knowledge-studio/ml-annotator.html) for more details.
+See [Creating a machine learning annotator](/docs/services/watson-knowledge-studio/ml-annotator.html) for more details.
 
 ## Build a rule-based model
 
@@ -58,7 +58,7 @@ Use {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} to p
 
 - Bootstrap annotation by using the {{site.data.keyword.alchemylanguageshort}} entity extraction service to automatically find and annotate entities in your documents. When human annotators begin to annotate the documents, they can see the annotations that were already made by the service and can review and add to them. See [Pre-annotating documents with {{site.data.keyword.IBM_notm}} {{site.data.keyword.alchemylanguageshort}}](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannotalchemy) for details.
 - Import analyzed documents that are in [UIMA CAS XMI format](/docs/services/watson-knowledge-studio/preannotation.html#wks_uimaweximport). For example, you can import UIMA CAS XMI files that were exported from {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer content analytics collections or [{{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer Content Analytics Studio](/docs/services/watson-knowledge-studio/preannotation.html#wks_uimawexstudio).
-- Deploy a [machine-learning](/docs/services/watson-knowledge-studio/publish-ml.html#wks_madiscovery) or [rule-based](/docs/services/watson-knowledge-studio/rule-annotator-model-use.html#wks_rule_discovery) model to use with the {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}} service.
-- Deploy a [machine-learning](/docs/services/watson-knowledge-studio/publish-ml.html#wks_manlu) or [rule-based](/docs/services/watson-knowledge-studio/rule-annotator-model-use.html#wks_rule_nlu) model to use with the {{site.data.keyword.nlushort}} service.
-- [Export a machine-learning model](/docs/services/watson-knowledge-studio/publish-ml.html#wks_maexport) to use in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
+- Deploy a [machine learning](/docs/services/watson-knowledge-studio/publish-ml.html#wks_madiscovery) or [rule-based](/docs/services/watson-knowledge-studio/rule-annotator-model-use.html#wks_rule_discovery) model to use with the {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}} service.
+- Deploy a [machine learning](/docs/services/watson-knowledge-studio/publish-ml.html#wks_manlu) or [rule-based](/docs/services/watson-knowledge-studio/rule-annotator-model-use.html#wks_rule_nlu) model to use with the {{site.data.keyword.nlushort}} service.
+- [Export a machine learning model](/docs/services/watson-knowledge-studio/publish-ml.html#wks_maexport) to use in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
 - [Export a rule annotator PEAR file](/docs/services/watson-knowledge-studio/rule-annotator-model-use.html#wks_rule_export) to use in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.

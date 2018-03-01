@@ -28,7 +28,7 @@ To accelerate the creation of an annotator component, you can import resources l
 
 The ability to separately export and import different resources gives you flexibility when designing and creating an annotator component. For example, you might create one workspace to design the type system and perform human annotation, and then create a separate workspace, perhaps in a separate instance of {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} with different users, to train the machine annotator. Being able to import the resources, including the ground truth created by human annotators, makes this scenario possible.
 
-You cannot export and import a machine-learning model. Instead, you can export all of the artifacts that were used to create the annotator from one workspace and import them into a new workspace. From the new workspace, you can run training again to recreate the model. The new model should produce similar results to the original model because they were both trained with the same set of artifacts.
+You cannot export and import a machine learning model. Instead, you can export all of the artifacts that were used to create the annotator from one workspace and import them into a new workspace. From the new workspace, you can run training again to recreate the model. The new model should produce similar results to the original model because they were both trained with the same set of artifacts.
 
 The files that you export are operating system-independent. The {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} instances where you export and import files do not have to run the same version of Linux.
 
@@ -63,6 +63,6 @@ To import documents, open the **Documents** page in the new workspace and select
 
 [Dictionaries](/docs/services/watson-knowledge-studio/artifacts.html#wks_dictionaries)
 
-[Documents for machine-learning annotators](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_t_docs_intro)
+[Documents for machine learning annotators](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_t_docs_intro)
 
 [Documents for rule-based annotators](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html)

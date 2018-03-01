@@ -129,7 +129,7 @@ The following events can cause problems with deployed models:
 
 **Related tasks**:
 
-[Deploying a machine-learning annotator to {{site.data.keyword.IBM_notm}} {{site.data.keyword.alchemylanguageshort}}](/docs/services/watson-knowledge-studio/publish-ml.html#wks_mabluemix)
+[Deploying a machine learning annotator to {{site.data.keyword.IBM_notm}} {{site.data.keyword.alchemylanguageshort}}](/docs/services/watson-knowledge-studio/publish-ml.html#wks_mabluemix)
 
 ### Problem
 
@@ -211,7 +211,7 @@ The storage limit has been met or would be exceeded if the action were to procee
 
 ### Resolving the problem
 
-The largest consumers of storage space are machine-learning and rule-based models. To free up space, you can take the following actions:
+The largest consumers of storage space are machine learning and rule-based models. To free up space, you can take the following actions:
 
 - Delete snapshot versions of any models that you do not expect to need to revert to.
 - Delete any models that you do not need.

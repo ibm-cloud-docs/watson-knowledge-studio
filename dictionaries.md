@@ -43,11 +43,11 @@ You can create dictionaries in {{site.data.keyword.watson}} {{site.data.keyword.
 
 ### How are dictionaries used?
 
-Dictionaries are used in a couple ways, all optional. They are used by the machine-learning annotator component to provide words or phrases that are equivalent for information-extraction purposes and during pre-annotation to bootstrap the annotation effort.
+Dictionaries are used in a couple ways, all optional. They are used by the machine learning annotator component to provide words or phrases that are equivalent for information-extraction purposes and during pre-annotation to bootstrap the annotation effort.
 
 - **Machine-learning usage**
 
-    The entity type that you associate with a dictionary is not used to define rules for the machine-learning annotator component. Machine learning evaluates mentions in the documents independently. It does not assume that a mention has a specific entity type just because the mention matches an entry in a dictionary that is associated with that entity type. It does take the information into account, but treats it as one piece of information among other pieces of information that it gathers through linguistic analysis. In fact, if none of the terms in a dictionary occur in the ground truth documents, then the dictionary is not used at all by the machine-learning annotator.
+    The entity type that you associate with a dictionary is not used to define rules for the machine learning annotator component. Machine learning evaluates mentions in the documents independently. It does not assume that a mention has a specific entity type just because the mention matches an entry in a dictionary that is associated with that entity type. It does take the information into account, but treats it as one piece of information among other pieces of information that it gathers through linguistic analysis. In fact, if none of the terms in a dictionary occur in the ground truth documents, then the dictionary is not used at all by the machine learning annotator.
 
 - **Pre-annotation usage**
 

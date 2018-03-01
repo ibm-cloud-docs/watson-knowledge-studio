@@ -43,7 +43,7 @@ The creation of an annotator component requires input from subject matter expert
 
 Typically, you add users to fill the following roles.
 
-**Note:** If you signed up for a Free plan, you can't add others to your instance of {{site.data.keyword.knowledgestudioshort}}. Instead, when you launch {{site.data.keyword.knowledgestudioshort}}, you are added to the instance with the Admin role. In the Admin role, you can perform many functions that would typically be performed by different people who are assigned to different roles. You can test how experts from different areas of a domain can work together to build a machine-learning model or rules-based model.
+**Note:** If you signed up for a Free plan, you can't add others to your instance of {{site.data.keyword.knowledgestudioshort}}. Instead, when you launch {{site.data.keyword.knowledgestudioshort}}, you are added to the instance with the Admin role. In the Admin role, you can perform many functions that would typically be performed by different people who are assigned to different roles. You can test how experts from different areas of a domain can work together to build a machine learning model or rules-based model.
 
 - **HumanAnnotator**
 
@@ -51,7 +51,7 @@ Typically, you add users to fill the following roles.
 
 - **ProjectManager**
 
-    Project managers are people who help to facilitate the creation of annotator components by performing such tasks as creating workspace artifacts, and training, creating, and deploying models. For workspaces that are used to build machine-learning annotators, project managers also manage the document annotation process by assigning document review tasks to human annotators, adjudicating annotation conflicts, and approving documents to add to the ground truth.
+    Project managers are people who help to facilitate the creation of annotator components by performing such tasks as creating workspace artifacts, and training, creating, and deploying models. For workspaces that are used to build machine learning annotators, project managers also manage the document annotation process by assigning document review tasks to human annotators, adjudicating annotation conflicts, and approving documents to add to the ground truth.
 
 ## Adding users in {{site.data.keyword.knowledgestudioshort}}
 
