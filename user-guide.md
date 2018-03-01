@@ -112,7 +112,7 @@ These annotation best practices provide some guidance and examples as you start 
 
 - Avoid overlapping mentions, which are two different entity type labels that are applied to a single phrase in a document. For example, given the sentence, *She donated her father's journals to the JFK Library.*, you would overlap mentions if you annotate JFK=PERSON and JFK Library=LOCATION for the single phrase *JFK Library*. The use of the term is more about the library than the person in this sentence, so only the latter annotation should be applied.
 
-    Decoding such structures requires multiple parallel invocations of a machine-learning model because mention detection only looks for a single label or no label on each word token.
+    Decoding such structures requires multiple parallel invocations of a machine learning model because mention detection only looks for a single label or no label on each word token.
 
 - Determine how the team will handle lists and plurals in running text. For example, the KLUE type system has PERSON and PEOPLE entity types that distinguish the singular from the plural. You can choose to annotate the list *Barack, Michelle, Malia, and Sasha Obama*, in one of the following ways:
 
@@ -128,7 +128,7 @@ These annotation best practices provide some guidance and examples as you start 
 
 When a human annotator annotates a document, the document is opened in the Ground Truth Editor. The Ground Truth Editor is a visual tool that human annotators use to apply labels to text.
 
-The goal of human annotation is to label mentions, relations, and coreferenced mentions so that the machine-learning annotator can be trained to detect these patterns in unseen text. At a minimum, use the tool to annotate entity mentions. If the application that will use the resulting model does not need to find and extract coreferences and relation mentions, then you do not need to annotate coreferences and relation mentions.
+The goal of human annotation is to label mentions, relations, and coreferenced mentions so that the machine learning annotator can be trained to detect these patterns in unseen text. At a minimum, use the tool to annotate entity mentions. If the application that will use the resulting model does not need to find and extract coreferences and relation mentions, then you do not need to annotate coreferences and relation mentions.
 
 Concordance is an optional tool that can be used by human annotators to expedite the annotation of repetitive mentions.
 
@@ -177,7 +177,7 @@ When you open a document to annotate it, you might want to use the concordance t
 
 #### Tips
 
-- Keep in mind that shorter entity mentions are better for training because it is easier for the machine-learning annotator to recognize the shorter patterns and add the correct annotation tokens.
+- Keep in mind that shorter entity mentions are better for training because it is easier for the machine learning annotator to recognize the shorter patterns and add the correct annotation tokens.
 - If you chose to use a dictionary-based tokenizer with the workspace, and want to handle compound terms and punctuation in your training data, you can add the terms to a dictionary and create a dictionary annotator to pre-annotate the occurrences. For example, to avoid sentence boundary breaks for terms that include punctuation, add terms like Yahoo! and Dr. to a dictionary. Likewise, if your training data includes hyphenated words or alphanumeric acronyms, like Hi-C or MS-60-70, add those terms to the dictionary. To annotate occurrences regardless of case, add the terms in lowercase (such as hi-c). To annotate variations, add the variations as surface forms (MS-60-70 and MS 60 70). **Important**: Do not use this approach if you are using the default tokenizer.
 
 ### Procedure
@@ -286,7 +286,7 @@ Click the image to see how to create a coreference chain.
 
 When you annotate mentions as coreferences, the system creates a coreference chain. The chain provides a way for you to view all of the mentions in context and verify that all of the occurrences belong together under the same entity. For example, "Barack", "Michelle", "he", and "she" are all of the same entity type, PERSON, but "Barack" and "he" are one entity, and "Michelle" and "she" are another entity. In this example, you create two coreference chains.
 
-When you create a coreference chain, you must select mentions that have been marked by the same entity type. In some cases, however, you might want to include mentions of different types in the same coreference chain. To do this, you must create multiple chains and then merge them. For example, think about how people progressively use shorthand to avoid repeating things in text. In a traffic incident report, the first reference to a vehicle might be "2004 Honda Accord Sedan". Later, the author might refer to the vehicle as "Accord", and then later refer to the vehicle as simply "vehicle". If the type system includes entries for vehicle manufacturer, model, and type, you could create multiple coreference chains per entity type, and then merge them to create a consolidated chain. The merged chain helps train the machine-learning annotator to recognize that all of these mentions refer to the same thing.
+When you create a coreference chain, you must select mentions that have been marked by the same entity type. In some cases, however, you might want to include mentions of different types in the same coreference chain. To do this, you must create multiple chains and then merge them. For example, think about how people progressively use shorthand to avoid repeating things in text. In a traffic incident report, the first reference to a vehicle might be "2004 Honda Accord Sedan". Later, the author might refer to the vehicle as "Accord", and then later refer to the vehicle as simply "vehicle". If the type system includes entries for vehicle manufacturer, model, and type, you could create multiple coreference chains per entity type, and then merge them to create a consolidated chain. The merged chain helps train the machine learning annotator to recognize that all of these mentions refer to the same thing.
 
 Another way to combine mentions of different entity types is to create a chain with mentions of one entity type. You can then click a mention of another entity type, and then click the chain that you created to add the mention to that chain.
 

@@ -153,11 +153,11 @@ After recreating the workspaces, import the previously exported artifacts:
 
 At this point, all the artifacts that were used to train the model in the previous (backed up) version of the workspace are now available in this new instance. To redeploy a machine learning model that you deployed in the previous instance, complete the following steps:
 
-1. Train the machine-learning annotator component to produce a model. For details, see [Creating a machine-learning annotator component](/docs/services/watson-knowledge-studio/train-ml.html).
+1. Train the machine learning annotator component to produce a model. For details, see [Creating a machine learning annotator component](/docs/services/watson-knowledge-studio/train-ml.html).
 
   **Note**: Do not run any pre-annotators on annotated documents that you migrated to this workspace because they will lose any annotations in them that were added by human annotators.
 
-1. After creating the model, deploy it again. For details, see [Using the machine-learning model](/docs/services/watson-knowledge-studio/publish-ml.html).
+1. After creating the model, deploy it again. For details, see [Using the machine learning model](/docs/services/watson-knowledge-studio/publish-ml.html).
 
 ## Restoring incomplete annotation tasks
 {: #restoretasks}

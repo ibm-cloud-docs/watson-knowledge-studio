@@ -20,7 +20,7 @@ lastupdated: "2017-12-11"
 This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/knowledge-studio/improve-ml.html){: new_window}.
 {: tip}
 
-# Making machine-learning model improvements
+# Making machine learning model improvements
 {: #improve-ml}
 
 After you determine areas in which the annotator is having trouble, take steps to improve its performance.
@@ -29,7 +29,7 @@ After you determine areas in which the annotator is having trouble, take steps t
 ## Creating annotator component versions
 {: #wks_maversions}
 
-After you create a machine-learning annotator component, you can take a snapshot to keep a backup version of the current resources in case you want to restore the resources in a future iteration.
+After you create a machine learning annotator component, you can take a snapshot to keep a backup version of the current resources in case you want to restore the resources in a future iteration.
 
 ### About this task
 
@@ -52,7 +52,7 @@ The following resources are excluded:
 
 ### Procedure
 
-To create and restore machine-learning annotator component versions:
+To create and restore machine learning annotator component versions:
 
 1. Log in as a {{site.data.keyword.watson}}&trade; {{site.data.keyword.knowledgestudioshort}} administrator or project manager, open the **Annotator Component** page, click **Details**, and then click **Versions**. Performance statistics about the current (first) version, labeled version 1.0, are displayed.
 1. To take a snapshot of the current version, click **Take Snapshot**. The resources in version 1.0 are frozen, and a new version, labeled 1.1, becomes the current version. For each new version that you create, the minor version number is incremented, for example, 1.0 becomes 1.1 and then becomes 1.2.
@@ -82,7 +82,7 @@ An application process manager can modify the type system without losing the wor
 1. Decide whether you want to propagate the changes to existing human annotation tasks.
 1. On the **Human Annotation** page, open each task that you want to update and click **Apply Type System Updates**.
 
-    If you removed entity types or relation types from the type system, all occurrences of those types are highlighted in gray in the documents. These invalid types are ignored by the machine-learning annotator. They do not prevent you from submitting and approving document sets.
+    If you removed entity types or relation types from the type system, all occurrences of those types are highlighted in gray in the documents. These invalid types are ignored by the machine learning annotator. They do not prevent you from submitting and approving document sets.
 
 1. Provide details to the human annotators about what changed in the type system.
 1. Ask human annotators to update their documents to reflect the changes in the type system. For example, if you added new entity types or relation types, they must review their documents and annotate them appropriately.
@@ -98,11 +98,11 @@ An application process manager can modify the type system without losing the wor
 
 Use the right sets of data to test and train the annotator component at the right time.
 
-The documents that you add to the system must be allocated to the following system-level data sets when you create a machine-learning annotator:
+The documents that you add to the system must be allocated to the following system-level data sets when you create a machine learning annotator:
 
 - **Training set**
 
-    A set of documents that have been annotated through pre-annotation or by human annotators that is used to train the annotator component. The goal of the training set is to teach the machine-learning model about correct annotations, which includes teaching the model through text that was not annotated.
+    A set of documents that have been annotated through pre-annotation or by human annotators that is used to train the annotator component. The goal of the training set is to teach the machine learning model about correct annotations, which includes teaching the model through text that was not annotated.
 
 - **Test set**
 
@@ -120,7 +120,7 @@ Because you use test data to assess accuracy in detail, you get to know the docu
 
 ### How do I control which documents are allocated to a set?
 
-When you create a machine-learning annotator, you must specify the ratio of documents from the set to allocate to the train, test, or blind sets. {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} automatically applies a ratio of 70/23/7 to the document sets that you use to build a machine-learning annotator. You can change these values.
+When you create a machine learning annotator, you must specify the ratio of documents from the set to allocate to the train, test, or blind sets. {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} automatically applies a ratio of 70/23/7 to the document sets that you use to build a machine learning annotator. You can change these values.
 
 - To add a set that was annotated by humans to the training set, specify a 100/0/0 breakdown ratio.
 - After training with a set, you can use it for testing. To use a document set for testing only, specify a 0/100/0 breakdown ration.

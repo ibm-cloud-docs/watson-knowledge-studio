@@ -49,7 +49,7 @@ An entity type is how you categorize a real-world thing. An entity mention is an
 
 The goal of your annotation workspace is to annotate each mention in a document with the type of thing that it is. After a mention is classified by entity type, the labeled span of text is referred to as an entity.
 
-A type system that you build with {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} can include the following entity type attributes. The attributes help qualify mentions in text, but they are not marked as entity types by a machine-learning annotator. For example, if the entity type ORGANIZATION has an entity subtype called COMMERCIAL, COMMERCIAL is not marked as an entity type on its own.
+A type system that you build with {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} can include the following entity type attributes. The attributes help qualify mentions in text, but they are not marked as entity types by a machine learning annotator. For example, if the entity type ORGANIZATION has an entity subtype called COMMERCIAL, COMMERCIAL is not marked as an entity type on its own.
 
 - **Role**
 
@@ -138,7 +138,7 @@ By convention, entity type names are specified in uppercase characters (ORGANIZA
 
             Order between the first and second entities in a relation type is usually relevant. For example, a PERSON entity can be an employee of an ORGANIZATION entity or a geo-political entity (GPE), such as Mary employedBy {{site.data.keyword.IBM_notm}}, but organizations and geo-political entities cannot be employed by a person. When a human annotator clicks an entity in the Ground Truth Editor , the list of available relation types is controlled by what is defined in the type system.
 
-            Do not define relation attributes. They are not used by the machine-learning model. The model uses only the relation type and order, and ignores the relation attributes.
+            Do not define relation attributes. They are not used by the machine learning model. The model uses only the relation type and order, and ignores the relation attributes.
 
         1. Use the **Edit** and **Delete** icons to modify entity types and their associated relation types, or to delete an entity type or relation type from the type system.
 

@@ -40,11 +40,11 @@ To view glossaries for other {{site.data.keyword.IBM}} products, go to [www.ibm.
 
 - **accuracy**
 
-    A measure of the correctness of annotations that are produced by a machine-learning annotator. See also [precision](/docs/services/watson-knowledge-studio/glossary.html#gloss_P) and [recall](/docs/services/watson-knowledge-studio/glossary.html#gloss_R).
+    A measure of the correctness of annotations that are produced by a machine learning annotator. See also [precision](/docs/services/watson-knowledge-studio/glossary.html#gloss_P) and [recall](/docs/services/watson-knowledge-studio/glossary.html#gloss_R).
 
 - **accuracy analysis**
 
-    Analyzing machine-learning annotator scores to determine whether changes are needed to improve accuracy.
+    Analyzing machine learning annotator scores to determine whether changes are needed to improve accuracy.
 
 - **adjudication**
 
@@ -68,7 +68,7 @@ To view glossaries for other {{site.data.keyword.IBM}} products, go to [www.ibm.
 
 - **annotator**
 
-    See [dictionary-based annotator](/docs/services/watson-knowledge-studio/glossary.html#gloss_D), [human annotator](/docs/services/watson-knowledge-studio/glossary.html#gloss_H), and [machine-learning annotator](/docs/services/watson-knowledge-studio/glossary.html#gloss_M).
+    See [dictionary-based annotator](/docs/services/watson-knowledge-studio/glossary.html#gloss_D), [human annotator](/docs/services/watson-knowledge-studio/glossary.html#gloss_H), and [machine learning annotator](/docs/services/watson-knowledge-studio/glossary.html#gloss_M).
 
 - **attribute**
 
@@ -90,7 +90,7 @@ To view glossaries for other {{site.data.keyword.IBM}} products, go to [www.ibm.
 
 - **confusion matrix**
 
-    A table that provides a detailed numeric breakdown of annotated document sets. The table is used to compare the annotations that were added by a machine-learning annotator to the annotations in the ground truth. The table reports the number of [false positives](/docs/services/watson-knowledge-studio/glossary.html#gloss_F), [false negatives](/docs/services/watson-knowledge-studio/glossary.html#gloss_F), [true positives](/docs/services/watson-knowledge-studio/glossary.html#gloss_T), and [true negatives](/docs/services/watson-knowledge-studio/glossary.html#gloss_T).
+    A table that provides a detailed numeric breakdown of annotated document sets. The table is used to compare the annotations that were added by a machine learning annotator to the annotations in the ground truth. The table reports the number of [false positives](/docs/services/watson-knowledge-studio/glossary.html#gloss_F), [false negatives](/docs/services/watson-knowledge-studio/glossary.html#gloss_F), [true positives](/docs/services/watson-knowledge-studio/glossary.html#gloss_T), and [true negatives](/docs/services/watson-knowledge-studio/glossary.html#gloss_T).
 
 - **coreference**
 
@@ -102,7 +102,7 @@ To view glossaries for other {{site.data.keyword.IBM}} products, go to [www.ibm.
 
 - **corpus**
 
-    A collection of source documents that were added to a workspace and used to train a machine-learning annotator.
+    A collection of source documents that were added to a workspace and used to train a machine learning annotator.
 
 - **curate**
 
@@ -113,7 +113,7 @@ To view glossaries for other {{site.data.keyword.IBM}} products, go to [www.ibm.
 
 - **dictionary**
 
-    A collection of words that can be used to annotate documents. A new annotation is created for each word in the document text that matches a term in the dictionary. A machine-learning annotator can be configured with one or more independent dictionaries, which are typically domain-specific, such a dictionary for pharmaceuticals and a dictionary for wealth management. See also [lemma](/docs/services/watson-knowledge-studio/glossary.html#gloss_L) and [surface form](/docs/services/watson-knowledge-studio/glossary.html#gloss_S).
+    A collection of words that can be used to annotate documents. A new annotation is created for each word in the document text that matches a term in the dictionary. A machine learning annotator can be configured with one or more independent dictionaries, which are typically domain-specific, such a dictionary for pharmaceuticals and a dictionary for wealth management. See also [lemma](/docs/services/watson-knowledge-studio/glossary.html#gloss_L) and [surface form](/docs/services/watson-knowledge-studio/glossary.html#gloss_S).
 
 - **dictionary-based annotator**
 
@@ -166,7 +166,7 @@ To view glossaries for other {{site.data.keyword.IBM}} products, go to [www.ibm.
 
 - **ground truth**
 
-    The set of vetted data, consisting of annotations added by human annotators, that is used to adapt a machine-learning annotator to a particular domain. Ground truth is used to train machine-learning models, measure annotator component performance (precision and recall), and calculate headroom to decide where to focus development efforts for improving performance. Accuracy of ground truth is essential since inaccuracies in the ground truth will correlate to inaccuracies in the components that use it.
+    The set of vetted data, consisting of annotations added by human annotators, that is used to adapt a machine learning annotator to a particular domain. Ground truth is used to train machine learning models, measure annotator component performance (precision and recall), and calculate headroom to decide where to focus development efforts for improving performance. Accuracy of ground truth is essential since inaccuracies in the ground truth will correlate to inaccuracies in the components that use it.
 
 ## H
 {: #gloss_H}
@@ -177,7 +177,7 @@ To view glossaries for other {{site.data.keyword.IBM}} products, go to [www.ibm.
 
 - **human annotator**
 
-    A subject matter expert who reviews, modifies, and augments the results of pre-annotation by identifying mentions, entity type relationships, and mention coreferences. By examining text in context, a human annotator helps determine ground truth and improve the accuracy of the machine-learning annotator.
+    A subject matter expert who reviews, modifies, and augments the results of pre-annotation by identifying mentions, entity type relationships, and mention coreferences. By examining text in context, a human annotator helps determine ground truth and improve the accuracy of the machine learning annotator.
 
 ## I
 {: #gloss_I}
@@ -207,14 +207,14 @@ To view glossaries for other {{site.data.keyword.IBM}} products, go to [www.ibm.
 
     A method of data analysis that iteratively learns from past data and independently adapts when exposed to new data. The mathematical model at the core of machine learning is built from ground truth inputs. Through training and refinement of example input data, the model can deliver accurate, repeatable results when it analyzes new data.
 
-- **machine-learning annotator**
+- **machine learning annotator**
 
     A component that identifies entities and entity relationships according to a statistical model that is based on ground truth.
 
-- **machine-learning model**
+- **machine learning model**
 
     1. The application of past experience, such as training data, to determine or predict the correct outcome of future experiences based on characteristics of the data. These past experiences are captured in the form of a model by calculating feature scores for each candidate answer or evidence and combining that with known outcomes.
-    1. See [machine-learning annotator](/docs/services/watson-knowledge-studio/glossary.html#gloss_M).
+    1. See [machine learning annotator](/docs/services/watson-knowledge-studio/glossary.html#gloss_M).
 
 - **mention**
 
@@ -304,11 +304,11 @@ To view glossaries for other {{site.data.keyword.IBM}} products, go to [www.ibm.
 
 - **train**
 
-    The process of setting up a {{site.data.keyword.watson}} instance with components that enable the system to function in a particular domain (for example: corpus content, training data that generates machine-learning models, programmatic algorithms, annotators, or other ground truth components) and then making improvements and updates to these components based on accuracy analysis.
+    The process of setting up a {{site.data.keyword.watson}} instance with components that enable the system to function in a particular domain (for example: corpus content, training data that generates machine learning models, programmatic algorithms, annotators, or other ground truth components) and then making improvements and updates to these components based on accuracy analysis.
 
 - **training data**
 
-    A set of annotated documents that can be used to train machine-learning annotators. See also [blind data](/docs/services/watson-knowledge-studio/glossary.html#gloss_B) and [testing data](/docs/services/watson-knowledge-studio/glossary.html#gloss_T).
+    A set of annotated documents that can be used to train machine learning annotators. See also [blind data](/docs/services/watson-knowledge-studio/glossary.html#gloss_B) and [testing data](/docs/services/watson-knowledge-studio/glossary.html#gloss_T).
 
 - **true negative**
 

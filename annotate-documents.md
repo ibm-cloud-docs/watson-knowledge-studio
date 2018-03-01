@@ -71,7 +71,7 @@ An essential part of teaching {{site.data.keyword.watson}} about a new domain in
   - Dictionaries of terms that are to be treated as equivalent terms in your domain content.
 
 - Creating a corpus of documents that are representative of your domain content.
-- Pre-annotating documents based on the dictionaries that you add to a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace. After you create a machine-learning annotator, you can use the annotator to pre-annotate new documents that you add to the corpus. Pre-annotation is a process of machine-annotating a document to the extent possible before a machine-learning model is available to do so. Pre-annotation can reduce human-annotation labor by replacing some human annotation creation with mere verification of the correctness of machine annotation.
+- Pre-annotating documents based on the dictionaries that you add to a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace. After you create a machine learning annotator, you can use the annotator to pre-annotate new documents that you add to the corpus. Pre-annotation is a process of machine-annotating a document to the extent possible before a machine learning model is available to do so. Pre-annotation can reduce human-annotation labor by replacing some human annotation creation with mere verification of the correctness of machine annotation.
 - Dividing documents among human annotators, who then use the {{site.data.keyword.knowledgestudiofull}} Ground Truth Editor tool to manually add annotations to small sets of documents.
 - Comparing the human annotation results and resolving conflicts. Adjudication in this phase is needed to ensure accurate and consistently annotated documents are promoted to ground truth, where they can be used to train and test a machine annotator.
 
@@ -88,7 +88,7 @@ This stage refers to the use of {{site.data.keyword.watson}} {{site.data.keyword
 ### Annotator component deployment
 {: #wks_lifecycle__wks_lifecycleS5}
 
-This stage refers to exporting components that enable the annotator to run in machine-learning runtime environments and making the annotator component accessible to other {{site.data.keyword.watson}} cognitive applications. For example, you can deploy the machine-learning annotator for use by the {{site.data.keyword.Bluemix}} {{site.data.keyword.alchemyapishort}} or export the annotator for use in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
+This stage refers to exporting components that enable the annotator to run in machine learning runtime environments and making the annotator component accessible to other {{site.data.keyword.watson}} cognitive applications. For example, you can deploy the machine learning annotator for use by the {{site.data.keyword.Bluemix}} {{site.data.keyword.alchemyapishort}} or export the annotator for use in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
 
 ## Creating an annotation task
 {: #wks_hatask}
@@ -219,8 +219,8 @@ The example presented here is a simple guideline that was created for a small do
 #### Task Goals
 {: #wks_guidelinesexample__annotgoals}
 
-- As project members, become familiar with the iterative process of manual annotation and machine-learning annotator refinement.
-- Annotate documents in the automotive domain with the Ground Truth Editor and use the annotations to train a machine-learning model. Annotate the entity types, relation types, and coreference the entities as needed.
+- As project members, become familiar with the iterative process of manual annotation and machine learning annotator refinement.
+- Annotate documents in the automotive domain with the Ground Truth Editor and use the annotations to train a machine learning model. Annotate the entity types, relation types, and coreference the entities as needed.
 
 #### Guideline Notations
 {: #wks_guidelinesexample__annotnotation}

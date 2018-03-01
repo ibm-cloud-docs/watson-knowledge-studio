@@ -23,7 +23,7 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 # Adding documents for annotation
 {: #documents-for-annotation}
 
-To train a machine-learning annotator component, you must add documents that contain subject matter knowledge, such as journal articles or other industry-specific texts, to your workspace.
+To train a machine learning annotator component, you must add documents that contain subject matter knowledge, such as journal articles or other industry-specific texts, to your workspace.
 {: shortdesc}
 
 ## About this task
@@ -33,7 +33,7 @@ To define rules for the rule-based annotator component, you add or import docume
 ## Documents
 {: #wks_sampledoc}
 
-To train a machine-learning annotator component, you need to collect documents that are representative of your domain content and of high value to your application.
+To train a machine learning annotator component, you need to collect documents that are representative of your domain content and of high value to your application.
 
 Try to ensure that your training documents are truly representative of content that is of interest to your domain; that is, they contain many relevant mentions that can be annotated. To choose the best documents, follow these guidelines:
 
@@ -110,7 +110,7 @@ To add documents to a workspace:
         <tr class="strow chrow"><td valign="top" headers="d31095e284-option" id="d31095e302" class="stentry choption ncol"><p class="p wrapper"><strong>DOCXML files</strong></p></td>
           <td valign="top" headers="d31095e284-desc d31095e302" class="stentry chdesc ncol"><p class="p wrapper">Drag one or more <code>DOCXML</code> files from your local system or click to locate
               and select the files, and then click <b>Import</b>. The <code>DOCXML</code>
-              files must be documents that were exported from another machine-learning model, and they must be in
+              files must be documents that were exported from another machine learning model, and they must be in
               UTF-8 format. These documents are not re-tokenized on import.</p></td>
         </tr>
         <tr class="strow chrow"><td valign="top" headers="d31095e284-option" id="d31095e316" class="stentry choption ncol"><p class="p wrapper"><strong>ZIP file</strong></p></td>
@@ -176,7 +176,7 @@ To create an annotation set:
 1. For the base set, select the collection of documents that you want to divide into annotation sets, either all documents in the corpus or documents that were previously allocated to a document set.
 1. For the overlap value, specify the percentage of documents that you want to include in each annotation set. Inter-annotator agreement scores cannot be calculated unless two or more human annotators annotate the same documents. For example, if you specify a 20% overlap value for a corpus that contains 30 documents, and you divide the corpus into 3 document sets, 6 documents (20%) will be annotated by all human annotators. The remaining 24 documents will be divided among the 3 human annotators (8 each). Thus, each annotator receives 14 documents to annotate (6+8).
 
-    > **Note:** An annotation set that you plan to use to train a machine-learning annotator must contain at least 10 annotated documents.
+    > **Note:** An annotation set that you plan to use to train a machine learning annotator must contain at least 10 annotated documents.
 
 1. Click the **Add** icon for each annotation set that you want to create.
 
@@ -209,7 +209,7 @@ To delete a documents, complete the following steps:
 
     Perform one of the following tasks if the document is associated with an annotation task:
     - If human annotators have not begun annotating the documents, delete the annotation task, and then delete the document. To delete an annotation task, open the **Human Annotation** page, find the annotation task with which the document is associated, and then click **Delete**. Afterwards, you can recreate the annotation task and associate the same annotation set, which now has one less document in it.
-    - If human annotators have begun to annotate the documents, do not delete the task or you will lose their work. You can tell them to continue working, but to ignore the unwanted document in the set. Have them finish all other annotation work, and go through the process of getting the set added to the ground truth. After being added, but before anyone runs the machine-learning annotator, delete the unwanted document. You do not want to use the unannotated document to train a model because the machine-learning annotator learns as much from what you do not annotate as from what you do. You can now delete the unwanted document, which is currently part of the ground truth, from the **Documents** tab of the **Documents** page.
+    - If human annotators have begun to annotate the documents, do not delete the task or you will lose their work. You can tell them to continue working, but to ignore the unwanted document in the set. Have them finish all other annotation work, and go through the process of getting the set added to the ground truth. After being added, but before anyone runs the machine learning annotator, delete the unwanted document. You do not want to use the unannotated document to train a model because the machine learning annotator learns as much from what you do not annotate as from what you do. You can now delete the unwanted document, which is currently part of the ground truth, from the **Documents** tab of the **Documents** page.
 
 ## Data model
 {: #wks_datamodel}
@@ -234,6 +234,6 @@ When you create an annotation task, copies of the annotations are created for ea
 
 After the project manager approves annotation sets in an annotation task, annotations in documents that do not overlap with other annotation sets become ground truth. For documents that overlap between annotation sets (represented by "doc 2" in this example), the project manager must adjudicate and resolve conflicts. The annotations in overlapping documents do not become ground truth until they are approved through adjudication.
 
-Ground truth is then used for training and testing a machine-learning annotator, or it can be used as the basis for the next iteration of annotator component development. To use ground truth in a new iteration, you must create a new annotation task.
+Ground truth is then used for training and testing a machine learning annotator, or it can be used as the basis for the next iteration of annotator component development. To use ground truth in a new iteration, you must create a new annotation task.
 
 ![Shows how the annotations added by two human annotators become ground truth. One document, labeled &#34;doc 2&#34;, is annotated by both human annotators. The annotations in this overlapping document must be adjudicated before they become ground truth.](images/wks_datatruth.png)

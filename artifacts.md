@@ -38,7 +38,7 @@ The annotators learn about the following types of artifacts that you add to the 
 
 - **Documents**
 
-    Documents serve a different purpose depending on whether you are creating a machine-learning annotator or a rule-based annotator. See the following topics for more information:
+    Documents serve a different purpose depending on whether you are creating a machine learning annotator or a rule-based annotator. See the following topics for more information:
     - Machine-learning annotator documents: [Adding documents for annotation](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_t_docs_intro)
     - Rule-based annotator documents: [Adding documents for defining rules](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html)
 
