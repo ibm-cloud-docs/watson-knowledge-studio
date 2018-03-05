@@ -48,7 +48,7 @@ The following pre-annotators are available:
 
     Uses a dictionary of terms that you provide and associate with an entity type to find mentions of that entity type in the documents. This choice is best for fields with unique or specialized terminology because this pre-annotator does not analyze the context in which the term is used in the way a machine learning pre-annotator does; it instead relies on the term being distinct enough to have a decipherable meaning regardless of the context in which it is used. For example, it is easier to recognize *asbestos* as a mineral entity type than to determine the entity type of *squash*, which can refer to a vegetable, a sport, or a verb meaning to crush something.
 
-- **Machine-learning**
+- **Machine learning**
 
     Uses a machine learning model to automatically annotate documents. This option is only available to you if you have created a machine learning model with {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} already. If you add a new document set, you can run the machine learning annotator that you created previously to pre-annotate the new documents. If the new set of documents are similar to the documents that were used to train the machine learning annotator originally, then this is probably your best choice for pre-annotation.
 

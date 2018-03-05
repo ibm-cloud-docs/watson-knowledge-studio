@@ -20,7 +20,7 @@ lastupdated: "2017-12-11"
 This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/knowledge-studio/ml-annotator.html){: new_window}.
 {: tip}
 
-# Machine-learning model creation workflow
+# Machine learning model creation workflow
 {: #ml_annotator}
 
 Create a machine learning annotator that trains a model you can use to identify entities, coreferences, and relationships of interest in new documents.

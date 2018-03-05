@@ -42,8 +42,8 @@ When you create a new version, the following resources are captured:
 - Type system
 - Corpus
 - Ground truth
-- Machine-learning model
-- Machine-learning model evaluation results
+- Machine learning model
+- Machine learning model evaluation results
 
 The following resources are excluded:
 
