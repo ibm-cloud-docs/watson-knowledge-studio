@@ -39,7 +39,7 @@ The annotators learn about the following types of artifacts that you add to the 
 - **Documents**
 
     Documents serve a different purpose depending on whether you are creating a machine learning annotator or a rule-based annotator. See the following topics for more information:
-    - Machine-learning annotator documents: [Adding documents for annotation](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_t_docs_intro)
+    - Machine learning annotator documents: [Adding documents for annotation](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_t_docs_intro)
     - Rule-based annotator documents: [Adding documents for defining rules](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html)
 
 You can import many of these artifacts from external resources, including artifacts that you exported from other {{site.data.keyword.watson}}&trade; {{site.data.keyword.knowledgestudioshort}} workspaces. See [Importing resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html) for information about importing artifacts from other workspaces.

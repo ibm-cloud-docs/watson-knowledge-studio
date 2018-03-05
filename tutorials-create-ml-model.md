@@ -319,6 +319,6 @@ While learning about {{site.data.keyword.knowledgestudioshort}}, you created a m
 By completing this tutorial, you learned about the following concepts:
 
 - Document sets
-- Machine-learning models
+- Machine learning models
 - Human annotation tasks
 - Inter-annotator agreement and adjudication

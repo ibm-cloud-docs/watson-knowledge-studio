@@ -34,7 +34,7 @@ Before creating a workspace, answer these questions:
 
 - **What type of model do you want to create?**
 
-    - Machine-learning model: Uses statistical approach to finding entities and relationships in documents. This type of model can adapt as the amount of data grows.
+    - Machine learning model: Uses statistical approach to finding entities and relationships in documents. This type of model can adapt as the amount of data grows.
     - Rule-based model: Uses a declarative approach to finding entities in documents. This type of model is more predictable, and is easier to comprehend and maintain. However, it does not learn from new data. It can only find patterns it has been taught to look for.
 
     > **Note:** You can also create one workspace that contains both one rule-based model and one machine learning model.
@@ -163,7 +163,7 @@ Term entries file:</p><ul class="ul bullets"><li class="li"><p class="p wrapper"
 
  {: #wks_formats__datasimpletable_xxj_qr5_2y}
 
-### Machine-learning annotator component
+### Machine learning annotator component
 
 <table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d25459e331" class="stentry thleft thbot">Task</th>
 <th valign="bottom" align="left" id="d25459e333" class="stentry thleft thbot">Typical usage</th>
@@ -235,7 +235,7 @@ create a semi-supervised or unsupervised machine learning annotator.</p>
 do extensive feature engineering.</p>
 </td>
 <td valign="top" headers="d25459e335" class="stentry"><p class="p wrapper">Not applicable</p></td>
-<td valign="top" headers="d25459e337" class="stentry"><p class="p wrapper">Machine-learning model</p></td>
+<td valign="top" headers="d25459e337" class="stentry"><p class="p wrapper">Machine learning model</p></td>
 <td valign="top" headers="d25459e339" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">1 machine learning annotator component per workspace</p></li>
 <li class="li"><p class="p wrapper">10 annotator component versions per workspace</p></li>
 <li class="li"><p class="p wrapper">Maximum number of workspaces is determined by your subscription plan.</p></li>
