@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-11"
+  years: 2015, 2018
+lastupdated: "2018-03-05"
 
 ---
 
@@ -39,7 +39,7 @@ Consider this example: a dictionary entry contains the seven days of the week. T
 
 Avoid adding entries that have multiple meanings. For example, in a domain about auto racing, it makes sense to include the term *bank*, which refers to a road feature, only if financial institutions are not frequently discussed in the text also. If both senses of the word occur often in the source documents, then it is best to leave it out of both types of dictionaries: the dictionary that is associated with road features, and the dictionary that is associated with financial institutions.
 
-You can create dictionaries in {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} by manually adding individual entries. {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} also supports the ability to import several types of dictionary files.
+You can create dictionaries in {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} by manually adding individual entries. {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} also supports the ability to upload several types of dictionary files.
 
 ### How are dictionaries used?
 
@@ -66,7 +66,7 @@ Dictionaries are used in a couple ways, all optional. They are used by the machi
 ### CSV file dictionary
 {: #wks_dictionaries__cvsdict}
 
-Also referred to as the standard dictionary format, a dictionary in comma-separated value (`CSV`) format is a file that you can edit after you import it. The maximum size of a `CSV` file that you can import is 1 MB. If you have a larger dictionary file, then break the large file into multiple files and import them one at a time into a single dictionary in your {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace.
+Also referred to as the standard dictionary format, a dictionary in comma-separated value (`CSV`) format is a file that you can edit after you upload it. The maximum size of a `CSV` file that you can upload is 1 MB. If you have a larger dictionary file, then break the large file into multiple files and upload them one at a time into a single dictionary in your {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace.
 
 To summarize the requirements, you must use a text editor to create the `CSV` file, not software like Microsoft Excel, and the file must use UTF-8 encoding that does not include the byte order mark (BOM) at the start of the text stream. The first row in the file must specify the following column headers:
 
@@ -86,7 +86,7 @@ The remaining lines in the file specify the dictionary entries, where:
     Specifies a code that identifies the part of speech. This part of speech information is used by the dictionary annotator to help with sentence tokenization.
     - 0 - Unknown
 
-        > **Note:** This code supports the scenario where you want to import a large machine-generated dictionary that does not include part of speech information in each entry. You can assign Unknown to all entries by default. Avoid using this code, if possible.
+        > **Note:** This code supports the scenario where you want to upload a large machine-generated dictionary that does not include part of speech information in each entry. You can assign Unknown to all entries by default. Avoid using this code, if possible.
 
     - 1 - Pronoun
     - 2 - Verb
@@ -166,7 +166,7 @@ The following restriction apply to dictionaries:
 
 - Maximum 15,000 entries per dictionary
 
-    > **Note:** This limit does not apply to dictionaries that you import as a dictionary CSV file. Read-only dictionaries can contain more entries.
+    > **Note:** This limit does not apply to dictionaries that you upload as a dictionary CSV file. Read-only dictionaries can contain more entries.
 
 - Maximum 64 dictionaries per workspace
 
@@ -174,23 +174,23 @@ The following restriction apply to dictionaries:
 
 To add a dictionary to your workspace:
 
-1. Log in as a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} administrator or project manager and open the **Dictionaries** page.
+1. Log in as a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} administrator or project manager and open the **Assets & Tools** > **Pre-annotators** > **Dictionaries** tab.
 1. Perform one of the following tasks:
 
-    - Click the **Import dictionary** icon to import a dictionary. Associate the dictionary with an entity type, and then click **Import**.
+    - Click the **Upload Dictionary** button, select a dictionary, and then click **Upload**. After you upload a dictionary, click **Manage Dictionaries** to view the dictionary and associate it with an entity type.
 
-        - You can import a ZIP file that contains a dictionary that you exported from another {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace. You must import the type system that was exported from the other workspace in JSON format before you can import the corresponding dictionary file. You can edit and add entries to a dictionary that you reuse from another {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace. See [Importing resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html) for more details.
+        - You can upload a ZIP file that contains a dictionary that you exported from another {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace. You must upload the type system that was exported from the other workspace in JSON format before you can upload the corresponding dictionary file. You can edit and add entries to a dictionary that you reuse from another {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace. See [Importing resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html) for more details.
 
-        Importing a CSV file is also supported, but importing it directly as a dictionary creates a preview-only dictionary that you cannot edit or use to pre-annotate documents. To import a CSV file that you can edit and use for pre-annotation, add the dictionary first, and then import the CSV content as entries.
+        Importing a CSV file is also supported, but importing it directly as a dictionary creates a preview-only dictionary that you cannot edit or use to pre-annotate documents. To upload a CSV file that you can edit and use for pre-annotation, click **Manage Dictionaries** and then **Create Dictionary** to create a dictionary first, and then upload the CSV content as entries to that newly created dictionary.
 
-    - Click the **Add** icon to create a new dictionary to which you can subsequently add dictionary entries.
+    - Click the **Manage Dictionaries** button to create a new dictionary to which you can subsequently add dictionary entries.
 
-        Specify a descriptive name for the dictionary, select the entity type that best describes the purpose of the dictionary, and then click **Save**.
+        Click the **Create Dictionary** button and specify a descriptive name for the dictionary. Select the entity type that best describes the purpose of the dictionary, and then click **Save**.
 
 1. To add entries to the dictionary, perform one of the following tasks:
 
     - Click **Add Entry** to add a dictionary entry. Specify the lemma (the most representative word form for the term).
-    - Click **Import** to import a `CSV` file that contains dictionary entries, and then browse to select the file. The CSV file must be smaller than 1MB.
+    - Click **Upload** to upload a `CSV` file that contains dictionary entries, and then browse to select the file. The CSV file must be smaller than 1MB.
 
 1. After importing or adding entries, you can edit the entries.
 

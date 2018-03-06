@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-11"
+  years: 2015, 2018
+lastupdated: "2018-03-05"
 
 ---
 
@@ -31,7 +31,7 @@ The type system controls how content can be annotated.
 
 A type system defines things that are interesting in your domain content that you want to label with an annotation. The type system controls how content can be annotated by defining the types of entities that can be labeled and how relationships among different entities can be labeled. The annotator process manager typically works with subject matter experts for your domain to define the type system.
 
-In {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} , you can create a type system from scratch or import an existing type system. To jump-start a workspace, you might want to import a type system that was created for a similar domain. You can then edit the type system to add or remove entity types or redefine the relationship types.
+In {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} , you can create a type system from scratch or upload an existing type system. To jump-start a workspace, you might want to upload a type system that was created for a similar domain. You can then edit the type system to add or remove entity types or redefine the relationship types.
 
 A sample type system based on the KLUE type system is provided for you to use with the {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} tutorials. KLUE stands for Knowledge from Language Understanding and Extraction and was derived by {{site.data.keyword.IBM_notm}} Research based on the analysis of collections of news articles. You can download a sample KLUE type system from <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/en-klue2-types.json" download>here<img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a>.
 
@@ -83,12 +83,12 @@ For some relation types, the order of entity mentions matters. For example, the 
 
 **Related concepts**:
 
-[Importing resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html)
+[Uploading resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html)
 
 ## Adding a type system to the workspace
 {: #wks_projtypesys}
 
-You must create or import a type system before you begin any annotation tasks.
+You must create or upload a type system before you begin any annotation tasks.
 
 ### About this task
 
@@ -104,14 +104,14 @@ By convention, entity type names are specified in uppercase characters (ORGANIZA
 
 ### Procedure
 
-1. Log in as a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} administrator or project manager and open the **Type System** page.
+1. Log in as a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} administrator or project manager and open the **Assets & Tools** > **Entity Types** page.
 1. Choose one of the following methods for creating the type system:
 
-    - To import an existing type system:
+    - To upload an existing type system:
 
-        1. Click **Import** to import an existing type system.
+        1. Click **Upload** to upload an existing type system.
 
-            If you previously exported a type system from a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace, the type system is exported in `JSON` format. You can import this type system to jump-start the creation of a new workspace. For details, see [Importing resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html).
+            If you previously downloaded a type system from a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace, the type system is downloaded in `JSON` format. You can upload this type system to jump-start the creation of a new workspace. For details, see [Uploading resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html).
 
             > **Note:** Regardless of the origin of the type system, the entries in it must meet the naming rules listed earlier.
 
@@ -130,11 +130,11 @@ By convention, entity type names are specified in uppercase characters (ORGANIZA
 
             Try to define enough entity types to capture the key concepts that you want to annotate, but not so many entity types that it becomes cumbersome for human annotators to apply the labels accurately.
 
-        1. Click **Mention Attributes** to view the default mention types and mention classes (you cannot edit these values).
+        1. Click **Mention Classes** and **Mention Types** to view the default mention classes and mention types (you cannot edit these values).
 
             The purpose of an attribute is to help label each mention by the type of thing that it is. A mention type indicates whether the mention is a name, nominal, or pronoun, and a mention class indicates whether the mention is specific, generic, or negated.
 
-        1. Click **Relation Types** and specify how two mentions can relate to each other.
+        1. Open the **Assets & Tools** > **Relation Types** page and specify how two mentions can relate to each other.
 
             Order between the first and second entities in a relation type is usually relevant. For example, a PERSON entity can be an employee of an ORGANIZATION entity or a geo-political entity (GPE), such as Mary employedBy {{site.data.keyword.IBM_notm}}, but organizations and geo-political entities cannot be employed by a person. When a human annotator clicks an entity in the Ground Truth Editor , the list of available relation types is controlled by what is defined in the type system.
 
