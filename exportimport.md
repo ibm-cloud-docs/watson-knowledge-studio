@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-05"
+lastupdated: "2018-03-09"
 
 ---
 
@@ -51,7 +51,7 @@ To upload dictionaries, open the **Dictionaries** tab and either add a `CSV` fil
 
 To download documents that you added to the corpus, open the **Assets & Tools** > **Documents** > **Document Sets** tab and click **Download Document Sets**. The system creates a file named `corpus-ID.zip` and prompts you to download the file to your local system. The `ZIP` file contains all documents in the corpus. Annotations that were added to annotation sets are included in the ZIP file, but only after the annotation sets have been approved and promoted to ground truth.
 
-> **Restriction:** Any documents that were pre-annotated with {{site.data.keyword.alchemylanguageshort}} will be obscured into a non-readable format when they are downloaded. Even annotations in those documents that were added by human annotation are unreadable.
+> **Restriction:** Any documents that were pre-annotated will be obscured into a non-readable format when they are downloaded. Even annotations in those documents that were added by human annotation are unreadable.
 
 Before you upload documents that include ground truth into a new workspace, you must download the type system from the old workspace and upload it into the new workspace. The type system and documents must originate from the same {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace, and the type system must exist in the new workspace before you upload the ground truth annotations.
 

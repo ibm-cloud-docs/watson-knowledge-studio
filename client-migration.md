@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-20"
+  years: 2015, 2018
+lastupdated: "2018-03-14"
 
 ---
 
@@ -54,6 +54,8 @@ If you have a {{site.data.keyword.knowledgestudioshort}} Free plan, complete the
 1. If you don't have a {{site.data.keyword.knowledgestudioshort}} instance on {{site.data.keyword.cloud_notm}}, create one on the [{{site.data.keyword.cloud_notm}} catalog {{site.data.keyword.knowledgestudioshort}} page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/knowledge-studio){: new_window}.
 1. Follow the [backup and restore](/docs/services/watson-knowledge-studio/backup-restore.html) process to manually migrate your projects from the {{site.data.keyword.IBM_notm}} Marketplace instance to your instance on {{site.data.keyword.cloud_notm}}.
 
+  **Note**: If you have a model that is already deployed and you plan to delete the workspace after you back it up, withdraw the model from deployment. You can rebuild and redeploy the model after you restore the workspace from the backup. For information about undeploying models, see [Undeploying machine learning models](/docs/services/watson-knowledge-studio/publish-ml.html#undeploy-view-model) and [Undeploying rule-based models](/docs/services/watson-knowledge-studio/rule-annotator-model-use.html#undeploy-view-model).
+
 ## Migration of Standard plans for Pay-As-You-Go accounts
 {: migratepaygo}
 
@@ -67,6 +69,8 @@ If you have a Standard plan and a [Pay-As-You-Go ![External link icon](../../ico
 1. If you don't have a {{site.data.keyword.knowledgestudioshort}} instance on {{site.data.keyword.cloud_notm}}, create one on the [{{site.data.keyword.cloud_notm}} catalog {{site.data.keyword.knowledgestudioshort}} page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/knowledge-studio){: new_window}.
 1. Follow the [backup and restore](/docs/services/watson-knowledge-studio/backup-restore.html) process to manually migrate your projects from the {{site.data.keyword.IBM_notm}} Marketplace instance to your instance on {{site.data.keyword.cloud_notm}}.
 
+  **Note**: If you have a model that is already deployed and you plan to delete the workspace after you back it up, withdraw the model from deployment. You can rebuild and redeploy the model after you restore the workspace from the backup. For information about undeploying models, see [Undeploying machine learning models](/docs/services/watson-knowledge-studio/publish-ml.html#undeploy-view-model) and [Undeploying rule-based models](/docs/services/watson-knowledge-studio/rule-annotator-model-use.html#undeploy-view-model).
+
 ## Migration of Standard plans for contract accounts
 {: migratecontract}
 
@@ -76,6 +80,8 @@ If you have a {{site.data.keyword.knowledgestudioshort}} Standard plan on contra
 1. After you renew your contract on {{site.data.keyword.cloud_notm}}, log in to [{{site.data.keyword.cloud_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/apps/){: new_window}.
 1. If you don't have a {{site.data.keyword.knowledgestudioshort}} instance on {{site.data.keyword.cloud_notm}}, create one on the [{{site.data.keyword.cloud_notm}} catalog {{site.data.keyword.knowledgestudioshort}} page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/knowledge-studio){: new_window}.
 1. Follow the [backup and restore](/docs/services/watson-knowledge-studio/backup-restore.html) process to manually migrate your projects from the {{site.data.keyword.IBM_notm}} Marketplace instance to your instance on {{site.data.keyword.cloud_notm}}.
+
+  **Note**: If you have a model that is already deployed and you plan to delete the workspace after you back it up, withdraw the model from deployment. You can rebuild and redeploy the model after you restore the workspace from the backup. For information about undeploying models, see [Undeploying machine learning models](/docs/services/watson-knowledge-studio/publish-ml.html#undeploy-view-model) and [Undeploying rule-based models](/docs/services/watson-knowledge-studio/rule-annotator-model-use.html#undeploy-view-model).
 
 ## Migration of Premium plans for contract accounts
 {: migratecontract}

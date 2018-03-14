@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-11"
+  years: 2015, 2018
+lastupdated: "2018-03-08"
 
 ---
 
@@ -53,7 +53,7 @@ entries or import entries from a file, and then edit the entries. See [Creating 
 </td>
 </tr>
 <tr class="strow"><td valign="top" headers="d14771e70" class="stentry"><p class="p wrapper"><strong class="ph b">Optional</strong>: Pre-annotate documents </p></td>
-<td valign="top" headers="d14771e72" class="stentry"><p class="p wrapper">Pre-annotate documents according to the terms in the workspace dictionaries, mentions of AlchemyLanguage types,
+<td valign="top" headers="d14771e72" class="stentry"><p class="p wrapper">Pre-annotate documents according to the terms in the workspace dictionaries, mentions of {{site.data.keyword.nlushort}} types,
 or based on rules that you define. See [Bootstrapping annotation](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannotate).</p></td>
 </tr>
 <tr class="strow"><td valign="top" headers="d14771e70" class="stentry"><p class="p wrapper">Annotate documents</p></td>

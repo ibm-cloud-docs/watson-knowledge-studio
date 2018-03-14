@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-10"
+lastupdated: "2018-03-08"
 
 ---
 
@@ -202,7 +202,7 @@ UIMA
 </tr>
 <tr class="strow"><td valign="top" headers="d25459e331" class="stentry"><p class="p wrapper">Pre-annotation</p></td>
 <td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Use a dictionary or 
-AlchemyLanguage
+{{site.data.keyword.nlushort}}
 pre-annotator to
 provide a starting point for human annotation.</p><p class="p">You cannot re-annotate a corpus from 
 IBM Watson Discovery Advisor
@@ -303,13 +303,13 @@ and rules.</p>
 </td>
 </tr>
 <tr class="strow"><td valign="top" headers="d25459e509" class="stentry"><p class="p wrapper">Publication</p></td>
-<td valign="top" headers="d25459e511" class="stentry"><p class="p wrapper">Publish a rule-based model to use for performing pattern recognition in other 
+<td valign="top" headers="d25459e511" class="stentry"><p class="p wrapper">Publish a rule-based model to use for performing pattern recognition in other
 Watson
  applications.</p></td>
 <td valign="top" headers="d25459e513" class="stentry"><p class="p wrapper">Not applicable</p></td>
 <td valign="top" headers="d25459e515" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">model ID (for use in 
 AlchemyLanguage
- or 
+ or
 Watson Discovery
  services) </p></li>
 </ul>
@@ -324,4 +324,3 @@ Watson Discovery
 </td>
 </tr>
 </table>
-
