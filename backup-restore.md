@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-16"
+  years: 2015, 2018
+lastupdated: "2018-03-14"
 
 ---
 
@@ -37,7 +37,7 @@ To back up and restore your data complete the following steps:
 1. [Export artifacts from the current instance](#export)
 1. [Recreate workspaces on the new instance](#recreateproj)
 1. [Restore the workspace data](#restoredata)
-1. [Restore the machine learning models](#restoremodels)
+1. [Restore the models](#restoremodels)
 1. [Restore any incomplete annotation tasks](#restoretasks)
 
 ## Data that can be backed up
@@ -53,7 +53,7 @@ The following types of artifacts cannot be backed up and migrated manually:
 
 - In-progress human annotation documents
 - Annotation tasks
-- Machine learning models and snapshots
+- Models and snapshots
 - Read-only dictionaries
 
 ## Preparing for backup
@@ -69,15 +69,15 @@ To prepare for backing up and restoring your data, complete the following steps:
 
 1. Understand tokenizer use.
 
-    Workspaces use the machine learning-based tokenizer by default. If you are using a dictionary-based tokenizer and have a specific need to continue doing so, you can configure the workspace to use the dictionary-based tokenizer when you restore it. For more information, see [Tokenizers](/docs/services/watson-knowledge-studio/create-project.html#wks_tokenizer).
+    For machine learning models, workspaces use the machine learning-based tokenizer by default. If you are using a dictionary-based tokenizer and have a specific need to continue doing so, you can configure the workspace to use the dictionary-based tokenizer when you restore it. For more information, see [Tokenizers](/docs/services/watson-knowledge-studio/create-project.html#wks_tokenizer).
 
-1. Manage machine learning model resources.
+1. Manage model resources.
 
-    Your machine learning model, its versions, and snapshot data cannot be migrated. The resources (except read-only dictionaries) that you used to train those artifacts can be migrated. Therefore, after the migration, you can recreate the machine learning model. The model that will be produced will perform the same as the models you generated prior to the migration because the resources that are used for training will be the same.
+    Your model, its versions, and snapshot data cannot be migrated. The resources (except read-only dictionaries) that you used to train those artifacts can be migrated. Therefore, after the migration, you can recreate the model. The model that will be produced will perform the same as the models you generated prior to the migration because the resources that are used for training will be the same.
 
-    **ATTENTION**: If you have a model that is already deployed and you plan to delete the workspace after you back it up, withdraw the model from deployment before you delete the workspace. You can rebuild and redeploy the model after you restore the workspace from the backup.
+    **ATTENTION**: If you have a model that is already deployed and you plan to delete the workspace after you back it up, withdraw the model from deployment. You can rebuild and redeploy the model after you restore the workspace from the backup. For information about undeploying models, see [Undeploying machine learning models](/docs/services/watson-knowledge-studio/publish-ml.html#undeploy-view-model) and [Undeploying rule-based models](/docs/services/watson-knowledge-studio/rule-annotator-model-use.html#undeploy-view-model).
 
-    **Be aware that if you fail to withdraw the model from deployment before you delete the workspace, the result is an _orphaned_ deployed model that cannot be undeployed. Orphaned deployed models will continue to generate charges on your monthly bills.**
+    **Be aware that if you fail to withdraw the model from deployment, the result is an _orphaned_ deployed model. Orphaned deployed models will continue to generate charges on your monthly bills.**
 
 1. Manage read-only dictionary information.
 
@@ -148,16 +148,23 @@ After recreating the workspaces, import the previously exported artifacts:
 1. Import the documents that you exported from the previous version of the workspace into this version of the workspace.
    For details, see [Importing resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html).
 
-## Restoring machine learning models
+## Restoring models
 {: #restoremodels}
 
-At this point, all the artifacts that were used to train the model in the previous (backed up) version of the workspace are now available in this new instance. To redeploy a machine learning model that you deployed in the previous instance, complete the following steps:
+At this point, all the artifacts that were used to train the model in the previous (backed up) version of the workspace are now available in this new instance.
 
-1. Train the machine learning annotator component to produce a model. For details, see [Creating a machine learning annotator component](/docs/services/watson-knowledge-studio/train-ml.html).
+To redeploy a machine learning model that you deployed in the previous instance, complete the following steps:
+
+1. Train the machine learning model. For details, see [Creating a machine learning model](/docs/services/watson-knowledge-studio/train-ml.html).
 
   **Note**: Do not run any pre-annotators on annotated documents that you migrated to this workspace because they will lose any annotations in them that were added by human annotators.
 
 1. After creating the model, deploy it again. For details, see [Using the machine learning model](/docs/services/watson-knowledge-studio/publish-ml.html).
+
+To redeploy a rule-based model that you deployed in the previous instance, complete the following steps:
+
+1. [Create the rule-based model](/docs/services/watson-knowledge-studio/rule-annotator-model-create.html).
+1. [Deploy the rule-based model](/docs/services/watson-knowledge-studio/rule-annotator-model-use.html).
 
 ## Restoring incomplete annotation tasks
 {: #restoretasks}

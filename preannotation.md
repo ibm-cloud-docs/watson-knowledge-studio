@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-11"
+  years: 2015, 2018
+lastupdated: "2018-03-13"
 
 ---
 
@@ -23,26 +23,26 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 # Bootstrapping annotation
 {: #preannotation}
 
-Simplify the job of the human annotator by pre-annotating the documents in a workspace. A pre-annotator is an {{site.data.keyword.knowledgestudiofull}} dictionary-, rule-base, or machine learning-based annotator component that you can run to find and annotate mentions automatically.
+Simplify the job of the human annotator by pre-annotating the documents in a workspace. A pre-annotator is a {{site.data.keyword.knowledgestudioshort}} dictionary, rule-based model, or machine learning model that you can run to find and annotate mentions automatically.
 {: shortdesc}
 
-Pre-annotation makes the job of human annotators easier because it covers the straight-forward annotations, and gets the job of annotating the documents underway.
+Pre-annotation makes the job of human annotators easier because it covers the straightforward annotations, and gets the job of annotating the documents underway.
 
-The method that you use to pre-annotate documents in no way restricts the ways that you can use the resulting model. For example, just because you use the {{site.data.keyword.alchemylanguageshort}} service to pre-annotate documents does not mean you must deploy the final machine learning model that you build to the {{site.data.keyword.alchemylanguageshort}} service. Pre-annotation is solely meant to bootstrap the human annotation process.
+The method that you use to pre-annotate documents in no way restricts the ways that you can use the resulting model. For example, just because you use the {{site.data.keyword.nlushort}} service to pre-annotate documents does not mean you must deploy the final machine learning model that you build to the {{site.data.keyword.nlushort}} service. Pre-annotation is solely meant to bootstrap the human annotation process.
 
 ## Important notes
 
 - Never run a pre-annotator on documents that human annotators have annotated because the annotations added by the human annotators will be removed.
-- You can run one pre-annotator on documents only. If you run one pre-annotator, and then run a second pre-annotator, the second run will strip the annotations that were added by the first pre-annotator from the documents. Pick the pre-annotation method that best fits your use case, and use that one only.
+- You can run only one pre-annotator on documents. If you run one pre-annotator, and then run a second pre-annotator, the second pre-annotator will remove the annotations that were added by the first pre-annotator. Pick the pre-annotation method that best fits your use case, and use only that one pre-annotator.
 
 ## Pre-annotation methods
 
 The following pre-annotators are available:
+>**Note**: The {{site.data.keyword.alchemylanguageshort}} service has been deprecated. For more information, see [Retirement of {{site.data.keyword.alchemyapishort}} service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/bye-bye-alchemyapi/){: new_window}.
 
-- **{{site.data.keyword.alchemylanguageshort}}**
+- **{{site.data.keyword.nlushort}}**
 
-    Powerful pre-annotator that uses a private knowledge base that was built from a vast amount of web-crawled data to recognize mentions of common entities. Because its source data is public web sites, it is good at recognizing entities in general knowledge areas. If your source documents have general knowledge subject matter, then this pre-annotator is a good choice for you. If you are working with highly specialized documents that focus on a specific field, such as patent law research, for example, the dictionary pre-annotator or rule annotator might be a better choice.
-    >Note: The {{site.data.keyword.alchemylanguageshort}} service has been deprecated. This pre-annotator might not be listed as an annotator component option.
+    A pre-annotator that you can use to find mentions of entities in your documents automatically. If your source documents have general knowledge subject matter, then this pre-annotator is a good choice for you. If you are working with highly specialized documents that focus on a specific field, such as patent law research, for example, the dictionary pre-annotator or rule annotator might be a better choice.
 
 - **Dictionary**
 
@@ -60,58 +60,56 @@ Alternatively, you can import already-annotated documents, and use them to start
 
 > **Note:** You *can* run a pre-annotator on documents that were added to the ground truth as part of the current workspace. Annotations that were added to the documents, reviewed, accepted, and promoted to ground truth within the current workspace are not stripped out.
 
-## Pre-annotating documents with IBM Watson AlchemyLanguage
-{: #wks_preannotalchemy}
+## Pre-annotating documents with {{site.data.keyword.nlushort}}
+{: #wks_preannotnlu}
 
-You can use the {{site.data.keyword.alchemylanguageshort}} service to pre-annotate documents that you add to your corpus.
->Note: The {{site.data.keyword.alchemylanguageshort}} service has been deprecated. This pre-annotator might not be available for use.
+You can use the {{site.data.keyword.nlushort}} service to pre-annotate documents that you add to your corpus.
 
 ### Before you begin
 
-Determine whether the {{site.data.keyword.alchemylanguageshort}} pre-annotator is likely to add value for your use case. Review the entity types that are recognized by {{site.data.keyword.alchemylanguageshort}}. To see a list, log in as a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} administrator and open the **Annotator Component** page. On the {{site.data.keyword.alchemylanguageshort}} tile, click **Create this type of pre-annotator**. Review the list of supported {{site.data.keyword.alchemylanguageshort}} entity types to determine if there is a natural overlap between them and the types in your type system. If so, continue with this procedure. If not, choose a different pre-annotator to use.
+Determine whether the {{site.data.keyword.nlushort}} pre-annotator is likely to add value for your use case. Review the list of supported [{{site.data.keyword.nlushort}} service entity types and subtypes ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/natural-language-understanding/entity-types.html){: new_window} to determine if there is a natural overlap between them and the types in your type system. If so, continue with this procedure. If not, choose a different pre-annotator to use.
 
 ### About this task
 
-{{site.data.keyword.alchemylanguageshort}} is a collection of APIs that offer text analysis through natural language processing. When you use the {{site.data.keyword.alchemylanguageshort}} pre-annotator, it calls the {{site.data.keyword.alchemylanguageshort}} entity extraction service to find and annotate entities in your documents.
+{{site.data.keyword.nlushort}} is a service that offers text analysis through natural language processing. When you use the {{site.data.keyword.nlushort}} pre-annotator, it calls the {{site.data.keyword.nlushort}} service to find and annotate entities in your documents.
 
-You must specify the entity types that you want the service to look for by mapping the {{site.data.keyword.alchemylanguageshort}} entity types that you want to find and annotate to corresponding {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} entity types that you have added to the {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} type system. Only mentions of entity types that you map will be found and annotated. You can review the entity types that the {{site.data.keyword.alchemylanguageshort}} service recognizes by reviewing the list that is displayed in the {{site.data.keyword.alchemylanguageshort}} Type Matching page, which is displayed when you perform the following procedure.
-
-> **Note:** You cannot use the {{site.data.keyword.alchemylanguageshort}} pre-annotator on documents that are written in Arabic, Japanese, or Korean, because those languages are not currently supported by the {{site.data.keyword.alchemylanguageshort}} entity extraction service.
+You must specify the entity types that you want the service to look for by mapping the {{site.data.keyword.nlushort}} entity types to corresponding {{site.data.keyword.knowledgestudioshort}} entity types that you have added to the {{site.data.keyword.knowledgestudioshort}} type system. Only mentions of entity types that you map will be found and annotated.
 
 ### Procedure
 
-To use the {{site.data.keyword.alchemylanguageshort}} service to pre-annotate documents, complete the following steps:
+To use the {{site.data.keyword.nlushort}} service to pre-annotate documents, complete the following steps:
 
-1. Log in as a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} administrator and open the **Annotator Component** page.
-1. Under the **{{site.data.keyword.alchemylanguageshort}}** pre-annotator type, click **Create this type of pre-annotator**.
-1. Map entity types that you defined in the {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} type system to corresponding {{site.data.keyword.alchemylanguageshort}} entity types.
+1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator and select your workspace.
+1. Select the **Assets & Tools** > **Pre-annotators** > **Natural Language Understanding** tab.
+1. Click **Edit** to map each entity type that is defined on the **Entity Types** page to corresponding {{site.data.keyword.nlushort}} entity types.
 
-    - The drop-down list of the **{{site.data.keyword.alchemylanguageshort}}** Entity Type field is pre-populated with entity types that are recognized by the {{site.data.keyword.alchemylanguageshort}} entity extraction service.
+    - The drop-down list of the {{site.data.keyword.nlushort}} entity types is pre-populated with entity types that are recognized by the {{site.data.keyword.nlushort}} service.
     - You must map at least one entity type.
-    - You cannot map an {{site.data.keyword.alchemylanguageshort}} entity type to a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} entity role, only {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} entity types.
-    - You can map more than one {{site.data.keyword.alchemylanguageshort}} entity type to a single {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} entity type, or the other way around. For example, the following mappings are permitted:
+    - You cannot map an {{site.data.keyword.nlushort}} entity type to a {{site.data.keyword.knowledgestudioshort}} entity role, only {{site.data.keyword.knowledgestudioshort}} entity types.
+    - You can map more than one {{site.data.keyword.nlushort}} entity type to a single {{site.data.keyword.knowledgestudioshort}} entity type, or the other way around. For example, the following mappings are permitted:
 
     <table cellpadding="4" cellspacing="0" summary="Sample mapping of entity types" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d20428e292" class="stentry thleft thbot">Watson Knowledge Studio Entity Type</th>
-        <th valign="bottom" align="left" id="d20428e298" class="stentry thleft thbot">AlchemyLanguage Entity Type</th>
+        <th valign="bottom" align="left" id="d20428e298" class="stentry thleft thbot">{{site.data.keyword.nlushort}} Entity Type</th>
       </tr>
       <tr class="strow"><td valign="top" headers="d20428e292" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">ENGINEER</p></li>
             <li class="li"><p class="p wrapper">SCIENTIST</p></li>
           </ul>
         </td>
-        <td valign="top" headers="d20428e298" class="stentry"><p class="p wrapper">Person</p></td>
+        <td valign="top" headers="d20428e298" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">Person</p></li>
+          </ul></td>
       </tr>
-      <tr class="strow"><td valign="top" headers="d20428e292" class="stentry"><p class="p wrapper">LOCATION</p></td>
-        <td valign="top" headers="d20428e298" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">City</p></li>
+      <tr class="strow"><td valign="top" headers="d20428e292" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">LOCATION</p></li></td>
+        <td valign="top" headers="d20428e298" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">CityTown</p></li>
             <li class="li"><p class="p wrapper">Country</p></li>
           </ul>
         </td>
       </tr>
     </table>
-    {: #wks_preannotalchemy__datasimpletable_cm1_y3g_fx}
+    {: #wks_preannotnlu__datasimpletable_cm1_y3g_fx}
 
-1. After mapping all of the entity types that you want to capture, click **Create** &gt; **Create &amp; Run** to run the pre-annotator.
+1. After mapping all the entity types that you want to apply, click **Apply This Pre-annotator**.
 
-    The **Run** option is not available until you map at least one entity type.
+    The **Apply This Pre-annotator** button is not available until you map at least one entity type.
 
 1. Select the check box for each document set that you want to pre-annotate.
 
@@ -120,120 +118,117 @@ To use the {{site.data.keyword.alchemylanguageshort}} service to pre-annotate do
 
 1. Click **Run**.
 
-    If you are doing a validation check of the pre-annotator, then open the annotated documents and review the annotations that were added. Make sure a sufficient number of accurate annotations were created. If the annotations are accurate, then you can run the annotator again on more and larger document sets. If the annotations are not accurate, then consider mapping different {{site.data.keyword.alchemylanguageshort}} entity types to your types. If the types do not naturally overlap, then the {{site.data.keyword.alchemylanguageshort}} pre-annotator is not the best pre-annotator for you to use.
+    If you are doing a validation check of the pre-annotator, then open the annotated documents and review the annotations that were added. Make sure a sufficient number of accurate annotations were created. If the annotations are accurate, then you can run the annotator again on more and larger document sets. If the annotations are not accurate, then consider mapping different {{site.data.keyword.nlushort}} entity types to your types. If the types do not naturally overlap, then the {{site.data.keyword.nlushort}} pre-annotator is not the best pre-annotator for you to use.
 
-    Pre-annotation is applied to individual documents without regard for the various document sets that a document might belong to. A document that overlaps between a selected document set and an unselected document will appear pre-annotated in both document sets.
+    Pre-annotation is applied to individual documents without regard for the various document sets that a document might belong to. A document that overlaps between a selected document set and an unselected document set will be pre-annotated in both document sets.
 
-1. After you run the pre-annotator once, you can click **Run** any time that you want to use it to pre-annotate additional document sets that you add to the corpus.
+1. After you run the pre-annotator once, you can click **Apply This Pre-annotator** any time that you want to use it to pre-annotate additional document sets that you add to the corpus.
 
-    > **Restriction:** If you edit the type mapping definition of the {{site.data.keyword.alchemylanguageshort}} pre-annotator, then you must re-create annotation tasks that include the pre-annotated document sets. Pre-annotation based on the changes that you make to the pre-annotator mapping definition cannot be applied to document sets that are already assigned to an annotation task.
+    > **Restriction:** If you edit the type mapping definition of the {{site.data.keyword.nlushort}} pre-annotator, then you must re-create annotation tasks that include the pre-annotated document sets. Pre-annotation based on the changes that you make to the pre-annotator mapping definition cannot be applied to document sets that are already assigned to an annotation task.
 
 ### Results
-{: #wks_preannotalchemy__export-warning}
+{: #wks_preannotnlu__export-warning}
 
-Ground truth that is produced by documents that were pre-annotated by the {{site.data.keyword.alchemylanguageshort}} service cannot be used directly outside of {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}}. You can export the ground truth (in non-readable form) to move it from one {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace to another. And you can continue to develop the ground truth and use it to build a machine learning or rule-based model that can be deployed for use in services outside of the {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} tool.
+Ground truth that is produced by documents that were pre-annotated by the {{site.data.keyword.nlushort}} service cannot be used directly outside of {{site.data.keyword.knowledgestudioshort}}. You can export the ground truth (in non-readable form) to move it from one {{site.data.keyword.knowledgestudioshort}} workspace to another. And you can continue to develop the ground truth and use it to build a machine learning model or rule-based model that can be deployed for use in services outside of {{site.data.keyword.knowledgestudioshort}}.
 
-> **Restriction:** Only documents that were pre-annotated with {{site.data.keyword.alchemylanguageshort}} are obscured into a non-readable format at export time. But, all annotations in those documents are obscured, including annotations that were added to the documents by human annotators.
+> **Restriction:** Documents that were pre-annotated with {{site.data.keyword.nlushort}} are obscured into a non-readable format when they are exported. But, all annotations in those documents are obscured, including annotations that were added to the documents by human annotators.
 
 **Related information**:
 
-[http://www.ibm.com/watson/developercloud/alchemy-language.html ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/watson/developercloud/alchemy-language.html){: new_window}
+[{{site.data.keyword.nlushort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/services/natural-language-understanding/){: new_window}
 
-## Pre-annotating documents with the Dictionary pre-annotator
+## Pre-annotating documents with a dictionary
 {: #wks_preannot}
 
-To help human annotators get started with their annotation tasks, you can create a Dictionary pre-annotator to pre-annotate documents that you add to the corpus.
+To help human annotators get started with their annotation tasks, you can create a dictionary and use it to pre-annotate documents that you add to the corpus.
 
 ### About this task
 
-When a human annotator begins work on documents that were pre-annotated, it is likely that a number of mentions will already be marked by entity types based on the dictionary entries. The human annotator can change or remove the pre-annotated entity types and assign entity types to unannotated mentions. Pre-annotation by a Dictionary annotator does not annotate relations and coreferences; human annotators must manually assign these types of annotations.
+When a human annotator begins work on documents that were pre-annotated, it is likely that a number of mentions will already be marked by entity types based on the dictionary entries. The human annotator can change or remove the pre-annotated entity types and assign entity types to unannotated mentions. Pre-annotation by a dictionary does not annotate relations and coreferences. Relations and coreferences must be annotated by human annotators.
+
+**Note**: This task shows how to create a dictionary that is editable. If you want to upload and pre-annotate your documents with a read-only dictionary, click the **Upload Dictionary** button that is available on the **Assets & Tools** > **Pre-annotators** > **Dictionaries** tab.
 
 ### Procedure
 
-To create a Dictionary annotator and pre-annotate documents:
+To create an editable dictionary and pre-annotate documents:
 
-1. Log in as a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} administrator or project manager and open the **Annotator Component** page.
-1. Under the **Dictionary** annotator type, click **Create this type of pre-annotator**.
-1. Associate the dictionaries that you want the pre-annotator to use with the entity type of the dictionary entries.
-
-    The pre-annotator uses the type information of dictionary terms to find mentions of the entity type and annotate them.
-    1. Find the entity type that you want to associate with a dictionary, and then click **Edit**.
-    1. Choose a dictionary from the drop-down menu.
-    1. Click the plus sign (+) to add it.
-    1. Repeat the previous steps to associate more dictionaries with the entity type.
-
-1. Click **Create** &gt; **Create &amp; Run** .
+1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator and select your workspace.
+1. Select the **Assets & Tools** > **Pre-annotators** > **Dictionaries** tab.
+1. Click **Manage Dictionaries** and then click **Create Dictionary**.
+1. From the **Entity type** list, select an entity type to associate with the dictionary.
+1. Add entries for the dictionary or upload a file that contains dictionary terms.
+1. Go back to the **Pre-annotators** page and, on the **Dictionaries** tab, click **Apply This Pre-annotator**.
 1. Select the check box for each document set that you want to pre-annotate and click **Run**.
 
-    Pre-annotation is applied to individual documents without regard for the various document or annotation sets that a document might belong to. A document that overlaps between a selected document set and an unselected document set will appear pre-annotated in both sets.
+    Pre-annotation is applied to individual documents without regard for the various document sets or annotation sets that a document might belong to. A document that overlaps between a selected document set and an unselected document set will be pre-annotated in both document sets.
 
-1. After the Dictionary annotator is created, click **Run** any time that you want to use it to pre-annotate additional document sets that you add to the corpus.
+1. After the dictionary is created, click **Run** any time that you want to use the dictionary to pre-annotate additional document sets that you add to the corpus.
 
-    > **Restriction:** If you edit the Dictionary annotator to add or remove dictionaries, you must re-create annotation tasks that include the pre-annotated document sets. Pre-annotation based on the changes that you make to the Dictionary annotator cannot be applied to annotation sets that are already assigned to an annotation task.
+    > **Restriction:** If you edit the dictionary to add or remove entries, you must re-create annotation tasks that include the pre-annotated document sets. Pre-annotation based on the changes that you make to the dictionary annotator cannot be applied to annotation sets that are already assigned to an annotation task.
 
-**Related concepts**:
+**Related information**:
 
 [Dictionaries](/docs/services/watson-knowledge-studio/dictionaries.html#wks_dictionaries)
 
-## Pre-annotating documents with a machine learning annotator
+[Getting Started > Adding a dictionary](/docs/services/watson-knowledge-studio/tutorials-create-project.html#wks_tutless4)
+
+## Pre-annotating documents with the machine learning model
 {: #wks_preannotsire}
 
-You can use an existing machine learning annotator to pre-annotate documents that you add to your corpus.
+You can use an existing machine learning model to pre-annotate documents that you add to your corpus.
 
 ### About this task
 
-After 10 to 30 documents are annotated, a machine learning model can be trained on the data. Such a minimally-trained model should not be used in a production, but can be used as a pre-annotation model that can help speed up the human annotation of subsequent documents. For example, if you add documents to the corpus after you train a machine learning annotator, you can use the trained annotator to pre-annotate the new document sets. Never run a pre-annotator on the same documents that have been annotated by a person; it removes the human annotation.
+After 10 to 30 documents are annotated, a machine learning model can be trained on the data. Such a minimally-trained model should not be used in a production, but can be used as a pre-annotation model that can help speed up the human annotation of subsequent documents. For example, if you add documents to the corpus after you train a machine learning model, you can use the model to pre-annotate the new document sets. Never run a pre-annotator on the same documents that have been annotated by a person. Pre-annotators remove human annotation.
 
 ### Procedure
 
-To use an existing machine learning annotator to pre-annotate documents:
+To use an existing machine learning model to pre-annotate documents:
 
-1. Log in as a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} administrator and open the **Annotator Component** page.
-1. In the **Machine Learning** annotator area, select the document sets that you added to the corpus and click **Run** to start the pre-annotation process. You don't need to select the existing document sets because these documents have already been annotated by human annotators.
-1. After pre-annotation is completed, open the **Human Annotation** page. Create a new task and assign the new document sets to human annotators. Human annotation should require much less time because the machine learning annotator applied annotations based on the learning it acquired through training.
-1. After human annotators complete their work, approve and adjudicate the document sets, as usual.
-1. On the **Annotator Component** page, click **Details** to view machine learning annotator details. On the Training/Test/Blind page, click **Edit Sets** and ensure that the document sets that you added are included in the data that you use to train the annotator component.
+1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator and select your workspace.
+1. Select the **Model Management** > **Versions** > **Machine Learning** tab.
+1. Click **Run this model**.
+1. Select the check box for each document set that you want to pre-annotate and click **Run**.
 
-    Initially, a typical goal is to improve the machine learning annotator by adding more training data. In this case, add the new document sets to the Training set. In future iterations, also add new document sets to the Test set and Blind set. See [Document set management](/docs/services/watson-knowledge-studio/improve-ml.html#wks_mamanagedata) for more information.
-    {: tip}
+    Pre-annotation is applied to individual documents without regard for the various document sets or annotation sets that a document might belong to. A document that overlaps between a selected document set and an unselected document set will be pre-annotated in both document sets.
 
-1. Click **Train** to re-train the machine learning annotator, or click **Train &amp; Evaluate** to re-train and evaluate the performance results.
+1. You can click **Run this model** any time that you want to use the machine learning model to pre-annotate additional document sets that you add to the corpus.
 
-## Pre-annotating documents with the rule annotator
+## Pre-annotating documents with the rule-based model
 {: #wks_preannotrule}
 
-You can use the rule annotator that you built to pre-annotate documents that you add to your corpus.
+You can use an existing rule-based model to pre-annotate documents that you add to your corpus.
 
 ### Procedure
 
 To use the rule annotator to pre-annotate documents, complete the following steps:
 
-1. Log in as a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} administrator and open the **Annotator Component** page.
-1. Under the **Rule** annotator type, click **Create this type of annotator**.
-1. Map entity types that you defined in the {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} type system to one or more Rule annotator classes.
+1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator and select your workspace.
+1. Select the **Model Management** > **Versions** > **Rule-based** tab.
+1. If not already completed, click **Map entity types and classes** to map entity types that you defined in the {{site.data.keyword.knowledgestudioshort}} type system to one or more rule-based model classes.
 
-    - The drop-down list of the Class field is pre-populated with classes that are associated with the Rule annotator.
+    - The drop-down list of the **Class Name** column is pre-populated with classes that are associated with the rule-based model.
     - You must map at least one entity type to a class.
 
-1. After mapping all of the entity types that you want to capture, click **Create** &gt; **Create &amp; Run** to pre-annotate the documents with the rule annotator.
+1. On the **Rule-based** tab, click **Run this model** and then select the document sets or annotation sets that you want to pre-annotate. Ensure that the sets you select do not contain documents that have human annotations. Pre-annotators remove human annotation.
 
-    The **Run** option is not available until you map at least one entity type to a class.
+    The **Run this model** button is not available until you map at least one entity type to a class.
 
 1. Select the check box for each document set that you want to pre-annotate.
 1. Click **Run**.
 
     Pre-annotation is applied to individual documents without regard for the various document sets that a document might belong to. A document that overlaps between a selected document set and an unselected document will appear pre-annotated in both document sets.
 
-1. After you run the pre-annotator once, you can click **Run** any time that you want to use it to pre-annotate additional document sets that you add to the corpus.
+1. You can click **Run this model** any time that you want to use the rule-based model to pre-annotate additional document sets that you add to the corpus.
 
     > **Restriction:** If you edit the entity type-to-class mapping of the rule annotator, then you must re-create annotation tasks that include the pre-annotated document sets. Pre-annotation based on the changes that you make to the pre-annotator mapping definition cannot be applied to document sets that are already assigned to an annotation task.
 
 ## Importing pre-annotated documents
 {: #wks_uima}
 
-You can jump-start the training of your annotator component by importing documents that were pre-annotated through an Unstructured Information Management Architecture ( UIMA ) analysis engine.
+You can jump-start the training of your model by importing documents that were pre-annotated through an Unstructured Information Management Architecture (UIMA) analysis engine.
 
-The pre-annotated documents must be in the XMI serialization form of UIMA Common Analysis Structure ( UIMA CAS XMI). The ZIP file that you import must include the UIMA TypeSystem descriptor file and a file that maps the UIMA types to entity types in your {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} type system.
+The pre-annotated documents must be in the XMI serialization form of UIMA Common Analysis Structure (UIMA CAS XMI). The ZIP file that you import must include the UIMA TypeSystem descriptor file and a file that maps the UIMA types to entity types in your {{site.data.keyword.knowledgestudioshort}} type system.
 
 UIMA CAS XMI is a standard format of Apache UIMA. Guidelines are provided for how to create files in the correct format from analyzed collections in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}}&trade; Explorer. If you use another Apache UIMA implementation, adapt these guidelines for your purposes. Regardless of how you create the XMI files, the requirements for creating the type system mapping file and ZIP file are the same for everyone.
 
@@ -242,7 +237,7 @@ If you assign the imported documents to human annotators, the documents appear p
 ### Exporting analyzed documents from Watson Explorer Content Analytics
 {: #wks_uimawexca}
 
-You can export documents that were crawled and analyzed in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer Content Analytics , and import the analyzed documents as XMI files into a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace.
+You can export documents that were crawled and analyzed in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer Content Analytics, and import the analyzed documents as XMI files into a {{site.data.keyword.knowledgestudioshort}} workspace.
 
 #### Procedure
 
@@ -262,7 +257,7 @@ To get analyzed documents from a {{site.data.keyword.watson}} Explorer Content A
 #### What to do next
 {: #wks_uimawexca__preUIMAimport}
 
-You must define a mapping between the UIMA types and {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} entity types. You must also create a ZIP file that contains all of the files that are required to import the analyzed data into a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace.
+You must define a mapping between the UIMA types and {{site.data.keyword.knowledgestudioshort}} entity types. You must also create a ZIP file that contains all the files that are required to import the analyzed data into a {{site.data.keyword.knowledgestudioshort}} workspace.
 
 **Related information**:
 
@@ -273,7 +268,7 @@ You must define a mapping between the UIMA types and {{site.data.keyword.watson}
 ### Exporting an analyzed collection from Content Analytics Studio
 {: #wks_uimawexstudio}
 
-You can export a collection of analyzed documents from {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer Content Analytics Studio , and import the analyzed documents as XMI files into a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} project.
+You can export a collection of analyzed documents from {{site.data.keyword.watson}} Explorer Content Analytics Studio, and import the analyzed documents as XMI files into a {{site.data.keyword.knowledgestudioshort}} project.
 
 #### Procedure
 
@@ -289,20 +284,20 @@ To get analyzed documents from a Content Analytics Studio collection:
 
 #### What to do next
 
-You must define a mapping between the UIMA types and {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} entity types. You must also create a ZIP file that contains all of the files that are required to import the analyzed data into a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace.
+You must define a mapping between the UIMA types and {{site.data.keyword.knowledgestudioshort}} entity types. You must also create a ZIP file that contains all of the files that are required to import the analyzed data into a {{site.data.keyword.knowledgestudioshort}} workspace.
 
 ### Mapping UIMA types to entity types
 {: #wks_uimawexmap}
 
-Before you import XMI files into a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace, you must define mappings between the UIMA types and {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} entity types.
+Before you import XMI files into a {{site.data.keyword.knowledgestudioshort}} workspace, you must define mappings between the UIMA types and {{site.data.keyword.knowledgestudioshort}} entity types.
 
 #### Before you begin
 
-The type system in your {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace must include the entity types that you want to map the UIMA types to.
+The type system in your {{site.data.keyword.knowledgestudioshort}} workspace must include the entity types that you want to map the UIMA types to.
 
 #### Procedure
 
-To map UIMA types to {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} entity types:
+To map UIMA types to {{site.data.keyword.knowledgestudioshort}} entity types:
 
 1. Create a file named `cas2di.tsv` in the folder that contains the UIMA TypeSystem descriptor file, such as `exported_typesystem.xml` or `TypeSystem.xml`.
 1. Open the `cas2di.tsv` file with a text editor. Each line in the file specifies a single mapping. The format of the mapping depends on which annotator's annotations you want to map:
@@ -311,7 +306,7 @@ To map UIMA types to {{site.data.keyword.watson}} {{site.data.keyword.knowledges
 
         `UIMA_Type_Name[TAB]WKS_Entity_Type`
 
-        The following example defines mappings between UIMA types produced by the Named Entity Recognition annotator in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer Content Analytics and entity types defined in a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} type system:
+        The following example defines mappings between UIMA types produced by the Named Entity Recognition annotator in {{site.data.keyword.watson}} Explorer Content Analytics and entity types defined in a {{site.data.keyword.knowledgestudioshort}} type system:
 
         ```
         com.ibm.langware.Organization  ORGANIZATION
@@ -320,7 +315,7 @@ To map UIMA types to {{site.data.keyword.watson}} {{site.data.keyword.knowledges
         ```
         {: screen}
 
-        Another example defines a mapping between UIMA types produced by custom annotator that was created in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer Content Analytics Studio and {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} entity types:
+        Another example defines a mapping between UIMA types produced by custom annotator that was created in {{site.data.keyword.watson}} Explorer Content Analytics Studio and {{site.data.keyword.knowledgestudioshort}} entity types:
 
         ```
         com.ibm.Person  PERSON
@@ -335,7 +330,7 @@ To map UIMA types to {{site.data.keyword.watson}} {{site.data.keyword.knowledges
         ```
         {: screen}
 
-        The following example, which applies to the Pattern Matcher and Dictionary Lookup annotators, defines a mapping between the category $.mykeyword.product and the {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} entity type PRODUCT:
+        The following example, which applies to the Pattern Matcher and Dictionary Lookup annotators, defines a mapping between the category $.mykeyword.product and the {{site.data.keyword.knowledgestudioshort}} entity type PRODUCT:
 
         ```
         com.ibm.takmi.nlp.annotation_type.ContiguousContext:category=$.mykeyword.product PRODUCT
@@ -344,7 +339,7 @@ To map UIMA types to {{site.data.keyword.watson}} {{site.data.keyword.knowledges
 
 #### What to do next
 
-You must create a ZIP file that contains all of the files that are required to import the analyzed data into a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace.
+You must create a ZIP file that contains all of the files that are required to import the analyzed data into a {{site.data.keyword.knowledgestudioshort}} workspace.
 
 **Related information**:
 
@@ -357,30 +352,29 @@ You must create a ZIP file that contains all of the files that are required to i
 ### Importing UIMA CAS XMI files into a workspace
 {: #wks_uimaweximport}
 
-To use the pre-annotated documents that you exported to train an annotator component, you must create a ZIP file that contains all of the files required to import the XMI files, and then import the ZIP file into a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace.
+To use the pre-annotated documents that you exported to train a model, you must create a ZIP file that contains all the files required to import the XMI files, and then import the ZIP file into a {{site.data.keyword.knowledgestudioshort}} workspace.
 
 #### Before you begin
 
-Before you import the ZIP file, ensure that the type system in your {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace includes the entity types that you mapped the UIMA types to.
+Before you import the ZIP file, ensure that the type system in your {{site.data.keyword.knowledgestudioshort}} workspace includes the entity types that you mapped the UIMA types to.
 
-> **Warning:** UIMA analysis engines allow annotations to span sentences. In {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} , annotations must exist within the boundaries of a single sentence. If the XMI files that you import include annotations that span sentences, those annotations do not appear in the Ground Truth Editor.
+> **Warning:** UIMA analysis engines allow annotations to span sentences. In {{site.data.keyword.knowledgestudioshort}}, annotations must exist within the boundaries of a single sentence. If the XMI files that you import include annotations that span sentences, those annotations do not appear in the Ground Truth Editor.
 
 #### Procedure
 
-To import pre-annotated documents into a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace:
+To import pre-annotated documents into a {{site.data.keyword.knowledgestudioshort}} workspace:
 
-1. Create a ZIP file that contains all of the files that are required by {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}}.
+1. Create a ZIP file that contains all of the files that are required by {{site.data.keyword.knowledgestudioshort}}.
 
     1. Select the folder that contains the XMI files, UIMA type system descriptor file, and `cas2di.tsv` file, or select all of the files in the folder.
-    1. Create a ZIP file that includes all files. Make sure the `cas2di.tsv` and UIMA type system descriptor files are stored in the root directory of the ZIP file. These files cannot be stored in a subfolder within the ZIP file or {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} will not be able to read them, and nothing will be imported.
+    1. Create a ZIP file that includes all files. Make sure the `cas2di.tsv` and UIMA type system descriptor files are stored in the root directory of the ZIP file. These files cannot be stored in a subfolder within the ZIP file or {{site.data.keyword.knowledgestudioshort}} will not be able to read them, and nothing will be imported.
 
         In Windows, you can right-click and select **Send to** &gt; **Compressed (zipped) folder** .
 
-1. Import the ZIP file into a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace.
+1. Import the ZIP file into a {{site.data.keyword.knowledgestudioshort}} workspace.
 
-    1. Log in as a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} administrator or project manager, open the workspace that you want to add the documents to, and open the **Documents** page.
+    1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager, open the workspace that you want to add the documents to, and open the **Documents** page.
     1. Click the icon to add documents to the corpus.
     1. Drag the ZIP file that you created or click to locate and select the file.
     1. Select the check box to indicate that the ZIP file contains UIMA CAS XMI files.
     1. Click **Import**.
-

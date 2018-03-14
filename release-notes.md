@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-17"
+  years: 2015, 2018
+lastupdated: "2018-03-14"
 
 ---
 
@@ -25,6 +25,16 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 
 The following new features and changes to {{site.data.keyword.knowledgestudiofull}} are available.
 {: shortdesc}
+
+## March 2018
+{: #march2018}
+
+### New features and changes
+{: #new-march2018}
+
+- A **Deployed Models** page is available where you can view all the {{site.data.keyword.knowledgestudioshort}} models that are deployed to services in the spaces that you have access to. To view the **Deployed Models** page, from the **Settings** menu in the top right menu bar, click **Manage deployed models**. For information about undeploying and viewing models on the **Deployed Models** page, see [Undeploying machine learning models](/docs/services/watson-knowledge-studio/publish-ml.html#undeploy-view-model) and [Undeploying rule-based models](/docs/services/watson-knowledge-studio/rule-annotator-model-use.html#undeploy-view-model).
+- A French translation of the {{site.data.keyword.knowledgestudioshort}} interface is now available.
+- {{site.data.keyword.alchemylanguagefull}} is no longer available as a pre-annotator. Instead of {{site.data.keyword.alchemylanguageshort}}, you can use {{site.data.keyword.nlushort}} to pre-annotate your documents. For more information, see [Bootstrapping annotation](/docs/services/watson-knowledge-studio/preannotation.html).
 
 ## December 2017
 {: #december2017}
