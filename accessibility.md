@@ -31,7 +31,7 @@ This product uses standard Windows navigation keys.
 ## Accessibility features in the product documentation
 {: #doc-accessibility}
 
-Accessibility features help people with a physical disability, such as restricted mobility or limited vision, or with other special needs, use information technology products successfully.
+Accessibility features help people with a physical disability, such as restricted mobility or limited vision, or with other accommodations, use information technology products successfully.
 
 The accessibility features in this product documentation allow users to do the following:
 
