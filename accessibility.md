@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-11"
+  years: 2015, 2018
+lastupdated: "2018-03-22"
 
 ---
 
@@ -31,11 +31,10 @@ This product uses standard Windows navigation keys.
 ## Accessibility features in the product documentation
 {: #doc-accessibility}
 
-Accessibility features help people with a physical disability, such as restricted mobility or limited vision, or with other special needs, use information technology products successfully.
+Accessibility features assist users who have a disability, such as restricted mobility or limited vision, to use information technology content successfully.
 
-The accessibility features in this product documentation allow users to do the following:
+The accessibility features in this product documentation allow customers to use the following methods to navigate it:
 
 - Use screen-reader software and digital speech synthesizers to hear what is displayed on the screen. Consult the product documentation of the assistive technology for details on using assistive technologies with HTML-based information.
 - Use screen magnifiers to magnify what is displayed on the screen.
 - Operate specific or equivalent features by using only the keyboard.
-
