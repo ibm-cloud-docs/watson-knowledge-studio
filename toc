@@ -55,16 +55,7 @@ Watson Knowledge Studio
         improve-ml.md
         publish-ml.md
 
-
-    {: topicgroup}
-    Ground Truth Editor
-        user-guide.md
-        entity-gif.md
-        entity-gif0.md
-        concordance-gif.md
-        coref-gif.md
-        relation-gif.md
-
+    user-guide.md
     backup-restore.md
     client-migration.md
     upgrade.md

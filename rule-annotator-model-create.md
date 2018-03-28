@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-11"
+  years: 2015, 2018
+lastupdated: "2018-03-26"
 
 ---
 
@@ -30,14 +30,15 @@ After defining rules, you can create a rule-based model.
 
 To create a rule-based model. complete the following steps:
 
-1. Log in as a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} administrator or project manager and open the **Annotator Component** page.
-1. If you already created an annotator, then click **Create Annotator**. Otherwise, on the **Rule** annotator tile, click **Create this type of annotator**.
+1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager, and select your workspace.
+1. Select the **Model Management** > **Versions** > **Rule-based** tab.
 1. Map the entity types from your type system to one or more classes that you used to define rules.
-1. Click **Create** &gt; **Create &amp; Run** .
 
-## Deleting a rule annotator
+  After the entity types are mapped, you can [deploy the rule-based model](/docs/services/watson-knowledge-studio/rule-annotator-model-use.html) or use it to [pre-annotate documents](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannotrule) in the process of creating a machine learning model.
+
+## Deleting a rule-based model
 {: #wks_rule_delete_model}
 
-You cannot delete a rule annotator.
+You cannot delete a rule-based model.
 
-You can delete the workspace that was used to develop the rule annotator component, but you cannot delete the annotator itself. Deleting an annotator is not the best approach. Instead, recreate the rules that are defined for it. Editing the rules directly changes the behavior of the rule-based model.
+You can delete the workspace that was used to develop the rule-based model, but you cannot delete the model itself. Deleting a model is not the best approach. Instead, recreate the rules that are defined for it. Editing the rules directly changes the behavior of the rule-based model.

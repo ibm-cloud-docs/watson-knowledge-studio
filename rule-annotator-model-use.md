@@ -61,7 +61,7 @@ To deploy a rule-based model to {{site.data.keyword.alchemylanguageshort}} :
 1. Select the **Model Management** > **Versions** > **Rule-based** tab.
 1. Choose the version of the model that you want to deploy.
 
-    If there is only one working version of the model, save the current model for deployment by clicking **Save for Deployment**. This versions the model, which enables you to deploy one version, while you continue to improve the current version. Saving the version might take a few minutes. The option to deploy does not appear until after the version is created.
+    If there is only one working version of the model, save the current model for deployment by clicking **Save for Deployment**. Clicking **Save for Deployment** creates a version of the model, which enables you to deploy one version while you continue to improve the current version. Saving the version might take a few minutes. The option to deploy does not appear until after the version is created.
 
 1. Click **Deploy**, choose to deploy it to {{site.data.keyword.alchemylanguageshort}} , and then click **Next**.
 1. Either enter the key that you obtained from {{site.data.keyword.alchemylanguageshort}} or select a previously deployed version of the model that has a key that you want to reuse, and click **Deploy**. If the key is valid, a confirmation that contains the model ID is displayed. This confirmation does not mean that the model is ready for use by your applications.

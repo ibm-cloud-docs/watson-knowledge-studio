@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-08"
+lastupdated: "2018-03-28"
 
 ---
 
@@ -129,7 +129,7 @@ The following events can cause problems with deployed models:
 
 **Related tasks**:
 
-[Deploying a machine learning annotator to {{site.data.keyword.IBM_notm}} {{site.data.keyword.alchemylanguageshort}}](/docs/services/watson-knowledge-studio/publish-ml.html#wks_mabluemix)
+[Deploying a machine learning model to {{site.data.keyword.IBM_notm}} {{site.data.keyword.alchemylanguageshort}}](/docs/services/watson-knowledge-studio/publish-ml.html#wks_mabluemix)
 
 ## Can't create a free account
 {: #wks_ts_free}
@@ -203,8 +203,6 @@ After removing models or model versions, wait an hour before you retry the actio
 
 To manage your monthly bill, if the Admin role is assigned to you and you have a Premium or Standard account, you can set a storage limit on the Service Details page in {{site.data.keyword.knowledgestudioshort}}. To see the Service Details page and set the storage limit, from the top navigation bar in {{site.data.keyword.knowledgestudioshort}}, click the **Settings** icon, click the **View/modify service details** link, and then click the **Set storage limit** link.
 {: tip}
-
-![A screen capture of the "Set storage limit" window, where you can set a limit to how much storage your service uses. The window opens when you click the "Set storage limit" link from the Service Details page.](images/storageLimit.jpg)
 
 ## Contacting IBM Support
 {: #ts_contactingibmsupport}

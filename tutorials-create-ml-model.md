@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-19"
+  years: 2015, 2018
+lastupdated: "2018-03-20"
 
 ---
 
@@ -44,7 +44,7 @@ This tutorial should take approximately 60 minutes to finish. If you explore oth
 - You successfully completed [Tutorial: Creating a workspace](/docs/services/watson-knowledge-studio/tutorials-create-project.html).
 - You must have at least one user ID in either the Admin or ProjectManager role.
 
-    > **Note:** If possible, use multiple user IDs for the machine learning annotator tasks in this tutorial (one Admin or ProjectManager user ID, and at least two HumanAnnotator user IDs). Using multiple user IDs provides the most realistic simulation of an actual {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}}™ {{site.data.keyword.knowledgestudioshort}} workspace, where a project manager must coordinate and adjudicate annotation performed by multiple human annotators. However, if you have access to only a single user ID, you can still simulate most parts of the process.
+    > **Note:** If possible, use multiple user IDs for the machine learning model tasks in this tutorial (one Admin or ProjectManager user ID, and at least two HumanAnnotator user IDs). Using multiple user IDs provides the most realistic simulation of an actual {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}}™ {{site.data.keyword.knowledgestudioshort}} workspace, where a project manager must coordinate and adjudicate annotation performed by multiple human annotators. However, if you have access to only a single user ID, you can still simulate most parts of the process.
 
     For information about user roles, see [Assembling a team](/docs/services/watson-knowledge-studio/team.html).
 
@@ -268,42 +268,42 @@ When you approve a document set, only the documents that do not overlap with oth
 
 ### Results
 
-After you resolve the annotation conflicts and promote the documents to ground truth, you can use them to train the machine learning annotator.
+After you resolve the annotation conflicts and promote the documents to ground truth, you can use them to train the machine learning model.
 
-## Lesson 8: Creating a machine learning annotator
+## Lesson 8: Creating a machine learning model
 {: #wks_tutless_ml8}
 
-In this lesson, you will learn how to create a machine learning annotator in {{site.data.keyword.knowledgestudioshort}}.
+In this lesson, you will learn how to create a machine learning model in {{site.data.keyword.knowledgestudioshort}}.
 
 ### About this task
 
-When you create a machine learning annotator, you select the document sets that you want to use to train it. You also specify the percentage of documents that are to be used as training data, test data, and blind data. Only documents that became ground truth through approval or adjudication can be used to train the machine learning annotator.
+When you create a machine learning model, you select the document sets that you want to use to train it. You also specify the percentage of documents that are to be used as training data, test data, and blind data. Only documents that became ground truth through approval or adjudication can be used to train the machine learning model.
 
 ### Procedure
 
 1. Log in to {{site.data.keyword.knowledgestudioshort}} as the administrator.
 1. From the **Model Management** > **Performance** sidebar, click **Train and evaluate**.
-1. Select the document sets that you want to use for creating a machine learning annotator. Click the check mark next to each document set name.
+1. Select the document sets that you want to use for creating a machine learning model. Click the check mark next to each document set name.
 1. Select the two annotation sets to create your testing, training, and blind data. Then, click **Train &amp; Evaluate**.
 
     > **Note:** Training might take more than ten minutes, or even hours, depending on the number of human annotations and the total number of words across documents.
 
-1. After the machine learning annotator is trained, you can export it or you can view detailed information about its performance by clicking the **Detailed Statistics** links that are located above each of the graphs.
+1. After the machine learning model is trained, you can export it or you can view detailed information about its performance by clicking the **Detailed Statistics** links that are located above each of the graphs.
 1. To view the Training / Test / Blind Sets page, click the **Train and evaluate** button.
 1. To see the documents that human annotators worked on, click **View Ground Truth**.
-1. To see the annotations that the trained machine learning annotator created on that same set of documents, click **View Decoding Results**.
-1. To view details about the precision, recall, and F1 scores for the machine learning annotator, select the Performance page.
+1. To see the annotations that the trained machine learning model created on that same set of documents, click **View Decoding Results**.
+1. To view details about the precision, recall, and F1 scores for the machine learning model, select the Performance page.
 1. Click the **Detailed Statistics** links above each of the graphs. On these Statistics pages, you can view the scores for mentions, relations, and coreference chains by using the radio buttons.
 
-    You can analyze performance by viewing a summary of statistics for entity types, relation types, and coreference chains. You can also analyze statistics that are presented in a confusion matrix by selecting **Confusion Matrix** from the menu that defaults to **Summary**. The *confusion matrix* helps you compare the annotations that were added by the machine learning annotator to the annotations in the ground truth.
+    You can analyze performance by viewing a summary of statistics for entity types, relation types, and coreference chains. You can also analyze statistics that are presented in a confusion matrix by selecting **Confusion Matrix** from the menu that defaults to **Summary**. The *confusion matrix* helps you compare the annotations that were added by the machine learning model to the annotations in the ground truth.
 
     > **Note:** In this tutorial, you annotated documents with only a single dictionary for organizations. Therefore, the scores you see are `0` or `N/A` for most entity types except `ORGANIZATION`. The numbers are low, but that is expected, because you did not do any human annotation or correction.
 
-    *Figure 2. Options on the Statistics page for a machine learning annotator*
+    *Figure 2. Options on the Statistics page for a machine learning model*
 
     ![This screen capture shows the Statistics page.](images/wks_tutanno9.gif)
 
-1. From the sidebar, select **Model Management** > **Versions**. On the Versions page, you can take a snapshot of the annotator and the resources that were used to create it (except for dictionaries and annotation tasks). For example, you might want to take a snapshot before you retrain the model. If the statistics are poorer the next time you train it, you can promote the older version and delete the version that returned poorer results.
+1. From the sidebar, select **Model Management** > **Versions**. On the Versions page, you can take a snapshot of the model and the resources that were used to create it (except for dictionaries and annotation tasks). For example, you might want to take a snapshot before you retrain the model. If the statistics are poorer the next time you train it, you can promote the older version and delete the version that returned poorer results.
 
 ### Results
 

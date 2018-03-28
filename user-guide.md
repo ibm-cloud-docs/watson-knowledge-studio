@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-11"
+  years: 2015, 2018
+lastupdated: "2018-03-26"
 
 ---
 
@@ -128,7 +128,7 @@ These annotation best practices provide some guidance and examples as you start 
 
 When a human annotator annotates a document, the document is opened in the Ground Truth Editor. The Ground Truth Editor is a visual tool that human annotators use to apply labels to text.
 
-The goal of human annotation is to label mentions, relations, and coreferenced mentions so that the machine learning annotator can be trained to detect these patterns in unseen text. At a minimum, use the tool to annotate entity mentions. If the application that will use the resulting model does not need to find and extract coreferences and relation mentions, then you do not need to annotate coreferences and relation mentions.
+The goal of human annotation is to label mentions, relations, and coreferenced mentions so that the machine learning model can be trained to detect these patterns in unseen text. At a minimum, use the tool to annotate entity mentions. If the application that will use the resulting model does not need to find and extract coreferences and relation mentions, then you do not need to annotate coreferences and relation mentions.
 
 Concordance is an optional tool that can be used by human annotators to expedite the annotation of repetitive mentions.
 
@@ -158,26 +158,15 @@ Choose a mode to use when manually annotating documents:
 
 To annotate entity mentions, a human annotator selects a string of text in a document, and then applies a label that most appropriately describes what the string of text represents. The labels that can be applied are entity types defined in the workspace's type system.
 
-### Before you begin
-
-Click the image to see how to annotate an entity mention.
-
-<div id="wks_haentity__imagemap_z5h_4w1_kw">
-  <img usemap="#d42107e324" border="0" class="image" src="images/annotate-mention.jpg" alt="Shows a document open in the ground truth editor." />
-  <map name="d42107e324" id="d42107e324">
-    <area href="entity-gif.html" alt="" title="" shape="rect" coords="0,0,955,250" />
-  </map>
-</div>
-
 ### About this task
 
 Before starting to annotate entity mentions in a document, it's a good practice to read the entire document. Doing so can help keep the entire context in mind while annotating, and can help provide insights into how entity mentions might relate to each other and which mentions might need to be coreferenced in future passes through the document.
 
-When you open a document to annotate it, you might want to use the concordance tool to annotate repeating entity mentions first, and then annotate individual entity mentions. You can then annotate relation mentions and coreferences in any order that you like, or not at all. Entity mention annotation is mandatory. Whether you also annotate relation mentions and coreferences depends on the purpose of your annotator component and the needs of your domain. However, until and unless you identify coreferences, each entity mention is considered to represent a distinct entity.
+When you open a document to annotate it, you might want to use the concordance tool to annotate repeating entity mentions first, and then annotate individual entity mentions. You can then annotate relation mentions and coreferences in any order that you like, or not at all. Entity mention annotation is mandatory. Whether you also annotate relation mentions and coreferences depends on the purpose of your model and the needs of your domain. However, until and unless you identify coreferences, each entity mention is considered to represent a distinct entity.
 
 #### Tips
 
-- Keep in mind that shorter entity mentions are better for training because it is easier for the machine learning annotator to recognize the shorter patterns and add the correct annotation tokens.
+- Keep in mind that shorter entity mentions are better for training because it is easier for the machine learning model to recognize the shorter patterns and add the correct annotation tokens.
 - If you chose to use a dictionary-based tokenizer with the workspace, and want to handle compound terms and punctuation in your training data, you can add the terms to a dictionary and create a dictionary annotator to pre-annotate the occurrences. For example, to avoid sentence boundary breaks for terms that include punctuation, add terms like Yahoo! and Dr. to a dictionary. Likewise, if your training data includes hyphenated words or alphanumeric acronyms, like Hi-C or MS-60-70, add those terms to the dictionary. To annotate occurrences regardless of case, add the terms in lowercase (such as hi-c). To annotate variations, add the variations as surface forms (MS-60-70 and MS 60 70). **Important**: Do not use this approach if you are using the default tokenizer.
 
 ### Procedure
@@ -208,15 +197,6 @@ To annotate entity mentions in a document:
 
 1. Depending on the type system, you might be able to configure attributes for an entity mention, such as assigning an entity role or subtype or a mention class or type. If so, select a mention and click **Attribute View**.
 
-    Click the image to see how to apply a subtype attribute to an entity mention.
-
-    <div id="wks_haentity__imagemap_mjt_4d5_jw">
-      <img usemap="#d42107e455" border="0" class="image" src="images/mention-attributes.jpg" alt="Shows an annotated document open in the ground truth editor." />
-      <map name="d42107e455" id="d42107e455">
-        <area href="entity-gif0.html" alt="" title="" shape="rect" coords="0,0,675,310" />
-      </map>
-    </div>
-
 1. Click **Save** at any time to save your work.
 
 ### What to do next
@@ -228,18 +208,7 @@ After you finish annotating all documents and mark them **Completed**, the statu
 ## Annotating repeating mentions
 {: #wks_haconcordance}
 
-You can optionally use the concordance tool to label multiple occurrences of a mention at once. The tool enables you to annotate the same text with the same entity type throughout a document and across annotation sets. Using the tool helps to ensure consistency in annotation across multiple documents. For example, you can label each occurrence of the mention "encryption" individually in mention mode, or you can label all occurrences of the mention "encryption" by using the concordance tool. Either way, the annotator component learns from the entity type that you apply to the mention.
-
-### Before you begin
-
-Click the image to see how to use the concordance tool to find and annotate all mentions in a document.
-
-<div id="wks_haconcordance__imagemap_zbn_r25_jw">
-  <img usemap="#d42107e528" border="0" class="image" src="images/concordance.jpg" alt="Shows an annotated document open in the ground truth editor." />
-  <map name="d42107e528" id="d42107e528">
-    <area href="concordance-gif.html" alt="" title="" shape="rect" coords="0,0,995,435" />
-  </map>
-</div>
+You can optionally use the concordance tool to label multiple occurrences of a mention at once. The tool enables you to annotate the same text with the same entity type throughout a document and across annotation sets. Using the tool helps to ensure consistency in annotation across multiple documents. For example, you can label each occurrence of the mention "encryption" individually in mention mode, or you can label all occurrences of the mention "encryption" by using the concordance tool. Either way, the model learns from the entity type that you apply to the mention.
 
 ### About this task
 
@@ -267,26 +236,17 @@ The mentions are annotated in the document. There is no way to remove the set of
 ## Annotating mentions as coreferences
 {: #wks_hacoref}
 
-To annotate mentions as coreferences to the same entity, a human annotator selects every occurrence of a mention that refers to the same thing. Coreference helps an annotator component recognize that entities that are referred to in different ways are to be associated with the same entity, such as the name of a U.S. state and its abbreviation, the name of a company and its acronym, or a person's name and a pronoun that refers back to that person.
+To annotate mentions as coreferences to the same entity, a human annotator selects every occurrence of a mention that refers to the same thing. Coreference helps a model recognize that entities that are referred to in different ways are to be associated with the same entity, such as the name of a U.S. state and its abbreviation, the name of a company and its acronym, or a person's name and a pronoun that refers back to that person.
 
 ### Before you begin
 
 You must annotate mentions in the document before you can identify coreferences.
 
-Click the image to see how to create a coreference chain.
-
-<div id="wks_hacoref__imagemap_x35_l25_jw">
-  <img usemap="#d42107e637" border="0" class="image" src="images/coref.jpg" alt="Shows an annotated document open in the ground truth editor." />
-  <map name="d42107e637" id="d42107e637">
-    <area href="coref-gif.html" alt="" title="" shape="rect" coords="0,0,855,335" />
-  </map>
-</div>
-
 ### About this task
 
 When you annotate mentions as coreferences, the system creates a coreference chain. The chain provides a way for you to view all of the mentions in context and verify that all of the occurrences belong together under the same entity. For example, "Barack", "Michelle", "he", and "she" are all of the same entity type, PERSON, but "Barack" and "he" are one entity, and "Michelle" and "she" are another entity. In this example, you create two coreference chains.
 
-When you create a coreference chain, you must select mentions that have been marked by the same entity type. In some cases, however, you might want to include mentions of different types in the same coreference chain. To do this, you must create multiple chains and then merge them. For example, think about how people progressively use shorthand to avoid repeating things in text. In a traffic incident report, the first reference to a vehicle might be "2004 Honda Accord Sedan". Later, the author might refer to the vehicle as "Accord", and then later refer to the vehicle as simply "vehicle". If the type system includes entries for vehicle manufacturer, model, and type, you could create multiple coreference chains per entity type, and then merge them to create a consolidated chain. The merged chain helps train the machine learning annotator to recognize that all of these mentions refer to the same thing.
+When you create a coreference chain, you must select mentions that have been marked by the same entity type. In some cases, however, you might want to include mentions of different types in the same coreference chain. To do this, you must create multiple chains and then merge them. For example, think about how people progressively use shorthand to avoid repeating things in text. In a traffic incident report, the first reference to a vehicle might be "2004 Honda Accord Sedan". Later, the author might refer to the vehicle as "Accord", and then later refer to the vehicle as simply "vehicle". If the type system includes entries for vehicle manufacturer, model, and type, you could create multiple coreference chains per entity type, and then merge them to create a consolidated chain. The merged chain helps train the machine learning model to recognize that all of these mentions refer to the same thing.
 
 Another way to combine mentions of different entity types is to create a chain with mentions of one entity type. You can then click a mention of another entity type, and then click the chain that you created to add the mention to that chain.
 
@@ -330,15 +290,6 @@ To annotate relation mentions, a human annotator finds textual evidence of a rel
 ### Before you begin
 
 You must annotate entity mentions in the document before you can define relation types between them.
-
-Click the image to see how to annotate a relation mention between two entity mentions.
-
-<div id="wks_harelation__imagemap_i5g_h25_jw">
-  <img usemap="#d42107e779" border="0" class="image" src="images/annotate-relation.jpg" alt="Shows a document open in the ground truth editor." />
-  <map name="d42107e779" id="d42107e779">
-    <area href="relation-gif.html" alt="" title="" shape="rect" coords="0,0,990,385" />
-  </map>
-</div>
 
 ### About this task
 

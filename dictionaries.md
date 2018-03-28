@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-05"
+lastupdated: "2018-03-20"
 
 ---
 
@@ -29,11 +29,11 @@ Dictionaries help the {{site.data.keyword.watson}} {{site.data.keyword.knowledge
 ## Dictionaries
 {: #wks_dictionaries}
 
-In machine learning, a dictionary groups together words and phrases that share something in common. An entry in the dictionary does not mean that all words in the entry mean the same thing, but that the words are to be treated equivalently by an annotator component.
+In machine learning, a dictionary groups together words and phrases that share something in common. An entry in the dictionary does not mean that all words in the entry mean the same thing, but that the words are to be treated equivalently by a model.
 
 A dictionary is a list of words or phrases that are equivalent for information-extraction purposes, meaning that they are interchangeable for the purposes of identifying entity and relation mentions.
 
-Consider this example: a dictionary entry contains the seven days of the week. To annotate a document, a human annotator assigns the entity type DAY_OF_WEEK to mentions of Monday and Friday in the text. Because the dictionary equates the seven days of the week, it helps ensure that a machine annotator correctly annotates occurrences of Tuesday, Wednesday, and the other days of the week in unseen documents at run time. In addition, equating these words also benefits information extraction in surrounding text. What the machine annotator learns from training examples about the texts near Monday and Friday gets applied to texts that the machine annotator sees near other days of the week because the dictionary states that these terms are equivalent for information-extraction purposes.
+Consider this example: a dictionary entry contains the seven days of the week. To annotate a document, a human annotator assigns the entity type DAY_OF_WEEK to mentions of Monday and Friday in the text. Because the dictionary equates the seven days of the week, it helps ensure that a machine learning model correctly annotates occurrences of Tuesday, Wednesday, and the other days of the week in unseen documents at run time. In addition, equating these words also benefits information extraction in surrounding text. What the machine learning model learns from training examples about the texts near Monday and Friday gets applied to texts that the machine learning model sees near other days of the week because the dictionary states that these terms are equivalent for information-extraction purposes.
 
 > **Note:** You do not need to create a dictionary that contains days of the week information; several general-purpose dictionaries like this are built into the application. Others include countries, place names, number words, animals, plants, diseases, measurement words (such as ounce and meter), and salutation title words (such as Mr. and Mrs.). You cannot disable or edit built-in dictionaries.
 
@@ -43,17 +43,17 @@ You can create dictionaries in {{site.data.keyword.watson}} {{site.data.keyword.
 
 ### How are dictionaries used?
 
-Dictionaries are used in a couple ways, all optional. They are used by the machine learning annotator component to provide words or phrases that are equivalent for information-extraction purposes and during pre-annotation to bootstrap the annotation effort.
+Dictionaries are used in a couple ways, all optional. They are used by the machine learning model to provide words or phrases that are equivalent for information-extraction purposes and during pre-annotation to bootstrap the annotation effort.
 
 - **Machine learning usage**
 
-    The entity type that you associate with a dictionary is not used to define rules for the machine learning annotator component. Machine learning evaluates mentions in the documents independently. It does not assume that a mention has a specific entity type just because the mention matches an entry in a dictionary that is associated with that entity type. It does take the information into account, but treats it as one piece of information among other pieces of information that it gathers through linguistic analysis. In fact, if none of the terms in a dictionary occur in the ground truth documents, then the dictionary is not used at all by the machine learning annotator.
+    The entity type that you associate with a dictionary is not used to define rules for the machine learning model. Machine learning evaluates mentions in the documents independently. It does not assume that a mention has a specific entity type just because the mention matches an entry in a dictionary that is associated with that entity type. It does take the information into account, but treats it as one piece of information among other pieces of information that it gathers through linguistic analysis. In fact, if none of the terms in a dictionary occur in the ground truth documents, then the dictionary is not used at all by the machine learning model.
 
 - **Pre-annotation usage**
 
     Dictionaries are important to the following pre-annotatation processes.
     - Dictionary pre-annotator: You associate a dictionary with an entity type from the type system when you run the dictionary pre-annotator.
-    - Rule annotator: You can optionally associate a dictionary with a rule class. Classes are then mapped to entity types from the type system when you run the Rule annotator to pre-annotate documents. As a result, dictionary terms are, although circuitously, mapped to entity types for the Rule annotator also.
+    - Rule-based model: You can optionally associate a dictionary with a rule class. Classes are then mapped to entity types from the type system when you run the rule-based model to pre-annotate documents. As a result, dictionary terms are, although circuitously, mapped to entity types for the rule-based model also.
 
     In both cases, the dictionaries provide terms that the system can find and annotate as mentions. It assigns to each mention the entity type that is associated with the dictionary that contains the term. When a human annotator begins work on new documents that were pre-annotated, many mentions are already annotated based on the dictionary entries. The human annotator thus has more time to focus on assigning entity types to mentions that require deeper analysis.
 
@@ -156,7 +156,7 @@ premium,4,premium,premium-grade
 ## Adding dictionaries to a workspace
 {: #wks_projdictionaries}
 
-Adding dictionaries is an optional step in creating an annotator component. Dictionaries are helpful because they enable you to jump start the annotation process.
+Adding dictionaries is an optional step in creating a model. Dictionaries are helpful because they enable you to jump start the annotation process.
 
 ### About this task
 

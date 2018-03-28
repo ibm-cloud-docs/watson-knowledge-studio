@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-11"
+  years: 2015, 2018
+lastupdated: "2018-03-28"
 
 ---
 
@@ -28,29 +28,29 @@ Users who have knowledge of the industry and its language must annotate the docu
 
 Perform the following tasks to enable human annotators to access the workspace:
 
-- Invite subject matter experts to the {{site.data.keyword.watson}}&trade; {{site.data.keyword.knowledgestudioshort}} instance that you are using.
+- Invite subject matter experts to the {{site.data.keyword.knowledgestudioshort}} instance that you are using.
 - Associate human annotators with the annotation set or sets that you want them to annotate.
 - Create a task that assigns the human annotator to annotate the documents in the set.
 
     > **Attention:** It is not until you explicitly assign tasks to human annotators that they can see your workspace when they log in to {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}}.
 
-Let your human annotators know that they can use the documentation in the [User Guide: Ground Truth Editor](/docs/services/watson-knowledge-studio/user-guide.html) section for detailed information on how to use the Ground Truth Editor to annotate documents.
+Let the human annotators know about [Annotating documents](/docs/services/watson-knowledge-studio/user-guide.html), which contains detailed information about document annotation.
 
-## Annotator component life cycle
+## Model life cycle
 {: #wks_lifecycle}
 
-The annotator component that you create with {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} is a software component that can be plugged into a natural language processing (NLP) pipeline.
+The model that you create with {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} is a software component that can be plugged into a natural language processing (NLP) pipeline.
 
-With {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} , you can create, evaluate, and improve annotator components for new domains. An annotator adds annotations (metadata) to text that appears in natural language content. The annotations, which identify mentions of entities of interest in your domain content, the relationships between them, and how the mentions co-reference the same entity, can be used by applications to automatically analyze and process text. Application users benefit from this level of analysis by being able to extract meaning, discover insights, and obtain answers in a natural language context.
+With {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} , you can create, evaluate, and improve models for new domains. A model adds annotations (metadata) to text that appears in natural language content. The annotations, which identify mentions of entities of interest in your domain content, the relationships between them, and how the mentions co-reference the same entity, can be used by applications to automatically analyze and process text. Application users benefit from this level of analysis by being able to extract meaning, discover insights, and obtain answers in a natural language context.
 
-The creation of an annotator component is an iterative multiple-step process that involves several stages: knowledge curation, ground truth generation, annotator component development, annotator component evaluation, and runtime deployment.
+The creation of a model is an iterative multiple-step process that involves several stages: knowledge curation, ground truth generation, model development, model evaluation, and runtime deployment.
 
 ### End-to-end domain adaptation
 {: #wks_lifecycle__wks_lifecycleS6}
 
-The following diagram summarizes the interactions between these five stages of annotator component development and the typical activities that occur at each stage.
+The following diagram summarizes the interactions between these five stages of model development and the typical activities that occur at each stage.
 
-![A summary of the five stages of annotator development and the activities that occur at each stage.](images/wks_flow.png)
+![A summary of the five stages of model development and the activities that occur at each stage.](images/wks_flow.svg "A summary of the five stages of model development and the activities that occur at each stage.") Figure 2. A summary of the five stages of model development and the activities that occur at each stage.
 
 ### Knowledge curation
 {: #wks_lifecycle__wks_lifecycleS1}
@@ -71,24 +71,24 @@ An essential part of teaching {{site.data.keyword.watson}} about a new domain in
   - Dictionaries of terms that are to be treated as equivalent terms in your domain content.
 
 - Creating a corpus of documents that are representative of your domain content.
-- Pre-annotating documents based on the dictionaries that you add to a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace. After you create a machine learning annotator, you can use the annotator to pre-annotate new documents that you add to the corpus. Pre-annotation is a process of machine-annotating a document to the extent possible before a machine learning model is available to do so. Pre-annotation can reduce human-annotation labor by replacing some human annotation creation with mere verification of the correctness of machine annotation.
+- Pre-annotating documents based on the dictionaries that you add to a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace. After you create a machine learning model, you can use the model to pre-annotate new documents that you add to the corpus. Pre-annotation is a process of machine-annotating a document to the extent possible before a machine learning model is available to do so. Pre-annotation can reduce human-annotation labor by replacing some human annotation creation with mere verification of the correctness of machine annotation.
 - Dividing documents among human annotators, who then use the {{site.data.keyword.knowledgestudiofull}} Ground Truth Editor tool to manually add annotations to small sets of documents.
-- Comparing the human annotation results and resolving conflicts. Adjudication in this phase is needed to ensure accurate and consistently annotated documents are promoted to ground truth, where they can be used to train and test a machine annotator.
+- Comparing the human annotation results and resolving conflicts. Adjudication in this phase is needed to ensure accurate and consistently annotated documents are promoted to ground truth, where they can be used to train and test a machine learning model.
 
-### Annotator component development
+### Model development
 {: #wks_lifecycle__wks_lifecycleS3}
 
-This stage refers to the use of {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} tools to create an annotator component. After establishing ground truth, the human annotation results can be used to train an algorithm for automatically adding annotations to large collections of documents, such as collections that include millions of documents.
+This stage refers to the use of {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} tools to create a model. After establishing ground truth, the human annotation results can be used to train an algorithm for automatically adding annotations to large collections of documents, such as collections that include millions of documents.
 
-### Annotator component evaluation
+### Model evaluation
 {: #wks_lifecycle__wks_lifecycleS4}
 
-This stage refers to the use of {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} tools to refine the annotator component and improve performance. The results generated by the annotator component are evaluated against a test set of ground truth documents. *Accuracy analysis* identifies the causes of annotation errors. *Headroom analysis* helps you assess which errors require focus and where annotator refinements can yield the greatest impact. Adjustments can be made repeatedly to improve performance until a satisfactory level of accuracy is achieved.
+This stage refers to the use of {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} tools to refine the model and improve performance. The results generated by the model are evaluated against a test set of ground truth documents. *Accuracy analysis* identifies the causes of annotation errors. *Headroom analysis* helps you assess which errors require focus and where model refinements can yield the greatest impact. Adjustments can be made repeatedly to improve performance until a satisfactory level of accuracy is achieved.
 
-### Annotator component deployment
+### Model deployment
 {: #wks_lifecycle__wks_lifecycleS5}
 
-This stage refers to exporting components that enable the annotator to run in machine learning runtime environments and making the annotator component accessible to other {{site.data.keyword.watson}} cognitive applications. For example, you can deploy the machine learning annotator for use by the {{site.data.keyword.Bluemix}} {{site.data.keyword.alchemyapishort}} or export the annotator for use in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
+This stage refers to exporting components that enable the model to run in machine learning runtime environments and making the model accessible to other {{site.data.keyword.watson}} cognitive applications. For example, you can deploy the machine learning model for use by the {{site.data.keyword.Bluemix}} {{site.data.keyword.alchemyapishort}} or export the model for use in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
 
 ## Creating an annotation task
 {: #wks_hatask}
@@ -219,7 +219,7 @@ The example presented here is a simple guideline that was created for a small do
 #### Task Goals
 {: #wks_guidelinesexample__annotgoals}
 
-- As project members, become familiar with the iterative process of manual annotation and machine learning annotator refinement.
+- As project members, become familiar with the iterative process of manual annotation and machine learning model refinement.
 - Annotate documents in the automotive domain with the Ground Truth Editor and use the annotations to train a machine learning model. Annotate the entity types, relation types, and coreference the entities as needed.
 
 #### Guideline Notations

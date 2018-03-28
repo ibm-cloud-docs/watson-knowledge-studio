@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-20"
+  years: 2015, 2018
+lastupdated: "2018-03-20"
 
 ---
 
@@ -56,7 +56,7 @@ In this lesson, you will learn about the different roles that you can assign to 
 
 ### About this task
 
-The creation of a machine learning annotator requires input from subject matter experts, project managers, and users who can understand and interpret statistical models. Administrators assign roles to each user, such that they have appropriate authority for their tasks. For more information about user roles, see [Assembling a team](/docs/services/watson-knowledge-studio/team.html).
+The creation of a machine learning model requires input from subject matter experts, project managers, and users who can understand and interpret statistical models. Administrators assign roles to each user, such that they have appropriate authority for their tasks. For more information about user roles, see [Assembling a team](/docs/services/watson-knowledge-studio/team.html).
 
 ### Procedure
 
@@ -85,7 +85,7 @@ In this lesson, you will learn how to create a workspace within {{site.data.keyw
 
 ### About this task
 
-A workspace defines all of the resources that are required to create a machine learning annotator, including training documents, the type system, dictionaries, and annotations that are added by human annotators. For more information about workspace creation, see [Creating a workspace](/docs/services/watson-knowledge-studio/create-project.html).
+A workspace defines all of the resources that are required to create a machine learning model, including training documents, the type system, dictionaries, and annotations that are added by human annotators. For more information about workspace creation, see [Creating a workspace](/docs/services/watson-knowledge-studio/create-project.html).
 
 ### Procedure
 
@@ -140,7 +140,7 @@ After you finish making changes to the type system, you can begin adding documen
 ## Lesson 4: Adding a dictionary
 {: #wks_tutless4}
 
-In this lesson, you will learn how to add a dictionary to a workspace in {{site.data.keyword.knowledgestudioshort}}. Dictionaries are used for pre-annotating text when creating a machine learning annotator.
+In this lesson, you will learn how to add a dictionary to a workspace in {{site.data.keyword.knowledgestudioshort}}. Dictionaries are used for pre-annotating text when creating a machine learning model.
 
 ### About this task
 

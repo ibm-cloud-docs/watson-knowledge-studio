@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-11"
+  years: 2015, 2018
+lastupdated: "2018-03-20"
 
 ---
 
@@ -23,17 +23,17 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 # Making machine learning model improvements
 {: #improve-ml}
 
-After you determine areas in which the annotator is having trouble, take steps to improve its performance.
+After you determine areas in which the model is having trouble, take steps to improve its performance.
 {: shortdesc}
 
-## Creating annotator component versions
+## Creating model versions
 {: #wks_maversions}
 
-After you create a machine learning annotator component, you can take a snapshot to keep a backup version of the current resources in case you want to restore the resources in a future iteration.
+After you create a machine learning model, you can take a snapshot to keep a backup version of the current resources in case you want to restore the resources in a future iteration.
 
 ### About this task
 
-The F1 score provides an indication of the quality of the annotator component. If the annotator component performance results are good, you might want to store a version of the component before changing any of the resources. If changes that you make result in poorer quality, you can revert to a version that you stored. When you revert to an older version, all annotation tasks are archived because they are no longer valid.
+The F1 score provides an indication of the quality of the model. If the model performance results are good, you might want to store a version of the component before changing any of the resources. If changes that you make result in poorer quality, you can revert to a version that you stored. When you revert to an older version, all annotation tasks are archived because they are no longer valid.
 
 You can have a maximum of 10 versions of a workspace. If you reach that limit, delete older versions or versions that you no longer need before creating a new version.
 
@@ -52,15 +52,15 @@ The following resources are excluded:
 
 ### Procedure
 
-To create and restore machine learning annotator component versions:
+To create and restore machine learning model versions:
 
 1. Log in as a {{site.data.keyword.watson}}&trade; {{site.data.keyword.knowledgestudioshort}} administrator or project manager, open the **Annotator Component** page, click **Details**, and then click **Versions**. Performance statistics about the current (first) version, labeled version 1.0, are displayed.
 1. To take a snapshot of the current version, click **Take Snapshot**. The resources in version 1.0 are frozen, and a new version, labeled 1.1, becomes the current version. For each new version that you create, the minor version number is incremented, for example, 1.0 becomes 1.1 and then becomes 1.2.
-1. Revise the workspace resources as needed, re-train, and re-evaluate the annotator component.
-1. If you are pleased with the performance results and want to store the new version before making future changes, create another version. Continue revising resources and re-training the annotator component as needed, creating a new version for each iteration that you want to retain.
+1. Revise the workspace resources as needed, re-train, and re-evaluate the model.
+1. If you are pleased with the performance results and want to store the new version before making future changes, create another version. Continue revising resources and re-training the model as needed, creating a new version for each iteration that you want to retain.
 1. If performance results are worse, and you want to revert to a previous version before testing any further:
 
-    1. Open the **Dictionaries** page and export any dictionaries that you want to re-use in the restored annotator component.
+    1. Open the **Dictionaries** page and export any dictionaries that you want to re-use in the restored model.
     1. Return to the **Versions** page and click **Promote** for the version that you want to restore. The version that you promote becomes the current version, and the version number changes to 2.0. When you promote a version, the major version number is incremented and the minor version number becomes 0, for example, 1.1 becomes 2.0.
     1. Open the **Dictionaries** page and import the dictionaries that you exported.
     1. If testing of the new version requires changes to ground truth, open the **Human Annotation** page and create a new annotation task.
@@ -68,7 +68,7 @@ To create and restore machine learning annotator component versions:
 ## Modifying a type system without losing human annotations
 {: #wks_projtypesysmod}
 
-You might need to make modifications while you train an annotator, based on the performance statistics. But, generally, you want the type system to be as close to final as possible before you begin large-scale annotation tasks. If you change the type system after human annotators began their work, they must revisit the documents that they annotated. They must assess the applicability of the type system changes.
+You might need to make modifications while you train a model, based on the performance statistics. But, generally, you want the type system to be as close to final as possible before you begin large-scale annotation tasks. If you change the type system after human annotators began their work, they must revisit the documents that they annotated. They must assess the applicability of the type system changes.
 
 ### About this task
 
@@ -82,7 +82,7 @@ An application process manager can modify the type system without losing the wor
 1. Decide whether you want to propagate the changes to existing human annotation tasks.
 1. On the **Human Annotation** page, open each task that you want to update and click **Apply Type System Updates**.
 
-    If you removed entity types or relation types from the type system, all occurrences of those types are highlighted in gray in the documents. These invalid types are ignored by the machine learning annotator. They do not prevent you from submitting and approving document sets.
+    If you removed entity types or relation types from the type system, all occurrences of those types are highlighted in gray in the documents. These invalid types are ignored by the machine learning model. They do not prevent you from submitting and approving document sets.
 
 1. Provide details to the human annotators about what changed in the type system.
 1. Ask human annotators to update their documents to reflect the changes in the type system. For example, if you added new entity types or relation types, they must review their documents and annotate them appropriately.
@@ -96,21 +96,21 @@ An application process manager can modify the type system without losing the wor
 ## Document set management
 {: #wks_mamanagedata}
 
-Use the right sets of data to test and train the annotator component at the right time.
+Use the right sets of data to test and train the model at the right time.
 
-The documents that you add to the system must be allocated to the following system-level data sets when you create a machine learning annotator:
+The documents that you add to the system must be allocated to the following system-level data sets when you create a machine learning model:
 
 - **Training set**
 
-    A set of documents that have been annotated through pre-annotation or by human annotators that is used to train the annotator component. The goal of the training set is to teach the machine learning model about correct annotations, which includes teaching the model through text that was not annotated.
+    A set of documents that have been annotated through pre-annotation or by human annotators that is used to train the model. The goal of the training set is to teach the machine learning model about correct annotations, which includes teaching the model through text that was not annotated.
 
 - **Test set**
 
-    A set of annotated documents that is used to test the trained annotator component. After you run a test on the test set, perform a detailed diagnostic-purposed error analysis of the results. Close analysis helps you find weaknesses in the current model that can be addressed.
+    A set of annotated documents that is used to test the trained model. After you run a test on the test set, perform a detailed diagnostic-purposed error analysis of the results. Close analysis helps you find weaknesses in the current model that can be addressed.
 
 - **Blind set**
 
-    A set of annotated documents that is set aside and used to test the system periodically after several iterations of testing and improvement have occurred. To prevent accuracy from being tainted (for example, by making changes based only on annotations in known documents), blind data should be data that has not previously been viewed by users involved with creating the annotator component. Reported results should come only from tests that are run on blind data. After you run a test on the blind set, look at only the most high-level scores, such as the overall mention and relation F1 scores. You don't want to learn too many details about the performance or it might influence the improvements that you choose to make to the model.
+    A set of annotated documents that is set aside and used to test the system periodically after several iterations of testing and improvement have occurred. To prevent accuracy from being tainted (for example, by making changes based only on annotations in known documents), blind data should be data that has not previously been viewed by users involved with creating the model. Reported results should come only from tests that are run on blind data. After you run a test on the blind set, look at only the most high-level scores, such as the overall mention and relation F1 scores. You don't want to learn too many details about the performance or it might influence the improvements that you choose to make to the model.
 
 The goal of {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} is to enable large teams to work together to build models. As such, it assumes that models are being produced by a team that includes a group of human annotators and a separate person or group of people that builds and tests the model, and makes improvements to it. Due to this assumption, the application is configured to push an equally proportioned grouping of documents from a single document set into the test, train, and blind sets. However, if your team is not segregated - if the people doing human annotation are also reviewing model test results in detail, for example - then you might need to change the allocation of documents into these sets to more explicitly separate the documents that are being used in each one.
 
@@ -120,7 +120,7 @@ Because you use test data to assess accuracy in detail, you get to know the docu
 
 ### How do I control which documents are allocated to a set?
 
-When you create a machine learning annotator, you must specify the ratio of documents from the set to allocate to the train, test, or blind sets. {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} automatically applies a ratio of 70/23/7 to the document sets that you use to build a machine learning annotator. You can change these values.
+When you create a machine learning model, you must specify the ratio of documents from the set to allocate to the train, test, or blind sets. {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} automatically applies a ratio of 70/23/7 to the document sets that you use to build a machine learning model. You can change these values.
 
 - To add a set that was annotated by humans to the training set, specify a 100/0/0 breakdown ratio.
 - After training with a set, you can use it for testing. To use a document set for testing only, specify a 0/100/0 breakdown ration.
