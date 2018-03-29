@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-05"
+lastupdated: "2018-03-20"
 
 ---
 
@@ -29,7 +29,7 @@ The type system controls how content can be annotated.
 ## Type systems
 {: #wks_typesystem}
 
-A type system defines things that are interesting in your domain content that you want to label with an annotation. The type system controls how content can be annotated by defining the types of entities that can be labeled and how relationships among different entities can be labeled. The annotator process manager typically works with subject matter experts for your domain to define the type system.
+A type system defines things that are interesting in your domain content that you want to label with an annotation. The type system controls how content can be annotated by defining the types of entities that can be labeled and how relationships among different entities can be labeled. The model process manager typically works with subject matter experts for your domain to define the type system.
 
 In {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} , you can create a type system from scratch or upload an existing type system. To jump-start a workspace, you might want to upload a type system that was created for a similar domain. You can then edit the type system to add or remove entity types or redefine the relationship types.
 
@@ -49,7 +49,7 @@ An entity type is how you categorize a real-world thing. An entity mention is an
 
 The goal of your annotation workspace is to annotate each mention in a document with the type of thing that it is. After a mention is classified by entity type, the labeled span of text is referred to as an entity.
 
-A type system that you build with {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} can include the following entity type attributes. The attributes help qualify mentions in text, but they are not marked as entity types by a machine learning annotator. For example, if the entity type ORGANIZATION has an entity subtype called COMMERCIAL, COMMERCIAL is not marked as an entity type on its own.
+A type system that you build with {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} can include the following entity type attributes. The attributes help qualify mentions in text, but they are not marked as entity types by a machine learning model. For example, if the entity type ORGANIZATION has an entity subtype called COMMERCIAL, COMMERCIAL is not marked as an entity type on its own.
 
 - **Role**
 
@@ -72,7 +72,7 @@ A type system that you build with {{site.data.keyword.watson}} {{site.data.keywo
     Qualifies the mention by indicating whether the mention is specific, generic, or negated:
     - SPC: the mention is specific, often including the word "the" in English, such as "the book" or "the hurricane occurred in September". In these examples, the mentions "book" and "hurricane" would be annotated with the attribute SPC.
     - GEN: the mention is generic, such as "a book" or "hurricanes usually occur in the fall". In these examples, the mentions "book" and "hurricanes" would be annotated with the attribute GEN.
-    - NEG: the mention is negated, such as references to "no book". When you train an annotator, the algorithm can learn from both negative and positive examples, so it's important to mark mentions of both types.
+    - NEG: the mention is negated, such as references to "no book". When you train a model, the algorithm can learn from both negative and positive examples, so it's important to mark mentions of both types.
 
 ### Relation types
 {: #wks_typesystem__wks_typesystemS4}
@@ -191,9 +191,9 @@ While fundamental work is underway to define a set of entity types and mention-a
 
 Expect the type system to evolve with the experience of people trying to annotate to it. If you revise the type system after you create human annotation tasks, you must decide whether to apply the changes to each task. If you apply the changes, human annotators will have to revisit the documents that they annotated previously.
 
-When you test the annotator, you can review statistics that show how frequently the entity types and relation types occur in your sample documents. Be sure to review these statistics. To ensure that your application receives enough context to accurately annotate large collections of documents, your test data must include a large sampling of the most important entity types and relation types.
+When you test the model, you can review statistics that show how frequently the entity types and relation types occur in your sample documents. Be sure to review these statistics. To ensure that your application receives enough context to accurately annotate large collections of documents, your test data must include a large sampling of the most important entity types and relation types.
 
-> **Important:** After you train your first annotator component, you will likely need to make modifications based on the performance statistics. However, to create a reliable statistical model for machine annotation, you want the type system to be as close to final as possible before you begin large-scale annotation tasks.
+> **Important:** After you train your first model, you will likely need to make modifications based on the performance statistics. However, to create a reliable statistical model for machine annotation, you want the type system to be as close to final as possible before you begin large-scale annotation tasks.
 
 ## When to define roles
 {: #wks_typesystem_roles}
@@ -202,7 +202,7 @@ Using roles enables you to define more precise entity types.
 
 Every entity that you add has a role. Unless you change it, the role name is the same as the entity name. You can choose to define a different role for an entity to capture a more nuanced usage of the mention. The word or phrase to which the role applies is literally an example of an entity type, but in the sentence it plays the role of another entity type. For example, in the phrase, *the White House vetoed the bill*, we can capture more precisely the meaning of the *White House* if we annotate both the entity type of FACILITY, and a role of ORGANIZATION or PERSON. White House is a building (FACILITY), but represents the government (ORGANIZATION) or the President of the United States (PERSON) in this construction. The entity type + role label creates a more precise classification of the mention in the text.
 
-Roles can also provide you with a way to capture relation information without relying on the use of overlapping mentions. For example, you might want to annotate the text *31-year-old male* such that it captures the idea that this is a reference to a person with the attribute age of 31 years and attribute gender of male. By examining the text, we determine that *31-year-old* is an age, *male* is a gender, and together they signify a person. You are dealing with 3 entity types, basically: AGE, GENDER, and PERSON. One approach to representing this would be to annotate *31-year-old* as AGE, *male* as GENDER, and because the distinct mention of a PERSON is missing, but *male* has come to represent person, the word *male* can have a role of PERSON. You can then capture relations between the PERSON role and all the attributes of a person that you want to capture. For example, you can define a hasAttribute relation between the PERSON role and AGE mention. Because you applied both a GENDER entity type and a PERSON role type label to the same word *male*, you cannot define a hasAttribute relation between the two. However, the fact that the two labels are applied to the same mention associates them with one another. This association is considered by the machine learning annotator without you having to define a hasAttribute relation type to explicitly call out the relationship.
+Roles can also provide you with a way to capture relation information without relying on the use of overlapping mentions. For example, you might want to annotate the text *31-year-old male* such that it captures the idea that this is a reference to a person with the attribute age of 31 years and attribute gender of male. By examining the text, we determine that *31-year-old* is an age, *male* is a gender, and together they signify a person. You are dealing with 3 entity types, basically: AGE, GENDER, and PERSON. One approach to representing this would be to annotate *31-year-old* as AGE, *male* as GENDER, and because the distinct mention of a PERSON is missing, but *male* has come to represent person, the word *male* can have a role of PERSON. You can then capture relations between the PERSON role and all the attributes of a person that you want to capture. For example, you can define a hasAttribute relation between the PERSON role and AGE mention. Because you applied both a GENDER entity type and a PERSON role type label to the same word *male*, you cannot define a hasAttribute relation between the two. However, the fact that the two labels are applied to the same mention associates them with one another. This association is considered by the machine learning model without you having to define a hasAttribute relation type to explicitly call out the relationship.
 
 A similar example is when the phrase *2008 Ford F-150* is used as shorthand for *2008 Ford F-150 truck*. Here, *2008* is annotated as a MODEL_YEAR entity type, *Ford* is annotated as a MANUFACTURER entity type and *F-150* is given a MODEL entity type. But with the word "truck" missing, *F-150* also represents a vehicle. Saying *the F-150* is like saying *the truck*. You can capture that usage by adding a VEHICLE role to the mention in addition to its MODEL entity type. You can then define hasAttribute relations between the VEHICLE role and the MANUFACTURER and MODEL_YEAR entity mentions.
 
@@ -212,7 +212,7 @@ Entity subtypes are for stratifying an inventory of entity types into a hierarch
 
 ### How are roles treated?
 
-The {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} machine learning annotator defines classifier labels for each mention of an entity that it finds in the source documents by concatenating the entity type + role values. When you provide role values, you create more precise labels. Each group of instances of one label type that are found in the training data forms a more uniform set of mentions. The challenge is that by choosing to be more precise, you must also accede to providing more training data to ensure that the model performs well. But, the more training data you provide, the better the model becomes. So, if you don't mind doing additional annotation, using roles gets you better results.
+The {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} machine learning model defines classifier labels for each mention of an entity that it finds in the source documents by concatenating the entity type + role values. When you provide role values, you create more precise labels. Each group of instances of one label type that are found in the training data forms a more uniform set of mentions. The challenge is that by choosing to be more precise, you must also accede to providing more training data to ensure that the model performs well. But, the more training data you provide, the better the model becomes. So, if you don't mind doing additional annotation, using roles gets you better results.
 
 As an example, let's assume that the following sentences occur in a source document, and we want to capture the "Acme" (where Acme is a well-known truck manufacturer), "sedan", and "truck" as similar entities because they all refer to a physical vehicle:
 

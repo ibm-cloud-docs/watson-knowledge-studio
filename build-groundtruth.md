@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-11"
+  years: 2015, 2018
+lastupdated: "2018-03-20"
 
 ---
 
@@ -23,7 +23,7 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 # Building the ground truth
 {: #build-groundtruth}
 
-The objective of the annotation project is to obtain ground truth, the collection of vetted data that is used to adapt {{site.data.keyword.watson}}&trade; to a particular domain. In {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} , human annotators, who are typically experts in the subject matter of the target domain, play a major role in determining ground truth.
+The objective of the annotation project is to obtain ground truth, the collection of vetted data that is used to adapt {{site.data.keyword.watson}}&trade; to a particular domain. In {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}}, human annotators, who are typically experts in the subject matter of the target domain, play a major role in determining ground truth.
 {: shortdesc}
 
 A typical workflow includes the following steps:
@@ -31,7 +31,7 @@ A typical workflow includes the following steps:
 1. Human annotators submit annotated documents for review.
 1. The project manager (who may be a senior domain expert) reviews the accuracy of their work and compares how consistently the human annotators annotated documents that overlap between the annotation sets.
 1. If the inter-annotator agreement score is too low, the project manager rejects the annotation set and returns it to the human annotator to be improved. When an annotation set is rejected, all documents in the set are placed back into editable mode.
-1. If the project manager approves an annotation set, documents that do not overlap across annotation sets are promoted to ground truth so that the annotations can be used to train the annotator component.
+1. If the project manager approves an annotation set, documents that do not overlap across annotation sets are promoted to ground truth so that the annotations can be used to train the model.
 1. The project manager reviews the overlapping documents and resolves the annotation conflicts. At this stage, referred to as adjudication, the team might review and revise the annotation guidelines to help clarify misunderstandings that caused text to be incorrectly or inconsistently annotated by different human annotators.
 
     In some cases, a project manager might want a higher percentage of overlap for evaluating inter-annotator agreement than the percentage of overlap for adjudicating differences. For example, if inter-annotator agreement looks OK, then the project manager might decide that it is OK to promote either annotation to ground truth.
@@ -86,7 +86,7 @@ The score in the other columns is an *F1 measure*. It represents the level of an
 
 Interpreting the scores depends on the complexity of your type system, the amount and complexity of the content annotated, how experienced the human annotators are, and other factors. For example, if the annotation task is focused on labeling parts of speech, you might expect to see a high score because of how well-defined the parts of speech are. But a task that requires deeper analysis of the text, where human interpretation is required, might show lower scores until you take steps to clarify the causes of the ambiguity.
 
-Generally, a type system that includes many entity types and relation types is open to more interpretation, thus inter-annotator agreement might be lower during the early phases of annotator component development. Looking at the scores, you can see which entity types, for example, have low scores. These low scores are an indication that the annotation guidelines need to be improved. By looking at the scores between pairs of human annotators, you can identify whether a particular annotator consistently shows lower scores than others. This annotator might be having problems understanding the guidelines or using the annotation tools, and thus is a candidate for additional training.
+Generally, a type system that includes many entity types and relation types is open to more interpretation, thus inter-annotator agreement might be lower during the early phases of model development. Looking at the scores, you can see which entity types, for example, have low scores. These low scores are an indication that the annotation guidelines need to be improved. By looking at the scores between pairs of human annotators, you can identify whether a particular annotator consistently shows lower scores than others. This annotator might be having problems understanding the guidelines or using the annotation tools, and thus is a candidate for additional training.
 
 ## Reviewing inter-annotator agreement scores
 {: #wks_haaccuracy}
@@ -157,7 +157,7 @@ Click [this link ![External link icon](../../icons/launch-glyph.svg "External li
 
 After human annotators complete their annotation tasks, they must submit their completed annotation sets for review. When you evaluate the inter-annotator agreement scores, you can see how different pairs of annotators annotated the same document. If the inter-annotator agreement score is acceptable, you approve the annotation set. If a document does not overlap across annotation sets in the task, the annotations in the approved document are promoted to ground truth. If a document overlaps across annotation sets, you should adjudicate the document and resolve any annotation conflicts that exist before promoting the annotations to ground truth.
 
-For example, when you adjudicate a document, you might see that one annotator annotated the mention `Barack Obama` with the entity type `PeoplePerson`. Another annotator annotated the same string of text as two mentions, assigning the entity type `Person` to `Barack` and the entity type `Person` to `Obama`. To help ensure proper training of the machine learning annotator, you should resolve this inconsistency.
+For example, when you adjudicate a document, you might see that one annotator annotated the mention `Barack Obama` with the entity type `PeoplePerson`. Another annotator annotated the same string of text as two mentions, assigning the entity type `Person` to `Barack` and the entity type `Person` to `Obama`. To help ensure proper training of the machine learning model, you should resolve this inconsistency.
 
 {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} supports the ability to adjudicate between two annotation sets at a time, or between an annotation set and the current ground truth. If a document overlaps across more than two annotation sets, adjudicate the two annotation sets that you have the greatest confidence in (perhaps because you have greater confidence in the human annotators) to determine ground truth for the document. And then adjudicate the rest of the annotation sets based on the results of the initial adjudication.
 

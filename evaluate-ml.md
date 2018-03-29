@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-11"
+  years: 2015, 2018
+lastupdated: "2018-03-27"
 
 ---
 
@@ -23,14 +23,14 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 # Analyzing machine learning model performance
 {: #evaluate-ml}
 
-Review the annotations that were added by the trained model to determine whether any adjustments must be made to the annotator to improve its ability to find valid entity mentions, relation mentions, and coreferences in the documents.
+Review the annotations that were added by the trained model to determine whether any adjustments must be made to the model to improve its ability to find valid entity mentions, relation mentions, and coreferences in the documents.
 {: shortdesc}
 
 ## About this task
 
-You can analyze performance by viewing a summary of statistics for entity types, relation types, and coreferenced mentions. You can also analyze statistics that are presented in a *confusion matrix*. The confusion matrix helps you compare the annotations added by the machine learning annotator to the annotations in ground truth.
+You can analyze performance by viewing a summary of statistics for entity types, relation types, and coreferenced mentions. You can also analyze statistics that are presented in a *confusion matrix*. The confusion matrix helps you compare the annotations added by the machine learning model to the annotations in ground truth.
 
-The annotator component statistics provide the following metrics:
+The model statistics provide the following metrics:
 
 - **F1 score**
 
@@ -38,11 +38,11 @@ The annotator component statistics provide the following metrics:
 
 - **Precision**
 
-    A measurement that specifies what fraction of the machine learning annotator's output was accurate when compared to the human annotator output. Precision is determined by the number of correctly labeled annotations divided by the total number of annotations added by the machine learning annotator. A precision score of 1.0 for entity type A means that every mention that was labeled as entity type A does indeed belong to that classification. A low precision score helps you identify places where the machine learning annotator created incorrect annotations. The score says nothing about how many other mentions that were labeled as entity type A by the human annotator were missed by the machine learning annotator; the recall score reflects that information. See [Analyzing low precision scores](/docs/services/watson-knowledge-studio/evaluate-ml.html#evaluate-mllowp).
+    A measurement that specifies what fraction of the machine learning model's output was accurate when compared to the human annotator output. Precision is determined by the number of correctly labeled annotations divided by the total number of annotations added by the machine learning model. A precision score of 1.0 for entity type A means that every mention that was labeled as entity type A does indeed belong to that classification. A low precision score helps you identify places where the machine learning model created incorrect annotations. The score says nothing about how many other mentions that were labeled as entity type A by the human annotator were missed by the machine learning model; the recall score reflects that information. See [Analyzing low precision scores](/docs/services/watson-knowledge-studio/evaluate-ml.html#evaluate-mllowp).
 
 - **Recall**
 
-    A measurement that specifies how many mentions that should have been annotated by a given label were actually annotated with that label - the *right* mentions being those that human annotators identified in the same documents. Recall is determined by the number of correctly labeled annotations divided by the number of annotations that should have been created. A recall score of 1.0 means that every mention that should have been labeled as entity type A was labeled correctly. A low recall score helps you identify places where the machine learning annotator failed to create an annotation that it should have. The score says nothing about how many other mentions were also labeled as entity type A, but should not have been; the precision score reflects that information. See [Analyzing low recall scores](/docs/services/watson-knowledge-studio/evaluate-ml.html#evaluate-mllowr).
+    A measurement that specifies how many mentions that should have been annotated by a given label were actually annotated with that label - the *right* mentions being those that human annotators identified in the same documents. Recall is determined by the number of correctly labeled annotations divided by the number of annotations that should have been created. A recall score of 1.0 means that every mention that should have been labeled as entity type A was labeled correctly. A low recall score helps you identify places where the machine learning model failed to create an annotation that it should have. The score says nothing about how many other mentions were also labeled as entity type A, but should not have been; the precision score reflects that information. See [Analyzing low recall scores](/docs/services/watson-knowledge-studio/evaluate-ml.html#evaluate-mllowr).
 
 - **Percentage of total annotations**
 
@@ -58,25 +58,25 @@ The annotator component statistics provide the following metrics:
 
 ## Procedure
 
-To view performance statistics for how well the annotator component was trained:
+To view performance statistics for how well the model was trained:
 
-1. On the **Annotator Component** page, locate the annotator component that you created, click **Details**, and then click **Statistics**.
+1. On the **Annotator Component** page, locate the model that you created, click **Details**, and then click **Statistics**.
 1. In the **Summary** view, specify whether you want to evaluate test data or training data, and then specify the type of annotations you want to see statistics for: entity types, relation types, or coreferenced mentions. Note that blind data would be analyzed very infrequently and not until you feel relatively confident in the test data scores. As you scroll through the data, items that have low scores are flagged and highlighted to indicate that they require investigation and improvement. The triangle warning icon indicates that the F1 value is less than the fixed value, 0.5.
 
-    For example, the F1 score for some entity types might be high because the document was annotated through pre-annotation as well as by a human annotator. But the F1 score for other entity types might be low because differences in phrasing, and differences in how human annotators interpret the text or annotation guidelines, make it more difficult for the machine learning annotator to recognize the pattern and apply the correct annotation.
+    For example, the F1 score for some entity types might be high because the document was annotated through pre-annotation as well as by a human annotator. But the F1 score for other entity types might be low because differences in phrasing, and differences in how human annotators interpret the text or annotation guidelines, make it more difficult for the machine learning model to recognize the pattern and apply the correct annotation.
 
 1. In the **Confusion Matrix** view for test data, specify the type of annotations that you want to see statistics for: entity types or relation types. For each entity type or relation type:
 
     - Each row in the matrix shows ground truth (entity types and relation types added by a human annotator).
-    - Each column in the matrix shows the decoding results (annotation tokens added by the machine learning annotator).
+    - Each column in the matrix shows the decoding results (annotation tokens added by the machine learning model).
     - The numbers in each cell represent the number of annotation tokens per mention, not the occurrences of the mention.
 
         Tokens are used to delineate text strings. They loosely correspond to words. A mention can contain more than one token. For example, *Barack Obama* is a mention that contains two tokens. In the PERSON row or column, a value of 2 would be used to represent the single mention of *Barack Obama* in a document. The token count only loosely corresponds to the word count because tokens are counted differently in some situations. For example, punctuation at the end of a sentence is counted as a token, and contractions are often expanded into two tokens.
 
-    - The column labeled **O** identifies tokens that should have been annotated by the machine learning annotator as the type that is identified in the intersecting row (the human annotation), but they are not annotated as any type.
+    - The column labeled **O** identifies tokens that should have been annotated by the machine learning model as the type that is identified in the intersecting row (the human annotation), but they are not annotated as any type.
     - The value **N/A** is shown when there are no annotations for a given type in the document sets. For example, if there is no PERSON mention in the document sets that were annotated for ground truth or as test data, the scores for the PERSON entity type is N/A.
 
-    For example, the following confusion matrix example shows results of a machine learning annotator run on documents that deal with traffic incidents.
+    For example, the following confusion matrix example shows results of a machine learning model run on documents that deal with traffic incidents.
 
     <table cellpadding="4" cellspacing="0" summary="Incident report confusion matrix example" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d15356e164" class="stentry thleft thbot">Entity Types</th>
         <th valign="bottom" align="left" id="d15356e166" class="stentry thleft thbot">MANUFACTURER</th>
@@ -92,20 +92,20 @@ To view performance statistics for how well the annotator component was trained:
     {: #evaluate-ml__datasimpletable_yms_hff_cw}
 
     You can learn the following things from this matrix:
-    - The annotator correctly recognized 515 tokens as mentions of the MANUFACTURER entity type.
-    - The annotator incorrectly labeled 5 tokens as mentions of the MODEL type that should have been labeled as MANUFACTURER.
-    - There were 44 tokens that comprise mentions of the MANUFACTURER type that the annotator failed to annotate as any entity type.
+    - The model correctly recognized 515 tokens as mentions of the MANUFACTURER entity type.
+    - The model incorrectly labeled 5 tokens as mentions of the MODEL type that should have been labeled as MANUFACTURER.
+    - There were 44 tokens that comprise mentions of the MANUFACTURER type that the model failed to annotate as any entity type.
 
-    When you evaluate annotator performance and view the decoding results, you can start by investigating the tokens that were mislabeled or missed completely.
+    When you evaluate model performance and view the decoding results, you can start by investigating the tokens that were mislabeled or missed completely.
 
 ## Performance improvement cheat sheet
 {: #evaluate-ml_cheat}
 
-Use this cheat sheet to help you determine the steps you can take to improve the machine learning annotator performance.
+Use this cheat sheet to help you determine the steps you can take to improve the machine learning model performance.
 
-It's difficult to dictate rules for improving performance scores that would be applicable across domains, where type system complexity, appropriateness of training documents, human annotator skills, and other factors influence the outcome. However, the following table can help you make an initial assessment and take steps to improve performance, especially during the early stages of annotator component development and testing.
+It's difficult to dictate rules for improving performance scores that would be applicable across domains, where type system complexity, appropriateness of training documents, human annotator skills, and other factors influence the outcome. However, the following table can help you make an initial assessment and take steps to improve performance, especially during the early stages of model development and testing.
 
-The following table suggests fixes for the most common machine learning annotator performance problems.
+The following table suggests fixes for the most common machine learning model performance problems.
 
 <table cellpadding="4" cellspacing="0" summary="The table lists common problems down that first column and suggested fixes across the first row. X marks indicate which fix to apply to which problem." border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d15356e221" class="stentry thleft thbot">Problem</th>
 <th valign="bottom" align="left" id="d15356e223" class="stentry thleft thbot">Add dictionaries</th>
@@ -113,7 +113,7 @@ The following table suggests fixes for the most common machine learning annotato
 <th valign="bottom" align="left" id="d15356e227" class="stentry thleft thbot">Add type-specific documents</th>
 <th valign="bottom" align="left" id="d15356e229" class="stentry thleft thbot">Annotate corpus more</th>
 <th valign="bottom" align="left" id="d15356e231" class="stentry thleft thbot">Fix human annotations</th>
-<th valign="bottom" align="left" id="d15356e233" class="stentry thleft thbot">Enhance annotator guidelines</th>
+<th valign="bottom" align="left" id="d15356e233" class="stentry thleft thbot">Enhance model guidelines</th>
 <th valign="bottom" align="left" id="d15356e235" class="stentry thleft thbot">Update type system</th>
 <th valign="bottom" align="left" id="d15356e237" class="stentry thleft thbot">Investigate further</th>
 </tr>
@@ -225,31 +225,31 @@ The following table suggests fixes for the most common machine learning annotato
 
 - **Add dictionaries**
 
-    A dictionary contains example surface forms of a given entity type. You might need to add a new dictionary or add more entries to an existing dictionary if training statistics show that annotations of the type occur infrequently in the training data. If you know that the entity type is key to the domain and does occur often, then the omission might indicate that the surface forms associated with the type which *are* present in the training data are not being recognized by the machine learning annotator. Providing more surface form examples can help to solve this problem.
+    A dictionary contains example surface forms of a given entity type. You might need to add a new dictionary or add more entries to an existing dictionary if training statistics show that annotations of the type occur infrequently in the training data. If you know that the entity type is key to the domain and does occur often, then the omission might indicate that the surface forms associated with the type which *are* present in the training data are not being recognized by the machine learning model. Providing more surface form examples can help to solve this problem.
 
 - **Edit document sets**
 
-    Ensure that you have enough overall training data. To learn, a machine learning annotator requires sufficient content. Aim to provide around 300,000 words. (You can run a word count tool on your source documents to check the amount.) If your training set is too small, add documents to the corpus. It is not enough to have a handful of documents that exercise each important entity type or relationship; you want many documents that illustrate how those types are used in typical domain literature.
+    Ensure that you have enough overall training data. To learn, a machine learning model requires sufficient content. Aim to provide around 300,000 words. (You can run a word count tool on your source documents to check the amount.) If your training set is too small, add documents to the corpus. It is not enough to have a handful of documents that exercise each important entity type or relationship; you want many documents that illustrate how those types are used in typical domain literature.
   - Ensure that the assortment of documents that is used for testing and training is similar. For example, do not use documents from one data source as the test data set and documents from another data source as the training data set. Different data sources might represent entity and relation type information in completely different ways. It is best to use a combination of documents from all of the data sources in both data sets to get the most comprehensive set of usage examples available from the industry literature. If the overall performances scores for a test run differ greatly from the training run, it might be due to inconsistencies in the data sets used for each.
   - Don't waste time with incorrectly formatted documents. Text documents that you add to the corpus must be in UTF-8 format. If you converted document from other formats to use UTF-8 encoding, you might see diacritic marks and other issues with character normalization. Such incorrect formatting can lead to inaccurate token representation. If the word tokens used to represent a mention differ between documents, it weakens the example and negatively impacts machine learning.
 
 - **Add type-specific documents**
 
-    If you have a low percentage of documents that contain a certain type, it might mean that your corpus is not fully representative. The machine learning annotator needs lots of examples to learn from. Adding more documents to the corpus might help. If your type system and documents are truly representative of a domain, you would expect to see that any randomly chosen documents contain a reasonable subset of the types. Although not true in all cases, this situation is a signal for you to investigate your type system and the quality of the documents in the corpus. You might need to find more domain documents that better exercise the types that are under-performing. If recall is low, it is often an indication that you need to add more documents.
+    If you have a low percentage of documents that contain a certain type, it might mean that your corpus is not fully representative. The machine learning model needs lots of examples to learn from. Adding more documents to the corpus might help. If your type system and documents are truly representative of a domain, you would expect to see that any randomly chosen documents contain a reasonable subset of the types. Although not true in all cases, this situation is a signal for you to investigate your type system and the quality of the documents in the corpus. You might need to find more domain documents that better exercise the types that are under-performing. If recall is low, it is often an indication that you need to add more documents.
 
 - **Annotate corpus more**
 
-    If the machine learning annotator is having trouble finding instances of certain types then it might be because the ground truth does not contain enough examples of the type's usage. Human annotators can sometimes be thorough about labeling entity type mentions, but be less diligent about annotating relation types and coreferences. For any key types that have a low percentage of corpus density, you might want to focus on finding more annotations of those type in the source documents. But, don't worry too much about coreference and relation accuracy if mention accuracy is deficient. Relation mentions between entities and coreferences of entities cannot be accurate unless entity mentions are accurate to begin with.
+    If the machine learning model is having trouble finding instances of certain types then it might be because the ground truth does not contain enough examples of the type's usage. Human annotators can sometimes be thorough about labeling entity type mentions, but be less diligent about annotating relation types and coreferences. For any key types that have a low percentage of corpus density, you might want to focus on finding more annotations of those type in the source documents. But, don't worry too much about coreference and relation accuracy if mention accuracy is deficient. Relation mentions between entities and coreferences of entities cannot be accurate unless entity mentions are accurate to begin with.
 
 - **Fix human annotations**
 
-    Check to see whether your training data is consistently and fully annotated. A machine learning annotator learns from your ground truth annotations. For example, if a sentence contains the phrase Obama family, and you label "Obama" as PERSON in one sentence and "Obama family" as PEOPLE in another sentence, the inconsistency means that the machine learning annotator cannot learn the correct annotation. Likewise, if you label "Obama" as PERSON in one sentence but do not label his name at all in another sentence, the annotation effort is incomplete and the machine learning annotator will be improperly trained. This type of inconsistent and partial labeling is sometimes referred to as *type confusion*. In most cases, just the act of having multiple human annotators review an overlapping set of documents will surface occurrences of type confusion-related mistakes. Pay attention to the issues that surface during document conflict resolution because they can provide insight into deeper issues with the type system itself. If there is no room to further improve or refine the type system, then it might be necessary to update the annotation guidelines and include examples. You can provide illustrations of common mistakes and how to annotate mentions properly under a given set of circumstances.
+    Check to see whether your training data is consistently and fully annotated. A machine learning model learns from your ground truth annotations. For example, if a sentence contains the phrase Obama family, and you label "Obama" as PERSON in one sentence and "Obama family" as PEOPLE in another sentence, the inconsistency means that the machine learning model cannot learn the correct annotation. Likewise, if you label "Obama" as PERSON in one sentence but do not label his name at all in another sentence, the annotation effort is incomplete and the machine learning model will be improperly trained. This type of inconsistent and partial labeling is sometimes referred to as *type confusion*. In most cases, just the act of having multiple human annotators review an overlapping set of documents will surface occurrences of type confusion-related mistakes. Pay attention to the issues that surface during document conflict resolution because they can provide insight into deeper issues with the type system itself. If there is no room to further improve or refine the type system, then it might be necessary to update the annotation guidelines and include examples. You can provide illustrations of common mistakes and how to annotate mentions properly under a given set of circumstances.
 
     Another indicator of annotation inconsistency is if you have enough annotations, but the corpus density is low. Density can be impacted when a mention that is significant in the domain literature occurs often, but is annotated as different types across the document set.
 
     Low precision is often an indication that you need to improve annotation consistency. To do so, review the annotation guidelines, better train the human annotators, and ensure that human annotators are working in concert and not in isolation from one another.
 
-    Check the inter-annotator agreement score. This score, which measures the degree of agreement between different annotators' output on the same document, is a valuable number. Not only does this score tell you the quality of the ground truth documents that will be used to train the machine learning annotator, but it also indicates the upper bound of machine learning annotator performance. An annotator component that is trained on these documents is unlikely to outperform the best agreement that humans can reach. For example, if performance persists at 75 and does not go higher, take a look at the inter-annotator agreement results. If the inter-annotator agreement score is 80, take actions to better train the human annotators and ensure that conflicts are correctly resolved (according to the annotation guidelines) during adjudication. If humans can't agree on how something should be labeled, then it's unlikely that a machine learning annotator will apply the correct labels.
+    Check the inter-annotator agreement score. This score, which measures the degree of agreement between different annotators' output on the same document, is a valuable number. Not only does this score tell you the quality of the ground truth documents that will be used to train the machine learning model, but it also indicates the upper bound of machine learning model performance. A model that is trained on these documents is unlikely to outperform the best agreement that humans can reach. For example, if performance persists at 75 and does not go higher, take a look at the inter-annotator agreement results. If the inter-annotator agreement score is 80, take actions to better train the human annotators and ensure that conflicts are correctly resolved (according to the annotation guidelines) during adjudication. If humans can't agree on how something should be labeled, then it's unlikely that a machine learning model will apply the correct labels.
 
 - **Enhance annotator guidelines**
 
@@ -267,16 +267,16 @@ The following table suggests fixes for the most common machine learning annotato
 
 - **Investigate further**
 
-    If your type system, dictionary, and source documents are complete, and human annotation has been done well, but the machine learning annotator still performs poorly, then something might have gone wrong in the model training process. For example, you should always see high overall scores (over 95%) when testing on the training data.
+    If your type system, dictionary, and source documents are complete, and human annotation has been done well, but the machine learning model still performs poorly, then something might have gone wrong in the model training process. For example, you should always see high overall scores (over 95%) when testing on the training data.
 
 ## Analyzing low F1 scores
 {: #evaluate-mllowf1}
 
-Tune the performance of your machine learning annotator to address low F1 scores.
+Tune the performance of your machine learning model to address low F1 scores.
 
 ### Symptoms
 
-An F1 score reaches its best value at 1 and worst value at 0. A low F1 score is an indication of both poor precision and poor recall. The machine learning annotator generates erroneous annotations and fails to find annotations that it should have found.
+An F1 score reaches its best value at 1 and worst value at 0. A low F1 score is an indication of both poor precision and poor recall. The machine learning model generates erroneous annotations and fails to find annotations that it should have found.
 
 ### Causes
 
@@ -284,14 +284,14 @@ Low F1 scores can occur for many different reasons that depend on the domain, ty
 
 ### Resolving the problem
 
-Tune the performance of your machine learning annotator by performing one or more of following steps, and then retraining your annotator:
+Tune the performance of your machine learning model by performing one or more of following steps, and then retraining your model:
 
 1. Identify commonly occurring types with low accuracy.
 
     > **Note:** When analyzing relations, look at both the F1 score of the relation type itself and at the F1 score of each of the two entities that participates in the relationship.
 
 1. Identify commonly confused types. This information can be found by looking at the numbers that are off the diagonal in the confusion matrix.
-1. Review errors where the machine learning annotator has high confidence.
+1. Review errors where the machine learning model has high confidence.
 1. Find patterns in the false negatives and false positives in the confusion matrix.
 1. If certain types occur infrequently in the training data, add training data that contains those types.
 
@@ -300,16 +300,16 @@ Tune the performance of your machine learning annotator by performing one or mor
 1. If certain types have low F1 scores, review the clarity of the annotation guidelines that apply to those types.
 1. Add a dictionary for types that occur infrequently in the training data.
 
-<object class="image" data="images/wks_lowf1.svg">![This image contains a flowchart for the resolution of low F1 scores.](images/wks_lowf1.jpg)</object>
+![How to resolve low F1 scores.](images/wks_lowf1.svg "This image contains a flowchart for the resolution of low F1 scores.") Figure 1. How to resolve low F1 scores
 
 ## Analyzing low precision scores
 {: #evaluate-mllowp}
 
-Tune the performance of your machine learning annotator to address low precision scores. At a high level, low precision indicates a need to improve annotation consistency.
+Tune the performance of your machine learning model to address low precision scores. At a high level, low precision indicates a need to improve annotation consistency.
 
 ### Symptoms
 
-A precision score reaches its best value at 1 and worst value at 0. A low precision score indicates that the machine learning annotator generated incorrect annotations.
+A precision score reaches its best value at 1 and worst value at 0. A low precision score indicates that the machine learning model generated incorrect annotations.
 
 ### Causes
 
@@ -317,24 +317,26 @@ Low precision scores can occur for many different reasons that depend on the dom
 
 ### Resolving the problem
 
-Tune the performance of your machine learning annotator by performing one or more of following steps then retrain your annotator:
+Tune the performance of your machine learning model by performing one or more of following steps then retrain your model:
 
 1. Identify commonly occurring types with low precision.
 1. Identify commonly confused types. This information can be found by looking at the numbers that are off the diagonal in the confusion matrix.
-1. Review errors where the machine learning annotator has high confidence.
+1. Review errors where the machine learning model has high confidence.
 1. Find patterns in the false negatives in the confusion matrix.
 1. If certain types have low precision scores, review the clarity of the annotation guidelines that apply to those types.
 
-<object class="image" data="images/wks_lowprec.svg">![This image contains a flowchart for the resolution of low precision scores.](images/wks_lowprec.jpg)</object>
+![How to resolve low precision scores.](images/wks_lowprec.svg "This image contains a flowchart for the resolution of low precision scores.")
+
+Figure 2. How to resolve low precision scores
 
 ## Analyzing low recall scores
 {: #evaluate-mllowr}
 
-Tune the performance of your machine learning annotator to address low recall scores. At a high level, low recall indicates a need to add more training data.
+Tune the performance of your machine learning model to address low recall scores. At a high level, low recall indicates a need to add more training data.
 
 ### Symptoms
 
-A recall score reaches its best value at 1 and worst value at 0. A low recall score indicates that the machine learning annotator failed to create annotations that it should have created.
+A recall score reaches its best value at 1 and worst value at 0. A low recall score indicates that the machine learning model failed to create annotations that it should have created.
 
 ### Causes
 
@@ -342,12 +344,14 @@ Low recall scores can occur for many different reasons that depend on the domain
 
 ### Resolving the problem
 
-Tune the performance of your machine learning annotator by performing one or more of following steps then retrain your annotator:
+Tune the performance of your machine learning model by performing one or more of following steps then retrain your model:
 
 1. Identify commonly occurring types with low recall.
 1. Identify commonly confused types. This information can be found by looking at the numbers that are off the diagonal in the confusion matrix.
-1. Review errors where the machine learning annotator has high confidence.
+1. Review errors where the machine learning model has high confidence.
 1. Find patterns in the false positives in the confusion matrix.
 1. If certain types have low recall scores, review the clarity of the annotation guidelines that apply to those types.
 
-<object class="image" data="images/wks_lowrecall.svg">![This image contains a flowchart for the resolution of low recall scores.](images/wks_lowrecall.jpg)</object>
+![How to resolve low recall scores.](images/wks_lowrecall.svg "This image contains a flowchart for the resolution of low recall scores.")
+
+Figure 3. How to resolve low recall scores

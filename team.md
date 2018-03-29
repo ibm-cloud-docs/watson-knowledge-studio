@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-02"
+lastupdated: "2018-03-20"
 
 ---
 
@@ -23,7 +23,7 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 # Assembling a team
 {: #team}
 
-The creation of an annotator component requires input from subject matter experts, project managers, and users who can understand and interpret statistical models. You must add a user in {{site.data.keyword.knowledgestudioshort}} for each person who needs to log in.
+The creation of a model requires input from subject matter experts, project managers, and users who can understand and interpret statistical models. You must add a user in {{site.data.keyword.knowledgestudioshort}} for each person who needs to log in.
 {: shortdesc}
 
 **Note**: Only Standard plans and Premium plans can add users. Free plans are limited to one user. As the only user, that person is assigned the role with the highest permission, the Admin role.
@@ -51,7 +51,7 @@ Typically, you add users to fill the following roles.
 
 - **ProjectManager**
 
-    Project managers are people who help to facilitate the creation of annotator components by performing such tasks as creating workspace artifacts, and training, creating, and deploying models. For workspaces that are used to build machine learning annotators, project managers also manage the document annotation process by assigning document review tasks to human annotators, adjudicating annotation conflicts, and approving documents to add to the ground truth.
+    Project managers are people who help to facilitate the creation of models by performing such tasks as creating workspace artifacts, and training, creating, and deploying models. For workspaces that are used to build machine learning annotators, project managers also manage the document annotation process by assigning document review tasks to human annotators, adjudicating annotation conflicts, and approving documents to add to the ground truth.
 
 ## Adding users in {{site.data.keyword.knowledgestudioshort}}
 

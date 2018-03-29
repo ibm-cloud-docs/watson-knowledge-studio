@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-09"
+lastupdated: "2018-03-20"
 
 ---
 
@@ -23,12 +23,12 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 # Uploading resources from another workspace
 {: #exportimport}
 
-To accelerate the creation of an annotator component, you can upload resources like documents (with or without ground truth annotations), a type system, and dictionaries that you downloaded from another workspace.
+To accelerate the creation of a model, you can upload resources like documents (with or without ground truth annotations), a type system, and dictionaries that you downloaded from another workspace.
 {: shortdesc}
 
-The ability to separately download and upload different resources gives you flexibility when designing and creating an annotator component. For example, you might create one workspace to design the type system and perform human annotation, and then create a separate workspace, perhaps in a separate instance of {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} with different users, to train the machine annotator. Being able to upload the resources, including the ground truth created by human annotators, makes this scenario possible.
+The ability to separately download and upload different resources gives you flexibility when designing and creating a model. For example, you might create one workspace to design the type system and perform human annotation, and then create a separate workspace, perhaps in a separate instance of {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} with different users, to train the machine learning model. Being able to upload the resources, including the ground truth created by human annotators, makes this scenario possible.
 
-You cannot download and upload a machine learning model. Instead, you can download all of the artifacts that were used to create the annotator from one workspace and upload them into a new workspace. From the new workspace, you can run training again to recreate the model. The new model should produce similar results to the original model because they were both trained with the same set of artifacts.
+You cannot download and upload a machine learning model. Instead, you can download all of the artifacts that were used to create the model from one workspace and upload them into a new workspace. From the new workspace, you can run training again to recreate the model. The new model should produce similar results to the original model because they were both trained with the same set of artifacts.
 
 The files that you download are operating system-independent. The {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} instances where you download and upload files do not have to run the same version of Linux.
 

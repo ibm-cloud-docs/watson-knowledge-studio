@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-19"
+  years: 2015, 2018
+lastupdated: "2018-03-20"
 
 ---
 
@@ -253,14 +253,14 @@ For more information about defining rules, see [Defining a rule](/docs/services/
 
     ![Shows the Find Annotations page with two documents that contain dates that match the rule pattern you just defined.](images/rule-add11.jpg)
 
-## Lesson 8: Creating a rule annotator
+## Lesson 8: Creating a rule-based model
 {: #wks_tutless_rule8}
 
-In this lesson, you will learn how to create a rule annotator.
+In this lesson, you will learn how to create a rule-based model.
 
 ### About this task
 
-For more information about creating a rule annotator, see [Creating the rule-based model](/docs/services/watson-knowledge-studio/rule-annotator-model-create.html).
+For more information about creating a rule-based model, see [Creating the rule-based model](/docs/services/watson-knowledge-studio/rule-annotator-model-create.html).
 
 ### Procedure
 
@@ -281,7 +281,7 @@ For more information about creating a rule annotator, see [Creating the rule-bas
 ## Tutorial summary
 {: #wks_tutrule_sum}
 
-While learning about {{site.data.keyword.knowledgestudioshort}}, you created a rule-based annotator.
+While learning about {{site.data.keyword.knowledgestudioshort}}, you created a rule-based model.
 
 ### Lessons learned
 

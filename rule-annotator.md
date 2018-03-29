@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-11"
+  years: 2015, 2018
+lastupdated: "2018-03-20"
 
 ---
 
@@ -23,35 +23,35 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 # Rules
 {: #rule-annotator}
 
-Create a rule-based annotator that can recognize patterns in your documents. Use rules to capture patterns that occur in documents and convey information about underlying entity types.
+Create a rule-based model that can recognize patterns in your documents. Use rules to capture patterns that occur in documents and convey information about underlying entity types.
 {: shortdesc}
 
 ## Class overview
 
-When you construct a rule, you use classes to represent types of information. These classes are similar to entity types. So, why don't we just use entity types when defining rules? Because as you build rules, you can define intermediate classes that are used only to build other more complex classes. These intermediate classes are solely utilitarian. They are not useful in and of themselves, but only as they work with other intermediate classes to define a more useful and complete class. An intermediate class is necessary, but not something you would want to expose as part of a type system. To enable the rule annotator to do useful things like pre-annotate documents with entity mentions, you must map the complex classes that you use during rule creation to their equivalent entity types from the type system.
+When you construct a rule, you use classes to represent types of information. These classes are similar to entity types. So, why don't we just use entity types when defining rules? Because as you build rules, you can define intermediate classes that are used only to build other more complex classes. These intermediate classes are solely utilitarian. They are not useful on their own. Intermediate classes work with other intermediate classes to define a more useful and complete class. An intermediate class is necessary, but not something you expose as part of a type system. To enable the rule-based model to do useful things like pre-annotate documents with entity mentions, you must map the complex classes that you use during rule creation to their equivalent entity types from the type system.
 
-For example, you want a model that can recognize a person's name. To train a machine learning model, you would annotate many different names that are written in a variety of formats in documents in an annotation set with the PERSON entity type, and train a model to recognize them. To create a rule-based model, you define a rule that describes the text patterns used to write names. So, you might create a FirstName class and a LastName class and use these intermediate classes to define a FullName class. You might define conditions that determine the placement of the FullName class in relation to common prefixes, such as Dr. and common suffixes, such as Jr. When the rule annotator is used, the FullName class is mapped to the PERSON entity type.
+For example, you want a model that can recognize people's names. To train a machine learning model to recognize people's names, you would annotate many different names that are written in a variety of formats in documents in an annotation set with the `PERSON` entity type, and train a model to recognize people's names. To create a rule-based model to recognize people's names, you define a rule that describes the text patterns used to write people's names. So, you might create a `FirstName` class and a `LastName` class and use these intermediate classes to define a `FullName` class. You might define conditions that determine the placement of the `FullName` class in relation to common prefixes, such as `Dr.` and common suffixes, such as `Jr.`. When the rule-based model is used, the `FullName` class is mapped to the `PERSON` entity type.
 
-Another reason to avoid mapping intermediate classes to entities in your type system is that if you pre-annotate documents with the rule-based model, and then add them to your ground truth for training a machine learning model, you do not want to define rules in such a way that they will produce overlapping entity mentions. For example, if you were to map both the intermediate class FirstName and the complex class FullName to the PERSON entity, then an occurrence of "John Doe, Jr." would result in an overlapping mention.
+Another reason to avoid mapping intermediate classes to entities in your type system is that if you pre-annotate documents with the rule-based model, and then add them to your ground truth for training a machine learning model, you do not want to define rules in such a way that they will produce overlapping entity mentions. For example, if you were to map both the intermediate class `FirstName` and the complex class `FullName` to the `PERSON` entity, then an occurrence of `John Doe, Jr.` would result in an overlapping mention.
 
 ## Rule editor tools
 
-The Rule editor provides some tools that help you to define rules.
+The rule editor provides some tools that help you to define rules.
 
-- **Dictionary**
+- Dictionary
 
-    Add a dictionary and assign it a class name. Any words that are found that match entries in the dictionary are automatically annotated with the dictionary class.
+    Add a dictionary and assign it a class name. Any words that are found that match entries in the dictionary are automatically annotated with the assigned class.
 
-- **Regular expression**
+- Regular expression
 
-    A regular expression is a sequence of characters that define a search pattern. The Regex tool that is included in the Rule editor recognizes expressions that follow the `java.util.regex.Pattern` syntax. Here's a basic example:
+    A regular expression (regex) is a sequence of characters that define a search pattern. The regex tool that is included in the rule editor recognizes expressions that follow the `java.util.regex.Pattern` syntax. Here's a basic example:
     `[A-Z][a-z]*`: Finds capitalized words.
 
-        [A-Z] matches any capital alphabetical letter (A through Z) and [a-z]* matches any lower-case alphabetical letter (a through z) zero or more times. The asterisk (*) is what defines the zero or more times part (the repeating setting).
+    `[A-Z]` matches any capital alphabetical letter (A through Z) and `[a-z]*` matches any lower-case alphabetical letter (a through z) zero or more times. The asterisk (*) is the character that defines the repeating setting (zero or more times).
 
-    Consider using a free web-based regular expression utility to help you determine the right expression to use to capture the pattern of interest.
+    Consider using a free web-based regex utility to help you determine the right expression to use to capture the pattern you want to find.
 
-    For example, your documents might have several references like this:
+    For example, your documents might have several references that are similar to the following phrases:
 
     ```
     35-year-old driver
@@ -59,4 +59,4 @@ The Rule editor provides some tools that help you to define rules.
     ```
     {: screen}
 
-    The syntax *n-year-old x* is a pattern that typically represents a person. You can define a regular expression rule to find phrases that match the *n-year-old x* pattern, and annotate them as PERSON entity mentions.
+    The syntax `n-year-old x` is a pattern that typically represents a person. You can define a regular expression rule to find phrases that match the `n-year-old x` pattern, and annotate them as `PERSON` entity mentions.

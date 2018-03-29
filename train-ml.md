@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-14"
+lastupdated: "2018-03-20"
 
 ---
 
@@ -103,4 +103,4 @@ To evaluate the annotations added by the model:
 
 You cannot delete a machine learning model.
 
-You can delete the workspace that was used to develop the model, but you cannot delete the model itself. Deleting an model is not the best approach. Instead, update or replace the artifacts that are used to train the model. Even if the model is not producing the results you expect, you can continue to refine it. Each time you create a new version, the model is built anew. You can edit artifacts like dictionaries and the type system, and choose to use different annotation sets when you train the next version.
+You can delete the workspace that was used to develop the model, but you cannot delete the model itself. Deleting a model is not the best approach. Instead, update or replace the artifacts that are used to train the model. Even if the model is not producing the results you expect, you can continue to refine it. Each time you create a new version, the model is built anew. You can edit artifacts like dictionaries and the type system, and choose to use different annotation sets when you train the next version.

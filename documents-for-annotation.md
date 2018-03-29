@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-10"
+lastupdated: "2018-03-28"
 
 ---
 
@@ -23,27 +23,27 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 # Adding documents for annotation
 {: #documents-for-annotation}
 
-To train a machine learning annotator component, you must add documents that contain subject matter knowledge, such as journal articles or other industry-specific texts, to your workspace.
+To train a machine learning model, you must add documents that contain subject matter knowledge, such as journal articles or other industry-specific texts, to your workspace.
 {: shortdesc}
 
 ## About this task
 
-To define rules for the rule-based annotator component, you add or import documents from which you can draw patterns to define as rules. See [Adding documents for defining rules](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html) for more information. This section describes how to add documents for annotation only.
+To define rules for the rule-based model, you add or import documents from which you can draw patterns to define as rules. See [Adding documents for defining rules](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html) for more information. This section describes how to add documents for annotation only.
 
 ## Documents
 {: #wks_sampledoc}
 
-To train a machine learning annotator component, you need to collect documents that are representative of your domain content and of high value to your application.
+To train a machine learning model, you need to collect documents that are representative of your domain content and of high value to your application.
 
 Try to ensure that your training documents are truly representative of content that is of interest to your domain; that is, they contain many relevant mentions that can be annotated. To choose the best documents, follow these guidelines:
 
 - Strive to provide a set of documents that have a total size of about 300,000 words. Provide more words for a complex type system, and fewer for a simpler one.
-- Limit each document to a page or two of content (fewer than 2,000 words, and closer to 1,000 words per document is best). In the early stages of annotator component development, keeping each document down to a few paragraphs is also a good practice. A human annotator can mark mentions and relations in a long document, but attempts to mark coreferences across multiple pages might prove unwieldy.
+- Limit each document to a page or two of content (fewer than 2,000 words, and closer to 1,000 words per document is best). In the early stages of model development, keeping each document down to a few paragraphs is also a good practice. A human annotator can mark mentions and relations in a long document, but attempts to mark coreferences across multiple pages might prove unwieldy.
 - Ensure that the data in the documents is distributed across all possible entity types, subtypes, and roles, and the relationships between them. A goal to aim for is to eventually have at least 50 annotations for each entity type and 50 for each relation type in the document collection.
 - Again, documents should represent the breadth of the subject matter that the application will cover, but in the case of skewed frequency-of-occurrence of entity types and relation types, try to get at least 50 exemplars of each type, more for entity types that have mentions which tend to be phrases.
 - The set that you create for training must contain at least 10 annotated documents.
 
-When you are ready to create and train the annotator component, documents that you add to the workspace can be divided into sets that are used as training data, test data, and blind data. The separate data sets are important for assessing annotator component performance.
+When you are ready to create and train the model, documents that you add to the workspace can be divided into sets that are used as training data, test data, and blind data. The separate data sets are important for assessing model performance.
 
 You can add documents in the following ways:
 
@@ -62,14 +62,14 @@ You can import a two-column CSV file that contains sample text from your local m
 
 If you previously exported documents from a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace, you can import the `ZIP` file that you exported. An option lets you specify whether you want the ground truth annotations to be included in the imported files.
 
-After documents are annotated, the annotated documents are stored in `JSON` format. The markup language in these files, which shows how the original document text was parsed and tokenized, includes elements for all of the annotations that a human annotator added. To improve annotator accuracy over time, you can import these files into another workspace, thus preserving all of the existing annotations. A human annotator can revise, delete, and add annotations to these documents, or you can bypass human annotation and use these files to create training, test, and blind document sets for evaluating and improving the annotator component performance.
+After documents are annotated, the annotated documents are stored in `JSON` format. The markup language in these files, which shows how the original document text was parsed and tokenized, includes elements for all of the annotations that a human annotator added. To improve model accuracy over time, you can import these files into another workspace, thus preserving all of the existing annotations. A human annotator can revise, delete, and add annotations to these documents, or you can bypass human annotation and use these files to create training, test, and blind document sets for evaluating and improving the model performance.
 
 ### UIMA CAS XMI files
 {: #wks_sampledoc__samplexmi}
 
-To help train an annotator component, you can import documents that were pre-annotated by a UIMA analysis engine. The pre-annotated files must be in XMI serialization of UIMA Common Analysis Structure ( UIMA CAS XMI) format and combined into a ZIP file. For example, you can import documents that were annotated in an {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}}&trade; Explorer collection.
+To help train a model, you can import documents that were pre-annotated by a UIMA analysis engine. The pre-annotated files must be in XMI serialization of UIMA Common Analysis Structure ( UIMA CAS XMI) format and combined into a ZIP file. For example, you can import documents that were annotated in an {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}}&trade; Explorer collection.
 
-A human annotator can revise, delete, and add annotations to these documents, or you can bypass human annotation and use these files to create training, test, and blind document sets for evaluating and improving the annotator component performance. For details about how to create these files and requirements for importing them, see [Importing pre-annotated documents](/docs/services/watson-knowledge-studio/preannotation.html#wks_uima).
+A human annotator can revise, delete, and add annotations to these documents, or you can bypass human annotation and use these files to create training, test, and blind document sets for evaluating and improving the model performance. For details about how to create these files and requirements for importing them, see [Importing pre-annotated documents](/docs/services/watson-knowledge-studio/preannotation.html#wks_uima).
 
 ### Anonymizing data
 
@@ -80,7 +80,7 @@ For example, if the PII that you want to protect is client names, then instead o
 ## Adding documents to a workspace
 {: #wks_projadd}
 
-To train an annotator component, you must add documents that are representative of your domain content to your workspace.
+To train a model, you must add documents that are representative of your domain content to your workspace.
 
 ### About this task
 
@@ -176,7 +176,7 @@ To create an annotation set:
 1. For the base set, select the collection of documents that you want to divide into annotation sets, either all documents in the corpus or documents that were previously allocated to a document set.
 1. For the overlap value, specify the percentage of documents that you want to include in each annotation set. Inter-annotator agreement scores cannot be calculated unless two or more human annotators annotate the same documents. For example, if you specify a 20% overlap value for a corpus that contains 30 documents, and you divide the corpus into 3 document sets, 6 documents (20%) will be annotated by all human annotators. The remaining 24 documents will be divided among the 3 human annotators (8 each). Thus, each annotator receives 14 documents to annotate (6+8).
 
-    > **Note:** An annotation set that you plan to use to train a machine learning annotator must contain at least 10 annotated documents.
+    > **Note:** An annotation set that you plan to use to train a machine learning model must contain at least 10 annotated documents.
 
 1. Click the **Add** icon for each annotation set that you want to create.
 
@@ -209,7 +209,7 @@ To delete a documents, complete the following steps:
 
     Perform one of the following tasks if the document is associated with an annotation task:
     - If human annotators have not begun annotating the documents, delete the annotation task, and then delete the document. To delete an annotation task, open the **Human Annotation** page, find the annotation task with which the document is associated, and then click **Delete**. Afterwards, you can recreate the annotation task and associate the same annotation set, which now has one less document in it.
-    - If human annotators have begun to annotate the documents, do not delete the task or you will lose their work. You can tell them to continue working, but to ignore the unwanted document in the set. Have them finish all other annotation work, and go through the process of getting the set added to the ground truth. After being added, but before anyone runs the machine learning annotator, delete the unwanted document. You do not want to use the unannotated document to train a model because the machine learning annotator learns as much from what you do not annotate as from what you do. You can now delete the unwanted document, which is currently part of the ground truth, from the **Documents** tab of the **Documents** page.
+    - If human annotators have begun to annotate the documents, do not delete the task or you will lose their work. You can tell them to continue working, but to ignore the unwanted document in the set. Have them finish all other annotation work, and go through the process of getting the set added to the ground truth. After being added, but before anyone runs the machine learning model, delete the unwanted document. You do not want to use the unannotated document to train a model because the machine learning model learns as much from what you do not annotate as from what you do. You can now delete the unwanted document, which is currently part of the ground truth, from the **Documents** tab of the **Documents** page.
 
 ## Data model
 {: #wks_datamodel}
@@ -222,18 +222,18 @@ The corpus contains documents, which are partitioned into document sets:
 - A document set is a pointer to a group of documents. The document set does not contain copies of the documents themselves.
 - Some document sets can point to a single document, a setup that you can control through the overlap parameter that you specify when you create annotation sets.
 
-![Shows two document sets that point to three documents divided between the sets.](images/wks_datacorpus.png)
+![This figure illustrates two document sets that point to three documents. The documents are divided between the sets.](images/wks_datacorpus.svg "This figure illustrates two document sets that point to three documents. The documents are divided between the sets.") Figure 1. This figure illustrates two document sets that point to three documents. The documents are divided between the sets.
 
 Ground truth comprises the annotations (mentions, relations, and coreferenced mentions) that are added to documents. Ground truth is singular for each document.
 
-![Shows how ground truth consists of the annotations added to document 1, document 2, document 3, and so on.](images/wks_datagt.png)
+![This figures illustrates that ground truth consists of the annotations that are added to document 1, document 2, document 3, and so on.](images/wks_datagt.svg "This figures illustrates that ground truth consists of the annotations that are added to document 1, document 2, document 3, and so on.") Figure 2. This figures illustrates that ground truth consists of the annotations that are added to document 1, document 2, document 3, and so on.
 
 When you create an annotation task, copies of the annotations are created for each document in the annotation set that you add to the task. Human annotators annotate the documents. The annotations are isolated from each other and from ground truth. An annotation task is a temporal concept that exists to allow human annotators to annotate text in isolated spaces. In contrast, ground truth is permanent and singular.
 
-![Shows how the project manager creates annotation sets and assigns them to an annotation task. Human annotators annotate documents in the sets that are assigned to them.](images/wks_datatask.png)
+![This figures illustrates that the project manager creates annotation sets and assigns them to an annotation task. Dave and Phil, the human annotators, annotate documents in the sets that are assigned to them.](images/wks_datatask.svg "This figures illustrates that the project manager creates annotation sets and assigns them to an annotation task. Dave and Phil, the human annotators, annotate documents in the sets that are assigned to them.") Figure 2. This figures illustrates that the project manager creates annotation sets and assigns them to an annotation task. Dave and Phil, the human annotators, annotate documents in the sets that are assigned to them.
 
-After the project manager approves annotation sets in an annotation task, annotations in documents that do not overlap with other annotation sets become ground truth. For documents that overlap between annotation sets (represented by "doc 2" in this example), the project manager must adjudicate and resolve conflicts. The annotations in overlapping documents do not become ground truth until they are approved through adjudication.
+After the project manager approves annotation sets in an annotation task, annotations in documents that do not overlap with other annotation sets become ground truth. For documents that overlap between annotation sets (represented by document 2 in this example), the project manager must adjudicate and resolve conflicts. The annotations in overlapping documents do not become ground truth until they are approved through adjudication.
 
-Ground truth is then used for training and testing a machine learning annotator, or it can be used as the basis for the next iteration of annotator component development. To use ground truth in a new iteration, you must create a new annotation task.
+Ground truth is then used for training and testing a machine learning model, or it can be used as the basis for the next iteration of model development. To use ground truth in a new iteration, you must create a new annotation task.
 
-![Shows how the annotations added by two human annotators become ground truth. One document, labeled &#34;doc 2&#34;, is annotated by both human annotators. The annotations in this overlapping document must be adjudicated before they become ground truth.](images/wks_datatruth.png)
+![This figure illustrates how annotations added by two human annotators become ground truth. One document, labeled document 2, is annotated by both human annotators. The annotations in this overlapping document must be adjudicated before they become ground truth.](images/wks_datatruth.svg "This figure illustrates how annotations added by two human annotators become ground truth. One document, labeled document 2, is annotated by both human annotators. The annotations in this overlapping document must be adjudicated before they become ground truth.") Figure 3. This figure illustrates how annotations added by two human annotators become ground truth. One document, labeled document 2, is annotated by both human annotators. The annotations in this overlapping document must be adjudicated before they become ground truth.

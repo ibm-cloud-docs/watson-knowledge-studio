@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-08"
+lastupdated: "2018-03-28"
 
 ---
 
@@ -23,23 +23,23 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 # Machine learning model creation workflow
 {: #ml_annotator}
 
-Create a machine learning annotator that trains a model you can use to identify entities, coreferences, and relationships of interest in new documents.
+Create a machine learning model that trains a model you can use to identify entities, coreferences, and relationships of interest in new documents.
 {: shortdesc}
 
-Understand the typical workflow for creating a machine learning annotator component in {{site.data.keyword.watson}}&trade; {{site.data.keyword.knowledgestudioshort}}.
+Understand the typical workflow for creating a machine learning model in {{site.data.keyword.watson}}&trade; {{site.data.keyword.knowledgestudioshort}}.
 
 All the steps are performed by the project manager, except for the *Annotate documents* step, which is performed by the human annotator. Because human annotators are often subject matter experts, they might be consulted during the creation of workspace resources, such as the type system, also.
 
-![Shows the key steps you must perform to create a model.](images/wks-checklist.png)
+![The workflow for developing a machine learning model](images/wks-checklist.svg "Shows the key steps you must perform to create a model") Figure 1. The workflow for developing a machine learning model
 
-<table cellpadding="4" cellspacing="0" summary="Creating and refining an annotator component" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d14771e70" class="stentry thleft thbot">Step</th>
+<table cellpadding="4" cellspacing="0" summary="Creating and refining a model" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d14771e70" class="stentry thleft thbot">Step</th>
 <th valign="bottom" align="left" id="d14771e72" class="stentry thleft thbot">Description</th>
 </tr>
 <tr class="strow"><td valign="top" headers="d14771e70" class="stentry"><p class="p wrapper">Create a workspace. </p></td>
 <td valign="top" headers="d14771e72" class="stentry"><p class="p wrapper">See [Creating a workspace](/docs/services/watson-knowledge-studio/create-project.html). A workspace contains the resources
-that are used to create the annotator component, including:</p><dl class="dl"><dt class="dt dlterm">Type system</dt>
+that are used to create the model, including:</p><dl class="dl"><dt class="dt dlterm">Type system</dt>
 <dd class="dd"><p class="p wrapper">Import or create the type system, and define the entity types and relation types that human
-annotators can apply when annotating text. The annotator process manager typically works with
+annotators can apply when annotating text. The model process manager typically works with
 subject matter experts for your domain to define the type system. See [Establishing a type system](/docs/services/watson-knowledge-studio/typesystem.html)</p></dd>
 <dt class="dt dlterm">Source documents</dt>
 <dd class="dd"><p class="p wrapper">Create a corpus by importing sample documents that are representative of your domain content
@@ -75,10 +75,10 @@ human annotation effort might be the responsibility of a senior human annotator 
 stronger subject matter experience than the project manager. See [Adjudication](/docs/services/watson-knowledge-studio/build-groundtruth.html#wks_haperform).</p></td>
 </tr>
 <tr class="strow"><td valign="top" headers="d14771e70" class="stentry"><p class="p wrapper">Train the model</p></td>
-<td valign="top" headers="d14771e72" class="stentry"><p class="p wrapper">Create the machine learning annotator component. See [Creating a machine learning annotator component](/docs/services/watson-knowledge-studio/train-ml.html#wks_madocsets).</p></td>
+<td valign="top" headers="d14771e72" class="stentry"><p class="p wrapper">Create the machine learning model. See [Creating a machine learning model](/docs/services/watson-knowledge-studio/train-ml.html#wks_madocsets).</p></td>
 </tr>
 <tr class="strow"><td valign="top" headers="d14771e70" class="stentry"><p class="p wrapper">Evaluate the model.</p></td>
-<td valign="top" headers="d14771e72" class="stentry"><p class="p wrapper">Evaluate the accuracy of the annotator component. See [Evaluating annotations added by the annotator component](/docs/services/watson-knowledge-studio/train-ml.html#wks_matest). Depending on annotator accuracy, this step might result in the
+<td valign="top" headers="d14771e72" class="stentry"><p class="p wrapper">Evaluate the accuracy of the model. See [Evaluating annotations added by the model](/docs/services/watson-knowledge-studio/train-ml.html#wks_matest). Depending on model accuracy, this step might result in the
 need to repeat earlier steps again and again until optimal accuracy is achieved. See [Analyzing machine learning model performance](/docs/services/watson-knowledge-studio/evaluate-ml.html) for ideas about what to update based on common
 performance issues.</p></td>
 </tr>

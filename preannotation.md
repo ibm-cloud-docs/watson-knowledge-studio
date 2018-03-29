@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-13"
+lastupdated: "2018-03-20"
 
 ---
 
@@ -42,7 +42,7 @@ The following pre-annotators are available:
 
 - **{{site.data.keyword.nlushort}}**
 
-    A pre-annotator that you can use to find mentions of entities in your documents automatically. If your source documents have general knowledge subject matter, then this pre-annotator is a good choice for you. If you are working with highly specialized documents that focus on a specific field, such as patent law research, for example, the dictionary pre-annotator or rule annotator might be a better choice.
+    A pre-annotator that you can use to find mentions of entities in your documents automatically. If your source documents have general knowledge subject matter, then this pre-annotator is a good choice for you. If you are working with highly specialized documents that focus on a specific field, such as patent law research, for example, the dictionary pre-annotator or rule-based model might be a better choice.
 
 - **Dictionary**
 
@@ -201,7 +201,7 @@ You can use an existing rule-based model to pre-annotate documents that you add 
 
 ### Procedure
 
-To use the rule annotator to pre-annotate documents, complete the following steps:
+To use the rule-based model to pre-annotate documents, complete the following steps:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator and select your workspace.
 1. Select the **Model Management** > **Versions** > **Rule-based** tab.
@@ -221,7 +221,7 @@ To use the rule annotator to pre-annotate documents, complete the following step
 
 1. You can click **Run this model** any time that you want to use the rule-based model to pre-annotate additional document sets that you add to the corpus.
 
-    > **Restriction:** If you edit the entity type-to-class mapping of the rule annotator, then you must re-create annotation tasks that include the pre-annotated document sets. Pre-annotation based on the changes that you make to the pre-annotator mapping definition cannot be applied to document sets that are already assigned to an annotation task.
+    > **Restriction:** If you edit the entity type-to-class mapping of the rule-based model, then you must re-create annotation tasks that include the pre-annotated document sets. Pre-annotation based on the changes that you make to the pre-annotator mapping definition cannot be applied to document sets that are already assigned to an annotation task.
 
 ## Importing pre-annotated documents
 {: #wks_uima}
@@ -232,7 +232,7 @@ The pre-annotated documents must be in the XMI serialization form of UIMA Common
 
 UIMA CAS XMI is a standard format of Apache UIMA. Guidelines are provided for how to create files in the correct format from analyzed collections in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}}&trade; Explorer. If you use another Apache UIMA implementation, adapt these guidelines for your purposes. Regardless of how you create the XMI files, the requirements for creating the type system mapping file and ZIP file are the same for everyone.
 
-If you assign the imported documents to human annotators, the documents appear pre-annotated in the Ground Truth Editor and a number of mentions might already be annotated. The human annotator thus has more time to focus on applying the annotation guidelines to unmarked mentions. Alternatively, you can bypass the human annotation step and use the pre-annotated documents to immediately start training and evaluating a machine learning annotator.
+If you assign the imported documents to human annotators, the documents appear pre-annotated in the Ground Truth Editor and a number of mentions might already be annotated. The human annotator thus has more time to focus on applying the annotation guidelines to unmarked mentions. Alternatively, you can bypass the human annotation step and use the pre-annotated documents to immediately start training and evaluating a machine learning model.
 
 ### Exporting analyzed documents from Watson Explorer Content Analytics
 {: #wks_uimawexca}
@@ -248,8 +248,8 @@ To get analyzed documents from a {{site.data.keyword.watson}} Explorer Content A
 1. In the **Analyzed document export options** area, select **Export documents as XML files**, select the **Enable CAS as XMI format export** check box, specify the output path for where the exported data is to be written, and click **OK**.
 1. Stop and restart the parse and index services for the collection, and then do one of the following steps:
 
-    - If the collection already contains indexed documents that you want to use for training the machine learning annotator in the document cache, restart a full index build.
-    - If the collection does not contain indexed documents that you want to use for training the machine learning annotator, import documents, configure at least one crawler to crawl the documents, and start the crawler.
+    - If the collection already contains indexed documents that you want to use for training the machine learning model in the document cache, restart a full index build.
+    - If the collection does not contain indexed documents that you want to use for training the machine learning model, import documents, configure at least one crawler to crawl the documents, and start the crawler.
 
 1. In the **Export** area, check the status of the export request. The progress indicates how many documents are exported.
 1. Go to the output folder that you specified when you configured export options. When documents are exported as XML files, the output folder name is based on the time stamp when the export occurs. The output folder contains XMI files (`*.xmi`) and the UIMA TypeSystem descriptor file (`exported_typesystem.xml`).
@@ -275,7 +275,7 @@ You can export a collection of analyzed documents from {{site.data.keyword.watso
 To get analyzed documents from a Content Analytics Studio collection:
 
 1. Launch Content Analytics Studio and open the Studio project.
-1. Right-click a folder that contains documents that you want to use for training a machine learning annotator and select **Analyze Collection**.
+1. Right-click a folder that contains documents that you want to use for training a machine learning model and select **Analyze Collection**.
 1. Select a UIMA pipeline configuration file.
 1. Go to the Collection Analysis view and click the **Save** icon in the Collection Analysis view. Specify the folder where the saved results are to be written and specify the file name.
 1. Open the folder that you specified. The file extension of the saved file is `.annotations`.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-19"
+  years: 2015, 2018
+lastupdated: "2018-03-20"
 
 ---
 
@@ -28,7 +28,7 @@ This tutorial helps you understand how to pre-annotate documents, which simplifi
 
 ## Learning objectives
 
-After you complete this tutorial, you will know how to pre-annotate documents with a machine learning annotator.
+After you complete this tutorial, you will know how to pre-annotate documents with a machine learning model.
 
 This tutorial should take approximately 5 minutes to finish. If you explore other concepts related to this tutorial, it could take longer to complete.
 
@@ -42,21 +42,21 @@ This tutorial should take approximately 5 minutes to finish. If you explore othe
 
 After completing this tutorial, you will have a set of partially-annotated documents. Then, you can assign the documents to human annotators to finish the annotation work.
 
-## Lesson 1: Pre-annotating new documents with a machine learning annotator
+## Lesson 1: Pre-annotating new documents with a machine learning model
 {: #wks_tutboot_ml}
 
-In this lesson, you will learn how to use a machine learning annotator to pre-annotate documents in {{site.data.keyword.knowledgestudioshort}}.
+In this lesson, you will learn how to use a machine learning model to pre-annotate documents in {{site.data.keyword.knowledgestudioshort}}.
 
 ### About this task
 
-After you train a machine learning annotator, you can use it to pre-annotate new documents that you add to the corpus.
+After you train a machine learning model, you can use it to pre-annotate new documents that you add to the corpus.
 
 > **Attention:** Do not run a pre-annotator on documents that have been annotated by humans, but not been added to the ground truth yet. If you do, all current annotations will be stripped from the documents.
 
 In this tutorial, you can add a second set of documents by using the `documents-ml.csv` file. Do not re-add the `documents-new.csv` file, since this addition would result in duplicate documents in the ground truth. Duplication causes the following problems:
 
-- If annotations on each document do not match, they lower the quality of the machine learning annotator.
-- If annotations on each document match, they over-train the machine learning annotator on the duplicated files.
+- If annotations on each document do not match, they lower the quality of the machine learning model.
+- If annotations on each document match, they over-train the machine learning model on the duplicated files.
 
 ### Procedure
 

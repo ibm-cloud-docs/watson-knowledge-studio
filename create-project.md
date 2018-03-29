@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-08"
+lastupdated: "2018-03-20"
 
 ---
 
@@ -28,7 +28,7 @@ The first step in building a custom model is to create a workspace.
 
 ## About this task
 
-For each model that you want to build and use, you create a single workspace that contains the artifacts and resources needed to build the annotator component. You then train the annotator component to produce a custom model that can be deployed to an external service for use.
+For each model that you want to build and use, you create a single workspace that contains the artifacts and resources needed to build the model. You then train the model to produce a custom model that can be deployed to an external service for use.
 
 Before creating a workspace, answer these questions:
 
@@ -51,7 +51,7 @@ To create a workspace, complete the following steps:
 
     > **Note:** People with the project manager role can perform almost all tasks except creating a workspace. An administrator must create the workspace initially and assign project managers to it.
 
-1. Give the workspace a name. Choose a short name that reflects your domain content or the purpose of the annotator component. If you need to, you can change the workspace name later.
+1. Give the workspace a name. Choose a short name that reflects your domain content or the purpose of the model. If you need to, you can change the workspace name later.
 1. Identify the language of the documents in your workspace. The documents that you add to the workspace, and the dictionaries that you create or import, must be in the language that you specify.
 1. Optional: If you want to change the tokenizer that is used by the application from the default machine learning-based tokenizer, then you can expand the **Advanced Options** section, and choose **Dictionary-based tokenizer**.
 
@@ -100,16 +100,16 @@ The tokenization process is important because it determines the groups of charac
 
     This tokenizer is based on linguistic dictionaries. It finds tokens that follow the rules of the source document language. Only advanced users can customize this tokenizer.
 
-You must choose the tokenizer that you want to use when you create the workspace. You cannot switch to a different tokenizer later. For best results, use the default tokenizer. Only advanced users who want to modify the tokenizer behavior through a deterministic dictionary mechanism can choose the dictionary-based tokenizer. They can then customize it by adding new entries to the dictionary. However, customization must be done carefully because when you add new words to the dictionary, the changes can impact the machine learning annotator in unintended ways.
+You must choose the tokenizer that you want to use when you create the workspace. You cannot switch to a different tokenizer later. For best results, use the default tokenizer. Only advanced users who want to modify the tokenizer behavior through a deterministic dictionary mechanism can choose the dictionary-based tokenizer. They can then customize it by adding new entries to the dictionary. However, customization must be done carefully because when you add new words to the dictionary, the changes can impact the machine learning model in unintended ways.
 
 ## Summary of inputs, outputs, and limitations
 {: #wks_formats}
 
-Different stages of annotator component development require different inputs and produce different outputs.
+Different stages of model development require different inputs and produce different outputs.
 
-For each stage of the annotator component development process, this table summarizes the typical activities that you perform, the supported input file formats, the outputs that can be produced, and any sizing limits or other requirements.
+For each stage of the model development process, this table summarizes the typical activities that you perform, the supported input file formats, the outputs that can be produced, and any sizing limits or other requirements.
 
-### All annotator component types
+### All model types
 
 <table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d25459e252" class="stentry thleft thbot">Task</th>
 <th valign="bottom" align="left" id="d25459e254" class="stentry thleft thbot">Typical usage</th>
@@ -163,7 +163,7 @@ Term entries file:</p><ul class="ul bullets"><li class="li"><p class="p wrapper"
 
  {: #wks_formats__datasimpletable_xxj_qr5_2y}
 
-### Machine learning annotator component
+### Machine learning model
 
 <table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d25459e331" class="stentry thleft thbot">Task</th>
 <th valign="bottom" align="left" id="d25459e333" class="stentry thleft thbot">Typical usage</th>
@@ -173,7 +173,7 @@ Term entries file:</p><ul class="ul bullets"><li class="li"><p class="p wrapper"
 </tr>
 <tr class="strow"><td valign="top" headers="d25459e331" class="stentry"><p class="p wrapper">Document management </p></td>
 <td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Import a small, representative subset of documents </p><p class="p">Import documents that contain
-annotations previously added by a human annotator, a machine learning annotator, or a 
+annotations previously added by a human annotator, a machine learning model, or a 
 UIMA
  analysis engine</p>
 <p class="p">You
@@ -227,24 +227,24 @@ ground truth</p>
 </td>
 </tr>
 <tr class="strow"><td valign="top" headers="d25459e331" class="stentry"><p class="p wrapper">Training and refinement</p></td>
-<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Train a supervised machine learning annotator to extract domain-specific information from
-unstructured text.</p><p class="p">Evaluate and improve a supervised machine learning annotator.</p>
+<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Train a supervised machine learning model to extract domain-specific information from
+unstructured text.</p><p class="p">Evaluate and improve a supervised machine learning model.</p>
 <p class="p">You cannot
-create a semi-supervised or unsupervised machine learning annotator.</p>
+create a semi-supervised or unsupervised machine learning model.</p>
 <p class="p">You cannot
 do extensive feature engineering.</p>
 </td>
 <td valign="top" headers="d25459e335" class="stentry"><p class="p wrapper">Not applicable</p></td>
 <td valign="top" headers="d25459e337" class="stentry"><p class="p wrapper">Machine learning model</p></td>
-<td valign="top" headers="d25459e339" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">1 machine learning annotator component per workspace</p></li>
-<li class="li"><p class="p wrapper">10 annotator component versions per workspace</p></li>
+<td valign="top" headers="d25459e339" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">1 machine learning model per workspace</p></li>
+<li class="li"><p class="p wrapper">10 model versions per workspace</p></li>
 <li class="li"><p class="p wrapper">Maximum number of workspaces is determined by your subscription plan.</p></li>
 <li class="li"><p class="p wrapper">The maximum number of training actions you can perform per month is determined by your subscription plan. </p></li>
 </ul>
 </td>
 </tr>
 <tr class="strow"><td valign="top" headers="d25459e331" class="stentry"><p class="p wrapper">Publication</p></td>
-<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Publish a machine learning annotator to use for performing text extraction in other
+<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Publish a machine learning model to use for performing text extraction in other
 
 Watson
  applications. </p></td>
@@ -270,7 +270,7 @@ IBM Watson Explorer
 </tr>
 </table>
 
-### Rule-based annotator component
+### Rule-based model
 
 <table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d25459e509" class="stentry thleft thbot">Task</th>
 <th valign="bottom" align="left" id="d25459e511" class="stentry thleft thbot">Typical usage</th>
@@ -289,7 +289,7 @@ and rules.</p>
 </td>
 <td valign="top" headers="d25459e515" class="stentry"><p class="p wrapper">None</p></td>
 <td valign="top" headers="d25459e517" class="stentry"><ul class="ul bullets">
-<li class="li"><p class="p wrapper">1 rule-based annotator component per workspace</p></li>
+<li class="li"><p class="p wrapper">1 rule-based model per workspace</p></li>
 <li class="li"><p class="p wrapper">5,000 characters per document</p></li>
 <li class="li"><p class="p wrapper">100 documents per workspace</p></li>
 <li class="li"><p class="p wrapper">Maximum size of document title is 256 characters</p></li>
@@ -298,7 +298,7 @@ and rules.</p>
 <li class="li"><p class="p wrapper">100 regular expression group per workspace</p></li>
 <li class="li"><p class="p wrapper">100 regular expression entries per regular expression group</p></li>
 <li class="li"><p class="p wrapper">1,000 characters per regular expression entry</p></li>
-<li class="li"><p class="p wrapper">5 rule annotator model versions per workspace</p></li>
+<li class="li"><p class="p wrapper">5 rule-based model versions per workspace</p></li>
 </ul>
 </td>
 </tr>
