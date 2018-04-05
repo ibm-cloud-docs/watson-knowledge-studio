@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-20"
+lastupdated: "2018-04-04"
 
 ---
 
@@ -75,7 +75,7 @@ You can now divide the corpus into multiple document sets and assign the documen
 ## Lesson 2: Creating annotation sets
 {: #wks_tutless_ml2}
 
-In this lesson, you will learn how to create annotation sets in {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}}.
+In this lesson, you will learn how to create annotation sets in {{site.data.keyword.knowledgestudioshort}}.
 
 ### About this task
 
@@ -165,11 +165,11 @@ For more information about annotation tasks, see [Creating an annotation task](/
 ## Lesson 5: Annotating documents
 {: #wks_tutless_ml5}
 
-In this lesson, you will learn how to use the Ground Truth Editor to annotate documents in {{site.data.keyword.knowledgestudioshort}}.
+In this lesson, you will learn how to use the ground truth editor to annotate documents in {{site.data.keyword.knowledgestudioshort}}.
 
 ### About this task
 
-For more information about human annotation, see [Annotation with the Ground Truth Editor](/docs/services/watson-knowledge-studio/user-guide.html#wks_hagte).
+For more information about human annotation, see [Annotation with the ground truth editor](/docs/services/watson-knowledge-studio/user-guide.html#wks_hagte).
 
 ### Procedure
 

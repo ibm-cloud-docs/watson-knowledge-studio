@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-11"
+  years: 2015, 2018
+lastupdated: "2018-04-04"
 
 ---
 
@@ -26,9 +26,9 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 The following list specifies the minimum required browser software for {{site.data.keyword.knowledgestudiofull}}.
 {: shortdesc}
 
-- Google Chrome 59 and future stable fix packs (Chrome provides the best performance when using the Ground Truth Editor )
+- Google Chrome 59 and future stable fix packs (Chrome provides the best performance when using the ground truth editor )
 - Mozilla Firefox Extended Support Release (ESR) 52 and future fix packs
 
-    > **Note:** If you open {{site.data.keyword.watson}}&trade; {{site.data.keyword.knowledgestudioshort}} in a Private Browsing window, then you must disable the tracking protection feature or allow pop-ups for {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} sites to ensure that all the application functions will work properly.
+    > **Note:** If you open {{site.data.keyword.knowledgestudioshort}} in a Private Browsing window, then you must disable the tracking protection feature or allow pop-ups for {{site.data.keyword.knowledgestudioshort}} sites to ensure that all the application functions will work properly.
 
 For the best performance, use a screen resolution of at least 1024x1280.

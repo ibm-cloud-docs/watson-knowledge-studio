@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-20"
+lastupdated: "2018-04-04"
 
 ---
 
@@ -209,13 +209,11 @@ To view glossaries for other {{site.data.keyword.IBM}} products, go to [www.ibm.
 
 - **machine learning annotator**
 
-    Sometimes used as a synonym of [machine learning model](/docs/services/watson-knowledge-studio/glossary.html#gloss_M).
+    See [machine learning model](/docs/services/watson-knowledge-studio/glossary.html#gloss_M).
 
 - **machine learning model**
 
-    1. A component that identifies entities and entity relationships according to a statistical model that is based on ground truth.
-    1. The application of past experience, such as training data, to determine or predict the correct outcome of future experiences based on characteristics of the data. These past experiences are captured in the form of a model by calculating feature scores for each candidate answer or evidence and combining that with known outcomes.
-    1. Sometimes used as a synonym of [machine learning annotator](/docs/services/watson-knowledge-studio/glossary.html#gloss_M).
+    A component that identifies entities and entity relationships according to a statistical model that is based on ground truth. The model applies past experience, such as training data, to determine or predict the correct outcome of future experiences based on characteristics of the data. These past experiences are captured in the form of a model by calculating feature scores for each candidate answer or evidence and combining that with known outcomes. Sometimes referred to as *machine learning annotator*.
 
 - **mention**
 

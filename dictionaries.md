@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-20"
+lastupdated: "2018-04-04"
 
 ---
 
@@ -23,7 +23,7 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 # Creating dictionaries
 {: #dictionaries}
 
-Dictionaries help the {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} machine annotators to understand the language of the domain.
+Dictionaries help the {{site.data.keyword.knowledgestudioshort}} machine annotators to understand the language of the domain.
 {: shortdesc}
 
 ## Dictionaries
@@ -39,7 +39,7 @@ Consider this example: a dictionary entry contains the seven days of the week. T
 
 Avoid adding entries that have multiple meanings. For example, in a domain about auto racing, it makes sense to include the term *bank*, which refers to a road feature, only if financial institutions are not frequently discussed in the text also. If both senses of the word occur often in the source documents, then it is best to leave it out of both types of dictionaries: the dictionary that is associated with road features, and the dictionary that is associated with financial institutions.
 
-You can create dictionaries in {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} by manually adding individual entries. {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} also supports the ability to upload several types of dictionary files.
+You can create dictionaries in {{site.data.keyword.knowledgestudioshort}} by manually adding individual entries. {{site.data.keyword.knowledgestudioshort}} also supports the ability to upload several types of dictionary files.
 
 ### How are dictionaries used?
 
@@ -59,14 +59,14 @@ Dictionaries are used in a couple ways, all optional. They are used by the machi
 
 ### Language considerations
 
-- For Brazilian Portuguese, English, French, German, Italian, and Spanish, {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} does not currently provide an option to specify case-insensitive dictionary-matching, but dictionary entries match text that has higher case. For example, "vehicle" in the dictionary matches "vehicle", "Vehicle" or "VEHICLE" in text, while "Sat" in the dictionary matches "Sat" or "SAT" in text, but not "sat".
+- For Brazilian Portuguese, English, French, German, Italian, and Spanish, {{site.data.keyword.knowledgestudioshort}} does not currently provide an option to specify case-insensitive dictionary-matching, but dictionary entries match text that has higher case. For example, "vehicle" in the dictionary matches "vehicle", "Vehicle" or "VEHICLE" in text, while "Sat" in the dictionary matches "Sat" or "SAT" in text, but not "sat".
 - For Japanese and Korean, dictionary matching during pre-annotation is case-sensitive.
-- For Arabic, {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} assumes that Arabic text is stored unshaped and treats numeric shaping as a storage-level property. For details about how {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} handles Arabic character shaping and numeric shaping, see [Configuring support for Arabic](/docs/services/watson-knowledge-studio/language-support.html#wks_langsupp_ar).
+- For Arabic, {{site.data.keyword.knowledgestudioshort}} assumes that Arabic text is stored unshaped and treats numeric shaping as a storage-level property. For details about how {{site.data.keyword.knowledgestudioshort}} handles Arabic character shaping and numeric shaping, see [Configuring support for Arabic](/docs/services/watson-knowledge-studio/language-support.html#wks_langsupp_ar).
 
 ### CSV file dictionary
 {: #wks_dictionaries__cvsdict}
 
-Also referred to as the standard dictionary format, a dictionary in comma-separated value (`CSV`) format is a file that you can edit after you upload it. The maximum size of a `CSV` file that you can upload is 1 MB. If you have a larger dictionary file, then break the large file into multiple files and upload them one at a time into a single dictionary in your {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace.
+Also referred to as the standard dictionary format, a dictionary in comma-separated value (`CSV`) format is a file that you can edit after you upload it. The maximum size of a `CSV` file that you can upload is 1 MB. If you have a larger dictionary file, then break the large file into multiple files and upload them one at a time into a single dictionary in your {{site.data.keyword.knowledgestudioshort}} workspace.
 
 To summarize the requirements, you must use a text editor to create the `CSV` file, not software like Microsoft Excel, and the file must use UTF-8 encoding that does not include the byte order mark (BOM) at the start of the text stream. The first row in the file must specify the following column headers:
 
@@ -147,7 +147,7 @@ premium,4,premium,premium-grade
 
 **Related concepts**:
 
-[Importing resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html)
+[Uploading resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html)
 
 **Related tasks**:
 
@@ -174,14 +174,14 @@ The following restriction apply to dictionaries:
 
 To add a dictionary to your workspace:
 
-1. Log in as a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} administrator or project manager and open the **Assets & Tools** > **Pre-annotators** > **Dictionaries** tab.
+1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager and open the **Assets & Tools** > **Pre-annotators** > **Dictionaries** tab.
 1. Perform one of the following tasks:
 
     - Click the **Upload Dictionary** button, select a dictionary, and then click **Upload**. After you upload a dictionary, click **Manage Dictionaries** to view the dictionary and associate it with an entity type.
 
-        - You can upload a ZIP file that contains a dictionary that you exported from another {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace. You must upload the type system that was exported from the other workspace in JSON format before you can upload the corresponding dictionary file. You can edit and add entries to a dictionary that you reuse from another {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace. See [Importing resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html) for more details.
+        - You can upload a ZIP file that contains a dictionary that you downloaded from another {{site.data.keyword.knowledgestudioshort}} workspace. You must upload the type system that was downloaded from the other workspace in JSON format before you can upload the corresponding dictionary file. You can edit and add entries to a dictionary that you reuse from another {{site.data.keyword.knowledgestudioshort}} workspace. See [Uploading resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html) for more details.
 
-        Importing a CSV file is also supported, but importing it directly as a dictionary creates a preview-only dictionary that you cannot edit or use to pre-annotate documents. To upload a CSV file that you can edit and use for pre-annotation, click **Manage Dictionaries** and then **Create Dictionary** to create a dictionary first, and then upload the CSV content as entries to that newly created dictionary.
+        Uploading a CSV file is also supported, but uploading it directly as a dictionary creates a preview-only dictionary that you cannot edit or use to pre-annotate documents. To upload a CSV file that you can edit and use for pre-annotation, click **Manage Dictionaries** and then **Create Dictionary** to create a dictionary first, and then upload the CSV content as entries to that newly created dictionary.
 
     - Click the **Manage Dictionaries** button to create a new dictionary to which you can subsequently add dictionary entries.
 
@@ -192,7 +192,7 @@ To add a dictionary to your workspace:
     - Click **Add Entry** to add a dictionary entry. Specify the lemma (the most representative word form for the term).
     - Click **Upload** to upload a `CSV` file that contains dictionary entries, and then browse to select the file. The CSV file must be smaller than 1MB.
 
-1. After importing or adding entries, you can edit the entries.
+1. After uploading or adding entries, you can edit the entries.
 
     Open an entry to specify equivalent terms, called surface forms. Each surface form must be 256 or fewer characters in length. You can change which of the surface forms is used as the lemma.
 

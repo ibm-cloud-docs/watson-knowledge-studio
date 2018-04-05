@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-26"
+lastupdated: "2018-04-04"
 
 ---
 
@@ -23,7 +23,7 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 # Annotating documents
 {: #user-guide}
 
-The information in this section helps subject matter experts who have been asked to annotate industry documents use the Ground Truth Editor to complete the task.
+The information in this section helps subject matter experts who have been asked to annotate industry documents use the ground truth editor to complete the task.
 {: shortdesc}
 
 ## Workspace access
@@ -31,14 +31,14 @@ The information in this section helps subject matter experts who have been asked
 
 You cannot see any workspaces until someone else creates a workspace and gives you access to it.
 
-When an administrator adds you to an instance of {{site.data.keyword.watson}}&trade; {{site.data.keyword.knowledgestudioshort}} , you are added in the human annotator role. As a human annotator, you cannot create a workspace or even see workspaces that were created by others at first. To get access to a workspace, the administrator must create a workspace. Then the administrator or a project manager that the administrator associates with the workspace must perform the following steps:
+When an administrator adds you to an instance of {{site.data.keyword.knowledgestudioshort}}, you are added in the human annotator role. With that role, you cannot create a workspace. To get access to a workspace, the administrator must create a workspace. Then the administrator or a project manager that the administrator associates with the workspace must perform the following steps:
 
 1. Create an annotation set and associate you with it.
 1. Create a task that assigns you to annotate the documents in the set.
 
 It is not until an annotation task is assigned to you that you can see the workspace.
 
-If you were invited to participate in a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace, but do not see any workspaces from the Workspaces page, contact the person who invited you, and ask him to perform the steps described earlier.
+If you were invited to participate in a {{site.data.keyword.knowledgestudioshort}} workspace, but do not see any workspaces from the Workspaces page, contact the person who invited you, and ask her to perform the required steps.
 
 ## Annotation best practices
 {: #wks_anno_bp}
@@ -123,10 +123,10 @@ These annotation best practices provide some guidance and examples as you start 
 
 - A coreference is used when mentions refer to the same real-world entity. Relations are used between distinct entities. So, no two mentions should be connected by both coreference and a relation.
 
-## Annotation with the Ground Truth Editor
+## Annotation with the ground truth editor
 {: #wks_hagte}
 
-When a human annotator annotates a document, the document is opened in the Ground Truth Editor. The Ground Truth Editor is a visual tool that human annotators use to apply labels to text.
+When a human annotator annotates a document, the document is opened in the ground truth editor. The ground truth editor is a visual tool that human annotators use to apply labels to text.
 
 The goal of human annotation is to label mentions, relations, and coreferenced mentions so that the machine learning model can be trained to detect these patterns in unseen text. At a minimum, use the tool to annotate entity mentions. If the application that will use the resulting model does not need to find and extract coreferences and relation mentions, then you do not need to annotate coreferences and relation mentions.
 
@@ -151,7 +151,7 @@ Choose a mode to use when manually annotating documents:
 ### Tips for using the editor
 
 - Save your work as you go.
-- If you make a mistake, you can press **Ctrl+Z** to undo the previous action. To redo the action after undoing it, press **Ctrl+Y**. You can undo the previous 10 actions that you performed while editing the current document; they are lost as soon as you close the document. The actions must be undone in reverse order, and you must switch to the mode that you were in when you performed the action to undo it. You cannot undo and redo concordance tool actions.
+- If you make a mistake, you can press `Ctrl+Z` to undo the previous action. To redo the action after undoing it, press `Ctrl+Y`. You can undo the previous 10 actions that you performed while editing the current document; they are lost as soon as you close the document. The actions must be undone in reverse order, and you must switch to the mode that you were in when you performed the action to undo it. You cannot undo and redo concordance tool actions.
 
 ## Annotating entity mentions
 {: #wks_haentity}
@@ -173,10 +173,9 @@ When you open a document to annotate it, you might want to use the concordance t
 
 To annotate entity mentions in a document:
 
-1. Log in as a human annotator (or as an administrator who was assigned documents to annotate). workspaces that contain tasks that are assigned to you are displayed.
+1. Log in as a human annotator (or as an administrator who was assigned documents to annotate). Workspaces that contain tasks that are assigned to you are displayed.
 1. Open a workspace and then open the task that you want to work on. The annotation sets that are assigned to you are displayed.
-1. Click **Annotate** to open an annotation set in the Ground Truth Editor.
-1. After the list of documents is displayed, click a document to open it. By default, the document opens in **Mention** mode, which is the mode you use to annotate entity mentions.
+1. Click a document to open it. By default, the document opens **Document Annotation** > **Mention**, which is the mode you use to annotate entity mentions.
 1. To annotate an entity mention:
 
     1. Click a word in the text that you recognize as a mention of a particular entity type from the type system. For entity mentions that consists of more than one word, click another word or drag the selection box edges to select multiple words or compound words.
@@ -193,7 +192,7 @@ To annotate entity mentions in a document:
 
         Typically, the existence of too many overlapping mentions means that the annotation guidelines are ambiguous and need to be improved to provide better examples of how to handle compound words in your source data.
 
-    1. To remove an annotation that you just added, press **Ctrl+Z** to undo the action. To remove an entity mention later, you can left-click a mention and press the **Delete** key, or click **View Details**, and then click **X** next to the entity type that is assigned to the mention.
+    1. To remove an annotation that you just added, press `Ctrl+Z` to undo the action. To remove an entity mention later, you can left-click a mention and press the **Delete** key, or click **View Details**, and then click **X** next to the entity type that is assigned to the mention.
 
 1. Depending on the type system, you might be able to configure attributes for an entity mention, such as assigning an entity role or subtype or a mention class or type. If so, select a mention and click **Attribute View**.
 
@@ -220,13 +219,12 @@ To annotate repeating mentions:
 
 1. Log in as a human annotator (or as an administrator or project manager who was assigned documents to annotate). Workspaces that contain tasks that are assigned to you are displayed.
 1. Open a workspace and then open the task that you want to work on. The annotation sets that are assigned to you are displayed.
-1. Click **Annotate** to open an annotation set in the Ground Truth Editor.
-1. After the list of documents is displayed, click a document to open it. By default, the document opens in **Mention** mode.
+1. Click a document to open it. By default, the document opens **Document Annotation** > **Mentions**.
 1. If you have not added any annotations yet, add at least one annotation. Select a word or word phrase that represents a mention of an entity type from your type system, and assign the appropriate type to it. Click **Save** to save your annotation.
-1. Select a single occurrence of repeating text that you want to annotate, and then click **Concordance** to open the **Concordance** tool.
+1. Select a single occurrence of repeating text that you want to annotate, and then click **Concordance**.
 1. Select the documents that you want to apply the selected entity type to. You can create the annotations in all documents that you have been assigned to annotate, all documents that you have begun annotating, or all documents that you have not yet started to annotate. Click **Preview** to see the annotations that will be added.
 1. If you want to view the annotations in greater context, click the icons to preview the document content or open the document in a new window.
-1. Click **Apply and Review** to apply the selected entity types to mentions in the selected documents. You still have a chance to review the annotations that will be added. If an annotation is inaccurate in a particular context, you can remove that occurrence by clicking the Edit icon, and then removing the entity type assignment for the mention.
+1. Click **Apply & Review** to apply the selected entity types to mentions in the selected documents. You still have a chance to review the annotations that will be added. If an annotation is inaccurate in a particular context, you can remove that occurrence by clicking the Edit icon, and then removing the entity type assignment for the mention.
 1. When you are happy with the list of annotations, click **Go Back to Ground Truth Editor** .
 
 ### Results
@@ -258,7 +256,7 @@ What's most important is consistency. Decide on how you want annotate coreferenc
 
 To annotate mentions as coreferences:
 
-1. Click **Coreference** to switch to **Coreference** mode.
+1. Click **Document Annotation** > **Coreferences**.
 1. To create a coreference chain:
 
     1. Move through the document and click each mention that means the same thing and is labeled by the same entity type. For example, click each occurrence of {{site.data.keyword.IBM_notm}}, International Business Machines, and {{site.data.keyword.IBM_notm}} Corp., assuming all of these mentions have the entity type ORGANIZATION.
@@ -273,7 +271,7 @@ To annotate mentions as coreferences:
 
     The mention is removed from the Single Mention List and the number of the chain that it now belongs to is displayed below the mention in the document.
 
-1. To remove a coreference chain that you just added, press **Ctrl+Z** to undo the action. To remove a coreference chain later, from the Coreference Chains side panel, click the **X** next to the chain that you want to remove. To remove a single mention from the chain, click the coreference ID to open a window that displays a list of the mentions in the chain, and then click the **X** next to the mention that you want to remove.
+1. To remove a coreference chain that you just added, press `Ctrl+Z` to undo the action. To remove a coreference chain later, from the Coreference Chains side panel, click the **X** next to the chain that you want to remove. To remove a single mention from the chain, click the coreference ID to open a window that displays a list of the mentions in the chain, and then click the **X** next to the mention that you want to remove.
 1. Click **Save** at any time to save your work.
 
 ### What to do next
@@ -315,7 +313,7 @@ where the subscript [<i>#1</i>] indicates that *Mary* and *She* are both members
 
 To annotate relation mentions between entity mentions in a document:
 
-1. Click **Relation** to switch to **Relation** mode.
+1. Click **Document Annotation** > **Relations**.
 1. To annotate a relation:
 
     1. Click an entity mention in the text, and then click a second entity mention in the same sentence that you want to connect to the first mention.
@@ -324,7 +322,7 @@ To annotate relation mentions between entity mentions in a document:
         If annotation guidelines were previously connected to the workspace, and you want help with choosing the correct annotation to apply, click **View Guidelines**. Depending on the access permissions set up on the site where the guidelines are hosted, you might be able to update the guidelines after you open them, for example, to add clarifications and examples.
         {: tip}
 
-1. To remove a relation mention that you just added, press **Ctrl+Z** to undo the action. To remove a relation mention later, you can left-click the relation type and then press the **Delete** key or click **X** next to the relation type.
+1. To remove a relation mention that you just added, press `Ctrl+Z` to undo the action. To remove a relation mention later, you can left-click the relation type and then press the **Delete** key or click **X** next to the relation type.
 1. Depending on the type system, you might be able to configure attributes for a relation, such as assigning a relation tense, modality, or class. If so, select a relation label and click **Attribute View**.
 1. Click **Save** at any time to save your work.
 
@@ -338,6 +336,6 @@ After you finish annotating all documents and mark them **Completed**, the statu
 
 [Dictionaries](/docs/services/watson-knowledge-studio/dictionaries.html)
 
-[Troubleshooting the Ground Truth Editor](/docs/services/watson-knowledge-studio/user-guide-help.html)
+[Troubleshooting the ground truth editor](/docs/services/watson-knowledge-studio/user-guide-help.html)
 
 [Type systems](/docs/services/watson-knowledge-studio/typesystem.html)

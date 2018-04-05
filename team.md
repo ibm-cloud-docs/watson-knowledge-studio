@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-20"
+lastupdated: "2018-04-04"
 
 ---
 
@@ -47,7 +47,7 @@ Typically, you add users to fill the following roles.
 
 - **HumanAnnotator**
 
-    Human annotators are typically subject matter experts who reviews documents from a specific domain to identify entities and relationships of interest to the domain. These users interact with the application in a limited way. They use the Ground Truth Editor to annotate a set of documents that have been assigned to them.
+    Human annotators are typically subject matter experts who reviews documents from a specific domain to identify entities and relationships of interest to the domain. These users interact with the application in a limited way. They use the ground truth editor to annotate a set of documents that have been assigned to them.
 
 - **ProjectManager**
 

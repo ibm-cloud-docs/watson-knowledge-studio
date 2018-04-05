@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-20"
+lastupdated: "2018-04-04"
 
 ---
 
@@ -31,9 +31,9 @@ The type system controls how content can be annotated.
 
 A type system defines things that are interesting in your domain content that you want to label with an annotation. The type system controls how content can be annotated by defining the types of entities that can be labeled and how relationships among different entities can be labeled. The model process manager typically works with subject matter experts for your domain to define the type system.
 
-In {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} , you can create a type system from scratch or upload an existing type system. To jump-start a workspace, you might want to upload a type system that was created for a similar domain. You can then edit the type system to add or remove entity types or redefine the relationship types.
+In {{site.data.keyword.knowledgestudioshort}}, you can create a type system from scratch or upload an existing type system. To jump-start a workspace, you might want to upload a type system that was created for a similar domain. You can then edit the type system to add or remove entity types or redefine the relationship types.
 
-A sample type system based on the KLUE type system is provided for you to use with the {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} tutorials. KLUE stands for Knowledge from Language Understanding and Extraction and was derived by {{site.data.keyword.IBM_notm}} Research based on the analysis of collections of news articles. You can download a sample KLUE type system from <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/en-klue2-types.json" download>here<img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a>.
+A sample type system based on the KLUE type system is provided for you to use with the {{site.data.keyword.knowledgestudioshort}} tutorials. KLUE stands for Knowledge from Language Understanding and Extraction and was derived by {{site.data.keyword.IBM_notm}} Research based on the analysis of collections of news articles. You can download a sample KLUE type system from <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/en-klue2-types.json" download>here<img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a>.
 
 Many industries, such in domains like metallurgy, geology, market intelligence, life science, electronic health records, and oncology publish dictionaries or ontologies of domain-specific terminology. Consider referencing this type of resource to get an idea of the types of entities you might want to define in your own type system.
 
@@ -49,7 +49,7 @@ An entity type is how you categorize a real-world thing. An entity mention is an
 
 The goal of your annotation workspace is to annotate each mention in a document with the type of thing that it is. After a mention is classified by entity type, the labeled span of text is referred to as an entity.
 
-A type system that you build with {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} can include the following entity type attributes. The attributes help qualify mentions in text, but they are not marked as entity types by a machine learning model. For example, if the entity type ORGANIZATION has an entity subtype called COMMERCIAL, COMMERCIAL is not marked as an entity type on its own.
+A type system that you build with {{site.data.keyword.knowledgestudioshort}} can include the following entity type attributes. The attributes help qualify mentions in text, but they are not marked as entity types by a machine learning model. For example, if the entity type ORGANIZATION has an entity subtype called COMMERCIAL, COMMERCIAL is not marked as an entity type on its own.
 
 - **Role**
 
@@ -104,14 +104,14 @@ By convention, entity type names are specified in uppercase characters (ORGANIZA
 
 ### Procedure
 
-1. Log in as a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} administrator or project manager and open the **Assets & Tools** > **Entity Types** page.
+1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager and open the **Assets & Tools** > **Entity Types** page.
 1. Choose one of the following methods for creating the type system:
 
     - To upload an existing type system:
 
         1. Click **Upload** to upload an existing type system.
 
-            If you previously downloaded a type system from a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace, the type system is downloaded in `JSON` format. You can upload this type system to jump-start the creation of a new workspace. For details, see [Uploading resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html).
+            If you previously downloaded a type system from a {{site.data.keyword.knowledgestudioshort}} workspace, the type system is downloaded in `JSON` format. You can upload this type system to jump-start the creation of a new workspace. For details, see [Uploading resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html).
 
             > **Note:** Regardless of the origin of the type system, the entries in it must meet the naming rules listed earlier.
 
@@ -136,7 +136,7 @@ By convention, entity type names are specified in uppercase characters (ORGANIZA
 
         1. Open the **Assets & Tools** > **Relation Types** page and specify how two mentions can relate to each other.
 
-            Order between the first and second entities in a relation type is usually relevant. For example, a PERSON entity can be an employee of an ORGANIZATION entity or a geo-political entity (GPE), such as Mary employedBy {{site.data.keyword.IBM_notm}}, but organizations and geo-political entities cannot be employed by a person. When a human annotator clicks an entity in the Ground Truth Editor , the list of available relation types is controlled by what is defined in the type system.
+            Order between the first and second entities in a relation type is usually relevant. For example, a PERSON entity can be an employee of an ORGANIZATION entity or a geo-political entity (GPE), such as Mary employedBy {{site.data.keyword.IBM_notm}}, but organizations and geo-political entities cannot be employed by a person. When a human annotator clicks an entity in the ground truth editor , the list of available relation types is controlled by what is defined in the type system.
 
             Do not define relation attributes. They are not used by the machine learning model. The model uses only the relation type and order, and ignores the relation attributes.
 
@@ -151,7 +151,7 @@ By convention, entity type names are specified in uppercase characters (ORGANIZA
 ## Type system creation guidelines
 {: #wks_typesys_guidelines}
 
-The purpose of any type system in {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} is to define how spans of text can be annotated. If you choose to create a type system from scratch, follow these guidelines.
+The purpose of any type system in {{site.data.keyword.knowledgestudioshort}} is to define how spans of text can be annotated. If you choose to create a type system from scratch, follow these guidelines.
 
 Focus on creating an inventory of entity types and relation types that cover the information that is needed by the application in which the type system will be used. Do not cover things that are not needed. Do not split types or make distinctions that are not needed by the application. For example, if the source document contains the sentence *Murder on the Orient Express made headlines*, then how you define entity types to capture the key information in the sentence differs depending on the type of application that will use the model that you build with the type system.
 
@@ -212,7 +212,7 @@ Entity subtypes are for stratifying an inventory of entity types into a hierarch
 
 ### How are roles treated?
 
-The {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} machine learning model defines classifier labels for each mention of an entity that it finds in the source documents by concatenating the entity type + role values. When you provide role values, you create more precise labels. Each group of instances of one label type that are found in the training data forms a more uniform set of mentions. The challenge is that by choosing to be more precise, you must also accede to providing more training data to ensure that the model performs well. But, the more training data you provide, the better the model becomes. So, if you don't mind doing additional annotation, using roles gets you better results.
+The {{site.data.keyword.knowledgestudioshort}} machine learning model defines classifier labels for each mention of an entity that it finds in the source documents by concatenating the entity type + role values. When you provide role values, you create more precise labels. Each group of instances of one label type that are found in the training data forms a more uniform set of mentions. The challenge is that by choosing to be more precise, you must also accede to providing more training data to ensure that the model performs well. But, the more training data you provide, the better the model becomes. So, if you don't mind doing additional annotation, using roles gets you better results.
 
 As an example, let's assume that the following sentences occur in a source document, and we want to capture the "Acme" (where Acme is a well-known truck manufacturer), "sedan", and "truck" as similar entities because they all refer to a physical vehicle:
 

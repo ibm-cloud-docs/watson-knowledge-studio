@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-14"
+lastupdated: "2018-04-04"
 
 ---
 
@@ -23,10 +23,10 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 # Using the machine learning model
 {: #publish-ml}
 
-Leverage a machine learning model that you trained with {{site.data.keyword.watson}}&trade; {{site.data.keyword.knowledgestudioshort}} by making it available to other {{site.data.keyword.watson}} applications.
+Leverage a machine learning model that you trained with {{site.data.keyword.knowledgestudioshort}} by making it available to other {{site.data.keyword.watson}} applications.
 {: shortdesc}
 
-You can deploy or export a machine learning model. A dictionary or {{site.data.keyword.nlushort}} pre-annotator can only be used to pre-annotate documents within {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}}.
+You can deploy or export a machine learning model. A dictionary or {{site.data.keyword.nlushort}} pre-annotator can only be used to pre-annotate documents within {{site.data.keyword.knowledgestudioshort}}.
 
 Before a model can be deployed for use by a service, you must have a subscription to the service. {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} services are hosted on {{site.data.keyword.Bluemix_short}}, which is the cloud platform for {{site.data.keyword.IBM_notm}}. See [What is {{site.data.keyword.Bluemix_notm}}? ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/docs/overview/whatisbluemix.html){: new_window} for more information about the platform. To subscribe to one of the {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} services, create an account from the [{{site.data.keyword.Bluemix_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/){: new_window} website.
 

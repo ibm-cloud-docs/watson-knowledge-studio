@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-20"
+lastupdated: "2018-04-04"
 
 ---
 
@@ -50,13 +50,13 @@ The following pre-annotators are available:
 
 - **Machine learning**
 
-    Uses a machine learning model to automatically annotate documents. This option is only available to you if you have created a machine learning model with {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} already. If you add a new document set, you can run the machine learning annotator that you created previously to pre-annotate the new documents. If the new set of documents are similar to the documents that were used to train the machine learning annotator originally, then this is probably your best choice for pre-annotation.
+    Uses a machine learning model to automatically annotate documents. This option is only available to you if you have created a machine learning model with {{site.data.keyword.knowledgestudioshort}} already. If you add a new document set, you can run the machine learning annotator that you created previously to pre-annotate the new documents. If the new set of documents are similar to the documents that were used to train the machine learning annotator originally, then this is probably your best choice for pre-annotation.
 
 - **Rule**
 
-    Uses a rule-based model to automatically annotate documents. This option is only available if you have created a rule-based model with {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} already. If your documents contain common patterns of tokens from which you can derive meaning, this model might be a good choice. It can incorporate some of the function of the dictionary pre-annotator if you enable it, by identifying class types for dictionary terms that it finds in the documents also.
+    Uses a rule-based model to automatically annotate documents. This option is only available if you have created a rule-based model with {{site.data.keyword.knowledgestudioshort}} already. If your documents contain common patterns of tokens from which you can derive meaning, this model might be a good choice. It can incorporate some of the function of the dictionary pre-annotator if you enable it, by identifying class types for dictionary terms that it finds in the documents also.
 
-Alternatively, you can import already-annotated documents, and use them to start training the machine learning model. You cannot run a pre-annotator on annotated documents that you import or the existing annotations will be stripped from the documents and replaced with annotations produced by the pre-annotator only.
+Alternatively, you can upload already-annotated documents, and use them to start training the machine learning model. You cannot run a pre-annotator on annotated documents that you upload or the existing annotations will be stripped from the documents and replaced with annotations produced by the pre-annotator only.
 
 > **Note:** You *can* run a pre-annotator on documents that were added to the ground truth as part of the current workspace. Annotations that were added to the documents, reviewed, accepted, and promoted to ground truth within the current workspace are not stripped out.
 
@@ -129,9 +129,9 @@ To use the {{site.data.keyword.nlushort}} service to pre-annotate documents, com
 ### Results
 {: #wks_preannotnlu__export-warning}
 
-Ground truth that is produced by documents that were pre-annotated by the {{site.data.keyword.nlushort}} service cannot be used directly outside of {{site.data.keyword.knowledgestudioshort}}. You can export the ground truth (in non-readable form) to move it from one {{site.data.keyword.knowledgestudioshort}} workspace to another. And you can continue to develop the ground truth and use it to build a machine learning model or rule-based model that can be deployed for use in services outside of {{site.data.keyword.knowledgestudioshort}}.
+Ground truth that is produced by documents that were pre-annotated by the {{site.data.keyword.nlushort}} service cannot be used directly outside of {{site.data.keyword.knowledgestudioshort}}. You can download the ground truth (in non-readable form) to move it from one {{site.data.keyword.knowledgestudioshort}} workspace to another. And you can continue to develop the ground truth and use it to build a machine learning model or rule-based model that can be deployed for use in services outside of {{site.data.keyword.knowledgestudioshort}}.
 
-> **Restriction:** Documents that were pre-annotated with {{site.data.keyword.nlushort}} are obscured into a non-readable format when they are exported. But, all annotations in those documents are obscured, including annotations that were added to the documents by human annotators.
+> **Restriction:** Documents that were pre-annotated with {{site.data.keyword.nlushort}} are obscured into a non-readable format when they are downloaded. But, all annotations in those documents are obscured, including annotations that were added to the documents by human annotators.
 
 **Related information**:
 
@@ -223,21 +223,21 @@ To use the rule-based model to pre-annotate documents, complete the following st
 
     > **Restriction:** If you edit the entity type-to-class mapping of the rule-based model, then you must re-create annotation tasks that include the pre-annotated document sets. Pre-annotation based on the changes that you make to the pre-annotator mapping definition cannot be applied to document sets that are already assigned to an annotation task.
 
-## Importing pre-annotated documents
+## Uploading pre-annotated documents
 {: #wks_uima}
 
-You can jump-start the training of your model by importing documents that were pre-annotated through an Unstructured Information Management Architecture (UIMA) analysis engine.
+You can jump-start the training of your model by uploading documents that were pre-annotated through an Unstructured Information Management Architecture (UIMA) analysis engine.
 
-The pre-annotated documents must be in the XMI serialization form of UIMA Common Analysis Structure (UIMA CAS XMI). The ZIP file that you import must include the UIMA TypeSystem descriptor file and a file that maps the UIMA types to entity types in your {{site.data.keyword.knowledgestudioshort}} type system.
+The pre-annotated documents must be in the XMI serialization form of UIMA Common Analysis Structure (UIMA CAS XMI). The ZIP file that you upload must include the UIMA TypeSystem descriptor file and a file that maps the UIMA types to entity types in your {{site.data.keyword.knowledgestudioshort}} type system.
 
-UIMA CAS XMI is a standard format of Apache UIMA. Guidelines are provided for how to create files in the correct format from analyzed collections in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}}&trade; Explorer. If you use another Apache UIMA implementation, adapt these guidelines for your purposes. Regardless of how you create the XMI files, the requirements for creating the type system mapping file and ZIP file are the same for everyone.
+UIMA CAS XMI is a standard format of Apache UIMA. Guidelines are provided for how to create files in the correct format from analyzed collections in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer. If you use another Apache UIMA implementation, adapt these guidelines for your purposes. Regardless of how you create the XMI files, the requirements for creating the type system mapping file and ZIP file are the same for everyone.
 
-If you assign the imported documents to human annotators, the documents appear pre-annotated in the Ground Truth Editor and a number of mentions might already be annotated. The human annotator thus has more time to focus on applying the annotation guidelines to unmarked mentions. Alternatively, you can bypass the human annotation step and use the pre-annotated documents to immediately start training and evaluating a machine learning model.
+If you assign the imported documents to human annotators, the documents appear pre-annotated in the ground truth editor and a number of mentions might already be annotated. The human annotator thus has more time to focus on applying the annotation guidelines to unmarked mentions. Alternatively, you can bypass the human annotation step and use the pre-annotated documents to immediately start training and evaluating a machine learning model.
 
 ### Exporting analyzed documents from Watson Explorer Content Analytics
 {: #wks_uimawexca}
 
-You can export documents that were crawled and analyzed in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer Content Analytics, and import the analyzed documents as XMI files into a {{site.data.keyword.knowledgestudioshort}} workspace.
+You can export documents that were crawled and analyzed in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer Content Analytics, and upload the analyzed documents as XMI files into a {{site.data.keyword.knowledgestudioshort}} workspace.
 
 #### Procedure
 
@@ -249,7 +249,7 @@ To get analyzed documents from a {{site.data.keyword.watson}} Explorer Content A
 1. Stop and restart the parse and index services for the collection, and then do one of the following steps:
 
     - If the collection already contains indexed documents that you want to use for training the machine learning model in the document cache, restart a full index build.
-    - If the collection does not contain indexed documents that you want to use for training the machine learning model, import documents, configure at least one crawler to crawl the documents, and start the crawler.
+    - If the collection does not contain indexed documents that you want to use for training the machine learning model, upload documents, configure at least one crawler to crawl the documents, and start the crawler.
 
 1. In the **Export** area, check the status of the export request. The progress indicates how many documents are exported.
 1. Go to the output folder that you specified when you configured export options. When documents are exported as XML files, the output folder name is based on the time stamp when the export occurs. The output folder contains XMI files (`*.xmi`) and the UIMA TypeSystem descriptor file (`exported_typesystem.xml`).
@@ -257,7 +257,7 @@ To get analyzed documents from a {{site.data.keyword.watson}} Explorer Content A
 #### What to do next
 {: #wks_uimawexca__preUIMAimport}
 
-You must define a mapping between the UIMA types and {{site.data.keyword.knowledgestudioshort}} entity types. You must also create a ZIP file that contains all the files that are required to import the analyzed data into a {{site.data.keyword.knowledgestudioshort}} workspace.
+You must define a mapping between the UIMA types and {{site.data.keyword.knowledgestudioshort}} entity types. You must also create a ZIP file that contains all the files that are required to upload the analyzed data into a {{site.data.keyword.knowledgestudioshort}} workspace.
 
 **Related information**:
 
@@ -268,7 +268,7 @@ You must define a mapping between the UIMA types and {{site.data.keyword.knowled
 ### Exporting an analyzed collection from Content Analytics Studio
 {: #wks_uimawexstudio}
 
-You can export a collection of analyzed documents from {{site.data.keyword.watson}} Explorer Content Analytics Studio, and import the analyzed documents as XMI files into a {{site.data.keyword.knowledgestudioshort}} project.
+You can export a collection of analyzed documents from {{site.data.keyword.watson}} Explorer Content Analytics Studio, and upload the analyzed documents as XMI files into a {{site.data.keyword.knowledgestudioshort}} project.
 
 #### Procedure
 
@@ -284,12 +284,12 @@ To get analyzed documents from a Content Analytics Studio collection:
 
 #### What to do next
 
-You must define a mapping between the UIMA types and {{site.data.keyword.knowledgestudioshort}} entity types. You must also create a ZIP file that contains all of the files that are required to import the analyzed data into a {{site.data.keyword.knowledgestudioshort}} workspace.
+You must define a mapping between the UIMA types and {{site.data.keyword.knowledgestudioshort}} entity types. You must also create a ZIP file that contains all of the files that are required to upload the analyzed data into a {{site.data.keyword.knowledgestudioshort}} workspace.
 
 ### Mapping UIMA types to entity types
 {: #wks_uimawexmap}
 
-Before you import XMI files into a {{site.data.keyword.knowledgestudioshort}} workspace, you must define mappings between the UIMA types and {{site.data.keyword.knowledgestudioshort}} entity types.
+Before you upload XMI files into a {{site.data.keyword.knowledgestudioshort}} workspace, you must define mappings between the UIMA types and {{site.data.keyword.knowledgestudioshort}} entity types.
 
 #### Before you begin
 
@@ -339,7 +339,7 @@ To map UIMA types to {{site.data.keyword.knowledgestudioshort}} entity types:
 
 #### What to do next
 
-You must create a ZIP file that contains all of the files that are required to import the analyzed data into a {{site.data.keyword.knowledgestudioshort}} workspace.
+You must create a ZIP file that contains all of the files that are required to upload the analyzed data into a {{site.data.keyword.knowledgestudioshort}} workspace.
 
 **Related information**:
 
@@ -349,32 +349,32 @@ You must create a ZIP file that contains all of the files that are required to i
 
 [Named Entity Recognition annotator ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/support/knowledgecenter/SS8NLW_11.0.0/com.ibm.discovery.es.ta.doc/iiystasystemt.htm){: new_window}
 
-### Importing UIMA CAS XMI files into a workspace
+### Uploading UIMA CAS XMI files into a workspace
 {: #wks_uimaweximport}
 
-To use the pre-annotated documents that you exported to train a model, you must create a ZIP file that contains all the files required to import the XMI files, and then import the ZIP file into a {{site.data.keyword.knowledgestudioshort}} workspace.
+To use the pre-annotated documents that you downloaded to train a model, you must create a ZIP file that contains all the files required to upload the XMI files, and then upload the ZIP file into a {{site.data.keyword.knowledgestudioshort}} workspace.
 
 #### Before you begin
 
-Before you import the ZIP file, ensure that the type system in your {{site.data.keyword.knowledgestudioshort}} workspace includes the entity types that you mapped the UIMA types to.
+Before you upload the ZIP file, ensure that the type system in your {{site.data.keyword.knowledgestudioshort}} workspace includes the entity types that you mapped the UIMA types to.
 
-> **Warning:** UIMA analysis engines allow annotations to span sentences. In {{site.data.keyword.knowledgestudioshort}}, annotations must exist within the boundaries of a single sentence. If the XMI files that you import include annotations that span sentences, those annotations do not appear in the Ground Truth Editor.
+> **Warning:** UIMA analysis engines allow annotations to span sentences. In {{site.data.keyword.knowledgestudioshort}}, annotations must exist within the boundaries of a single sentence. If the XMI files that you upload include annotations that span sentences, those annotations do not appear in the ground truth editor.
 
 #### Procedure
 
-To import pre-annotated documents into a {{site.data.keyword.knowledgestudioshort}} workspace:
+To upload pre-annotated documents into a {{site.data.keyword.knowledgestudioshort}} workspace:
 
 1. Create a ZIP file that contains all of the files that are required by {{site.data.keyword.knowledgestudioshort}}.
 
     1. Select the folder that contains the XMI files, UIMA type system descriptor file, and `cas2di.tsv` file, or select all of the files in the folder.
     1. Create a ZIP file that includes all files. Make sure the `cas2di.tsv` and UIMA type system descriptor files are stored in the root directory of the ZIP file. These files cannot be stored in a subfolder within the ZIP file or {{site.data.keyword.knowledgestudioshort}} will not be able to read them, and nothing will be imported.
 
-        In Windows, you can right-click and select **Send to** &gt; **Compressed (zipped) folder** .
+        In Windows, you can right-click and select **Send to** > **Compressed (zipped) folder** .
 
-1. Import the ZIP file into a {{site.data.keyword.knowledgestudioshort}} workspace.
+1. Upload the ZIP file into a {{site.data.keyword.knowledgestudioshort}} workspace.
 
-    1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager, open the workspace that you want to add the documents to, and open the **Documents** page.
-    1. Click the icon to add documents to the corpus.
+    1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager, open the workspace that you want to add the documents to, and open the **Assets & Tools** > **Documents** page.
+    1. Click **Upload Document Sets**.
     1. Drag the ZIP file that you created or click to locate and select the file.
     1. Select the check box to indicate that the ZIP file contains UIMA CAS XMI files.
-    1. Click **Import**.
+    1. Click **Upload**.

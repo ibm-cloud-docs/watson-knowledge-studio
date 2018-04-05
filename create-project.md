@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-20"
+lastupdated: "2018-04-04"
 
 ---
 
@@ -47,12 +47,12 @@ Before creating a workspace, answer these questions:
 
 To create a workspace, complete the following steps:
 
-1. Log in as a {{site.data.keyword.watson}}&trade; {{site.data.keyword.knowledgestudioshort}} administrator, and click **Create Workspace**.
+1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator, and click **Create Workspace**.
 
     > **Note:** People with the project manager role can perform almost all tasks except creating a workspace. An administrator must create the workspace initially and assign project managers to it.
 
 1. Give the workspace a name. Choose a short name that reflects your domain content or the purpose of the model. If you need to, you can change the workspace name later.
-1. Identify the language of the documents in your workspace. The documents that you add to the workspace, and the dictionaries that you create or import, must be in the language that you specify.
+1. Identify the language of the documents in your workspace. The documents that you add to the workspace, and the dictionaries that you create or upload, must be in the language that you specify.
 1. Optional: If you want to change the tokenizer that is used by the application from the default machine learning-based tokenizer, then you can expand the **Advanced Options** section, and choose **Dictionary-based tokenizer**.
 
     The default tokenizer is more advanced than the dictionary-based tokenizer; it uses machine learning to identify the tokens in the source documents based on the statistical learning it has done in the language of the source documents. It identifies tokens with more precision because it understands the more natural and nuanced patterns of language. The dictionary-based tokenizer identifies tokens based on language rules. See [Tokenizers](/docs/services/watson-knowledge-studio/create-project.html#wks_tokenizer) for more details.
@@ -69,11 +69,11 @@ To create a workspace, complete the following steps:
 
 After the workspace is created, you can start configuring the workspace resources.
 
-To change the workspace description or workspace name, or to add or remove project managers later, an administrator can edit the workspace. From the {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} home page, click the **Show menu** icon on the workspace tile, and choose the **Edit** menu option.
+To change the workspace description or workspace name, or to add or remove project managers later, an administrator can edit the workspace. From the {{site.data.keyword.knowledgestudioshort}} home page, click the **Show menu** icon on the workspace tile, and choose the **Edit** menu option.
 
 **Related concepts**:
 
-[Importing resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html)
+[Uploading resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html)
 
 **Related reference**:
 
@@ -86,11 +86,11 @@ A tokenizer groups characters into tokens, and tokens into sentences. A token is
 
 The actions that a tokenizer must take to identify a document's tokens differ depending on the language of the document. In English, tokens are often equated to words as delimited by white spaces in a sentence. However, they do not always match one-to-one with words; other textual elements are considered tokens in some situations. For example, punctuation at the end of a sentence is considered a token, and contractions are often expanded into two tokens. In languages that do not use white spaces, such as Chinese, more complicated statistical algorithms are used to identify the tokens.
 
-The tokenization process is important because it determines the groups of characters that users can highlight for annotation in the Ground Truth Editor. Annotations of entity and relation mentions are generally aligned with token boundaries, and must be labeled within a sentence; they cannot span sentence boundaries.
+The tokenization process is important because it determines the groups of characters that users can highlight for annotation in the ground truth editor. Annotations of entity and relation mentions are generally aligned with token boundaries, and must be labeled within a sentence; they cannot span sentence boundaries.
 
 ### Supported types
 
-{{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} supports the following tokenizers:
+{{site.data.keyword.knowledgestudioshort}} supports the following tokenizers:
 
 - **Machine learning-based tokenizer (default)**
 
@@ -118,32 +118,32 @@ For each stage of the model development process, this table summarizes the typic
 <th valign="bottom" align="left" id="d25459e260" class="stentry thleft thbot">Limits and requirements</th>
 </tr>
 <tr class="strow"><td valign="top" headers="d25459e252" class="stentry"><p class="p wrapper">Type system management</p></td>
-<td valign="top" headers="d25459e254" class="stentry"><p class="p wrapper">Create a type system or import and modify an existing type system.</p><p class="p">Define entity types
+<td valign="top" headers="d25459e254" class="stentry"><p class="p wrapper">Create a type system or upload and modify an existing type system.</p><p class="p">Define entity types
 and relation types for your domain.</p>
 <p class="p">You cannot see a visualization of the type
 system.</p>
 </td>
-<td valign="top" headers="d25459e256" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">JSON file that you exported from a 
+<td valign="top" headers="d25459e256" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">JSON file that you downloaded from a 
 Watson Knowledge
 Studio
  workspace</p></li>
-<li class="li"><p class="p wrapper">ZIP file that you exported from the Human Annotation Tool (HAT)</p></li>
+<li class="li"><p class="p wrapper">ZIP file that you downloaded from the Human Annotation Tool (HAT)</p></li>
 </ul>
 </td>
 <td valign="top" headers="d25459e258" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">JSON</p></li>
 </ul>
 </td>
 <td valign="top" headers="d25459e260" class="stentry"><p class="p wrapper">To avoid visual overload for human annotation, define no more than 50 entity types and 50
-relation types.</p><p class="p">File size limitation for importing a type system: 20 MB</p>
+relation types.</p><p class="p">File size limitation for uploading a type system: 20 MB</p>
 </td>
 </tr>
 <tr class="strow"><td valign="top" headers="d25459e252" class="stentry"><p class="p wrapper">Dictionary management</p></td>
-<td valign="top" headers="d25459e254" class="stentry"><p class="p wrapper">Import a CSV dictionary file in read-only mode or a ZIP of dictionaries that you exported
-from another workspace.</p><p class="p">Create a new dictionary, and then import a CSV file of term entries or add
+<td valign="top" headers="d25459e254" class="stentry"><p class="p wrapper">Upload a CSV dictionary file in read-only mode or a ZIP of dictionaries that you downloaded
+from another workspace.</p><p class="p">Create a new dictionary, and then upload a CSV file of term entries or add
 term entries to it.</p>
 </td>
 <td valign="top" headers="d25459e256" class="stentry"><p class="p wrapper">Dictionary file:</p><ul class="ul bullets"><li class="li"><p class="p wrapper">CSV file in UTF-8 format</p></li>
-<li class="li"><p class="p wrapper">ZIP of dictionaries exported from another workspace</p></li>
+<li class="li"><p class="p wrapper">ZIP of dictionaries downloaded from another workspace</p></li>
 </ul><p class="p wrapper">
 Term entries file:</p><ul class="ul bullets"><li class="li"><p class="p wrapper">CSV file in UTF-8 format</p></li>
 </ul>
@@ -172,7 +172,7 @@ Term entries file:</p><ul class="ul bullets"><li class="li"><p class="p wrapper"
 <th valign="bottom" align="left" id="d25459e339" class="stentry thleft thbot">Limits and requirements</th>
 </tr>
 <tr class="strow"><td valign="top" headers="d25459e331" class="stentry"><p class="p wrapper">Document management </p></td>
-<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Import a small, representative subset of documents </p><p class="p">Import documents that contain
+<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Upload a small, representative subset of documents </p><p class="p">Upload documents that contain
 annotations previously added by a human annotator, a machine learning model, or a 
 UIMA
  analysis engine</p>
@@ -185,7 +185,7 @@ annotation. </p>
 <td valign="top" headers="d25459e335" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">CSV file in UTF-8 format</p></li>
 <li class="li"><p class="p wrapper">DOCXML file in UTF-8 format</p></li>
 <li class="li"><p class="p wrapper">Text in UTF-8 format</p></li>
-<li class="li"><p class="p wrapper">ZIP file that contains documents exported from another corpus</p></li>
+<li class="li"><p class="p wrapper">ZIP file that contains documents downloaded from another corpus</p></li>
 <li class="li"><p class="p wrapper">ZIP file that contains documents in 
 UIMA
  CAS XMI format</p></li>
@@ -279,7 +279,7 @@ IBM Watson Explorer
 <th valign="bottom" align="left" id="d25459e517" class="stentry thleft thbot">Limits and requirements</th>
 </tr>
 <tr class="strow"><td valign="top" headers="d25459e509" class="stentry"><p class="p wrapper">Rule editor</p></td>
-<td valign="top" headers="d25459e511" class="stentry"><p class="p">Create or import documents to the Rules editor from which to define classes, regular expressions,
+<td valign="top" headers="d25459e511" class="stentry"><p class="p">Create or upload documents to the Rules editor from which to define classes, regular expressions,
 and rules.</p>
 </td>
 <td valign="top" headers="d25459e513" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">Plain text (added in editor)</p></li>

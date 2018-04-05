@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-20"
+lastupdated: "2018-04-04"
 
 ---
 
@@ -64,7 +64,7 @@ In a later lesson, you will define a class based on this dictionary. When you cr
 
 ### Procedure
 
-1. Download the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/dictionary-items-month.csv" download>`dictionary-items-month.csv`<img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> file to your computer. This file contains dictionary terms in CSV format, suitable for importing into a {{site.data.keyword.knowledgestudioshort}} dictionary.
+1. Download the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/dictionary-items-month.csv" download>`dictionary-items-month.csv`<img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> file to your computer. This file contains dictionary terms in CSV format, suitable for uploading into a {{site.data.keyword.knowledgestudioshort}} dictionary.
 1. From the **Assets & Tools** > **Pre-Annotators** sidebar, select the **Dictionaries** tab, and click **Manage Dictionaries**.
 1. Click the **Create Dictionary** button to add a dictionary.
 1. In the **Name** field, type `Month dictionary` and click **Save** to create the (empty) dictionary. The new dictionary is created and automatically opened for editing.
@@ -84,10 +84,10 @@ For more information about adding documents, see [Adding documents for defining 
 
 ### Procedure
 
-1. Download the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/documents-new.csv" download>`documents-new.csv`<img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> file to your computer. This file contains example documents suitable for importing.
+1. Download the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/documents-new.csv" download>`documents-new.csv`<img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> file to your computer. This file contains example documents suitable for uploading.
 1. From the sidebar, click **Document Annotation** > **Rules**.
 1. Click the **Add a document** icon next to **Documents**.
-1. Click the **Import CSV file** tab.
+1. Click the **Upload CSV file** tab.
 1. Click to browse for the `documents-new.csv` file that you downloaded to your computer earlier, and then click **Upload**.
 
     A set of documents is displayed in the main Documents page.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-20"
+lastupdated: "2018-04-04"
 
 ---
 
@@ -25,7 +25,7 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 
 {{site.data.keyword.knowledgestudiofull}} provides support for training a model in several languages.
 
-Support for multiple languages does not mean that the product itself is translated. The {{site.data.keyword.watson}}&trade; {{site.data.keyword.knowledgestudioshort}} user interfaces, messages, and documentation are available in English only.
+Support for multiple languages does not mean that the product itself is translated. The {{site.data.keyword.knowledgestudioshort}} user interfaces, messages, and documentation are available in English only.
 {: shortdesc}
 
 You can train a model in the following languages:
@@ -42,7 +42,7 @@ You can train a model in the following languages:
 - Korean
 - Spanish
 
-Support includes the ability to add documents in these languages to a workspace, add dictionaries, run pre-annotation, use the Ground Truth Editor to annotate documents, and train a machine learning model. When you select a language, the system applies language-specific templates to handle dictionary entries, text tokenization, and sentence segmentation. For information about how the system handles dictionaries in different languages, see [Dictionaries](/docs/services/watson-knowledge-studio/dictionaries.html#wks_dictionaries).
+Support includes the ability to add documents in these languages to a workspace, add dictionaries, run pre-annotation, use the ground truth editor to annotate documents, and train a machine learning model. When you select a language, the system applies language-specific templates to handle dictionary entries, text tokenization, and sentence segmentation. For information about how the system handles dictionaries in different languages, see [Dictionaries](/docs/services/watson-knowledge-studio/dictionaries.html#wks_dictionaries).
 
 > **Note:** The rule editor and rule-based model cannot handle bidirectional text, so cannot be used with Arabic documents.
 
@@ -60,7 +60,7 @@ Support includes the ability to add documents in these languages to a workspace,
 > - The entity type name length cannot exceed 64 characters.
 > - The relation type name length cannot exceed 128 characters.
 >
-> Thus, for example, when a human annotator annotates Japanese text in the Ground Truth Editor, the entity type and relation type names that can be applied will not be in Japanese.
+> Thus, for example, when a human annotator annotates Japanese text in the ground truth editor, the entity type and relation type names that can be applied will not be in Japanese.
 
 ### Related tasks
 
