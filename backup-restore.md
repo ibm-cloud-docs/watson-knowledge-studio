@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-14"
+lastupdated: "2018-04-04"
 
 ---
 
@@ -65,7 +65,7 @@ To prepare for backing up and restoring your data, complete the following steps:
 
     - > **Important:** Finish any in-progress annotation tasks. Only documents that have been annotated, adjudicated, and approved and promoted to ground truth can be backed up. If you do not finish the annotation work, you will lose any annotation effort that is in progress, but not completely done.
 
-    - If you created annotation tasks to track work that you want to do, but none of the annotation work has begun and will not take place until after the workspace is restored, then make a list of the outstanding annotation tasks. Be sure to note the document sets that you imported, but that have not been added to the ground truth yet. Also, make a note of who you assigned to annotate each document set. You will need to reimport these document sets and recreate the annotation tasks after the workspace is restored.
+    - If you created annotation tasks to track work that you want to do, but none of the annotation work has begun and will not take place until after the workspace is restored, then make a list of the outstanding annotation tasks. Be sure to note the document sets that you imported, but that have not been added to the ground truth yet. Also, make a note of who you assigned to annotate each document set. You will need to reupload these document sets and recreate the annotation tasks after the workspace is restored.
 
 1. Understand tokenizer use.
 
@@ -81,7 +81,7 @@ To prepare for backing up and restoring your data, complete the following steps:
 
 1. Manage read-only dictionary information.
 
-    Read-only dictionaries cannot be migrated. Find out where the read-only dictionary was imported from, so you can reimport it to your workspace after the migration.
+    Read-only dictionaries cannot be migrated. Find out where the read-only dictionary was imported from, so you can reupload it to your workspace after the migration.
 
 1. Make a list of current user roles.
 
@@ -100,24 +100,24 @@ To prepare for backing up and restoring your data, complete the following steps:
     - Language
     - If you have any incomplete annotation tasks, because they can't be backed up or migrated, note the human annotators who are assigned to incomplete tasks in the workspace. Also note the annotation task details, such as the task name, due date, and which document sets are assigned to which users.
 
-## Exporting artifacts
+## Downloading artifacts
 {: #export}
 
-For each workspace that you want to migrate, export the following artifacts. Store them in a secure location from which you will be able to import them into the new instance later.
+For each workspace that you want to migrate, download the following artifacts. Store them in a secure location from which you will be able to upload them into the new instance later.
 
 - Type system
 - Dictionaries
 
-  **Note**: Only editable dictionaries will be exported. You cannot export read-only dictionaries.
+  **Note**: Only editable dictionaries will be downloaded. You cannot download read-only dictionaries.
 
 - Documents
 
-  See [Importing resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html) for information about how to export these artifacts so that they can be imported into a new workspace.
+  See [Uploading resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html) for information about how to download these artifacts so that they can be imported into a new workspace.
 
 ## Recreating workspaces
 {: #recreateproj}
 
-**NOTE**: In this step, the only setting that must match the setting of the original (exported) workspace is the language. The rest of the settings can differ from the settings of the original workspace.
+**NOTE**: In this step, the only setting that must match the setting of the original (downloaded) workspace is the language. The rest of the settings can differ from the settings of the original workspace.
 
 Recreate each workspace by copying the following information from the previous instance to the new one:
 
@@ -131,22 +131,22 @@ Recreate each workspace by copying the following information from the previous i
 ## Restoring workspace data
 {: #restoredata}
 
-After recreating the workspaces, import the previously exported artifacts:
+After recreating the workspaces, upload the previously downloaded artifacts:
 
-1. Import the type system from the previously created type system backup.
-   For details, see [Importing resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html).
+1. Upload the type system from the previously created type system backup.
+   For details, see [Uploading resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html).
 
-  **Note**: You must import the type system before you can import any other artifacts that you are moving from the backed up workspace.
+  **Note**: You must upload the type system before you can upload any other artifacts that you are moving from the backed up workspace.
 
-1. Import the dictionaries from the previously created dictionary backup.
-   For details, see [Importing resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html).
+1. Upload the dictionaries from the previously created dictionary backup.
+   For details, see [Uploading resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html).
 
-  If you used any read-only dictionaries in the previous version of the workspace, reimport them into this workspace from their original source.
+  If you used any read-only dictionaries in the previous version of the workspace, reupload them into this workspace from their original source.
 
   **Note**: When you add dictionaries, the dictionary pre-annotator is automatically created. You associate the dictionary with an entity type at the time when you run the pre-annotator.
 
-1. Import the documents that you exported from the previous version of the workspace into this version of the workspace.
-   For details, see [Importing resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html).
+1. Upload the documents that you downloaded from the previous version of the workspace into this version of the workspace.
+   For details, see [Uploading resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html).
 
 ## Restoring models
 {: #restoremodels}
@@ -171,6 +171,6 @@ To redeploy a rule-based model that you deployed in the previous instance, compl
 
 If you had any annotation tasks that were created, but not completed in the previous workspace, complete the following steps to recreate the incomplete annotation tasks:
 
-1. Import any documents that have not been annotated yet, but that you want to add to the ground truth to continue to improve the model.
+1. Upload any documents that have not been annotated yet, but that you want to add to the ground truth to continue to improve the model.
 1. From the newly imported and unannotated documents, create document sets for annotation. These sets are now called _annotation sets_. For details, see [Creating and assigning annotation sets](/docs/services/watson-knowledge-studio/document-for-annotation.html).
 1. Recreate the annotation tasks. Give the task the same name, an appropriate due date, and assign annotation sets to the appropriate human annotators.

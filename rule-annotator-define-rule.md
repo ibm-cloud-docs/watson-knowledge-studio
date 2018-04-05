@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-23"
+lastupdated: "2018-04-04"
 
 ---
 
@@ -34,7 +34,7 @@ Avoid simultaneous editing of rules, classes, and regular expressions by multipl
 
 To define a rule, complete the following steps:
 
-1. Log in as a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} administrator or project manager and open the **Rules** page.
+1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager and open the **Rules** page.
 1. Click the plus sign (+) next to Documents to add a document.
 
     See [Adding documents for defining rules](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html) for details.

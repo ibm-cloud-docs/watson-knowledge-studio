@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-17"
+  years: 2015, 2018
+lastupdated: "2018-04-04"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2017-12-17"
 This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/knowledge-studio/user-guide-help.html){: new_window}.
 {: tip}
 
-# Troubleshooting the Ground Truth Editor
+# Troubleshooting the ground truth editor
 {: #ts_user_contactingsupport}
 
 Find out what to do if you have questions or need help. Where to go for help depends on the type of issue you are having.
@@ -28,10 +28,10 @@ Find out what to do if you have questions or need help. Where to go for help dep
 
 ## Access issues
 
-- If you cannot access the {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} instance, then work with the workspace owner to ensure that he has invited you to join the workspace.
-- If you can get to the {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} instance, but do not see any workspaces listed, then work with the administrator or manager of the workspace to resolve the issue. The administrator, which is a person with the Admin role, or manager, which is a person with the ProjectManager role in {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} , must 1.) associate you with an annotation set and 2.) create a task that assigns you to annotate the documents in the set. You will not see the workspace listed on the {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} home page until someone has performed these actions.
+- If you cannot access the {{site.data.keyword.knowledgestudioshort}} instance, then work with the workspace owner to ensure that he has invited you to join the workspace.
+- If you can get to the {{site.data.keyword.knowledgestudioshort}} instance, but do not see any workspaces listed, then work with the administrator or manager of the workspace to resolve the issue. The administrator, which is a person with the Admin role, or manager, which is a person with the ProjectManager role in {{site.data.keyword.knowledgestudioshort}}, must 1.) associate you with an annotation set and 2.) create a task that assigns you to annotate the documents in the set. You will not see the workspace listed on the {{site.data.keyword.knowledgestudioshort}} home page until someone has performed these actions.
 
-## Using the Ground Truth Editor
+## Using the ground truth editor
 
 First, review the information in this user guide. If you still have questions about how to use the ground truth editor, then you can check the community forum to see if anyone else has asked your question and received an answer. Or you can ask community members for help. To access the {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Developer community forum, go to: [https://developer.ibm.com/answers/topics/wks/?smartspace=watson ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/wks/?smartspace=watson){: new_window}.
 

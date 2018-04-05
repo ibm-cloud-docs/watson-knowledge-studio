@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-28"
+lastupdated: "2018-04-04"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-03-28"
 This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/knowledge-studio/annotate-documents.html){: new_window}.
 {: tip}
 
-# Annotating documents
+# Annotation setup
 {: #annotate-documents}
 
 Users who have knowledge of the industry and its language must annotate the documents.
@@ -32,16 +32,16 @@ Perform the following tasks to enable human annotators to access the workspace:
 - Associate human annotators with the annotation set or sets that you want them to annotate.
 - Create a task that assigns the human annotator to annotate the documents in the set.
 
-    > **Attention:** It is not until you explicitly assign tasks to human annotators that they can see your workspace when they log in to {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}}.
+    > **Attention:** It is not until you explicitly assign tasks to human annotators that they can see your workspace when they log in to {{site.data.keyword.knowledgestudioshort}}.
 
-Let the human annotators know about [Annotating documents](/docs/services/watson-knowledge-studio/user-guide.html), which contains detailed information about document annotation.
+Your users (the human annotators) will need to become familiar with [Annotating documents](/docs/services/watson-knowledge-studio/user-guide.html), which contains detailed information about how to annotate documents.
 
 ## Model life cycle
 {: #wks_lifecycle}
 
-The model that you create with {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} is a software component that can be plugged into a natural language processing (NLP) pipeline.
+The model that you create with {{site.data.keyword.knowledgestudioshort}} is a software component that can be plugged into a natural language processing (NLP) pipeline.
 
-With {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} , you can create, evaluate, and improve models for new domains. A model adds annotations (metadata) to text that appears in natural language content. The annotations, which identify mentions of entities of interest in your domain content, the relationships between them, and how the mentions co-reference the same entity, can be used by applications to automatically analyze and process text. Application users benefit from this level of analysis by being able to extract meaning, discover insights, and obtain answers in a natural language context.
+With {{site.data.keyword.knowledgestudioshort}}, you can create, evaluate, and improve models for new domains. A model adds annotations (metadata) to text that appears in natural language content. The annotations, which identify mentions of entities of interest in your domain content, the relationships between them, and how the mentions co-reference the same entity, can be used by applications to automatically analyze and process text. Application users benefit from this level of analysis by being able to extract meaning, discover insights, and obtain answers in a natural language context.
 
 The creation of a model is an iterative multiple-step process that involves several stages: knowledge curation, ground truth generation, model development, model evaluation, and runtime deployment.
 
@@ -55,12 +55,12 @@ The following diagram summarizes the interactions between these five stages of m
 ### Knowledge curation
 {: #wks_lifecycle__wks_lifecycleS1}
 
-This stage, which is external to {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} , refers to the process of selecting, collecting, preserving, and maintaining content relevant to a specific domain. Curation adds value to data; it transforms data into trusted information and knowledge.
+This stage, which is external to {{site.data.keyword.knowledgestudioshort}}, refers to the process of selecting, collecting, preserving, and maintaining content relevant to a specific domain. Curation adds value to data; it transforms data into trusted information and knowledge.
 
 ### Ground truth generation
 {: #wks_lifecycle__wks_lifecycleS2}
 
-This stage refers to the use of {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} tools and best practices to produce a collection of vetted data that can be used to adapt a {{site.data.keyword.watson}} solution to a particular domain. The accuracy of this vetted data, called *ground truth* or *gold standard documents*, is critical because inaccuracies in the ground truth will correlate to inaccuracies in the applications that rely on it.
+This stage refers to the use of {{site.data.keyword.knowledgestudioshort}} tools and best practices to produce a collection of vetted data that can be used to adapt a {{site.data.keyword.watson}} solution to a particular domain. The accuracy of this vetted data, called *ground truth* or *gold standard documents*, is critical because inaccuracies in the ground truth will correlate to inaccuracies in the applications that rely on it.
 
 An essential part of teaching {{site.data.keyword.watson}} about a new domain involves providing it with knowledge about entities of interest in your domain content, the relationships between them, and how the entities co-reference each other. Collecting this knowledge includes the following activities:
 
@@ -71,19 +71,19 @@ An essential part of teaching {{site.data.keyword.watson}} about a new domain in
   - Dictionaries of terms that are to be treated as equivalent terms in your domain content.
 
 - Creating a corpus of documents that are representative of your domain content.
-- Pre-annotating documents based on the dictionaries that you add to a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} workspace. After you create a machine learning model, you can use the model to pre-annotate new documents that you add to the corpus. Pre-annotation is a process of machine-annotating a document to the extent possible before a machine learning model is available to do so. Pre-annotation can reduce human-annotation labor by replacing some human annotation creation with mere verification of the correctness of machine annotation.
-- Dividing documents among human annotators, who then use the {{site.data.keyword.knowledgestudiofull}} Ground Truth Editor tool to manually add annotations to small sets of documents.
+- Pre-annotating documents based on the dictionaries that you add to a {{site.data.keyword.knowledgestudioshort}} workspace. After you create a machine learning model, you can use the model to pre-annotate new documents that you add to the corpus. Pre-annotation is a process of machine-annotating a document to the extent possible before a machine learning model is available to do so. Pre-annotation can reduce human-annotation labor by replacing some human annotation creation with mere verification of the correctness of machine annotation.
+- Dividing documents among human annotators, who then use the {{site.data.keyword.knowledgestudiofull}} ground truth editor tool to manually add annotations to small sets of documents.
 - Comparing the human annotation results and resolving conflicts. Adjudication in this phase is needed to ensure accurate and consistently annotated documents are promoted to ground truth, where they can be used to train and test a machine learning model.
 
 ### Model development
 {: #wks_lifecycle__wks_lifecycleS3}
 
-This stage refers to the use of {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} tools to create a model. After establishing ground truth, the human annotation results can be used to train an algorithm for automatically adding annotations to large collections of documents, such as collections that include millions of documents.
+This stage refers to the use of {{site.data.keyword.knowledgestudioshort}} tools to create a model. After establishing ground truth, the human annotation results can be used to train an algorithm for automatically adding annotations to large collections of documents, such as collections that include millions of documents.
 
 ### Model evaluation
 {: #wks_lifecycle__wks_lifecycleS4}
 
-This stage refers to the use of {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} tools to refine the model and improve performance. The results generated by the model are evaluated against a test set of ground truth documents. *Accuracy analysis* identifies the causes of annotation errors. *Headroom analysis* helps you assess which errors require focus and where model refinements can yield the greatest impact. Adjustments can be made repeatedly to improve performance until a satisfactory level of accuracy is achieved.
+This stage refers to the use of {{site.data.keyword.knowledgestudioshort}} tools to refine the model and improve performance. The results generated by the model are evaluated against a test set of ground truth documents. *Accuracy analysis* identifies the causes of annotation errors. *Headroom analysis* helps you assess which errors require focus and where model refinements can yield the greatest impact. Adjustments can be made repeatedly to improve performance until a satisfactory level of accuracy is achieved.
 
 ### Model deployment
 {: #wks_lifecycle__wks_lifecycleS5}
@@ -104,7 +104,7 @@ The annotation task specifies which documents are to be annotated. To compare ho
 - An annotation task is a temporal concept that exists to allow human annotators to annotate text in isolated spaces. It also ensures that only approved annotations are promoted to ground truth.
 - An annotation set can be included in one active task at a time. To add an annotation set in one task to a different task, you must first delete the task where the annotation set is active.
 - If you delete a human annotator's user account, it affects their annotations too. Any annotations in documents that were assigned to that user but were not promoted to ground truth are deleted.
-- If the type system or Ground Truth Editor settings change after you create a human annotation task, you must decide whether to propagate the changes to the task. Type system changes can affect annotations; human annotators might need to review and update their documents.
+- If the type system or ground truth editor settings change after you create a human annotation task, you must decide whether to propagate the changes to the task. Type system changes can affect annotations; human annotators might need to review and update their documents.
 - If the dictionaries change, the changes are not reflected in the current annotation task. To apply resource changes to ground truth, you must create a new annotation task.
 - You can have up to 256 annotation tasks per workspace.
 
@@ -112,7 +112,8 @@ The annotation task specifies which documents are to be annotated. To compare ho
 
 To create an annotation task:
 
-1. Log in as a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} administrator and open the **Human Annotation** page.
+1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator, and select your workspace.
+1. Select the **Assets & Tools** > **Documents** > **Tasks** tab.
 1. Click **Add Task**. Specify a descriptive name for the task and select the date that the task must be completed.
 
     > **Note:** You cannot change the task name later.
@@ -125,25 +126,26 @@ To create an annotation task:
 
 ### What to do next
 
-After the task is created, you can return to the **Human Annotation** page to view the progress of each human annotator. You can also:
+After the task is created, you can return to the **Assets & Tools** > **Documents** > **Tasks** tab to view the progress of each human annotator. You can also:
 
-- Specify preferences for using colors and keyboard shortcuts in the Ground Truth Editor.
+- Specify preferences for using colors and keyboard shortcuts in the ground truth editor.
 - Specify an inter-annotator agreement threshold, and then open a task to see how consistently multiple human annotators annotated the same documents.
-- Specify a URL to connect your annotation guidelines to the Ground Truth Editor.
+- Specify a URL to connect your annotation guidelines to the ground truth editor.
 - Check approved documents that overlap between annotation sets to resolve annotation conflicts.
 - Open a task to add annotation sets to it. Ensure that the annotation sets that you add include documents that overlap with documents in the original annotation sets.
 
-## Configuring Ground Truth Editor preferences
+## Configuring ground truth editor preferences
 {: #wks_hapref}
 
-An project manager can specify preferences for using colors and keyboard shortcuts in the Ground Truth Editor.
+An project manager can specify preferences for using colors and keyboard shortcuts in the ground truth editor.
 
 ### Procedure
 
-To specify visual preferences for working with the Ground Truth Editor :
+To specify visual preferences for working with the ground truth editor :
 
-1. Log in as a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} administrator and open the **Human Annotation** page.
-1. Click **Ground Truth Editor** Settings , and then on the **Entity Types** or **Relation Types** tab, you can edit type settings.
+1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator, and select your workspace.
+1. From the navigation on the left, select **Settings**.
+1. Select the **Entity Types** or **Relation Types** tab.
 1. Select the entity type or relation type that you want to change and then click **Edit keyboard shortcuts and colors**. For each type, you can define a:
 
     - Keyboard shortcut, which means a user can enter `<shortcut>` to apply the type label to highlighted text. For example, if you define `o` as the keyboard shortcut for ORGANIZATION, then a user can select text, and then press the `o` key to apply the ORGANIZATION entity type to the highlighted text. If you assign an upper case letter, then the user will enter `Shift+<letter>`.
@@ -151,12 +153,11 @@ To specify visual preferences for working with the Ground Truth Editor :
     - Background color. This is the color of the label that is applied to the entity after you annotate it.
 
     When annotating documents, human annotators can use the keyboard shortcuts to quickly add annotations. And the annotation label and text colors help human annotators to instantly recognize types after they add annotations to a document.
-    - If there are entity or relation types that you do not want human annotators to assign to mentions, you can hide them from the Ground Truth Editor, which shortens and simplifies the list of type options that users see. To do so, deselect the **Active** check box for the type.
+    - If there are entity or relation types that you do not want human annotators to assign to mentions, you can hide them from the ground truth editor, which shortens and simplifies the list of type options that users see. To do so, deselect the **Active** check box for the type.
 
     As you assign new shortcuts and colors, you can preview the changes.
 
 1. You can also change the default selection highlight color. This is the color of the border that is displayed around text after you select it. The default color is a light blue, but you can change the color on the **Selection Highlight** tab to make it easier to identify the boundaries of the text that is selected.
-1. Optional: Implement these changes in active human annotation tasks. On the **Human Annotation** page, open each task that you want to update and click **Apply Type System Updates**.
 
 #### Related tasks
 
@@ -175,21 +176,24 @@ To compare how different human annotators annotated the same documents, specify 
 
 To set the inter-annotator agreement threshold:
 
-1. Log in as a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} administrator and open the **Human Annotation** page.
-1. Click **IAA Settings**, specify a value between 0 and 1, such as .5 or .8, and then click **Save settings**.
+1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator, and select your workspace.
+1. From the navigation on the left, select **Settings**.
+1. Select **IAA Settings**, specify a value between 0 and 1, such as .5 or .8, and then click **Save**.
 
 ## Connecting to annotation guidelines
 {: #wks_haguidelines}
 
-After you create annotation guidelines for your project, you can configure {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} to connect to them. For help with choosing the correct annotation to apply, human annotators can review the guidelines while annotating documents. Administrators can also review the guidelines if they need assistance while resolving annotation conflicts in overlapping documents.
+After you create annotation guidelines for your project, you can configure {{site.data.keyword.knowledgestudioshort}} to connect to them. For help with choosing the correct annotation to apply, human annotators can review the guidelines while annotating documents. Administrators can also review the guidelines if they need assistance while resolving annotation conflicts in overlapping documents.
 
 ### Procedure
 
-To connect the Ground Truth Editor and adjudication tool to your annotation guidelines:
+To connect the ground truth editor and adjudication tool to your annotation guidelines:
 
-1. Log in as a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} administrator or project manager, open the **Human Annotation** page, and then open the **Annotation Guidelines** tab.
+1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator, and select your workspace.
+1. From the navigation on the left, select **Settings**.
+1. Select **Annotation Guidelines**.
 1. Specify the URL to where your guidelines are hosted, either a site within your enterprise or a wiki that you previously created in {{site.data.keyword.IBM_notm}} developerWorks&reg;.
-1. Click **Save**. The system connects the Ground Truth Editor and adjudication tool to your annotation guidelines. Depending on the access permissions granted to users when you created the guidelines, human annotators and workspace administrators might be able to update the guidelines after opening them, for example, to add clarifications and examples.
+1. Click **Save**. The system connects the ground truth editor and adjudication tool to your annotation guidelines. Depending on the access permissions granted to users when you created the guidelines, human annotators and workspace administrators might be able to update the guidelines after opening them, for example, to add clarifications and examples.
 
 ### Annotation guidelines
 {: #wks_guidelines}
@@ -202,13 +206,6 @@ Before documents can be considered ground truth, any conflicts between how diffe
 
 To help you manage the guidelines, you might want to divide what could become a long document into multiple parts, such as guidelines for annotating entities, guidelines for annotating relations, and guidelines for annotating the ways that mentions can be coreferenced. Changes that you make in one area must be evaluated and coordinated with changes that you make in another area. For example, if you add an entity type, review the guidelines for annotating relation types and specify how the new entity type can relate to other entity types.
 
-#### Connecting your annotation guidelines to Watson Knowledge Studio
-{: #wks_guidelines__annotguide1}
-
-If you create annotation guidelines online, you can connect them to {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} so that users can quickly get clarification about the correct annotation to apply. After creating a workspace, go to the **Human Annotation** &gt; **Annotation Guidelines** page and specify the URL to where the guidelines are located. When human annotators use the Ground Truth Editor , or when administrators use the adjudication tool, they can click a link to view the guidelines.
-
-Permission to access the guidelines is controlled by the software environment that you use to create them. To view the guidelines from within {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} , users must have read access. If you want to allow users to also update the guidelines, for example, to add clarifications or examples, you must grant those users write access.
-
 ### Annotation guidelines example
 {: #wks_guidelinesexample}
 
@@ -220,7 +217,7 @@ The example presented here is a simple guideline that was created for a small do
 {: #wks_guidelinesexample__annotgoals}
 
 - As project members, become familiar with the iterative process of manual annotation and machine learning model refinement.
-- Annotate documents in the automotive domain with the Ground Truth Editor and use the annotations to train a machine learning model. Annotate the entity types, relation types, and coreference the entities as needed.
+- Annotate documents in the automotive domain with the ground truth editor and use the annotations to train a machine learning model. Annotate the entity types, relation types, and coreference the entities as needed.
 
 #### Guideline Notations
 {: #wks_guidelinesexample__annotnotation}

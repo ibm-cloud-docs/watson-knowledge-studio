@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-14"
+lastupdated: "2018-04-04"
 
 ---
 
@@ -54,7 +54,7 @@ The following new features and changes to {{site.data.keyword.knowledgestudioful
 ### Changes
 {: #new-november2017}
 
-- Fixed an issue where some relation annotations were missing in the exported corpus.
+- Fixed an issue where some relation annotations were missing in the downloaded corpus.
 - Fixed an issue where a model could not be withdrawn from deployment if its status was **None**.
 - Fixed an issue where the model could not be evaluated for Korean.
 
@@ -133,7 +133,7 @@ The following new features and changes to {{site.data.keyword.knowledgestudioful
 ## April 2017
 {: #april2017}
 
-- Improved stability for {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} Premium
+- Improved stability for {{site.data.keyword.knowledgestudioshort}} Premium
 - Added usage analysis for business metrics
 
 ## Releases prior to April 2017

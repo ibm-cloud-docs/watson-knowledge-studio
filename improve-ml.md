@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-20"
+lastupdated: "2018-04-04"
 
 ---
 
@@ -54,16 +54,17 @@ The following resources are excluded:
 
 To create and restore machine learning model versions:
 
-1. Log in as a {{site.data.keyword.watson}}&trade; {{site.data.keyword.knowledgestudioshort}} administrator or project manager, open the **Annotator Component** page, click **Details**, and then click **Versions**. Performance statistics about the current (first) version, labeled version 1.0, are displayed.
-1. To take a snapshot of the current version, click **Take Snapshot**. The resources in version 1.0 are frozen, and a new version, labeled 1.1, becomes the current version. For each new version that you create, the minor version number is incremented, for example, 1.0 becomes 1.1 and then becomes 1.2.
+1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager, and select your workspace.
+1. Select **Model Management** > **Performance**. Performance statistics about the current version, labeled version 1.0, are displayed.
+1. To take a snapshot of the current version, on the **Model Management** > **Versions** > **Machine Learning** tab, click **Take Snapshot**. The resources in version 1.0 are frozen, and a new version, labeled 1.1, becomes the current version. For each new version that you create, the minor version number is incremented, for example, 1.0 becomes 1.1 and then becomes 1.2.
 1. Revise the workspace resources as needed, re-train, and re-evaluate the model.
 1. If you are pleased with the performance results and want to store the new version before making future changes, create another version. Continue revising resources and re-training the model as needed, creating a new version for each iteration that you want to retain.
 1. If performance results are worse, and you want to revert to a previous version before testing any further:
 
-    1. Open the **Dictionaries** page and export any dictionaries that you want to re-use in the restored model.
-    1. Return to the **Versions** page and click **Promote** for the version that you want to restore. The version that you promote becomes the current version, and the version number changes to 2.0. When you promote a version, the major version number is incremented and the minor version number becomes 0, for example, 1.1 becomes 2.0.
-    1. Open the **Dictionaries** page and import the dictionaries that you exported.
-    1. If testing of the new version requires changes to ground truth, open the **Human Annotation** page and create a new annotation task.
+    1. Open the **Assets & Tools** > **Pre-annotators** > **Dictionaries** tab and download any dictionaries that you want to re-use in the restored model.
+    1. Return to the **Model Management** > **Versions** > **Machine Learning** tab and click **Promote** for the version that you want to restore. The version that you promote becomes the current version, and the version number changes to 2.0. When you promote a version, the major version number is incremented and the minor version number becomes 0, for example, 1.1 becomes 2.0.
+    1. Open the **Dictionaries** tab and upload the dictionaries that you downloaded.
+    1. If testing of the new version requires changes to ground truth, open the **Assets & Tools** > **Documents** > **Tasks** tab and create a new annotation task.
 
 ## Modifying a type system without losing human annotations
 {: #wks_projtypesysmod}
@@ -72,15 +73,15 @@ You might need to make modifications while you train a model, based on the perfo
 
 ### About this task
 
-This process propagates the current type system, Ground Truth Editor keyboard shortcuts, and color settings to all document sets in a task.
+This process propagates the current type system, ground truth editor keyboard shortcuts, and color settings to all document sets in a task.
 
 ### Procedure
 
-An application process manager can modify the type system without losing the work that was done by human annotators as follows:
+To modify the type system without losing the work that was done by human annotators:
 
 1. Change the type system. For example, you can add or remove entity types or relation types.
 1. Decide whether you want to propagate the changes to existing human annotation tasks.
-1. On the **Human Annotation** page, open each task that you want to update and click **Apply Type System Updates**.
+1. On the **Assets & Tools** > **Documents** > **Tasks** tab, open each task that you want to update and click **Apply Type System Updates**.
 
     If you removed entity types or relation types from the type system, all occurrences of those types are highlighted in gray in the documents. These invalid types are ignored by the machine learning model. They do not prevent you from submitting and approving document sets.
 
@@ -112,7 +113,7 @@ The documents that you add to the system must be allocated to the following syst
 
     A set of annotated documents that is set aside and used to test the system periodically after several iterations of testing and improvement have occurred. To prevent accuracy from being tainted (for example, by making changes based only on annotations in known documents), blind data should be data that has not previously been viewed by users involved with creating the model. Reported results should come only from tests that are run on blind data. After you run a test on the blind set, look at only the most high-level scores, such as the overall mention and relation F1 scores. You don't want to learn too many details about the performance or it might influence the improvements that you choose to make to the model.
 
-The goal of {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} is to enable large teams to work together to build models. As such, it assumes that models are being produced by a team that includes a group of human annotators and a separate person or group of people that builds and tests the model, and makes improvements to it. Due to this assumption, the application is configured to push an equally proportioned grouping of documents from a single document set into the test, train, and blind sets. However, if your team is not segregated - if the people doing human annotation are also reviewing model test results in detail, for example - then you might need to change the allocation of documents into these sets to more explicitly separate the documents that are being used in each one.
+The goal of {{site.data.keyword.knowledgestudioshort}} is to enable large teams to work together to build models. As such, it assumes that models are being produced by a team that includes a group of human annotators and a separate person or group of people that builds and tests the model, and makes improvements to it. Due to this assumption, the application is configured to push an equally proportioned grouping of documents from a single document set into the test, train, and blind sets. However, if your team is not segregated - if the people doing human annotation are also reviewing model test results in detail, for example - then you might need to change the allocation of documents into these sets to more explicitly separate the documents that are being used in each one.
 
 ### Why do I need a blind set?
 
@@ -120,7 +121,7 @@ Because you use test data to assess accuracy in detail, you get to know the docu
 
 ### How do I control which documents are allocated to a set?
 
-When you create a machine learning model, you must specify the ratio of documents from the set to allocate to the train, test, or blind sets. {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} automatically applies a ratio of 70/23/7 to the document sets that you use to build a machine learning model. You can change these values.
+When you create a machine learning model, you must specify the ratio of documents from the set to allocate to the train, test, or blind sets. {{site.data.keyword.knowledgestudioshort}} automatically applies a ratio of 70/23/7 to the document sets that you use to build a machine learning model. You can change these values.
 
 - To add a set that was annotated by humans to the training set, specify a 100/0/0 breakdown ratio.
 - After training with a set, you can use it for testing. To use a document set for testing only, specify a 0/100/0 breakdown ration.

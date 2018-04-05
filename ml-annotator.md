@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-28"
+lastupdated: "2018-04-04"
 
 ---
 
@@ -26,7 +26,7 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 Create a machine learning model that trains a model you can use to identify entities, coreferences, and relationships of interest in new documents.
 {: shortdesc}
 
-Understand the typical workflow for creating a machine learning model in {{site.data.keyword.watson}}&trade; {{site.data.keyword.knowledgestudioshort}}.
+Understand the typical workflow for creating a machine learning model in {{site.data.keyword.knowledgestudioshort}}.
 
 All the steps are performed by the project manager, except for the *Annotate documents* step, which is performed by the human annotator. Because human annotators are often subject matter experts, they might be consulted during the creation of workspace resources, such as the type system, also.
 
@@ -38,17 +38,17 @@ All the steps are performed by the project manager, except for the *Annotate doc
 <tr class="strow"><td valign="top" headers="d14771e70" class="stentry"><p class="p wrapper">Create a workspace. </p></td>
 <td valign="top" headers="d14771e72" class="stentry"><p class="p wrapper">See [Creating a workspace](/docs/services/watson-knowledge-studio/create-project.html). A workspace contains the resources
 that are used to create the model, including:</p><dl class="dl"><dt class="dt dlterm">Type system</dt>
-<dd class="dd"><p class="p wrapper">Import or create the type system, and define the entity types and relation types that human
+<dd class="dd"><p class="p wrapper">Upload or create the type system, and define the entity types and relation types that human
 annotators can apply when annotating text. The model process manager typically works with
 subject matter experts for your domain to define the type system. See [Establishing a type system](/docs/services/watson-knowledge-studio/typesystem.html)</p></dd>
 <dt class="dt dlterm">Source documents</dt>
-<dd class="dd"><p class="p wrapper">Create a corpus by importing sample documents that are representative of your domain content
+<dd class="dd"><p class="p wrapper">Create a corpus by uploading sample documents that are representative of your domain content
 into the workspace. See [Adding documents for annotation](/docs/services/watson-knowledge-studio/document-for-annotation.html). Partition the corpus into document sets,
 specify the percentage of documents that are shared among all document sets, and assign the document
 sets to human annotators. See [Creating and assigning annotation sets](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_projdocsets).</p></dd>
 <dt class="dt dlterm">Dictionaries</dt>
-<dd class="dd"><p class="p wrapper">Import or create dictionaries for annotating text. You can choose to manually add dictionary
-entries or import entries from a file, and then edit the entries. See [Creating dictionaries](/docs/services/watson-knowledge-studio/dictionaries.html).</p></dd>
+<dd class="dd"><p class="p wrapper">Upload or create dictionaries for annotating text. You can choose to manually add dictionary
+entries or upload entries from a file, and then edit the entries. See [Creating dictionaries](/docs/services/watson-knowledge-studio/dictionaries.html).</p></dd>
 </dl>
 </td>
 </tr>
@@ -60,11 +60,11 @@ or based on rules that you define. See [Bootstrapping annotation](/docs/services
 <td valign="top" headers="d14771e72" class="stentry"><ol class="ol"><li class="li"><p class="p wrapper">The project manager assigns annotation tasks to human annotators, configures the inter-annotator
 agreement threshold, and provides annotation guidelines for the human annotators to follow. See
 [Creating an annotation task](/docs/services/watson-knowledge-studio/annotate-documents.html#wks_hatask).</p></li>
-<li class="li"><p class="p wrapper">Human annotators use the Ground Truth Editor to
+<li class="li"><p class="p wrapper">Human annotators use the ground truth editor to
 manually annotate documents. A human annotator identifies mentions of interest in your domain
 content and labels them with entity types. The human annotator also identifies relationships between
 mentions (for example, Mary is an employee of IBM) and how the mentions co-reference the same entity
-(such as an occurrence of "she" that refers to Mary). Refer to the [User Guide: Ground Truth Editor](/docs/services/watson-knowledge-studio/user-guide.html).</p></li>
+(such as an occurrence of "she" that refers to Mary). Refer to [Annotating documents](/docs/services/watson-knowledge-studio/user-guide.html).</p></li>
 </ol>
 </td>
 </tr>

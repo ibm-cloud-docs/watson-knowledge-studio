@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-20"
+lastupdated: "2018-04-04"
 
 ---
 
@@ -61,7 +61,7 @@ The creation of a machine learning model requires input from subject matter expe
 ### Procedure
 
 1. Log in to {{site.data.keyword.knowledgestudioshort}} with your administrator ID.
-1. Click the Settings icon to open the Service Details page. The page lists all the user IDs that are registered as {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} users. Each user ID has one of the following roles (in decreasing order of included permissions):
+1. Click the Settings icon to open the Service Details page. The page lists all the user IDs that are registered as {{site.data.keyword.knowledgestudioshort}} users. Each user ID has one of the following roles (in decreasing order of included permissions):
 
     - Admin
     - ProjectManager

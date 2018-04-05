@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-20"
+lastupdated: "2018-04-04"
 
 ---
 
@@ -23,7 +23,7 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 # Types of artifacts
 {: #artifacts}
 
-First create or import artifacts to use to train the annotators.
+First create or upload artifacts to use to train the annotators.
 {: shortdesc}
 
 The annotators learn about the following types of artifacts that you add to the workspace:
@@ -42,7 +42,7 @@ The annotators learn about the following types of artifacts that you add to the 
     - Machine learning model documents: [Adding documents for annotation](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_t_docs_intro)
     - Rule-based model documents: [Adding documents for defining rules](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html)
 
-You can import many of these artifacts from external resources, including artifacts that you exported from other {{site.data.keyword.watson}}&trade; {{site.data.keyword.knowledgestudioshort}} workspaces. See [Importing resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html) for information about importing artifacts from other workspaces.
+You can upload many of these artifacts from external resources, including artifacts that you downloaded from other {{site.data.keyword.knowledgestudioshort}} workspaces. See [Uploading resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html) for information about uploading artifacts from other workspaces.
 
 See [Summary of inputs, outputs, and limitations](/docs/services/watson-knowledge-studio/create-project.html#wks_formats) for key facts about artifacts, such as size limits and supported file types for imported artifacts.
 

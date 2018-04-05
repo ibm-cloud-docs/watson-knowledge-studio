@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-27"
+lastupdated: "2018-04-04"
 
 ---
 
@@ -60,7 +60,9 @@ The model statistics provide the following metrics:
 
 To view performance statistics for how well the model was trained:
 
-1. On the **Annotator Component** page, locate the model that you created, click **Details**, and then click **Statistics**.
+1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager, and select your workspace.
+1. Select **Model Management** > **Performance**.
+1. For the mentions, relations, or coreferences, select the **Detailed Statistics** link.
 1. In the **Summary** view, specify whether you want to evaluate test data or training data, and then specify the type of annotations you want to see statistics for: entity types, relation types, or coreferenced mentions. Note that blind data would be analyzed very infrequently and not until you feel relatively confident in the test data scores. As you scroll through the data, items that have low scores are flagged and highlighted to indicate that they require investigation and improvement. The triangle warning icon indicates that the F1 value is less than the fixed value, 0.5.
 
     For example, the F1 score for some entity types might be high because the document was annotated through pre-annotation as well as by a human annotator. But the F1 score for other entity types might be low because differences in phrasing, and differences in how human annotators interpret the text or annotation guidelines, make it more difficult for the machine learning model to recognize the pattern and apply the correct annotation.
@@ -113,7 +115,7 @@ The following table suggests fixes for the most common machine learning model pe
 <th valign="bottom" align="left" id="d15356e227" class="stentry thleft thbot">Add type-specific documents</th>
 <th valign="bottom" align="left" id="d15356e229" class="stentry thleft thbot">Annotate corpus more</th>
 <th valign="bottom" align="left" id="d15356e231" class="stentry thleft thbot">Fix human annotations</th>
-<th valign="bottom" align="left" id="d15356e233" class="stentry thleft thbot">Enhance model guidelines</th>
+<th valign="bottom" align="left" id="d15356e233" class="stentry thleft thbot">Enhance human annotator guidelines</th>
 <th valign="bottom" align="left" id="d15356e235" class="stentry thleft thbot">Update type system</th>
 <th valign="bottom" align="left" id="d15356e237" class="stentry thleft thbot">Investigate further</th>
 </tr>
@@ -221,7 +223,7 @@ The following table suggests fixes for the most common machine learning model pe
 
  {: #evaluate-ml_cheat__datasimpletable_nhm_5ym_cw}
 
-### Fix descriptions
+### Descriptions of fixes
 
 - **Add dictionaries**
 
@@ -251,7 +253,7 @@ The following table suggests fixes for the most common machine learning model pe
 
     Check the inter-annotator agreement score. This score, which measures the degree of agreement between different annotators' output on the same document, is a valuable number. Not only does this score tell you the quality of the ground truth documents that will be used to train the machine learning model, but it also indicates the upper bound of machine learning model performance. A model that is trained on these documents is unlikely to outperform the best agreement that humans can reach. For example, if performance persists at 75 and does not go higher, take a look at the inter-annotator agreement results. If the inter-annotator agreement score is 80, take actions to better train the human annotators and ensure that conflicts are correctly resolved (according to the annotation guidelines) during adjudication. If humans can't agree on how something should be labeled, then it's unlikely that a machine learning model will apply the correct labels.
 
-- **Enhance annotator guidelines**
+- **Enhance human annotator guidelines**
 
     Clear and comprehensive annotator guidelines are a crucial part of a harmonious and successful annotation development effort. Human annotators have a tough job to do. There can be nuances in assigning entity and relation types that are hard to anticipate until you start to work with the domain documents. The guidelines can provide a sanity check to human annotators as they evaluate documents. The guidelines should be a living and changing document, especially at the beginning of the annotation process. They provide a key feedback loop because a human annotator can capture things she learned while annotating a few documents, then as she or someone else annotates a few more documents, new tips and gotchas can be added to the guideline, and so on. Be sure to include examples of difficult decisions and their preferred resolutions. The best way to determine what you need to add to the annotation guidelines is to carefully review document conflicts. Real examples of annotations that real people disagreed upon and how they were resolved can be a great help to human annotators as they tackle the annotation of new documents.
 

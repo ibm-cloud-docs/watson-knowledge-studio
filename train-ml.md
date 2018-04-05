@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-20"
+lastupdated: "2018-04-04"
 
 ---
 
@@ -93,7 +93,7 @@ You can compare the ground truth view for annotations added by human annotators 
 To evaluate the annotations added by the model:
 
 1. Select **Model Management** > **Performance** > **Train and evaluate**. The Training/Test/Blind Sets page is displayed.
-1. Click **View Ground Truth** for the training set or test set to see the annotations that were added through pre-annotation and by human annotators. The Ground Truth Editor opens. Click to open individual documents and see how the mentions, relations, and coreferenced mentions were annotated.
+1. Click **View Ground Truth** for the training set or test set to see the annotations that were added through pre-annotation and by human annotators. The ground truth editor opens. Click to open individual documents and see how the mentions, relations, and coreferenced mentions were annotated.
 1. On the **Performance** page, click **View Decoding Results** to see the annotations that the machine learning model added to documents in the test set. This button is available only after you evaluate the model. By viewing results, you can see how well the machine learning model labeled mentions, relations, and coreferenced mentions in the test data.
 1. If you want to change how the documents are divided between training, test, and blind data sets, click **Performance** > **Train and evaluate** > **Edit Settings**. For example, if initial results seem acceptable, you might want to increase the number of documents in the test set to further test the machine learning model's results. You can change the ratio for how documents are automatically divided for different purposes, or you can select specific document sets to use as training data, test data, and blind data.
 1. If you made any changes, click **Train & Evaluate** to retrain the model and re-evaluate the annotations.

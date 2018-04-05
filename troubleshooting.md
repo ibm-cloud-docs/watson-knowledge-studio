@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-28"
+lastupdated: "2018-04-04"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-03-28"
 This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/knowledge-studio/troubleshooting.html){: new_window}.
 {: tip}
 
-# Troubleshooting and support
+# Troubleshooting, support, and FAQs
 {: #troubleshooting}
 
 To isolate and resolve problems with your {{site.data.keyword.IBM_notm}} products, you can use the troubleshooting and support information. This information contains instructions for using the problem-determination resources that are provided with your {{site.data.keyword.IBM_notm}} products, including {{site.data.keyword.knowledgestudiofull}}.
@@ -120,7 +120,7 @@ The following events can cause problems with deployed models:
 
 1. Check the status of the deployment.
 
-    Log in as a {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} administrator. Open the **Annotator Component** page, and click **Details**. On the Versions tab, click **Status** to check the status of the model that you deployed.
+    Log in as a {{site.data.keyword.knowledgestudioshort}} administrator. On the **Model Management** > **Versions** page, view the **Status** column to check the status of the model that you deployed.
 
 1. If the deployment status of the model is `error` or the status is `available`, but the model does not work when you try to use it, then withdraw the model from deployment by clicking **Undeploy**.
 1. Redeploy the model.
@@ -140,7 +140,7 @@ You try to create a free account and see the error message, `Error 331: We are u
 
 ### Causes
 
-{{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} does not permit more than one free account per organization.
+{{site.data.keyword.knowledgestudioshort}} does not permit more than one free account per organization.
 
 ### Resolving the problem
 
@@ -153,21 +153,21 @@ If you need to use your current account for the free trial and your user account
 ## Cannot access the application
 {: #wks_ts_access}
 
-Find out how to grant users access to {{site.data.keyword.watson}}&trade; {{site.data.keyword.knowledgestudioshort}}, and address common access issues.
+Find out how to grant users access to {{site.data.keyword.knowledgestudioshort}}, and address common access issues.
 
-You must have {{site.data.keyword.IBM_notm}} user registration credentials to request an instance of {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}}.
+You must have {{site.data.keyword.IBM_notm}} user registration credentials to request an instance of {{site.data.keyword.IBM_notm}} {{site.data.keyword.knowledgestudioshort}}.
 
 ### Administrator
 
-Each {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} instance has an administrator role associated with it. The person who originally signs up to use the application is given the administrator role automatically. The administrator can invite other people.
+Each {{site.data.keyword.knowledgestudioshort}} instance has an administrator role associated with it. The person who originally signs up to use the application is given the administrator role automatically. The administrator can invite other people.
 
 For information about how to invite people to use your instance of the application, see [Assembling the team](/docs/services/watson-knowledge-studio/team.html).
 
 ### Human annotator
 
-If you have been invited to someone's instance of {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} to serve as a human annotator, you likely received an email invitation. First, you must register with {{site.data.keyword.IBM_notm}} if you do not have {{site.data.keyword.IBM_notm}} registration credentials already. Once you register with {{site.data.keyword.IBM_notm}} and accept the invitation, you are given access to the instance. However, after you are given access and before you can start to annotate documents, the administrator or a project manager of the instance must add you to a workspace and assign an annotation task to you. It is not until after you have been assigned a task that you can perform any actions in the {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} instance. To annotate documents, use the Ground Truth Editor. Use a Google Chrome browser for the best performance.
+If you have been invited to someone's instance of {{site.data.keyword.knowledgestudioshort}} to serve as a human annotator, you likely received an email invitation. First, you must register with {{site.data.keyword.IBM_notm}} if you do not have {{site.data.keyword.IBM_notm}} registration credentials already. Once you register with {{site.data.keyword.IBM_notm}} and accept the invitation, you are given access to the instance. However, after you are given access and before you can start to annotate documents, the administrator or a project manager of the instance must add you to a workspace and assign an annotation task to you. It is not until after you have been assigned a task that you can perform any actions in the {{site.data.keyword.knowledgestudioshort}} instance. To annotate documents, use the ground truth editor. Use a Google Chrome browser for the best performance.
 
-For help using the Ground Truth Editor, see the [User Guide: Ground Truth Editor](/docs/services/watson-knowledge-studio/user-guide.html).
+For help using the ground truth editor, see [Annotating documents](/docs/services/watson-knowledge-studio/user-guide.html).
 
 ## Experimental services: What does *experimental* mean?
 {: #experimental}
@@ -211,7 +211,7 @@ To manage your monthly bill, if the Admin role is assigned to you and you have a
 
 ### Before you begin
 
-First, see if a solution is documented for the problem you are having. Search {{site.data.keyword.watson}} {{site.data.keyword.knowledgestudioshort}} on the [{{site.data.keyword.IBM_notm}} Support Portal ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/home/entry/portal){: new_window}. On the search results page, click the **Support** tab to see results from tech notes, {{site.data.keyword.IBM_notm}} Redbooks, and documentation. Click the **For developers** tab to see results from the {{site.data.keyword.IBM_notm}} developerWorks community, such as blogs and forum questions.
+First, see if a solution is documented for the problem you are having. Search {{site.data.keyword.knowledgestudioshort}} on the [{{site.data.keyword.IBM_notm}} Support Portal ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/home/entry/portal){: new_window}. On the search results page, click the **Support** tab to see results from tech notes, {{site.data.keyword.IBM_notm}} Redbooks, and documentation. Click the **For developers** tab to see results from the {{site.data.keyword.IBM_notm}} developerWorks community, such as blogs and forum questions.
 
 After trying to find your answer or solution by searching the [{{site.data.keyword.IBM_notm}} Support Portal ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/home/entry/portal){: new_window}, you can contact {{site.data.keyword.IBM_notm}} Support. The type of support that you have depends on your service type.
 
