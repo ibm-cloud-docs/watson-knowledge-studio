@@ -51,7 +51,7 @@ Typically, you add users to fill the following roles.
 
 - **ProjectManager**
 
-    Project managers are people who help to facilitate the creation of models by performing such tasks as creating workspace artifacts, and training, creating, and deploying models. For workspaces that are used to build machine learning annotators, project managers also manage the document annotation process by assigning document review tasks to human annotators, adjudicating annotation conflicts, and approving documents to add to the ground truth.
+    Project managers are people who help to facilitate the creation of models by performing such tasks as creating workspace artifacts, and training, creating, and deploying models. For workspaces that are used to build machine learning models, project managers also manage the document annotation process by assigning document review tasks to human annotators, adjudicating annotation conflicts, and approving documents to add to the ground truth.
 
 ## Adding users in {{site.data.keyword.knowledgestudioshort}}
 

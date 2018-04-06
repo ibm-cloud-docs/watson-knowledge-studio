@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-04-06"
 
 ---
 
@@ -23,7 +23,7 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 # Creating dictionaries
 {: #dictionaries}
 
-Dictionaries help the {{site.data.keyword.knowledgestudioshort}} machine annotators to understand the language of the domain.
+Dictionaries help the {{site.data.keyword.knowledgestudioshort}} machine learning models to understand the language of the domain.
 {: shortdesc}
 
 ## Dictionaries

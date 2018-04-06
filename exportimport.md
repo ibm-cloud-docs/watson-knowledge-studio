@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-04-06"
 
 ---
 
@@ -63,6 +63,6 @@ To upload documents, open the **Document Sets** tab in the new workspace, click 
 
 [Dictionaries](/docs/services/watson-knowledge-studio/artifacts.html#wks_dictionaries)
 
-[Documents for machine learning annotators](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_t_docs_intro)
+[Documents for machine learning models](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_t_docs_intro)
 
-[Documents for rule-based annotators](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html)
+[Documents for rule-based models](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html)

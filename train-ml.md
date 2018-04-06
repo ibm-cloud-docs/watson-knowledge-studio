@@ -35,7 +35,7 @@ When you create a machine learning model, you select the document sets that you 
 
 By exploring the performance metrics, you can identify ways to improve the model's accuracy.
 
-> **Restriction:** Only three machine learning annotators can be trained at a time per {{site.data.keyword.knowledgestudioshort}} instance. If your instance contains multiple workspaces and the number of machine learning annotators that are being trained in other workspaces totals 3 already, then your request to train the machine learning model in your workspace will be queued until the other training processes are done.
+> **Restriction:** Only three machine learning models can be trained at a time per {{site.data.keyword.knowledgestudioshort}} instance. If your instance contains multiple workspaces and the number of machine learning models that are being trained in other workspaces totals 3 already, then your request to train the machine learning model in your workspace will be queued until the other training processes are done.
 
 ### Procedure
 

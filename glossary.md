@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-04-06"
 
 ---
 
@@ -303,11 +303,11 @@ To view glossaries for other {{site.data.keyword.IBM}} products, go to [www.ibm.
 
 - **train**
 
-    The process of setting up a {{site.data.keyword.watson}} instance with components that enable the system to function in a particular domain (for example: corpus content, training data that generates machine learning models, programmatic algorithms, annotators, or other ground truth components) and then making improvements and updates to these components based on accuracy analysis.
+    The process of setting up a {{site.data.keyword.watson}} instance with components that enable the system to function in a particular domain (for example: corpus content, training data that generates machine learning models, programmatic algorithms, or other ground truth components) and then making improvements and updates to these components based on accuracy analysis.
 
 - **training data**
 
-    A set of annotated documents that can be used to train machine learning annotators. See also [blind data](/docs/services/watson-knowledge-studio/glossary.html#gloss_B) and [testing data](/docs/services/watson-knowledge-studio/glossary.html#gloss_T).
+    A set of annotated documents that can be used to train machine learning models. See also [blind data](/docs/services/watson-knowledge-studio/glossary.html#gloss_B) and [testing data](/docs/services/watson-knowledge-studio/glossary.html#gloss_T).
 
 - **true negative**
 

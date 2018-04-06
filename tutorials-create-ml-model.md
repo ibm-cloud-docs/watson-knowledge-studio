@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-04-06"
 
 ---
 
@@ -34,7 +34,7 @@ After you complete the lessons in this tutorial, you will know how to perform th
 - Pre-annotate documents
 - Create tasks for human annotators
 - Analyze inter-annotator agreement and adjudicate conflicts in annotated documents
-- Create machine learning annotators
+- Create machine learning models
 
 This tutorial should take approximately 60 minutes to finish. If you explore other concepts related to this tutorial, it could take longer to complete.
 
@@ -120,7 +120,7 @@ In this lesson, you will learn how to use a dictionary-based annotator to pre-an
 
 Pre-annotating documents is an optional step. However, it is a worthwhile step because it makes the job of human annotators easier later.
 
-For more information about pre-annotation with dictionary-based annotators, see [Pre-annotating documents with the Dictionary pre-annotator](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannot).
+For more information about pre-annotation with dictionaries, see [Pre-annotating documents with a dictionary](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannot).
 
 ### Procedure
 
