@@ -23,10 +23,10 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 # Types of artifacts
 {: #artifacts}
 
-First create or upload artifacts to use to train the annotators.
+First create or upload artifacts to use to train the models.
 {: shortdesc}
 
-The annotators learn about the following types of artifacts that you add to the workspace:
+The models learn about the following types of artifacts that you add to the workspace:
 
 - **Type system**
 
