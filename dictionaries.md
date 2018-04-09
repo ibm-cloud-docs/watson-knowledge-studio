@@ -105,6 +105,15 @@ The remaining lines in the file specify the dictionary entries, where:
 
     In other languages, such as German, which uses compound words, the accuracy of the part of speech information is even more important to help determine word boundaries.
 
+- **`poscode (Chinese)`**
+
+    Specifies a code that identifies the part of speech. The part of speech value is important for text tokenization and pre-annotation in languages like Chinese (simplified and traditional) that do not use white space to denote word boundaries.
+    - 32 - Noun
+    - 31 - Noun (Family name)
+    - 35 - Noun (Organization)
+    - 34 - Noun (Other)
+    - 33 - Noun (Person Name)
+
 - **`poscode (Japanese)`**
 
     Specifies a code that identifies the part of speech. The part of speech value is important for text tokenization and pre-annotation in languages like Japanese that do not use white space to denote word boundaries.
