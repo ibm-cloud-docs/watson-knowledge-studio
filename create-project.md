@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-04-18"
 
 ---
 
@@ -61,7 +61,7 @@ To create a workspace, complete the following steps:
 
     Only the names of people that you assigned to the project manager role from the User Account Management page for the instance are displayed. See [Assembling the team](/docs/services/watson-knowledge-studio/team.html) for more information about adding users.
 
-    > **Note:** If you have a free plan subscription, skip this step. You cannot add other users, so you cannot assign anyone to the project manager role. You do not need a separate project manager. As an administrator, you can perform all of the tasks that a project manager would typically perform.
+    > **Note:** If you have a Lite plan subscription, skip this step. You cannot add other users, so you cannot assign anyone to the project manager role. You do not need a separate project manager. As an administrator, you can perform all the tasks that a project manager would typically perform.
 
 1. Click **Create**.
 

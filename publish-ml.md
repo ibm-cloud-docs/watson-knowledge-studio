@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-04-18"
 
 ---
 
@@ -372,7 +372,7 @@ To leverage a machine learning model in {{site.data.keyword.IBM_notm}} {{site.da
 1. Select the **Model Management** > **Versions** > **Machine learning** tab.
 1. Click **Export current model**.
 
-    If you have a free plan subscription, no export option is available.
+    If you have a Lite plan subscription, no export option is available.
 
     The model is saved as a ZIP file, and you are prompted to download the file.
 
