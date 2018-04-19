@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-04-18"
 
 ---
 
@@ -26,7 +26,7 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 The creation of a model requires input from subject matter experts, project managers, and users who can understand and interpret statistical models. You must add a user in {{site.data.keyword.knowledgestudioshort}} for each person who needs to log in.
 {: shortdesc}
 
-**Note**: Only Standard plans and Premium plans can add users. Free plans are limited to one user. As the only user, that person is assigned the role with the highest permission, the Admin role.
+**Note**: Only Standard plans and Premium plans can add users. Lite plans are limited to one user. As the only user, that person is assigned the role with the highest permission, the Admin role.
 
 ## Before you begin
 
@@ -43,7 +43,7 @@ The creation of a model requires input from subject matter experts, project mana
 
 Typically, you add users to fill the following roles.
 
-**Note:** If you signed up for a Free plan, you can't add others to your instance of {{site.data.keyword.knowledgestudioshort}}. Instead, when you launch {{site.data.keyword.knowledgestudioshort}}, you are added to the instance with the Admin role. In the Admin role, you can perform many functions that would typically be performed by different people who are assigned to different roles. You can test how experts from different areas of a domain can work together to build a machine learning model or rules-based model.
+**Note:** If you signed up for a Lite plan, you can't add others to your instance of {{site.data.keyword.knowledgestudioshort}}. Instead, when you launch {{site.data.keyword.knowledgestudioshort}}, you are added to the instance with the Admin role. In the Admin role, you can perform many functions that would typically be performed by different people who are assigned to different roles. You can test how experts from different areas of a domain can work together to build a machine learning model or rules-based model.
 
 - **HumanAnnotator**
 
@@ -57,7 +57,7 @@ Typically, you add users to fill the following roles.
 
 Add users from your {{site.data.keyword.cloud_notm}} organization to {{site.data.keyword.knowledgestudioshort}}.
 
-**Note**: Only Standard plans and Premium plans can add users. Free plans are limited to one user.
+**Note**: Only Standard plans and Premium plans can add users. Lite plans are limited to one user.
 
 To add users to a {{site.data.keyword.knowledgestudioshort}} instance:
 
@@ -74,7 +74,7 @@ To add users to a {{site.data.keyword.knowledgestudioshort}} instance:
 
 After you add users to {{site.data.keyword.knowledgestudioshort}}, you can upgrade lower roles to higher roles. Users must be assigned the roles described below to be able to perform the respective tasks.
 
-**Note**: Only Standard plans and Premium plans can upgrade users. Free plans are limited to one user who already has the highest role, Admin.
+**Note**: Only Standard plans and Premium plans can upgrade users. Lite plans are limited to one user who already has the highest role, Admin.
 
 > **Attention: Downgrading from a higher role to a lower role is not permitted.**
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-14"
+lastupdated: "2018-04-19"
 
 ---
 
@@ -46,7 +46,7 @@ The migration process and schedule for your {{site.data.keyword.knowledgestudios
 
 If you have a {{site.data.keyword.knowledgestudioshort}} Free plan, complete the following steps to migrate your instance and projects from {{site.data.keyword.IBM_notm}} Marketplace to {{site.data.keyword.cloud_notm}}:
 
-1. If you don't have an {{site.data.keyword.cloud_notm}} account, sign up on [{{site.data.keyword.cloud_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm.biz/wks_cloud){: new_window} by using your {{site.data.keyword.ibmid}} from {{site.data.keyword.IBM_notm}} Marketplace.
+1. If you don't have an {{site.data.keyword.cloud_notm}} account, sign up on [{{site.data.keyword.cloud_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/registration/){: new_window} by using your {{site.data.keyword.ibmid}} from {{site.data.keyword.IBM_notm}} Marketplace.
 
    Your {{site.data.keyword.ibmid}} is the ID that you use to log in to {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace.
 
@@ -59,9 +59,9 @@ If you have a {{site.data.keyword.knowledgestudioshort}} Free plan, complete the
 ## Migration of Standard plans for Pay-As-You-Go accounts
 {: migratepaygo}
 
-If you have a Standard plan and a [Pay-As-You-Go ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/pricing/billable.html){: new_window} account, complete the following steps to migrate your instance and projects from {{site.data.keyword.IBM_notm}} Marketplace to {{site.data.keyword.cloud_notm}}:
+If you have a Standard plan and a [Pay-As-You-Go ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/account/index.html){: new_window} account, complete the following steps to migrate your instance and projects from {{site.data.keyword.IBM_notm}} Marketplace to {{site.data.keyword.cloud_notm}}:
 
-1. If you don't have an {{site.data.keyword.cloud_notm}} account, sign up on [{{site.data.keyword.cloud_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/){: new_window} by using your {{site.data.keyword.ibmid}} from {{site.data.keyword.IBM_notm}} Marketplace.
+1. If you don't have an {{site.data.keyword.cloud_notm}} account, sign up on [{{site.data.keyword.cloud_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/registration/){: new_window} by using your {{site.data.keyword.ibmid}} from {{site.data.keyword.IBM_notm}} Marketplace.
 
    Your {{site.data.keyword.ibmid}} is the ID that you use to log in to {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace.
 

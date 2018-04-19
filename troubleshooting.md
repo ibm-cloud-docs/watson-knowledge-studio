@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-04-18"
 
 ---
 
@@ -131,24 +131,24 @@ The following events can cause problems with deployed models:
 
 [Deploying a machine learning model to {{site.data.keyword.IBM_notm}} {{site.data.keyword.alchemylanguageshort}}](/docs/services/watson-knowledge-studio/publish-ml.html#wks_mabluemix)
 
-## Can't create a free account
-{: #wks_ts_free}
+## Can't create a instance on the Lite plan
+{: #wks_ts_lite}
 
 ### Problem
 
-You try to create a free account and see the error message, `Error 331: We are unable to process your request. Please try again later or contact the {{site.data.keyword.IBM_notm}} Helpdesk.`
+You try to create a {{site.data.keyword.knowledgestudioshort}} instance on the Lite plan and see the error message, `Error 331: We are unable to process your request. Please try again later or contact the {{site.data.keyword.IBM_notm}} Helpdesk.`
 
 ### Causes
 
-{{site.data.keyword.knowledgestudioshort}} does not permit more than one free account per organization.
+{{site.data.keyword.knowledgestudioshort}} does not permit more than one Lite plan per organization.
 
 ### Resolving the problem
 
 Create an account that is not included in the organization.
 
-If you need to use your current account for the free trial and your user account is associated with a paid account, you can submit a support ticket. For more information, see [Contacting {{site.data.keyword.IBM_notm}} Support](/docs/services/watson-knowledge-studio/troubleshooting.html#ts_contactingibmsupport).
+If you need to use your current account for a {{site.data.keyword.knowledgestudioshort}} instance on a Lite plan and your user account is associated with a paid account, you can submit a support ticket. For more information, see [Contacting {{site.data.keyword.IBM_notm}} Support](/docs/services/watson-knowledge-studio/troubleshooting.html#ts_contactingibmsupport).
 
-If you need to use your current account for the free trial and your user account isn't associated with a paid account, post your issue to [{{site.data.keyword.IBM_notm}} developerWorks Answers](https://developer.ibm.com/answers/topics/wks/), making sure to tag the question, **WKS**.
+If you need to use your current account for a {{site.data.keyword.knowledgestudioshort}} instance on a Lite plan and your user account isn't associated with a paid account, post your issue to [{{site.data.keyword.IBM_notm}} developerWorks Answers](https://developer.ibm.com/answers/topics/wks/). Tag the question, **WKS**.
 
 ## Cannot access the application
 {: #wks_ts_access}
@@ -215,7 +215,7 @@ First, see if a solution is documented for the problem you are having. Search {{
 
 After trying to find your answer or solution by searching the [{{site.data.keyword.IBM_notm}} Support Portal ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/home/entry/portal){: new_window}, you can contact {{site.data.keyword.IBM_notm}} Support. The type of support that you have depends on your service type.
 
-- **Free plan users**
+- **Lite plan users**
 
     Get help and answers to questions by asking fellow members of the developer community. For links to developer communities, see the **Developer community** section in the table of contents.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-04-19"
 
 ---
 
@@ -38,16 +38,12 @@ Confirm you're using a supported browser. For information, see [Browser requirem
 1. From the [Dashboard page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/apps){: new_window}, sign up for a {{site.data.keyword.knowledgestudioshort}} plan.
 
   1. Click **Catalog**.
-  1. In the search field, delete the **label:lite** filter (if present) and search for `{{site.data.keyword.knowledgestudioshort}}`.
+  1. In the search field, search for `{{site.data.keyword.knowledgestudioshort}}`.
   1. Select **{{site.data.keyword.knowledgestudioshort}}**.
-  1. If you don't already have a [Pay-As-You-Go account or Subscription account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/pricing/index.html){: new_window}, on the {{site.data.keyword.knowledgestudioshort}} catalog page, click **Upgrade**. You are prompted to provide credit card information.
-
-    If you choose a {{site.data.keyword.knowledgestudioshort}} Free plan, your credit card will not be charged. You can use the Free plan for an unlimited time at no cost.
-    {: tip}
 
 1. After you sign up for a plan, launch {{site.data.keyword.knowledgestudioshort}}.
 
-  To complete this tutorial, you must have at least one user ID that you can use in {{site.data.keyword.knowledgestudioshort}}. This user ID must have the Admin role. If you signed up for a free plan, as the only user, you have the Admin role. For information about user roles, see [Assembling a team](/docs/services/watson-knowledge-studio/team.html).
+  To complete this tutorial, you must have at least one user ID that you can use in {{site.data.keyword.knowledgestudioshort}}. This user ID must have the Admin role. If you signed up for a Lite plan, as the only user, you have the Admin role. For information about user roles, see [Assembling a team](/docs/services/watson-knowledge-studio/team.html).
 
 ## Lesson 1: Assigning user roles
 {: #wks_tutless1}
@@ -85,7 +81,7 @@ In this lesson, you will learn how to create a workspace within {{site.data.keyw
 
 ### About this task
 
-A workspace defines all of the resources that are required to create a machine learning model, including training documents, the type system, dictionaries, and annotations that are added by human annotators. For more information about workspace creation, see [Creating a workspace](/docs/services/watson-knowledge-studio/create-project.html).
+A workspace defines all the resources that are required to create a machine learning model, including training documents, the type system, dictionaries, and annotations that are added by human annotators. For more information about workspace creation, see [Creating a workspace](/docs/services/watson-knowledge-studio/create-project.html).
 
 ### Procedure
 

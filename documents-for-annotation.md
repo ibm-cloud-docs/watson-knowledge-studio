@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-04-18"
 
 ---
 
@@ -184,7 +184,7 @@ To create an annotation set:
 
     1. Select a user name from the list of human annotators.
 
-        > **Note:** If you have a free plan subscription, associate yourself with the annotation set. You cannot add other users and assign them to the human annotator role. But by adding yourself, you can fill the role of a human annotator and test out how a real human annotator would interact with the ground truth editor to annotate documents.
+        > **Note:** If you have a Lite plan subscription, associate yourself with the annotation set. You cannot add other users and assign them to the human annotator role. But by adding yourself, you can fill the role of a human annotator and test out how a real human annotator would interact with the ground truth editor to annotate documents.
 
     1. Name the annotation set.
 

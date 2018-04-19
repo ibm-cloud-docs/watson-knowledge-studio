@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-04-18"
 
 ---
 
@@ -181,7 +181,7 @@ To leverage a rule-based model in {{site.data.keyword.IBM_notm}} {{site.data.key
 1. Select the **Model Management** > **Versions** > **Rule-based** tab.
 1. Click **Export current model**.
 
-    If you have a free plan subscription, no export option is available.
+    If you have a Lite plan subscription, no export option is available.
 
     The model is saved as a PEAR file, and you are prompted to download the file. A PEAR (Processing Engine ARchive) file is the UIMA standard packaging format for UIMA components. The model is saved in PEAR format so it can be distributed and reused within UIMA applications.
 
