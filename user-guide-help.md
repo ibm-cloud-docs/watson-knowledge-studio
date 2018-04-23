@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-04-23"
 
 ---
 
@@ -33,7 +33,7 @@ Find out what to do if you have questions or need help. Where to go for help dep
 
 ## Using the ground truth editor
 
-First, review the information in this user guide. If you still have questions about how to use the ground truth editor, then you can check the community forum to see if anyone else has asked your question and received an answer. Or you can ask community members for help. To access the {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Developer community forum, go to: [https://developer.ibm.com/answers/topics/wks/?smartspace=watson ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/wks/?smartspace=watson){: new_window}.
+First, review the information in [Annotating documents](/docs/services/watson-knowledge-studio/user-guide.html). If you still have questions about how to use the ground truth editor, check one of the developer communities, which are linked to from the bottom of the table of contents. If you can't find the answer to your question, post the question yourself.
 
 ## Annotation decisions
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-18"
+lastupdated: "2018-04-23"
 
 ---
 
@@ -131,7 +131,7 @@ The following events can cause problems with deployed models:
 
 [Deploying a machine learning model to {{site.data.keyword.IBM_notm}} {{site.data.keyword.alchemylanguageshort}}](/docs/services/watson-knowledge-studio/publish-ml.html#wks_mabluemix)
 
-## Can't create a instance on the Lite plan
+## Can't create an instance on the Lite plan
 {: #wks_ts_lite}
 
 ### Problem
@@ -146,9 +146,9 @@ You try to create a {{site.data.keyword.knowledgestudioshort}} instance on the L
 
 Create an account that is not included in the organization.
 
-If you need to use your current account for a {{site.data.keyword.knowledgestudioshort}} instance on a Lite plan and your user account is associated with a paid account, you can submit a support ticket. For more information, see [Contacting {{site.data.keyword.IBM_notm}} Support](/docs/services/watson-knowledge-studio/troubleshooting.html#ts_contactingibmsupport).
+If you need to use your current account for a {{site.data.keyword.knowledgestudioshort}} instance on a Lite plan and your user account is associated with a paid account, you can create a case. For more information, see [Contacting {{site.data.keyword.IBM_notm}} Support](/docs/services/watson-knowledge-studio/troubleshooting.html#ts_contactingibmsupport).
 
-If you need to use your current account for a {{site.data.keyword.knowledgestudioshort}} instance on a Lite plan and your user account isn't associated with a paid account, post your issue to [{{site.data.keyword.IBM_notm}} developerWorks Answers](https://developer.ibm.com/answers/topics/wks/). Tag the question, **WKS**.
+If you need to use your current account for a {{site.data.keyword.knowledgestudioshort}} instance on a Lite plan and your user account isn't associated with a paid account, post your issue to [{{site.data.keyword.IBM_notm}} developerWorks Answers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/watson-knowledge-studio/){: new_window}. Tag the question, **WATSON-KNOWLEDGE-STUDIO**.
 
 ## Cannot access the application
 {: #wks_ts_access}
@@ -172,7 +172,7 @@ For help using the ground truth editor, see [Annotating documents](/docs/service
 ## Experimental services: What does *experimental* mean?
 {: #experimental}
 
-For information about experimental services, see the [{{site.data.keyword.Bluemix_notm}} documentation](/docs/services/index.html#experimental_services). For the full details of experimental services, see the latest version of the [{{site.data.keyword.Bluemix_notm}} Service Description ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/software/sla/sladb.nsf/searchsaas/?searchview&searchorder=4&searchmax=0&query=IBM+Bluemix+Service+Description){: new_window}.
+For information about experimental services, see the [{{site.data.keyword.Bluemix_notm}} documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/index.html#experimental_services){: new_window}. For the full details of experimental services, see the latest version of the [{{site.data.keyword.Bluemix_notm}} Service Description ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/software/sla/sladb.nsf/sla/bm){: new_window}.
 
 ## Storage space issues
 {: #storage}
@@ -209,28 +209,18 @@ To manage your monthly bill, if the Admin role is assigned to you and you have a
 
 {{site.data.keyword.IBM_notm}} Support provides assistance with product defects, answers FAQs, and helps users resolve problems with the product.
 
-### Before you begin
+- **Lite plan customers not associated with a paid account**
 
-First, see if a solution is documented for the problem you are having. Search {{site.data.keyword.knowledgestudioshort}} on the [{{site.data.keyword.IBM_notm}} Support Portal ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/home/entry/portal){: new_window}. On the search results page, click the **Support** tab to see results from tech notes, {{site.data.keyword.IBM_notm}} Redbooks, and documentation. Click the **For developers** tab to see results from the {{site.data.keyword.IBM_notm}} developerWorks community, such as blogs and forum questions.
+    Get help and answers to questions by asking fellow members of the developer community. For links, see the "Developer community" section at the bottom of the table of contents.
 
-After trying to find your answer or solution by searching the [{{site.data.keyword.IBM_notm}} Support Portal ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/home/entry/portal){: new_window}, you can contact {{site.data.keyword.IBM_notm}} Support. The type of support that you have depends on your service type.
+- **Customers associated with a paid account**
 
-- **Lite plan users**
+    As a customer associated with a paid account, you, too, can ask questions and learn from other users' questions. The developer communities are open to everyone and are a great place to start. For links, see the "Developer community" section at the bottom of the table of contents.
 
-    Get help and answers to questions by asking fellow members of the developer community. For links to developer communities, see the **Developer community** section in the table of contents.
+    **To contact {{site.data.keyword.IBM_notm}} Support:**
 
-- **Paid plan users**
+    You must be authorized to create support cases on the {{site.data.keyword.cloud_notm}} Service Portal.
 
-    As a paid plan user, you, too, can ask questions and learn from other users' questions. The forums are open to everyone and are a great place to start. For links, see the **Developer community** section in the table of contents.
-
-    Submit a problem ticket from the [{{site.data.keyword.IBM_notm}} Cloud Service Portal ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson.service-now.com/wcp){: new_window}.
-
-    > **Note:** You must be authorized to submit problems to {{site.data.keyword.IBM_notm}}.
-
-### Procedure
-
-To contact {{site.data.keyword.IBM_notm}} Support about a problem:
-
-1. Define the problem, gather background information, and determine the severity of the problem.
-1. Gather diagnostic information, if possible.
-1. Submit the problem to {{site.data.keyword.IBM_notm}} Support. For contact details, refer to the [Software as a Service support guide ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www-01.ibm.com/software/support/acceleratedvalue/SaaS_Handbook_V18.pdf){: new_window}.
+    1. Define the problem, gather background information, and determine the severity of the problem.
+    1. Gather diagnostic information, if possible.
+    1. Create a case on the [{{site.data.keyword.cloud_notm}} Service Portal ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson.service-now.com/wcp){: new_window}.
