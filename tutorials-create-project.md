@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-19"
+lastupdated: "2018-04-26"
 
 ---
 
@@ -29,21 +29,15 @@ This {{site.data.keyword.knowledgestudiofull}} tutorial helps you perform prereq
 ## Before you begin
 {: #prereq}
 
-Confirm you're using a supported browser. For information, see [Browser requirements](/docs/services/watson-knowledge-studio/system-requirements.html).
+- Confirm you're using a supported browser. For information, see [Browser requirements](/docs/services/watson-knowledge-studio/system-requirements.html).
+-  To complete this tutorial, you must have at least one user ID that you can use in {{site.data.keyword.knowledgestudioshort}}. This user ID must have the Admin role. If you sign up for a Lite plan, as the only user, you will have the Admin role. For information about user roles, see [Assembling a team](/docs/services/watson-knowledge-studio/team.html).
 
 ## Creating a service instance
 {: #instance}
 
 1. If you haven't already, [sign up for an {{site.data.keyword.ibmid}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net){: new_window} and log in to {{site.data.keyword.cloud_notm}}.
-1. From the [Dashboard page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/apps){: new_window}, sign up for a {{site.data.keyword.knowledgestudioshort}} plan.
-
-  1. Click **Catalog**.
-  1. In the search field, search for `{{site.data.keyword.knowledgestudioshort}}`.
-  1. Select **{{site.data.keyword.knowledgestudioshort}}**.
-
-1. After you sign up for a plan, launch {{site.data.keyword.knowledgestudioshort}}.
-
-  To complete this tutorial, you must have at least one user ID that you can use in {{site.data.keyword.knowledgestudioshort}}. This user ID must have the Admin role. If you signed up for a Lite plan, as the only user, you have the Admin role. For information about user roles, see [Assembling a team](/docs/services/watson-knowledge-studio/team.html).
+1. From the {{site.data.keyword.cloud_notm}} {{site.data.keyword.watson}} [services page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/watson/services){: new_window}, click the {{site.data.keyword.knowledgestudioshort}} tile, and sign up for a plan.
+1. After you sign up for a plan, from the list of existing services, launch {{site.data.keyword.knowledgestudioshort}}.
 
 ## Lesson 1: Assigning user roles
 {: #wks_tutless1}
@@ -56,7 +50,7 @@ The creation of a machine learning model requires input from subject matter expe
 
 ### Procedure
 
-1. Log in to {{site.data.keyword.knowledgestudioshort}} with your administrator ID.
+1. Log in to {{site.data.keyword.knowledgestudioshort}} with your administrator ID. If you have an existing {{site.data.keyword.knowledgestudioshort}} instance, you can find it from the {{site.data.keyword.cloud_notm}} {{site.data.keyword.watson}} [services page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/watson/services){: new_window}.
 1. Click the Settings icon to open the Service Details page. The page lists all the user IDs that are registered as {{site.data.keyword.knowledgestudioshort}} users. Each user ID has one of the following roles (in decreasing order of included permissions):
 
     - Admin
