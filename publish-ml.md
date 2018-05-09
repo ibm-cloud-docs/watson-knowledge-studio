@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-18"
+lastupdated: "2018-05-08"
 
 ---
 
@@ -61,6 +61,8 @@ To deploy a machine learning model to {{site.data.keyword.alchemylanguageshort}}
 1. Choose the version of the model that you want to deploy.
 
     If there is only one working version of the model, create a snapshot of the current model. This versions the model, which enables you to deploy one version, while you continue to improve the current version. The option to deploy does not appear until you create at least one version.
+
+    **Note**: Each version can be deployed to only one service instance. If you want to deploy the same model to more than one instance, create a version for each instance.
 
 1. Click **Deploy**, and choose to deploy it to the {{site.data.keyword.alchemylanguageshort}} service, and then click **Next**.
 1. Either enter the key that you obtained from {{site.data.keyword.alchemylanguageshort}} or select a previously deployed version of the model that has a key that you want to reuse, and click **Deploy**. If the key is valid, a confirmation that contains the model ID is displayed. This confirmation does not mean that the model is ready for use by your applications.
@@ -141,6 +143,8 @@ To deploy a machine learning model to {{site.data.keyword.watson}} {{site.data.k
 
     If there is only one working version of the model, create a snapshot of the current model. This versions the model, which enables you to deploy one version, while you continue to improve the current version. The option to deploy does not appear until you create at least one version.
 
+    **Note**: Each version can be deployed to only one service instance. If you want to deploy the same model to more than one instance, create a version for each instance.
+
 1. Click **Deploy**, choose to deploy it to {{site.data.keyword.discoveryshort}}, and then click **Next**.
 1. Select the {{site.data.keyword.Bluemix_notm}} space and instance. If necessary, select a different region.
 1. Click **Deploy**.
@@ -176,6 +180,8 @@ To deploy a machine learning model to the {{site.data.keyword.nlushort}} service
 1. Choose the version of the model that you want to deploy.
 
     If there is only one working version of the model, create a snapshot of the current model. This versions the model, which enables you to deploy one version, while you continue to improve the current version. The option to deploy does not appear until you create at least one version.
+
+    **Note**: Each version can be deployed to only one service instance. If you want to deploy the same model to more than one instance, create a version for each instance.
 
 1. Click **Deploy**, choose to deploy it to {{site.data.keyword.nlushort}}, and then click **Next**.
 1. Select the {{site.data.keyword.Bluemix_notm}} space and instance. If necessary, select a different region.
