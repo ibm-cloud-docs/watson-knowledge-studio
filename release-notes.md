@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-27"
+lastupdated: "2018-05-11"
 
 ---
 
@@ -25,6 +25,14 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 
 The following new features and changes to {{site.data.keyword.knowledgestudiofull}} are available.
 {: shortdesc}
+
+## May 2018
+{: #may2018}
+
+### New features and changes
+{: #new-april2018}
+
+- The documentation includes some new details about data privacy. Read more in [Information security](/docs/services/watson-knowledge-studio/information-security.html).
 
 ## April 2018
 {: #april2018}

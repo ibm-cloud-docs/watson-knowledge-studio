@@ -20,6 +20,7 @@ Watson Knowledge Studio
     accessibility.md
     glossary.md
     language-support.md
+    information-security.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
