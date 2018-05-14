@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="wks_lowrecall.svg"
+   sodipodi:docname="wks_lowprec.svg"
    inkscape:export-filename="C:\RTC-workspaces\id\com.ibm.watson.core.doc\wks\images\wks_lowprec.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
@@ -386,17 +386,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="88.204035"
-     inkscape:cy="369.94171"
+     inkscape:zoom="1.979899"
+     inkscape:cx="391.75488"
+     inkscape:cy="531.56612"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer3"
      showgrid="false"
      units="in"
-     inkscape:window-width="1920"
-     inkscape:window-height="1019"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
+     inkscape:window-width="1280"
+     inkscape:window-height="972"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      showguides="false"
      fit-margin-top="0"
@@ -454,7 +454,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -463,8 +463,7 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-2.761523,-337.59211)"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <g
        id="g4655"
        transform="translate(-97.883208,10.433287)">
@@ -1252,8 +1251,7 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="Opaque Shape Layer 2"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:#000c00;stroke-width:1.00946212;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.02839116"
        id="rect4481"
@@ -1273,8 +1271,7 @@
      inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="Shape Layer 3"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <circle
        style="display:inline;fill:none;fill-opacity:0.96518986;stroke:#000c00;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path11079"
@@ -1297,7 +1294,8 @@
      id="layer3"
      inkscape:label="Text"
      style="display:inline"
-     transform="translate(-2.761523,-50.22996)">
+     transform="translate(-2.761523,-50.22996)"
+     sodipodi:insensitive="true">
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1310,7 +1308,7 @@
          sodipodi:role="line"
          x="239.23431"
          y="81.680244"
-         id="tspan4515">Low recall </tspan><tspan
+         id="tspan4515">Low precision </tspan><tspan
          sodipodi:role="line"
          x="237.32758"
          y="98.867744"
@@ -1427,7 +1425,7 @@
          sodipodi:role="line"
          x="404.39182"
          y="253.10593"
-         id="tspan8933">negatives </tspan></text>
+         id="tspan8933">positives </tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
