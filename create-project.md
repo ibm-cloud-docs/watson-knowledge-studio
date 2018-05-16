@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-18"
+lastupdated: "2018-05-08"
 
 ---
 
@@ -118,34 +118,27 @@ For each stage of the model development process, this table summarizes the typic
 <th valign="bottom" align="left" id="d25459e260" class="stentry thleft thbot">Limits and requirements</th>
 </tr>
 <tr class="strow"><td valign="top" headers="d25459e252" class="stentry"><p class="p wrapper">Type system management</p></td>
-<td valign="top" headers="d25459e254" class="stentry"><p class="p wrapper">Create a type system or upload and modify an existing type system.</p><p class="p">Define entity types
-and relation types for your domain.</p>
-<p class="p">You cannot see a visualization of the type
-system.</p>
+<td valign="top" headers="d25459e254" class="stentry"><p class="p wrapper">Create a type system or upload and modify an existing type system.</p><p class="p">Define entity types and relation types for your domain.</p>
+<p class="p">You cannot see a visualization of the type system.</p>
 </td>
-<td valign="top" headers="d25459e256" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">JSON file that you downloaded from a 
-Watson Knowledge
-Studio
- workspace</p></li>
+<td valign="top" headers="d25459e256" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">JSON file that you downloaded from a {{site.data.keyword.knowledgestudioshort}} workspace</p></li>
 <li class="li"><p class="p wrapper">ZIP file that you downloaded from the Human Annotation Tool (HAT)</p></li>
 </ul>
 </td>
 <td valign="top" headers="d25459e258" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">JSON</p></li>
 </ul>
 </td>
-<td valign="top" headers="d25459e260" class="stentry"><p class="p wrapper">To avoid visual overload for human annotation, define no more than 50 entity types and 50
-relation types.</p><p class="p">File size limitation for uploading a type system: 20 MB</p>
+<td valign="top" headers="d25459e260" class="stentry"><p class="p wrapper">To avoid visual overload for human annotation, define no more than 50 entity types and 50 relation types.</p>
+<p class="p">File size limitation for uploading a type system: 20 MB</p>
 </td>
 </tr>
 <tr class="strow"><td valign="top" headers="d25459e252" class="stentry"><p class="p wrapper">Dictionary management</p></td>
-<td valign="top" headers="d25459e254" class="stentry"><p class="p wrapper">Upload a CSV dictionary file in read-only mode or a ZIP of dictionaries that you downloaded
-from another workspace.</p><p class="p">Create a new dictionary, and then upload a CSV file of term entries or add
-term entries to it.</p>
+<td valign="top" headers="d25459e254" class="stentry"><p class="p wrapper">Upload a CSV dictionary file in read-only mode or a ZIP of dictionaries that you downloaded from another workspace.</p><p class="p">Create a new dictionary, and then upload a CSV file of term entries or add term entries to it.</p>
 </td>
 <td valign="top" headers="d25459e256" class="stentry"><p class="p wrapper">Dictionary file:</p><ul class="ul bullets"><li class="li"><p class="p wrapper">CSV file in UTF-8 format</p></li>
 <li class="li"><p class="p wrapper">ZIP of dictionaries downloaded from another workspace</p></li>
-</ul><p class="p wrapper">
-Term entries file:</p><ul class="ul bullets"><li class="li"><p class="p wrapper">CSV file in UTF-8 format</p></li>
+</ul>
+<p class="p wrapper">Term entries file:</p><ul class="ul bullets"><li class="li"><p class="p wrapper">CSV file in UTF-8 format</p></li>
 </ul>
 </td>
 <td valign="top" headers="d25459e258" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">CSV file in UTF-8 format</p></li>
@@ -172,23 +165,14 @@ Term entries file:</p><ul class="ul bullets"><li class="li"><p class="p wrapper"
 <th valign="bottom" align="left" id="d25459e339" class="stentry thleft thbot">Limits and requirements</th>
 </tr>
 <tr class="strow"><td valign="top" headers="d25459e331" class="stentry"><p class="p wrapper">Document management </p></td>
-<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Upload a small, representative subset of documents </p><p class="p">Upload documents that contain
-annotations previously added by a human annotator, a machine learning model, or a 
-UIMA
- analysis engine</p>
-<p class="p">You
-cannot ingest the entire corpus from 
-IBM Watson Explorer
- for calculating high value documents for
-annotation. </p>
+<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Upload a small, representative subset of documents </p><p class="p">Upload documents that contain annotations previously added by a human annotator, a machine learning model, or a UIMA analysis engine</p>
+<p class="p">You cannot ingest the entire corpus from {{site.data.keyword.ibmwatson_notm}} Explorer for calculating high value documents for annotation.</p>
 </td>
 <td valign="top" headers="d25459e335" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">CSV file in UTF-8 format</p></li>
 <li class="li"><p class="p wrapper">DOCXML file in UTF-8 format</p></li>
 <li class="li"><p class="p wrapper">Text in UTF-8 format</p></li>
 <li class="li"><p class="p wrapper">ZIP file that contains documents downloaded from another corpus</p></li>
-<li class="li"><p class="p wrapper">ZIP file that contains documents in 
-UIMA
- CAS XMI format</p></li>
+<li class="li"><p class="p wrapper">ZIP file that contains documents in UIMA CAS XMI format</p></li>
 </ul>
 </td>
 <td valign="top" headers="d25459e337" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">ZIP archive file of documents</p></li>
@@ -201,24 +185,15 @@ UIMA
 </td>
 </tr>
 <tr class="strow"><td valign="top" headers="d25459e331" class="stentry"><p class="p wrapper">Pre-annotation</p></td>
-<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Use a dictionary or 
-{{site.data.keyword.nlushort}}
-pre-annotator to
-provide a starting point for human annotation.</p><p class="p">You cannot re-annotate a corpus from 
-IBM Watson Discovery Advisor
- or 
-IBM Watson Explorer
-.</p>
+<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Use a dictionary or {{site.data.keyword.nlufull}} pre-annotator to provide a starting point for human annotation.</p><p class="p">You cannot re-annotate a corpus from {{site.data.keyword.ibmwatson_notm}} Explorer.</p>
 </td>
-<td valign="top" headers="d25459e335" class="stentry"><p class="p wrapper">Raw documents. </p><p class="p wrapper"><b>Note:</b> Do not pre-annotate documents that a human annotator has already
-annotated, or you will lose the work done by the human annotator.</p>
+<td valign="top" headers="d25459e335" class="stentry"><p class="p wrapper">Raw documents. </p><p class="p wrapper"><b>Note:</b> Do not pre-annotate documents that a human annotator has already annotated, or you will lose the work done by the human annotator.</p>
 </td>
 <td valign="top" headers="d25459e337" class="stentry"><p class="p wrapper">Partly-annotated documents</p></td>
 <td valign="top" headers="d25459e339" class="stentry"><p class="p wrapper">None</p></td>
 </tr>
 <tr class="strow"><td valign="top" headers="d25459e331" class="stentry"><p class="p wrapper">Document annotation</p></td>
-<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Manage human annotation</p><p class="p">Annotate entities, relations, and coreference chains to create
-ground truth</p>
+<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Manage human annotation</p><p class="p">Annotate entities, relations, and coreference chains to create ground truth</p>
 </td>
 <td valign="top" headers="d25459e335" class="stentry"><p class="p wrapper">Annotation task</p></td>
 <td valign="top" headers="d25459e337" class="stentry"><p class="p wrapper">Ground truth</p></td>
@@ -227,12 +202,9 @@ ground truth</p>
 </td>
 </tr>
 <tr class="strow"><td valign="top" headers="d25459e331" class="stentry"><p class="p wrapper">Training and refinement</p></td>
-<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Train a supervised machine learning model to extract domain-specific information from
-unstructured text.</p><p class="p">Evaluate and improve a supervised machine learning model.</p>
-<p class="p">You cannot
-create a semi-supervised or unsupervised machine learning model.</p>
-<p class="p">You cannot
-do extensive feature engineering.</p>
+<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Train a supervised machine learning model to extract domain-specific information from unstructured text.</p><p class="p">Evaluate and improve a supervised machine learning model.</p>
+<p class="p">You cannot create a semi-supervised or unsupervised machine learning model.</p>
+<p class="p">You cannot do extensive feature engineering.</p>
 </td>
 <td valign="top" headers="d25459e335" class="stentry"><p class="p wrapper">Not applicable</p></td>
 <td valign="top" headers="d25459e337" class="stentry"><p class="p wrapper">Machine learning model</p></td>
@@ -244,28 +216,14 @@ do extensive feature engineering.</p>
 </td>
 </tr>
 <tr class="strow"><td valign="top" headers="d25459e331" class="stentry"><p class="p wrapper">Publication</p></td>
-<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Publish a machine learning model to use for performing text extraction in other
-
-Watson
- applications. </p></td>
+<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Publish a machine learning model to use for performing text extraction in other {{site.data.keyword.watson}} applications.</p></td>
 <td valign="top" headers="d25459e335" class="stentry"><p class="p wrapper">Not applicable</p></td>
-<td valign="top" headers="d25459e337" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">model ID (for use in 
-AlchemyLanguage
- or 
-Watson Discovery
- services) </p></li>
-<li class="li"><p class="p wrapper">ZIP file (for use in 
-IBM Watson Explorer
-)</p></li>
+<td valign="top" headers="d25459e337" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">Model ID (for use in {{site.data.keyword.nlufull}} or {{site.data.keyword.discoveryfull}}) </p></li>
+<li class="li"><p class="p wrapper">ZIP file (for use in {{site.data.keyword.ibmwatson_notm}} Explorer)</p></li>
 </ul>
 </td>
 <td valign="top" headers="d25459e339" class="stentry">
-  <p class="p">To deploy into AlchemyLanguage,
-    you must have a valid AlchemyLanguage
-    Advanced plan key ID.</p>
-  <p class="p">To deploy to Watson Discovery
-    service, you must know the service {{site.data.keyword.cloud_notm}}
-    space and instance names.</p>
+<p class="p">To deploy to {{site.data.keyword.watson}} services, you must know the {{site.data.keyword.cloud_notm}} service space and instance names.</p>
 </td>
 </tr>
 </table>
@@ -279,8 +237,7 @@ IBM Watson Explorer
 <th valign="bottom" align="left" id="d25459e517" class="stentry thleft thbot">Limits and requirements</th>
 </tr>
 <tr class="strow"><td valign="top" headers="d25459e509" class="stentry"><p class="p wrapper">Rule editor</p></td>
-<td valign="top" headers="d25459e511" class="stentry"><p class="p">Create or upload documents to the Rules editor from which to define classes, regular expressions,
-and rules.</p>
+<td valign="top" headers="d25459e511" class="stentry"><p class="p">Create or upload documents to the rule editor from which to define classes, regular expressions, and rules.</p>
 </td>
 <td valign="top" headers="d25459e513" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">Plain text (added in editor)</p></li>
 <li class="li"><p class="p wrapper">CSV file in UTF-8 format</p></li>
@@ -303,24 +260,13 @@ and rules.</p>
 </td>
 </tr>
 <tr class="strow"><td valign="top" headers="d25459e509" class="stentry"><p class="p wrapper">Publication</p></td>
-<td valign="top" headers="d25459e511" class="stentry"><p class="p wrapper">Publish a rule-based model to use for performing pattern recognition in other
-Watson
- applications.</p></td>
+<td valign="top" headers="d25459e511" class="stentry"><p class="p wrapper">Publish a rule-based model to use for performing pattern recognition in other {{site.data.keyword.watson}} applications.</p></td>
 <td valign="top" headers="d25459e513" class="stentry"><p class="p wrapper">Not applicable</p></td>
-<td valign="top" headers="d25459e515" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">model ID (for use in 
-AlchemyLanguage
- or
-Watson Discovery
- services) </p></li>
+<td valign="top" headers="d25459e515" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">Model ID (for use in {{site.data.keyword.nlufull}} or {{site.data.keyword.discoveryfull}})</p></li>
 </ul>
 </td>
 <td valign="top" headers="d25459e517" class="stentry">
-  <p class="p">To deploy into AlchemyLanguage,
-    you must have a valid AlchemyLanguage
-    Advanced plan key ID.</p>
-  <p class="p">To deploy to Watson Discovery
-    service, you must know the service {{site.data.keyword.cloud_notm}}
-    space and instance names.</p>
+<p class="p">To deploy to {{site.data.keyword.watson}} services, you must know the {{site.data.keyword.cloud_notm}} service space and instance names.</p>
 </td>
 </tr>
 </table>

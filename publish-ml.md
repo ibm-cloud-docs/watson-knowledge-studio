@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-08"
+lastupdated: "2018-05-16"
 
 ---
 
@@ -37,88 +37,7 @@ You can also pre-annotate new documents with the machine learning model. See [Pr
 ## Deploying a machine learning model to AlchemyLanguage
 {: #wks_mabluemix}
 
-When you are satisfied with the performance of the model, you can deploy a version of it to {{site.data.keyword.IBM_notm}} {{site.data.keyword.alchemylanguageshort}}. This feature, which requires you to provide an {{site.data.keyword.alchemyapishort}} access key, enables your applications to use the deployed machine learning model to annotate documents in your domain.
-
-### Before you begin
-
-You must have the {{site.data.keyword.alchemylanguageshort}} service Advanced plan to be able to deploy and use the model.
->Note: The {{site.data.keyword.alchemylanguageshort}} service has been deprecated. You cannot deploy this model to the service unless you have an existing plan.
-
-### About this task
-
-When you deploy the machine learning model, you select the version of it that you want to deploy. To deploy to this service, you must have an access key from {{site.data.keyword.IBM_notm}} {{site.data.keyword.alchemylanguageshort}}.
-
-The key must belong to an account that is authorized to publish custom models or the model will be deployed successfully, but you will not be able to use it.
-
-You must specify the key the first time you deploy a model to {{site.data.keyword.alchemylanguageshort}}. You can then reuse the key with multiple versions of the model that you deploy. Each key has a maximum number of models that can be deployed at the same time.
-
-### Procedure
-
-To deploy a machine learning model to {{site.data.keyword.alchemylanguageshort}} :
-
-1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager, and select your workspace.
-1. Select the **Model Management** > **Versions** > **Machine learning** tab.
-1. Choose the version of the model that you want to deploy.
-
-    If there is only one working version of the model, create a snapshot of the current model. This versions the model, which enables you to deploy one version, while you continue to improve the current version. The option to deploy does not appear until you create at least one version.
-
-    **Note**: Each version can be deployed to only one service instance. If you want to deploy the same model to more than one instance, create a version for each instance.
-
-1. Click **Deploy**, and choose to deploy it to the {{site.data.keyword.alchemylanguageshort}} service, and then click **Next**.
-1. Either enter the key that you obtained from {{site.data.keyword.alchemylanguageshort}} or select a previously deployed version of the model that has a key that you want to reuse, and click **Deploy**. If the key is valid, a confirmation that contains the model ID is displayed. This confirmation does not mean that the model is ready for use by your applications.
-1. The deployment process might take a few minutes. To check the status of the deployment, click **Status** next to the version that you deployed. If the model is still being deployed, the status indicates "publishing". After deployment completes, the status changes to "available" if the deployment was successful, or "error" if problems occurred.
-
-    Status information includes the model ID, the last four digits of the {{site.data.keyword.alchemyapishort}} key, and a log of the deployment process. The model ID (model_id) is how your applications call the machine learning model. Use the {{site.data.keyword.alchemyapishort}} key to keep track of the number of deployments per key.
-
-### What to do next
-
-To use the deployed model, you must copy and paste the model ID into your application's API call. The call must also specify the {{site.data.keyword.alchemylanguageshort}} Advanced plan service that you want to use with the model and its associated {{site.data.keyword.alchemyapishort}} access key. The following endpoints are supported:
-
-- **&lt;*input-type*&gt;GetRankedNamedEntities**
-
-    Uses the custom model that you specify in the model parameter to extract a list of mentions of all known entity types that it finds in the input that you provide. Supported input types include text, HTML, or a public URL. See [{{site.data.keyword.alchemylanguageshort}}&gt;Entities ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/alchemy-language/api/v1/#entities){: new_window} for more information about the API and the syntax to use.
-
-- **&lt;*input-type*&gt;GetTypedRelations**
-
-    Uses the custom model that you specify in the model parameter to extract a list of instances of known relationships that it finds in the input that you provide. See [{{site.data.keyword.alchemylanguageshort}}&gt;TypedRelations ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/alchemy-language/api/v1/#typed-relations){: new_window} for more information about the API and the syntax to use.
-
-#### Examples
-
-- The following API call looks for known entity types in the text string that is passed in the POST body. The request specifies the ID of the model that was created and an Alchemy API key that has rights to run custom models.
-
-    ```bash
-    curl -d 'text=Mary had a little lamb.'
-    "https://gateway-a.watsonplatform.net/calls/text/TextGetRankedNamedEntities?
-    showSourceText=1&
-    model=44476a63-c55t-451f-ad3r-8b23c0f4628c&
-    apikey=s3wee88r25wwe2p6442w99g8t77phll5323kkf3a&
-    outputMode=json"
-    ```
-    {: pre}
-
-    The response returns `Mary` and `lamb` if those are mentions that are recognized by your machine learning model.
-
-- The following API call looks for known relationships in the text string that is passed in the POST body. The request specifies the ID of the model that was created and an Alchemy API key that has rights to run custom models.
-
-    ```bash
-    curl -d 'text=Mary had a little lamb.'
-    "https://gateway-a.watsonplatform.net/calls/text/TextGetTypedRelations?
-    showSourceText=1&
-    model=44476a63-c55t-451f-ad3r-8b23c0f4628c&
-    apikey=s3wee88r25wwe2p6442w99g8t77phll5323kkf3a&
-    outputMode=json"
-    ```
-    {: pre}
-
-    The response returns `ownedBy` if that relationship is recognized by your machine learning model.
-
-> **Note:** Carriage returns are included to better format the examples for the screen. Do not include carriage returns in the API syntax.
-
-For more information, see the [{{site.data.keyword.alchemylanguageshort}} documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/doc/alchemylanguage/customizing.shtml){: new_window}.
-
-#### Related information
-
-[{{site.data.keyword.alchemylanguageshort}} model issues](/docs/services/watson-knowledge-studio/troubleshooting.html#wks_ts_deployed_model_deleted)
+The {{site.data.keyword.alchemylanguageshort}} service has been deprecated. For more information, see [Retirement of {{site.data.keyword.alchemyapishort}} service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/bye-bye-alchemyapi/){: new_window}.
 
 ## Deploying a machine learning model to IBM Watson Discovery
 {: #wks_madiscovery}

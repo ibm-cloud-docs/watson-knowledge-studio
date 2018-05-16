@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-23"
+lastupdated: "2018-05-08"
 
 ---
 
@@ -100,7 +100,7 @@ However, problems that you can reproduce can have a disadvantage: If the problem
 
 ### Problem
 
-You cannot deploy an AlchemyLanguage model or the deployment succeeded but the model is not available for use.
+You cannot deploy a model to {{site.data.keyword.alchemylanguagefull}}.
 
 ### Symptoms
 
@@ -110,26 +110,11 @@ You cannot deploy an AlchemyLanguage model or the deployment succeeded but the m
 
 ### Causes
 
-The following events can cause problems with deployed models:
-
-- If you mistype the {{site.data.keyword.alchemyapishort}} key when you add the key to the `apikey` parameter of the REST API call, then the call will fail. The same is true for the model ID. It is best to copy and paste the model ID and API key to avoid typing errors.
-- If you provide an {{site.data.keyword.alchemyapishort}} key that is invalid or is not authorized to deploy a custom model, then the deployment process will indicate that the model was successfully deployed, but you will not be able to use it.
-- If, while using {{site.data.keyword.alchemylanguageshort}} in {{site.data.keyword.Bluemix}}, you delete all of the service instances that are associated with an {{site.data.keyword.alchemyapishort}} key in {{site.data.keyword.Bluemix_notm}}, then any deployed models that reference that key will be removed from the service. {{site.data.keyword.Bluemix_notm}} periodically checks whether registered models are associated with a valid key, and any models that are not, are deleted. If your model was deployed against a key that gets deleted, the status of the model will change to `error`.
+The {{site.data.keyword.alchemylanguageshort}} service has been deprecated. For more information, see [Retirement of {{site.data.keyword.alchemyapishort}} service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/bye-bye-alchemyapi/){: new_window}.
 
 ### Resolving the problem
 
-1. Check the status of the deployment.
-
-    Log in as a {{site.data.keyword.knowledgestudioshort}} administrator. On the **Model Management** > **Versions** page, view the **Status** column to check the status of the model that you deployed.
-
-1. If the deployment status of the model is `error` or the status is `available`, but the model does not work when you try to use it, then withdraw the model from deployment by clicking **Undeploy**.
-1. Redeploy the model.
-
-    Use only a valid {{site.data.keyword.alchemyapishort}} key that has authorization to deploy models, and copy and paste the model ID and API key when you add them as parameters to the API call.
-
-**Related tasks**:
-
-[Deploying a machine learning model to {{site.data.keyword.IBM_notm}} {{site.data.keyword.alchemylanguageshort}}](/docs/services/watson-knowledge-studio/publish-ml.html#wks_mabluemix)
+[Migrate to {{site.data.keyword.nlufull}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/natural-language-understanding/migrating.html){: new_window}
 
 ## Can't create an instance on the Lite plan
 {: #wks_ts_lite}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-05-08"
 
 ---
 
@@ -88,7 +88,7 @@ This stage refers to the use of {{site.data.keyword.knowledgestudioshort}} tools
 ### Model deployment
 {: #wks_lifecycle__wks_lifecycleS5}
 
-This stage refers to exporting components that enable the model to run in machine learning runtime environments and making the model accessible to other {{site.data.keyword.watson}} cognitive applications. For example, you can deploy the machine learning model for use by the {{site.data.keyword.Bluemix}} {{site.data.keyword.alchemyapishort}} or export the model for use in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
+This stage refers to exporting components that enable the model to run in machine learning runtime environments and making the model accessible to other {{site.data.keyword.watson}} cognitive applications. For example, you can deploy the machine learning model for use by {{site.data.keyword.nlufull}} service or {{site.data.keyword.discoveryfull}} service, or export the model for use in {{site.data.keyword.ibmwatson_notm}} Explorer.
 
 ## Creating an annotation task
 {: #wks_hatask}
