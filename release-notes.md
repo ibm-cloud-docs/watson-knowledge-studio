@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-11"
+lastupdated: "2018-05-17"
 
 ---
 
@@ -30,8 +30,12 @@ The following new features and changes to {{site.data.keyword.knowledgestudioful
 {: #may2018}
 
 ### New features and changes
-{: #new-april2018}
+{: #new-may2018}
 
+- Added Chinese (traditional) language support.
+- Users who have the Admin role can now see the number of workspaces that are used. This info is available on the Service Details page.
+- {{site.data.keyword.alchemylanguagefull}} is no longer available to deploy models to. For information, see [Retirement of {{site.data.keyword.alchemyapishort}} service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/bye-bye-alchemyapi/){: new_window}.
+- Now, if you delete a workspace, you will be asked to confirm your action. We hope this confirmation prevents accidental deletions.
 - The documentation includes some new details about data privacy. Read more in [Information security](/docs/services/watson-knowledge-studio/information-security.html).
 
 ## April 2018
