@@ -79,7 +79,7 @@ A workspace defines all the resources that are required to create a machine lear
 
 ### Procedure
 
-1. As a {{site.data.keyword.knowledgestudioshort}} administrator, from your {{site.data.keyword.cloud_notm}} [dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/apps/){:new_window}, launch the {{site.data.keyword.knowledgestudioshort}} service.
+1. As a {{site.data.keyword.knowledgestudioshort}} administrator, from your {{site.data.keyword.cloud_notm}} [dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net){:new_window}, launch the {{site.data.keyword.knowledgestudioshort}} service.
 1. Click **Create Worskpace**.
 1. Specify the details for the new workspace:
 
