@@ -61,7 +61,7 @@ Add users from your {{site.data.keyword.cloud_notm}} organization to {{site.data
 
 To add users to a {{site.data.keyword.knowledgestudioshort}} instance:
 
-1. Log in to the [{{site.data.keyword.cloud_notm}} Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/apps/){: new_window} with your {{site.data.keyword.ibmid}} and launch {{site.data.keyword.knowledgestudioshort}}.
+1. Log in to the [{{site.data.keyword.cloud_notm}} Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net){: new_window} with your {{site.data.keyword.ibmid}} and launch {{site.data.keyword.knowledgestudioshort}}.
 1. Click the **Settings** icon, and then click **View/modify service details**.
 1. In the **Manager users** section, enter the {{site.data.keyword.ibmid}} for the user you want to add.
 1. Select the role you want to give the user.
@@ -80,7 +80,7 @@ After you add users to {{site.data.keyword.knowledgestudioshort}}, you can upgra
 
 To upgrade roles for {{site.data.keyword.knowledgestudioshort}} users:
 
-1. Log in to the [{{site.data.keyword.cloud_notm}} Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/apps/){: new_window} with your {{site.data.keyword.ibmid}} and launch {{site.data.keyword.knowledgestudioshort}}.
+1. Log in to the [{{site.data.keyword.cloud_notm}} Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net){: new_window} with your {{site.data.keyword.ibmid}} and launch {{site.data.keyword.knowledgestudioshort}}.
 1. From the top right navigation menu, click the **Settings** icon ![the Settings icon](images/settings.png) and then click **View/modify service details**. The **Manage users** section of the Service Details page lists all the user IDs that are users for this instance of {{site.data.keyword.knowledgestudioshort}}.
 1. Find the user's name you want to change and click the **Edit** link.
 
