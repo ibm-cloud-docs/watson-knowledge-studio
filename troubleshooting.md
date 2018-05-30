@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-08"
+lastupdated: "2018-05-14"
 
 ---
 
@@ -153,6 +153,17 @@ For information about how to invite people to use your instance of the applicati
 If you have been invited to someone's instance of {{site.data.keyword.knowledgestudioshort}} to serve as a human annotator, you likely received an email invitation. First, you must register with {{site.data.keyword.IBM_notm}} if you do not have {{site.data.keyword.IBM_notm}} registration credentials already. Once you register with {{site.data.keyword.IBM_notm}} and accept the invitation, you are given access to the instance. However, after you are given access and before you can start to annotate documents, the administrator or a project manager of the instance must add you to a workspace and assign an annotation task to you. It is not until after you have been assigned a task that you can perform any actions in the {{site.data.keyword.knowledgestudioshort}} instance. To annotate documents, use the ground truth editor. Use a Google Chrome browser for the best performance.
 
 For help using the ground truth editor, see [Annotating documents](/docs/services/watson-knowledge-studio/user-guide.html).
+
+## Data collection
+{: #content}
+
+For Standard plans (Lite, Standard, Pro), by default, {{site.data.keyword.knowledgestudioshort}} uses client data to improve the service. This data is used only in aggregate. Client data is not shared or made public.
+
+If you have the Admin role, you can change this default behavior by selecting the data collection setting on the Service Details page.
+
+For Premium plans and Dedicated accounts, {{site.data.keyword.knowledgestudioshort}} does not use client data to improve the service.
+
+For more information, see the latest [{{site.data.keyword.knowledgestudioshort}} service description ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/software/sla/sladb.nsf/searchsaas/?searchview&searchorder=4&searchmax=0&query=Knowledge+Studio){: new_window}.
 
 ## Experimental services: What does *experimental* mean?
 {: #experimental}
