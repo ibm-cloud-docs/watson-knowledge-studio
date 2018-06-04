@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-18"
+lastupdated: "2018-06-01"
 
 ---
 
@@ -107,12 +107,6 @@ To add documents to a workspace:
         <tr class="strow chrow"><td valign="top" headers="d31095e284-option" id="d31095e294" class="stentry choption ncol"><p class="p wrapper"><strong>Text files</strong></p></td>
           <td valign="top" headers="d31095e284-desc d31095e294" class="stentry chdesc ncol"><p class="p wrapper">Drag one or more text files from your local system or click to locate and select the files,
               and then click <b>Upload</b>. Text files must be in UTF-8 format.</p></td>
-        </tr>
-        <tr class="strow chrow"><td valign="top" headers="d31095e284-option" id="d31095e302" class="stentry choption ncol"><p class="p wrapper"><strong>DOCXML files</strong></p></td>
-          <td valign="top" headers="d31095e284-desc d31095e302" class="stentry chdesc ncol"><p class="p wrapper">Drag one or more <code>DOCXML</code> files from your local system or click to locate
-              and select the files, and then click <b>Upload</b>. The <code>DOCXML</code>
-              files must be documents that were downloaded from another machine learning model, and they must be in
-              UTF-8 format. These documents are not re-tokenized on upload.</p></td>
         </tr>
         <tr class="strow chrow"><td valign="top" headers="d31095e284-option" id="d31095e316" class="stentry choption ncol"><p class="p wrapper"><strong>ZIP file</strong></p></td>
           <td valign="top" headers="d31095e284-desc d31095e316" class="stentry chdesc ncol"><p class="p wrapper">If you previously downloaded documents from a

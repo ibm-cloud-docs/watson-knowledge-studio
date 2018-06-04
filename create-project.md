@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-08"
+lastupdated: "2018-06-01"
 
 ---
 
@@ -169,7 +169,6 @@ For each stage of the model development process, this table summarizes the typic
 <p class="p">You cannot ingest the entire corpus from {{site.data.keyword.ibmwatson_notm}} Explorer for calculating high value documents for annotation.</p>
 </td>
 <td valign="top" headers="d25459e335" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">CSV file in UTF-8 format</p></li>
-<li class="li"><p class="p wrapper">DOCXML file in UTF-8 format</p></li>
 <li class="li"><p class="p wrapper">Text in UTF-8 format</p></li>
 <li class="li"><p class="p wrapper">ZIP file that contains documents downloaded from another corpus</p></li>
 <li class="li"><p class="p wrapper">ZIP file that contains documents in UIMA CAS XMI format</p></li>
