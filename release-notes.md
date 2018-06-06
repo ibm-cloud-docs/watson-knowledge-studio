@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-01"
+lastupdated: "2018-06-06"
 
 ---
 
@@ -32,6 +32,7 @@ The following new features and changes to {{site.data.keyword.knowledgestudioful
 ### New features and changes
 {: #new-may2018}
 
+- A configuration issue was fixed that caused service instances in Sydney region to not appear in US South region.
 - In the Deploy Model window, if the region you're deploying to supports both {{site.data.keyword.iamlong}} *resource groups* and Cloud Foundry *spaces*, to see the list, you will need to choose the method of access management that your service instance uses. For more information about Cloud Foundry and {{site.data.keyword.iamshort}}, see [Resource Groups and Access Management ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/12/resource-groups-access-management/){: new_window}.
 - Added the data collection setting on the Service Details page. For more information about data collection, see [Troubleshooting, support, and FAQs](/docs/services/watson-knowledge-studio/troubleshooting.html#content)
 - Added Chinese (traditional) language support.
@@ -39,11 +40,6 @@ The following new features and changes to {{site.data.keyword.knowledgestudioful
 - {{site.data.keyword.alchemylanguagefull}} is no longer available to deploy models to. For information, see [Retirement of {{site.data.keyword.alchemyapishort}} service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/bye-bye-alchemyapi/){: new_window}.
 - Now, if you delete a workspace, you will be asked to confirm your action. We hope this confirmation prevents accidental deletions.
 - The documentation includes some new details about data privacy. Read more in [Information security](/docs/services/watson-knowledge-studio/information-security.html).
-
-### Known issues
-{: #issues-may2018}
-
-- A configuration issue exists that causes service instances in Sydney region to not appear in US South region.
 
 ## April 2018
 {: #april2018}
