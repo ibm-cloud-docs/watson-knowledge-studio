@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-06-12"
 
 ---
 
@@ -149,6 +149,7 @@ Choose a mode to use when manually annotating documents:
     In this mode, the human annotator identifies mentions that mean the same thing, thus helping to ensure consistency in the annotations when words are not identical. For example, the mention of {{site.data.keyword.IBM_notm}} in the first sentence, the mention of International Business Machines, and the mention of {{site.data.keyword.IBM_notm}} in a later sentence refer to the same thing and would all be labeled by the same entity type, such as ORGANIZATION. The annotation of mentions as coreferences is optional and can occur before or after you annotate relation types.
 
 ### Tips for using the editor
+{: #wks_hagte_tips}
 
 - Save your work as you go.
 - If you make a mistake, you can press `Ctrl+Z` to undo the previous action. To redo the action after undoing it, press `Ctrl+Y`. You can undo the previous 10 actions that you performed while editing the current document; they are lost as soon as you close the document. The actions must be undone in reverse order, and you must switch to the mode that you were in when you performed the action to undo it. You cannot undo and redo concordance tool actions.
@@ -159,17 +160,20 @@ Choose a mode to use when manually annotating documents:
 To annotate entity mentions, a human annotator selects a string of text in a document, and then applies a label that most appropriately describes what the string of text represents. The labels that can be applied are entity types defined in the workspace's type system.
 
 ### About this task
+{: #wks_haentity_about}
 
 Before starting to annotate entity mentions in a document, it's a good practice to read the entire document. Doing so can help keep the entire context in mind while annotating, and can help provide insights into how entity mentions might relate to each other and which mentions might need to be coreferenced in future passes through the document.
 
 When you open a document to annotate it, you might want to use the concordance tool to annotate repeating entity mentions first, and then annotate individual entity mentions. You can then annotate relation mentions and coreferences in any order that you like, or not at all. Entity mention annotation is mandatory. Whether you also annotate relation mentions and coreferences depends on the purpose of your model and the needs of your domain. However, until and unless you identify coreferences, each entity mention is considered to represent a distinct entity.
 
 #### Tips
+{: #wks_haentity_tips}
 
 - Keep in mind that shorter entity mentions are better for training because it is easier for the machine learning model to recognize the shorter patterns and add the correct annotation tokens.
 - If you chose to use a dictionary-based tokenizer with the workspace, and want to handle compound terms and punctuation in your training data, you can add the terms to a dictionary and create a dictionary annotator to pre-annotate the occurrences. For example, to avoid sentence boundary breaks for terms that include punctuation, add terms like Yahoo! and Dr. to a dictionary. Likewise, if your training data includes hyphenated words or alphanumeric acronyms, like Hi-C or MS-60-70, add those terms to the dictionary. To annotate occurrences regardless of case, add the terms in lowercase (such as hi-c). To annotate variations, add the variations as surface forms (MS-60-70 and MS 60 70). **Important**: Do not use this approach if you are using the default tokenizer.
 
 ### Procedure
+{: #wks_haentity_procedure}
 
 To annotate entity mentions in a document:
 
@@ -199,6 +203,7 @@ To annotate entity mentions in a document:
 1. Click **Save** at any time to save your work.
 
 ### What to do next
+{: #wks_haentity_next}
 
 After you finish annotating all entity mentions, relation mentions, and coreferences in the document, as applicable, change the document status from **In Progress** to **Completed**, click **Save**, and then close the document.
 
@@ -210,10 +215,12 @@ After you finish annotating all documents and mark them **Completed**, the statu
 You can optionally use the concordance tool to label multiple occurrences of a mention at once. The tool enables you to annotate the same text with the same entity type throughout a document and across annotation sets. Using the tool helps to ensure consistency in annotation across multiple documents. For example, you can label each occurrence of the mention "encryption" individually in mention mode, or you can label all occurrences of the mention "encryption" by using the concordance tool. Either way, the model learns from the entity type that you apply to the mention.
 
 ### About this task
+{: #wks_haconcordance_about}
 
 Although the concordance tool is optional, a good practice is to use the concordance tool to annotate mentions within a document or across documents before you start annotating mentions in individual documents. When you apply an entity type to a mention with the concordance tool, the system applies the entity type to all matching mentions, overriding any existing entity types that are assigned to a matching mention. To avoid conflicts, attributes (such as roles or subtypes) are removed from existing entity types when a new entity type is applied by the concordance tool.
 
 ### Procedure
+{: #wks_haconcordance_procedure}
 
 To annotate repeating mentions:
 
@@ -228,6 +235,7 @@ To annotate repeating mentions:
 1. When you are happy with the list of annotations, click **Go Back to Ground Truth Editor** .
 
 ### Results
+{: #wks_haconcordance_results}
 
 The mentions are annotated in the document. There is no way to remove the set of mentions that you added through concordance at once. You must remove each mention, one at a time.
 
@@ -237,10 +245,12 @@ The mentions are annotated in the document. There is no way to remove the set of
 To annotate mentions as coreferences to the same entity, a human annotator selects every occurrence of a mention that refers to the same thing. Coreference helps a model recognize that entities that are referred to in different ways are to be associated with the same entity, such as the name of a U.S. state and its abbreviation, the name of a company and its acronym, or a person's name and a pronoun that refers back to that person.
 
 ### Before you begin
+{: #wks_hacoref_prereqs}
 
 You must annotate mentions in the document before you can identify coreferences.
 
 ### About this task
+{: #wks_hacoref_about}
 
 When you annotate mentions as coreferences, the system creates a coreference chain. The chain provides a way for you to view all of the mentions in context and verify that all of the occurrences belong together under the same entity. For example, "Barack", "Michelle", "he", and "she" are all of the same entity type, PERSON, but "Barack" and "he" are one entity, and "Michelle" and "she" are another entity. In this example, you create two coreference chains.
 
@@ -253,6 +263,7 @@ Depending on your annotation guidelines, you might want to create coreference ch
 What's most important is consistency. Decide on how you want annotate coreference and specify the rules, with examples, clearly in your annotation guidelines.
 
 ### Procedure
+{: #wks_hacoref_procedure}
 
 To annotate mentions as coreferences:
 
@@ -275,6 +286,7 @@ To annotate mentions as coreferences:
 1. Click **Save** at any time to save your work.
 
 ### What to do next
+{: #wks_hacoref_next}
 
 After you finish annotating all entity mentions, relation mentions, and coreferences in the document, as applicable, change the document status from **In Progress** to **Completed**, click **Save**, and then close the document.
 

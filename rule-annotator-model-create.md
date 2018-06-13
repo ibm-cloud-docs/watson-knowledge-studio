@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-26"
+lastupdated: "2018-06-12"
 
 ---
 
@@ -27,6 +27,7 @@ After defining rules, you can create a rule-based model.
 {: shortdesc}
 
 ## Procedure
+{: #wks_rule_train_procedure}
 
 To create a rule-based model. complete the following steps:
 

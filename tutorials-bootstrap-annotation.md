@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-20"
+lastupdated: "2018-06-12"
 
 ---
 
@@ -27,18 +27,21 @@ This tutorial helps you understand how to pre-annotate documents, which simplifi
 {: shortdesc}
 
 ## Learning objectives
+{: #objectives}
 
 After you complete this tutorial, you will know how to pre-annotate documents with a machine learning model.
 
 This tutorial should take approximately 5 minutes to finish. If you explore other concepts related to this tutorial, it could take longer to complete.
 
 ## Before you begin
+{: #prereqs}
 
 - You're using a supported browser. For information, see [Browser requirements](/docs/services/watson-knowledge-studio/system-requirements.html).
 - You successfully completed [Tutorial: Creating a workspace](/docs/services/watson-knowledge-studio/tutorials-create-project.html) and [Tutorial: Creating a machine learning model](/docs/services/watson-knowledge-studio/tutorials-create-ml-model.html).
 - You must have at least one user ID in either the Admin or ProjectManager role. For information about user roles, see [Assembling a team](/docs/services/watson-knowledge-studio/team.html).
 
 ## Results
+{: #results}
 
 After completing this tutorial, you will have a set of partially-annotated documents. Then, you can assign the documents to human annotators to finish the annotation work.
 
@@ -48,6 +51,7 @@ After completing this tutorial, you will have a set of partially-annotated docum
 In this lesson, you will learn how to use a machine learning model to pre-annotate documents in {{site.data.keyword.knowledgestudioshort}}.
 
 ### About this task
+{: #wks_tutboot_ml_about}
 
 After you train a machine learning model, you can use it to pre-annotate new documents that you add to the corpus.
 
@@ -59,6 +63,7 @@ In this tutorial, you can add a second set of documents by using the `documents-
 - If annotations on each document match, they over-train the machine learning model on the duplicated files.
 
 ### Procedure
+{: #wks_tutboot_ml_procedure}
 
 1. Log in to {{site.data.keyword.knowledgestudioshort}} as the administrator.
 1. Upload more documents to the workspace. You can use the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/documents-ml.csv" download>`documents-ml.csv`<img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> file.
@@ -78,5 +83,6 @@ In this tutorial, you can add a second set of documents by using the `documents-
     In this situation, human annotation requires less time because you used the machine learning model to pre-annotate the documents.
 
 ### Results
+{: #wks_tutboot_ml_results}
 
 By using your machine learning model to pre-annotate new document sets, you can expedite human annotation tasks for those documents.

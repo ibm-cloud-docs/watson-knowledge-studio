@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-06-13"
 
 ---
 
@@ -32,12 +32,14 @@ In {{site.data.keyword.knowledgestudiofull}} , the creation of the machine learn
 When you create a machine learning model, you select the document sets that you want to use to train the model and specify the percentage of documents that are to be used as training data, test data, and blind data.
 
 ### About this task
+{: #wks_madocsets_about}
 
 By exploring the performance metrics, you can identify ways to improve the model's accuracy.
 
 > **Restriction:** Only three machine learning models can be trained at a time per {{site.data.keyword.knowledgestudioshort}} instance. If your instance contains multiple workspaces and the number of machine learning models that are being trained in other workspaces totals 3 already, then your request to train the machine learning model in your workspace will be queued until the other training processes are done.
 
 ### Procedure
+{: #wks_madocsets_procedure}
 
 To create a machine learning model:
 
@@ -65,22 +67,36 @@ To create a machine learning model:
 
 1. After the model is created, select one of the following actions:
 
-    <table border="1" frame="hsides" rules="rows" cellpadding="4" cellspacing="0" summary="Each row in this table describes one option for a choice." class="simpletable choicetable choicetableborder">
-      <thead><tr><th id="d33883e137-option" valign="bottom" align="left" class="ncol thleft thbot">Option</th>
-          <th id="d33883e137-desc" valign="bottom" align="left" class="ncol thleft thbot">Description</th></tr></thead>
-      <tbody><tr class="strow chrow"><td valign="top" headers="d33883e137-option" id="d33883e139" class="stentry choption ncol"><p class="p wrapper"><strong>Log</strong></p></td>
-          <td valign="top" headers="d33883e137-desc d33883e139" class="stentry chdesc ncol"><p class="p wrapper">View the log file to see whether any problems occurred.</p></td>
-        </tr>
-        <tr class="strow chrow"><td valign="top" headers="d33883e137-option" id="d33883e144" class="stentry choption ncol"><p class="p wrapper"><strong>Details</strong></p></td>
-          <td valign="top" headers="d33883e137-desc d33883e144" class="stentry chdesc ncol"><p class="p wrapper">View the annotation performance statistics, change the document sets that you want to use
-              for training and testing the model, and create snapshot versions of the model
-              artifacts.</p></td>
-        </tr>
-        <tr class="strow chrow"><td valign="top" headers="d33883e137-option" id="d33883e149" class="stentry choption ncol"><p class="p wrapper"><strong>Export</strong></p></td>
-          <td valign="top" headers="d33883e137-desc d33883e149" class="stentry chdesc ncol"><p class="p wrapper">Export a <code>ZIP</code> file to your local system that contains the components
-              that are required for the model to run in a machine learning runtime environment.</p></td>
-        </tr>
-      </tbody>
+    <table summary="Each row in this table describes one option for a choice.">
+      <caption>Table 1. Document options</caption>
+      <tr>
+        <th style="vertical-align:bottom; text-align"left" id="d33883e137-option">Option</th>
+        <th style="vertical-align:bottom; text-align"left" id="d33883e137-desc">Description</th>
+      </tr>
+      <tr>
+        <td style="vertical-align:top; text-align"left" headers="d33883e137-option" id="d33883e139">
+          <p><strong>Log</strong></p>
+        </td>
+        <td style="vertical-align:top; text-align"left" headers="d33883e137-desc d33883e139">
+          <p>View the log file to see whether any problems occurred.</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="vertical-align:top; text-align"left" headers="d33883e137-option" id="d33883e144">
+          <p><strong>Details</strong></p>
+        </td>
+        <td style="vertical-align:top; text-align"left" headers="d33883e137-desc d33883e144">
+          <p>View the annotation performance statistics, change the document sets that you want to use for training and testing the model, and create snapshot versions of the model artifacts.</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="vertical-align:top; text-align"left" headers="d33883e137-option" id="d33883e149">
+          <p><strong>Export</strong></p>
+        </td>
+        <td style="vertical-align:top; text-align"left" headers="d33883e137-desc d33883e149">
+          <p>Export a <code>ZIP</code> file to your local system that contains the components that are required for the model to run in a machine learning runtime environment.</p>
+        </td>
+      </tr>
     </table>
 
 ## Evaluating annotations added by the model
@@ -89,6 +105,7 @@ To create a machine learning model:
 You can compare the ground truth view for annotations added by human annotators to the annotations added by the model.
 
 ### Procedure
+{: #wks_matest_procedure}
 
 To evaluate the annotations added by the model:
 

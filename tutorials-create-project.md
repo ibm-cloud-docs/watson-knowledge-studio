@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-26"
+lastupdated: "2018-06-12"
 
 ---
 
@@ -45,10 +45,12 @@ This {{site.data.keyword.knowledgestudiofull}} tutorial helps you perform prereq
 In this lesson, you will learn about the different roles that you can assign to users in {{site.data.keyword.knowledgestudioshort}}.
 
 ### About this task
+{: #wks_tutless1_about}
 
 The creation of a machine learning model requires input from subject matter experts, project managers, and users who can understand and interpret statistical models. Administrators assign roles to each user, such that they have appropriate authority for their tasks. For more information about user roles, see [Assembling a team](/docs/services/watson-knowledge-studio/team.html).
 
 ### Procedure
+{: #wks_tutless1_procedure}
 
 1. Log in to {{site.data.keyword.knowledgestudioshort}} with your administrator ID. If you have an existing {{site.data.keyword.knowledgestudioshort}} instance, you can find it from the {{site.data.keyword.cloud_notm}} {{site.data.keyword.watson}} [services page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/watson/services){: new_window}.
 1. Click the Settings icon to open the Service Details page. The page lists all the user IDs that are registered as {{site.data.keyword.knowledgestudioshort}} users. Each user ID has one of the following roles (in decreasing order of included permissions):
@@ -74,10 +76,12 @@ The creation of a machine learning model requires input from subject matter expe
 In this lesson, you will learn how to create a workspace within {{site.data.keyword.knowledgestudioshort}}.
 
 ### About this task
+{: #wks_tutless2_about}
 
 A workspace defines all the resources that are required to create a machine learning model, including training documents, the type system, dictionaries, and annotations that are added by human annotators. For more information about workspace creation, see [Creating a workspace](/docs/services/watson-knowledge-studio/create-project.html).
 
 ### Procedure
+{: #wks_tutless2_procedure}
 
 1. As a {{site.data.keyword.knowledgestudioshort}} administrator, from your {{site.data.keyword.cloud_notm}} [dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net){:new_window}, launch the {{site.data.keyword.knowledgestudioshort}} service.
 1. Click **Create Worskpace**.
@@ -90,10 +94,12 @@ A workspace defines all the resources that are required to create a machine lear
 1. Click **Create**.
 
 ### Results
+{: #wks_tutless2_results}
 
 The workspace is created and opens automatically.
 
 ### What to do next
+{: #wks_tutless2_next}
 
 You can now start configuring the workspace resources, such as the type system.
 
@@ -103,10 +109,12 @@ You can now start configuring the workspace resources, such as the type system.
 In this lesson, you will learn how to upload and modify a type system within {{site.data.keyword.knowledgestudioshort}}. You must create or upload a type system before you begin any annotation tasks.
 
 ### About this task
+{: #wks_tutless3_about}
 
 For more information about type systems, see [Type systems](/docs/services/watson-knowledge-studio/typesystem.html#wks_typesystem).
 
 ### Procedure
+{: #wks_tutless3_procedure}
 
 1. Download the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/en-klue2-types.json" download>en-klue2-types.json<img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> file to your computer. This file contains an example KLUE type system.
 1. From the sidebar, click **Assets & Tools** > **Entity Types**.
@@ -124,6 +132,7 @@ For more information about type systems, see [Type systems](/docs/services/watso
     1. Click **Save**.
 
 ### What to do next
+{: #wks_tutless3_next}
 
 After you finish making changes to the type system, you can begin adding documents to your workspace.
 
@@ -133,10 +142,12 @@ After you finish making changes to the type system, you can begin adding documen
 In this lesson, you will learn how to add a dictionary to a workspace in {{site.data.keyword.knowledgestudioshort}}. Dictionaries are used for pre-annotating text when creating a machine learning model.
 
 ### About this task
+{: #wks_tutless4_about}
 
 For more information about dictionaries, see [Adding dictionaries to a workspace](/docs/services/watson-knowledge-studio/dictionaries.html#wks_projdictionaries).
 
 ### Procedure
+{: #wks_tutless4_procedure}
 
 1. Download the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/dictionary-items-organization.csv" download>`dictionary-items-organization.csv`<img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> file to your computer. This file contains dictionary terms in CSV format, suitable for uploading into a {{site.data.keyword.knowledgestudioshort}} dictionary.
 1. From the **Assets & Tools** > **Pre-annotators** sidebar, select the **Dictionaries** tab, and click **Manage Dictionaries**.
@@ -158,6 +169,7 @@ For more information about dictionaries, see [Adding dictionaries to a workspace
     ![A screen capture of the Dictionaries page. A dictionary entry is selected and its surface forms and part of speech of highlighted.](images/wks_tutdict4.jpg)
 
 ### What to do next
+{: #wks_tutless4_next}
 
 After you create a dictionary, you can use it to speed up human annotation tasks by pre-annotating the documents.
 
@@ -167,6 +179,7 @@ After you create a dictionary, you can use it to speed up human annotation tasks
 While learning about {{site.data.keyword.knowledgestudioshort}}, you created a workspace and added artifacts to it.
 
 ### Lessons learned
+{: #lessons_learned}
 
 By completing this tutorial, you learned about the following concepts:
 

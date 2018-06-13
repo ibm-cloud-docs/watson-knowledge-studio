@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-06-12"
 
 ---
 
@@ -32,6 +32,7 @@ After you determine areas in which the model is having trouble, take steps to im
 After you create a machine learning model, you can take a snapshot to keep a backup version of the current resources in case you want to restore the resources in a future iteration.
 
 ### About this task
+{: #wks_maversions_about}
 
 The F1 score provides an indication of the quality of the model. If the model performance results are good, you might want to store a version of the component before changing any of the resources. If changes that you make result in poorer quality, you can revert to a version that you stored. When you revert to an older version, all annotation tasks are archived because they are no longer valid.
 
@@ -51,6 +52,7 @@ The following resources are excluded:
 - Dictionaries, because dictionaries can be large, and various types of dictionaries are managed in different ways
 
 ### Procedure
+{: #wks_maversions_procedure}
 
 To create and restore machine learning model versions:
 
@@ -72,10 +74,12 @@ To create and restore machine learning model versions:
 You might need to make modifications while you train a model, based on the performance statistics. But, generally, you want the type system to be as close to final as possible before you begin large-scale annotation tasks. If you change the type system after human annotators began their work, they must revisit the documents that they annotated. They must assess the applicability of the type system changes.
 
 ### About this task
+{: #wks_projtypesysmod_about}
 
 This process propagates the current type system, ground truth editor keyboard shortcuts, and color settings to all document sets in a task.
 
 ### Procedure
+{: #wks_projtypesysmod_procedure}
 
 To modify the type system without losing the work that was done by human annotators:
 
@@ -91,6 +95,7 @@ To modify the type system without losing the work that was done by human annotat
     > **Note:** If the task contains completed documents, human annotators cannot alter those documents to assess type system changes until they are back in an editable state. To become editable, ask human annotators to submit the document sets so that you can reject them.
 
 **Related concepts**:
+{: #wks_projtypesysmod_related}
 
 [Type systems](/docs/services/watson-knowledge-studio/typesystem.html#wks_typesystem)
 
@@ -116,10 +121,12 @@ The documents that you add to the system must be allocated to the following syst
 The goal of {{site.data.keyword.knowledgestudioshort}} is to enable large teams to work together to build models. As such, it assumes that models are being produced by a team that includes a group of human annotators and a separate person or group of people that builds and tests the model, and makes improvements to it. Due to this assumption, the application is configured to push an equally proportioned grouping of documents from a single document set into the test, train, and blind sets. However, if your team is not segregated - if the people doing human annotation are also reviewing model test results in detail, for example - then you might need to change the allocation of documents into these sets to more explicitly separate the documents that are being used in each one.
 
 ### Why do I need a blind set?
+{: #wks_mamanagedata_why}
 
 Because you use test data to assess accuracy in detail, you get to know the documents and their features after a while. For example, you start to know which entity types, relation types, and text types in the documents are best understood by the machine learning model, and which are not. This information is important because it helps you focus on making the right improvements - refining the type system, supplementing the training data to fill gaps, or adding dictionaries, for example. As the test documents get used iteratively to improve the model, they can start to influence the model training indirectly. That's why the "blind" set of documents is so important.
 
 ### How do I control which documents are allocated to a set?
+{: #wks_mamanagedata_how}
 
 When you create a machine learning model, you must specify the ratio of documents from the set to allocate to the train, test, or blind sets. {{site.data.keyword.knowledgestudioshort}} automatically applies a ratio of 70/23/7 to the document sets that you use to build a machine learning model. You can change these values.
 

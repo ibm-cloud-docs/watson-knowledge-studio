@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-08"
+lastupdated: "2018-06-13"
 
 ---
 
@@ -96,10 +96,12 @@ This stage refers to exporting components that enable the model to run in machin
 Before human annotators can begin adding annotations to documents, the annotation process manager must create an annotation task.
 
 ### About this task
+{: #wks_hatask_about}
 
 The annotation task specifies which documents are to be annotated. To compare how well the human annotators perform, and to see how consistently they apply the annotation guidelines, you must include at least two human annotators in the task. In addition, some percentage of documents must occur in all of the annotation sets that you add to the task (you specify the overlap percentage when you create the annotation sets).
 
 #### Important
+{: #wks_hatask_important}
 
 - An annotation task is a temporal concept that exists to allow human annotators to annotate text in isolated spaces. It also ensures that only approved annotations are promoted to ground truth.
 - An annotation set can be included in one active task at a time. To add an annotation set in one task to a different task, you must first delete the task where the annotation set is active.
@@ -109,6 +111,7 @@ The annotation task specifies which documents are to be annotated. To compare ho
 - You can have up to 256 annotation tasks per workspace.
 
 ### Procedure
+{: #wks_hatask_procedure}
 
 To create an annotation task:
 
@@ -125,6 +128,7 @@ To create an annotation task:
     {: tip}
 
 ### What to do next
+{: #wks_hatask_next}
 
 After the task is created, you can return to the **Assets & Tools** > **Documents** > **Tasks** tab to view the progress of each human annotator. You can also:
 
@@ -140,6 +144,7 @@ After the task is created, you can return to the **Assets & Tools** > **Document
 An project manager can specify preferences for using colors and keyboard shortcuts in the ground truth editor.
 
 ### Procedure
+{: #wks_hapref_procedure}
 
 To specify visual preferences for working with the ground truth editor :
 
@@ -160,6 +165,7 @@ To specify visual preferences for working with the ground truth editor :
 1. You can also change the default selection highlight color. This is the color of the border that is displayed around text after you select it. The default color is a light blue, but you can change the color on the **Selection Highlight** tab to make it easier to identify the boundaries of the text that is selected.
 
 #### Related tasks
+{: #wks_hapref_related}
 
 [Modifying a type system without losing human annotations](/docs/services/watson-knowledge-studio/improve-ml.html#wks_projtypesysmod)
 
@@ -169,10 +175,12 @@ To specify visual preferences for working with the ground truth editor :
 To help you decide whether to accept or reject an annotated document set, you can specify an inter-annotator agreement threshold. The threshold helps you compare how well or poorly inter-annotator agreement compares to the IAA score calculated by the system.
 
 ### About this task
+{: #wks_haiaathresh_about}
 
 To compare how different human annotators annotated the same documents, specify an evaluation threshold. If the annotations made by one human annotator differ from the annotations made by another human annotator to the point where the difference results in a low score, it means that the annotators do not agree. The disagreement needs to be investigated and resolved.
 
 ### Procedure
+{: #wks_haiaathresh_procedure}
 
 To set the inter-annotator agreement threshold:
 
@@ -186,6 +194,7 @@ To set the inter-annotator agreement threshold:
 After you create annotation guidelines for your project, you can configure {{site.data.keyword.knowledgestudioshort}} to connect to them. For help with choosing the correct annotation to apply, human annotators can review the guidelines while annotating documents. Administrators can also review the guidelines if they need assistance while resolving annotation conflicts in overlapping documents.
 
 ### Procedure
+{: #wks_haguidelines_procedure}
 
 To connect the ground truth editor and adjudication tool to your annotation guidelines:
 
@@ -231,103 +240,132 @@ The example presented here is a simple guideline that was created for a small do
 
 The type system does not use entity sub-types or roles, nor mention types or classes.
 
-<table cellpadding="4" cellspacing="0" summary="" id="wks_guidelinesexample__table_okd_5kj_f5" class="table" width="100%" rules="rows" frame="void" border="0"><thead class="thead" align="left"><tr class="row"><th class="entry ncol thleft" valign="top" width="23.584905660377355%" id="d1735e810">Entity Type</th>
-<th class="entry ncol thleft" valign="top" width="37.971698113207545%" id="d1735e812">Guidelines</th>
-<th class="entry ncol thleft" valign="top" width="38.44339622641509%" id="d1735e814">Examples</th>
-</tr>
-</thead>
-<tbody class="tbody"><tr class="row"><td class="entry ncol" valign="top" width="23.584905660377355%" headers="d1735e810 "><p class="p wrapper">ACCIDENT_OUTCOME</p></td>
-<td class="entry ncol" valign="top" width="37.971698113207545%" headers="d1735e812 "><p class="p wrapper">A consequence of an accident. Applies to both humans (e.g., death) and cars (e.g., dented).
-Can include "towed" and "air bag deployment" as indicators of severity of damage, and "transported
-to hospital" (but not funeral home) as indicators of severity of injury. Can include
-negation.</p></td>
-<td class="entry ncol" valign="top" width="38.44339622641509%" headers="d1735e814 "><p class="p wrapper">"[casualty]", "[injury]", "sustained [total loss]", "[no injuries]", "[towed] due to
-[disabling damage]", [not towed], "air bag did [not deploy]" (air bag itself has to be PART_OF_CAR,
-related by sufferedFrom to this ACCIDENT_OUTCOME), and indications of severity.</p></td>
-</tr>
-<tr class="row"><td class="entry ncol" valign="top" width="23.584905660377355%" headers="d1735e810 "><p class="p wrapper">CONDITION</p></td>
-<td class="entry ncol" valign="top" width="37.971698113207545%" headers="d1735e812 "><p class="p wrapper">Weather or road conditions; an aspect of the scene that could affect likelihood of accident
-and could change from day to day but is not about the car or driver.</p><p class="p">Can be driver error or
-mechanical failure, and must appear to be problematic. Should exclude STRUCTURE.</p>
-</td>
-<td class="entry ncol" valign="top" width="38.44339622641509%" headers="d1735e814 "><p class="p wrapper">"dry", "rainy", "construction", "heavy traffic", "daylight", but not "grassy" or
-"intoxicated".</p><p class="p">"flat tire", "overcorrected" (as in steering), "asleep", "intoxicated", "[failed to
-negotiate]CONDITION a [curve]STRUCTURE", "[departed] the lane" or shoulder, but not "attempting to
-pass" unless this phrase is accompanied by "without enough room" or something similar, nor
-"departing the road", which is an INCIDENT.</p>
-</td>
-</tr>
-<tr class="row"><td class="entry ncol" valign="top" width="23.584905660377355%" headers="d1735e810 "><p class="p wrapper">INCIDENT</p></td>
-<td class="entry ncol" valign="top" width="37.971698113207545%" headers="d1735e812 "><p class="p wrapper">An actual mention of a collision, or a car motion that is unambiguously inappropriate and
-likely destructive, such as going off-road, or some other damaging incident, like a car fire. </p><p class="p">Do
-not co-reference non-identical motions to each other, such as "impacted", "pushed rearward" and
-"came to final rest", even if they are closely associated. </p>
-<p class="p">Exclude STRUCTURE from the extent;
-for example, "[came to rest]INCIDENT in a [ditch]STRUCTURE" or "[remaining in contact]INCIDENT with
-the [guardrail]STRUCTURE".</p>
-</td>
-<td class="entry ncol" valign="top" width="38.44339622641509%" headers="d1735e814 "><p class="p wrapper"> "crash", "impacted", "overturned", "contacted", "against", "pushed", "passenger was
-[ejected]", "rolled over a quarter turn" -- the quarter turn indicating severity but being part of
-the incident, not an ACCIDENT_OUTCOME (do not annotate vehicle rotation).</p><p class="p">"came to final rest" in
-a place the vehicle does not belong, such as an embankment or in motion from an impact, or "departed
-the roadway" (not merely departing a lane, which may be a cause). </p>
-</td>
-</tr>
-<tr class="row"><td class="entry ncol" valign="top" width="23.584905660377355%" headers="d1735e810 "><p class="p wrapper">MANUFACTURER</p></td>
-<td class="entry ncol" valign="top" width="37.971698113207545%" headers="d1735e812 "><p class="p wrapper">The company that makes the vehicle.</p></td>
-<td class="entry ncol" valign="top" width="38.44339622641509%" headers="d1735e814 "><p class="p wrapper">Toyota, Mazda, General Motors</p></td>
-</tr>
-<tr class="row"><td class="entry ncol" valign="top" width="23.584905660377355%" headers="d1735e810 "><p class="p wrapper">MODEL</p></td>
-<td class="entry ncol" valign="top" width="37.971698113207545%" headers="d1735e812 "><p class="p wrapper">The specific kind of car, made by a specific manufacturer. Exclude any extra terms / trim
-line indicators like "LX", or "SE" (e.g., only annotate "Xterra" for the phrase "Xterra
-SE").</p></td>
-<td class="entry ncol" valign="top" width="38.44339622641509%" headers="d1735e814 "><p class="p wrapper">Camry</p></td>
-</tr>
-<tr class="row"><td class="entry ncol" valign="top" width="23.584905660377355%" headers="d1735e810 "><p class="p wrapper">MODEL_YEAR</p></td>
-<td class="entry ncol" valign="top" width="37.971698113207545%" headers="d1735e812 "><p class="p wrapper">The model year that is part of the name of the car.</p></td>
-<td class="entry ncol" valign="top" width="38.44339622641509%" headers="d1735e814 "><p class="p wrapper">'99, 2001</p></td>
-</tr>
-<tr class="row"><td class="entry ncol" valign="top" width="23.584905660377355%" headers="d1735e810 "><p class="p wrapper">PART_OF_CAR</p></td>
-<td class="entry ncol" valign="top" width="37.971698113207545%" headers="d1735e812 "><p class="p wrapper">A part of a vehicle, either inside or outside of it, regardless of whether specifically
-involved in the incident. Exclude listings of capabilities of such parts. Include indications of
-where in the car the part is, or something which just refers to a portion of a car without being a
-specific part.</p><p class="p">Can be plural. Can include specification of position in the vehicle, such as
-"[driver airbag]", "[RF door]" (meaning right-front), "[RR] passenger", "[LF and RF air bags]",
-"[first row passive/automatic restraints]", "[safety system] with EDR capabilities".</p>
-<p class="p">Include
-towed boats, tanks, etc., except semi-trailers, which have a distinct
-year/model/manufacturer.</p>
-</td>
-<td class="entry ncol" valign="top" width="38.44339622641509%" headers="d1735e814 "><p class="p wrapper">Cross-section, front plane, tire, steering wheel, airbag, etc.</p></td>
-</tr>
-<tr class="row"><td class="entry ncol" valign="top" width="23.584905660377355%" headers="d1735e810 "><p class="p wrapper">PERSON</p></td>
-<td class="entry ncol" valign="top" width="37.971698113207545%" headers="d1735e812 "><p class="p wrapper">Any person described in an accident scene in a report (could be a driver or a
-passenger/occupant of a vehicle, pedestrian, or witness). </p><p class="p">Don't annotate adjectives, so don't
-annotate "a [69-year-old] drove", but do annotate "a 69-year-old [male] drove". Can be plural, e.g.,
-"LR and RF [occupants]". Excludes people who arrive after incident. </p>
-<p class="p">In the absence of an
-"animal" entity type, use PERSON to tag wildlife involved in / causing collisions, as their ability
-to move makes them more like a PERSON than a STRUCTURE. </p>
-<p class="p">Note: "passenger airbag" is a
-PART_OF_CAR; it does not imply that a person is present. </p>
-</td>
-<td class="entry ncol" valign="top" width="38.44339622641509%" headers="d1735e814 "><p class="p wrapper">Driver, occupant, patient, child</p></td>
-</tr>
-<tr class="row"><td class="entry ncol" valign="top" width="23.584905660377355%" headers="d1735e810 "><p class="p wrapper">STRUCTURE</p></td>
-<td class="entry ncol" valign="top" width="37.971698113207545%" headers="d1735e812 "><p class="p wrapper">A structure that is on, near, or part of a road. Include specific road adjectives likely to
-be relevant to the configuration of an accident; omit other adjectives.</p></td>
-<td class="entry ncol" valign="top" width="38.44339622641509%" headers="d1735e814 "><p class="p wrapper">[two-lane, two-way road], [left lane], eastbound [lane], 2-foot [ditch], [right lane line],
-[exit ramp], [pole], [tree], steep descending [embankment]</p></td>
-</tr>
-<tr class="row"><td class="entry ncol" valign="top" width="23.584905660377355%" headers="d1735e810 "><p class="p wrapper">VEHICLE</p></td>
-<td class="entry ncol" valign="top" width="37.971698113207545%" headers="d1735e812 "><p class="p wrapper">Any reference to vehicle other than MODEL, MANUFACTURER, and MODEL_YEAR. Can be plural, in
-which case coreference is very unlikely and no part-of-group relation. </p><p class="p">Consider only vehicles
-that are part of the scene; exclude emergency vehicles that responded later, for example. Bicycles
-are VEHICLEs.</p>
-</td>
-<td class="entry ncol" valign="top" width="38.44339622641509%" headers="d1735e814 "><p class="p wrapper">"the [truck]", "the [car]", "[V1]'s"</p></td>
-</tr>
-</tbody>
+<table summary="This table describes the entity types.">
+  <caption>Table 1. Entity types</caption>
+  <tr>
+    <th style="vertical-align:bottom; text-align:left" width="24%" id="d1735e810">Entity Type</th>
+    <th style="vertical-align:bottom; text-align:left" width="38%" id="d1735e812">Guidelines</th>
+    <th style="vertical-align:bottom; text-align:left" width="38%" id="d1735e814">Examples</th>
+  </tr>
+  <tr>
+    <td headers="d1735e810">
+      <p>ACCIDENT_OUTCOME</p>
+    </td>
+    <td headers="d1735e812">
+      <p>A consequence of an accident. Applies to both humans (e.g., death) and cars (e.g., dented). Can include "towed" and "air bag deployment" as indicators of severity of damage, and "transported to hospital" (but not funeral home) as indicators of severity of injury. Can include negation.</p>
+    </td>
+    <td headers="d1735e814">
+      <p>"[casualty]", "[injury]", "sustained [total loss]", "[no injuries]", "[towed] due to [disabling damage]", [not towed], "air bag did [not deploy]" (air bag itself has to be PART_OF_CAR, related by sufferedFrom to this ACCIDENT_OUTCOME), and indications of severity.</p>
+    </td>
+  </tr>
+  <tr>
+    <td headers="d1735e810">
+      <p>CONDITION</p>
+    </td>
+    <td headers="d1735e812 ">
+      <p>Weather or road conditions; an aspect of the scene that could affect likelihood of accident and could change from day to day but is not about the car or driver.</p>
+      <p>Can be driver error or mechanical failure, and must appear to be problematic. Should exclude STRUCTURE.</p>
+    </td>
+    <td headers="d1735e814">
+      <p>"dry", "rainy", "construction", "heavy traffic", "daylight", but not "grassy" or "intoxicated".</p><p>"flat tire", "overcorrected" (as in steering), "asleep", "intoxicated", "[failed to negotiate]CONDITION a [curve]STRUCTURE", "[departed] the lane" or shoulder, but not "attempting to pass" unless this phrase is accompanied by "without enough room" or something similar, nor "departing the road", which is an INCIDENT.</p>
+    </td>
+  </tr>
+  <tr>
+    <td headers="d1735e810">
+      <p>INCIDENT</p>
+    </td>
+    <td headers="d1735e812">
+      <p>An actual mention of a collision, or a car motion that is unambiguously inappropriate and likely destructive, such as going off-road, or some other damaging incident, like a car fire. </p>
+      <p>Do not co-reference non-identical motions to each other, such as "impacted", "pushed rearward" and "came to final rest", even if they are closely associated.</p>
+      <p>Exclude STRUCTURE from the extent; for example, "[came to rest]INCIDENT in a [ditch]STRUCTURE" or "[remaining in contact]INCIDENT with the [guardrail]STRUCTURE".</p>
+    </td>
+    <td headers="d1735e814">
+      <p> "crash", "impacted", "overturned", "contacted", "against", "pushed", "passenger was [ejected]", "rolled over a quarter turn" -- the quarter turn indicating severity but being part of the incident, not an ACCIDENT_OUTCOME (do not annotate vehicle rotation).</p>
+      <p>"came to final rest" in a place the vehicle does not belong, such as an embankment or in motion from an impact, or "departed the roadway" (not merely departing a lane, which may be a cause).</p>
+    </td>
+  </tr>
+  <tr>
+    <td headers="d1735e810">
+      <p>MANUFACTURER</p>
+    </td>
+    <td headers="d1735e812">
+      <p>The company that makes the vehicle.</p>
+    </td>
+    <td headers="d1735e814">
+      <p>Toyota, Mazda, General Motors</p>
+    </td>
+  </tr>
+  <tr>
+    <td headers="d1735e810">
+      <p>MODEL</p>
+    </td>
+    <td headers="d1735e812">
+      <p>The specific kind of car, made by a specific manufacturer. Exclude any extra terms / trim line indicators like "LX", or "SE" (e.g., only annotate "Xterra" for the phrase "Xterra SE").</p>
+    </td>
+    <td headers="d1735e814">
+      <p>Camry</p>
+    </td>
+  </tr>
+  <tr>
+    <td headers="d1735e810">
+      <p>MODEL_YEAR</p>
+    </td>
+    <td headers="d1735e812">
+      <p>The model year that is part of the name of the car.</p>
+    </td>
+    <td headers="d1735e814">
+      <p>'99, 2001</p>
+    </td>
+  </tr>
+  <tr>
+    <td headers="d1735e810">
+      <p>PART_OF_CAR</p>
+    </td>
+    <td headers="d1735e812">
+      <p>A part of a vehicle, either inside or outside of it, regardless of whether specifically involved in the incident. Exclude listings of capabilities of such parts. Include indications of where in the car the part is, or something which just refers to a portion of a car without being a specific part.</p><p>Can be plural. Can include specification of position in the vehicle, such as "[driver airbag]", "[RF door]" (meaning right-front), "[RR] passenger", "[LF and RF air bags]", "[first row passive/automatic restraints]", "[safety system] with EDR capabilities".</p>
+      <p>Include towed boats, tanks, etc., except semi-trailers, which have a distinct year/model/manufacturer.</p>
+    </td>
+    <td headers="d1735e814">
+      <p>Cross-section, front plane, tire, steering wheel, airbag, etc.</p>
+    </td>
+  </tr>
+  <tr>
+    <td headers="d1735e810">
+      <p>PERSON</p>
+    </td>
+    <td headers="d1735e812">
+      <p>Any person described in an accident scene in a report (could be a driver or a passenger/occupant of a vehicle, pedestrian, or witness).</p>
+      <p>Don't annotate adjectives, so don't annotate "a [69-year-old] drove", but do annotate "a 69-year-old [male] drove". Can be plural, for example, "LR and RF [occupants]". Excludes people who arrive after incident.</p>
+      <p>In the absence of an "animal" entity type, use PERSON to tag wildlife involved in / causing collisions, as their ability to move makes them more like a PERSON than a STRUCTURE.</p>
+      <p>Note: "passenger airbag" is a PART_OF_CAR; it does not imply that a person is present.</p>
+    </td>
+    <td headers="d1735e814">
+      <p>Driver, occupant, patient, child</p>
+    </td>
+  </tr>
+  <tr>
+    <td headers="d1735e810">
+      <p>STRUCTURE</p>
+    </td>
+    <td headers="d1735e812">
+      <p>A structure that is on, near, or part of a road. Include specific road adjectives likely to be relevant to the configuration of an accident; omit other adjectives.</p>
+    </td>
+    <td headers="d1735e814">
+     <p>[two-lane, two-way road], [left lane], eastbound [lane], 2-foot [ditch], [right lane line], [exit ramp], [pole], [tree], steep descending [embankment]</p>
+    </td>
+  </tr>
+  <tr>
+    <td headers="d1735e810">
+      <p>VEHICLE</p>
+    </td>
+    <td headers="d1735e812">
+      <p>Any reference to vehicle other than MODEL, MANUFACTURER, and MODEL_YEAR. Can be plural, in which case coreference is very unlikely and no part-of-group relation.</p>
+      <p>Consider only vehicles that are part of the scene; exclude emergency vehicles that responded later, for example. Bicycles are VEHICLEs.</p>
+    </td>
+    <td headers="d1735e814">
+      <p>"the [truck]", "the [car]", "[V1]'s"</p>
+    </td>
+  </tr>
 </table>
 
 #### Relation Types
@@ -335,55 +373,112 @@ are VEHICLEs.</p>
 
 The type system uses relation types, but not relation classes or other attributes of relations. Negation is not encoded by a relation class, but rather by the extents of the mentions, for example, [no occupants]PERSON were [hospitalized]ACCIDENT_OUTCOME with the two mentions linked by the relation type sufferedFrom.
 
-<table cellpadding="4" cellspacing="0" summary="" id="wks_guidelinesexample__table_z25_m4j_f5" class="table" width="100%" rules="rows" frame="void" border="0"><thead class="thead" align="left"><tr class="row"><th class="entry ncol thleft" valign="top" width="33.26996197718631%" id="d1735e923">Possible entity types for the first mention</th>
-<th class="entry ncol thleft" valign="top" width="19.011406844106464%" id="d1735e925">Relation Type</th>
-<th class="entry ncol thleft" valign="top" width="47.71863117870722%" id="d1735e927">Possible entity types for the second mention</th>
-</tr>
-</thead>
-<tbody class="tbody"><tr class="row"><td class="entry ncol" valign="top" width="33.26996197718631%" headers="d1735e923 "><p class="p wrapper">VEHICLE, MODEL, MANUFACTURER [<b>2</b>]</p></td>
-<td class="entry ncol" valign="top" width="19.011406844106464%" headers="d1735e925 "><p class="p wrapper">hasProperty</p></td>
-<td class="entry ncol" valign="top" width="47.71863117870722%" headers="d1735e927 "><p class="p wrapper">MANUFACTURER, MODEL, MODEL_YEAR</p></td>
-</tr>
-<tr class="row"><td class="entry ncol" valign="top" width="33.26996197718631%" headers="d1735e923 "><p class="p wrapper">PERSON</p></td>
-<td class="entry ncol" valign="top" width="19.011406844106464%" headers="d1735e925 "><p class="p wrapper">occupantOf</p></td>
-<td class="entry ncol" valign="top" width="47.71863117870722%" headers="d1735e927 "><p class="p wrapper">VEHICLE, MODEL, MANUFACTURER, MODEL_YEAR [<b>1</b>], PART_OF_CAR, STRUCTURE</p></td>
-</tr>
-<tr class="row"><td class="entry ncol" valign="top" width="33.26996197718631%" headers="d1735e923 "><p class="p wrapper">PERSON, PART_OF_CAR, STRUCTURE, VEHICLE, MODEL, MANUFACTURER,
-MODEL_YEAR [<b>1</b>]</p></td>
-<td class="entry ncol" valign="top" width="19.011406844106464%" headers="d1735e925 "><p class="p wrapper">sufferedFrom</p></td>
-<td class="entry ncol" valign="top" width="47.71863117870722%" headers="d1735e927 "><p class="p wrapper">ACCIDENT_OUTCOME</p></td>
-</tr>
-<tr class="row"><td class="entry ncol" valign="top" width="33.26996197718631%" headers="d1735e923 "><p class="p wrapper">VEHICLE</p></td>
-<td class="entry ncol" valign="top" width="19.011406844106464%" headers="d1735e925 "><p class="p wrapper">driveUnder</p></td>
-<td class="entry ncol" valign="top" width="47.71863117870722%" headers="d1735e927 "><p class="p wrapper">CONDITION, ACCIDENT_CAUSE</p></td>
-</tr>
-<tr class="row"><td class="entry ncol" valign="top" width="33.26996197718631%" headers="d1735e923 "><p class="p wrapper">PART_OF_CAR</p></td>
-<td class="entry ncol" valign="top" width="19.011406844106464%" headers="d1735e925 "><p class="p wrapper">locatedOn</p></td>
-<td class="entry ncol" valign="top" width="47.71863117870722%" headers="d1735e927 "><p class="p wrapper">VEHICLE, MODEL, MANUFACTURER, MODEL_YEAR [<b>1</b>]</p></td>
-</tr>
-<tr class="row"><td class="entry ncol" valign="top" width="33.26996197718631%" headers="d1735e923 "><p class="p wrapper">ACCIDENT_OUTCOME</p></td>
-<td class="entry ncol" valign="top" width="19.011406844106464%" headers="d1735e925 "><p class="p wrapper">outcomeOf</p></td>
-<td class="entry ncol" valign="top" width="47.71863117870722%" headers="d1735e927 "><p class="p wrapper">INCIDENT</p></td>
-</tr>
-<tr class="row"><td class="entry ncol" valign="top" width="33.26996197718631%" headers="d1735e923 "><p class="p wrapper">INCIDENT</p></td>
-<td class="entry ncol" valign="top" width="19.011406844106464%" headers="d1735e925 "><p class="p wrapper">causedBy</p></td>
-<td class="entry ncol" valign="top" width="47.71863117870722%" headers="d1735e927 "><p class="p wrapper">CONDITION, ACCIDENT_CAUSE <strong class="ph b">(reminder: requires textual evidence of the
-causality)</strong></p></td>
-</tr>
-<tr class="row"><td class="entry ncol" valign="top" width="33.26996197718631%" headers="d1735e923 "><p class="p wrapper">INCIDENT</p></td>
-<td class="entry ncol" valign="top" width="19.011406844106464%" headers="d1735e925 "><p class="p wrapper">impactPoint</p></td>
-<td class="entry ncol" valign="top" width="47.71863117870722%" headers="d1735e927 "><p class="p wrapper">The PERSON, PART_OF_CAR, STRUCTURE, VEHICLE, MANUFACTURER, MODEL, or
-MODEL_YEAR [<b>1</b>] that is hit or involved in the accident.</p><p class="p">impactPoint for STRUCTURE
-does not include mere specifying the location of an impact that does not involve that STRUCTURE, so
-it does not apply to two vehicles colliding in an [intersection]STRUCTURE, but does apply to a
-vehicle striking an [embankment]STRUCTURE.</p>
-</td>
-</tr>
-</tbody>
+<table summary="This table describes the relation types.">
+  <caption>Table 2. Relation types</caption>
+  <tr>
+    <th style="vertical-align:bottom; text-align:left" width="33%" id="d1735e923">
+      Possible entity types for the first mention
+    </th>
+    <th style="vertical-align:bottom; text-align:center" width="19%" id="d1735e925">
+      Relation Type
+    </th>
+    <th style="vertical-align:bottom; text-align:left" width="48%" id="d1735e927">
+      Possible entity types for the second mention
+    </th>
+  </tr>
+  <tr>
+    <td headers="d1735e923">
+      VEHICLE, MODEL, MANUFACTURER [<b>2</b>]
+    </td>
+    <td style="text-align:center" headers="d1735e925">
+      hasProperty
+    </td>
+    <td headers="d1735e927">
+      MANUFACTURER, MODEL, MODEL_YEAR
+    </td>
+  </tr>
+  <tr>
+    <td headers="d1735e923">
+      PERSON
+    </td>
+    <td style="text-align:center" headers="d1735e925">
+      occupantOf
+    </td>
+    <td headers="d1735e927">
+      VEHICLE, MODEL, MANUFACTURER, MODEL_YEAR [<b>1</b>], PART_OF_CAR, STRUCTURE
+    </td>
+  </tr>
+  <tr>
+    <td headers="d1735e923">
+      PERSON, PART_OF_CAR, STRUCTURE, VEHICLE, MODEL, MANUFACTURER, MODEL_YEAR [<b>1</b>]
+    </td>
+    <td style="text-align:center" headers="d1735e925">
+      sufferedFrom
+    </td>
+    <td headers="d1735e927">
+      ACCIDENT_OUTCOME
+    </td>
+  </tr>
+  <tr>
+    <td headers="d1735e923">
+      VEHICLE
+    </td>
+    <td style="text-align:center" headers="d1735e925">
+      driveUnder
+    </td>
+    <td headers="d1735e927">
+      CONDITION, ACCIDENT_CAUSE
+    </td>
+  </tr>
+  <tr>
+    <td headers="d1735e923">
+      PART_OF_CAR
+    </td>
+    <td style="text-align:center" headers="d1735e925">
+      locatedOn
+    </td>
+    <td headers="d1735e927">
+      VEHICLE, MODEL, MANUFACTURER, MODEL_YEAR [<b>1</b>]
+    </td>
+  </tr>
+  <tr>
+    <td headers="d1735e923">
+      ACCIDENT_OUTCOME
+    </td>
+    <td style="text-align:center" headers="d1735e925">
+      outcomeOf
+    </td>
+    <td headers="d1735e927">
+      INCIDENT
+    </td>
+  </tr>
+  <tr>
+    <td headers="d1735e923">
+      INCIDENT
+    </td>
+    <td style="text-align:center" headers="d1735e925">
+      causedBy
+    </td>
+    <td headers="d1735e927">
+      CONDITION, ACCIDENT_CAUSE <strong>(reminder: requires textual evidence of the causality)</strong>
+    </td>
+  </tr>
+  <tr>
+    <td headers="d1735e923">
+      INCIDENT
+    </td>
+    <td style="text-align:center" headers="d1735e925">
+      impactPoint
+    </td>
+    <td headers="d1735e927">
+      <p>The PERSON, PART_OF_CAR, STRUCTURE, VEHICLE, MANUFACTURER, MODEL, or MODEL_YEAR [<b>1</b>] that is hit or involved in the accident.</p>
+      <p>impactPoint for STRUCTURE does not include mere specifying the location of an impact that does not involve that STRUCTURE, so it does not apply to two vehicles colliding in an [intersection]STRUCTURE, but does apply to a vehicle striking an [embankment]STRUCTURE.</p>
+    </td>
+  </tr>
 </table>
 
 #### Table notes
+{: #table_notes}
 
-**1** The notation VEHICLE/MODEL/MANUFACTURER/MODEL_YEAR refers to a mention of a vehicle. The last three are respectively for cases in which the text says something like "the Accord", "the Honda", or, probably rarely, "the '99". The four entity types are in priority order, so in "the driver of the '99 Honda Accord", the relation would be driver (as PERSON) occupantOf Accord (as MODEL), in which case Accord would have the hasProperty relation with both Honda and '99.
-
-**2** MODEL and MANUFACTURER can only be the first argument of hasProperty, only when they appear as nouns (references to a vehicle). MODEL can have the relation hasProperty to MANUFACTURER and MODEL_YEAR, as in "the '99 Honda Accord drove". MANUFACTURER can only have the hasProperty relation to MODEL_YEAR, as in "the '99 Honda drove".
+1.  The notation VEHICLE/MODEL/MANUFACTURER/MODEL_YEAR refers to a mention of a vehicle. The last three are respectively for cases in which the text says something like "the Accord", "the Honda", or, probably rarely, "the '99". The four entity types are in priority order, so in "the driver of the '99 Honda Accord", the relation would be driver (as PERSON) occupantOf Accord (as MODEL), in which case Accord would have the hasProperty relation with both Honda and '99.
+1.  MODEL and MANUFACTURER can only be the first argument of hasProperty, only when they appear as nouns (references to a vehicle). MODEL can have the relation hasProperty to MANUFACTURER and MODEL_YEAR, as in "the '99 Honda Accord drove". MANUFACTURER can only have the hasProperty relation to MODEL_YEAR, as in "the '99 Honda drove".

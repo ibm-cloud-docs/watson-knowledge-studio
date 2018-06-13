@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-16"
+lastupdated: "2018-06-12"
 
 ---
 
@@ -45,14 +45,17 @@ The {{site.data.keyword.alchemylanguageshort}} service has been deprecated. For 
 When you are satisfied with the performance of the model, you can deploy a version of it to {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}}. This feature enables your applications to use the deployed machine learning model to enrich the insights that you get from your data to include the recognition of concepts and relations that are relevant to your domain.
 
 ### Before you begin
+{: #wks_madiscovery_prereqs}
 
 You must have administrative access to a {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}} service instance, and know the {{site.data.keyword.Bluemix_notm}} space and instance names that are associated with it.
 
 ### About this task
+{: #wks_madiscovery_about}
 
 When you deploy the machine learning model, you select the version of it that you want to deploy.
 
 ### Procedure
+{: #wks_madiscovery_procedure}
 
 To deploy a machine learning model to {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}}, complete the following steps:
 
@@ -74,6 +77,7 @@ To deploy a machine learning model to {{site.data.keyword.watson}} {{site.data.k
     Once available, make a note of the model ID (model_id). You will provide this ID to the {{site.data.keyword.discoveryshort}} service to enable the service to use your custom model.
 
 ### What to do next
+{: #wks_madiscovery_next}
 
 To use the deployed model, you must provide the model ID when it is requested during the {{site.data.keyword.discoveryshort}} service enrichment configuration process. For more details, see the [{{site.data.keyword.discoveryshort}} service documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/watson/developercloud/doc/discovery/integrate-wks.shtml){: new_window}.
 
@@ -83,14 +87,17 @@ To use the deployed model, you must provide the model ID when it is requested du
 When you are satisfied with the performance of the model, you can deploy a version of it to {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} {{site.data.keyword.nlushort}}. This feature enables your applications to use the deployed machine learning model to analyze semantic features of text input, including entities and relations.
 
 ### Before you begin
+{: #wks_manlu_prereqs}
 
 You must have a {{site.data.keyword.nlushort}} service to deploy to. And you must know the {{site.data.keyword.Bluemix_notm}} space and instance names that are associated with the service. If you do not remember the space or instance names, find them by logging in to {{site.data.keyword.Bluemix_notm}}. If you do not have an {{site.data.keyword.Bluemix_notm}} account, sign up for an account.
 
 ### About this task
+{: #wks_manlu_about}
 
 When you deploy the machine learning model, you select the version of it that you want to deploy.
 
 ### Procedure
+{: #wks_manlu_procedure}
 
 To deploy a machine learning model to the {{site.data.keyword.nlushort}} service, complete the following steps:
 
@@ -110,6 +117,7 @@ To deploy a machine learning model to the {{site.data.keyword.nlushort}} service
     Once available, make a note of the model ID (model_id). You will provide this ID to the {{site.data.keyword.nlushort}} service to enable the service to use your custom model.
 
 ### What to do next
+{: #wks_manlu_next}
 
 To use the deployed model, you must specify the model ID of your custom model in the `entities.model` parameter.
 
@@ -280,16 +288,19 @@ To undeploy models or find model IDs:
 Export the trained machine learning model so it can be used in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
 
 ### Before you begin
+{: #wks_maexport_prereqs}
 
 If you choose to identify relation types and annotate them, then you must define at least two relation types, and annotate instances of the relationships in the ground truth before you export the model. Defining and annotating only one relation type can cause subsequent issues in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer, release 11.0.1.0.
 
 ### About this task
+{: #wks_maexport_about}
 
 Now that the machine learning model is trained to recognize entities and relationships for a specific domain, you can leverage it in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
 
 Click [this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.youtube.com/watch?v=1VoS-xczBow&amp;feature=youtu.be){: new_window} to watch a less than 2 minute video that illustrates how to export a model and use it in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
 
 ### Procedure
+{: #wks_maexport_procedure}
 
 To leverage a machine learning model in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer, complete the following steps.
 
@@ -307,5 +318,6 @@ To leverage a machine learning model in {{site.data.keyword.IBM_notm}} {{site.da
     You can then map the model to a machine learning model in {{site.data.keyword.watson}} Explorer Content Analytics. After you perform the mapping step, when you crawl documents, the model finds instances of the entities and relations that your model understands. To learn how to import and configure the model in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer, see the technical document that describes the integration: [http://www.ibm.com/support/docview.wss?uid=swg27048147 ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/support/docview.wss?uid=swg27048147){: new_window}.
 
 #### Related tasks
+{: #wks_maexport_related}
 
 [Exporting analyzed documents from {{site.data.keyword.watson}} Explorer Content Analytics](/docs/services/watson-knowledge-studio/preannotation.html#wks_uimawexca)

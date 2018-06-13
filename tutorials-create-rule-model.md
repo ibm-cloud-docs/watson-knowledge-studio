@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-06-12"
 
 ---
 
@@ -29,6 +29,7 @@ This tutorial helps you understand how to create a rule-based model that you can
 You will build a model that can find text in documents that matches the pattern `month day, year`. For example, the model would find the date reference *May 1, 2010*. Before you define the rule pattern itself, you will create artifacts that will help you build the pattern, including a dictionary class that recognizes month mentions and a regular expression class that recognizes year mentions in text.
 
 ## Learning objectives
+{: #objectives}
 
 After you complete this tutorial, you will know how to perform the following tasks:
 
@@ -41,12 +42,14 @@ After you complete this tutorial, you will know how to perform the following tas
 This tutorial should take approximately 30 minutes to finish. If you explore other concepts related to this tutorial, it could take longer to complete.
 
 ## Before you begin
+{: #prereqs}
 
 - You're using a supported browser. For information, see [Browser requirements](/docs/services/watson-knowledge-studio/system-requirements.html).
 - You successfully completed [Tutorial: Creating a workspace](/docs/services/watson-knowledge-studio/tutorials-create-project.html).
 - You must have at least one user ID in either the Admin or ProjectManager role. For information about user roles, see [Assembling a team](/docs/services/watson-knowledge-studio/team.html).
 
 ## Results
+{: #results}
 
 After you create the rule-based model, you can use it in one of the following ways to find text patterns in documents:
 
@@ -59,10 +62,12 @@ After you create the rule-based model, you can use it in one of the following wa
 In this lesson, you will learn how to add a dictionary to a workspace in {{site.data.keyword.knowledgestudioshort}}. The dictionary contains terms related to the months of the year.
 
 ### About this task
+{: #wks_tutless_rule1_about}
 
 In a later lesson, you will define a class based on this dictionary. When you create that class, all terms in this dictionary that are found in documents will be automatically annotated as a mention of the associated class type. For more information about dictionaries, see [Adding dictionaries to a workspace](/docs/services/watson-knowledge-studio/dictionaries.html#wks_projdictionaries).
 
 ### Procedure
+{: #wks_tutless_rule1_procedure}
 
 1. Download the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/dictionary-items-month.csv" download>`dictionary-items-month.csv`<img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> file to your computer. This file contains dictionary terms in CSV format, suitable for uploading into a {{site.data.keyword.knowledgestudioshort}} dictionary.
 1. From the **Assets & Tools** > **Pre-Annotators** sidebar, select the **Dictionaries** tab, and click **Manage Dictionaries**.
@@ -79,10 +84,12 @@ In a later lesson, you will define a class based on this dictionary. When you cr
 In this lesson, you will learn how to add documents with linguistic patterns that illustrate the types of rules you want to define.
 
 ### About this task
+{: #wks_tutless_rule2_about}
 
 For more information about adding documents, see [Adding documents for defining rules](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html).
 
 ### Procedure
+{: #wks_tutless_rule2_procedure}
 
 1. Download the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/documents-new.csv" download>`documents-new.csv`<img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> file to your computer. This file contains example documents suitable for uploading.
 1. From the sidebar, click **Document Annotation** > **Rules**.
@@ -100,10 +107,12 @@ For more information about adding documents, see [Adding documents for defining 
 In this lesson, you will learn how to define classes that you will use when you define a rule.
 
 ### About this task
+{: #wks_tutless_rule3_about}
 
 For more information about classes, see [Rules](/docs/services/watson-knowledge-studio/rule-annotator.html).
 
 ### Procedure
+{: #wks_tutless_rule3_procedure}
 
 1. From the **Rules** page of your workspace, click the **Add a class** icon next to **Class** in the right side panel.
 
@@ -117,6 +126,7 @@ For more information about classes, see [Rules](/docs/services/watson-knowledge-
 In this lesson, you will learn how to use a dictionary in the rule editor.
 
 ### Procedure
+{: #wks_tutless_rule4_procedure}
 
 1. From the sidebar, select **Document Annotation** > **Dictionaries**, and then click the **Month dictionary** that you created previously.
 
@@ -127,6 +137,7 @@ In this lesson, you will learn how to use a dictionary in the rule editor.
     ![Shows that the DictMonth class is associated with the Month dictionary in the Dictionaries panel of the Rule page.](images/rule-dict-map2.jpg)
 
 ### Results
+{: #wks_tutless_rule4_results}
 
 For documents that are associated with the rule editor, any references to terms in the dictionary are annotated as `DictMonth` class mentions. You will see proof that these references have been annotated in the next lesson.
 
@@ -136,6 +147,7 @@ For documents that are associated with the rule editor, any references to terms 
 In this lesson, you will learn how to find class annotations in rule editor documents.
 
 ### Procedure
+{: #wks_tutless_rule5_procedure}
 
 1. From the sidebar, select **Document Annotation** > **Rules**.
 1. From the Class panel, find the `DictMonth` class that you defined earlier, and click the **Search annotations in documents** icon that's next to it.
@@ -150,12 +162,14 @@ In this lesson, you will learn how to find class annotations in rule editor docu
 In this lesson, you will learn how to define a regular expression.
 
 ### About this task
+{: #wks_tutless_rule6_about}
 
 You will define a regular expression that can find year patterns like *2009*.
 
 For more information about defining regular expressions, see [Defining a rule](/docs/services/watson-knowledge-studio/rule-annotator-define-rule.html).
 
 ### Procedure
+{: #wks_tutless_rule6_procedure}
 
 1. From the **Rules** page, click the **Add a class** icon (![_](images/wks_tut_dict_add.jpg)) next to **Class** from the right side panel.
 1. Enter `RegExpYear` as the class name, and click **Add**.
@@ -191,12 +205,14 @@ For more information about defining regular expressions, see [Defining a rule](/
 In this lesson, you will learn how to define a rule.
 
 ### About this task
+{: #unique_1166829415_about}
 
 You already defined a dictionary-based class for annotating month mentions. You also defined a regular expression that finds numeric values which represent a year. Now, you will define a rule that captures the sequence of a month followed by a number, a comma, and then a year. You will define a rule for date expressions like *September 21, 2016*.
 
 For more information about defining rules, see [Defining a rule](/docs/services/watson-knowledge-studio/rule-annotator-define-rule.html).
 
 ### Procedure
+{: #unique_1166829415_procedure}
 
 1. From the sidebar, select **Document Annotation** > **Rules**, and open the `Technology - computerworld.com` document.
 1. Select the text *February 3, 2009* in the document. Make sure you select the comma, too.
@@ -259,10 +275,12 @@ For more information about defining rules, see [Defining a rule](/docs/services/
 In this lesson, you will learn how to create a rule-based model.
 
 ### About this task
+{: #wks_tutless_rule8_about}
 
 For more information about creating a rule-based model, see [Creating the rule-based model](/docs/services/watson-knowledge-studio/rule-annotator-model-create.html).
 
 ### Procedure
+{: #wks_tutless_rule8_procedure}
 
 1. From the sidebar, select **Model Management** > **Versions** and click the **Rule-based model type mapping** tab.
 
@@ -284,6 +302,7 @@ For more information about creating a rule-based model, see [Creating the rule-b
 While learning about {{site.data.keyword.knowledgestudioshort}}, you created a rule-based model.
 
 ### Lessons learned
+{: #lessons_learned}
 
 By completing this tutorial, you learned about the following concepts:
 
