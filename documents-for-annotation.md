@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-01"
+lastupdated: "2018-06-13"
 
 ---
 
@@ -27,6 +27,7 @@ To train a machine learning model, you must add documents that contain subject m
 {: shortdesc}
 
 ## About this task
+{: #annotation_about}
 
 To define rules for the rule-based model, you add or upload documents from which you can draw patterns to define as rules. See [Adding documents for defining rules](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html) for more information. This section describes how to add documents for annotation only.
 
@@ -72,6 +73,7 @@ To help train a model, you can upload documents that were pre-annotated by a UIM
 A human annotator can revise, delete, and add annotations to these documents, or you can bypass human annotation and use these files to create training, test, and blind document sets for evaluating and improving the model performance. For details about how to create these files and requirements for uploading them, see [Uploading pre-annotated documents](/docs/services/watson-knowledge-studio/preannotation.html#wks_uima).
 
 ### Anonymizing data
+{: #wks_anonymizing}
 
 If you want to build a model that is optimized for your data, but do not want to upload the data as-is to {{site.data.keyword.knowledgestudioshort}} for privacy reasons, you can strip the documents of any personally identifiable information (PII) first, and then use those anonymized documents to train the model. Do not redact the information or replace it wholesale with variables. For best results, replace the real information with fake information of the same type.
 
@@ -83,10 +85,12 @@ For example, if the PII that you want to protect is client names, then instead o
 To train a model, you must add documents that are representative of your domain content to your workspace.
 
 ### About this task
+{: #wks_projadd_about}
 
 As a best practice, start with a relatively small collection of documents. Use these documents to train human annotators (if your workspace involves human annotation) and to refine the annotation guidelines. Small documents can help human annotators identify coreference chains throughout the document. As annotation accuracy improves, you can add more documents to the corpus to provide greater depth to the training effort.
 
 ### Procedure
+{: #wks_projadd_procedure}
 
 To add documents to a workspace:
 
@@ -95,54 +99,48 @@ To add documents to a workspace:
 1. Click **Upload Document Sets** to add documents to the corpus.
 1. Upload documents in one of the following formats. You can upload one type of file at a time.
 
-    <table border="1" frame="hsides" rules="rows" cellpadding="4" cellspacing="0" summary="Each row in this table describes one option for a choice." class="simpletable choicetable choicetableborder">
-      <thead><tr><th id="d31095e284-option" valign="bottom" align="left" class="ncol thleft thbot">Option</th>
-          <th id="d31095e284-desc" valign="bottom" align="left" class="ncol thleft thbot">Description</th></tr></thead>
-      <tbody><tr class="strow chrow"><td valign="top" headers="d31095e284-option" id="d31095e286" class="stentry choption ncol"><p class="p wrapper"><strong>CSV file</strong></p></td>
-          <td valign="top" headers="d31095e284-desc d31095e286" class="stentry chdesc ncol"><p class="p wrapper">Drag a single CSV file that contains your sample documents or click to locate the file on
-              your local system, and then click <b>Upload</b>. The first column in the CSV file
-              specifies the file name of the document. The second column in the file contains the document text.
-              The CSV file must be in UTF-8 format.</p></td>
-        </tr>
-        <tr class="strow chrow"><td valign="top" headers="d31095e284-option" id="d31095e294" class="stentry choption ncol"><p class="p wrapper"><strong>Text files</strong></p></td>
-          <td valign="top" headers="d31095e284-desc d31095e294" class="stentry chdesc ncol"><p class="p wrapper">Drag one or more text files from your local system or click to locate and select the files,
-              and then click <b>Upload</b>. Text files must be in UTF-8 format.</p></td>
-        </tr>
-        <tr class="strow chrow"><td valign="top" headers="d31095e284-option" id="d31095e316" class="stentry choption ncol"><p class="p wrapper"><strong>ZIP file</strong></p></td>
-          <td valign="top" headers="d31095e284-desc d31095e316" class="stentry chdesc ncol"><p class="p wrapper">If you previously downloaded documents from a
-              Watson Knowledge
-              Studio
-              workspace, drag the
-              <code>ZIP</code> file that contains the downloaded documents or click to locate and select the
-              file. If you want to include annotations that were added to the documents before they were downloaded,
-              ensure that the option to include ground truth is selected before you click
-              <b>Upload</b>. Only annotations that were promoted to ground truth before the
-              documents were downloaded will be imported. </p><p class="p wrapper"><b>Restriction:</b> When annotated documents are
-              imported, they are re-tokenized. This process can change what
-              Watson Knowledge
-              Studio
-              considers to be the sentence
-              boundaries in them. Because annotations are defined by sentence, some annotations might be
-              invalidated during this process. After uploading documents from another workspace, do a quick review
-              of the annotations to address any discrepancies. </p>
-            <p class="p">You must upload the type system from the
-              original workspace into the current workspace before you upload ground truth annotations. For details,
-              see [Uploading resources from another workspace ![External link icon](../../icons/launch-glyph.svg "External link icon")](exportimport.html){: new_window}.</p>
-            <p class="p">If you previously downloaded annotated documents that
-              are in
-              UIMA
-              CAS XMI format, you can
-              upload the <code>ZIP</code> file that contains the analyzed content. Specify that this is
-              the type of content you want to upload before you click <b>Upload</b>. For details
-              about how to create these files and requirements for uploading them, see [Uploading pre-annotated documents ![External link icon](../../icons/launch-glyph.svg "External link icon")](preannotation.html#wks_uima){: new_window}.</p>
-          </td>
-        </tr>
-      </tbody>
+    <table summary="Each row in this table describes one option for a choice.">
+      <caption>Table 1. Upload choices</caption>
+      <tr>
+        <th style="vertical-align:bottom; text-align:left" id="d31095e284-option">
+          Option
+        </th>
+        <th style="vertical-align:bottom; text-align:left" id="d31095e284-desc">
+          Description
+        </th>
+      </tr>
+      <tr>
+        <td headers="d31095e284-option" id="d31095e286">
+          <p><strong>CSV file</strong></p>
+        </td>
+        <td headers="d31095e284-desc d31095e286">
+          <p>Drag a single CSV file that contains your sample documents or click to locate the file on your local system, and then click <b>Upload</b>. The first column in the CSV file specifies the file name of the document. The second column in the file contains the document text. The CSV file must be in UTF-8 format.</p>
+        </td>
+      </tr>
+      <tr>
+        <td headers="d31095e284-option" id="d31095e294">
+          <p><strong>Text files</strong></p>
+        </td>
+        <td headers="d31095e284-desc d31095e294">
+          <p>Drag one or more text files from your local system or click to locate and select the files, and then click <b>Upload</b>. Text files must be in UTF-8 format.</p>
+        </td>
+      </tr>
+      <tr>
+        <td headers="d31095e284-option" id="d31095e316">
+          <p><strong>ZIP file</strong></p>
+        </td>
+        <td headers="d31095e284-desc d31095e316">
+          <p>If you previously downloaded documents from a Watson Knowledge Studio workspace, drag the <code>ZIP</code> file that contains the downloaded documents or click to locate and select the file. If you want to include annotations that were added to the documents before they were downloaded, ensure that the option to include ground truth is selected before you click <b>Upload</b>. Only annotations that were promoted to ground truth before the documents were downloaded will be imported. </p><p><b>Restriction:</b> When annotated documents are imported, they are re-tokenized. This process can change what Watson Knowledge Studio considers to be the sentence boundaries in them. Because annotations are defined by sentence, some annotations might be invalidated during this process. After uploading documents from another workspace, do a quick review of the annotations to address any discrepancies.</p>
+          <p>You must upload the type system from the original workspace into the current workspace before you upload ground truth annotations. For details, see [Uploading resources from another workspace ![External link icon](../../icons/launch-glyph.svg "External link icon")](exportimport.html){: new_window}.</p>
+          <p>If you previously downloaded annotated documents that are in UIMA CAS XMI format, you can upload the <code>ZIP</code> file that contains the analyzed content. Specify that this is the type of content you want to upload before you click <b>Upload</b>. For details about how to create these files and requirements for uploading them, see [Uploading pre-annotated documents ![External link icon](../../icons/launch-glyph.svg "External link icon")](preannotation.html#wks_uima){: new_window}.</p>
+        </td>
+      </tr>
     </table>
 
 1. After the documents have been added, click the document names to preview them and verify that the content looks OK. For example, verify that text files are in UTF-8 format and that no diacritical marks or character normalization issues are visible in the documents, and check for poor sentence breaks. If problems exist, you might need to pre-process the files before you add them to the corpus. You want the documents to be as clean and well-formatted as possible before dictionary or human annotation begins.
 
 ### What to do next
+{: #wks_projadd_next}
 
 Before you start any human annotation tasks, divide the corpus into multiple document sets and assign the document sets to human annotators.
 
@@ -152,17 +150,20 @@ Before you start any human annotation tasks, divide the corpus into multiple doc
 After you add documents, divide the documents into sets so that they can be annotated by multiple human annotators. To view inter-annotator agreement scores, you must assign at least two human annotators and specify that some percentage of documents overlap between the sets.
 
 ### Before you begin
+{: #wks_projdocsets_prereqs}
 
 - You must upload document sets before you can divide them into annotation sets.
 - You must create user accounts in {{site.data.keyword.knowledgestudioshort}} for all human annotators who will work on documents in this workspace.
 
 ### About this task
+{: #wks_projdocsets_about}
 
 > **Attention:** If you use the Google Chrome browser, you cannot upload a large number of files (such as more than 300) by selecting them from a folder. The workaround is to either use the Firefox browser or select a smaller number of files and upload files several times.
 
 You can create a maximum of 1,000 annotation sets per workspace.
 
 ### Procedure
+{: #wks_projdocsets_procedure}
 
 To create an annotation set:
 
@@ -187,26 +188,67 @@ To create an annotation set:
 1. After you finish assigning all the human annotators who will work on this workspace, click **Generate** to create the annotation sets. When human annotators log in to the ground truth editor, they see only the annotation sets that are assigned to them.
 
 **Related tasks**:
+{: #wks_related_tasks}
 
 [Assembling a team](/docs/services/watson-knowledge-studio/team.html)
 
 ## Deleting documents
-{: #wks_projdelete}
+{: #wks_deletedocs}
 
-You can remove a document if you determine that it does not represent standard industry text that will benefit the model.
+You can delete a document if you determine that it does not represent standard industry text that will benefit the model.
 
-### Procedure
+To delete a document, choose the option that applies to your situation:
+- [Deleting a document that has not been associated with an annotation task](#deletenotask)
+- [Deleting a document that is associated with an annotation task and human annotation *has not begun*](#deletenoanno)
+- [Deleting a document that is associated with an annotation task and human annotation *has begun*](#deleteanno)
 
-To delete a document, complete the following steps:
+### Deleting a document that has not been associated with an annotation task
+{: #deletenotask}
+
+If the document you want to delete is not associated with an annotation task, complete these steps to delete the document.
+
+#### Procedure
+{: #deletenotaskp}
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator and select your workspace.
 1. Select the **Assets & Tools** > **Documents** > **Document sets** tab.
 1. Find the document that you want to remove, and then click **Delete**.
-1. You cannot delete a document that is included in an annotation set that has been associated with an annotation task. If the document is part of an annotation set but has not been associated with a task yet, you can delete the document by following the earlier steps.
 
-    Perform one of the following tasks if the document is associated with an annotation task:
-    - If human annotators have not begun annotating the documents, delete the annotation task, and then delete the document. To delete an annotation task, open the **Assets & Tools** > **Documents** > **Tasks** tab, find the annotation task with which the document is associated, click the **Show menu** icon on the task, and then click **Delete**. Afterwards, you can recreate the annotation task and associate the same annotation set, which now has one less document in it.
-    - If human annotators have begun to annotate the documents, do not delete the task or you will lose their work. You can tell them to continue working, but to ignore the unwanted document in the set. Have them finish all other annotation work, and go through the process of getting the set added to the ground truth. After being added, but before anyone runs the machine learning model, delete the unwanted document. You do not want to use the unannotated document to train a model because the machine learning model learns as much from what you do not annotate as from what you do. You can now delete the unwanted document, which is currently part of the ground truth, from the **Assets & Tools** > **Documents** > **Document sets** tab.
+### Deleting a document that is associated with an annotation task and human annotation has not begun
+{: #deletenoanno}
+
+If the document you want to delete is associated with an annotation task and human annotation *has not yet begun*, complete these steps to delete the document.
+
+#### Procedure
+{: #deletenoannop}
+
+1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator and select your workspace.
+1. Delete the annotation task:
+
+  a. Open the **Assets & Tools** > **Documents** > **Tasks** tab.
+
+  b. Find the annotation task that the document is associated with, click the **Show menu** icon on the task, and then click **Delete**.
+
+1. Delete the document as described in [Deleting a document that has not been associated with an annotation task](#deletenotask).
+1. After you delete the document, recreate the annotation task and associate the same annotation set, which now has one less document in it.
+
+### Deleting a document that is associated with an annotation task and human annotation has begun
+{: #deleteanno}
+
+If the document you want to delete is associated with an annotation task and human annotation *has begun*, complete these steps to delete the document.
+
+**Attention**: Do not delete a task if human annotation is in progress. If you do, you will lose the work that is in progress.
+
+#### Procedure
+{: #deleteannop}
+
+1. Tell the human annotators to ignore the unwanted document in the set.
+1. After all annotation work is complete on the other documents, and the human annotators submit all the documents to add the set to the ground truth, [review and accept the submitted documents](/docs/services/watson-knowledge-studio/build-groundtruth.html#wks_haaccuracy).
+1. [Resolve any annotation conflicts](/docs/services/watson-knowledge-studio/build-groundtruth.html#wks_haadjudicate).
+1. When all the documents are part of the ground truth and the task is complete, delete the task as described in [Deleting a document that is associated with an annotation task and human annotation has not begun](#deletenoannop).
+1. Delete the document as described in [Deleting a document that has not been associated with an annotation task](#deletenotask).
+
+  **Note**: You can confirm that the annotations on the remaining documents are not lost by downloading the document sets and reviewing the documents in the `gt` folder.
 
 ## Data model
 {: #wks_datamodel}
