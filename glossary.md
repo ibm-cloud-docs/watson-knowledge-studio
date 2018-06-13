@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-06"
+lastupdated: "2018-06-13"
 
 ---
 
@@ -28,10 +28,8 @@ This glossary includes terms and definitions for {{site.data.keyword.knowledgest
 
 The following cross-references are used in this glossary:
 
-- See refers you from a term to a preferred synonym, or from an acronym or abbreviation to the defined full form.
-- See also refers you to a related or contrasting term.
-
-To view glossaries for other {{site.data.keyword.IBM}} products, go to [www.ibm.com/software/globalization/terminology ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/software/globalization/terminology/){: new_window}.
+- *See* refers you from a term to a preferred synonym, or from an acronym or abbreviation to the defined full form.
+- *See also* refers you to a related or contrasting term.
 
 [A](/docs/services/watson-knowledge-studio/glossary.html#gloss_A) [B](/docs/services/watson-knowledge-studio/glossary.html#gloss_B) [C](/docs/services/watson-knowledge-studio/glossary.html#gloss_C) [D](/docs/services/watson-knowledge-studio/glossary.html#gloss_D) [E](/docs/services/watson-knowledge-studio/glossary.html#gloss_E) [F](/docs/services/watson-knowledge-studio/glossary.html#gloss_F) [G](/docs/services/watson-knowledge-studio/glossary.html#gloss_G) [H](/docs/services/watson-knowledge-studio/glossary.html#gloss_H) [I](/docs/services/watson-knowledge-studio/glossary.html#gloss_I) [K](/docs/services/watson-knowledge-studio/glossary.html#gloss_K) [L](/docs/services/watson-knowledge-studio/glossary.html#gloss_L) [M](/docs/services/watson-knowledge-studio/glossary.html#gloss_M) [N](/docs/services/watson-knowledge-studio/glossary.html#gloss_N) [O](/docs/services/watson-knowledge-studio/glossary.html#gloss_O) [P](/docs/services/watson-knowledge-studio/glossary.html#gloss_P) [R](/docs/services/watson-knowledge-studio/glossary.html#gloss_R) [S](/docs/services/watson-knowledge-studio/glossary.html#gloss_S) [T](/docs/services/watson-knowledge-studio/glossary.html#gloss_T)
 
