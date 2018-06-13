@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-06"
+lastupdated: "2018-06-12"
 
 ---
 
@@ -27,6 +27,7 @@ This tutorial helps you understand the process for building a machine learning m
 {: shortdesc}
 
 ## Learning objectives
+{: #objectives}
 
 After you complete the lessons in this tutorial, you will know how to perform the following tasks:
 
@@ -39,6 +40,7 @@ After you complete the lessons in this tutorial, you will know how to perform th
 This tutorial should take approximately 60 minutes to finish. If you explore other concepts related to this tutorial, it could take longer to complete.
 
 ## Before you begin
+{: #prereqs}
 
 - You're using a supported browser. For information, see [Browser requirements](/docs/services/watson-knowledge-studio/system-requirements.html).
 - You successfully completed [Tutorial: Creating a workspace](/docs/services/watson-knowledge-studio/tutorials-create-project.html).
@@ -49,6 +51,7 @@ This tutorial should take approximately 60 minutes to finish. If you explore oth
     For information about user roles, see [Assembling a team](/docs/services/watson-knowledge-studio/team.html).
 
 ## Results
+{: #results}
 
 After completing this tutorial, you will have a custom machine learning model that you can use with other {{site.data.keyword.watson}} services.
 
@@ -58,10 +61,12 @@ After completing this tutorial, you will have a custom machine learning model th
 In this lesson, you will learn how to add documents to a workspace in {{site.data.keyword.knowledgestudioshort}} that can be annotated by human annotators.
 
 ### About this task
+{: #tut_lessml1_about}
 
 For more information about adding documents, see [Adding documents to a workspace](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_projadd).
 
 ### Procedure
+{: #tut_lessml1_procedure}
 
 1. Download the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/documents-new.csv" download>`documents-new.csv`<img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> file to your computer. This file contains example documents suitable for uploading.
 1. Within your workspace, click **Documents** from the sidebar.
@@ -69,6 +74,7 @@ For more information about adding documents, see [Adding documents to a workspac
 1. Select the `documents-new.csv` file from your computer and click **Upload**. The uploaded file is displayed in the table.
 
 ### What to do next
+{: #tut_lessml1_next}
 
 You can now divide the corpus into multiple document sets and assign the document sets to human annotators.
 
@@ -78,6 +84,7 @@ You can now divide the corpus into multiple document sets and assign the documen
 In this lesson, you will learn how to create annotation sets in {{site.data.keyword.knowledgestudioshort}}.
 
 ### About this task
+{: #wks_tutless_ml2_about}
 
 An annotation set is a subset of documents from an uploaded document set that you assign to a human annotator. The human annotator annotates the documents in the annotation set. To later use inter-annotator scores to compare the annotations that are added by each human annotator, you must assign at least two human annotators to different annotation sets. You must also specify that some percentage of documents overlap between the sets.
 
@@ -86,6 +93,7 @@ An annotation set is a subset of documents from an uploaded document set that yo
 For more information about annotation sets, see [Creating and assigning annotation sets](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_projdocsets).
 
 ### Procedure
+{: #wks_tutless_ml2_procedure}
 
 1. Within your workspace, click **Documents** from the sidebar.
 1. Click **Create Annotation Sets**.
@@ -108,6 +116,7 @@ For more information about annotation sets, see [Creating and assigning annotati
 1. Click **Generate**.
 
 ### Results
+{: #wks_tutless_ml2_results}
 
 The new annotation sets are created and now appear in the **Annotation Sets** tab of the Documents page.
 
@@ -117,12 +126,14 @@ The new annotation sets are created and now appear in the **Annotation Sets** ta
 In this lesson, you will learn how to use a dictionary-based annotator to pre-annotate documents in {{site.data.keyword.knowledgestudioshort}}.
 
 ### About this task
+{: #wks_tutless_ml3_about}
 
 Pre-annotating documents is an optional step. However, it is a worthwhile step because it makes the job of human annotators easier later.
 
 For more information about pre-annotation with dictionaries, see [Pre-annotating documents with a dictionary](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannot).
 
 ### Procedure
+{: #wks_tutless_ml3_procedure}
 
 1. Within your workspace, from the **Assets & Tools** > **Pre-annotators** sidebar, click **Manage Dictionaries**.
 
@@ -136,6 +147,7 @@ For more information about pre-annotation with dictionaries, see [Pre-annotating
     ![This screen capture shows the Run Annotator page. The Run button is highlighted.](images/wks_tutanno3.jpg)
 
 ### Results
+{: #wks_tutless_ml3_results}
 
 The documents in the selected sets are pre-annotated using the dictionary annotator you created. Later, you can use the same annotator to pre-annotate additional document sets by clicking **Apply This Pre-annotator**.
 
@@ -145,10 +157,12 @@ The documents in the selected sets are pre-annotated using the dictionary annota
 In this lesson, you will learn how to use annotation tasks to track the work of human annotators in {{site.data.keyword.knowledgestudioshort}}.
 
 ### About this task
+{: #wks_tutless_ml4_about}
 
 For more information about annotation tasks, see [Creating an annotation task](/docs/services/watson-knowledge-studio/annotate-documents.html#wks_hatask).
 
 ### Procedure
+{: #wks_tutless_ml4_procedure}
 
 1. Within your workspace, from the **Assets & Tools** > **Documents** sidebar, select the **Tasks** tab.
 1. On the Tasks page, click **Add Task**.
@@ -168,10 +182,12 @@ For more information about annotation tasks, see [Creating an annotation task](/
 In this lesson, you will learn how to use the ground truth editor to annotate documents in {{site.data.keyword.knowledgestudioshort}}.
 
 ### About this task
+{: #wks_tutless_ml5_about}
 
 For more information about human annotation, see [Annotation with the ground truth editor](/docs/services/watson-knowledge-studio/user-guide.html#wks_hagte).
 
 ### Procedure
+{: #wks_tutless_ml5_procedure}
 
 1. Log in to {{site.data.keyword.knowledgestudioshort}} as a human annotator who is assigned to the annotation task you created in [Lesson 4: Creating an annotation task](/docs/services/watson-knowledge-studio/tutorials-create-ml-model.html#wks_tutless_ml4).
 
@@ -214,6 +230,7 @@ For more information about human annotation, see [Annotation with the ground tru
 In this lesson, you will learn how to compare the work of multiple human annotators in {{site.data.keyword.knowledgestudioshort}}.
 
 ### About this task
+{: #wks_tutless_ml6_about}
 
 To determine whether different human annotators are annotating overlapping documents consistently, review the inter-annotator agreement (`IAA`) scores.
 
@@ -222,6 +239,7 @@ To determine whether different human annotators are annotating overlapping docum
 In this tutorial, the human annotators submitted all the document sets for approval. If the inter-annotator agreement scores are acceptable, you can approve the document sets. If you reject a document set, it is returned to the human annotator for improvement.
 
 ### Procedure
+{: #wks_tutless_ml6_procedure}
 
 1. Log in to {{site.data.keyword.knowledgestudioshort}} as the administrator, select **Assets & Tools** > **Documents**, and click the `Test` task.
 
@@ -240,6 +258,7 @@ In this tutorial, the human annotators submitted all the document sets for appro
     - If the scores are not acceptable for a document set, select the check box and click **Reject**. The document set needs to be revisited by the human annotator to improve the annotations.
 
 ### Results
+{: #wks_tutless_ml6_results}
 
 When you evaluated the inter-annotator agreement scores, you saw how different pairs of human annotators annotated the same document. If the inter-annotator agreement score was acceptable, you accepted the document set.
 
@@ -249,10 +268,12 @@ When you evaluated the inter-annotator agreement scores, you saw how different p
 In this lesson, you will learn how to adjudicate conflicts in documents that overlap between document sets in {{site.data.keyword.knowledgestudioshort}}.
 
 ### About this task
+{: #wks_tutless_ml7_about}
 
 When you approve a document set, only the documents that do not overlap with other document sets are promoted to ground truth. If a document is part of the overlap between multiple document sets, you must adjudicate any annotation conflicts before the document can be promoted to ground truth.
 
 ### Procedure
+{: #wks_tutless_ml7_procedure}
 
 1. Log in to {{site.data.keyword.knowledgestudioshort}} as the administrator, select **Assets & Tools** > **Documents**, and click the `Test` task.
 1. Verify that the two document sets are in an approved state.
@@ -267,6 +288,7 @@ When you approve a document set, only the documents that do not overlap with oth
     Alternatively, you can promote a document to ground truth by clicking **Accept** on the Documents page.
 
 ### Results
+{: #wks_tutless_ml7_results}
 
 After you resolve the annotation conflicts and promote the documents to ground truth, you can use them to train the machine learning model.
 
@@ -276,10 +298,12 @@ After you resolve the annotation conflicts and promote the documents to ground t
 In this lesson, you will learn how to create a machine learning model in {{site.data.keyword.knowledgestudioshort}}.
 
 ### About this task
+{: #wks_tutless_ml8_about}
 
 When you create a machine learning model, you select the document sets that you want to use to train it. You also specify the percentage of documents that are to be used as training data, test data, and blind data. Only documents that became ground truth through approval or adjudication can be used to train the machine learning model.
 
 ### Procedure
+{: #wks_tutless_ml8_procedure}
 
 1. Log in to {{site.data.keyword.knowledgestudioshort}} as the administrator.
 1. From the **Model Management** > **Performance** sidebar, click **Train and evaluate**.
@@ -306,6 +330,7 @@ When you create a machine learning model, you select the document sets that you 
 1. From the sidebar, select **Model Management** > **Versions**. On the Versions page, you can take a snapshot of the model and the resources that were used to create it (except for dictionaries and annotation tasks). For example, you might want to take a snapshot before you retrain the model. If the statistics are poorer the next time you train it, you can promote the older version and delete the version that returned poorer results.
 
 ### Results
+{: #wks_tutless_ml8_results}
 
 You created a machine learning model, trained it, and evaluated how well it performed when annotating test data and blind data. By exploring the performance metrics, you can identify ways to improve the accuracy of the machine learning model.
 
@@ -315,6 +340,7 @@ You created a machine learning model, trained it, and evaluated how well it perf
 While learning about {{site.data.keyword.knowledgestudioshort}}, you created a machine learning model.
 
 ### Lessons learned
+{: #lessons_learned}
 
 By completing this tutorial, you learned about the following concepts:
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-06-13"
 
 ---
 
@@ -51,31 +51,38 @@ The inter-annotator agreement scores show how different human annotators annotat
 
 To help you identify areas that require investigation, scores that fall below the value that you specified for the inter-annotator agreement threshold are highlighted in red. In early stages of your annotation project, you might find that relation scores are often worse than mention scores because a perfect relation annotation requires that the mentions that define the relationship be in agreement first.
 
-The score in the **All** column is a *Fleiss Kappa score*. It represents how consistently the same annotation was applied by multiple human annotators across all overlapping documents in the task. The value, which can range up to 1 and even be negative, can help you identify weaknesses in the annotation guidelines or particular human annotators. The following guidelines (*Landis and Koch, 1977*) provide a starting point for assessing overall performance:
+The score in the **All** column is a *Fleiss Kappa score*. It represents how consistently the same annotation was applied by multiple human annotators across all overlapping documents in the task. The value, which can range up to 1 and even be negative, can help you identify weaknesses in the annotation guidelines or particular human annotators. The following guidelines (*Landis and Koch, 1977*) provide a starting point for assessing overall performance.
 
-<table cellpadding="4" cellspacing="0" summary="" id="wks_haiaa__table_p5s_dx1_f5" class="table" rules="rows" frame="void" border="0"><thead class="thead" align="left"><tr class="row"><th class="entry ncol thleft" align="left" valign="top" id="d12741e148">Score</th>
-<th class="entry ncol thleft" align="left" valign="top" id="d12741e150">Agreement level</th>
-</tr>
-</thead>
-<tbody class="tbody"><tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">&lt; 0</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Poor</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">.01 - .20</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Slight</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">.21 - .40</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Fair</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">.41 - .60</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Moderate</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">.61 - .80</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Substantial</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">.81 - 1.0</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Perfect</p></td>
-</tr>
-</tbody>
+<table style="width:60%" summary="This table provides general inter-annotator guidelines for assessing overall performance.">
+  <caption>Table 1. Inter-annotator guidelines</caption>
+  <tr>
+    <th style="vertical-align:bottom; text-align:center" id="d12741e148">Score</th>
+    <th style="vertical-align:bottom; text-align:center" id="d12741e150">Agreement level</th>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">&lt; 0</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Poor</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">.01 - .20</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Slight</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">.21 - .40</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Fair</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">.41 - .60</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Moderate</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">.61 - .80</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Substantial</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">.81 - 1.0</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Perfect</td>
+  </tr>
 </table>
 
 The score in the other columns is an *F1 measure*. It represents the level of annotation consistency between a pair of human annotators. The value can range from 0 to 1, where perfect agreement is indicated by the score 1. What constitutes an acceptable level of agreement depends on your domain data and type system. But to provide an example, here are the F1 thresholds that project managers expect to be met or exceeded in projects that are based on the KLUE type system:
@@ -94,12 +101,14 @@ Generally, a type system that includes many entity types and relation types is o
 When determining which documents are to be promoted to ground truth, you must review the inter-annotator agreement scores. Documents with low scores are candidates to be rejected and returned to the human annotator for improvement.
 
 ### About this task
+{: #wks_haaccuracy_about}
 
 When you examine inter-annotator agreement, you examine documents that were annotated by more than one human annotator. If a document is not shared across multiple annotation sets and human annotators, there is no inter-annotator agreement to calculate. When you add annotation sets to a task, ensure that the sets that you want to compare contain the same overlapping documents. You can see which documents are in an annotation set by opening the **Assets & Tools** > **Documents** page, clicking the **Annotation Sets** tab, and then clicking the names of the sets.
 
 You might experience situations in which no overlapping documents are found. This might happen, for example, if you create annotation sets in two rounds and add them to the same task. Even though the annotation sets were created at about the same time, they don't have any documents in common. For another example, if you create annotation sets with overlapping documents, but add one annotation set per task instead of adding all of the annotation sets to a single task, no overlapping documents will be found and inter-annotator agreement cannot be calculated.
 
 ### Procedure
+{: #wks_haaccuracy_procedure}
 
 To assess annotation agreement between human annotators:
 
@@ -151,10 +160,12 @@ Here are a few examples of various ways that human annotators disagree:
 Adjudication is a step that allows you to review annotation conflicts in overlapping documents before you promote the annotations to ground truth. You can compare the annotations added by a pair of human annotators, or compare human annotations to the current ground truth.
 
 ### Before you begin
+{: #wks_haadjudicate_prereq}
 
 Click [this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.youtube.com/watch?v=EbexfsuXxoQ&amp;feature=youtu.be){: new_window} to watch a 3-minute video that illustrates how to adjudicate documents.
 
 ### About this task
+{: #wks_haadjudicate_about}
 
 After human annotators complete their annotation tasks, they must submit their completed annotation sets for review. When you evaluate the inter-annotator agreement scores, you can see how different pairs of annotators annotated the same document. If the inter-annotator agreement score is acceptable, you approve the annotation set. If a document does not overlap across annotation sets in the task, the annotations in the approved document are promoted to ground truth. If a document overlaps across annotation sets, you should adjudicate the document and resolve any annotation conflicts that exist before promoting the annotations to ground truth.
 
@@ -163,6 +174,7 @@ For example, when you adjudicate a document, you might see that one annotator an
 {{site.data.keyword.knowledgestudioshort}} supports the ability to adjudicate between two annotation sets at a time, or between an annotation set and the current ground truth. If a document overlaps across more than two annotation sets, adjudicate the two annotation sets that you have the greatest confidence in (perhaps because you have greater confidence in the human annotators) to determine ground truth for the document. And then adjudicate the rest of the annotation sets based on the results of the initial adjudication.
 
 ### Procedure
+{: #wks_haadjudicate_procedure}
 
 To view overlapping documents and resolve conflicts:
 

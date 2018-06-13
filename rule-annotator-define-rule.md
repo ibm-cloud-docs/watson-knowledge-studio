@@ -128,89 +128,86 @@ To define a rule, complete the following steps:
     To indicate that a particular type of token is required, you can define the following types of condition settings:
     - **Repeat Setting**: Specifies how many times the current token must be included in the pattern. You can change the repeat setting, but only one repeat setting can be specified per token. The options are described in the following table.
 
-    <table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable">
-      <tr class="sthead">
-        <th valign="bottom" align="left" id="d27028e471" class="stentry thleft thbot">Setting Option</th>
-        <th valign="bottom" align="left" id="d27028e473" class="stentry thleft thbot">Description</th>
+    <table summary="">
+      <caption>Table 1. Repeating settings</caption>
+      <tr>
+        <th style="vertical-align:bottom; text-align:left" id="d27028e471">
+          Setting option
+        </th>
+        <th style="vertical-align:bottom; text-align:left" id="d27028e473">
+          Description
+        </th>
       </tr>
-      <tr class="strow">
-        <td valign="top" headers="d27028e471" class="stentry">
-          <p class="p wrapper">Required (Exactly 1)</p>
+      <tr>
+        <td headers="d27028e471">
+          <p>Required (Exactly 1)</p>
         </td>
-        <td valign="top" headers="d27028e473" class="stentry">
-          <p class="p wrapper">This token must exist in the pattern
-            one time. This option is applied by default, but can
-            be changed.</p></td>
-      </tr>
-      <tr class="strow">
-        <td valign="top" headers="d27028e471" class="stentry">
-          <p class="p wrapper">Repeating 1 or more times</p>
-        </td>
-        <td valign="top" headers="d27028e473" class="stentry">
-          <p class="p wrapper">This token must exist in the pattern
-            at least one time, and can repeat more times.</p>
+        <td headers="d27028e473">
+          <p>This token must exist in the pattern one time. This option is applied by default, but can be changed.</p>
         </td>
       </tr>
-      <tr class="strow">
-        <td valign="top" headers="d27028e471" class="stentry">
-          <p class="p wrapper">Repeating 0 or more times</p>
+      <tr>
+        <td headers="d27028e471">
+          <p>Repeating 1 or more times</p>
         </td>
-        <td valign="top" headers="d27028e473" class="stentry">
-          <p class="p wrapper">This token can optionally repeat in
-            the pattern many times, but does not have to repeat.</p>
-        </td>
-      </tr>
-      <tr class="strow">
-        <td valign="top" headers="d27028e471" class="stentry">
-          <p class="p wrapper">Occurring 0 or 1 time</p>
-        </td>
-        <td valign="top" headers="d27028e473" class="stentry">
-          <p class="p wrapper">This token is optional.</p>
+        <td headers="d27028e473">
+          <p>This token must exist in the pattern at least one time, and can repeat more times.</p>
         </td>
       </tr>
-      <tr class="strow">
-        <td valign="top" headers="d27028e471" class="stentry">
-          <p class="p wrapper">Advanced: _custom_</p>
+      <tr>
+        <td headers="d27028e471">
+          <p>Repeating 0 or more times</p>
         </td>
-        <td valign="top" headers="d27028e473" class="stentry">
-          <p class="p wrapper">This token must repeat in the pattern
-            the number of times that is specified here. To define
-            a custom repeat setting, click
-            <b>Open Properties</b>,
-            select **Advanced**, and then select the exact number of repeats or range of repeats that you want to define.</p>
-          <p class="note">
-            The maximum number of repeats that are allowed for a token is
-            5.</p>
+        <td headers="d27028e473">
+          <p>This token can optionally repeat in the pattern many times, but does not have to repeat.</p>
+        </td>
+      </tr>
+      <tr>
+        <td headers="d27028e471">
+          <p>Occurring 0 or 1 time</p>
+        </td>
+        <td headers="d27028e473">
+          <p>This token is optional.</p>
+        </td>
+      </tr>
+      <tr>
+        <td headers="d27028e471">
+          <p>Advanced: _custom_</p>
+        </td>
+        <td headers="d27028e473">
+          <p>This token must repeat in the pattern the number of times that is specified here. To define a custom repeat setting, click <b>Open Properties</b>, select **Advanced**, and then select the exact number of repeats or range of repeats that you want to define.</p>
+          <p>
+            The maximum number of repeats that are allowed for a token is 5.</p>
         </td>
       </tr>
     </table>
 
     - **Feature Setting**: At least one of the feature settings must be defined. You can add more features to add to the number of conditions that must be met for text to match this pattern. The options are described in the following table.
 
-    <table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable">
-      <tr class="sthead">
-        <th valign="bottom" align="left" id="d27028e512" class="stentry thleft thbot">Setting Option</th>
-        <th valign="bottom" align="left" id="d27028e514" class="stentry thleft thbot">Condition it adds</th>
+    <table summary="">
+      <caption>Table 2. Feature settings</caption>
+      <tr>
+        <th style="vertical-align:bottom; text-align:left" id="d27028e512">
+          Setting option
+        </th>
+        <th style="vertical-align:bottom; text-align:left" id="d27028e514">
+          Condition it adds
+        </th>
       </tr>
-      <tr class="strow">
-        <td valign="top" headers="d27028e512" class="stentry">
-          <p class="p wrapper">Text</p>
+      <tr>
+        <td headers="d27028e512">
+          <p>Text</p>
         </td>
-        <td valign="top" headers="d27028e514" class="stentry">
-          <p class="p wrapper">Must match the exact text in this
-            token. This option is applied by default. You can remove
-            it, but only if you add a different setting as a condition
-            or apply the Any token setting.</p>
+        <td headers="d27028e514">
+          <p>Must match the exact text in this token. This option is applied by default. You can remove it, but only if you add a different setting as a condition or apply the Any token setting.</p>
         </td>
       </tr>
-      <tr class="strow">
-        <td valign="top" headers="d27028e512" class="stentry">
-          <p class="p wrapper">Length</p>
+      <tr>
+        <td headers="d27028e512">
+          <p>Length</p>
         </td>
-        <td valign="top" headers="d27028e514" class="stentry">
-          <p class="p wrapper">Must match the character length of
-            this token. The length is counted starting at 0 from in
-            front of the first character.</p>
+        <td headers="d27028e514">
+          <p>Must match the character length of this token. The length is counted starting at 0 from in front of the first character.</p>
         </td>
       </tr>
     </table>
@@ -219,138 +216,117 @@ To define a rule, complete the following steps:
 
     - **Unannotated token that does not match a regex or dictionary term**: These settings are available for tokens that are not annotated and do not match a regex or dictionary term.
 
-    <table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable">
-      <tr class="sthead">
-        <th valign="bottom" align="left" id="d27028e535" class="stentry thleft thbot">Setting Option</th>
-        <th valign="bottom" align="left" id="d27028e537" class="stentry thleft thbot">Description</th>
+    <table summary="">
+      <caption>Table 3. Unannotated token settings</caption>
+      <tr>
+        <th style="vertical-align:bottom; text-align:left" id="d27028e535">Setting option</th>
+        <th style="vertical-align:bottom; text-align:left" id="d27028e537">Description</th>
       </tr>
-      <tr class="strow">
-        <td valign="top" headers="d27028e535" class="stentry">
-          <p class="p wrapper">Part of speech</p>
+      <tr>
+        <td headers="d27028e535">
+          <p>Part of speech</p>
         </td>
-        <td valign="top" headers="d27028e537" class="stentry">
-          <p class="p wrapper">Must be the same part of speech
-            as this token. The following types are supported:</p>
-          <ul class="ul bullets">
-            <li class="li">
-              <p class="p wrapper">adjective</p>
+        <td headers="d27028e537">
+          <p>Must be the same part of speech as this token. The following types are supported:</p>
+          <ul>
+            <li>
+              adjective
             </li>
-            <li class="li">
-              <p class="p wrapper">adposition</p>
+            <li>
+              adposition
             </li>
-            <li class="li">
-              <p class="p wrapper">adverb</p>
+            <li>
+              adverb
             </li>
-            <li class="li">
-              <p class="p wrapper">conjunction</p>
+            <li>
+              conjunction
             </li>
-            <li class="li">
-              <p class="p wrapper">determiner</p>
+            <li>
+              determiner
             </li>
-            <li class="li">
-              <p class="p wrapper">interjection</p>
+            <li>
+              interjection
             </li>
-            <li class="li">
-              <p class="p wrapper">noun</p>
+            <li>
+              noun<
             </li>
-            <li class="li">
-              <p class="p wrapper">numeral</p>
+            <li>
+              numeral<
             </li>
-            <li class="li">
-              <p class="p wrapper">pronoun</p>
+            <li>
+              pronoun<
             </li>
-            <li class="li">
-              <p class="p wrapper">residual</p>
+            <li>
+              residual
             </li>
-            <li class="li">
-              <p class="p wrapper">verb </p>
+            <li>
+              verb
             </li>
           </ul>
         </td>
       </tr>
-      <tr class="strow">
-        <td valign="top" headers="d27028e535" class="stentry">
-          <p class="p wrapper">Lemma</p>
+      <tr>
+        <td headers="d27028e535">
+          <p>Lemma</p>
         </td>
-        <td valign="top" headers="d27028e537" class="stentry">
-          <p class="p wrapper">Must have the same lemma as this
-            token.</p>
+        <td headers="d27028e537">
+          <p>Must have the same lemma as this token.</p>
         </td>
       </tr>
-      <tr class="strow">
-        <td valign="top" headers="d27028e535" class="stentry">
-          <p class="p wrapper">Character Type</p>
+      <tr>
+        <td headers="d27028e535">
+          <p>Character Type</p>
         </td>
-        <td valign="top" headers="d27028e537" class="stentry">
-          <p class="p wrapper">Must have the same character type
-            as this token. The following types are supported:</p>
-          <ul class="ul bullets">
-            <li class="li">
-              <p class="p wrapper">Arabic: Contains a sequence
-                of Arabic characters</p>
+        <td headers="d27028e537">
+          <p>Must have the same character type as this token. The following types are supported:</p>
+          <ul>
+            <li>
+              <p>Arabic: Contains a sequence of Arabic characters</p>
             </li>
-            <li class="li">
-              <p class="p wrapper">ChineseNumeral: Contains only
-                Chinese numerals</p>
+            <li>
+              <p>ChineseNumeral: Contains only Chinese numerals</p>
             </li>
-            <li class="li">
-              <p class="p wrapper">ClauseEndingPunctuation:
-                Punctuation characters that separate one clause
-                or sentence from the next</p>
+            <li>
+              <p>ClauseEndingPunctuation: Punctuation characters that separate one clause or sentence from the next</p>
             </li>
-            <li class="li">
-              <p class="p wrapper">Han: Contains Han characters</p>
+            <li>
+              <p>Han: Contains Han characters</p>
             </li>
-            <li class="li">
-              <p class="p wrapper">Hangul: Contains Korean Hangul
-                syllabic characters</p>
+            <li>
+              <p>Hangul: Contains Korean Hangul syllabic characters</p>
             </li>
-            <li class="li">
-              <p class="p wrapper">Hebrew: Contains a sequence of
-                Hebrew characters</p>
+            <li>
+              <p>Hebrew: Contains a sequence of Hebrew characters</p>
             </li>
-            <li class="li">
-              <p class="p wrapper">Hiragana: Contains Japanese
-                Hiragana syllabic characters</p>
+            <li>
+              <p>Hiragana: Contains Japanese Hiragana syllabic characters</p>
             </li>
-            <li class="li">
-              <p class="p wrapper">Ideographic: Contains an
-                ideogram, or symbol representing an idea or
-                thing</p>
+            <li>
+              <p>Ideographic: Contains an ideogram, or symbol representing an idea or thing</p>
             </li>
-            <li class="li">
-              <p class="p wrapper">Katakana: Contains Japanese
-                Katakana syllabic characters</p>
+            <li>
+              <p>Katakana: Contains Japanese Katakana syllabic characters</p>
             </li>
-            <li class="li">
-              <p class="p wrapper">Lowercase: Contains only lower
-                case alphabetic characters</p>
+            <li>
+              <p>Lowercase: Contains only lower case alphabetic characters</p>
             </li>
-            <li class="li">
-              <p class="p wrapper">Numeric: Contains only numeric
-                characters</p>
+            <li>
+              <p>Numeric: Contains only numeric characters</p>
             </li>
-            <li class="li">
-              <p class="p wrapper">Punctuation: One or more
-                characters that provide punctuation in the
-                text</p>
+            <li>
+              <p>Punctuation: One or more characters that provide punctuation in the text</p>
             </li>
-            <li class="li">
-              <p class="p wrapper">Syllabic: Contains syllabic
-                characters</p>
+            <li>
+              <p>Syllabic: Contains syllabic characters</p>
             </li>
-            <li class="li">
-              <p class="p wrapper">Thai: Contains Thai
-                characters</p>
+            <li>
+              <p>Thai: Contains Thai characters</p>
             </li>
-            <li class="li">
-              <p class="p wrapper">Titlecase: Starts with a
-                single upper case alphabetic character, followed
-                by one or more lower case alphabetic characters</p>
+            <li>
+              <p>Titlecase: Starts with a single upper case alphabetic character, followed by one or more lower case alphabetic characters</p>
             </li>
-            <li class="li">
-              <p class="p wrapper">Uppercase: A token containing
-                only upper case alphabetic characters</p>
+            <li>
+              <p>Uppercase: A token containing only upper case alphabetic characters</p>
             </li>
           </ul>
         </td>
@@ -359,22 +335,20 @@ To define a rule, complete the following steps:
 
     - **Rule Match:**
 
-    <table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable">
-      <tr class="sthead">
-        <th valign="bottom" align="left" id="d27028e617" class="stentry thleft thbot">Setting Option</th>
-        <th valign="bottom" align="left" id="d27028e619" class="stentry thleft thbot">Description</th>
+    <table summary="">
+      <caption>Table 4. Rule matching</caption>
+      <tr>
+        <th style="vertical-align:bottom; text-align:left" id="d27028e617">
+          Setting option</th>
+        <th style="vertical-align:bottom; text-align:left" id="d27028e619">
+          Description</th>
       </tr>
-      <tr class="strow">
-        <td valign="top" headers="d27028e617" class="stentry">
-          <p class="p wrapper">Rule Match</p>
+      <tr>
+        <td headers="d27028e617">
+          <p>Rule Match</p>
         </td>
-        <td valign="top" headers="d27028e619" class="stentry">
-          <p class="p wrapper">Must match the named class.
-            Remember, a class can be derived from a regex,
-            a dictionary, or a rule. If the class specified
-            here was derived from a regular expression, for
-            example, then this token must match the search
-            pattern of the expression.</p>
+        <td headers="d27028e619">
+          <p>Must match the named class. Remember, a class can be derived from a regex, a dictionary, or a rule. If the class specified here was derived from a regular expression, for example, then this token must match the search pattern of the expression.</p>
         </td>
       </tr>
     </table>

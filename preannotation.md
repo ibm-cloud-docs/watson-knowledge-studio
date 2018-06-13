@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-06-13"
 
 ---
 
@@ -31,11 +31,13 @@ Pre-annotation makes the job of human annotators easier because it covers the st
 The method that you use to pre-annotate documents in no way restricts the ways that you can use the resulting model. For example, just because you use the {{site.data.keyword.nlushort}} service to pre-annotate documents does not mean you must deploy the final machine learning model that you build to the {{site.data.keyword.nlushort}} service. Pre-annotation is solely meant to bootstrap the human annotation process.
 
 ## Important notes
+{: #preannotation_notes}
 
 - Never run a pre-annotator on documents that human annotators have annotated because the annotations added by the human annotators will be removed.
 - You can run only one pre-annotator on documents. If you run one pre-annotator, and then run a second pre-annotator, the second pre-annotator will remove the annotations that were added by the first pre-annotator. Pick the pre-annotation method that best fits your use case, and use only that one pre-annotator.
 
 ## Pre-annotation methods
+{: #preannotation_methods}
 
 The following pre-annotators are available:
 >**Note**: The {{site.data.keyword.alchemylanguageshort}} service has been deprecated. For more information, see [Retirement of {{site.data.keyword.alchemyapishort}} service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/bye-bye-alchemyapi/){: new_window}.
@@ -66,16 +68,19 @@ Alternatively, you can upload already-annotated documents, and use them to start
 You can use the {{site.data.keyword.nlushort}} service to pre-annotate documents that you add to your corpus.
 
 ### Before you begin
+{: #wks_preannotnlu_prereqs}
 
 Determine whether the {{site.data.keyword.nlushort}} pre-annotator is likely to add value for your use case. Review the list of supported [{{site.data.keyword.nlushort}} service entity types and subtypes ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/natural-language-understanding/entity-types.html){: new_window} to determine if there is a natural overlap between them and the types in your type system. If so, continue with this procedure. If not, choose a different pre-annotator to use.
 
 ### About this task
+{: #wks_preannotnlu_about}
 
 {{site.data.keyword.nlushort}} is a service that offers text analysis through natural language processing. When you use the {{site.data.keyword.nlushort}} pre-annotator, it calls the {{site.data.keyword.nlushort}} service to find and annotate entities in your documents.
 
 You must specify the entity types that you want the service to look for by mapping the {{site.data.keyword.nlushort}} entity types to corresponding {{site.data.keyword.knowledgestudioshort}} entity types that you have added to the {{site.data.keyword.knowledgestudioshort}} type system. Only mentions of entity types that you map will be found and annotated.
 
 ### Procedure
+{: #wks_preannotnlu_procedure}
 
 To use the {{site.data.keyword.nlushort}} service to pre-annotate documents, complete the following steps:
 
@@ -88,20 +93,28 @@ To use the {{site.data.keyword.nlushort}} service to pre-annotate documents, com
     - You cannot map an {{site.data.keyword.nlushort}} entity type to a {{site.data.keyword.knowledgestudioshort}} entity role, only {{site.data.keyword.knowledgestudioshort}} entity types.
     - You can map more than one {{site.data.keyword.nlushort}} entity type to a single {{site.data.keyword.knowledgestudioshort}} entity type, or the other way around. For example, the following mappings are permitted:
 
-    <table cellpadding="4" cellspacing="0" summary="Sample mapping of entity types" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d20428e292" class="stentry thleft thbot">Watson Knowledge Studio Entity Type</th>
-        <th valign="bottom" align="left" id="d20428e298" class="stentry thleft thbot">{{site.data.keyword.nlushort}} Entity Type</th>
+    <table summary="Sample mapping of entity types">
+    <caption>Table 1. Sample mapping of entity types</caption>
+      <tr>
+        <th style="vertical-align:bottom; text-align"left" id="d20428e292">Watson Knowledge Studio Entity Type</th>
+        <th style="vertical-align:bottom; text-align"left" id="d20428e298">{{site.data.keyword.nlushort}} Entity Type</th>
       </tr>
-      <tr class="strow"><td valign="top" headers="d20428e292" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">ENGINEER</p></li>
-            <li class="li"><p class="p wrapper">SCIENTIST</p></li>
-          </ul>
+      <tr>
+        <td headers="d20428e292">
+          ENGINEER<br/>
+          SCIENTIST
         </td>
-        <td valign="top" headers="d20428e298" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">Person</p></li>
-          </ul></td>
+        <td headers="d20428e298">
+          Person
+        </td>
       </tr>
-      <tr class="strow"><td valign="top" headers="d20428e292" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">LOCATION</p></li></td>
-        <td valign="top" headers="d20428e298" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">CityTown</p></li>
-            <li class="li"><p class="p wrapper">Country</p></li>
-          </ul>
+      <tr>
+        <td headers="d20428e292">
+          LOCATION
+        </td>
+        <td headers="d20428e298">
+          CityTown<br/>
+          Country
         </td>
       </tr>
     </table>
@@ -143,12 +156,14 @@ Ground truth that is produced by documents that were pre-annotated by the {{site
 To help human annotators get started with their annotation tasks, you can create a dictionary and use it to pre-annotate documents that you add to the corpus.
 
 ### About this task
+{: #wks_preannot_about}
 
 When a human annotator begins work on documents that were pre-annotated, it is likely that a number of mentions will already be marked by entity types based on the dictionary entries. The human annotator can change or remove the pre-annotated entity types and assign entity types to unannotated mentions. Pre-annotation by a dictionary does not annotate relations and coreferences. Relations and coreferences must be annotated by human annotators.
 
 **Note**: This task shows how to create a dictionary that is editable. If you want to upload and pre-annotate your documents with a read-only dictionary, click the **Upload Dictionary** button that is available on the **Assets & Tools** > **Pre-annotators** > **Dictionaries** tab.
 
 ### Procedure
+{: #wks_preannot_procedure}
 
 To create an editable dictionary and pre-annotate documents:
 
@@ -178,10 +193,12 @@ To create an editable dictionary and pre-annotate documents:
 You can use an existing machine learning model to pre-annotate documents that you add to your corpus.
 
 ### About this task
+{: #wks_preannotsire_about}
 
 After 10 to 30 documents are annotated, a machine learning model can be trained on the data. Such a minimally-trained model should not be used in a production, but can be used as a pre-annotation model that can help speed up the human annotation of subsequent documents. For example, if you add documents to the corpus after you train a machine learning model, you can use the model to pre-annotate the new document sets. Never run a pre-annotator on the same documents that have been annotated by a person. Pre-annotators remove human annotation.
 
 ### Procedure
+{: #wks_preannotsire_procedure}
 
 To use an existing machine learning model to pre-annotate documents:
 
@@ -200,6 +217,7 @@ To use an existing machine learning model to pre-annotate documents:
 You can use an existing rule-based model to pre-annotate documents that you add to your corpus.
 
 ### Procedure
+{: #wks_preannotrule_procedure}
 
 To use the rule-based model to pre-annotate documents, complete the following steps:
 
@@ -240,6 +258,7 @@ If you assign the imported documents to human annotators, the documents appear p
 You can export documents that were crawled and analyzed in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer Content Analytics, and upload the analyzed documents as XMI files into a {{site.data.keyword.knowledgestudioshort}} workspace.
 
 #### Procedure
+{: #wks_uima_procedure}
 
 To get analyzed documents from a {{site.data.keyword.watson}} Explorer Content Analytics collection:
 
@@ -271,6 +290,7 @@ You must define a mapping between the UIMA types and {{site.data.keyword.knowled
 You can export a collection of analyzed documents from {{site.data.keyword.watson}} Explorer Content Analytics Studio, and upload the analyzed documents as XMI files into a {{site.data.keyword.knowledgestudioshort}} project.
 
 #### Procedure
+{: #wks_uimawexstudio_procedure}
 
 To get analyzed documents from a Content Analytics Studio collection:
 
@@ -283,6 +303,7 @@ To get analyzed documents from a Content Analytics Studio collection:
 1. Extract all files from the ZIP file. The extracted contents include XMI files (`*.xmi`), the UIMA TypeSystem descriptor file (`TypeSystem.xml`), and other files.
 
 #### What to do next
+{: #wks_uimawexstudio_next}
 
 You must define a mapping between the UIMA types and {{site.data.keyword.knowledgestudioshort}} entity types. You must also create a ZIP file that contains all of the files that are required to upload the analyzed data into a {{site.data.keyword.knowledgestudioshort}} workspace.
 
@@ -292,10 +313,12 @@ You must define a mapping between the UIMA types and {{site.data.keyword.knowled
 Before you upload XMI files into a {{site.data.keyword.knowledgestudioshort}} workspace, you must define mappings between the UIMA types and {{site.data.keyword.knowledgestudioshort}} entity types.
 
 #### Before you begin
+{: #wks_uimawexmap_prereqs}
 
 The type system in your {{site.data.keyword.knowledgestudioshort}} workspace must include the entity types that you want to map the UIMA types to.
 
 #### Procedure
+{: #wks_uimawexmap_procedure}
 
 To map UIMA types to {{site.data.keyword.knowledgestudioshort}} entity types:
 
@@ -338,6 +361,7 @@ To map UIMA types to {{site.data.keyword.knowledgestudioshort}} entity types:
         {: screen}
 
 #### What to do next
+{: #wks_uimawexmap_next}
 
 You must create a ZIP file that contains all of the files that are required to upload the analyzed data into a {{site.data.keyword.knowledgestudioshort}} workspace.
 
@@ -355,12 +379,14 @@ You must create a ZIP file that contains all of the files that are required to u
 To use the pre-annotated documents that you downloaded to train a model, you must create a ZIP file that contains all the files required to upload the XMI files, and then upload the ZIP file into a {{site.data.keyword.knowledgestudioshort}} workspace.
 
 #### Before you begin
+{: #wks_uimaweximport_prereqs}
 
 Before you upload the ZIP file, ensure that the type system in your {{site.data.keyword.knowledgestudioshort}} workspace includes the entity types that you mapped the UIMA types to.
 
 > **Warning:** UIMA analysis engines allow annotations to span sentences. In {{site.data.keyword.knowledgestudioshort}}, annotations must exist within the boundaries of a single sentence. If the XMI files that you upload include annotations that span sentences, those annotations do not appear in the ground truth editor.
 
 #### Procedure
+{: #wks_uimaweximport_procedure}
 
 To upload pre-annotated documents into a {{site.data.keyword.knowledgestudioshort}} workspace:
 

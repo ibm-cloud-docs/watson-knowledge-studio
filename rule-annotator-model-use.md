@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-16"
+lastupdated: "2018-06-12"
 
 ---
 
@@ -47,10 +47,12 @@ Deploy the model to enable an application that uses the {{site.data.keyword.disc
 **Attention**: This is currently an [experimental](/docs/services/watson-knowledge-studio/troubleshooting.html#experimental) feature of the service.
 
 ### Before you begin
+{: #wks_rule_discovery_prereqs}
 
 You must have administrative access to a {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}} service instance, and know the {{site.data.keyword.Bluemix_notm}} space and instance names that are associated with it.
 
 ### Procedure
+{: #wks_rule_discovery_procedure}
 
 To deploy a rule-based model to {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}} , complete the following steps:
 
@@ -72,6 +74,7 @@ To deploy a rule-based model to {{site.data.keyword.watson}} {{site.data.keyword
     Once available, make a note of the model ID (model_id). You will provide this ID to the {{site.data.keyword.discoveryshort}} service to enable the service to use your custom model.
 
 ### What to do next
+{: #wks_rule_discovery_next}
 
 To use the deployed model, you must provide the model ID when it is requested during the {{site.data.keyword.discoveryshort}} service enrichment configuration process.
 
@@ -83,10 +86,12 @@ Deploy the rule-based model to enable an application that uses the {{site.data.k
 **Attention**: This is currently an [experimental](/docs/services/watson-knowledge-studio/troubleshooting.html#experimental) feature of the service.
 
 ### Before you begin
+{: #wks_rule_prereqs}
 
 You must be have administrative access to a {{site.data.keyword.nlushort}} service instance, and know the {{site.data.keyword.Bluemix_notm}} space and instance names that are associated with it.
 
 ### Procedure
+{: #wks_rule_procedure}
 
 To deploy a rule-based model to {{site.data.keyword.nlushort}} , complete the following steps:
 
@@ -108,6 +113,7 @@ To deploy a rule-based model to {{site.data.keyword.nlushort}} , complete the fo
     Once available, make a note of the model ID (model_id). You will provide this ID to the {{site.data.keyword.nlushort}} service to enable the service to use your custom model.
 
 ### What to do next
+{: #wks_rule_next}
 
 To use the deployed model, you must specify the model ID of your custom model in the `entities.model` parameter.
 
@@ -134,6 +140,7 @@ To undeploy models or find model IDs:
 Export the PEAR file that is produced when the rule-based model is created so it can be used in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
 
 ### Procedure
+{: #wks_rule_export_procedure}
 
 To leverage a rule-based model in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer, complete the following steps.
 
