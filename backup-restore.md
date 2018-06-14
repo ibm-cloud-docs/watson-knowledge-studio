@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -34,7 +34,7 @@ To back up and restore your data complete the following steps:
 
 1. [Understand which data can be backed up](#data)
 1. [Prepare for backup](#prepare)
-1. [Export artifacts from the current instance](#export)
+1. [Download artifacts from the current instance](#export)
 1. [Recreate workspaces on the new instance](#recreateproj)
 1. [Restore the workspace data](#restoredata)
 1. [Restore the models](#restoremodels)
@@ -108,7 +108,9 @@ For each workspace that you want to migrate, download the following artifacts. S
 - Type system
 - Dictionaries
 
-  **Note**: Only editable dictionaries will be downloaded. You cannot download read-only dictionaries.
+  **Note**:
+    - Only editable dictionaries will be downloaded. You cannot download read-only dictionaries.
+    - For dictionaries, entity type mappings are not migrated. After you restore these artifacts, you will need to map the dictionaries to entity types, as necessary.
 
 - Documents
 
@@ -143,7 +145,7 @@ After recreating the workspaces, upload the previously downloaded artifacts:
 
   If you used any read-only dictionaries in the previous version of the workspace, reupload them into this workspace from their original source.
 
-  **Note**: When you add dictionaries, the dictionary pre-annotator is automatically created. You associate the dictionary with an entity type at the time when you run the pre-annotator.
+1. For dictionary pre-annotators, associate the dictionaries with an entity type. Dictionaries that don't have mappings for entity types will not apply annotations when you pre-annotate documents.
 
 1. Upload the documents that you downloaded from the previous version of the workspace into this version of the workspace.
    For details, see [Uploading resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html).
