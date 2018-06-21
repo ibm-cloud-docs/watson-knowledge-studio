@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -182,7 +182,7 @@ For more information, see the latest [{{site.data.keyword.knowledgestudioshort}}
 ## Experimental services: What does *experimental* mean?
 {: #experimental}
 
-For information about experimental services, see the [{{site.data.keyword.Bluemix_notm}} documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/index.html#experimental_services){: new_window}. For the full details of experimental services, see the latest version of the [{{site.data.keyword.Bluemix_notm}} Service Description ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/software/sla/sladb.nsf/sla/bm){: new_window}.
+For information about experimental services, see the [{{site.data.keyword.Bluemix_notm}} documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/get-support/servicessupport.html#s-services-exporcont){: new_window}. For the full details of experimental services, see the latest version of the [{{site.data.keyword.Bluemix_notm}} Service Description ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/software/sla/sladb.nsf/sla/bm){: new_window}.
 
 ## Storage space issues
 {: #storage}
