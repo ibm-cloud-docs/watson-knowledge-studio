@@ -17,7 +17,7 @@ Watson Knowledge Studio
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    accessibility.md
+    [Accessibility](https://console.bluemix.net/docs/overview/accessibility/accessibility_features.html)
     glossary.md
     language-support.md
     information-security.md
