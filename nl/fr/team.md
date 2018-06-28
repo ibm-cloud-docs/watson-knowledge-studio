@@ -17,142 +17,74 @@ lastupdated: "2018-04-04"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-Cette documentation concerne
-{{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}.
-Pour consulter la documentation de la version précédente de {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace,
-[cliquez sur
-ce lien ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/services/knowledge-studio/team.html){: new_window}.
+Cette documentation concerne {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. Pour consulter la documentation de la version précédente de {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [cliquez sur ce lien ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/services/knowledge-studio/team.html){: new_window}.
 {: tip}
 
 # Constituer une équipe
 {: #team}
 
-La création d'un modèle nécessite le concours d'experts
-du domaine, de chefs de projet et d'utilisateurs capables de comprendre et d'interpréter
-les modèles statistiques.
-Pour chaque personne devant se connecter à {{site.data.keyword.knowledgestudioshort}}, vous devez ajouter un utilisateur.
+La création d'un modèle nécessite le concours d'experts du domaine, de chefs de projet et d'utilisateurs capables de comprendre et d'interpréter les modèles statistiques. Pour chaque personne devant se connecter à {{site.data.keyword.knowledgestudioshort}}, vous devez ajouter un utilisateur.
 {: shortdesc}
 
-**Remarque **: L'ajout d'utilisateurs n'est possible qu'avec les
-plans Standard et Premium.
-Les plans gratuits sont limités à un seul utilisateur.
-Cet unique utilisateur reçoit d'office le rôle Admin, c'est-à-dire le rôle ayant le plus de pouvoirs.
-
+**Remarque **: L'ajout d'utilisateurs n'est possible qu'avec les plans Standard et Premium. Les plans gratuits sont limités à un seul utilisateur. Cet unique utilisateur reçoit d'office le rôle Admin, c'est-à-dire le rôle ayant le plus de pouvoirs.
 
 ## Avant de commencer
 
-- Assurez-vous d'utiliser un navigateur pris en charge.
-Consultez à cet
-effet [Navigateur nécessaire](/docs/services/watson-knowledge-studio/system-requirements.html).
+- Assurez-vous d'utiliser un navigateur pris en charge. Consultez à cet effet [Navigateur nécessaire](/docs/services/watson-knowledge-studio/system-requirements.html).
 - [Créez une instance de {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/tutorials-create-project.html#instance).
-- Si vous vous êtes inscrit à un plan
-Standard ou Premium, sous l'onglet **Gérer** d'{{site.data.keyword.cloud_notm}},
-invitez dans votre organisation les autres personnes que vous souhaitez ajouter
-comme utilisateurs dans {{site.data.keyword.knowledgestudioshort}}.
-Pour plus d'informations sur l'invitation d'utilisateurs,
-consultez [Invitation d'utilisateurs et affectation d'accès ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/iam/iamuserinv.html){: new_window}.
+- Si vous vous êtes inscrit à un plan Standard ou Premium, sous l'onglet **Gérer** d'{{site.data.keyword.cloud_notm}}, invitez dans votre organisation les autres personnes que vous souhaitez ajouter comme utilisateurs dans {{site.data.keyword.knowledgestudioshort}}. Pour plus d'informations sur l'invitation d'utilisateurs, consultez [Invitation d'utilisateurs et affectation d'accès ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/iam/iamuserinv.html){: new_window}.
 
   **Important **:
 
-  - Assurez-vous que les utilisateurs invités ont le rôle Cloud Foundry **Développeur**.
-Pour plus d'informations, consultez [Accès Cloud Foundry ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window}.
-  - Le premier utilisateur à lancer {{site.data.keyword.knowledgestudioshort}} reçoit d'office le rôle
-d'administrateur (Admin) de l'instance de {{site.data.keyword.knowledgestudioshort}}.
-La tâche décrite ici part du principe que vous êtes la première personne à lancer
-{{site.data.keyword.knowledgestudioshort}} après votre inscription à un plan, ce qui signifie
-que vous avez le rôle Admin.
-
+  - Assurez-vous que les utilisateurs invités ont le rôle Cloud Foundry **Développeur**. Pour plus d'informations, consultez [Accès Cloud Foundry ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window}.
+  - Le premier utilisateur à lancer {{site.data.keyword.knowledgestudioshort}} reçoit d'office le rôle d'administrateur (Admin) de l'instance de {{site.data.keyword.knowledgestudioshort}}. La tâche décrite ici part du principe que vous êtes la première personne à lancer {{site.data.keyword.knowledgestudioshort}} après votre inscription à un plan, ce qui signifie que vous avez le rôle Admin.
 
 ## A propos de cette tâche
 
 En règle générale, vous ajoutez des utilisateurs pour qu'ils assument les rôles suivants.
 
-
-**Remarque :** Si vous vous êtes inscrit à un plan gratuit,
-vous ne pouvez pas ajouter d'autres utilisateurs à votre instance de {{site.data.keyword.knowledgestudioshort}}.
-Lorsque vous lancez {{site.data.keyword.knowledgestudioshort}}, vous êtes ajouté à l'instance
-en tant qu'administrateur (rôle Admin).
-Dans ce cas de figure, le rôle Admin vous permet s'assumer de nombreuses fonctions qui, en temps normal, seraient remplies par différentes
-personnes ayant différents rôles.
-Vous pouvez ainsi tester de quelle manière les experts des différentes branches d'un domaine peuvent collaborer à la construction
-d'un modèle d'apprentissage automatique ou d'un modèle à base de règles.
-
+**Remarque :** Si vous vous êtes inscrit à un plan gratuit, vous ne pouvez pas ajouter d'autres utilisateurs à votre instance de {{site.data.keyword.knowledgestudioshort}}. Lorsque vous lancez {{site.data.keyword.knowledgestudioshort}}, vous êtes ajouté à l'instance en tant qu'administrateur (rôle Admin). Dans ce cas de figure, le rôle Admin vous permet s'assumer de nombreuses fonctions qui, en temps normal, seraient remplies par différentes personnes ayant différents rôles. Vous pouvez ainsi tester de quelle manière les experts des différentes branches d'un domaine peuvent collaborer à la construction d'un modèle d'apprentissage automatique ou d'un modèle à base de règles.
 
 - **HumanAnnotator**
 
-    Les annotateurs humains sont généralement des experts du domaine concerné qui passent en revue des documents traitant de ce domaine
-pour y repérer les mentions d'entités et de relations d'intérêt.
-Leur interaction avec l'application est limitée. Ils utilisent l'éditeur de données de référence
-pour annoter un jeu de documents qui leur a été affecté.
-
+    Les annotateurs humains sont généralement des experts du domaine concerné qui passent en revue des documents traitant de ce domaine pour y repérer les mentions d'entités et de relations d'intérêt. Leur interaction avec l'application est limitée. Ils utilisent l'éditeur de données de référence pour annoter un jeu de documents qui leur a été affecté.
 
 - **ProjectManager**
 
-    Les chefs de projet sont des personnes qui aident à la création de modèles en
-exécutant des tâches telles que la création d'artefacts d'espace de travail et
-l'entraînement, la création et le déploiement de modèles. Dans les espaces de travail servant à la
-construction d'annotateurs à base de modèle d'apprentissage automatique, les chefs de projet
-gèrent également le processus d'annotation des documents en affectant les tâches de révision de ces documents
-aux annotateurs humains, en arbitrant les conflits d'annotations et en approuvant les documents à ajouter
-aux données de référence.
-
+    Les chefs de projet sont des personnes qui aident à la création de modèles en exécutant des tâches telles que la création d'artefacts d'espace de travail et l'entraînement, la création et le déploiement de modèles. Dans les espaces de travail servant à la construction d'annotateurs à base de modèle d'apprentissage automatique, les chefs de projet gèrent également le processus d'annotation des documents en affectant les tâches de révision de ces documents aux annotateurs humains, en arbitrant les conflits d'annotations et en approuvant les documents à ajouter aux données de référence.
 
 ## Ajouter des utilisateurs dans {{site.data.keyword.knowledgestudioshort}}
 
 Ajoutez des utilisateurs de votre organisation {{site.data.keyword.cloud_notm}} à {{site.data.keyword.knowledgestudioshort}}.
 
-**Remarque **: L'ajout d'utilisateurs n'est possible qu'avec les
-plans Standard et Premium.
-Les plans gratuits sont limités à un seul utilisateur.
-
+**Remarque **: L'ajout d'utilisateurs n'est possible qu'avec les plans Standard et Premium. Les plans gratuits sont limités à un seul utilisateur.
 
 Pour ajouter des utilisateurs à une instance de {{site.data.keyword.knowledgestudioshort}} :
 
-1. Connectez-vous au [Tableau de bord {{site.data.keyword.cloud_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/dashboard/apps/){: new_window} avec
-votre {{site.data.keyword.ibmid}} et lancez {{site.data.keyword.knowledgestudioshort}}.
+1. Connectez-vous au [Tableau de bord {{site.data.keyword.cloud_notm}}![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/dashboard/apps/){: new_window} avec votre {{site.data.keyword.ibmid}} et lancez {{site.data.keyword.knowledgestudioshort}}.
 1. Cliquez sur l'icône **Paramètres**, puis sur l'option de visualisation/modification des détails du service****.
-1. Dans la section **Gérer les utilisateurs**, entrez l'{{site.data.keyword.ibmid}} de l'utilisateur que vous voulez
-ajouter.
-
+1. Dans la section **Gérer les utilisateurs**, entrez l'{{site.data.keyword.ibmid}} de l'utilisateur que vous voulez ajouter.
 1. Sélectionnez le rôle que vous souhaitez donner à l'utilisateur.
 
+   Remarque : une fois qu'un utilisateur a reçu un rôle donné, vous ne pouvez pas le déclasser (lui attribuer un rôle inférieur). Il est donc important de bien comprendre les tâches que peuvent accomplir les rôles Admin et ProjectManager avant de les attribuer.
 
-   Remarque : une fois qu'un utilisateur a reçu un rôle donné, vous ne pouvez pas le déclasser (lui attribuer un rôle inférieur).
-Il est donc important de bien comprendre les tâches que peuvent accomplir les rôles Admin et ProjectManager avant de les attribuer.
-
-
-1. Cliquez sur **Ajouter**. 
+1. Cliquez sur **Ajouter**.
 
 ## Passer des utilisateurs à un rôle supérieur
 
-Après avoir ajouté des utilisateurs à {{site.data.keyword.knowledgestudioshort}}, vous pouvez faire passer à un rôle supérieur
-ceux qui ont un rôle aux pouvoirs trop limités.
-Chaque utilisateur doit recevoir l'un des rôles décrits ci-dessous pour pouvoir accomplir les tâches correspondantes.
+Après avoir ajouté des utilisateurs à {{site.data.keyword.knowledgestudioshort}}, vous pouvez faire passer à un rôle supérieur ceux qui ont un rôle aux pouvoirs trop limités. Chaque utilisateur doit recevoir l'un des rôles décrits ci-dessous pour pouvoir accomplir les tâches correspondantes.
 
-
-**Remarque **: Le passage d'utilisateurs à un rôle supérieur n'est possible qu'avec les
-plans Standard et Premium.
-Les plans gratuits sont limités à un seul utilisateur, qui a déjà le rôle le plus élevé, Admin.
-
+**Remarque **: Le passage d'utilisateurs à un rôle supérieur n'est possible qu'avec les plans Standard et Premium. Les plans gratuits sont limités à un seul utilisateur, qui a déjà le rôle le plus élevé, Admin.
 
 > **Attention : le déclassement (passage d'un rôle donné à un rôle inférieur) n'est pas permis.**
 
-Pour passer un utilisateur {{site.data.keyword.knowledgestudioshort}} à un rôle supérieur : 
+Pour passer un utilisateur {{site.data.keyword.knowledgestudioshort}} à un rôle supérieur :
 
-1. Connectez-vous au [Tableau de bord {{site.data.keyword.cloud_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/dashboard/apps/){: new_window} avec
-votre {{site.data.keyword.ibmid}} et lancez {{site.data.keyword.knowledgestudioshort}}.
-1. Dans le menu de navigation en haut à droite,
-cliquez sur l'icône **Paramètres** ![icône Paramètres](images/settings.png),
-puis sur l'option de visualisation/modification des détails du service****.
-La section **Gérer les utilisateurs** de la page
-Détails du service contient la liste de tous les ID utilisateur membres de cette instance de {{site.data.keyword.knowledgestudioshort}}.
-1. Localisez le nom de l'utilisateur dont vous souhaitez changer le rôle,
-puis cliquez sur le lien **Editer**.
+1. Connectez-vous au [Tableau de bord {{site.data.keyword.cloud_notm}}![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/dashboard/apps/){: new_window} avec votre {{site.data.keyword.ibmid}} et lancez {{site.data.keyword.knowledgestudioshort}}.
+1. Dans le menu de navigation en haut à droite, cliquez sur l'icône **Paramètres**![icône Paramètres](images/settings.png), puis sur l'option de visualisation/modification des détails du service****. La section **Gérer les utilisateurs** de la page Détails du service contient la liste de tous les ID utilisateur membres de cette instance de {{site.data.keyword.knowledgestudioshort}}.
+1. Localisez le nom de l'utilisateur dont vous souhaitez changer le rôle, puis cliquez sur le lien **Editer**.
 
-
-    {{site.data.keyword.knowledgestudioshort}} prévoit les rôles suivants, listés du plus élevé au moins élevé en
-termes de privilèges :
-
+    {{site.data.keyword.knowledgestudioshort}} prévoit les rôles suivants, listés du plus élevé au moins élevé en termes de privilèges :
     - **Admin**
 
       Les utilisateurs ayant ce rôle peuvent effectuer les tâches suivantes :
@@ -176,39 +108,18 @@ termes de privilèges :
 
     - **HumanAnnotator**
 
-      Les utilisateurs ayant ce rôle peuvent annoter des documents dans les espaces de travail
-où ils ont le rôle d'annotateur humain. Ils peuvent aussi annoter les documents des jeux associés
-aux tâches d'annotation qui leur sont affectées.
+      Les utilisateurs ayant ce rôle peuvent annoter des documents dans les espaces de travail où ils ont le rôle d'annotateur humain. Ils peuvent aussi annoter les documents des jeux associés aux tâches d'annotation qui leur sont affectées.
 
-
-      **Important :** Avant qu'un utilisateur ayant le rôle **HumanAnnotator** puisse voir un espace de travail dans
-l'application {{site.data.keyword.knowledgestudioshort}},
-vous devez créer cet espace de travail, associer cet utilisateur à un jeu de documents et lui affecter une tâche d'annotation.
-Mettez en place l'espace de travail dès que possible à compter du moment où les utilisateurs s'inscrivent.
-Ils pourront ainsi le voir dès leur premier accès à l'application.
-Lorsque l'espace de travail est prêt, vous pouvez le leur notifier et leur faire savoir qu'ils peuvent commencer à annoter
-les documents.
-
+      **Important :** Avant qu'un utilisateur ayant le rôle **HumanAnnotator** puisse voir un espace de travail dans l'application {{site.data.keyword.knowledgestudioshort}}, vous devez créer cet espace de travail, associer cet utilisateur à un jeu de documents et lui affecter une tâche d'annotation. Mettez en place l'espace de travail dès que possible à compter du moment où les utilisateurs s'inscrivent. Ils pourront ainsi le voir dès leur premier accès à l'application. Lorsque l'espace de travail est prêt, vous pouvez le leur notifier et leur faire savoir qu'ils peuvent commencer à annoter les documents.
 
 1. Cliquez sur le rôle actuel de l'utilisateur et choisissez le rôle supérieur auquel vous souhaitez le nommer.
-
-1. Optionnel : lorsque vous en avez terminé avec l'administration des utilisateurs dans {{site.data.keyword.knowledgestudioshort}}, mettez fin à la
-session en fermant le navigateur web.
-L'interface utilisateur de {{site.data.keyword.knowledgestudioshort}} ne prévoit pas d'action pour vous déconnecter
-explicitement.
-
+1. Optionnel : lorsque vous en avez terminé avec l'administration des utilisateurs dans {{site.data.keyword.knowledgestudioshort}}, mettez fin à la session en fermant le navigateur web. L'interface utilisateur de {{site.data.keyword.knowledgestudioshort}} ne prévoit pas d'action pour vous déconnecter explicitement.
 
 ## Désactiver des comptes d'utilisateur
 
-Plus tard, si vous voulez retirer des utilisateurs, ouvrez à nouveau
-la page Détails du service en suivant les étapes décrites plus haut.
-Dans la liste des ID utilisateur, localisez l'utilisateur que vous souhaitez retirer et
-cliquez sur **Désactiver**.
+Plus tard, si vous voulez retirer des utilisateurs, ouvrez à nouveau la page Détails du service en suivant les étapes décrites plus haut. Dans la liste des ID utilisateur, localisez l'utilisateur que vous souhaitez retirer et cliquez sur **Désactiver**.
 
-> **Attention **: La désactivation d'un compte d'utilisateur auquel des documents ont été affectés aura des conséquences sur son
-travail d'annotation en cours.
-Celles de ses annotations qui n'ont pas encore été promues au rang de données de référence seront supprimées.
-
+> **Attention **: La désactivation d'un compte d'utilisateur auquel des documents ont été affectés aura des conséquences sur son travail d'annotation en cours. Celles de ses annotations qui n'ont pas encore été promues au rang de données de référence seront supprimées.
 
 ### Tâches connexes
 

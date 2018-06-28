@@ -35,9 +35,6 @@ Les fonctions d'accessibilité permettent aux utilisateurs souffrant d'un handic
 
 Les fonctions d'accessibilité dans la documentation de ce produit permettent aux clients d'utiliser les méthodes suivantes pour la parcourir :
 
-- Utiliser un logiciel de lecture d'écran ou de synthèse vocale, afin d'entendre ce qui est affiché à l'écran. 
-Consultez la documentation relative au produit de technologie d'assistance pour plus de
-détails sur l'utilisation de ces technologies avec des informations au format HTML.
+- Utiliser un logiciel de lecture d'écran ou de synthèse vocale, afin d'entendre ce qui est affiché à l'écran. Consultez la documentation relative au produit de technologie d'assistance pour plus de détails sur l'utilisation de ces technologies avec des informations au format HTML.
 - Utiliser des loupes afin d'agrandir ce qui apparaît à l'écran.
-- Utiliser les fonctions spécifiques ou équivalentes uniquement à
-l'aide du clavier.
+- Utiliser les fonctions spécifiques ou équivalentes uniquement à l'aide du clavier.
