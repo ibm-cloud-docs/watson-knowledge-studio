@@ -23,116 +23,69 @@ Cette documentation concerne {{site.data.keyword.knowledgestudiofull}} on {{site
 # Utiliser le modèle d'apprentissage automatique
 {: #publish-ml}
 
-Tirez parti d'un modèle d'apprentissage automatique que vous avez entraîné avec {{site.data.keyword.knowledgestudioshort}}
-en le mettant à la disposition d'autres applications {{site.data.keyword.watson}}.
+Tirez parti d'un modèle d'apprentissage automatique que vous avez entraîné avec {{site.data.keyword.knowledgestudioshort}} en le mettant à la disposition d'autres applications {{site.data.keyword.watson}}.
 {: shortdesc}
 
-Vous pouvez déployer ou exporter un modèle d'apprentissage automatique.
-Un pré-annotateur à base de dictionnaire ou un pré-annotateur {{site.data.keyword.nlushort}}
-ne peut servir qu'à pré-annoter des documents au sein de {{site.data.keyword.knowledgestudioshort}}.
+Vous pouvez déployer ou exporter un modèle d'apprentissage automatique. Un pré-annotateur à base de dictionnaire ou un pré-annotateur {{site.data.keyword.nlushort}} ne peut servir qu'à pré-annoter des documents au sein de {{site.data.keyword.knowledgestudioshort}}.
 
-Pour pouvoir déployer un modèle à l'usage d'un service, vous devez disposer d'un abonnement à celui-ci. Les services {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} sont hébergés sur {{site.data.keyword.Bluemix_short}}, la plateforme cloud d'{{site.data.keyword.IBM_notm}}. Pour plus d'informations sur cette plateforme, consultez [Qu'est-ce que {{site.data.keyword.Bluemix_notm}} ? ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.ng.bluemix.net/docs/overview/whatisbluemix.html){: new_window}. Pour vous abonner à l'un des services {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}}, créez un compte sur le site web [{{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.ng.bluemix.net/){: new_window}. 
+Pour pouvoir déployer un modèle à l'usage d'un service, vous devez disposer d'un abonnement à celui-ci. Les services {{site.data.keyword.IBM_notm}}{{site.data.keyword.watson}} sont hébergés sur {{site.data.keyword.Bluemix_short}}, la plateforme cloud d'{{site.data.keyword.IBM_notm}}. Pour plus d'informations sur cette plateforme, consultez [Qu'est-ce que {{site.data.keyword.Bluemix_notm}} ? ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.ng.bluemix.net/docs/overview/whatisbluemix.html){: new_window}. Pour vous abonner à l'un des services {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}}, créez un compte sur le site web [{{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.ng.bluemix.net/){: new_window}.
 
 Pour certains services, vous devez connaître les détails de l'instance de service dans laquelle vous prévoyez le déploiement. Vous devez notamment connaître les noms d'espace et d'instance {{site.data.keyword.Bluemix_notm}}. Ces informations sont disponibles sur la page des services {{site.data.keyword.Bluemix_notm}}.
 
-
-Vous pouvez aussi pré-annoter de nouveaux documents avec le modèle d'apprentissage automatique.
-Pour les détails, consultez [Pré-annoter des documents avec le modèle d'apprentissage automatique](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannotsire).
-
+Vous pouvez aussi pré-annoter de nouveaux documents avec le modèle d'apprentissage automatique. Pour les détails, consultez [Pré-annoter des documents avec le modèle d'apprentissage automatique](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannotsire).
 
 ## Déployer un modèle d'apprentissage automatique sur AlchemyLanguage
 {: #wks_mabluemix}
 
-Lorsque vous êtes satisfait des performances du modèle, vous pouvez en déployer
-une version sur {{site.data.keyword.IBM_notm}} {{site.data.keyword.alchemylanguageshort}}.
-Cette fonctionnalité, qui nécessite de fournir une clé d'accès à {{site.data.keyword.alchemyapishort}},
-permettra à vos applications d'utiliser le modèle ainsi déployé pour annoter des documents traitant de
-votre domaine.
-
+Lorsque vous êtes satisfait des performances du modèle, vous pouvez en déployer une version sur {{site.data.keyword.IBM_notm}} {{site.data.keyword.alchemylanguageshort}}. Cette fonctionnalité, qui nécessite de fournir une clé d'accès à {{site.data.keyword.alchemyapishort}}, permettra à vos applications d'utiliser le modèle ainsi déployé pour annoter des documents traitant de votre domaine.
 
 ### Avant de commencer
 
-Pour déployer et utiliser le modèle, vous devez avoir le plan Avancé
-du service {{site.data.keyword.alchemylanguageshort}}.
-
->Remarque : le service {{site.data.keyword.alchemylanguageshort}} a été déprécié.
-A moins de disposer d'un plan existant, vous ne pouvez pas déployer le modèle sur ce service.
-
+Pour déployer et utiliser le modèle, vous devez avoir le plan Avancé du service {{site.data.keyword.alchemylanguageshort}}.
+>Remarque : le service {{site.data.keyword.alchemylanguageshort}} a été déprécié. A moins de disposer d'un plan existant, vous ne pouvez pas déployer le modèle sur ce service.
 
 ### A propos de cette tâche
 
-Lorsque vous déployez le modèle d'apprentissage automatique, vous devez sélectionner quelle version de celui-ci vous
-voulez déployer.
-Pour déployer sur ce service, vous devez avoir une clé d'accès provenant d'{{site.data.keyword.IBM_notm}} {{site.data.keyword.alchemylanguageshort}}.
+Lorsque vous déployez le modèle d'apprentissage automatique, vous devez sélectionner quelle version de celui-ci vous voulez déployer. Pour déployer sur ce service, vous devez avoir une clé d'accès provenant d'{{site.data.keyword.IBM_notm}} {{site.data.keyword.alchemylanguageshort}}.
 
-La clé doit appartenir à un compte autorisé à publier des modèles personnalisés. Faute de quoi, le modèle
-sera déployé correctement, mais vous ne pourrez pas l'utiliser.
+La clé doit appartenir à un compte autorisé à publier des modèles personnalisés. Faute de quoi, le modèle sera déployé correctement, mais vous ne pourrez pas l'utiliser.
 
-
-La clé doit être spécifiée la première fois que vous déployez un modèle
-sur {{site.data.keyword.alchemylanguageshort}}. Vous pouvez ensuite la réutiliser
-avec différentes versions du même modèle.
-A chaque clé correspond un nombre maximum de modèles pouvant être déployés en même temps.
-
+La clé doit être spécifiée la première fois que vous déployez un modèle sur {{site.data.keyword.alchemylanguageshort}}. Vous pouvez ensuite la réutiliser avec différentes versions du même modèle. A chaque clé correspond un nombre maximum de modèles pouvant être déployés en même temps.
 
 ### Procédure
 
 Pour déployer un modèle d'apprentissage automatique sur {{site.data.keyword.alchemylanguageshort}} :
 
-1. Connectez-vous en tant qu'administrateur ou chef de projet
-{{site.data.keyword.knowledgestudioshort}} et sélectionnez votre espace de
-travail.
-
+1. Connectez-vous en tant qu'administrateur ou chef de projet {{site.data.keyword.knowledgestudioshort}} et sélectionnez votre espace de travail.
 1. Sélectionnez l'onglet **Gestion des modèles** > **Versions** > **Apprentissage automatique**.
 1. Choisissez la version du modèle que vous voulez déployer.
 
-    Si une seule version du modèle est fonctionnelle, créez un instantané du modèle actuel.
-Cela a pour effet de créer une version spécifique du modèle, qui est celle qui sera
-déployée. Vous pourrez ainsi continuer à améliorer la version en cours.
-L'option Déployer n'apparaît pas tant que vous ne créez pas au moins une version.
+    Si une seule version du modèle est fonctionnelle, créez un instantané du modèle actuel. Cela a pour effet de créer une version spécifique du modèle, qui est celle qui sera déployée. Vous pourrez ainsi continuer à améliorer la version en cours. L'option Déployer n'apparaît pas tant que vous ne créez pas au moins une version.
 
+1. Cliquez sur **Déployer**, optez pour le déploiement sur le service {{site.data.keyword.alchemylanguageshort}}, puis cliquez sur **Suivant**.
+1. Entrez la clé que vous avez obtenue d'{{site.data.keyword.alchemylanguageshort}} ou sélectionnez une version précédemment déployée du modèle à laquelle est associée une clé que vous comptez réutiliser. Cliquez sur **Déployer**. Si la clé est valide, une confirmation dans laquelle figure l'ID du modèle s'affiche. Cela ne signifie pas pour autant que le modèle est prêt à être utilisé par vos applications.
+1. Le processus de déploiement peut prendre quelques minutes. Pour savoir où il en est, cliquez sur **Statut** à côté de la version déployée. Si le modèle est toujours en cours de déploiement, le statut indiqué est "publication en cours". Une fois le déploiement terminé, le statut passe à "disponible" si l'opération a réussi ou "erreur" si des problèmes ont été rencontrés.
 
-1. Cliquez sur **Déployer**, optez pour le déploiement sur le service {{site.data.keyword.alchemylanguageshort}}, puis cliquez
-sur **Suivant**.
-1. Entrez la clé que vous avez obtenue d'{{site.data.keyword.alchemylanguageshort}} ou
-sélectionnez une version précédemment déployée du modèle à laquelle est associée une clé que vous
-comptez réutiliser. Cliquez sur **Déployer**.
-Si la clé est valide, une confirmation dans laquelle figure l'ID du modèle s'affiche.
-Cela ne signifie pas pour autant que le modèle est prêt à être utilisé par vos applications.
-
-1. Le processus de déploiement peut prendre quelques minutes.
-Pour savoir où il en est, cliquez sur **Statut** à côté de la version déployée.
-Si le modèle est toujours en cours de déploiement, le statut indiqué
-est "publication en cours".
-Une fois le déploiement terminé, le statut passe à "disponible" si l'opération a réussi ou "erreur" si des problèmes ont été rencontrés.
-
-    Les informations de statut comprennent l'ID du modèle, les quatre derniers chiffres de la clé {{site.data.keyword.alchemyapishort}} et
-un journal du processus de déploiement.
-L'ID du modèle (model_id) est le nom par lequel vos applications appelleront le modèle d'apprentissage automatique.
-Utilisez la clé {{site.data.keyword.alchemyapishort}} pour garder la trace du nombre de déploiements par clé.
+    Les informations de statut comprennent l'ID du modèle, les quatre derniers chiffres de la clé {{site.data.keyword.alchemyapishort}} et un journal du processus de déploiement. L'ID du modèle (model_id) est le nom par lequel vos applications appelleront le modèle d'apprentissage automatique. Utilisez la clé {{site.data.keyword.alchemyapishort}} pour garder la trace du nombre de déploiements par clé.
 
 ### Que faire ensuite
 
-Pour utiliser le modèle déployé, vous devez copier et coller son ID dans l'appel d'API de votre application.
-L'appel doit aussi spécifier le service à plan Avancé {{site.data.keyword.alchemylanguageshort}} à utiliser
-avec le modèle, ainsi que la clé d'accès {{site.data.keyword.alchemyapishort}} associée.
-Les points d'extrémité suivants sont prévus :
-
+Pour utiliser le modèle déployé, vous devez copier et coller son ID dans l'appel d'API de votre application. L'appel doit aussi spécifier le service à plan Avancé {{site.data.keyword.alchemylanguageshort}} à utiliser avec le modèle, ainsi que la clé d'accès {{site.data.keyword.alchemyapishort}} associée. Les points d'extrémité suivants sont prévus :
 
 - **&lt;*type-entré*&gt;GetRankedNamedEntities**
 
-    Utilise le modèle personnalisé que vous spécifiez dans le paramètre 'model' pour extraire la liste des mentions de tous les types d'entités connus qu'il trouve dans les données d'entrée que vous fournissez. Les données d'entrée acceptées sont le texte, le HTML ou une URL publique. Pour plus d'informations sur l'API et la syntaxe à utiliser, consultez [{{site.data.keyword.alchemylanguageshort}}&gt;Entities ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/alchemy-language/api/v1/#entities){: new_window}. 
+    Utilise le modèle personnalisé que vous spécifiez dans le paramètre 'model' pour extraire la liste des mentions de tous les types d'entités connus qu'il trouve dans les données d'entrée que vous fournissez. Les données d'entrée acceptées sont le texte, le HTML ou une URL publique. Pour plus d'informations sur l'API et la syntaxe à utiliser, consultez [{{site.data.keyword.alchemylanguageshort}}&gt;Entities ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/alchemy-language/api/v1/#entities){: new_window}.
 
 - **&lt;*type-entré*&gt;GetTypedRelations**
 
-    Utilise le modèle personnalisé que vous spécifiez dans le paramètre 'model' pour extraire la liste des instances de relations connues qu'il trouve dans les données d'entrée que vous fournissez. Pour plus d'informations sur l'API et la syntaxe à utiliser, consultez [{{site.data.keyword.alchemylanguageshort}}&gt;TypedRelations ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/alchemy-language/api/v1/#typed-relations){: new_window}. 
+    Utilise le modèle personnalisé que vous spécifiez dans le paramètre 'model' pour extraire la liste des instances de relations connues qu'il trouve dans les données d'entrée que vous fournissez. Pour plus d'informations sur l'API et la syntaxe à utiliser, consultez [{{site.data.keyword.alchemylanguageshort}}&gt;TypedRelations ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/alchemy-language/api/v1/#typed-relations){: new_window}.
 
 #### Exemples
 
-- L'appel d'API suivant recherche les types d'entités connus dans la chaîne de texte passée dans le corps de la demande POST. La demande spécifie l'ID du modèle qui a été créé, ainsi qu'une clé d'API Alchemy associée à un compte ayant le droit d'exécuter des modèles personnalisés. 
+- L'appel d'API suivant recherche les types d'entités connus dans la chaîne de texte passée dans le corps de la demande POST. La demande spécifie l'ID du modèle qui a été créé, ainsi qu'une clé d'API Alchemy associée à un compte ayant le droit d'exécuter des modèles personnalisés.
 
     ```bash
-    curl -d 'text=Marie a un petit chat.'
+    curl -d 'text=Mary had a little lamb.'
     "https://gateway-a.watsonplatform.net/calls/text/TextGetRankedNamedEntities?
     showSourceText=1&
     model=44476a63-c55t-451f-ad3r-8b23c0f4628c&
@@ -141,12 +94,12 @@ Les points d'extrémité suivants sont prévus :
     ```
     {: pre}
 
-    La réponse retourne `Marie` et `chat` si ce sont deux mentions reconnues par votre modèle d'apprentissage automatique. 
+    La réponse retourne `Marie` et `chat` si ce sont deux mentions reconnues par votre modèle d'apprentissage automatique.
 
-- L'appel d'API suivant recherche les relations connues dans la chaîne de texte passée dans le corps de la demande POST. La demande spécifie l'ID du modèle qui a été créé, ainsi qu'une clé d'API Alchemy associée à un compte ayant le droit d'exécuter des modèles personnalisés. 
+- L'appel d'API suivant recherche les relations connues dans la chaîne de texte passée dans le corps de la demande POST. La demande spécifie l'ID du modèle qui a été créé, ainsi qu'une clé d'API Alchemy associée à un compte ayant le droit d'exécuter des modèles personnalisés.
 
     ```bash
-    curl -d 'text=Marie a un petit chat.'
+    curl -d 'text=Mary had a little lamb.'
     "https://gateway-a.watsonplatform.net/calls/text/TextGetTypedRelations?
     showSourceText=1&
     model=44476a63-c55t-451f-ad3r-8b23c0f4628c&
@@ -155,11 +108,11 @@ Les points d'extrémité suivants sont prévus :
     ```
     {: pre}
 
-    La réponse retourne `ownedBy` (appartient à) si cette relation est reconnue par votre modèle d'apprentissage automatique. 
+    La réponse retourne `ownedBy` (appartient à) si cette relation est reconnue par votre modèle d'apprentissage automatique.
 
-> **Remarque :** Des retours à la ligne ont été insérés dans les exemples ci-dessus pour faciliter leur lecture à l'écran. Vous ne devez pas les inclure dans la syntaxe des appels d'API. 
+> **Remarque :** Des retours à la ligne ont été insérés dans les exemples ci-dessus pour faciliter leur lecture à l'écran. Vous ne devez pas les inclure dans la syntaxe des appels d'API.
 
-Pour plus d'informations, consultez la [documentation {{site.data.keyword.alchemylanguageshort}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/watson/developercloud/doc/alchemylanguage/customizing.shtml){: new_window}.
+Pour plus d'informations, consultez la [documentation {{site.data.keyword.alchemylanguageshort}}![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/watson/developercloud/doc/alchemylanguage/customizing.shtml){: new_window}.
 
 #### Informations connexes
 
@@ -168,114 +121,78 @@ Pour plus d'informations, consultez la [documentation {{site.data.keyword.alchem
 ## Déployer un modèle d'apprentissage automatique sur IBM Watson Discovery
 {: #wks_madiscovery}
 
-Lorsque vous êtes satisfait des performances du modèle, vous pouvez en déployer une version sur {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}}. Cette fonctionnalité permettra à vos applications d'utiliser le modèle d'apprentissage automatique déployé pour enrichir les connaissances obtenues de vos données afin d'inclure la reconnaissance de concepts et de relations pertinents dans votre domaine. 
+Lorsque vous êtes satisfait des performances du modèle, vous pouvez en déployer une version sur {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}}. Cette fonctionnalité permettra à vos applications d'utiliser le modèle d'apprentissage automatique déployé pour enrichir les connaissances obtenues de vos données afin d'inclure la reconnaissance de concepts et de relations pertinents dans votre domaine.
 
 ### Avant de commencer
 
-Vous devez posséder un accès administratif à une instance de service {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}} et connaître les noms d'espace et d'instance {{site.data.keyword.Bluemix_notm}}. 
+Vous devez posséder un accès administratif à une instance de service {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}} et connaître les noms d'espace et d'instance {{site.data.keyword.Bluemix_notm}}.
 
 ### A propos de cette tâche
 
-Lorsque vous déployez le modèle d'apprentissage automatique, vous devez sélectionner quelle version de celui-ci vous voulez déployer. 
+Lorsque vous déployez le modèle d'apprentissage automatique, vous devez sélectionner quelle version de celui-ci vous voulez déployer.
 
 ### Procédure
 
 Pour déployer un modèle d'apprentissage automatique sur {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}}, effectuez les étapes suivantes :
 
-1. Connectez-vous en tant qu'administrateur ou chef de projet {{site.data.keyword.knowledgestudioshort}} et sélectionnez votre espace de travail. 
+1. Connectez-vous en tant qu'administrateur ou chef de projet {{site.data.keyword.knowledgestudioshort}} et sélectionnez votre espace de travail.
 1. Sélectionnez l'onglet **Gestion des modèles** > **Versions** > **Apprentissage automatique**.
 1. Choisissez la version du modèle que vous voulez déployer.
 
-    Si une seule version du modèle est fonctionnelle, créez un instantané du modèle actuel. Cela a pour effet de créer une version spécifique du modèle, qui est celle qui sera déployée. Vous pourrez ainsi continuer à améliorer la version en cours. L'option Déployer n'apparaît pas tant que vous ne créez pas au moins une version. 
+    Si une seule version du modèle est fonctionnelle, créez un instantané du modèle actuel. Cela a pour effet de créer une version spécifique du modèle, qui est celle qui sera déployée. Vous pourrez ainsi continuer à améliorer la version en cours. L'option Déployer n'apparaît pas tant que vous ne créez pas au moins une version.
 
 1. Cliquez sur **Déployer**, optez pour le déploiement sur {{site.data.keyword.discoveryshort}}, puis cliquez sur **Suivant**.
-1. Sélectionnez l'espace et l'instance {{site.data.keyword.Bluemix_notm}}. Si nécessaire, sélectionnez une région différente. 
+1. Sélectionnez l'espace et l'instance {{site.data.keyword.Bluemix_notm}}. Si nécessaire, sélectionnez une région différente.
 1. Cliquez sur **Déployer**.
-1. Le processus de déploiement peut prendre quelques minutes. Pour savoir où il en est, cliquez sur **Statut** sous l'onglet **Versions**, à côté de la version déployée. 
+1. Le processus de déploiement peut prendre quelques minutes. Pour savoir où il en est, cliquez sur **Statut** sous l'onglet **Versions**, à côté de la version déployée.
 
     Si le modèle est toujours en cours de déploiement, le statut indiqué est "publication en cours". Une fois le déploiement terminé, le statut passe à "disponible" si l'opération a réussi ou "erreur" si des problèmes ont été rencontrés.
 
-    Une fois le modèle disponible, prenez note de son ID (model_id). Vous devrez le fournir au service {{site.data.keyword.discoveryshort}} afin que celui-ci puisse utiliser votre modèle personnalisé. 
+    Une fois le modèle disponible, prenez note de son ID (model_id). Vous devrez le fournir au service {{site.data.keyword.discoveryshort}} afin que celui-ci puisse utiliser votre modèle personnalisé.
 
 ### Que faire ensuite
 
-Pour utiliser le modèle déployé, vous devez fournir son ID lorsqu'il vous est demandé
-au cours du processus de configuration d'enrichissement du service {{site.data.keyword.discoveryshort}}.
-Pour plus de détails, consultez la [documentation du service {{site.data.keyword.discoveryshort}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://www.ibm.com/watson/developercloud/doc/discovery/integrate-wks.shtml){: new_window}.
+Pour utiliser le modèle déployé, vous devez fournir son ID lorsqu'il vous est demandé au cours du processus de configuration d'enrichissement du service {{site.data.keyword.discoveryshort}}. Pour plus de détails, consultez la [documentation du service {{site.data.keyword.discoveryshort}}![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://www.ibm.com/watson/developercloud/doc/discovery/integrate-wks.shtml){: new_window}.
 
 ## Déployer un modèle d'apprentissage automatique sur IBM Watson Natural Language Understanding
 {: #wks_manlu}
 
-Lorsque vous êtes satisfait des performances du modèle, vous pouvez en déployer
-une version sur {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} {{site.data.keyword.nlushort}}.
-Cette fonctionnalité permettra à vos applications d'utiliser
-le modèle d'apprentissage automatique déployé pour analyser les caractéristiques sémantiques de textes, notamment les entités et les relations qu'ils contiennent.
-
+Lorsque vous êtes satisfait des performances du modèle, vous pouvez en déployer une version sur {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} {{site.data.keyword.nlushort}}. Cette fonctionnalité permettra à vos applications d'utiliser le modèle d'apprentissage automatique déployé pour analyser les caractéristiques sémantiques de textes, notamment les entités et les relations qu'ils contiennent.
 
 ### Avant de commencer
 
-Vous devez avoir un service {{site.data.keyword.nlushort}} sur lequel déployer votre
-modèle.
-Vous devez aussi connaître les noms d'espace et d'instance {{site.data.keyword.Bluemix_notm}} associés à
-ce service.
-Si vous avez oublié ces noms, retrouvez-les en vous connectant à {{site.data.keyword.Bluemix_notm}}.
-Si vous n'avez pas de compte {{site.data.keyword.Bluemix_notm}}, inscrivez-vous afin d'en obtenir un.
-
+Vous devez avoir un service {{site.data.keyword.nlushort}} sur lequel déployer votre modèle. Vous devez aussi connaître les noms d'espace et d'instance {{site.data.keyword.Bluemix_notm}} associés à ce service. Si vous avez oublié ces noms, retrouvez-les en vous connectant à {{site.data.keyword.Bluemix_notm}}. Si vous n'avez pas de compte {{site.data.keyword.Bluemix_notm}}, inscrivez-vous afin d'en obtenir un.
 
 ### A propos de cette tâche
 
-Lorsque vous déployez le modèle d'apprentissage automatique, vous devez sélectionner quelle version de celui-ci vous
-voulez déployer.
-
+Lorsque vous déployez le modèle d'apprentissage automatique, vous devez sélectionner quelle version de celui-ci vous voulez déployer.
 
 ### Procédure
 
 Pour déployer un modèle d'apprentissage automatique sur le service {{site.data.keyword.nlushort}}, effectuez les étapes suivantes :
 
-1. Connectez-vous en tant qu'administrateur ou chef de projet
-{{site.data.keyword.knowledgestudioshort}} et sélectionnez votre espace de
-travail.
-
+1. Connectez-vous en tant qu'administrateur ou chef de projet {{site.data.keyword.knowledgestudioshort}} et sélectionnez votre espace de travail.
 1. Sélectionnez l'onglet **Gestion des modèles** > **Versions** > **Apprentissage automatique**.
 1. Choisissez la version du modèle que vous voulez déployer.
 
-    Si une seule version du modèle est fonctionnelle, créez un instantané du modèle actuel.
-Cela a pour effet de créer une version spécifique du modèle, qui est celle qui sera
-déployée. Vous pourrez ainsi continuer à améliorer la version en cours.
-L'option Déployer n'apparaît pas tant que vous ne créez pas au moins une version.
+    Si une seule version du modèle est fonctionnelle, créez un instantané du modèle actuel. Cela a pour effet de créer une version spécifique du modèle, qui est celle qui sera déployée. Vous pourrez ainsi continuer à améliorer la version en cours. L'option Déployer n'apparaît pas tant que vous ne créez pas au moins une version.
 
-
-1. Cliquez sur **Déployer**, optez pour le déploiement sur {{site.data.keyword.nlushort}}, puis cliquez
-sur **Suivant**.
-1. Sélectionnez l'espace et l'instance {{site.data.keyword.Bluemix_notm}}.
-Si nécessaire, sélectionnez une région différente.
-
+1. Cliquez sur **Déployer**, optez pour le déploiement sur {{site.data.keyword.nlushort}}, puis cliquez sur **Suivant**.
+1. Sélectionnez l'espace et l'instance {{site.data.keyword.Bluemix_notm}}. Si nécessaire, sélectionnez une région différente.
 1. Cliquez sur **Déployer**.
-1. Le processus de déploiement peut prendre quelques minutes.
-Pour savoir où il en est, cliquez sur **Statut** sous l'onglet **Versions**, à côté de la version déployée.
-Si le modèle est toujours en cours de déploiement, le statut indiqué
-est "publication en cours".
-Une fois le déploiement terminé, le statut passe à "disponible" si l'opération a réussi ou "erreur" si des problèmes ont été rencontrés.
+1. Le processus de déploiement peut prendre quelques minutes. Pour savoir où il en est, cliquez sur **Statut** sous l'onglet **Versions**, à côté de la version déployée. Si le modèle est toujours en cours de déploiement, le statut indiqué est "publication en cours". Une fois le déploiement terminé, le statut passe à "disponible" si l'opération a réussi ou "erreur" si des problèmes ont été rencontrés.
 
-    Une fois le modèle disponible, prenez note de son ID (model_id).
-Vous devrez le fournir au service {{site.data.keyword.nlushort}} afin que celui-ci puisse utiliser
-votre modèle personnalisé.
-
+    Une fois le modèle disponible, prenez note de son ID (model_id). Vous devrez le fournir au service {{site.data.keyword.nlushort}} afin que celui-ci puisse utiliser votre modèle personnalisé.
 
 ### Que faire ensuite
 
-Pour utiliser la version déployée de votre modèle personnalisé, vous devez fournir son ID dans
-le paramètre `entities.model`.
+Pour utiliser la version déployée de votre modèle personnalisé, vous devez fournir son ID dans le paramètre `entities.model`.
 
-
-Vous pouvez utiliser le modèle avec la demande
-`GET /analyze` de {{site.data.keyword.nlushort}} pour extraire les caractéristiques suivantes :
-
+Vous pouvez utiliser le modèle avec la demande {{site.data.keyword.nlushort}} `GET /analyze` pour extraire les caractéristiques suivantes :
 
 - **entités**
 
     La commande suivante trouve les entités présentes dans la phrase passée via le paramètre text :
-
 
     ```bash
     curl -G -u "3330af09-4b22-4f2d-a54c-1cb099df1fa8":"338rTJSvPVqeG"
@@ -290,7 +207,6 @@ Vous pouvez utiliser le modèle avec la demande
     {: pre}
 
     Le service retourne un objet JSON des instances de types d'entités qu'il a trouvées, compte tenu de ce qui est défini dans le modèle personnalisé :
-
 
     ```javascript
     {
@@ -341,7 +257,6 @@ Vous pouvez utiliser le modèle avec la demande
 
     La commande suivante trouve les relations présentes dans la phrase passée via le paramètre text :
 
-
     ```bash
     curl -G -u "3330af09-4b22-4f2d-a54c-1cb099df1fa8":"338rTJSvPVqeG"
     -d "version=2016-05-17"
@@ -355,7 +270,6 @@ Vous pouvez utiliser le modèle avec la demande
     {: pre}
 
     Le service retourne un objet JSON des instances de types de relations qu'il a trouvées, compte tenu de ce qui est défini dans le modèle personnalisé :
-
 
     ```javascript
     {
@@ -420,27 +334,17 @@ Vous pouvez utiliser le modèle avec la demande
     ```
     {: codeblock}
 
-Pour plus de détails, consultez la
-[documentation de {{site.data.keyword.nlushort}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/watson/developercloud/doc/natural-language-understanding/index.html){: new_window}.
-
+Pour plus de détails, consultez la [documentation de {{site.data.keyword.nlushort}}![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/watson/developercloud/doc/natural-language-understanding/index.html){: new_window}.
 
 ## Retirer des modèles du déploiement
 {: #undeploy-view-model}
 
-Si vous voulez retirer un modèle du déploiement ou simplement trouver son ID, consultez la
-page **Modèles déployés**.
-Vous pourrez y voir tous les modèles {{site.data.keyword.knowledgestudioshort}} déployés dans des services des espaces auxquels vous avez accès.
-
+Si vous voulez retirer un modèle du déploiement ou simplement trouver son ID, consultez la page **Modèles déployés**. Vous pourrez y voir tous les modèles {{site.data.keyword.knowledgestudioshort}} déployés dans des services des espaces auxquels vous avez accès.
 
 Pour retirer un modèle du déploiement ou trouver son ID :
 
-
-1. Connectez-vous en tant qu'administrateur ou chef de projet
-{{site.data.keyword.knowledgestudioshort}} et sélectionnez votre espace de
-travail.
-
+1. Connectez-vous en tant qu'administrateur ou chef de projet {{site.data.keyword.knowledgestudioshort}} et sélectionnez votre espace de travail.
 1. Dans le menu **Paramètres** de la barre de menus, en haut à droite, sélectionnez **Gérer les modèles déployés**.
-
 1. Dans la liste des modèles déployés, localisez le modèle que vous souhaitez voir ou retirer du déploiement.
 1. Pour retirer le modèle du déploiement, cliquez sur **Annuler le déploiement du modèle** dans la dernière colonne de la ligne où il figure.
 1. Pour trouver l'ID du modèle, consultez la colonne **ID modèle**.
@@ -448,59 +352,34 @@ travail.
 ## Tirer parti d'un modèle d'apprentissage automatique dans IBM Watson Explorer
 {: #wks_maexport}
 
-Exportez le modèle d'apprentissage automatique entraîné
-afin qu'il puisse être exploité dans {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
+Exportez le modèle d'apprentissage automatique entraîné afin qu'il puisse être exploité dans {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
 
 ### Avant de commencer
 
-Si vous choisissez d'identifier les types de relations et de les annoter,
-vous devez en définir au moins deux et annoter les instances des relations
-dans les données de référence avant d'exporter le modèle.
-Si vous ne définissez et n'annotez qu'un seul type de relation, cela risque
-d'entraîner des problèmes ultérieurs dans {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer, édition 11.0.1.0.
+Si vous choisissez d'identifier les types de relations et de les annoter, vous devez en définir au moins deux et annoter les instances des relations dans les données de référence avant d'exporter le modèle. Si vous ne définissez et n'annotez qu'un seul type de relation, cela risque d'entraîner des problèmes ultérieurs dans {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer, édition 11.0.1.0.
 
 ### A propos de cette tâche
 
-A présent que votre modèle d'apprentissage automatique est entraîné à reconnaître les entités et les
-relations dans un domaine spécifique, vous pouvez en tirer
-parti dans {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
+A présent que votre modèle d'apprentissage automatique est entraîné à reconnaître les entités et les relations dans un domaine spécifique, vous pouvez en tirer parti dans {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
 
-Cliquez sur [ce lien ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.youtube.com/watch?v=1VoS-xczBow&amp;feature=youtu.be){: new_window}
-pour visionner une vidéo de moins de 2 minutes illustrant comment exporter
-un modèle et l'utiliser dans {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
+Cliquez sur [ce lien ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.youtube.com/watch?v=1VoS-xczBow&amp;feature=youtu.be){: new_window} pour visionner une vidéo de moins de 2 minutes illustrant comment exporter un modèle et l'utiliser dans {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
 
 ### Procédure
 
 Pour exploiter un modèle d'apprentissage automatique dans {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer, effectuez les étapes suivantes :
 
-
-1. Connectez-vous en tant qu'administrateur ou chef de projet
-{{site.data.keyword.knowledgestudioshort}} et sélectionnez votre espace de
-travail.
-
+1. Connectez-vous en tant qu'administrateur ou chef de projet {{site.data.keyword.knowledgestudioshort}} et sélectionnez votre espace de travail.
 1. Sélectionnez l'onglet **Gestion des modèles** > **Versions** > **Apprentissage automatique**.
 1. Cliquez sur **Exporter le modèle en cours**.
 
     Si vous avez un abonnement à un plan gratuit, aucune option d'exportation n'est disponible.
 
-
-    Le modèle est sauvegardé en tant que fichier ZIP, que vous êtes invité à
-télécharger.
-
+    Le modèle est sauvegardé en tant que fichier ZIP, que vous êtes invité à télécharger.
 
 1. Téléchargez le fichier sur votre système local.
+1. A partir de l'application {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer, importez le modèle.
 
-1. A partir de l'application {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer,
-importez le modèle.
-
-
-    Vous pouvez dès lors associer le modèle à un
-modèle d'apprentissage automatique dans {{site.data.keyword.watson}} Explorer Content Analytics.
-Une fois cette association réalisée, lorsque vous explorerez des documents, le modèle trouvera
-les instances d'entités et de relations qu'il a appris à reconnaître.
-Pour découvrir comment importer et configurer
-le modèle dans {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer,
-référez-vous au document technique (en anglais) décrivant l'intégration : [http://www.ibm.com/support/docview.wss?uid=swg27048147 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://www.ibm.com/support/docview.wss?uid=swg27048147){: new_window}.
+    Vous pouvez dès lors associer le modèle à un modèle d'apprentissage automatique dans {{site.data.keyword.watson}} Explorer Content Analytics. Une fois cette association réalisée, lorsque vous explorerez des documents, le modèle trouvera les instances d'entités et de relations qu'il a appris à reconnaître. Pour découvrir comment importer et configurer le modèle dans {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer, référez-vous au document technique (en anglais) décrivant l'intégration : [http://www.ibm.com/support/docview.wss?uid=swg27048147 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://www.ibm.com/support/docview.wss?uid=swg27048147){: new_window}.
 
 #### Tâches connexes
 
