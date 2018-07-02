@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-02"
 
 ---
 
@@ -46,7 +46,7 @@ lastupdated: "2018-06-27"
 {:caption="Table 1. Role descriptions" caption-side="top"}
 
 ## Role permissions
-{: #descriptions}
+{: #permissions}
 
 To compare the permissions of each role, see the following table. One permission is listed on each row. If a role has that permission, the role column is marked with a check mark (&checkmark;).
 
