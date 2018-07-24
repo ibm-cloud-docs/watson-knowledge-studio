@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -89,7 +89,7 @@ To prepare for backing up and restoring your data, complete the following steps:
 
     If you are migrating workspaces across different instances, consider making a list of users and their roles for the instance that you are backing up. Someone with the Admin role can print the list from the User Account Management page. After the workspaces are recreated on the new instance, someone with the Admin role must add the users and assign their roles.
 
-    See [Assembling a team](/docs/services/watson-knowledge-studio/team.html) for more information about the roles.
+    For more information about roles, see [User roles in {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/roles.html).
 
 1. Make note of workspace information.
 
@@ -157,9 +157,9 @@ At this point, all the artifacts that were used to train the model in the previo
 
 To redeploy a machine learning model that you deployed in the previous instance, complete the following steps:
 
-1. Train the machine learning model. For details, see [Creating a machine learning model](/docs/services/watson-knowledge-studio/train-ml.html).
+1. [Train the machine learning model](/docs/services/watson-knowledge-studio/train-ml.html).
 
-  **Note**: Do not run any pre-annotators on annotated documents that you migrated to this workspace because they will lose any annotations in them that were added by human annotators.
+  **Note**: Do not run pre-annotators on annotated documents that you migrated to this workspace because they will lose annotations in them that were added by human annotators.
 
 1. After creating the model, deploy it again. For details, see [Using the machine learning model](/docs/services/watson-knowledge-studio/publish-ml.html).
 
@@ -173,6 +173,6 @@ To redeploy a rule-based model that you deployed in the previous instance, compl
 
 If you had any annotation tasks that were created, but not completed in the previous workspace, complete the following steps to recreate the incomplete annotation tasks:
 
-1. Upload any documents that have not been annotated yet, but that you want to add to the ground truth to continue to improve the model.
-1. From the newly imported and unannotated documents, create document sets for annotation. These sets are now called _annotation sets_. For details, see [Creating and assigning annotation sets](/docs/services/watson-knowledge-studio/document-for-annotation.html).
-1. Recreate the annotation tasks. Give the task the same name, an appropriate due date, and assign annotation sets to the appropriate human annotators.
+1. [Upload any documents](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_projadd) that have not been annotated yet, but that you want to add to the ground truth to continue to improve the model.
+1. From the newly imported and unannotated documents, [create annotation sets](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_projdocsets).
+1. [Recreate the annotation tasks](/docs/services/watson-knowledge-studio/annotate-documents.html#wks_hatask). Give the task the same name, an appropriate due date, and assign annotation sets to the appropriate human annotators.

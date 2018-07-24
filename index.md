@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -43,7 +43,7 @@ See [Creating a machine learning model](/docs/services/watson-knowledge-studio/m
 
 ## Build a rule-based model
 
-{{site.data.keyword.knowledgestudioshort}} provides a Rules editor that simplifies the process of finding and capturing common patterns in your documents as rules. You can then create a model that recognizes the rule patterns, and deploy it for use in other services.
+{{site.data.keyword.knowledgestudioshort}} provides a rules editor that simplifies the process of finding and capturing common patterns in your documents as rules. You can then create a model that recognizes the rule patterns, and deploy it for use in other services.
 
 See [Creating a rule-based model](/docs/services/watson-knowledge-studio/rule-annotator.html) for more details.
 

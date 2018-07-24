@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-19"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -25,8 +25,6 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 
 To upgrade the level of your service, see the [{{site.data.keyword.cloud_notm}} catalog {{site.data.keyword.knowledgestudioshort}} page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/knowledge-studio){: new_window}.
 {: shortdesc}
-
-If you upgrade from a {{site.data.keyword.knowledgestudioshort}} Free plan, you'll need to manually migrate your workspaces following the [backup and restore](/docs/services/watson-knowledge-studio/backup-restore.html) process.
 
 If you upgrade from a {{site.data.keyword.knowledgestudioshort}} Lite plan to a Standard plan, {{site.data.keyword.knowledgestudioshort}} uses in-place migration. You don't need to do any manual migration.
 

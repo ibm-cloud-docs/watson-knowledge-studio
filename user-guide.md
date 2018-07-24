@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-12"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -110,23 +110,23 @@ These annotation best practices provide some guidance and examples as you start 
         ```
         {: screen}
 
-- Avoid overlapping mentions, which are two different entity type labels that are applied to a single phrase in a document. For example, given the sentence, *She donated her father's journals to the JFK Library.*, you would overlap mentions if you annotate JFK=PERSON and JFK Library=LOCATION for the single phrase *JFK Library*. The use of the term is more about the library than the person in this sentence, so only the latter annotation should be applied.
+- Avoid overlapping mentions, which are two different entity type labels that are applied to a single phrase in a document. For example, given the sentence, *She donated her father's journals to the JFK Library.*, you would overlap mentions if you annotate `JFK`=`PERSON` and `JFK Library`=`LOCATION` for the single phrase *JFK Library*. The use of the term is more about the library than the person in this sentence, so only the latter annotation should be applied.
 
     Decoding such structures requires multiple parallel invocations of a machine learning model because mention detection only looks for a single label or no label on each word token.
 
-- Determine how the team will handle lists and plurals in running text. For example, the KLUE type system has PERSON and PEOPLE entity types that distinguish the singular from the plural. You can choose to annotate the list *Barack, Michelle, Malia, and Sasha Obama*, in one of the following ways:
+- Determine how the team will handle lists and plurals in running text. For example, the KLUE type system has `PERSON` and `PEOPLE` entity types that distinguish the singular from the plural. You can choose to annotate the list *Barack, Michelle, Malia, and Sasha Obama*, in one of the following ways:
 
-    - Annotate each item in the list as a singular entity mention (*Barack*, *Michelle*, *Malia*, and *Sasha Obama* are each a PERSON mention)
-    - Annotate the whole phrase as one plural entity mention (*Barack, Michelle, Malia, and Sasha Obama* is a single PEOPLE mention).
+    - Annotate each item in the list as a singular entity mention (*Barack*, *Michelle*, *Malia*, and *Sasha Obama* are each a `PERSON` mention)
+    - Annotate the whole phrase as one plural entity mention (*Barack, Michelle, Malia, and Sasha Obama* is a single `PEOPLE` mention).
 
-    No one approach is necessarily better than the other; but be sure your team chooses one of them, and applies it consistently to any lists that occur in the documents.
+    No one approach is necessarily better than the other. Just be sure that your team chooses one of them and applies it consistently to any lists that occur in the documents.
 
 - A coreference is used when mentions refer to the same real-world entity. Relations are used between distinct entities. So, no two mentions should be connected by both coreference and a relation.
 
 ## Annotation with the ground truth editor
 {: #wks_hagte}
 
-When a human annotator annotates a document, the document is opened in the ground truth editor. The ground truth editor is a visual tool that human annotators use to apply labels to text.
+When a human annotator annotates a document, the document is opened in the *ground truth editor*. The ground truth editor is a visual tool that human annotators use to apply labels to text.
 
 The goal of human annotation is to label mentions, relations, and coreferenced mentions so that the machine learning model can be trained to detect these patterns in unseen text. At a minimum, use the tool to annotate entity mentions. If the application that will use the resulting model does not need to find and extract coreferences and relation mentions, then you do not need to annotate coreferences and relation mentions.
 
@@ -134,25 +134,25 @@ Concordance is an optional tool that can be used by human annotators to expedite
 
 Choose a mode to use when manually annotating documents:
 
-- **Mention mode**
+- **Mention** mode
 
     In this mode, the human annotator associates entity types, as defined in the type system, with meaningful words or phrases in the text. For example, all mentions of person names might be associated with an entity type named PERSON. The annotation of mentions is required and must occur before you annotate relation types and mentions as coreferences.
 
     The human annotator can optionally use the concordance tool to ensure that the same text is annotated with the same entity type throughout a document and across annotation sets.
 
-- **Relation mode**
+- **Relation** mode
 
-    In this mode, the human annotator connects mentions by associating a relation type, as defined in the type system. For example, the mention John Smith might be connected to the mention {{site.data.keyword.IBM_notm}} by the relation type employedBy. The annotation of relation types is optional and can occur before or after you annotate mentions as coreferences.
+    In this mode, the human annotator connects mentions by associating a relation type, as defined in the type system. For example, the mention `John Smith` might be connected to the mention `{{site.data.keyword.IBM_notm}}` by the relation type `employedBy`. The annotation of relation types is optional and can occur before or after you annotate mentions as coreferences.
 
-- **Coreference mode**
+- **Coreference** mode
 
-    In this mode, the human annotator identifies mentions that mean the same thing, thus helping to ensure consistency in the annotations when words are not identical. For example, the mention of {{site.data.keyword.IBM_notm}} in the first sentence, the mention of International Business Machines, and the mention of {{site.data.keyword.IBM_notm}} in a later sentence refer to the same thing and would all be labeled by the same entity type, such as ORGANIZATION. The annotation of mentions as coreferences is optional and can occur before or after you annotate relation types.
+    In this mode, the human annotator identifies mentions that mean the same thing, thus helping to ensure consistency in the annotations when words are not identical. For example, the mention of `{{site.data.keyword.IBM_notm}}` in the first sentence, the mention of `International Business Machines`, and the mention of `{{site.data.keyword.IBM_notm}}` in a later sentence refer to the same thing and would all be labeled by the same entity type, such as `ORGANIZATION`. The annotation of mentions as coreferences is optional and can occur before or after you annotate relation types.
 
 ### Tips for using the editor
 {: #wks_hagte_tips}
 
 - Save your work as you go.
-- If you make a mistake, you can press `Ctrl+Z` to undo the previous action. To redo the action after undoing it, press `Ctrl+Y`. You can undo the previous 10 actions that you performed while editing the current document; they are lost as soon as you close the document. The actions must be undone in reverse order, and you must switch to the mode that you were in when you performed the action to undo it. You cannot undo and redo concordance tool actions.
+- If you make a mistake, you can press Ctrl+Z to undo the previous action. To redo the action after undoing it, press Ctrl+Y. You can undo the previous 10 actions that you performed while editing the current document. The actions are lost as soon as you close the document. The actions must be undone in reverse order, and you must switch to the mode that you were in when you performed the action to undo it. You cannot undo and redo concordance tool actions.
 
 ## Annotating entity mentions
 {: #wks_haentity}
@@ -170,7 +170,9 @@ When you open a document to annotate it, you might want to use the concordance t
 {: #wks_haentity_tips}
 
 - Keep in mind that shorter entity mentions are better for training because it is easier for the machine learning model to recognize the shorter patterns and add the correct annotation tokens.
-- If you chose to use a dictionary-based tokenizer with the workspace, and want to handle compound terms and punctuation in your training data, you can add the terms to a dictionary and create a dictionary annotator to pre-annotate the occurrences. For example, to avoid sentence boundary breaks for terms that include punctuation, add terms like Yahoo! and Dr. to a dictionary. Likewise, if your training data includes hyphenated words or alphanumeric acronyms, like Hi-C or MS-60-70, add those terms to the dictionary. To annotate occurrences regardless of case, add the terms in lowercase (such as hi-c). To annotate variations, add the variations as surface forms (MS-60-70 and MS 60 70). **Important**: Do not use this approach if you are using the default tokenizer.
+- If you chose to use a dictionary-based tokenizer with the workspace, and want to handle compound terms and punctuation in your training data, you can add the terms to a dictionary and create a dictionary annotator to pre-annotate the occurrences. For example, to avoid sentence boundary breaks for terms that include punctuation, add terms like Yahoo! and Dr. to a dictionary. Likewise, if your training data includes hyphenated words or alphanumeric acronyms, like `Hi-C` or `MS-60-70`, add those terms to the dictionary. To annotate occurrences regardless of case, add the terms in lowercase (such as `hi-c`). To annotate variations, add the variations as surface forms (`MS-60-70` and `MS 60 70`).
+
+   **Important**: Do not use this approach if you are using the default tokenizer.
 
 ### Procedure
 {: #wks_haentity_procedure}
@@ -178,9 +180,11 @@ When you open a document to annotate it, you might want to use the concordance t
 To annotate entity mentions in a document:
 
 1. Log in as a human annotator (or as an administrator who was assigned documents to annotate). Workspaces that contain tasks that are assigned to you are displayed.
-1. Open a workspace and then open the task that you want to work on. The annotation sets that are assigned to you are displayed.
-1. Click a document to open it. By default, the document opens **Document Annotation** > **Mention**, which is the mode you use to annotate entity mentions.
-1. To annotate an entity mention:
+1. Open a workspace, and then click **Machine Learning Model** > **Annotation Tasks**. The annotation tasks that are assigned to you are displayed.
+1. Open the annotation task that you want to work on. The annotation sets that are assigned to you are displayed.
+1. Click **Annotate** to open the annotation set you want to work on. The documents in the annotation set are displayed.
+1. Open the document that you want to annotate. By default, the document opens in **Mention** mode, which is the mode you use to annotate entity mentions.
+1. Begin to annotate entity mentions.
 
     1. Click a word in the text that you recognize as a mention of a particular entity type from the type system. For entity mentions that consists of more than one word, click another word or drag the selection box edges to select multiple words or compound words.
     1. Either select the entity type that you want to apply from the pane on the right, or enter the keyboard shortcut for the entity type.
@@ -190,13 +194,13 @@ To annotate entity mentions in a document:
 
     1. Avoid creating overlapping mentions. But, if a valid overlapping mention is required, click **Replace** to more easily add it. An overlap occurs when you apply more than one label to an entity mention. Review these suggestions:
 
-        - Annotate Sub-Saharan as a single mention, not just Saharan or just Sub.
-        - Do not create an overlapping PERSON annotation for the *JFK* reference in *JFK International Airport*. The entire *JFK International Airport* mention should be labeled as a FACILITY only.
-        - For the text *CEOs*, do not create a PERSON annotation for *CEO* and a PEOPLE annotation for *CEOs*. Annotate *CEOs* as a PEOPLE entity type only.
+        - Annotate *Sub-Saharan* as a single mention, not just *Saharan* or just *Sub*.
+        - Do not create an overlapping `PERSON` annotation for the *JFK* reference in *JFK International Airport*. The entire *JFK International Airport* mention should be labeled as a `FACILITY` only.
+        - For the text *CEOs*, do not create a `PERSON` annotation for *CEO* and a `PEOPLE` annotation for *CEOs*. Annotate *CEOs* as a `PEOPLE` entity type only.
 
         Typically, the existence of too many overlapping mentions means that the annotation guidelines are ambiguous and need to be improved to provide better examples of how to handle compound words in your source data.
 
-    1. To remove an annotation that you just added, press `Ctrl+Z` to undo the action. To remove an entity mention later, you can left-click a mention and press the **Delete** key, or click **View Details**, and then click **X** next to the entity type that is assigned to the mention.
+    1. To remove an annotation that you just added, press Ctrl+Z to undo the action. To remove an entity mention later, you can left-click a mention and press the Delete key, or click **View Details**, and then click **X** next to the entity type that is assigned to the mention.
 
 1. Depending on the type system, you might be able to configure attributes for an entity mention, such as assigning an entity role or subtype or a mention class or type. If so, select a mention and click **Attribute View**.
 
@@ -207,12 +211,12 @@ To annotate entity mentions in a document:
 
 After you finish annotating all entity mentions, relation mentions, and coreferences in the document, as applicable, change the document status from **In Progress** to **Completed**, click **Save**, and then close the document.
 
-After you finish annotating all documents and mark them **Completed**, the status of the annotation set changes to **Submitted**. That is how project managers know that they can start to evaluate the documents for inter-annotator agreement, and reject them or accept them and promote them to ground truth.
+After you finish annotating all documents and mark them **Completed**, the status of the annotation set changes to **Submitted**. That is how project managers know that they can start to evaluate the documents for inter-annotator agreement, reject or accept documents, and promote them to ground truth.
 
 ## Annotating repeating mentions
 {: #wks_haconcordance}
 
-You can optionally use the concordance tool to label multiple occurrences of a mention at once. The tool enables you to annotate the same text with the same entity type throughout a document and across annotation sets. Using the tool helps to ensure consistency in annotation across multiple documents. For example, you can label each occurrence of the mention "encryption" individually in mention mode, or you can label all occurrences of the mention "encryption" by using the concordance tool. Either way, the model learns from the entity type that you apply to the mention.
+You can optionally use the concordance tool to label multiple occurrences of a mention at once. The tool enables you to annotate the same text with the same entity type throughout a document and across annotation sets. Using the tool helps to ensure consistency in annotation across multiple documents. For example, you can label each occurrence of the mention *encryption* individually in mention mode, or you can label all occurrences of the mention *encryption* by using the concordance tool. Either way, the model learns from the entity type that you apply to the mention.
 
 ### About this task
 {: #wks_haconcordance_about}
@@ -225,12 +229,17 @@ Although the concordance tool is optional, a good practice is to use the concord
 To annotate repeating mentions:
 
 1. Log in as a human annotator (or as an administrator or project manager who was assigned documents to annotate). Workspaces that contain tasks that are assigned to you are displayed.
-1. Open a workspace and then open the task that you want to work on. The annotation sets that are assigned to you are displayed.
-1. Click a document to open it. By default, the document opens **Document Annotation** > **Mentions**.
+1. Open a workspace, and then click **Machine Learning Model** > **Annotation Tasks**. The annotation tasks that are assigned to you are displayed.
+1. Open the annotation task that you want to work on. The annotation sets that are assigned to you are displayed.
+1. Click **Annotate** to open the annotation set you want to work on. The documents in the annotation set are displayed.
+1. Open the document that you want to annotate. By default, the document opens in **Mention** mode, which is the mode you use to annotate entity mentions.
 1. If you have not added any annotations yet, add at least one annotation. Select a word or word phrase that represents a mention of an entity type from your type system, and assign the appropriate type to it. Click **Save** to save your annotation.
 1. Select a single occurrence of repeating text that you want to annotate, and then click **Concordance**.
-1. Select the documents that you want to apply the selected entity type to. You can create the annotations in all documents that you have been assigned to annotate, all documents that you have begun annotating, or all documents that you have not yet started to annotate. Click **Preview** to see the annotations that will be added.
-1. If you want to view the annotations in greater context, click the icons to preview the document content or open the document in a new window.
+1. Select the documents that you want to apply the selected entity type to. You can create the annotations in all documents that you have been assigned to annotate, all documents that you have begun annotating, or all documents that you have not yet started to annotate.
+1. Click **Preview** to see the annotations that will be added.
+
+  If you want to view the annotations in greater context, click the icons to preview the document content or open the document in a new window.
+
 1. Click **Apply & Review** to apply the selected entity types to mentions in the selected documents. You still have a chance to review the annotations that will be added. If an annotation is inaccurate in a particular context, you can remove that occurrence by clicking the Edit icon, and then removing the entity type assignment for the mention.
 1. When you are happy with the list of annotations, click **Go Back to Ground Truth Editor** .
 
@@ -252,7 +261,7 @@ You must annotate mentions in the document before you can identify coreferences.
 ### About this task
 {: #wks_hacoref_about}
 
-When you annotate mentions as coreferences, the system creates a coreference chain. The chain provides a way for you to view all of the mentions in context and verify that all of the occurrences belong together under the same entity. For example, "Barack", "Michelle", "he", and "she" are all of the same entity type, PERSON, but "Barack" and "he" are one entity, and "Michelle" and "she" are another entity. In this example, you create two coreference chains.
+When you annotate mentions as coreferences, the system creates a coreference chain. The chain provides a way for you to view all of the mentions in context and verify that all of the occurrences belong together under the same entity. For example, "Barack", "Michelle", "he", and "she" are all of the same entity type, `PERSON`, but "Barack" and "he" are one entity, and "Michelle" and "she" are another entity. In this example, you create two coreference chains.
 
 When you create a coreference chain, you must select mentions that have been marked by the same entity type. In some cases, however, you might want to include mentions of different types in the same coreference chain. To do this, you must create multiple chains and then merge them. For example, think about how people progressively use shorthand to avoid repeating things in text. In a traffic incident report, the first reference to a vehicle might be "2004 Honda Accord Sedan". Later, the author might refer to the vehicle as "Accord", and then later refer to the vehicle as simply "vehicle". If the type system includes entries for vehicle manufacturer, model, and type, you could create multiple coreference chains per entity type, and then merge them to create a consolidated chain. The merged chain helps train the machine learning model to recognize that all of these mentions refer to the same thing.
 
@@ -260,29 +269,39 @@ Another way to combine mentions of different entity types is to create a chain w
 
 Depending on your annotation guidelines, you might want to create coreference chains for verbs as well as nouns if the verbs mention the same instance of an action. For example, if two mentions of the verb "encrypts" refer to the same occurrence of encryption, you might coreference the mentions. But if one reference to "encrypts" is a general reference, or if the two occurrences refer to two different acts of encryption, you would not coreference them. If two different verbs refer to the same occurrence of an action, you might want to coreference the mentions. For example, in the statement, "He encrypted the document, and after that processing he sent the file ... ", the mentions "encrypted" and "processing" could be coreferenced because they refer to the same instance of an action.
 
-What's most important is consistency. Decide on how you want annotate coreference and specify the rules, with examples, clearly in your annotation guidelines.
+What's most important is consistency. Decide how you want annotate coreference and specify the rules, with examples, clearly in your annotation guidelines.
 
 ### Procedure
 {: #wks_hacoref_procedure}
 
 To annotate mentions as coreferences:
 
-1. Click **Document Annotation** > **Coreferences**.
-1. To create a coreference chain:
+1. Log in as a human annotator (or as an administrator or project manager who was assigned documents to annotate). Workspaces that contain tasks that are assigned to you are displayed.
+1. Open a workspace, and then click **Machine Learning Model** > **Annotation Tasks**. The annotation tasks that are assigned to you are displayed.
+1. Open the annotation task that you want to work on. The annotation sets that are assigned to you are displayed.
+1. Click **Annotate** to open the annotation set you want to work on. The documents in the annotation set are displayed.
+1. Open the document that you want to annotate. By default, the document opens in **Mention** mode, which is the mode you use to annotate entity mentions.
+1. Click **Coreferences**.
+1. Create a coreference chain:
 
-    1. Move through the document and click each mention that means the same thing and is labeled by the same entity type. For example, click each occurrence of {{site.data.keyword.IBM_notm}}, International Business Machines, and {{site.data.keyword.IBM_notm}} Corp., assuming all of these mentions have the entity type ORGANIZATION.
+    1. Move through the document and click each mention that means the same thing and is labeled by the same entity type. For example, click each occurrence of `{{site.data.keyword.IBM_notm}}`, `International Business Machines`, and `{{site.data.keyword.IBM_notm}} Corp.`, assuming all these mentions have the entity type `ORGANIZATION`.
     1. Double-click the last mention that you want to add to the chain. A coreference chain is created in the side panel. The name of the chain matches the first mention that you selected.
-    1. To highlight all mentions in a chain to review them in context, hover over the chain in the side pane.
+    1. To highlight all mentions in a chain to review them in context, hover over the name of the chain in the side pane.
 
-1. The Single Mention List displays terms in the document that have been annotated, but have not been added to a chain. If you notice a mention in the list that belongs in a chain, you can add it to the chain from here.
+1. The **Single Mention List** displays terms in the document that have been annotated, but have not been added to a chain. If you notice a mention in the list that belongs in a chain, you can add it to the chain from here.
 
-    1. From the Single Mention List in the side panel, click the mention.
+    1. From the **Single Mention List** in the side panel, click the mention.
     1. From the drop-down list below the mention description, choose the number that represents the chain that you want to add the mention to.
     1. Click **Merge** to add the mention to the chain, and then click **OK**.
 
-    The mention is removed from the Single Mention List and the number of the chain that it now belongs to is displayed below the mention in the document.
+    The mention is removed from the **Single Mention List** and the number of the chain that it now belongs to is displayed below the mention in the document.
 
-1. To remove a coreference chain that you just added, press `Ctrl+Z` to undo the action. To remove a coreference chain later, from the Coreference Chains side panel, click the **X** next to the chain that you want to remove. To remove a single mention from the chain, click the coreference ID to open a window that displays a list of the mentions in the chain, and then click the **X** next to the mention that you want to remove.
+1. You can undo your work by using the following methods:
+
+    - To remove a coreference chain that you just added, press Ctrl+Z to undo the action.
+    - To remove a coreference chain later, from the **Coreference Chains** side panel, click the **X** next to the chain that you want to remove.
+    - To remove a single mention from the chain, click the coreference ID to open a window that displays a list of the mentions in the chain, and then click the **X** next to the mention that you want to remove.
+
 1. Click **Save** at any time to save your work.
 
 ### What to do next
@@ -290,7 +309,7 @@ To annotate mentions as coreferences:
 
 After you finish annotating all entity mentions, relation mentions, and coreferences in the document, as applicable, change the document status from **In Progress** to **Completed**, click **Save**, and then close the document.
 
-After you finish annotating all documents and mark them **Completed**, the status of the annotation set changes to **Submitted**. That is how project managers know that they can start to evaluate the documents for inter-annotator agreement, and reject them or accept them and promote them to ground truth.
+After you finish annotating all documents and mark them **Completed**, the status of the annotation set changes to **Submitted**. That status is how project managers know that they can start to evaluate the documents for inter-annotator agreement, reject them or accept them, and promote them to ground truth.
 
 ## Annotating relations
 {: #wks_harelation}
@@ -303,29 +322,34 @@ You must annotate entity mentions in the document before you can define relation
 
 ### About this task
 
-The relation mention can only be defined if the text explicitly describes the relationship between the two entity mentions. Explicit textual evidence might include possessives, subject-verb-object structures, or appositives. For example, in the following sentence, it is not valid to add the **ownedBy** relation mention between *dog* and *owner*.
+The relation mention can only be defined if the text explicitly describes the relationship between the two entity mentions. Explicit textual evidence might include possessives, subject-verb-object structures, or appositives. For example, in the following sentence, it is not valid to add the `ownedBy` relation mention between `dog` and `owner`.
 
 <pre><code>NOT VALID: The <u>dog</u> got a treat from its <u>owner</u>.</code></pre>
 
-The valid relation mention is between *its* and *owner*, because it is this part of the sentence in which the text explicitly defines the relationship between the dog and its owner. *Owner* might be a home owner, or the owner of some other dog, but this text makes it clear that the same dog that is mentioned in the beginning of the sentence is owned by this person.
+The valid relation mention is between `its` and `owner`, because it is this part of the sentence in which the text explicitly defines the relationship between the dog and its owner. `Owner` might be a home owner, or the owner of some other dog, but this text makes it clear that the same dog that is mentioned in the beginning of the sentence is owned by this person.
 
 <pre><code>VALID: The dog got a treat from <u>its</u> <u>owner</u>.</code></pre>
 
 <pre><code>                                |ownedBy^</code></pre>
 
-The requirement that both entity mentions and the text that defines the relation type between them must exist within a single sentence might seem strict. However, keep in mind that, as in the above example, as long as you also identify coreferences in the document, you can identify relation mentions in sentences that contain words that serve as more informal entity mentions, such as pronouns. For example, the second sentence in *Mary is a scientist. She works for {{site.data.keyword.IBM_notm}}.* contains valid textual evidence of an **employedBy** relationship between Mary and {{site.data.keyword.IBM_notm}}. The coreference, *She*, is understood to be a reference to the PERSON entity type *Mary*. It is the identification of a coreference between *Mary* and *She* plus the identification of a relation mention between *She* and *{{site.data.keyword.IBM_notm}}* together that fully captures this relationship. The correct way to annotate the relation mention is like this:
+The requirement that both entity mentions and the text that defines the relation type between them must exist within a single sentence might seem strict. However, keep in mind that, as in the above example, as long as you also identify coreferences in the document, you can identify relation mentions in sentences that contain words that serve as more informal entity mentions, such as pronouns. For example, the second sentence in `Mary is a scientist. She works for {{site.data.keyword.IBM_notm}}.` contains valid textual evidence of an `employedBy` relationship between Mary and {{site.data.keyword.IBM_notm}}. The coreference, `She`, is understood to be a reference to the `PERSON` entity type `Mary`. It is the identification of a coreference between `Mary` and `She` plus the identification of a relation mention between `She` and `{{site.data.keyword.IBM_notm}}` together that fully captures this relationship. The correct way to annotate the relation mention is like this:
 
 <pre><code>Mary[<i>#1</i>] is a scientist. <u>She</u>[<i>#1</i>] works for <u>IBM</u>.</code></pre>
 
 <pre><code>                         |----employedBy----^</code></pre>
 
-where the subscript [<i>#1</i>] indicates that *Mary* and *She* are both members of the first coreference chain in the document.
+where the subscript [<i>#1</i>] indicates that `Mary` and `She` are both members of the first coreference chain in the document.
 
 ### Procedure
 
 To annotate relation mentions between entity mentions in a document:
 
-1. Click **Document Annotation** > **Relations**.
+1. Log in as a human annotator (or as an administrator or project manager who was assigned documents to annotate). Workspaces that contain tasks that are assigned to you are displayed.
+1. Open a workspace, and then click **Machine Learning Model** > **Annotation Tasks**. The annotation tasks that are assigned to you are displayed.
+1. Open the annotation task that you want to work on. The annotation sets that are assigned to you are displayed.
+1. Click **Annotate** to open the annotation set you want to work on. The documents in the annotation set are displayed.
+1. Open the document that you want to annotate. By default, the document opens in **Mention** mode, which is the mode you use to annotate entity mentions.
+1. Click **Relations**.
 1. To annotate a relation:
 
     1. Click an entity mention in the text, and then click a second entity mention in the same sentence that you want to connect to the first mention.
@@ -334,7 +358,7 @@ To annotate relation mentions between entity mentions in a document:
         If annotation guidelines were previously connected to the workspace, and you want help with choosing the correct annotation to apply, click **View Guidelines**. Depending on the access permissions set up on the site where the guidelines are hosted, you might be able to update the guidelines after you open them, for example, to add clarifications and examples.
         {: tip}
 
-1. To remove a relation mention that you just added, press `Ctrl+Z` to undo the action. To remove a relation mention later, you can left-click the relation type and then press the **Delete** key or click **X** next to the relation type.
+1. To remove a relation mention that you just added, press Ctrl+Z to undo the action. To remove a relation mention later, you can left-click the relation type and then press the **Delete** key or click **X** next to the relation type.
 1. Depending on the type system, you might be able to configure attributes for a relation, such as assigning a relation tense, modality, or class. If so, select a relation label and click **Attribute View**.
 1. Click **Save** at any time to save your work.
 
@@ -346,8 +370,8 @@ After you finish annotating all documents and mark them **Completed**, the statu
 
 ## Related information
 
-[Dictionaries](/docs/services/watson-knowledge-studio/dictionaries.html)
+[Creating dictionaries](/docs/services/watson-knowledge-studio/dictionaries.html)
 
 [Troubleshooting the ground truth editor](/docs/services/watson-knowledge-studio/user-guide-help.html)
 
-[Type systems](/docs/services/watson-knowledge-studio/typesystem.html)
+[Establishing a type system](/docs/services/watson-knowledge-studio/typesystem.html)

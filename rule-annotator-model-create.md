@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-12"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -32,8 +32,9 @@ After defining rules, you can create a rule-based model.
 To create a rule-based model. complete the following steps:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager, and select your workspace.
-1. Select the **Model Management** > **Versions** > **Rule-based** tab.
-1. Map the entity types from your type system to one or more classes that you used to define rules.
+1. Select the **Rule-based Model** > **Versions** > **Rule-based Model** tab.
+2. Click **Map entity types and classes**.
+3. Map the entity types from your type system to one or more classes that you used to define rules.
 
   After the entity types are mapped, you can [deploy the rule-based model](/docs/services/watson-knowledge-studio/rule-annotator-model-use.html) or use it to [pre-annotate documents](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannotrule) in the process of creating a machine learning model.
 

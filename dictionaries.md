@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-06"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -33,9 +33,9 @@ In machine learning, a dictionary groups together words and phrases that share s
 
 A dictionary is a list of words or phrases that are equivalent for information-extraction purposes, meaning that they are interchangeable for the purposes of identifying entity and relation mentions.
 
-Consider this example: a dictionary entry contains the seven days of the week. To annotate a document, a human annotator assigns the entity type DAY_OF_WEEK to mentions of Monday and Friday in the text. Because the dictionary equates the seven days of the week, it helps ensure that a machine learning model correctly annotates occurrences of Tuesday, Wednesday, and the other days of the week in unseen documents at run time. In addition, equating these words also benefits information extraction in surrounding text. What the machine learning model learns from training examples about the texts near Monday and Friday gets applied to texts that the machine learning model sees near other days of the week because the dictionary states that these terms are equivalent for information-extraction purposes.
+Consider this example: a dictionary entry contains the seven days of the week. To annotate a document, a human annotator assigns the entity type `DAY_OF_WEEK` to mentions of *Monday* and *Friday* in the text. Because the dictionary equates the seven days of the week, it helps ensure that a machine learning model correctly annotates occurrences of *Tuesday*, *Wednesday*, and the other days of the week in unseen documents at run time. In addition, equating these words also benefits information extraction in surrounding text. What the machine learning model learns from training examples about the texts near *Monday* and *Friday* gets applied to texts that the machine learning model sees near other days of the week because the dictionary states that these terms are equivalent for information-extraction purposes.
 
-> **Note:** You do not need to create a dictionary that contains days of the week information; several general-purpose dictionaries like this are built into the application. Others include countries, place names, number words, animals, plants, diseases, measurement words (such as ounce and meter), and salutation title words (such as Mr. and Mrs.). You cannot disable or edit built-in dictionaries.
+> **Note:** You do not need to create a dictionary that contains days of the week information. Several general-purpose dictionaries like this are built in to the application. Other built-in dictionaries include countries, place names, number words, animals, plants, diseases, measurement words (such as *ounce* and *meter*), and salutation title words (such as *Mr.* and *Mrs.*). You cannot disable or edit built-in dictionaries.
 
 Avoid adding entries that have multiple meanings. For example, in a domain about auto racing, it makes sense to include the term *bank*, which refers to a road feature, only if financial institutions are not frequently discussed in the text also. If both senses of the word occur often in the source documents, then it is best to leave it out of both types of dictionaries: the dictionary that is associated with road features, and the dictionary that is associated with financial institutions.
 
@@ -52,6 +52,7 @@ Dictionaries are used in a couple ways, all optional. They are used by the machi
 - **Pre-annotation usage**
 
     Dictionaries are important to the following pre-annotatation processes.
+
     - Dictionary pre-annotator: You associate a dictionary with an entity type from the type system when you run the dictionary pre-annotator.
     - Rule-based model: You can optionally associate a dictionary with a rule class. Classes are then mapped to entity types from the type system when you run the rule-based model to pre-annotate documents. As a result, dictionary terms are, although circuitously, mapped to entity types for the rule-based model also.
 
@@ -59,9 +60,9 @@ Dictionaries are used in a couple ways, all optional. They are used by the machi
 
 ### Language considerations
 
-- For Brazilian Portuguese, English, French, German, Italian, and Spanish, {{site.data.keyword.knowledgestudioshort}} does not currently provide an option to specify case-insensitive dictionary-matching, but dictionary entries match text that has higher case. For example, "vehicle" in the dictionary matches "vehicle", "Vehicle" or "VEHICLE" in text, while "Sat" in the dictionary matches "Sat" or "SAT" in text, but not "sat".
+- For Brazilian Portuguese, English, French, German, Italian, and Spanish, {{site.data.keyword.knowledgestudioshort}} does not currently provide an option to specify case-insensitive dictionary-matching, but dictionary entries match text that has a higher case. For example, *vehicle* in the dictionary matches *vehicle*, *Vehicle* or *VEHICLE* in text, while *Sat* in the dictionary matches *Sat* or *SAT* in text, but not *sat*.
 - For Japanese and Korean, dictionary matching during pre-annotation is case-sensitive.
-- For Arabic, {{site.data.keyword.knowledgestudioshort}} assumes that Arabic text is stored unshaped and treats numeric shaping as a storage-level property. For details about how {{site.data.keyword.knowledgestudioshort}} handles Arabic character shaping and numeric shaping, see [Configuring support for Arabic](/docs/services/watson-knowledge-studio/language-support.html#wks_langsupp_ar).
+- For Arabic, {{site.data.keyword.knowledgestudioshort}} assumes that Arabic text is stored unshaped and treats numeric shaping as a storage-level property. For details about how {{site.data.keyword.knowledgestudioshort}} handles Arabic character shaping and numeric shaping, see [Configuring support for Arabic](/docs/services/watson-knowledge-studio/language-support-arabic.html).
 
 ### CSV file dictionary
 {: #wks_dictionaries__cvsdict}
@@ -77,70 +78,70 @@ lemma,poscode,surface
 
 The remaining lines in the file specify the dictionary entries, where:
 
-- **`lemma`**
+- **lemma**
 
     Specifies the most representative word form for the entry.
 
-- **`poscode (Arabic, Brazilian Portuguese, English, French, German, Italian, and Spanish)`**
+- **poscode** (Arabic, Brazilian Portuguese, English, French, German, Italian, and Spanish)
 
     Specifies a code that identifies the part of speech. This part of speech information is used by the dictionary annotator to help with sentence tokenization.
-    - 0 - Unknown
+    - `0` - Unknown
 
-        > **Note:** This code supports the scenario where you want to upload a large machine-generated dictionary that does not include part of speech information in each entry. You can assign Unknown to all entries by default. Avoid using this code, if possible.
+        > **Note:** This code supports the scenario where you want to upload a large machine-generated dictionary that does not include part of speech information in each entry. You can assign *unknown* to all entries by default. Avoid using this code, if possible.
 
-    - 1 - Pronoun
-    - 2 - Verb
-    - 3 - Noun
-    - 4 - Adjective
-    - 5 - Adverb
-    - 6 - Adposition
-    - 7 - Interjection
-    - 8 - Conjunction
-    - 9 - Determiner
-    - 10 - Quantifier
+    - `1` - Pronoun
+    - `2` - Verb
+    - `3` - Noun
+    - `4` - Adjective
+    - `5` - Adverb
+    - `6` - Adposition
+    - `7` - Interjection
+    - `8` - Conjunction
+    - `9` - Determiner
+    - `10` - Quantifier
 
-    In English, noun(3), verb(2), and adjective(4) are the most common parts of speech that are used for dictionary entries.
+    In English, noun (`3`), verb (`2`), and adjective (`4`) are the most common parts of speech that are used for dictionary entries.
 
-    > **Note:** The part of speech does not automatically determine the type of a mention. Do not assume that all nouns equate to entity type mentions and all verbs equate to relation type mentions. For example, *American* is an adjective but might be best annotated as entity type GPE (geopolitical entity) or PERSON. *Met* is a verb, but might be best annotated as an EVENT_MEETING.
+    > **Note:** The part of speech does not automatically determine the type of a mention. Do not assume that all nouns equate to entity type mentions and all verbs equate to relation type mentions. For example, *American* is an adjective but might be best annotated as entity type **GPE** (geopolitical entity) or `PERSON`. *Met* is a verb, but might be best annotated as an `EVENT_MEETING`.
 
     In other languages, such as German, which uses compound words, the accuracy of the part of speech information is even more important to help determine word boundaries.
 
-- **`poscode (Chinese)`**
+- **poscode** (Chinese)
 
     Specifies a code that identifies the part of speech. The part of speech value is important for text tokenization and pre-annotation in languages like Chinese (simplified and traditional) that do not use white space to denote word boundaries.
-    - 32 - Noun
-    - 31 - Noun (Family name)
-    - 35 - Noun (Organization)
-    - 34 - Noun (Other)
-    - 33 - Noun (Person Name)
+    - `32` - Noun
+    - `31` - Noun (Family name)
+    - `35` - Noun (Organization)
+    - `34` - Noun (Other)
+    - `33` - Noun (Person Name)
 
-- **`poscode (Japanese)`**
+- **poscode** (Japanese)
 
     Specifies a code that identifies the part of speech. The part of speech value is important for text tokenization and pre-annotation in languages like Japanese that do not use white space to denote word boundaries.
-    - 19 - Noun
-    - 23 - Common Prefix
-    - 24 - Common Suffix
-    - 140 - Proper Noun (Last Name)
-    - 141 - Proper Noun (First Name)
-    - 146 - Proper Noun (Person Name)
-    - 142 - Proper Noun (Organization)
-    - 144 - Proper Noun (Place Name)
-    - 143 - Proper Noun (Region)
-    - 145 - Proper Noun (Other)
+    - `19` - Noun
+    - `23` - Common Prefix
+    - `24` - Common Suffix
+    - `140` - Proper Noun (Last Name)
+    - `141` - Proper Noun (First Name)
+    - `146` - Proper Noun (Person Name)
+    - `142` - Proper Noun (Organization)
+    - `144` - Proper Noun (Place Name)
+    - `143` - Proper Noun (Region)
+    - `145` - Proper Noun (Other)
 
-- **`poscode (Korean)`**
+- **poscode** (Korean)
 
     Specifies a code that identifies the part of speech. The part of speech value is important for text tokenization and pre-annotation in languages like Korean that do not use white space to denote word boundaries.
-    - 10010 - Noun
-    - 10300 - Proper Noun (Last Name)
-    - 10310 - Proper Noun (First Name)
-    - 110360 - Proper Noun (Person Name)
-    - 10320 - Proper Noun (Organization)
-    - 10340 - Proper Noun (Place Name)
-    - 10330 - Proper Noun (Region)
-    - 10350 - Proper Noun (Other)
+    - `10010` - Noun
+    - `10300` - Proper Noun (Last Name)
+    - `10310` - Proper Noun (First Name)
+    - `110360` - Proper Noun (Person Name)
+    - `10320` - Proper Noun (Organization)
+    - `10340` - Proper Noun (Place Name)
+    - `10330` - Proper Noun (Region)
+    - `10350` - Proper Noun (Other)
 
-- **`surface`**
+- **surface**
 
     Specifies equivalent terms, also called surface forms. Repeat the lemma as a surface form and use a comma to separate multiple surface forms. If a surface form includes a comma, enclose the surface form in quotation marks.
 
@@ -160,7 +161,7 @@ premium,4,premium,premium-grade
 
 **Related tasks**:
 
-[Pre-annotating documents with the Dictionary pre-annotator](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannot)
+[Pre-annotating documents with a dictionary](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannot)
 
 ## Adding dictionaries to a workspace
 {: #wks_projdictionaries}
@@ -175,7 +176,7 @@ The following restriction apply to dictionaries:
 
 - Maximum 15,000 entries per dictionary
 
-    > **Note:** This limit does not apply to dictionaries that you upload as a dictionary CSV file. Read-only dictionaries can contain more entries.
+    > **Note:** This limit does not apply to dictionaries that you upload as a dictionary `CSV` file. Read-only dictionaries can contain more entries.
 
 - Maximum 64 dictionaries per workspace
 
@@ -183,35 +184,31 @@ The following restriction apply to dictionaries:
 
 To add a dictionary to your workspace:
 
-1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager and open the **Assets & Tools** > **Pre-annotators** > **Dictionaries** tab.
+1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager and open the **Assets** > **Dictionaries** page.
 1. Perform one of the following tasks:
 
-    - Click the **Upload Dictionary** button, select a dictionary, and then click **Upload**. After you upload a dictionary, click **Manage Dictionaries** to view the dictionary and associate it with an entity type.
+    - Next to the **Create Dictionary** button, click the **Menu** icon, and then select **Upload Dictionary**. Select a dictionary, and then click **Upload**. After you upload a dictionary, select it to view the dictionary and associate it with an entity type.
 
-        - You can upload a ZIP file that contains a dictionary that you downloaded from another {{site.data.keyword.knowledgestudioshort}} workspace. You must upload the type system that was downloaded from the other workspace in JSON format before you can upload the corresponding dictionary file. You can edit and add entries to a dictionary that you reuse from another {{site.data.keyword.knowledgestudioshort}} workspace. See [Uploading resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html) for more details.
+    You can upload a ZIP file that contains a dictionary that you downloaded from another {{site.data.keyword.knowledgestudioshort}} workspace. You must upload the type system that was downloaded from the other workspace in JSON format before you can upload the corresponding dictionary file. You can edit and add entries to a dictionary that you reuse from another {{site.data.keyword.knowledgestudioshort}} workspace. See [Uploading resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html) for more details.
 
-        Uploading a CSV file is also supported, but uploading it directly as a dictionary creates a preview-only dictionary that you cannot edit or use to pre-annotate documents. To upload a CSV file that you can edit and use for pre-annotation, click **Manage Dictionaries** and then **Create Dictionary** to create a dictionary first, and then upload the CSV content as entries to that newly created dictionary.
+    Uploading a CSV file is also supported, but uploading it directly as a dictionary creates a preview-only dictionary that you cannot edit or use to pre-annotate documents. To upload a CSV file that you can edit and use for pre-annotation, click **Create Dictionary** to first create an empty dictionary, and then upload the CSV content as entries to that newly created dictionary.
 
-    - Click the **Manage Dictionaries** button to create a new dictionary to which you can subsequently add dictionary entries.
+    - Click the **Create Dictionary** button to create an empty dictionary to which you can subsequently add dictionary entries. Specify a descriptive name for the dictionary, and then click **Save**.
 
-        Click the **Create Dictionary** button and specify a descriptive name for the dictionary. Select the entity type that best describes the purpose of the dictionary, and then click **Save**.
+2. To add entries to the dictionary, perform one of the following tasks:
 
-1. To add entries to the dictionary, perform one of the following tasks:
+    - Click **Add Entry** to add a dictionary entry. Specify the *lemma* (the most representative word form for the term).
+    - Click **Upload** to upload a `CSV` file that contains dictionary entries, and then browse to select the file. The `CSV` file must be smaller than 1MB.
 
-    - Click **Add Entry** to add a dictionary entry. Specify the lemma (the most representative word form for the term).
-    - Click **Upload** to upload a `CSV` file that contains dictionary entries, and then browse to select the file. The CSV file must be smaller than 1MB.
+3. After uploading or adding entries, you can edit the entries.
 
-1. After uploading or adding entries, you can edit the entries.
+    Open an entry to specify equivalent terms, called *surface forms*. Each surface form must be 256 or fewer characters in length. You can change which of the surface forms is used as the lemma. For example, the lemma *{{site.data.keyword.IBM_notm}}* might have surface forms like *{{site.data.keyword.IBM_notm}} Corp.* and *International Business Machines, Inc.*.
 
-    Open an entry to specify equivalent terms, called surface forms. Each surface form must be 256 or fewer characters in length. You can change which of the surface forms is used as the lemma.
-
-    For example, the lemma *{{site.data.keyword.IBM_notm}}* might have surface forms like *{{site.data.keyword.IBM_notm}} Corp.* and *International Business Machines, Inc.*.
-
-1. Select the appropriate part of speech for each lemma and surface form in the dictionary.
+4. Select the appropriate part of speech for each lemma and surface form in the dictionary.
 
     The part of speech information is used by the tokenizer, and during pre-annotation.
 
-1. Click **Save** to store your changes.
+5. Click **Save** to store your changes.
 
 ### What to do next
 
@@ -219,8 +216,8 @@ Run the pre-annotator, which uses the dictionaries that you created to do a prel
 
 **Related tasks**:
 
-[Pre-annotating documents with the Dictionary pre-annotator](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannot)
+[Pre-annotating documents with a dictionary](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannot)
 
 **Related reference**:
 
-[Multiple language support](/docs/services/watson-knowledge-studio/language-support.html)
+[Language support](/docs/services/watson-knowledge-studio/language-support.html)

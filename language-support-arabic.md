@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -52,4 +52,4 @@ To configure numeric shaping in the Firefox browser:
 
 ### Related reference
 
-[Multiple language support](/docs/services/watson-knowledge-studio/language-support.html)
+[Language support](/docs/services/watson-knowledge-studio/language-support.html)

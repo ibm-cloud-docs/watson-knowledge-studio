@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -34,10 +34,10 @@ Avoid simultaneous editing of rules, classes, and regular expressions by multipl
 
 To define a rule, complete the following steps:
 
-1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager and open the **Rules** page.
-1. Click the plus sign (+) next to Documents to add a document.
+1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager and click **Rule-based Model** > **Rules**.
+1. Click the plus sign (+) next to the Documents heading to add a document.
 
-    See [Adding documents for defining rules](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html) for details.
+    For more information, see [Adding documents for defining rules](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html).
 
     For example, you might add a document named `My Document` that contains this single line of text:
 
@@ -51,38 +51,38 @@ To define a rule, complete the following steps:
     1. From the **Class** panel, click the plus sign (+) next to Class.
     1. Add a class name.
 
-        If you will associate the class with a regular expression or dictionary, consider naming the class such that you can identify its origin. For example, if you plan to use a regular expression to define a pattern for the number in the sentence, you can create a class named AGE_REGEX. And if you plan to use a dictionary to annotate the car manufacturer in the sentence, you can add a class named MANUFACTURER_DICT.
+        If you will associate the class with a regular expression or dictionary, consider naming the class such that you can identify its origin. For example, if you plan to use a regular expression to define a pattern for the age in the example sentence, you can create a class named `AGE_REGEX`. If you plan to use a dictionary to annotate the car manufacturer in the sentence, you can add a class named `MANUFACTURER_DICT`.
 
         Keep these naming rules in mind:
         - The first character in a class name must be alphabetical.
-        - Use only the following alphanumeric ASCII characters and the underscore character in values that you add to the classes: A through Z, a through z, 0 through 9.
+        - Use only the following alphanumeric ASCII characters and the underscore character in values that you add to the classes: `A` through `Z`, `a` through `z`, `0` through `9`.
         - Names cannot contain spaces.
         - Names cannot be longer than 64 characters.
 
-1. Optional: To quickly annotate classes in the document, you can associate a dictionary with the rule editor. Terms in the document that match entries in the dictionary are automatically annotated with the appropriate class.
+1. Optional: To quickly annotate classes in a document, you can associate a dictionary with the rule editor. Terms in a document that match entries in the dictionary are automatically annotated with the class that you select for the dictionary.
 
-    1. Click the **Dictionaries** tab in the panel.
+    1. Click the **Dictionaries** tab.
 
         Any dictionaries that you created are displayed.
 
-        If you have not added a dictionary, open the **Dictionaries** tab from the main navigation bar to add one. See [Creating dictionaries](/docs/services/watson-knowledge-studio/dictionaries.html) for more information.
+        If you have not added a dictionary, open the **Assets** > **Dictionaries** page from the main navigation bar to add one. See [Creating dictionaries](/docs/services/watson-knowledge-studio/dictionaries.html) for more information.
 
-    1. Click a dictionary, and define a class association for it, and then click **Save**.
+    1. Click a dictionary, associate a class with the dictionary, and then click **Save**.
 
-        For example, if you have a dictionary that contains organization names, you can associate it with the rule and assign the ORGANIZATION_DICT class to it. Any organization names that occur in your sample documents will be annotated as instances of the ORGANIZATION_DICT class.
+        For example, if you have a dictionary that contains organization names, you can create a rule class called `ORGANIZATION`, and associate the class with the dictionary. Any organization names that occur in your sample documents will be annotated as instances of the `ORGANIZATION` class.
 
     If you want to remove the dictionary association from the rule editor later, then you can remove the class mapping. To do so, choose the empty option from the top of the drop-down list.
 
-1. Optional: To define a regular expression to help you construct a rule, click **Regex** from the navigation.
+2. Optional: To define a regular expression to help you construct a rule, click the **Regex** tab.
 
-    1. Click the plus sign (+) next to Regular Expressions to add a regular expression.
-    1. Name the regular expression. For example, MyAgeRegex.
+    1. Click the plus sign (+) next to the Regular Expressions heading.
+    2. Name the regular expression. For example, `MyAgeRegex`.
 
         The name cannot be longer than 64 characters.
 
-    1. Associate the expression with a class. For example, AGE_REGEX.
-    1. Click **Add Entry**.
-    1. Add the expression.
+    3. Associate the expression with a class. For example, `AGE_REGEX`.
+    4. Click **Add Entry**.
+    5. Add the expression.
 
         For example, to capture a number that represents an age (up to age 99), you can specify `[0-9]{1,2}`. To capture expressions of time, like *12:30 AM*, you might specify this regular expression:
 
@@ -91,20 +91,20 @@ To define a rule, complete the following steps:
         ```
         {: screen}
 
-        You can optionally change the minimum and maximum number of word tokens. In English, tokens are often equated to words as delimited by white spaces in a sentence. However, they do not always match one-to-one with words; other textual elements are considered tokens in some situations. For example, the hyphens in the term *50-year-old* each count as a token, which means the total number of tokens used in this term is 5. And the text *12:30 PM* contains 4 tokens. (`12 | : | 30 | PM`)
+        You can optionally change the minimum and maximum number of word tokens. In English, tokens are often equated to words as delimited by white spaces in a sentence. However, they do not always match one-to-one with words. Other textual elements are considered tokens in some situations. For example, the hyphens in the term *50-year-old* each count as a token, which means the total number of tokens used in this term is 5. And the text *12:30 PM* contains 4 tokens. (`12 | : | 30 | PM`)
 
         Click **Add**.
 
-    1. Repeat the previous two steps if you want to add more expressions.
-    1. Click **Save**.
+    6. Repeat the previous two steps if you want to add more expressions.
+    7. Click **Save**.
 
-    The regex editor closes, and the document is displayed. You should see the class that you defined for the regular expression applied to the text that you intended it to match against. If you do not, check your expression. It might need to be revised so it matches the text that you intended for it to find.
+    The regex editor closes, and the document is displayed. You should see the class that you defined for the regular expression applied to the text that you intended it to match against. If you do not see the annotation, check your expression. It might need to be revised so it matches the text that you intended for it to find.
 
-    ![The rule editor showing the "Regex" tab selected, a regular expression called "Age" that's associated with the class "AGE_REGEX", and a document that shows the text "50" highlighted in yellow. The highlighted text matches the regular expression that was created.](images/rule_step3.jpg)
+    ![The rule editor showing the "Regex" tab selected, a regular expression called "Age" that's associated with the class "AGE_REGEX", and a document that shows the text "50" highlighted in yellow. The highlighted text matches the regular expression that was created.](images/rule_step3.jpg "The rule editor showing the "Regex" tab selected, a regular expression called "Age" that's associated with the class "AGE_REGEX", and a document that shows the text "50" highlighted in yellow. The highlighted text matches the regular expression that was created.")
 
-1. To define a rule, click **Rules** from the navigation.
-1. Open the document with the pattern that you want to capture as a rule. For example, if you created a document titled, `My Document` with the sample text that contains the phrase `50-year-old`, open that document.
-1. From the text in the document, select the characters that illustrate the pattern that you want to capture. For example, you can select the following words and hyphens (-):
+3. To define a rule, click **Rules** from the navigation.
+4. Open the document with the pattern that you want to capture as a rule. For example, if you created a document titled, `My Document` with the sample text that contains the phrase `50-year-old`, open that document.
+5. From the text in the document, select the characters that illustrate the pattern that you want to capture. For example, you can select the following words and hyphens (-):
 
     ```
     50-year-old
@@ -113,13 +113,13 @@ To define a rule, complete the following steps:
 
     After you select characters, then you can add a rule.
 
-1. Click the plus sign (+) in the **Rules** panel.
+6. Click the plus sign (+) in the **Rules** panel.
 
     The rule editor represents the text that you selected as two layers of cells. The cells in the top layer are where you annotate the classes of the underlying tokens. The lower layer is where you define the conditions by which the tokens participate in the pattern.
 
-    ![The rule editor that shows what the "Create a rule" panel looks like after you select text from your document and click the plus sign in the "Rules" panel. The following graphical elements are shown: the "Rule name" field with the term "AGE" entered, the "Create a rule" panel, and the "Class" panel. In the "Create a rule" panel, cells with dotted lines are shown across the top. One cell is shown for each token of the text that was selected. In these cells, you annotate the classes of the tokens. Across the bottom of the "Create a rule" panel, cells with solid lines are shown. Each cell contains a token of the selected text, "50-year-old". The tokens are "50", "-" (hyphen), "year", "-", and "old". Each solid-line cell has two icons next to it that you can use to adjust the condition of the word or annotation.](images/rule_step4.jpg)
+    ![The rule editor that shows the "Create a rule" panel.](images/rule_step4.jpg "The rule editor that shows what the "Create a rule" panel looks like after you select text from your document and click the plus sign in the "Rules" panel. The following graphical elements are shown: the "Rule name" field with the term "AGE" entered, the "Create a rule" panel, and the "Class" panel. In the "Create a rule" panel, cells with dotted lines are shown across the top. One cell is shown for each token of the text that was selected. In these cells, you annotate the classes of the tokens. Across the bottom of the "Create a rule" panel, cells with solid lines are shown. Each cell contains a token of the selected text, "50-year-old". The tokens are "50", "-" (hyphen), "year", "-", and "old". Each solid-line cell has two icons next to it that you can use to adjust the condition of the word or annotation.")
 
-1. Define the conditions by which each token participates in the pattern.
+7. Define the conditions by which each token participates in the pattern.
 
     In the bottom layer of cells, click the first token to review its conditions. If you want to indicate that any token can be used in the current position in the pattern, then click **Open Properties**, and select **Allow any token**. Click **Close Properties**. If a token is a regex, such as `AGE_REGEX` in the example, **Allow any token** is not available.
 
@@ -248,13 +248,13 @@ To define a rule, complete the following steps:
               interjection
             </li>
             <li>
-              noun<
+              noun
             </li>
             <li>
-              numeral<
+              numeral
             </li>
             <li>
-              pronoun<
+              pronoun
             </li>
             <li>
               residual
@@ -353,7 +353,7 @@ To define a rule, complete the following steps:
       </tr>
     </table>
 
-1. For tokens that have annotations that were added indirectly from a dictionary annotation or regular expression match, you can choose whether the pattern should require any word with the same annotation type or the actual underlying words that were annotated instead.
+8. For tokens that have annotations that were added indirectly from a dictionary annotation or regular expression match, you can choose whether the pattern should require any word with the same annotation type or the actual underlying words that were annotated instead.
 
     In the lower layer of cells, you can see which cells are included in the pattern because a horizontal line connects them to one another. Where an annotation has been applied, there is a split. Cells with the original words are displayed below a cell with the annotation label. You can click one set of cells or the other to change the path of the line, and thus change the cells that are included in the pattern.
 
@@ -361,7 +361,7 @@ To define a rule, complete the following steps:
 
     ![The "Create a rule" panel that shows an edit of the token, "50", that uses the annotation, "AGE_REGEX", in the rule. By default, the "AGE_REGEX" annotation is used, but you can edit the pattern so that the underlying word, "50", is used instead.](images/rule_step5.jpg)
 
-1. After you set the pattern order, you can annotate tokens in the text.
+9. After you set the pattern order, you can annotate tokens in the text.
 
     From the top layer of cells, click the cells that represents the tokens that you want to annotate, and then apply a class label to them. To select multiple cells, click one, press the **Shift** key, and click additional cells.
 
@@ -371,8 +371,8 @@ To define a rule, complete the following steps:
 
     ![The "Create a rule" section showing the "Assign class" window that opens when you click a token. The window shows a field where you can enter the name of a new class, or select an existing class from the list.](images/rule_step6.jpg)
 
-1. Name the rule.
+10. Name the rule.
 
     The rule name cannot be longer than 64 characters.
 
-1. Click **Save** in the Rules panel to save the rule.
+11. Click **Save** in the Rules panel to save the rule.
