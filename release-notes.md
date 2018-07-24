@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-06"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -25,6 +25,51 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 
 The following new features and changes to {{site.data.keyword.knowledgestudiofull}} are available.
 {: shortdesc}
+
+## July 2018
+{: #july2018}
+
+### New features and changes
+{: #new-july2018}
+
+- The **Deployed Models** page was updated to include models from {{site.data.keyword.knowledgestudioshort}} instances that are managed by [IAM *resource groups* ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/iam/users_roles.html){: new_window}, in addition to models that are managed by [Cloud Foundry *organizations* ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window}.
+
+   What you see on the Deployed Models page depends on the [region ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/resources/services_region.html){: new_window} that hosts your {{site.data.keyword.knowledgestudioshort}} instance. If the region supports instances managed by both access management methods, you see a tab for each method. Models from instances that are managed by IAM are listed on the **Resource Groups** tab. Models from instances that are managed by Cloud Foundry are listed on the **Organizations** tab.
+
+  If the region supports instances managed by only one of the access management methods, you see only one list of models, because only one access management method is applicable.
+
+   To view the **Deployed Models** page, from the **Settings** menu in the top right menu bar, click **Manage deployed models**. For information about undeploying models on the **Deployed Models** page, see [Undeploying machine learning models](/docs/services/watson-knowledge-studio/publish-ml.html#undeploy-view-model) and [Undeploying rule-based models](/docs/services/watson-knowledge-studio/rule-annotator-model-use.html#undeploy-view-model).
+
+- The navigation was changed to better align with the {{site.data.keyword.knowledgestudioshort}} workflow. Also, the following functionality was reorganized:
+
+    - In the previous version, management of dictionaries was included as part of the Pre-annotators page. Now, management of dictionaries is located on the Dictionaries page in the Assets section of the navigation.
+    - In the previous version, human annotation functionality was distributed across the Mentions, Relations, and Coreferences tabs in the Document Annotation section of the navigation. Now, the functionality is merged under the Annotation Tasks page in the Machine Learning Model section of the navigation.
+    - To manage human annotation tasks, in the previous version, you found the Tasks tab under the Assets & Tools > Documents page. Now, you add tasks and manage existing tasks on the Annotation Tasks page in the Machine Learning Model section of the navigation.
+    - In the previous version, the Rules, Regex and Dictionaries pages were separate pages in the Document Annotation section of the navigation. Now, the functionality is merged under the Rules page in the Rule-based Model section of the navigation.
+
+    For more details about the navigation changes, see Figure 1 and Table 3.
+
+![Screen captures of the previous navigation (left side) and new navigation (right side).](images/nav3-0718.svg "Screen captures of the previous navigation and new navigation. Details of the changes are listed in Table 3 and the previous text.") Figure 1. Screen captures of the previous navigation (left side) and new navigation (right side).
+
+| Feature | Previous location | Current location |
+|---------|--------------------------|----------------------|
+| Annotation tasks | Assets & Tools > Documents > Tasks | Machine Learning Model > Annotation Tasks |
+| Coreferences tab | Document Annotation | Machine Learning Model > Annotation Tasks > task > annotation set > document |
+| Dictionaries page (management) | Assets & Tools > Pre-annotators > Manage Dictionaries | Assets |
+| Dictionaries tab (mapping to classes for rule-based model) | Document Annotation | Rule-based Model > Rules |
+| Documents page | Assets & Tools | Assets |
+| Entity Types page | Assets & Tools | Assets |
+| Mentions tab | Document Annotation | Machine Learning Model > Annotation Tasks > task > annotation set > document |
+| Performance page | Model Management | Machine Learning Model |
+| Pre-annotators page | Assets & Tools | Machine Learning Model > Pre-annotation |
+| Regex tab | Document Annotation | Rule-based Model > Rules |
+| Relation Types page | Assets & Tools | Assets |
+| Relations tab | Document Annotation | Machine Learning Model > Annotation Tasks > task > annotation set > document |
+| Rules tab | Document Annotation | Rule-based Model |
+| Tasks tab | Assets & Tools > Documents | Machine Learning Model > Annotation Tasks |
+| Versions page (machine learning model) | Model Management | Machine Learning Model |
+| Versions page (rule-based model) | Model Management | Rule-based Model |
+{: caption="Table 3. Navigation changes (July 2018)" caption-side="top"}
 
 ## May 2018
 {: #may2018}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-06"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -35,12 +35,14 @@ The files that you download are operating system-independent. The {{site.data.ke
 ## Type systems
 {: #wks_exportimport_expimp_type}
 
-To download a type system, open the **Assets & Tools** > **Entity Types** page and click **Download Types**. The system creates a file named `types-ID.json` and prompts you to download the file to your local system. To use this type system in a new workspace, open the **Entity Types** page and upload the `JSON` file that you downloaded.
+To download a type system, open the **Assets**> **Entity Types** page and click **Download Types**. The system creates a file named `types-ID.json` and prompts you to download the file to your local system. To use this type system in a new workspace, open the **Entity Types** page and upload the `JSON` file that you downloaded.
 
 ## Dictionaries
 {: #wks_exportimport_expimp_dict}
 
-To download one or more dictionaries, select the **Assets & Tools** > **Pre-annotators** > **Dictionaries** tab, and click **Download Dictionaries**. For each dictionary that you download, the system creates a file named `dictionary name_timestamp.csv`, combines the files into a `ZIP` file named `workspace name_dictionary_timestamp.zip`, and prompts you to download the file to your local system. You can also download an individual dictionary by opening the dictionary and clicking **Download**. Preview-only dictionaries that you uploaded as a dictionary CSV file cannot be downloaded.
+To download all dictionaries, select the **Assets** > **Dictionaries** page, click the **Menu** icon next to the **Create Dictionary** button, and select **Download Dictionaries**. For each dictionary that you download, the system creates a file named `dictionary name_timestamp.csv`, combines the files into a `ZIP` file named `workspace name_dictionary_timestamp.zip`, and prompts you to download the file to your local system.
+
+You can download an individual dictionary by opening the dictionary and clicking **Download**. Preview-only dictionaries that you uploaded as a dictionary CSV file cannot be downloaded.
 
 Before you upload a downloaded dictionary into a new workspace, you must download the type system from the old workspace and upload it into the new workspace. The type system and dictionaries must originate from the same {{site.data.keyword.knowledgestudioshort}} workspace, and the type system must exist in the new workspace before you upload the dictionaries.
 
@@ -49,7 +51,7 @@ To upload dictionaries, open the **Dictionaries** tab and either add a `CSV` fil
 ## Documents
 {: #wks_exportimport_expimp_doc}
 
-To download documents that you added to the corpus, open the **Assets & Tools** > **Documents** > **Document Sets** tab and click **Download Document Sets**. The system creates a file named `corpus-ID.zip` and prompts you to download the file to your local system. The `ZIP` file contains all documents in the corpus. Annotations that were added to annotation sets are included in the ZIP file, but only after the annotation sets have been approved and promoted to ground truth.
+To download documents that you added to the corpus, open the **Assets**> **Documents** > **Document Sets** tab and click **Download Document Sets**. The system creates a file named `corpus-ID.zip` and prompts you to download the file to your local system. The `ZIP` file contains all documents in the corpus. Annotations that were added to annotation sets are included in the ZIP file, but only after the annotation sets have been approved and promoted to ground truth.
 
 > **Restriction:** Any documents that were pre-annotated will be obscured into a non-readable format when they are downloaded. Even annotations in those documents that were added by human annotation are unreadable.
 
@@ -59,10 +61,8 @@ To upload documents, open the **Document Sets** tab in the new workspace, click 
 
 **Related concepts**:
 
-[Type systems](/docs/services/watson-knowledge-studio/artifacts.html#wks_typesystem)
+[Types of artifacts](/docs/services/watson-knowledge-studio/artifacts.html)
 
-[Dictionaries](/docs/services/watson-knowledge-studio/artifacts.html#wks_dictionaries)
+[Adding documents for annotation](/docs/services/watson-knowledge-studio/documents-for-annotation.html)
 
-[Documents for machine learning models](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_t_docs_intro)
-
-[Documents for rule-based models](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html)
+[Adding documents for defining rules](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html)

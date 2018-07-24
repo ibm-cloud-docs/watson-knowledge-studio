@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-23"
+lastupdated: "2018-07-16"
 
 ---
 
@@ -29,7 +29,7 @@ Find out what to do if you have questions or need help. Where to go for help dep
 ## Access issues
 
 - If you cannot access the {{site.data.keyword.knowledgestudioshort}} instance, then work with the workspace owner to ensure that he has invited you to join the workspace.
-- If you can get to the {{site.data.keyword.knowledgestudioshort}} instance, but do not see any workspaces listed, then work with the administrator or manager of the workspace to resolve the issue. The administrator, which is a person with the Admin role, or manager, which is a person with the ProjectManager role in {{site.data.keyword.knowledgestudioshort}}, must 1.) associate you with an annotation set and 2.) create a task that assigns you to annotate the documents in the set. You will not see the workspace listed on the {{site.data.keyword.knowledgestudioshort}} home page until someone has performed these actions.
+- If you can get to the {{site.data.keyword.knowledgestudioshort}} instance, but do not see any workspaces listed, then work with the administrator or manager of the workspace to resolve the issue. The administrator, which is a person with the Admin role, or manager, which is a person with the Project Manager role in {{site.data.keyword.knowledgestudioshort}}, must 1.) associate you with an annotation set and 2.) create a task that assigns you to annotate the documents in the set. You will not see the workspace listed on the {{site.data.keyword.knowledgestudioshort}} home page until someone has performed these actions.
 
 ## Using the ground truth editor
 

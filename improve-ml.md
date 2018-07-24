@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-12"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -57,16 +57,16 @@ The following resources are excluded:
 To create and restore machine learning model versions:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager, and select your workspace.
-1. Select **Model Management** > **Performance**. Performance statistics about the current version, labeled version 1.0, are displayed.
-1. To take a snapshot of the current version, on the **Model Management** > **Versions** > **Machine Learning** tab, click **Take Snapshot**. The resources in version 1.0 are frozen, and a new version, labeled 1.1, becomes the current version. For each new version that you create, the minor version number is incremented, for example, 1.0 becomes 1.1 and then becomes 1.2.
+1. Select **Machine Learning Model** > **Performance**. Performance statistics about the current version, labeled version 1.0, are displayed.
+1. To take a snapshot of the current version, click **Machine Learning Model** > **Versions**, and then click **Take Snapshot**. The resources in version 1.0 are frozen, and a new version, labeled 1.1, becomes the current version. For each new version that you create, the minor version number is incremented, for example, 1.0 becomes 1.1 and then becomes 1.2.
 1. Revise the workspace resources as needed, re-train, and re-evaluate the model.
 1. If you are pleased with the performance results and want to store the new version before making future changes, create another version. Continue revising resources and re-training the model as needed, creating a new version for each iteration that you want to retain.
 1. If performance results are worse, and you want to revert to a previous version before testing any further:
 
-    1. Open the **Assets & Tools** > **Pre-annotators** > **Dictionaries** tab and download any dictionaries that you want to re-use in the restored model.
-    1. Return to the **Model Management** > **Versions** > **Machine Learning** tab and click **Promote** for the version that you want to restore. The version that you promote becomes the current version, and the version number changes to 2.0. When you promote a version, the major version number is incremented and the minor version number becomes 0, for example, 1.1 becomes 2.0.
-    1. Open the **Dictionaries** tab and upload the dictionaries that you downloaded.
-    1. If testing of the new version requires changes to ground truth, open the **Assets & Tools** > **Documents** > **Tasks** tab and create a new annotation task.
+    1. Open the **Assets** > **Dictionaries** page and download any dictionaries that you want to re-use in the restored model.
+    1. Click **Machine Learning Model** > **Versions** and click **Promote** for the version that you want to restore. The version that you promote becomes the current version, and the version number changes to 2.0. When you promote a version, the major version number is incremented and the minor version number becomes 0, for example, 1.1 becomes 2.0.
+    1. Open the **Dictionaries** page and upload the dictionaries that you downloaded.
+    1. If testing of the new version requires changes to ground truth, open the **Machine Learning Model** > **Annotation Tasks** page and create a new annotation task.
 
 ## Modifying a type system without losing human annotations
 {: #wks_projtypesysmod}
@@ -85,7 +85,7 @@ To modify the type system without losing the work that was done by human annotat
 
 1. Change the type system. For example, you can add or remove entity types or relation types.
 1. Decide whether you want to propagate the changes to existing human annotation tasks.
-1. On the **Assets & Tools** > **Documents** > **Tasks** tab, open each task that you want to update and click **Apply Type System Updates**.
+1. On the **Machine Learning Model** > **Annotation Tasks** page, open each task that you want to update and click **Apply Type System Updates**.
 
     If you removed entity types or relation types from the type system, all occurrences of those types are highlighted in gray in the documents. These invalid types are ignored by the machine learning model. They do not prevent you from submitting and approving document sets.
 

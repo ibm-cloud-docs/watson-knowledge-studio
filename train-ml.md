@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -44,7 +44,7 @@ By exploring the performance metrics, you can identify ways to improve the model
 To create a machine learning model:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator and select your workspace.
-1. Select **Model Management** > **Performance**.
+1. Select **Machine Learning Model** > **Performance**.
 1. Verify that all of the document sets have been approved and that all annotation conflicts have been resolved through adjudication. Only documents that have become ground truth through adjudication or approval can be used to train the model.
 1. Click **Train and evaluate**.
 1. Optional: To specify how you want to allocate documents from your document sets to be used by the system-level training, test, or blind sets, click **Edit settings**.
@@ -109,7 +109,7 @@ You can compare the ground truth view for annotations added by human annotators 
 
 To evaluate the annotations added by the model:
 
-1. Select **Model Management** > **Performance** > **Train and evaluate**. The Training/Test/Blind Sets page is displayed.
+1. Select **Machine Learning Model** > **Performance** > **Train and evaluate**. The Training/Test/Blind Sets page is displayed.
 1. Click **View Ground Truth** for the training set or test set to see the annotations that were added through pre-annotation and by human annotators. The ground truth editor opens. Click to open individual documents and see how the mentions, relations, and coreferenced mentions were annotated.
 1. On the **Performance** page, click **View Decoding Results** to see the annotations that the machine learning model added to documents in the test set. This button is available only after you evaluate the model. By viewing results, you can see how well the machine learning model labeled mentions, relations, and coreferenced mentions in the test data.
 1. If you want to change how the documents are divided between training, test, and blind data sets, click **Performance** > **Train and evaluate** > **Edit Settings**. For example, if initial results seem acceptable, you might want to increase the number of documents in the test set to further test the machine learning model's results. You can change the ratio for how documents are automatically divided for different purposes, or you can select specific document sets to use as training data, test data, and blind data.

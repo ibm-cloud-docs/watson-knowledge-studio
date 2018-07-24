@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -51,7 +51,7 @@ All the steps are performed by the project manager, except for the *Annotate doc
         </dd>
         <dt>Source documents</dt>
         <dd>
-          <p>Create a corpus by uploading sample documents that are representative of your domain content into the workspace. See [Adding documents for annotation](/docs/services/watson-knowledge-studio/document-for-annotation.html). Partition the corpus into document sets, specify the percentage of documents that are shared among all document sets, and assign the document sets to human annotators. See [Creating and assigning annotation sets](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_projdocsets).</p>
+          <p>Create a corpus by uploading sample documents that are representative of your domain content into the workspace. See [Adding documents for annotation](/docs/services/watson-knowledge-studio/documents-for-annotation.html). Partition the corpus into document sets, specify the percentage of documents that are shared among all document sets, and assign the document sets to human annotators. See [Creating and assigning annotation sets](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_projdocsets).</p>
         </dd>
         <dt>Dictionaries</dt>
         <dd>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -116,11 +116,8 @@ The annotation task specifies which documents are to be annotated. To compare ho
 To create an annotation task:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator, and select your workspace.
-1. Select the **Assets & Tools** > **Documents** > **Tasks** tab.
+1. Select the **Machine Learning Model** > **Annotation Tasks** page.
 1. Click **Add Task**. Specify a descriptive name for the task and select the date that the task must be completed.
-
-    > **Note:** You cannot change the task name later.
-
 1. Click **Create**. A list of available annotation sets is displayed, along with the names of the human annotators assigned to them.
 1. Select each annotation set that you want to include in the task and click **Create Task**.
 
@@ -130,13 +127,16 @@ To create an annotation task:
 ### What to do next
 {: #wks_hatask_next}
 
-After the task is created, you can return to the **Assets & Tools** > **Documents** > **Tasks** tab to view the progress of each human annotator. You can also:
+After the task is created, you can return to the **Machine Learning Model** > **Annotation Tasks** page to view the progress of each human annotator. Also, you can complete the following tasks:
+
+- Check approved documents that overlap between annotation sets to resolve annotation conflicts.
+- Open a task to add annotation sets to it. Ensure that the annotation sets that you add include documents that overlap with documents in the original annotation sets.
+
+From the **Settings** tab of the main navigation, you can specify the following information:
 
 - Specify preferences for using colors and keyboard shortcuts in the ground truth editor.
 - Specify an inter-annotator agreement threshold, and then open a task to see how consistently multiple human annotators annotated the same documents.
 - Specify a URL to connect your annotation guidelines to the ground truth editor.
-- Check approved documents that overlap between annotation sets to resolve annotation conflicts.
-- Open a task to add annotation sets to it. Ensure that the annotation sets that you add include documents that overlap with documents in the original annotation sets.
 
 ## Configuring ground truth editor preferences
 {: #wks_hapref}
@@ -149,11 +149,11 @@ An project manager can specify preferences for using colors and keyboard shortcu
 To specify visual preferences for working with the ground truth editor :
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator, and select your workspace.
-1. From the navigation on the left, select **Settings**.
-1. Select the **Entity Types** or **Relation Types** tab.
-1. Select the entity type or relation type that you want to change and then click **Edit keyboard shortcuts and colors**. For each type, you can define a:
+2. From the navigation on the left, select the **Settings** > **Document Annotation Settings**.
+3. Select the **Entity Types** or **Relation Types** tab.
+4. Select the entity type or relation type that you want to change and then click **Edit keyboard shortcuts and colors**. For each type, you can define a:
 
-    - Keyboard shortcut, which means a user can enter `<shortcut>` to apply the type label to highlighted text. For example, if you define `o` as the keyboard shortcut for ORGANIZATION, then a user can select text, and then press the `o` key to apply the ORGANIZATION entity type to the highlighted text. If you assign an upper case letter, then the user will enter `Shift+<letter>`.
+    - Keyboard shortcut, which means a user can enter `<key>` to apply the type label to highlighted text. For example, if you define `o` as the keyboard shortcut for `ORGANIZATION`, then a user can select text, and then press the `o` key to apply the `ORGANIZATION` entity type to the highlighted text. If you assign an upper case letter, then the user must press `Shift+<key>`.
     - Text color. Ensure that the text color contrasts with the background color so the text will be visible after it is labeled.
     - Background color. This is the color of the label that is applied to the entity after you annotate it.
 
@@ -162,7 +162,7 @@ To specify visual preferences for working with the ground truth editor :
 
     As you assign new shortcuts and colors, you can preview the changes.
 
-1. You can also change the default selection highlight color. This is the color of the border that is displayed around text after you select it. The default color is a light blue, but you can change the color on the **Selection Highlight** tab to make it easier to identify the boundaries of the text that is selected.
+5. You can also change the default selection highlight color. The highlight color is the color of the border that is displayed around text after human annotators select it. The default color is a light blue, but you can change the color on the **Selection Highlight** tab to make it easier to identify the boundaries of the text that is selected.
 
 #### Related tasks
 {: #wks_hapref_related}
@@ -185,8 +185,8 @@ To compare how different human annotators annotated the same documents, specify 
 To set the inter-annotator agreement threshold:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator, and select your workspace.
-1. From the navigation on the left, select **Settings**.
-1. Select **IAA Settings**, specify a value between 0 and 1, such as .5 or .8, and then click **Save**.
+1. Select the **Settings** > **IAA Settings** tab.
+2. Specify a value between 0 and 1, such as `.5` or `.8`, and then click **Save**.
 
 ## Connecting to annotation guidelines
 {: #wks_haguidelines}
@@ -199,9 +199,8 @@ After you create annotation guidelines for your project, you can configure {{sit
 To connect the ground truth editor and adjudication tool to your annotation guidelines:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator, and select your workspace.
-1. From the navigation on the left, select **Settings**.
-1. Select **Annotation Guidelines**.
-1. Specify the URL to where your guidelines are hosted, either a site within your enterprise or a wiki that you previously created in {{site.data.keyword.IBM_notm}} developerWorks&reg;.
+1. select the **Settings** > **Annotation Guidelines** tab.
+1. Specify the URL to where your guidelines are hosted.
 1. Click **Save**. The system connects the ground truth editor and adjudication tool to your annotation guidelines. Depending on the access permissions granted to users when you created the guidelines, human annotators and workspace administrators might be able to update the guidelines after opening them, for example, to add clarifications and examples.
 
 ### Annotation guidelines

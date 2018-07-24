@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -56,7 +56,7 @@ You can add documents in the following ways:
 ### CSV files
 {: #wks_sampledoc__wks_samplecsv}
 
-You can upload a two-column CSV file that contains sample text from your local machine. Upload one CSV file at a time. The first column in the CSV file specifies the file name of the document. The second column in the file contains the document text. For an example of the required format, see the <a href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/documents-new.csv" download>`documents-new.csv`<img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> file in the tutorial sample files.
+You can upload a two-column CSV file that contains sample text from your local machine. Upload one CSV file at a time. The first column in the CSV file specifies the file name of the document. The second column in the file contains the document text. For an example of the required format, see the <a href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/documents-new.csv" download>`documents-new.csv` <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> file in the tutorial sample files.
 
 ### Documents from another Watson Knowledge Studio workspace
 {: #wks_sampledoc__wks_samplecorpus}
@@ -95,7 +95,7 @@ As a best practice, start with a relatively small collection of documents. Use t
 To add documents to a workspace:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager, and select your workspace.
-1. Select the **Assets & Tools** > **Documents** > **Documentation sets** tab.
+1. Select the **Assets**> **Documents** > **Documentation sets** tab.
 1. Click **Upload Document Sets** to add documents to the corpus.
 1. Upload documents in one of the following formats. You can upload one type of file at a time.
 
@@ -168,7 +168,7 @@ You can create a maximum of 1,000 annotation sets per workspace.
 To create an annotation set:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager, and select your workspace.
-1. Select the **Assets & Tools** > **Documents** > **Annotation sets** tab.
+1. Select the **Assets**> **Documents** > **Annotation sets** tab.
 1. Click **Create Annotation Sets**.
 
     1. For the base set, select the collection of documents that you want to divide into annotation sets, either all documents in the corpus or documents that were previously allocated to a document set.
@@ -211,8 +211,9 @@ If the document you want to delete is not associated with an annotation task, co
 {: #deletenotaskp}
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator and select your workspace.
-1. Select the **Assets & Tools** > **Documents** > **Document sets** tab.
-1. Find the document that you want to remove, and then click **Delete**.
+1. Select the **Assets**> **Documents** > **Document sets** tab.
+2. Select the document set that contains the document you want to delete. The document set opens.
+3. Find the document that you want to remove, and then click **Delete**.
 
 ### Deleting a document that is associated with an annotation task and human annotation has not begun
 {: #deletenoanno}
@@ -225,7 +226,7 @@ If the document you want to delete is associated with an annotation task and hum
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator and select your workspace.
 1. Delete the annotation task:
 
-  a. Open the **Assets & Tools** > **Documents** > **Tasks** tab.
+  a. Open the **Machine Learning Model** > **Annotation Tasks** page.
 
   b. Find the annotation task that the document is associated with, click the **Show menu** icon on the task, and then click **Delete**.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-12"
+lastupdated: "2018-07-17"
 
 ---
 
@@ -37,18 +37,18 @@ After you complete the lessons in this tutorial, you will know how to perform th
 - Analyze inter-annotator agreement and adjudicate conflicts in annotated documents
 - Create machine learning models
 
-This tutorial should take approximately 60 minutes to finish. If you explore other concepts related to this tutorial, it could take longer to complete.
+This tutorial takes approximately 60 minutes to finish. If you explore other concepts that are related to this tutorial, it might take longer to complete.
 
 ## Before you begin
 {: #prereqs}
 
-- You're using a supported browser. For information, see [Browser requirements](/docs/services/watson-knowledge-studio/system-requirements.html).
-- You successfully completed [Tutorial: Creating a workspace](/docs/services/watson-knowledge-studio/tutorials-create-project.html).
-- You must have at least one user ID in either the Admin or ProjectManager role.
+- You're using a supported browser. See [Browser requirements](/docs/services/watson-knowledge-studio/system-requirements.html).
+- You successfully completed [Getting started with {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/tutorials-create-project.html), which covers creating a workspace, creating a type system, and adding a dictionary.
+- You must have at least one user ID in either the Admin or Project Manager role.
 
-    > **Note:** If possible, use multiple user IDs for the machine learning model tasks in this tutorial (one Admin or ProjectManager user ID, and at least two HumanAnnotator user IDs). Using multiple user IDs provides the most realistic simulation of an actual {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}}™ {{site.data.keyword.knowledgestudioshort}} workspace, where a project manager must coordinate and adjudicate annotation performed by multiple human annotators. However, if you have access to only a single user ID, you can still simulate most parts of the process.
+    > **Note:** If possible, use multiple user IDs for the machine learning model tasks in this tutorial (one Admin or Project Manager user ID, and at least two Human Annotator user IDs). Using multiple user IDs provides the most realistic simulation of an actual {{site.data.keyword.knowledgestudiofull}} workspace, where a project manager must coordinate and adjudicate annotation that is performed by multiple human annotators. However, if you have access to only a single user ID, you can still simulate most parts of the process.
 
-    For information about user roles, see [Assembling a team](/docs/services/watson-knowledge-studio/team.html).
+    For information about user roles, see [User roles in {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/roles.html).
 
 ## Results
 {: #results}
@@ -68,10 +68,10 @@ For more information about adding documents, see [Adding documents to a workspac
 ### Procedure
 {: #tut_lessml1_procedure}
 
-1. Download the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/documents-new.csv" download>`documents-new.csv`<img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> file to your computer. This file contains example documents suitable for uploading.
-1. Within your workspace, click **Documents** from the sidebar.
+1. Download the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/documents-new.csv" download>`documents-new.csv` <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> file to your computer. This file contains example documents suitable for uploading.
+1. Within your workspace, click **Assets** > **Documents**.
 1. On the Documents page, click **Upload Document Sets**.
-1. Select the `documents-new.csv` file from your computer and click **Upload**. The uploaded file is displayed in the table.
+1. Upload the `documents-new.csv` file from your computer. The uploaded file is displayed in the table.
 
 ### What to do next
 {: #tut_lessml1_next}
@@ -86,39 +86,39 @@ In this lesson, you will learn how to create annotation sets in {{site.data.keyw
 ### About this task
 {: #wks_tutless_ml2_about}
 
-An annotation set is a subset of documents from an uploaded document set that you assign to a human annotator. The human annotator annotates the documents in the annotation set. To later use inter-annotator scores to compare the annotations that are added by each human annotator, you must assign at least two human annotators to different annotation sets. You must also specify that some percentage of documents overlap between the sets.
+An *annotation set* is a subset of documents from an uploaded document set that you assign to a human annotator. The human annotator annotates the documents in the annotation set. To later use inter-annotator scores to compare the annotations that are added by each human annotator, you must assign at least two human annotators to different annotation sets. You must also specify that some percentage of documents overlap between the sets.
 
-> **Note:** In a real workspace, you would create as many annotation sets as needed, based on the number of human annotators working in the workspace. In this tutorial, you will create two annotation sets; if you do not have access to multiple user IDs, you can assign both annotation sets to the same user.
+> **Note:** In a realistic scenario, you would create as many annotation sets as needed, based on the number of human annotators who are working in the workspace. In this tutorial, you will create two annotation sets. If you do not have access to multiple user IDs, you can assign both annotation sets to the same user.
 
 For more information about annotation sets, see [Creating and assigning annotation sets](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_projdocsets).
 
 ### Procedure
 {: #wks_tutless_ml2_procedure}
 
-1. Within your workspace, click **Documents** from the sidebar.
-1. Click **Create Annotation Sets**.
+1. Within your workspace, click **Assets** > **Documents**.
+2. Click **Create Annotation Sets**.
 
-    The Create Annotation Sets window opens. By default, this window shows the base set (containing all documents), as well as fields where you can specify the information for a new annotation set.
+    The Create Annotation Sets window opens. By default, this window shows the base set, which contains all documents, and fields where you can specify the information for a new annotation set.
 
-1. Click **Add another set and human annotator** to add fields for an additional annotation set. You can click to add as many annotation sets as you want to create; for this tutorial, you need only two.
+3. Click **Add another set and human annotator** to add fields for an additional annotation set. You can click to add as many annotation sets as you want to create. For this tutorial, you need only two annotation sets.
 
-    ![A screen capture of the Create Annotation Sets page.](images/wks_tutdocset2.jpg)
+    ![A screen capture of the Create Annotation Sets page.](images/wks_tutdocset2.jpg "A screen capture of the Create Annotation Sets page.")
 
-1. In the **Overlap** field, specify `100`. This specifies that you want 100 percent of the documents in the base set to be included in all of the new annotation sets so they can be annotated by all human annotators.
-1. For each new annotation set you are creating, specify the required information.
+4. In the **Overlap** field, specify `100`. This value specifies that you want 100 percent of the documents in the base set to be included in all the new annotation sets so they can be annotated by all human annotators.
+5. For each new annotation set, specify the required information.
 
-    - In the **Annotator** field, select a human annotator user ID to assign to the new annotation set. Each annotation set should be assigned to a different human annotator.
+    - In the **Annotator** field, select a human annotator user ID to assign to the new annotation set. In a realistic scenario, each annotation set is assigned to a different human annotator.
 
-        > **Note:** If you have only a single administrator ID to use for the tutorial, assign that user to all annotation sets. In a real workspace, you would have multiple human annotators to assign, but for the tutorial, the administrator can act as human annotator.
+        > **Note:** If you have only a single administrator ID to use for the tutorial, assign that user to all annotation sets. In a realistic scenario, you would have multiple human annotators, but for the tutorial, the administrator can act as human annotator.
 
-    - In the **Set name** field, specify a descriptive name for the annotation set (such as `Set 1` or `DaveSet`).
+    - In the **Set name** field, specify a descriptive name for the annotation set. For this tutorial, you can use the names, `Set 1` and `Set 2`.
 
-1. Click **Generate**.
+6. Click **Generate**.
 
 ### Results
 {: #wks_tutless_ml2_results}
 
-The new annotation sets are created and now appear in the **Annotation Sets** tab of the Documents page.
+The new annotation sets are created.
 
 ## Lesson 3: Pre-annotating with a dictionary-based annotator
 {: #wks_tutless_ml3}
@@ -135,21 +135,24 @@ For more information about pre-annotation with dictionaries, see [Pre-annotating
 ### Procedure
 {: #wks_tutless_ml3_procedure}
 
-1. Within your workspace, from the **Assets & Tools** > **Pre-annotators** sidebar, click **Manage Dictionaries**.
+1. Within your workspace, click **Assets** > **Dictionaries**.
 
-  The `Test dictionary` dictionary opens.
+  The `Test dictionary` dictionary opens. The [Adding a dictionary](/docs/services/watson-knowledge-studio/tutorials-create-project.html#wks_tutless4) lesson of the *Getting started with {{site.data.keyword.knowledgestudioshort}}* tutorial shows how to create this dictionary.
 
-1. From the **Entity type** list, select **ORGANIZATION** to map the ORGANIZATION entity type to the `Test dictionary` dictionary you created in the [Adding a dictionary](/docs/services/watson-knowledge-studio/tutorials-create-project.html#wks_tutless4) lesson of the *Creating a workspace* tutorial.
-1. Click the back arrow in the upper left to return to the Pre-annotators page, and click **Apply This Pre-annotator**
-1. On the Run Annotator page, click the check boxes to select both of the annotation sets that you created earlier in the tutorial (not including the base set).
+1. From the **Entity type** list, select the `ORGANIZATION` entity type to map it to the `Test dictionary` dictionary.
+
+  The [Creating a type system](/docs/services/watson-knowledge-studio/tutorials-create-project.html#wks_tutless3) lesson of the *Getting started with {{site.data.keyword.knowledgestudioshort}}* tutorial shows how to create the type system that contains the `ORGANIZATION` entity type.
+
+1. On the **Machine Learning Model** > **Pre-annotation** > **Dictionaries** tab, click **Apply This Pre-annotator**.
+1. Select the annotation sets that you created in [Lesson 2](/docs/services/watson-knowledge-studio/tutorials-create-ml-model.html#wks_tutless_ml2), not including the document set that you created in [Lesson 1](/docs/services/watson-knowledge-studio/tutorials-create-ml-model.html#tut_lessml1).
 1. Click **Run**.
 
-    ![This screen capture shows the Run Annotator page. The Run button is highlighted.](images/wks_tutanno3.jpg)
+    ![This screen capture shows the Run Annotator page. The Run button is highlighted.](images/wks_tutanno3.jpg "This screen capture shows the Run Annotator page. The Run button is highlighted.")
 
 ### Results
 {: #wks_tutless_ml3_results}
 
-The documents in the selected sets are pre-annotated using the dictionary annotator you created. Later, you can use the same annotator to pre-annotate additional document sets by clicking **Apply This Pre-annotator**.
+The documents in the selected sets are pre-annotated by using the dictionary that you created. If you like, you can use the dictionary to pre-annotate document sets or annotation sets that you add later.
 
 ## Lesson 4: Creating an annotation task
 {: #wks_tutless_ml4}
@@ -164,22 +167,25 @@ For more information about annotation tasks, see [Creating an annotation task](/
 ### Procedure
 {: #wks_tutless_ml4_procedure}
 
-1. Within your workspace, from the **Assets & Tools** > **Documents** sidebar, select the **Tasks** tab.
-1. On the Tasks page, click **Add Task**.
-1. Specify the details for the task:
+1. Within your workspace, click **Machine Learning Model** > **Annotation Tasks**.
+2. On the Tasks page, click **Add Task**.
+3. Specify the details for the task:
 
     - In the **Task name** field, enter `Test`.
     - In the **Deadline** field, select a date in the future.
 
-1. Click **Create**.
-1. In the Add Annotation Sets to the Task window, click the check boxes to select both of the annotation sets that you created in [Lesson 3: Pre-annotating with a dictionary-based annotator](/docs/services/watson-knowledge-studio/tutorials-create-ml-model.html#wks_tutless_ml3). This specifies that both annotation sets must be annotated by their assigned human annotators as part of this task.
-1. Click **Create Task**.
-1. To see the progress of human annotation work in the future, you can click the task to open it.
+4. Click **Create**.
+5. Select the annotation sets that you created in [Lesson 2](/docs/services/watson-knowledge-studio/tutorials-create-ml-model.html#wks_tutless_ml2).
+
+ Selecting both annotation sets specifies that both sets must be annotated by their assigned human annotators to complete this task.
+
+7. Click **Create Task**.
+8. As human annotators begin annotating documents, you can open tasks to see their progress.
 
 ## Lesson 5: Annotating documents
 {: #wks_tutless_ml5}
 
-In this lesson, you will learn how to use the ground truth editor to annotate documents in {{site.data.keyword.knowledgestudioshort}}.
+In this lesson, you will learn how to use the *ground truth editor* to annotate documents in {{site.data.keyword.knowledgestudioshort}}.
 
 ### About this task
 {: #wks_tutless_ml5_about}
@@ -189,40 +195,52 @@ For more information about human annotation, see [Annotation with the ground tru
 ### Procedure
 {: #wks_tutless_ml5_procedure}
 
-1. Log in to {{site.data.keyword.knowledgestudioshort}} as a human annotator who is assigned to the annotation task you created in [Lesson 4: Creating an annotation task](/docs/services/watson-knowledge-studio/tutorials-create-ml-model.html#wks_tutless_ml4).
+1. Log in to {{site.data.keyword.knowledgestudioshort}} as a user who is assigned to the annotation task that you created in [Lesson 4](/docs/services/watson-knowledge-studio/tutorials-create-ml-model.html#wks_tutless_ml4).
 
-    > **Note:** If you have access only to a single administrator ID for this tutorial, you can use that ID to perform human annotation. However, remember that in a real workspace, human annotation is performed by multiple different users with the HumanAnnotator role.
+    > **Note:** If you have access only to a single administrator ID for this tutorial, you can use that ID to perform human annotation. However, remember that in a realistic scenario, human annotation is performed by different users with the Human Annotator role.
 
-1. Open the `My workspace` workspace.
-1. From the sidebar, click **Document Annotation** > **Relations**.
-1. Open the `Test` annotation task you created in [Lesson 4: Creating an annotation task](/docs/services/watson-knowledge-studio/tutorials-create-ml-model.html#wks_tutless_ml4).
-1. Scroll to the *Technology - gmanews.tv* document and click to open it for annotation. Notice that the term `IBM` has already been annotated with the ORGANIZATION entity type; this annotation was added by the dictionary pre-annotator in [Lesson 2: Creating annotation sets](/docs/services/watson-knowledge-studio/tutorials-create-ml-model.html#wks_tutless_ml2). This pre-annotation is correct, so it does not need to be modified.
+1. Open the `My workspace` workspace and click **Machine Learning Model** > **Annotation Tasks**.
+1. Open the `Test` annotation task you created in [Lesson 4](/docs/services/watson-knowledge-studio/tutorials-create-ml-model.html#wks_tutless_ml4).
+1. Click **Annotate** for one of the assigned annotation sets.
 
-    ![This screen capture shows an open document with an existing pre-annotation for IBM.](images/wks_tut_preannotation.png)
+  Depending on how you set up the annotation tasks, you could have one or more annotation tasks assigned to the user ID you logged in with.
+
+1. From the list of documents, find the *Technology - gmanews.tv* document and open it.
+
+  Notice that the term `IBM` was already annotated with the `ORGANIZATION` entity type. This annotation was added by the dictionary pre-annotator that was applied in [Lesson 3](/docs/services/watson-knowledge-studio/tutorials-create-ml-model.html#wks_tutless_ml3). This pre-annotation is correct, so it does not need to be modified.
+
+  ![This screen capture shows an open document with an existing pre-annotation for "IBM".](images/wks_tut_preannotation.png "This screen capture shows an open document with an existing pre-annotation for "IBM".")
 
 1. Annotate a mention:
 
-    1. Click the **Mentions** icon to begin annotating mentions.
-    1. In the document body, select the text `Thomas Watson`.
-    1. In the list of entity types, click **PERSON**. The entity type PERSON is applied to the selected mention.
+    1. Click the Mention tab.
+    2. In the document body, select the text `Thomas Watson`.
+    3. In the list of entity types, click `PERSON`. The entity type `PERSON` is applied to the selected mention.
 
-        ![This screen capture shows the PERSON entity type applied to the mention, Thomas Watson.](images/wks_tut_annotatemention3.png)
+        ![This screen capture shows the "PERSON" entity type applied to the mention, "Thomas Watson".](images/wks_tut_annotatemention3.png "This screen capture shows the "PERSON" entity type applied to the mention, "Thomas Watson".")
 
-1. Click **Document Annotation** > **Relations** from the sidebar to begin annotating relations.
-1. Select the `Thomas Watson` and `IBM` mentions (in that order). To select a mention, click the entity-type label above the text.
-1. In the list of relation types, click **founderOf**. The two mentions are connected with a founderOf relationship.
+1. Annotate a relation:
 
-    ![This screen capture shows two mentions connected by the relation type, founderOf.](images/wks_tut_annotaterelation.png)
+    1. Click the Relation tab.
+    1. Select the `Thomas Watson` and `IBM` mentions (in that order). To select a mention, click the entity type label above the text.
+    1. In the list of relation types, click `founderOf`. The two mentions are connected with a `founderOf` relationship.
+
+        ![This screen capture shows two mentions connected by the relation type, "founderOf".](images/wks_tut_annotaterelation.png "This screen capture shows two mentions connected by the relation type, "founderOf".")
 
 1. From the status menu, select **Completed**, and then click the **Save** button.
-1. Return to the list of documents and click **Submit All Documents** to submit the documents for approval.
+1. Click **Open document list** to return to the list of documents for this task and click **Submit All Documents** to submit the documents for approval.
 
-    > **Note:** In a real-life situation, you would create many more annotations and complete all the documents in the set before submitting.
+    > **Note:** In a realistic situation, you would create many more annotations and complete all the documents in the set before submitting.
 
-1. Log in to {{site.data.keyword.knowledgestudioshort}} as the human annotator who is assigned to other document set in the annotation task.
-1. Repeat the same annotations in the *Technology - gmanews.tv* document, except this time, use the employedBy relation instead of the founderOf relation.
+1. Close this annotation set, and then open the other annotation set in the `Test` task.
 
-  Logging in as another user will help to illustrate inter-annotator agreement in the next lesson. Complete the annotations and click **Submit All Documents**.
+   Depending on how you set up the annotation tasks and which users you assigned them to, you might need to log in to {{site.data.keyword.knowledgestudioshort}} as the user who is assigned to the other annotation set in the annotation task.
+
+1. Repeat the same annotations in the *Technology - gmanews.tv* document, except this time, use the `employedBy` relation instead of the `founderOf` relation.
+
+  Logging in as another user will help illustrate inter-annotator agreement in the next lesson. But if you have only one user, you can still complete the tutorial to get an understanding of how inter-annotator agreement works.
+
+1. After you complete the annotations for the second annotation set, click **Submit All Documents**.
 
 ## Lesson 6: Analyzing inter-annotator agreement
 {: #wks_tutless_ml6}
@@ -232,30 +250,32 @@ In this lesson, you will learn how to compare the work of multiple human annotat
 ### About this task
 {: #wks_tutless_ml6_about}
 
-To determine whether different human annotators are annotating overlapping documents consistently, review the inter-annotator agreement (`IAA`) scores.
+To determine whether different human annotators are annotating overlapping documents consistently, review the *inter-annotator agreement* (IAA) scores.
 
 {{site.data.keyword.knowledgestudioshort}} calculates IAA scores by examining all overlapping documents in all document sets in the task, regardless of the status of the document sets. The IAA scores show how different human annotators annotated mentions, relations, and coreference chains. It is a good idea to check IAA scores periodically and verify that human annotators are consistent with each other.
 
 In this tutorial, the human annotators submitted all the document sets for approval. If the inter-annotator agreement scores are acceptable, you can approve the document sets. If you reject a document set, it is returned to the human annotator for improvement.
 
+For more information about inter-annotator agreement, see [Building the ground truth](/docs/services/watson-knowledge-studio/build-groundtruth.html).
+
 ### Procedure
 {: #wks_tutless_ml6_procedure}
 
-1. Log in to {{site.data.keyword.knowledgestudioshort}} as the administrator, select **Assets & Tools** > **Documents**, and click the `Test` task.
+1. Log in to {{site.data.keyword.knowledgestudioshort}} as the administrator, select **Machine Learning Model** > **Annotation Tasks**, and click the `Test` task.
 
   In the **Status** column, you can see that the document sets are submitted.
 
 1. Click **Calculate Inter-Annotator Agreement**.
-1. View IAA scores for mention, relations, and coreference chains by clicking the first menu. You can also view agreement by pairs of human annotators. For example, you can compare all of Dave's annotations with all of Phil's annotations. You can also view agreement by specific documents. For example, you can view Dave's annotations on a document compared to Phil's annotations on the same document. In general, aim for a score of .8 out of 1, where 1 means perfect agreement. Because you annotated only two entity types in this tutorial, most of the entity type scores are N/A (not applicable), which means no information is available to give a score.
+1. View IAA scores for mention, relations, and coreference chains by clicking the first menu. You can also view agreement by pairs of human annotators. You can also view agreement by specific documents. In general, aim for a score of .8 out of 1, where 1 means perfect agreement. Because you annotated only two entity types in this tutorial, most of the entity type scores are `N/A` (not applicable), which means no information is available to give a score.
 
-    *Figure 1. Reviewing inter-annotator scores with users named Dave and Phil*
+    *Figure 1. Reviewing inter-annotator scores with users named `dave` and `phil`*
 
-    ![This screen capture shows the inter-annotator scores for a task.](images/wks_tutiaa2.gif)
+    ![This screen capture shows the inter-annotator scores for a task.](images/wks_tutiaa2.gif "This screen capture shows the inter-annotator scores for a task.")
 
-1. After you review the scores, you can decide whether you want to approve or reject document sets that are in `Submitted` status. After a document set is submitted, a check box is displayed next to its name. Take one of these actions:
+1. After you review the scores, you can decide whether you want to approve or reject document sets that are in the `SUBMITTED` status. Take one of these actions:
 
-    - If the scores are acceptable for a document set, select the check box and click **Accept**. Documents that do not overlap with other document sets are promoted to ground truth. Documents that do overlap must first be reviewed through adjudication so that conflicts can be resolved. For this tutorial, accept both document sets.
-    - If the scores are not acceptable for a document set, select the check box and click **Reject**. The document set needs to be revisited by the human annotator to improve the annotations.
+    - If the scores are acceptable for an annotation set, select the check box and click **Accept**. Documents that do not overlap with other document sets are promoted to ground truth. Documents that do overlap must first be reviewed through adjudication so that conflicts can be resolved. For this tutorial, accept both document sets.
+    - If the scores are not acceptable for an annotation set, select the check box and click **Reject**. The document set needs to be revisited by the human annotator to improve the annotations.
 
 ### Results
 {: #wks_tutless_ml6_results}
@@ -272,18 +292,24 @@ In this lesson, you will learn how to adjudicate conflicts in documents that ove
 
 When you approve a document set, only the documents that do not overlap with other document sets are promoted to ground truth. If a document is part of the overlap between multiple document sets, you must adjudicate any annotation conflicts before the document can be promoted to ground truth.
 
+For more information about adjudication, see [Building the ground truth](/docs/services/watson-knowledge-studio/build-groundtruth.html).
+
 ### Procedure
 {: #wks_tutless_ml7_procedure}
 
-1. Log in to {{site.data.keyword.knowledgestudioshort}} as the administrator, select **Assets & Tools** > **Documents**, and click the `Test` task.
+1. Log in to {{site.data.keyword.knowledgestudioshort}} as the administrator, select **Machine Learning Model** > **Annotation Tasks**, and click the `Test` task.
 1. Verify that the two document sets are in an approved state.
 1. Click **Check Overlapping Documents for Conflicts**.
 
     You can see the overlapping documents that were annotated by more than one human annotator.
 
-1. To see whether any conflicts exist in how they annotated the documents, click **Check for Conflicts**.
-1. In adjudication mode, you can see how many annotations are in conflict and remove or replace annotations before you promote the documents to ground truth.
-1. For this tutorial, assume that you corrected all conflicts and accepted the changes. Click **Promote to Ground Truth**. Repeat these steps to resolve conflicts in the second document set.
+1. Because the tutorial instructed you to create a conflicting relation for the *Technology - gmanews.tv* document, find that document in the list and click **Check for Conflicts**.
+1. Select the two conflicting annotation sets and click **Check for Conflicts**.
+
+    Adjudication mode opens. In adjudication mode, you can view overlapping documents, check for conflicts, and remove or replace annotations before you promote the documents to ground truth.
+
+1. Select **Relation conflicts**, accept the `founderOf` relation, and reject the `employedBy` relation.
+1. Click **Promote to Ground Truth**.
 
     Alternatively, you can promote a document to ground truth by clicking **Accept** on the Documents page.
 
@@ -302,32 +328,33 @@ In this lesson, you will learn how to create a machine learning model in {{site.
 
 When you create a machine learning model, you select the document sets that you want to use to train it. You also specify the percentage of documents that are to be used as training data, test data, and blind data. Only documents that became ground truth through approval or adjudication can be used to train the machine learning model.
 
+For more information about the machine learning model, see [Training the machine learning model](/docs/services/watson-knowledge-studio/train-ml.html) and [Analyzing machine learning model performance](/docs/services/watson-knowledge-studio/evaluate-ml.html).
+
 ### Procedure
 {: #wks_tutless_ml8_procedure}
 
 1. Log in to {{site.data.keyword.knowledgestudioshort}} as the administrator.
-1. From the **Model Management** > **Performance** sidebar, click **Train and evaluate**.
-1. Select the document sets that you want to use for creating a machine learning model. Click the check mark next to each document set name.
-1. Select the two annotation sets to create your testing, training, and blind data. Then, click **Train &amp; Evaluate**.
+1. Click **Machine Learning Model** > **Performance** > **Train and evaluate**.
+2. Select **All**, and then click **Train & Evaluate**.
 
-    > **Note:** Training might take more than ten minutes, or even hours, depending on the number of human annotations and the total number of words across documents.
+    > **Note:** Training might take more than ten minutes, or even hours, depending on the number of human annotations and the number of words in all the documents.
 
-1. After the machine learning model is trained, you can export it or you can view detailed information about its performance by clicking the **Detailed Statistics** links that are located above each of the graphs.
-1. To view the Training / Test / Blind Sets page, click the **Train and evaluate** button.
-1. To see the documents that human annotators worked on, click **View Ground Truth**.
-1. To see the annotations that the trained machine learning model created on that same set of documents, click **View Decoding Results**.
-1. To view details about the precision, recall, and F1 scores for the machine learning model, select the Performance page.
-1. Click the **Detailed Statistics** links above each of the graphs. On these Statistics pages, you can view the scores for mentions, relations, and coreference chains by using the radio buttons.
+3. After the machine learning model is trained, you can export it from the Version page, or you can view detailed information about its performance by clicking the **Detailed Statistics** links that are located above each of the graphs on the Performance page.
+4. To view the Training / Test / Blind Sets page, click the **Train and evaluate** button.
+5. To see the documents that human annotators worked on, click **View Ground Truth**.
+6. To see the annotations that the trained machine learning model created on that same set of documents, click **View Decoding Results**.
+7. To view details about the precision, recall, and F1 scores for the machine learning model, click the Performance page.
+8. Click the **Detailed Statistics** links above each of the graphs. On these Statistics pages, you can view the scores for mentions, relations, and coreference chains by using the radio buttons.
 
-    You can analyze performance by viewing a summary of statistics for entity types, relation types, and coreference chains. You can also analyze statistics that are presented in a confusion matrix by selecting **Confusion Matrix** from the menu that defaults to **Summary**. The *confusion matrix* helps you compare the annotations that were added by the machine learning model to the annotations in the ground truth.
+    You can analyze performance by viewing a summary of statistics for entity types, relation types, and coreference chains. You can also analyze statistics that are presented in a *confusion matrix*. To see the matrix, change **Summary** to **Confusion Matrix**. The confusion matrix helps you compare the annotations that were added by the machine learning model to the annotations in the ground truth.
 
     > **Note:** In this tutorial, you annotated documents with only a single dictionary for organizations. Therefore, the scores you see are `0` or `N/A` for most entity types except `ORGANIZATION`. The numbers are low, but that is expected, because you did not do any human annotation or correction.
 
     *Figure 2. Options on the Statistics page for a machine learning model*
 
-    ![This screen capture shows the Statistics page.](images/wks_tutanno9.gif)
+    ![This screen capture shows the Statistics page.](images/wks_tutanno9.gif "This screen capture shows the Statistics page.")
 
-1. From the sidebar, select **Model Management** > **Versions**. On the Versions page, you can take a snapshot of the model and the resources that were used to create it (except for dictionaries and annotation tasks). For example, you might want to take a snapshot before you retrain the model. If the statistics are poorer the next time you train it, you can promote the older version and delete the version that returned poorer results.
+9.  Click **Versions**. On the Versions page, you can take a snapshot of the model and the resources that were used to create it (except for dictionaries and annotation tasks). For example, you might want to take a snapshot before you retrain the model. If the statistics are poorer the next time you train it, you can promote the older version and delete the version that returned poorer results.
 
 ### Results
 {: #wks_tutless_ml8_results}
@@ -337,7 +364,7 @@ You created a machine learning model, trained it, and evaluated how well it perf
 ## Tutorial summary
 {: #wks_tutml_sum}
 
-While learning about {{site.data.keyword.knowledgestudioshort}}, you created a machine learning model.
+You created a machine learning model.
 
 ### Lessons learned
 {: #lessons_learned}

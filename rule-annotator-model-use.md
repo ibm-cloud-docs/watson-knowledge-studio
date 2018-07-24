@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-12"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -57,7 +57,7 @@ You must have administrative access to a {{site.data.keyword.watson}} {{site.dat
 To deploy a rule-based model to {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}} , complete the following steps:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager, and select your workspace.
-1. Select the **Model Management** > **Versions** > **Rule-based** tab.
+1. Select the **Rule-based Model** > **Versions** > **Rule-based Model** tab.
 1. Choose the version of the model that you want to deploy.
 
     If there is only one working version of the model, save the current model for deployment by clicking **Save for Deployment**. This versions the model, which enables you to deploy one version, while you continue to improve the current version. Saving the version might take a few minutes. The option to deploy does not appear until after the version is created.
@@ -96,7 +96,7 @@ You must be have administrative access to a {{site.data.keyword.nlushort}} servi
 To deploy a rule-based model to {{site.data.keyword.nlushort}} , complete the following steps:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager, and select your workspace.
-1. Select the **Model Management** > **Versions** > **Rule-based** tab.
+1. Select the **Rule-based Model** > **Versions** > **Rule-based Model** tab.
 1. Choose the version of the model that you want to deploy.
 
     If there is only one working version of the model, save the current model for deployment by clicking **Save for Deployment**. This versions the model, which enables you to deploy one version, while you continue to improve the current version. Saving the version might take a few minutes. The option to deploy does not appear until after the version is created.
@@ -119,20 +119,32 @@ To use the deployed model, you must specify the model ID of your custom model in
 
 You can use the model with the {{site.data.keyword.nlushort}} `GET /analyze` request to extract entities.
 
-See the [{{site.data.keyword.nlushort}} documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/doc/natural-language-understanding/index.html){: new_window} for more details.
+See the [{{site.data.keyword.nlushort}} documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/natural-language-understanding/index.html){: new_window} for more details.
 
 ## Undeploying models
 {: #undeploy-view-model}
 
-If you want to undeploy a model or find a model ID, view the **Deployed Models** page. The **Deployed Models** page shows all the {{site.data.keyword.knowledgestudioshort}} models that are deployed to services in the spaces that you have access to.
+If you want to undeploy a model or find a model ID, view the **Deployed Models** page.
+
+### About this task
+{: #wks_undeploy_about}
+
+What you see on the Deployed Models page depends on the [region ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/resources/services_region.html){: new_window} that hosts your {{site.data.keyword.knowledgestudioshort}} instance. If the region supports instances managed by [IAM ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/iam/users_roles.html){: new_window} and [Cloud Foundry ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window} access management methods, you see a tab for each method. Models from instances that are managed by IAM are listed on the **Resource Groups** tab. Models from instances that are managed by Cloud Foundry are listed on the **Organizations** tab.
+
+If the region supports instances managed by only one of the access management methods, you see only one list of models, because only one access management method is applicable.
+
+### Procedure
+{: #wks_deploy_procedure}
 
 To undeploy models or find model IDs:
 
-1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager, and select your workspace.
+1. Launch {{site.data.keyword.knowledgestudioshort}}.
 1. From the **Settings** menu in the top right menu bar, select **Manage deployed models**.
 1. From the list of deployed models, find the model you want to view or undeploy.
 1. To undeploy the model, from the last column of that row, click **Undeploy model**.
 1. To find the model ID, see the **Model ID** column.
+
+Alternatively, you can undeploy models from the Versions pages for rule-based models and machine learning models.
 
 ## Leveraging a rule-based model in IBM Watson Explorer
 {: #wks_rule_export}
@@ -145,7 +157,7 @@ Export the PEAR file that is produced when the rule-based model is created so it
 To leverage a rule-based model in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer, complete the following steps.
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager, and select your workspace.
-1. Select the **Model Management** > **Versions** > **Rule-based** tab.
+1. Select the **Rule-based Model** > **Versions** > **Rule-based Model** tab.
 1. Click **Export current model**.
 
     If you have a Lite plan subscription, no export option is available.

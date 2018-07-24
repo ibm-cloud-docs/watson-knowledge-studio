@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -271,7 +271,7 @@ The following cross-references are used in this glossary:
 
 - **relation type**
 
-    A binary, uni-directional relationship between two entities. For example, Mary employedBy {{site.data.keyword.IBM_notm}} is a valid relationship; {{site.data.keyword.IBM_notm}} employedBy Mary is not.
+    A binary, uni-directional relationship between two entities. For example, `Mary` `employedBy` {{site.data.keyword.IBM_notm}} is a valid relationship; {{site.data.keyword.IBM_notm}} `employedBy` `Mary` is not.
 
 - **role**
 

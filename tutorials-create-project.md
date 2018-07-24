@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-12"
+lastupdated: "2018-07-16"
 
 ---
 
@@ -56,19 +56,19 @@ The creation of a machine learning model requires input from subject matter expe
 1. Click the Settings icon to open the Service Details page. The page lists all the user IDs that are registered as {{site.data.keyword.knowledgestudioshort}} users. Each user ID has one of the following roles (in decreasing order of included permissions):
 
     - Admin
-    - ProjectManager
-    - HumanAnnotator
+    - Project Manager
+    - Human Annotator
 
-    For more information about user roles, see [Assembling a team](/docs/services/watson-knowledge-studio/team.html).
+    For information about user roles, see [User roles in {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/roles.html).
 
 1. Verify that there is at least one user with the Admin role. A user ID with this role can create workspaces, and act as a project manager or human annotator.
-1. If you have access to additional user IDs, verify that there are at least two users with the HumanAnnotator role.
+1. If you have access to additional user IDs, verify that there are at least two users with the Human Annotator role.
 
     > **Note:** Creating a real-life model typically involves multiple human annotators in addition to an administrator or project manager. However, for purposes of the tutorial, you can continue with a single user ID.
 
-1. Optional: Change the role assigned to a user ID. Click the **Modify account setting** icon in the **Action** column of the table row for a user ID, and change the assigned user role.
+1. Optional: Change the role that is assigned to a user ID. From the **Action** column of the table, click the **Edit** link, an then change the assigned user role.
 
-    > **Note:** You can upgrade a user ID to a role with greater permissions, but you cannot downgrade a user with an Admin or ProjectManager role to the HumanAnnotator role.
+    > **Note:** You can upgrade a user ID to a role with greater permissions, but you cannot downgrade a user with an Admin or Project Manager role to the Human Annotator role.
 
 ## Lesson 2: Creating a workspace
 {: #wks_tutless2}
@@ -116,18 +116,18 @@ For more information about type systems, see [Type systems](/docs/services/watso
 ### Procedure
 {: #wks_tutless3_procedure}
 
-1. Download the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/en-klue2-types.json" download>en-klue2-types.json<img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> file to your computer. This file contains an example KLUE type system.
-1. From the sidebar, click **Assets & Tools** > **Entity Types**.
+1. Download the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/en-klue2-types.json" download>en-klue2-types.json <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> file to your computer. This file contains an example KLUE type system.
+1. Click **Assets**> **Entity Types**.
 1. On the Entity Types page, click **Upload**.
-1. Select the `en-klue2-types.json` file from your computer and click **Upload**. The uploaded type system is displayed in the table.
+1. Upload the `en-klue2-types.json` file from your computer. The uploaded type system is displayed in the table.
 1. Browse the type system so you can see the data that was uploaded.
 1. Edit an entity type:
 
     1. Locate the MONEY entity type.
     1. Double-click anywhere in the table row to edit the entity type.
-    1. In the **Roles** column, click the **Delete a role** icon ![_](images/wks_delete.jpg)  next to the AWARD role.
+    1. In the **Roles** column, click the **Delete a role** icon ![The "Delete a role" icon.](images/wks_delete.jpg "The "Delete a role" icon.")  next to the AWARD role.
 
-        ![A screen capture of deleting a role from an entity type.](images/wks_tut_delete_role.jpg)
+        ![A screen capture of deleting a role from an entity type.](images/wks_tut_delete_role.jpg "A screen capture that shows the cursor hovering over the "Delete a role" icon.")
 
     1. Click **Save**.
 
@@ -149,8 +149,8 @@ For more information about dictionaries, see [Adding dictionaries to a workspace
 ### Procedure
 {: #wks_tutless4_procedure}
 
-1. Download the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/dictionary-items-organization.csv" download>`dictionary-items-organization.csv`<img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> file to your computer. This file contains dictionary terms in CSV format, suitable for uploading into a {{site.data.keyword.knowledgestudioshort}} dictionary.
-1. From the **Assets & Tools** > **Pre-annotators** sidebar, select the **Dictionaries** tab, and click **Manage Dictionaries**.
+1. Download the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/dictionary-items-organization.csv" download>`dictionary-items-organization.csv` <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> file to your computer. This file contains dictionary terms in CSV format, suitable for uploading into a {{site.data.keyword.knowledgestudioshort}} dictionary.
+1. Click **Assets** > **Dictionaries**.
 1. Click **Create Dictionary** to add a dictionary.
 
     > **Note:** Do not click **Upload dictionary**, which is used to upload a dictionary that you want to use as-is. For the tutorial, you will create a new editable dictionary and then upload terms into it.
@@ -160,13 +160,13 @@ For more information about dictionaries, see [Adding dictionaries to a workspace
     The new dictionary is created and automatically opened for editing.
 
 1. In the dictionary pane, click **Upload**.
-1. In the Upload Dictionary Entries window, select the `dictionary-items-organization.csv` file from your computer and then click **Upload**. The terms in the file are uploaded into the dictionary.
+1. Upload the `dictionary-items-organization.csv` file from your computer. The terms in the file are uploaded into the dictionary.
 1. Click **Add Entry** to create a new term. An editable row is added at the top of the table.
 1. In the **Surface Forms** column, type `IBM` and `International Business Machines Corporation` on separate lines. (When you begin to type a new surface form, a space is added below for an additional surface form.) Leave the radio button next to `IBM` selected, which indicates that `IBM` is the lemma.
 1. In the **Part of Speech** column, select **Noun**.
 1. Click **Save**.
 
-    ![A screen capture of the Dictionaries page. A dictionary entry is selected and its surface forms and part of speech of highlighted.](images/wks_tutdict4.jpg)
+    ![A screen capture of the Dictionaries page. The "IBM" dictionary entry is selected and its surface forms and part of speech are highlighted.](images/wks_tutdict4.jpg "A screen capture of the Dictionaries page. The "IBM" dictionary entry is selected and its surface forms and part of speech are highlighted.")
 
 ### What to do next
 {: #wks_tutless4_next}

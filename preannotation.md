@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -85,7 +85,7 @@ You must specify the entity types that you want the service to look for by mappi
 To use the {{site.data.keyword.nlushort}} service to pre-annotate documents, complete the following steps:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator and select your workspace.
-1. Select the **Assets & Tools** > **Pre-annotators** > **Natural Language Understanding** tab.
+1. Select the **Machine Learning Model** > **Pre-annotation** > **Natural Language Understanding** tab.
 1. Click **Edit** to map each entity type that is defined on the **Entity Types** page to corresponding {{site.data.keyword.nlushort}} entity types.
 
     - The drop-down list of the {{site.data.keyword.nlushort}} entity types is pre-populated with entity types that are recognized by the {{site.data.keyword.nlushort}} service.
@@ -160,7 +160,7 @@ To help human annotators get started with their annotation tasks, you can create
 
 When a human annotator begins work on documents that were pre-annotated, it is likely that a number of mentions will already be marked by entity types based on the dictionary entries. The human annotator can change or remove the pre-annotated entity types and assign entity types to unannotated mentions. Pre-annotation by a dictionary does not annotate relations and coreferences. Relations and coreferences must be annotated by human annotators.
 
-**Note**: This task shows how to create a dictionary that is editable. If you want to upload and pre-annotate your documents with a read-only dictionary, click the **Upload Dictionary** button that is available on the **Assets & Tools** > **Pre-annotators** > **Dictionaries** tab.
+**Note**: This task shows how to create a dictionary that is editable. If you want to upload and pre-annotate your documents with a read-only dictionary, click the **Menu** icon next to the **Create Dictionary** button. Select **Upload Dictionary**.
 
 ### Procedure
 {: #wks_preannot_procedure}
@@ -168,22 +168,23 @@ When a human annotator begins work on documents that were pre-annotated, it is l
 To create an editable dictionary and pre-annotate documents:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator and select your workspace.
-1. Select the **Assets & Tools** > **Pre-annotators** > **Dictionaries** tab.
-1. Click **Manage Dictionaries** and then click **Create Dictionary**.
+1. Select the **Assets** > **Dictionaries** page.
+1. Click **Create Dictionary**, enter a name, and then click **Save**.
 1. From the **Entity type** list, select an entity type to associate with the dictionary.
-1. Add entries for the dictionary or upload a file that contains dictionary terms.
-1. Go back to the **Pre-annotators** page and, on the **Dictionaries** tab, click **Apply This Pre-annotator**.
-1. Select the check box for each document set that you want to pre-annotate and click **Run**.
+3. Add entries for the dictionary or upload a file that contains dictionary terms.
+4. Click **Machine Learning Model** > **Pre-annotation**.
+5. On the **Dictionaries** tab, click **Apply This Pre-annotator**.
+6. Select the check box for each document set that you want to pre-annotate and click **Run**.
 
     Pre-annotation is applied to individual documents without regard for the various document sets or annotation sets that a document might belong to. A document that overlaps between a selected document set and an unselected document set will be pre-annotated in both document sets.
 
-1. After the dictionary is created, click **Run** any time that you want to use the dictionary to pre-annotate additional document sets that you add to the corpus.
+7. After the dictionary is created, click **Run** any time that you want to use the dictionary to pre-annotate additional document sets that you add to the corpus.
 
     > **Restriction:** If you edit the dictionary to add or remove entries, you must re-create annotation tasks that include the pre-annotated document sets. Pre-annotation based on the changes that you make to the dictionary annotator cannot be applied to annotation sets that are already assigned to an annotation task.
 
 **Related information**:
 
-[Dictionaries](/docs/services/watson-knowledge-studio/dictionaries.html#wks_dictionaries)
+[Creating dictionaries](/docs/services/watson-knowledge-studio/dictionaries.html)
 
 [Getting Started > Adding a dictionary](/docs/services/watson-knowledge-studio/tutorials-create-project.html#wks_tutless4)
 
@@ -195,7 +196,7 @@ You can use an existing machine learning model to pre-annotate documents that yo
 ### About this task
 {: #wks_preannotsire_about}
 
-After 10 to 30 documents are annotated, a machine learning model can be trained on the data. Such a minimally-trained model should not be used in a production, but can be used as a pre-annotation model that can help speed up the human annotation of subsequent documents. For example, if you add documents to the corpus after you train a machine learning model, you can use the model to pre-annotate the new document sets. Never run a pre-annotator on the same documents that have been annotated by a person. Pre-annotators remove human annotation.
+After 10 to 30 documents are annotated, a machine learning model can be trained on the data. Such a minimally-trained model should not be used in a production, but can be used to pre-annotate documents to help speed up the human annotation of subsequent documents. For example, if you add documents to the corpus after you train a machine learning model, you can use the model to pre-annotate the new document sets. Never run a pre-annotator on the same documents that have been annotated by a person. Pre-annotators remove human annotation.
 
 ### Procedure
 {: #wks_preannotsire_procedure}
@@ -203,13 +204,13 @@ After 10 to 30 documents are annotated, a machine learning model can be trained 
 To use an existing machine learning model to pre-annotate documents:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator and select your workspace.
-1. Select the **Model Management** > **Versions** > **Machine Learning** tab.
-1. Click **Run this model**.
-1. Select the check box for each document set that you want to pre-annotate and click **Run**.
+2. Select **Machine Learning Model** > **Versions**.
+3. To pre-annotate new documents, click **Run this model**.
+4. Select the check box for each document set that you want to pre-annotate and click **Run**.
 
     Pre-annotation is applied to individual documents without regard for the various document sets or annotation sets that a document might belong to. A document that overlaps between a selected document set and an unselected document set will be pre-annotated in both document sets.
 
-1. You can click **Run this model** any time that you want to use the machine learning model to pre-annotate additional document sets that you add to the corpus.
+5. You can click **Run this model** any time that you want to use the machine learning model to pre-annotate additional document sets that you add to the corpus.
 
 ## Pre-annotating documents with the rule-based model
 {: #wks_preannotrule}
@@ -222,22 +223,23 @@ You can use an existing rule-based model to pre-annotate documents that you add 
 To use the rule-based model to pre-annotate documents, complete the following steps:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator and select your workspace.
-1. Select the **Model Management** > **Versions** > **Rule-based** tab.
+1. Select the **Rule-based Model** > **Versions** > **Rule-based Model** tab.
 1. If not already completed, click **Map entity types and classes** to map entity types that you defined in the {{site.data.keyword.knowledgestudioshort}} type system to one or more rule-based model classes.
+2. Click **Edit** for each entity type you want to map.
 
     - The drop-down list of the **Class Name** column is pre-populated with classes that are associated with the rule-based model.
     - You must map at least one entity type to a class.
 
-1. On the **Rule-based** tab, click **Run this model** and then select the document sets or annotation sets that you want to pre-annotate. Ensure that the sets you select do not contain documents that have human annotations. Pre-annotators remove human annotation.
+3. On the **Rule-based Model** tab, click **Run this model**.
 
     The **Run this model** button is not available until you map at least one entity type to a class.
 
-1. Select the check box for each document set that you want to pre-annotate.
-1. Click **Run**.
+4. Select the document sets or annotation sets that you want to pre-annotate. Ensure that the sets you select do not contain documents that have human annotations. Pre-annotators remove human annotation.
+5. Click **Run**.
 
     Pre-annotation is applied to individual documents without regard for the various document sets that a document might belong to. A document that overlaps between a selected document set and an unselected document will appear pre-annotated in both document sets.
 
-1. You can click **Run this model** any time that you want to use the rule-based model to pre-annotate additional document sets that you add to the corpus.
+6. You can click **Run this model** any time that you want to use the rule-based model to pre-annotate additional document sets that you add to the corpus.
 
     > **Restriction:** If you edit the entity type-to-class mapping of the rule-based model, then you must re-create annotation tasks that include the pre-annotated document sets. Pre-annotation based on the changes that you make to the pre-annotator mapping definition cannot be applied to document sets that are already assigned to an annotation task.
 
@@ -399,7 +401,7 @@ To upload pre-annotated documents into a {{site.data.keyword.knowledgestudioshor
 
 1. Upload the ZIP file into a {{site.data.keyword.knowledgestudioshort}} workspace.
 
-    1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager, open the workspace that you want to add the documents to, and open the **Assets & Tools** > **Documents** page.
+    1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager, open the workspace that you want to add the documents to, and open the **Assets**> **Documents** page.
     1. Click **Upload Document Sets**.
     1. Drag the ZIP file that you created or click to locate and select the file.
     1. Select the check box to indicate that the ZIP file contains UIMA CAS XMI files.

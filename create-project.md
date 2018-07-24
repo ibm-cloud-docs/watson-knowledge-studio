@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -59,7 +59,7 @@ To create a workspace, complete the following steps:
 
 1. Optional: If you want to add project managers to the workspace, then expand the **Advanced Options** section, and select the names of people you want to add as project managers from the list. The administrator can add or remove project managers later by editing the workspace.
 
-    Only the names of people that you assigned to the project manager role from the User Account Management page for the instance are displayed. See [Assembling the team](/docs/services/watson-knowledge-studio/team.html) for more information about adding users.
+    Only the names of people that you assigned to the project manager role from the User Account Management page for the instance are displayed. See [Assembling a team](/docs/services/watson-knowledge-studio/team.html) for more information about adding users.
 
     > **Note:** If you have a Lite plan subscription, skip this step. You cannot add other users, so you cannot assign anyone to the project manager role. You do not need a separate project manager. As an administrator, you can perform all the tasks that a project manager would typically perform.
 
@@ -77,7 +77,7 @@ To change the workspace description or workspace name, or to add or remove proje
 
 **Related reference**:
 
-[Multiple language support](/docs/services/watson-knowledge-studio/language-support.html)
+[Language support](/docs/services/watson-knowledge-studio/language-support.html)
 
 ## Tokenizers
 {: #wks_tokenizer}
