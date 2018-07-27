@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-11"
+lastupdated: "2018-07-27"
 
 ---
 
@@ -28,6 +28,11 @@ Clients are responsible for ensuring their own compliance with various laws and 
 
 The products, services, and other capabilities described herein are not suitable for all client situations and may have restricted availability. IBM does not provide legal, accounting or auditing advice or represent or warrant that its services or products will ensure that clients are in compliance with any law or regulation.
 
+If you need to request GDPR support for {{site.data.keyword.cloud}} {{site.data.keyword.watson}} resources that are created
+
+- In the European Union, see [Requesting support for IBM Cloud Watson resources created in the European Union ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/watson/getting-started-gdpr-sar.html#request-EU){: new_window}.
+- Outside the European Union, see [Requesting support for resources outside the European Union ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/watson/getting-started-gdpr-sar.html#request-non-EU){: new_window}.
+
 ## European Union General Data Protection Regulation (GDPR)
 {: #gdpr}
 
@@ -45,5 +50,5 @@ Learn more about IBM's own GDPR readiness journey and our GDPR capabilities and 
 
 If you receive a request to delete data, complete the following steps:
 1. [Delete the applicable artifact](/docs/services/watson-knowledge-studio/artifacts.html).
-1. [Retrain and redeploy the model](/docs/services/watson-knowledge-studio/train-ml.html).
-1. [Delete previous versions of the model that used the deleted data](/docs/services/watson-knowledge-studio/improve-ml.html#wks_maversions).
+2. [Retrain and redeploy the model](/docs/services/watson-knowledge-studio/train-ml.html).
+3. [Delete previous versions of the model that used the deleted data](/docs/services/watson-knowledge-studio/improve-ml.html#wks_maversions).
