@@ -15,6 +15,7 @@ Watson Knowledge Studio
     index.md
     system-requirements.md
     roles.md
+    additional-resources.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
