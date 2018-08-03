@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-25"
+lastupdated: "2018-08-03"
 
 ---
 
@@ -179,10 +179,12 @@ For Premium plans and Dedicated accounts, {{site.data.keyword.knowledgestudiosho
 
 For more information, see the latest [{{site.data.keyword.knowledgestudioshort}} service description ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/software/sla/sladb.nsf/searchsaas/?searchview&searchorder=4&searchmax=0&query=Knowledge+Studio){: new_window}.
 
-## Experimental services: What does *experimental* mean?
+## Experimental services and features: What does *experimental* mean?
 {: #experimental}
 
-For information about experimental services, see the [{{site.data.keyword.Bluemix_notm}} documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/get-support/servicessupport.html#s-services-exporcont){: new_window}. For the full details of experimental services, see the latest version of the [{{site.data.keyword.Bluemix_notm}} Service Description ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/software/sla/sladb.nsf/sla/bm?OpenDocument){: new_window}.
+{{site.data.keyword.IBM_notm}} releases experimental services and features for you to try out. These services might be unstable, change frequently in ways that are not compatible with earlier versions, and might be discontinued with short notice. These services and features are not recommended for use in production environments.
+
+For more information about experimental services, see the [{{site.data.keyword.cloud_notm}} documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/get-support/servicessupport.html#s-services-exporcont){: new_window}. For the full details of experimental services, see the latest version of the [{{site.data.keyword.cloud_notm}} Service Description ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/software/sla/sladb.nsf/sla/bm?OpenDocument){: new_window}.
 
 ## Storage space issues
 {: #storage}
