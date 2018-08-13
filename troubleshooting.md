@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-06"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -99,31 +99,6 @@ However, problems that you can reproduce can have a disadvantage: If the problem
 - Can the problem be re-created on a test system?
 - Are multiple users or applications encountering the same type of problem?
 - Can the problem be re-created by running a single command, a set of commands, or a particular application?
-
-## AlchemyLanguage model issues
-{: #wks_ts_deployed_model_deleted}
-
-### Problem
-{: #wks_ts_deployed_model_deleted_problem}
-
-You cannot deploy a model to {{site.data.keyword.alchemylanguagefull}}.
-
-### Symptoms
-{: #wks_ts_deployed_model_deleted_symptoms}
-
-- You deployed a model, but the status shows that an error occurred.
-- You deployed a model and the status indicated that the model was available, but you cannot use it.
-- The model was deployed successfully and worked before, but now it does not work.
-
-### Causes
-{: #wks_ts_deployed_model_deleted_causes}
-
-The {{site.data.keyword.alchemylanguageshort}} service has been deprecated. For more information, see [Retirement of {{site.data.keyword.alchemyapishort}} service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/bye-bye-alchemyapi/){: new_window}.
-
-### Resolving the problem
-{: #wks_ts_deployed_model_deleted_resolve}
-
-[Migrate to {{site.data.keyword.nlufull}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/natural-language-understanding/migrating.html){: new_window}
 
 ## Can't create an instance on the Lite plan
 {: #wks_ts_lite}

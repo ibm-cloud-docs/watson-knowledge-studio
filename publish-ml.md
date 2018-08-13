@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-23"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -33,11 +33,6 @@ Before a model can be deployed for use by a service, you must have a subscriptio
 For some of the services, you must know details about the service instance that you plan to deploy to, such as the {{site.data.keyword.Bluemix_notm}} space name and service instance name. The space and instance name information is available from the {{site.data.keyword.Bluemix_notm}} Services page.
 
 You can also pre-annotate new documents with the machine learning model. See [Pre-annotating documents with the machine learning model](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannotsire) for details.
-
-## Deploying a machine learning model to AlchemyLanguage
-{: #wks_mabluemix}
-
-The {{site.data.keyword.alchemylanguageshort}} service has been deprecated. For more information, see [Retirement of {{site.data.keyword.alchemyapishort}} service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/bye-bye-alchemyapi/){: new_window}.
 
 ## Deploying a machine learning model to IBM Watson Discovery
 {: #wks_madiscovery}
