@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-17"
+lastupdated: "2018-08-24"
 
 ---
 
@@ -213,7 +213,7 @@ For more information about human annotation, see [Annotation with the ground tru
 
 1. Annotate a mention:
 
-    1. Click the Mention tab.
+    1. Click the Entity tab.
     2. In the document body, select the text `Thomas Watson`.
     3. In the list of entity types, click `PERSON`. The entity type `PERSON` is applied to the selected mention.
 
