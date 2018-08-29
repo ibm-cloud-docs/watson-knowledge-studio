@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-29"
 
 ---
 
@@ -94,7 +94,7 @@ To create a machine learning model:
           <p><strong>Export</strong></p>
         </td>
         <td style="vertical-align:top; text-align"left" headers="d33883e137-desc d33883e149">
-          <p>Export a <code>ZIP</code> file to your local system that contains the components that are required for the model to run in a machine learning runtime environment.</p>
+          <p>If you have a Standard plan or a Premium plan, you can export a <code>ZIP</code> file to your local system that contains the components that are required for the model to run in a machine learning runtime environment, such as {{site.data.keyword.watson}} Explorer.</p>
         </td>
       </tr>
     </table>
