@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-11"
 
 ---
 
@@ -29,7 +29,7 @@ To train a machine learning model, you must add documents that contain subject m
 ## About this task
 {: #annotation_about}
 
-To define rules for the rule-based model, you add or upload documents from which you can draw patterns to define as rules. See [Adding documents for defining rules](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html) for more information. This section describes how to add documents for annotation only.
+This section describes how to add documents for annotation only. To define rules for the rule-based model, you add or upload documents from which you can draw patterns to define as rules. See [Adding documents for defining rules](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html) for more information.
 
 ## Documents
 {: #wks_sampledoc}
@@ -46,10 +46,13 @@ Try to ensure that your training documents are truly representative of content t
 
 When you are ready to create and train the model, documents that you add to the workspace can be divided into sets that are used as training data, test data, and blind data. The separate data sets are important for assessing model performance.
 
-You can add documents in the following ways:
+You can add documents in the following ways. For information about the supported document types, size limits, and other information, see  [Machine learning model > Document management](/docs/services/watson-knowledge-studio/create-project.html#machine-learning-model).
 
 - A two-column CSV file in UTF-8 format
 - Text files in UTF-8 format
+- HTML files
+- PDF files (scanned and password-protected files are not supported)
+- Microsoft Word DOC or DOCX files (password-protected files are not supported)
 - A ZIP file that contains documents downloaded from a {{site.data.keyword.knowledgestudioshort}} workspace
 - A ZIP file that contains files in UIMA CAS XMI format
 
@@ -57,6 +60,16 @@ You can add documents in the following ways:
 {: #wks_sampledoc__wks_samplecsv}
 
 You can upload a two-column CSV file that contains sample text from your local machine. Upload one CSV file at a time. The first column in the CSV file specifies the file name of the document. The second column in the file contains the document text. For an example of the required format, see the <a href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/documents-new.csv" download>`documents-new.csv` <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> file in the tutorial sample files.
+
+### PDF files
+{: #doc-pdf}
+
+Text cannot be extracted from a PDF in some cases, depending on how the PDF was created. Typically, text can't be extracted from embedded fonts that don't map to unicode characters. If you are unsure whether text from a PDF can be extracted, you can try copying the text from the PDF and then pasting it into a text editor. If you do not see the same characters that are visible in the PDF itself, then the text extraction would likely fail.
+
+### Formatted documents
+{: #doc-formatted}
+
+When formatted documents are converted to plain text, it's possible that losing the formatting could result in poor tokenization of words. For example, if a table row in a DOCX file contains cell values that do not end with a period, the values might be converted as one sentence. As another example, if a PDF document contains a very long word that is hyphenated at the end of a line, that word might be converted as two words. In cases like these, the documents might not be suitable for machine learning unless you pre-process the files to fix formatting limitations.
 
 ### Documents from another Watson Knowledge Studio workspace
 {: #wks_sampledoc__wks_samplecorpus}
@@ -95,49 +108,19 @@ As a best practice, start with a relatively small collection of documents. Use t
 To add documents to a workspace:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager, and select your workspace.
-1. Select the **Assets**> **Documents** > **Documentation sets** tab.
-1. Click **Upload Document Sets** to add documents to the corpus.
-1. Upload documents in one of the following formats. You can upload one type of file at a time.
+2. Select the **Assets**> **Documents** > **Documentation sets** tab.
+3. Click **Upload Document Sets** to add documents to the corpus.
+4. Upload documents in one of the supported formats. For information about the supported document types, size limits, and other information, see  [Machine learning model > Document management](/docs/services/watson-knowledge-studio/create-project.html#machine-learning-model).
 
-    <table summary="Each row in this table describes one option for a choice.">
-      <caption>Table 1. Upload choices</caption>
-      <tr>
-        <th style="vertical-align:bottom; text-align:left" id="d31095e284-option">
-          Option
-        </th>
-        <th style="vertical-align:bottom; text-align:left" id="d31095e284-desc">
-          Description
-        </th>
-      </tr>
-      <tr>
-        <td headers="d31095e284-option" id="d31095e286">
-          <p><strong>CSV file</strong></p>
-        </td>
-        <td headers="d31095e284-desc d31095e286">
-          <p>Drag a single CSV file that contains your sample documents or click to locate the file on your local system, and then click <b>Upload</b>. The first column in the CSV file specifies the file name of the document. The second column in the file contains the document text. The CSV file must be in UTF-8 format.</p>
-        </td>
-      </tr>
-      <tr>
-        <td headers="d31095e284-option" id="d31095e294">
-          <p><strong>Text files</strong></p>
-        </td>
-        <td headers="d31095e284-desc d31095e294">
-          <p>Drag one or more text files from your local system or click to locate and select the files, and then click <b>Upload</b>. Text files must be in UTF-8 format.</p>
-        </td>
-      </tr>
-      <tr>
-        <td headers="d31095e284-option" id="d31095e316">
-          <p><strong>ZIP file</strong></p>
-        </td>
-        <td headers="d31095e284-desc d31095e316">
-          <p>If you previously downloaded documents from a Watson Knowledge Studio workspace, drag the <code>ZIP</code> file that contains the downloaded documents or click to locate and select the file. If you want to include annotations that were added to the documents before they were downloaded, ensure that the option to include ground truth is selected before you click <b>Upload</b>. Only annotations that were promoted to ground truth before the documents were downloaded will be imported. </p><p><b>Restriction:</b> When annotated documents are imported, they are re-tokenized. This process can change what Watson Knowledge Studio considers to be the sentence boundaries in them. Because annotations are defined by sentence, some annotations might be invalidated during this process. After uploading documents from another workspace, do a quick review of the annotations to address any discrepancies.</p>
-          <p>You must upload the type system from the original workspace into the current workspace before you upload ground truth annotations. For details, see [Uploading resources from another workspace ![External link icon](../../icons/launch-glyph.svg "External link icon")](exportimport.html){: new_window}.</p>
-          <p>If you previously downloaded annotated documents that are in UIMA CAS XMI format, you can upload the <code>ZIP</code> file that contains the analyzed content. Specify that this is the type of content you want to upload before you click <b>Upload</b>. For details about how to create these files and requirements for uploading them, see [Uploading pre-annotated documents ![External link icon](../../icons/launch-glyph.svg "External link icon")](preannotation.html#wks_uima){: new_window}.</p>
-        </td>
-      </tr>
-    </table>
+  **Notes about `ZIP` files of documents downloaded from another workspace**
+   - If you previously downloaded documents from a {{site.data.keyword.knowledgestudioshort}} workspace, drag the `ZIP` file that contains the downloaded documents or click to locate and select the file. If you want to include annotations that were added to the documents before they were downloaded, ensure that the option to include ground truth is selected before you click **Upload**. Only annotations that were promoted to ground truth before the documents were downloaded will be imported.
+   - Restriction: When annotated documents are imported, they are re-tokenized. This process can change what {{site.data.keyword.knowledgestudioshort}} considers to be the sentence boundaries. Because annotations are defined by sentence, some annotations might be invalidated during this process. After uploading documents from another workspace, do a quick review of the annotations to address any discrepancies.
+   - You must upload the type system from the original workspace into the current workspace before you upload ground truth annotations. For details, see [Uploading resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html).
 
-1. After the documents have been added, click the document names to preview them and verify that the content looks OK. For example, verify that text files are in UTF-8 format and that no diacritical marks or character normalization issues are visible in the documents, and check for poor sentence breaks. If problems exist, you might need to pre-process the files before you add them to the corpus. You want the documents to be as clean and well-formatted as possible before dictionary or human annotation begins.
+  **Notes about `ZIP` files of documents in UIMA CAS XMI format**
+   - If you previously downloaded annotated documents that are in UIMA CAS XMI format, you can upload the `ZIP` file that contains the analyzed content. Specify that this is the type of content you want to upload before you click **Upload**. For details about how to create these files and requirements for uploading them, see [Uploading pre-annotated documents](/docs/services/watson-knowledge-studio/preannotation.html#wks_uima).</p>
+
+5. After the documents have been added, click the document names to preview them and verify that the content looks OK. For example, verify that text files are in UTF-8 format and that no diacritical marks or character normalization issues are visible in the documents, and check for poor sentence breaks. If problems exist, you might need to pre-process the files before you add them to the corpus. You want the documents to be as clean and well-formatted as possible before dictionary or human annotation begins.
 
 ### What to do next
 {: #wks_projadd_next}
