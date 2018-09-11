@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-18"
+lastupdated: "2018-09-11"
 
 ---
 
@@ -247,7 +247,16 @@ For each stage of the model development process, this table summarizes the typic
           <p>Text in UTF-8 format</p>
         </li>
         <li>
-          <p>ZIP file that contains documents downloaded from another corpus</p>
+          <p>HTML</p>
+        </li>
+        <li>
+          <p>PDF files (scanned and password-protected files are not supported)</p>
+        </li>
+        <li>
+          <p>Microsoft Word DOC or DOCX files (password-protected files are not supported)</p>
+        </li>
+        <li>
+          <p>ZIP file that contains documents downloaded from another workspace</p>
         </li>
         <li>
           <p>ZIP file that contains documents in UIMA CAS XMI format</p>
@@ -271,6 +280,9 @@ For each stage of the model development process, this table summarizes the typic
         </li>
         <li>
           <p>1,000 document sets (including annotation sets) per workspace</p>
+        </li>
+        <li>
+          <p>5 MB per file and 200 MB per upload (TXT, PDF, DOC, DOCX, and HTML files)</p>
         </li>
       </ul>
     </td>
