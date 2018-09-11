@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-09"
+lastupdated: "2018-09-11"
 
 ---
 
@@ -25,6 +25,14 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 
 The following new features and changes to {{site.data.keyword.knowledgestudiofull}} are available.
 {: shortdesc}
+
+## September 2018
+{: #sept2018}
+
+### New features and changes
+{: #new-sept2018}
+
+- Introduced support for HTML, DOC, DOCX, and PDF files. For information about the supported document types, size limits, and other information, see  [Creating a workspace > Machine learning model > Document management](/docs/services/watson-knowledge-studio/create-project.html#machine-learning-model). For information about adding documents for annotation, see [Adding documents to a workspace](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_projadd).
 
 ## August 2018
 {: #august2018}
