@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-09-12"
 
 ---
 
@@ -34,6 +34,7 @@ You can train a model in the following languages:
 - Arabic
 - Brazilian Portuguese
 - Chinese (Simplified)
+- Chinese (Traditional)
 - Dutch
 - French
 - German
