@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-16"
 
 ---
 
@@ -29,11 +29,11 @@ Wohin können Sie sich wenden, wenn Fragen oder Probleme auftreten? Wo Sie Hilfe
 ## Zugriffsprobleme
 
 - Wenn Sie nicht auf die {{site.data.keyword.knowledgestudioshort}}-Instanz zugreifen können, sorgen Sie zusammen mit dem Eigentümer des Arbeitsbereichs dafür, dass Sie von ihm zur Mitwirkung an dem Arbeitsbereich eingeladen wurden.
-- Wenn Sie die {{site.data.keyword.knowledgestudioshort}}-Instanz aufrufen können, jedoch keine Arbeitsbereiche aufgelistet werden, wenden Sie sich zur Behebung des Problems an den Administrator oder an den Manager des Arbeitsbereichs. Der Administrator (ein Benutzer mit der Administratorrolle) oder der Manager (ein Benutzer mit der Rolle 'ProjectManager') muss in {{site.data.keyword.knowledgestudioshort}} Folgendes ausführen: 1.) Ihnen eine Annotationsgruppe zuordnen und 2.) eine Task erstellen, die Ihnen das Annotieren der Dokumente in der Gruppe ermöglicht. Der Arbeitsbereich wird in der Liste auf der Homepage von {{site.data.keyword.knowledgestudioshort}} erst für Sie angezeigt, nachdem ein berechtigter Benutzer diese Aktionen ausgeführt hat.
+- Wenn Sie die {{site.data.keyword.knowledgestudioshort}}-Instanz aufrufen können, jedoch keine Arbeitsbereiche aufgelistet werden, wenden Sie sich zur Behebung des Problems an den Administrator oder an den Manager des Arbeitsbereichs. Der Administrator (ein Benutzer mit der Administratorrolle) oder der Manager (ein Benutzer mit der Rolle 'Projektleiter') muss in {{site.data.keyword.knowledgestudioshort}} Folgendes ausführen: 1.) Ihnen eine Annotationsgruppe zuordnen und 2.) eine Task erstellen, die Ihnen das Annotieren der Dokumente in der Gruppe ermöglicht. Der Arbeitsbereich wird in der Liste auf der Homepage von {{site.data.keyword.knowledgestudioshort}} erst für Sie angezeigt, nachdem ein berechtigter Benutzer diese Aktionen ausgeführt hat.
 
 ## Mit dem Ground Truth-Editor arbeiten
 
-Lesen Sie zunächst die Informationen in diesem Benutzerhandbuch. Wenn Sie weitere Fragen zur Verwendung des Ground Truth-Editors haben, können Sie im Forum der Community überprüfen, ob Ihre Frage dort bereits gestellt und beantwortet wurde. Oder Sie stellen die Frage in der Community. Das Forum der {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Entwicklercommunity ist unter der folgenden Webadresse erreichbar: [https://developer.ibm.com/answers/topics/wks/?smartspace=watson ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/answers/topics/wks/?smartspace=watson){: new_window}.
+Lesen Sie zunächst die Informationen in [Dokumente annotieren](/docs/services/watson-knowledge-studio/user-guide.html). Wenn Sie weitere Fragen zur Verwendung des Ground Truth-Editors haben, suchen Sie Ihre Frage in den Community-Foren, die am Ende des Inhaltsverzeichnisses verlinkt sind. Wenn Sie keine Antwort auf Ihre Frage finden, posten Sie die Frage selbst.
 
 ## Annotationsentscheidungen
 

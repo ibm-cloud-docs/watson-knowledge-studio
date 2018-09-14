@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -35,12 +35,14 @@ Les fichiers que vous téléchargez sont indépendants du système d'exploitatio
 ## Systèmes de types
 {: #wks_exportimport_expimp_type}
 
-Pour télécharger un système de types, ouvrez la page **Actifs & Outils** > **Types d'entité** et cliquez sur **Télécharger des types**. Le système crée un fichier nommé `types-ID.json` et vous invite à le télécharger sur votre système local. Pour utiliser le système de types dans un nouvel espace de travail, ouvrez la page **Types d'entité** et transférez le fichier `JSON` que vous avez téléchargé.
+Pour télécharger un système de types, ouvrez la page **Actifs** > **Types d'entité** et cliquez sur **Télécharger des types**. Le système crée un fichier nommé `types-ID.json` et vous invite à le télécharger sur votre système local. Pour utiliser le système de types dans un nouvel espace de travail, ouvrez la page **Types d'entité** et transférez le fichier `JSON` que vous avez téléchargé.
 
 ## Dictionnaires
 {: #wks_exportimport_expimp_dict}
 
-Pour télécharger un ou plusieurs dictionnaires, sélectionnez l'onglet **Actifs & Outils** > **Pré-annotateurs** > **Dictionnaires** et cliquez sur **Télécharger des dictionnaires**. Pour chacun des dictionnaires que vous téléchargez, le système crée un fichier nommé `dictionary name_timestamp.csv` et combine les fichiers dans un fichier `ZIP` ayant un nom de la forme `nom de l'espace de travail_dictionnaire_horodatage.zip`, puis vous invite à télécharger ce fichier vers votre système local. Vous pouvez aussi télécharger un dictionnaire individuel en ouvrant celui-ci et en cliquant sur **Télécharger**. Les dictionnaires en aperçu seul que vous avez transférés sous forme de fichiers CSV ne peuvent pas être téléchargés.
+Pour télécharger tous les dictionnaires, sélectionnez la page **Actifs** > **Dictionnaires**, cliquez sur l'icône **Menu** à côté du bouton **Créer un dictionnaire** et sélectionnez **Télécharger des dictionnaires**. Pour chacun des dictionnaires que vous téléchargez, le système crée un fichier nommé `dictionary name_timestamp.csv` et combine les fichiers dans un fichier `ZIP` ayant un nom de la forme `nom de l'espace de travail_dictionnaire_horodatage.zip`, puis vous invite à télécharger ce fichier vers votre système local.
+
+Vous pouvez télécharger un dictionnaire individuel en ouvrant celui-ci et en cliquant sur **Télécharger**. Les dictionnaires en aperçu seul que vous avez transférés sous forme de fichiers CSV ne peuvent pas être téléchargés.
 
 Avant de transférer un dictionnaire téléchargé dans un nouvel espace de travail, vous devez télécharger le système de types de l'ancien espace de travail et le transférer dans le nouvel espace. Le système de types et les dictionnaires doivent provenir du même espace de travail {{site.data.keyword.knowledgestudioshort}}. En outre, le système de types doit exister dans le nouvel espace de travail avant que les dictionnaires n'y soient transférés.
 
@@ -49,7 +51,7 @@ Pour transférer des dictionnaires, ouvrez l'onglet **Dictionnaires** et ajoutez
 ## Documents
 {: #wks_exportimport_expimp_doc}
 
-Pour télécharger des documents que vous avez ajoutés au corpus, ouvrez l'onglet **Actifs & Outils** > **Documents** > **Jeux de documents** et cliquez sur **Télécharger des jeux de documents**. Le système crée un fichier nommé `corpus-ID.zip` et vous invite à le télécharger sur votre système local. Le fichier `ZIP` contient tous les documents du corpus. Les annotations qui ont été ajoutées à des jeux d'annotations sont incluses dans le fichier ZIP, mais seulement une fois que ces jeux d'annotations ont été approuvés et promus au rang de données de référence.
+Pour télécharger des documents que vous avez ajoutés au corpus, ouvrez l'onglet **Actifs** > **Documents** > **Jeux de documents** et cliquez sur **Télécharger des jeux de documents**. Le système crée un fichier nommé `corpus-ID.zip` et vous invite à le télécharger sur votre système local. Le fichier `ZIP` contient tous les documents du corpus. Les annotations qui ont été ajoutées à des jeux d'annotations sont incluses dans le fichier ZIP, mais seulement une fois que ces jeux d'annotations ont été approuvés et promus au rang de données de référence.
 
 > **Restriction :** Tous les documents qui ont été pré-annotés sont obscurcis de manière à être rendus illisibles lorsqu'ils sont téléchargés. Même les annotations qui y ont été ajoutées par des humains sont illisibles.
 
@@ -59,10 +61,8 @@ Pour transférer les documents, ouvrez l'onglet **Jeux de documents** dans le no
 
 **Concepts connexes** :
 
-[Systèmes de types](/docs/services/watson-knowledge-studio/artifacts.html#wks_typesystem)
+[Types d'artefacts](/docs/services/watson-knowledge-studio/artifacts.html)
 
-[Dictionnaires](/docs/services/watson-knowledge-studio/artifacts.html#wks_dictionaries)
+[Ajouter des documents pour l'annotation](/docs/services/watson-knowledge-studio/documents-for-annotation.html)
 
-[Documents pour les annotateurs d'apprentissage automatique](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_t_docs_intro)
-
-[Documents pour les annotateurs à base de règles](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html)
+[Ajouter des documents pour définir des règles](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html)

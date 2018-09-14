@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -28,10 +28,8 @@ lastupdated: "2018-04-04"
 
 이 용어집에서는 다음 상호 참조가 사용됩니다. 
 
-- '참조하십시오'는 특정 용어에서 선호되는 동의어로, 또는 약어에서 정의된 전체 형태로 사용자를 안내합니다. 
-- '도 참조하십시오'는 관련되거나 대조되는 용어로 사용자를 안내합니다. 
-
-기타 {{site.data.keyword.IBM}} 제품의 용어집을 보려면 [www.ibm.com/software/globalization/terminology ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.ibm.com/software/globalization/terminology/){: new_window}로 이동하십시오. 
+- *참조하십시오*는 용어부터 기본 동의어 또는 두문자어나 약어부터 정의된 전체 양식까지 참조하라는 의미입니다.
+- *도 참조하십시오*는 관련된 용어 및 대조되는 용어를 참조하라는 의미입니다. 
 
 [가](/docs/services/watson-knowledge-studio/glossary.html#gloss_GA) [마](/docs/services/watson-knowledge-studio/glossary.html#gloss_MA) [바](/docs/services/watson-knowledge-studio/glossary.html#gloss_BA) [사](/docs/services/watson-knowledge-studio/glossary.html#gloss_SA) [아](/docs/services/watson-knowledge-studio/glossary.html#gloss_AA) [자](/docs/services/watson-knowledge-studio/glossary.html#gloss_JA) [차](/docs/services/watson-knowledge-studio/glossary.html#gloss_CHA) [카](/docs/services/watson-knowledge-studio/glossary.html#gloss_KA) [타](/docs/services/watson-knowledge-studio/glossary.html#gloss_TA) [파](/docs/services/watson-knowledge-studio/glossary.html#gloss_PA) [하](/docs/services/watson-knowledge-studio/glossary.html#gloss_HA) [F](/docs/services/watson-knowledge-studio/glossary.html#gloss_F)
 
@@ -57,7 +55,7 @@ lastupdated: "2018-04-04"
 
 - **관계 유형(relation type)**
 
-    두 엔티티 간의 2진 단방향 관계입니다. 예를 들면, Mary employedBy {{site.data.keyword.IBM_notm}}은 유효한 관계입니다. {{site.data.keyword.IBM_notm}} employedBy Mary는 유효한 관계가 아닙니다. 
+    두 엔티티 간의 2진 단방향 관계입니다. 예를 들어, `Mary` `employedBy` {{site.data.keyword.IBM_notm}}은 유효한 관계이지만 {{site.data.keyword.IBM_notm}} `employedBy` `Mary`는 유효한 관계가 아닙니다. 
 
 - **규칙 세트(rule set)**
 
@@ -287,11 +285,11 @@ lastupdated: "2018-04-04"
 
 - **훈련(train)**
 
-    시스템이 특정 도메인에서 기능할 수 있도록 해 주는 컴포넌트(예: 말뭉치 컨텐츠, 기계 학습 모델을 생성하는 훈련 데이터, 프로그래밍 방식 알고리즘, 어노테이터 및 기타 기준 실제값 컴포넌트)를 사용하여 {{site.data.keyword.watson}} 인스턴스를 설정한 후 정확도 분석에 따라 이러한 컴포넌트를 개선하고 업데이트하는 프로세스입니다. 
+    시스템이 특정 도메인에서 기능할 수 있도록 해 주는 컴포넌트(예: 말뭉치 컨텐츠, 기계 학습 모델을 생성하는 훈련 데이터, 프로그래밍 방식 알고리즘 또는 기타 기준 실제값 컴포넌트)를 사용하여 {{site.data.keyword.watson}} 인스턴스를 설정한 후에 정확도 분석에 따라 이러한 컴포넌트를 개선하고 업데이트하는 프로세스입니다. 
 
 - **훈련 데이터(training data)**
 
-    기계 학습 어노테이터를 훈련시키는 데 사용할 수 있는, 어노테이션 작성된 문서 세트입니다. [블라인드 데이터(blind data)](/docs/services/watson-knowledge-studio/glossary.html#gloss_B) 및 [테스트 데이터(testing data)](/docs/services/watson-knowledge-studio/glossary.html#gloss_T)도 참조하십시오. 
+     기계 학습 모델을 훈련시키는 데 사용할 수 있는 어노테이션이 있는 문서 세트입니다. [블라인드 데이터(blind data)](/docs/services/watson-knowledge-studio/glossary.html#gloss_B) 및 [테스트 데이터(testing data)](/docs/services/watson-knowledge-studio/glossary.html#gloss_T)도 참조하십시오. 
 
 ## F
 {: #gloss_F}

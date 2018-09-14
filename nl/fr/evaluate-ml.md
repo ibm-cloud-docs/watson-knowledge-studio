@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-08-03"
 
 ---
 
@@ -27,6 +27,7 @@ Passez en revue les annotations qui ont été ajoutées par le modèle entraîn�
 {: shortdesc}
 
 ## A propos de cette tâche
+{: #evaluate-ml_about}
 
 Vous pouvez analyser les performances en consultant une synthèse de statistiques relatives aux types d'entités, types de relations et mentions coréférencées. Vous pouvez aussi analyser les statistiques présentées dans une *matrice de confusion*. Celle-ci vous aide à comparer les annotations ajoutées par le modèle d'apprentissage automatique aux annotations des données de référence.
 
@@ -57,13 +58,14 @@ Les statistiques du modèle comprennent les métriques suivantes :
     Mesure des données de référence montrant combien de documents contiennent un type d'entité ou un type de relation donné. Cette statistique n'est pas disponible pour les mentions coréférencées. Cette valeur peut vous aider à évaluer si les documents du jeu représentent suffisamment le domaine. Si le pourcentage est trop bas pour certains types d'entités clés, cela signifie qu'ils sont sous-représentés. Vous devriez, dans ce cas, ajouter davantage de documents avec des mentions de ces types.
 
 ## Procédure
+{: #evaluate-ml_procedure}
 
 Pour consulter les statistiques de performances témoignant du niveau d'entraînement du modèle :
 
 1. Connectez-vous en tant qu'administrateur ou chef de projet {{site.data.keyword.knowledgestudioshort}} et sélectionnez votre espace de travail.
-1. Sélectionnez **Gestion des modèles** > **Performances**.
+1. Sélectionnez **Modèle d'apprentissage automatique** > **Performances**.
 1. Pour les mentions, relations ou coréférences, sélectionnez le lien **Statistiques détaillées**.
-1. Dans la vue **Récapitulatif**, indiquez si vous souhaitez évaluer des données de test ou des données d'apprentissage, puis spécifiez le type des annotations pour lesquelles vous souhaitez obtenir des statistiques : types d'entités, types de relations ou mentions coréférencées. Notez que l'analyse des données aveugles n'a lieu que très rarement. Vous ne devez pas l'exécuter avant d'être relativement confiant dans les scores obtenus avec les données de test. Lorsque vous faites défiler les données, observez que les éléments qui ont de faibles scores sont repérés et mis en évidence pour indiquer qu'ils doivent être examinés et améliorés. L'icône d'avertissement en forme de triangle indique que la valeur F1 est inférieure à la valeur fixée, 0,5.
+1. Dans la vue **Récapitulatif**, indiquez si vous souhaitez évaluer des données de test ou des données d'apprentissage, puis spécifiez le type des annotations pour lesquelles vous souhaitez obtenir des statistiques : types d'entités, types de relations ou mentions coréférencées. Lorsque vous faites défiler les données, observez que les éléments qui ont de faibles scores sont repérés et mis en évidence pour indiquer qu'ils doivent être examinés et améliorés. L'icône d'avertissement en forme de triangle indique que la valeur F1 est inférieure à la valeur fixée, 0,5.
 
     Par exemple, certains types d'entités peuvent obtenir un bon score F1 parce que le document a été annoté par la pré-annotation ainsi que par un annotateur humain. D'autres types d'entités peuvent en revanche obtenir un score plus bas parce que les différences de formulation et la façon dont les annotateurs humains interprètent le texte ou les directives d'annotation rendent plus difficile pour le modèle d'apprentissage automatique de reconnaître le motif et d'appliquer l'annotation correcte.
 
@@ -80,15 +82,19 @@ Pour consulter les statistiques de performances témoignant du niveau d'entraîn
 
     L'exemple de matrice de confusion suivant montre les résultats d'une exécution d'un modèle d'apprentissage automatique sur des documents traitant d'accidents de la circulation.
 
-    <table cellpadding="4" cellspacing="0" summary="Exemple de matrice de confusion de rapports d'accidents" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d15356e164" class="stentry thleft thbot">Types d'entités</th>
-        <th valign="bottom" align="left" id="d15356e166" class="stentry thleft thbot">MANUFACTURER</th>
-        <th valign="bottom" align="left" id="d15356e168" class="stentry thleft thbot">MODEL</th>
-        <th valign="bottom" align="left" id="d15356e170" class="stentry thleft thbot">O</th>
+    <table summary="Exemple de matrice de confusion de rapports d'accidents">
+       <caption>Tableau 1. Exemple de matrice de confusion</caption>
+       <tr>
+        <th style="vertical-align:bottom; text-align:left" id="d15356e164">Types d'entités</th>
+        <th style="vertical-align:bottom; text-align:center" id="d15356e166">MANUFACTURER</th>
+        <th style="vertical-align:bottom; text-align:center" id="d15356e168">MODEL</th>
+        <th style="vertical-align:bottom; text-align:center" id="d15356e170">O</th>
       </tr>
-      <tr class="strow"><td valign="top" headers="d15356e164" class="stentry"><p class="p wrapper">MANUFACTURER</p></td>
-        <td valign="top" headers="d15356e166" class="stentry"><p class="p wrapper">515</p></td>
-        <td valign="top" headers="d15356e168" class="stentry"><p class="p wrapper">5</p></td>
-        <td valign="top" headers="d15356e170" class="stentry"><p class="p wrapper">44</p></td>
+      <tr>
+        <td style="vertical-align:top; text-align:left" headers="d15356e164">MANUFACTURER</td>
+        <td style="vertical-align:top; text-align:center" headers="d15356e166">515</td>
+        <td style="vertical-align:top; text-align:center" headers="d15356e168">5</td>
+        <td style="vertical-align:top; text-align:center" headers="d15356e170">44</td>
       </tr>
     </table>
     {: #evaluate-ml__datasimpletable_yms_hff_cw}
@@ -109,121 +115,134 @@ Il est difficile de dicter des règles d'amélioration des scores de performance
 
 Le tableau suivant suggère les remèdes aux problèmes de performances d'un modèle d'apprentissage automatique les plus courants.
 
-<table cellpadding="4" cellspacing="0" summary="Tableau dressant la liste des problèmes courants dans la première colonne, avec les remèdes suggérés sur la première ligne (en-têtes). Chaque croix à l'intersection d'une ligne et d'une colonne indique que le remède s'applique à ce problème." border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d15356e221" class="stentry thleft thbot">Problème</th>
-<th valign="bottom" align="left" id="d15356e223" class="stentry thleft thbot">Ajouter des dictionnaires</th>
-<th valign="bottom" align="left" id="d15356e225" class="stentry thleft thbot">Editer les jeux de documents</th>
-<th valign="bottom" align="left" id="d15356e227" class="stentry thleft thbot">Ajouter des documents spécifiques aux types concernés</th>
-<th valign="bottom" align="left" id="d15356e229" class="stentry thleft thbot">Annoter davantage le corpus</th>
-<th valign="bottom" align="left" id="d15356e231" class="stentry thleft thbot">Corriger les annotations humaines</th>
-<th valign="bottom" align="left" id="d15356e233" class="stentry thleft thbot">Améliorer les consignes données aux annotateurs humains</th>
-<th valign="bottom" align="left" id="d15356e235" class="stentry thleft thbot">Mettre à jour le système de types</th>
-<th valign="bottom" align="left" id="d15356e237" class="stentry thleft thbot">Investiguer davantage</th>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Faible F1</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper">X</p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Faible précision</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper">X</p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Faible rappel</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Faible % d'annotations</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Faible densité</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Peu de documents avec ce type</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Catégorisation incorrecte</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Annotations manquées </p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Ecart entre résultats de test et résultats d'entraînement </p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Faible F1 pour le test des données d'apprentissage</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper">X</p></td>
-</tr>
+<table summary="Tableau dressant la liste des problèmes courants dans la première colonne, avec les remèdes suggérés sur la première ligne (en-têtes). Chaque croix à l'intersection d'une ligne et d'une colonne indique que le remède s'applique à ce problème.">
+    <caption>Tableau 2. Remèdes aux problèmes courants de performances</caption>
+    <tr>
+      <th style="vertical-align:bottom; text-align:left" id="d15356e221">Problème</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e223">Ajouter des dictionnaires</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e225">Editer les jeux de documents</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e227">Ajouter des documents spécifiques aux types concernés</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e229">Annoter davantage le corpus</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e231">Corriger les annotations humaines</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e233">Améliorer les consignes données aux annotateurs humains</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e235">Mettre à jour le système de types</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e237">Investiguer davantage</th>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Faible F1</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237">X</td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Faible précision</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237">X</td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Faible rappel</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Faible % d'annotation</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Faible densité</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Peu de documents avec ce type</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Catégorisation incorrecte</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Annotations manquées </td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Ecart entre résultats de test et résultats d'entraînement </td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Faible F1 pour le test des données d'apprentissage</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237">X</td>
+    </tr>
 </table>
-
- {: #evaluate-ml_cheat__datasimpletable_nhm_5ym_cw}
+{: #evaluate-ml_cheat__datasimpletable_nhm_5ym_cw}
 
 ### Description des remèdes
+{: #evaluate-ml_fixes}
 
 - **Ajouter des dictionnaires**
 
@@ -277,14 +296,17 @@ Le tableau suivant suggère les remèdes aux problèmes de performances d'un mod
 Remédiez aux faibles scores F1 afin d'améliorer les performances de votre modèle d'apprentissage automatique.
 
 ### Symptômes
+{: #evaluate-mllowf1_symptoms}
 
 Un score F1 atteint sa meilleure valeur à 1 et sa pire valeur à 0. Une valeur trop basse est le signe d'une mauvaise précision et d'un mauvais rappel. Le modèle d'apprentissage automatique génère alors des annotations erronées ou n'en génère pas là où il aurait dû en générer.
 
 ### Causes
+{: #evaluate-mllowf1_causes}
 
 Si les scores F1 sont trop bas, cela peut être pour de nombreuses raisons différentes qui dépendent du domaine, de la complexité du système de types, de l'adéquation des documents d'entraînement, des compétences de l'annotateur humain et d'autres facteurs.
 
 ### Résoudre le problème
+{: #evaluate-mllowf1_resolving}
 
 Améliorez les performances de votre modèle d'apprentissage automatique en effectuant une ou plusieurs des étapes suivantes, puis en réentraînant le modèle :
 
@@ -310,14 +332,17 @@ Améliorez les performances de votre modèle d'apprentissage automatique en effe
 Remédiez aux faibles scores de précision afin d'améliorer les performances de votre modèle d'apprentissage automatique. D'un point de vue général, une faible précision indique la nécessité d'améliorer la cohérence des annotations.
 
 ### Symptômes
+{: #evaluate-mllowp_symptoms}
 
 Un score de précision atteint sa meilleure valeur à 1 et sa pire valeur à 0. Une valeur trop basse est le signe que le modèle d'apprentissage automatique a généré des annotations incorrectes.
 
 ### Causes
+{: #evaluate-mllowp_causes}
 
 Si les scores de précision sont trop bas, cela peut être pour de nombreuses raisons différentes qui dépendent du domaine, de la complexité du système de types, de l'adéquation des documents d'entraînement, des compétences de l'annotateur humain et d'autres facteurs.
 
 ### Résoudre le problème
+{: #evaluate-mllowp_resolving}
 
 Améliorez les performances de votre modèle d'apprentissage automatique en effectuant une ou plusieurs des étapes suivantes, puis réentraînez le modèle :
 
@@ -337,14 +362,17 @@ Figure 2. Comment remédier aux scores de précision trop bas
 Remédiez aux faibles scores de rappel afin d'améliorer les performances de votre modèle d'apprentissage automatique. D'un point de vue général, un faible rappel indique la nécessité d'ajouter davantage de données d'apprentissage.
 
 ### Symptômes
+{: #evaluate-mllowr_symptoms}
 
 Un score de rappel atteint sa meilleure valeur à 1 et sa pire valeur à 0. Une valeur trop basse est le signe que le modèle d'apprentissage automatique n'a pas créé des annotations qu'il aurait dû créer.
 
 ### Causes
+{: #evaluate-mllowr_causes}
 
 Si les scores de rappel sont trop bas, cela peut être pour de nombreuses raisons différentes qui dépendent du domaine, de la complexité du système de types, de l'adéquation des documents d'entraînement, des compétences de l'annotateur humain et d'autres facteurs.
 
 ### Résoudre le problème
+{: #evaluate-mllowr_resolving}
 
 Améliorez les performances de votre modèle d'apprentissage automatique en effectuant une ou plusieurs des étapes suivantes, puis réentraînez le modèle :
 

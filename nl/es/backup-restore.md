@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -34,7 +34,7 @@ Para realizar una copia de seguridad y restaurar los datos, realice los pasos si
 
 1. [Entienda de qué datos se puede realizar copia de seguridad](#data)
 1. [Prepárese para la copia de seguridad](#prepare)
-1. [Exporte artefactos de la instancia actual](#export)
+1. [Descargue artefactos de la instancia actual](#export)
 1. [Vuelva a crear espacios de trabajo en la nueva instancia](#recreateproj)
 1. [Restaure los datos del espacio de trabajo](#restoredata)
 1. [Restaure los modelos](#restoremodels)
@@ -89,7 +89,7 @@ Para prepararse para la copia de seguridad y la restauración de los datos, siga
 
     Si está migrando espacios de trabajo entre instancias distintas, considere realizar una lista de usuarios y sus roles para la instancia de la que está haciendo copia de seguridad. Alguien con el rol Admin puede imprimir la lista desde la página Gestión de cuentas de usuario. Una vez vueltos a crear los espacios de trabajo en la instancia nueva, alguien con el rol Admin debe añadir los usuarios y asignar sus roles.
 
-    Consulte [Ensamblaje de un equipo](/docs/services/watson-knowledge-studio/team.html) para obtener más información sobre los roles.
+    Para obtener más información sobre los roles, consulte [Roles de usuario en {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/roles.html).
 
 1. Tome nota de la información del espacio de trabajo.
 
@@ -108,7 +108,9 @@ Para cada espacio de trabajo que desee migrar, descargue los artefactos siguient
 - Sistema de tipos
 - Diccionarios
 
-  **Nota**: Solo se descargarán los diccionarios editables. No puede descargar diccionarios de solo lectura.
+  **Nota**:
+    - Solo se descargarán los diccionarios editables. No puede descargar diccionarios de solo lectura.
+    - Para los diccionarios, las correlaciones de tipos de entidad no se migran. Una vez que restaure estos artefactos, deberá correlacionar los diccionarios con tipos de entidad, según sea necesario.
 
 - Documentos
 
@@ -143,7 +145,7 @@ Tras volver a crear los espacios de trabajo, cargue los artefactos previamente d
 
   Si ha utilizado cualquier diccionario de solo lectura en la versión anterior del espacio de trabajo, vuelva a cargarlos en este espacio de trabajo desde su fuente original.
 
-  **Nota**: Al añadir diccionarios, se creará automáticamente el preanotador de diccionarios. Asocie el diccionario con un tipo de entidad en el momento de ejecutar el preanotador.
+1. Para los preanotadores de diccionario, asocie los diccionarios con un tipo de entidad. Los diccionarios que no tengan correlaciones para tipos de entidad no aplicarán anotaciones cuando se preanoten los documentos.
 
 1. Cargue los documentos que ha descargado desde la versión anterior del espacio de trabajo en esta versión del espacio de trabajo.
    Para obtener detalles, consulte [Cargar recursos desde otro espacio de trabajo](/docs/services/watson-knowledge-studio/exportimport.html).
@@ -155,9 +157,9 @@ En este punto, todos los artefactos utilizados para entrenar el modelo en la ver
 
 Para volver a desplegar un modelo de aprendizaje automático que ha desplegado en la instancia anterior, siga estos pasos:
 
-1. Entrene el modelo de aprendizaje automático. Para obtener detalles, consulte [Creación de un modelo de aprendizaje automático](/docs/services/watson-knowledge-studio/train-ml.html).
+1. [Entrene el modelo de aprendizaje automático](/docs/services/watson-knowledge-studio/train-ml.html).
 
-  **Nota**: No ejecute ningún preanotador en documentos anotados que haya migrado a este espacio de trabajo porque perderán las anotaciones añadidas por anotadores humanos.
+  **Nota**: No ejecute preanotadores en documentos anotados que haya migrado a este espacio de trabajo porque perderán las anotaciones añadidas por anotadores humanos.
 
 1. Después de crear el modelo, despliéguelo de nuevo. Para obtener detalles, consulte [Utilización del modelo de aprendizaje automático](/docs/services/watson-knowledge-studio/publish-ml.html).
 
@@ -171,6 +173,6 @@ Para volver a desplegar un modelo basado en reglas que ha desplegado en la insta
 
 Si ha tenido alguna tarea de anotación creada, pero no completada en el espacio de trabajo anterior, siga estos pasos para volver a crear las tareas de anotación incompletas:
 
-1. Cargue los documentos que no se hayan anotado aún, pero que desee añadir a los datos de campo para seguir mejorando el modelo.
-1. Desde los documentos recién importados y no anotados, cree conjuntos de documentos para su anotación. Estos conjuntos ahora se llaman _conjuntos de anotación_. Para obtener detalles, consulte [Creación y asignación de conjuntos de anotaciones](/docs/services/watson-knowledge-studio/document-for-annotation.html).
-1. Vuelva a crear las tareas de anotación. Dé a la tarea el mismo nombre, una fecha de vencimiento apropiada, y asigne conjuntos de anotaciones a los anotadores humanos apropiados.
+1. [Cargue los documentos](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_projadd) que no se hayan anotado aún, pero que desee añadir a los datos de campo para seguir mejorando el modelo.
+1. Desde los documentos recién importados y no anotados, [cree conjuntos de anotación](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_projdocsets).
+1. [Vuelva a crear las tareas de anotación](/docs/services/watson-knowledge-studio/annotate-documents.html#wks_hatask). Dé a la tarea el mismo nombre, una fecha de vencimiento apropiada, y asigne conjuntos de anotaciones a los anotadores humanos apropiados.

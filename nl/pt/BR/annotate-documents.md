@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -88,7 +88,7 @@ Esta etapa refere-se ao uso de ferramentas do {{site.data.keyword.knowledgestudi
 ### Implementação de modelo
 {: #wks_lifecycle__wks_lifecycleS5}
 
-Esta etapa se refere a exportar componentes que permitem que o modelo seja executado em ambientes de tempo de execução de aprendizado de máquina e a tornar o modelo acessível para outros aplicativos cognitivos do {{site.data.keyword.watson}}. Por exemplo, é possível implementar o modelo de aprendizado de máquina para uso pelo {{site.data.keyword.Bluemix}} {{site.data.keyword.alchemyapishort}} ou exportar o modelo para uso no {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
+Esta etapa se refere a exportar componentes que permitem que o modelo seja executado em ambientes de tempo de execução de aprendizado de máquina e a tornar o modelo acessível para outros aplicativos cognitivos do {{site.data.keyword.watson}}. Por exemplo, é possível implementar o modelo de aprendizado de máquina para uso pelos serviços {{site.data.keyword.nlufull}} ou {{site.data.keyword.discoveryfull}} ou exportar o modelo para uso no {{site.data.keyword.ibmwatson_notm}} Explorer.
 
 ## Criando uma tarefa de anotação
 {: #wks_hatask}
@@ -96,10 +96,12 @@ Esta etapa se refere a exportar componentes que permitem que o modelo seja execu
 Antes que os anotadores humanos possam começar a incluir anotações em documentos, o gerenciador de processos de anotação deve criar uma tarefa de anotação.
 
 ### Sobre essa Tarefa
+{: #wks_hatask_about}
 
 A tarefa de anotação especifica quais documentos devem ser anotados. Para comparar a qualidade da execução dos anotadores humanos e verificar a consistência das diretrizes de anotação aplicadas por eles, deve-se incluir pelo menos dois anotadores humanos na tarefa. Além disso, alguma porcentagem de documentos deve ocorrer em todos os conjuntos de anotações que são incluídos na tarefa (você especifica a porcentagem de sobreposição ao criar os conjuntos de anotações).
 
 #### Importante
+{: #wks_hatask_important}
 
 - Uma tarefa de anotação é um conceito temporal que existe para permitir que os anotadores humanos anotem texto em espaços isolados. Também assegura que somente as anotações aprovadas sejam promovidas para verdade absoluta.
 - Um conjunto de anotações pode ser incluído em uma tarefa ativa por vez. Para incluir um conjunto de anotações de uma tarefa para uma tarefa diferente, deve-se primeiro excluir a tarefa na qual o conjunto de anotações está ativo.
@@ -109,15 +111,13 @@ A tarefa de anotação especifica quais documentos devem ser anotados. Para comp
 - É possível ter até 256 tarefas de anotação por área de trabalho.
 
 ### Procedimento
+{: #wks_hatask_procedure}
 
 Para criar uma tarefa de anotação:
 
 1. Efetue login como um administrador do {{site.data.keyword.knowledgestudioshort}} e selecione a sua área de trabalho.
-1. Selecione a guia **Ativos e ferramentas** > **Documentos** > **Tarefas**.
+1. Selecione a página **Modelo de aprendizado de máquina** > **Tarefas de anotação**.
 1. Clique em **Incluir tarefa**. Especifique um nome descritivo para a tarefa e selecione a data em que a tarefa deve ser concluída.
-
-    > **Nota:** não é possível mudar o nome da tarefa posteriormente.
-
 1. Clique em **Criar**. Uma lista de conjuntos de anotações disponíveis é exibida, juntamente com os nomes dos anotadores humanos designados a eles.
 1. Selecione cada conjunto de anotações que você deseja incluir na tarefa e clique em **Criar tarefa**.
 
@@ -125,14 +125,18 @@ Para criar uma tarefa de anotação:
     {: tip}
 
 ### O que fazer em seguida
+{: #wks_hatask_next}
 
-Após a tarefa ser criada, é possível retornar para a guia **Ativos e ferramentas** > **Documentos** > **Tarefas** para visualizar o progresso de cada anotador humano. Também é possível:
+Após a tarefa ser criada, é possível retornar para a página **Modelo de aprendizado de máquina** > **Tarefas de anotação** para visualizar o progresso de cada anotador humano. Além disso, é possível concluir as tarefas a seguir:
+
+- Verificar os documentos aprovados que se sobrepõem entre conjuntos de anotações para resolver conflitos de anotação.
+- Abrir uma tarefa para incluir conjuntos de anotações nela. Assegure-se de que os conjuntos de anotações incluídos incluam documentos que se sobrepõem com documentos nos conjuntos de anotações originais.
+
+Na guia **Configurações** da navegação principal, é possível especificar as informações a seguir:
 
 - Especificar as preferências para usar cores e atalhos de teclado no editor de verdade absoluta.
 - Especificar um limite de concordância entre anotadores e, então, abrir uma tarefa para ver a consistência de documentos iguais anotados por múltiplos anotadores humanos.
 - Especificar uma URL para conectar suas diretrizes de anotação ao editor de verdade absoluta.
-- Verificar os documentos aprovados que se sobrepõem entre conjuntos de anotações para resolver conflitos de anotação.
-- Abrir uma tarefa para incluir conjuntos de anotações nela. Assegure-se de que os conjuntos de anotações incluídos incluam documentos que se sobrepõem com documentos nos conjuntos de anotações originais.
 
 ## Configurando preferências do editor de verdade absoluta
 {: #wks_hapref}
@@ -140,15 +144,16 @@ Após a tarefa ser criada, é possível retornar para a guia **Ativos e ferramen
 Um gerente de projeto pode especificar preferências para usar cores e atalhos de teclado no editor de verdade absoluta.
 
 ### Procedimento
+{: #wks_hapref_procedure}
 
 Para especificar preferências visuais para trabalhar com o editor de verdade absoluta:
 
 1. Efetue login como um administrador do {{site.data.keyword.knowledgestudioshort}} e selecione a sua área de trabalho.
-1. Na navegação à esquerda, selecione **Configurações**.
-1. Selecione a guia **Tipos de entidade** ou **Tipos de relação**.
-1. Selecione o tipo de entidade ou o tipo de relação que você deseja mudar e, em seguida, clique em **Editar atalhos de teclado e cores**. Para cada tipo, é possível definir um:
+2. Na navegação à esquerda, selecione as **Configurações** > **Configurações de anotação de documento**.
+3. Selecione a guia **Tipos de entidade** ou **Tipos de relação**.
+4. Selecione o tipo de entidade ou o tipo de relação que você deseja mudar e, em seguida, clique em **Editar atalhos de teclado e cores**. Para cada tipo, é possível definir um:
 
-    - Atalho de teclado, que significa que um usuário pode inserir `<shortcut>` para aplicar o rótulo de tipo ao texto destacado. Por exemplo, se você definir `o` como o atalho de teclado para ORGANIZAÇÃO, um usuário poderá selecionar o texto e, em seguida, pressionar a tecla `o` para aplicar o tipo de entidade ORGANIZAÇÃO ao texto destacado. Se você designar uma letra maiúscula, então o usuário inserirá `Shift+<letter>`.
+    - Atalho de teclado, que significa que um usuário pode inserir `<key>` para aplicar o rótulo de tipo ao texto destacado. Por exemplo, se você definir `o` como o atalho de teclado para `ORGANIZATION`, um usuário poderá selecionar texto e, em seguida, pressionar a tecla `o` para aplicar o tipo de entidade `ORGANIZATION` ao texto destacado. Se você designar uma letra maiúscula, o usuário deverá pressionar `Shift+<key>`.
     - Cor do texto. Assegure-se de que a cor do texto contraste com a cor do plano de fundo para que o texto fique visível após ser rotulado.
     - Cor do plano de fundo. Esta é a cor do rótulo que é aplicado à entidade após você anotá-lo.
 
@@ -157,9 +162,10 @@ Para especificar preferências visuais para trabalhar com o editor de verdade ab
 
     Conforme você designa novos atalhos e cores, é possível visualizar as mudanças.
 
-1. Também é possível mudar a cor de destaque da seleção padrão. Esta é a cor da borda que é exibida ao redor do texto após você selecioná-lo. A cor padrão é um azul claro, mas é possível mudar a cor na guia **Destaque de seleção** para facilitar a identificação dos limites do texto que é selecionado.
+5. Também é possível mudar a cor de destaque da seleção padrão. A cor de destaque é a cor da borda que é exibida em torno do texto após ser selecionada pelos anotadores humanos. A cor padrão é um azul claro, mas é possível mudar a cor na guia **Destaque de seleção** para facilitar a identificação dos limites do texto que é selecionado.
 
 #### Tarefas relacionadas
+{: #wks_hapref_related}
 
 [Modificando um sistema de tipos sem perder as anotações humanas](/docs/services/watson-knowledge-studio/improve-ml.html#wks_projtypesysmod)
 
@@ -169,16 +175,18 @@ Para especificar preferências visuais para trabalhar com o editor de verdade ab
 Para ajudá-lo a decidir se aceita ou rejeita um conjunto de documentos anotados, é possível especificar um limite de concordância entre anotadores. O limite ajuda você a comparar como bem ou mal a concordância entre anotadores compara a pontuação de IAA calculada pelo sistema.
 
 ### Sobre essa Tarefa
+{: #wks_haiaathresh_about}
 
 Para comparar como os diferentes anotadores humanos anotaram os mesmos documentos, especifique um limite de avaliação. Se as anotações feitas por um anotador humano diferem das que foram feitas por outro anotador humano ao ponto em que a diferença resulta em uma pontuação baixa, isso significa que os anotadores não concordam. O desacordo precisa ser investigado e resolvido.
 
 ### Procedimento
+{: #wks_haiaathresh_procedure}
 
 Para configurar o limite de concordância entre anotadores:
 
 1. Efetue login como um administrador do {{site.data.keyword.knowledgestudioshort}} e selecione a sua área de trabalho.
-1. Na navegação à esquerda, selecione **Configurações**.
-1. Selecione **Configurações de IAA**, especifique um valor entre 0 e 1, como .5 ou .8, em seguida, clique em **Salvar**.
+1. Selecione a guia  ** Configurações **  >  ** Configurações de IAA ** .
+2. Especifique um valor entre 0 e 1, como `.5 ` ou `.8 ` e, em seguida, clique em **Salvar**.
 
 ## Conectando-se a diretrizes de anotação
 {: #wks_haguidelines}
@@ -186,13 +194,13 @@ Para configurar o limite de concordância entre anotadores:
 Depois de criar as diretrizes de anotação para seu projeto, é possível configurar o {{site.data.keyword.knowledgestudioshort}} para se conectar a elas. Para obter ajuda com a escolha da anotação correta a ser aplicada, os anotadores humanos podem revisar as diretrizes enquanto anotam os documentos. Os administradores também podem revisar as diretrizes se eles precisam de ajuda ao resolver conflitos anotação em documentos de sobreposição.
 
 ### Procedimento
+{: #wks_haguidelines_procedure}
 
 Para conectar o editor de verdade absoluta e a ferramenta de adjudicação às suas diretrizes de anotação:
 
 1. Efetue login como um administrador do {{site.data.keyword.knowledgestudioshort}} e selecione a sua área de trabalho.
-1. Na navegação à esquerda, selecione **Configurações**.
-1. Selecione **Diretrizes de anotação**.
-1. Especifique a URL para onde suas diretrizes são hospedadas, um site dentro de sua empresa ou uma wiki que você criou anteriormente em {{site.data.keyword.IBM_notm}} developerWorks&reg;.
+1. selecione a guia  ** Configurações **  >  ** Diretrizes de Anotação ** .
+1. Especifique a URL na qual suas diretrizes estão hospedadas.
 1. Clique em **Salvar**. O sistema conecta o editor de verdade absoluta e a ferramenta de adjudicação às suas diretrizes de anotação. Dependendo das permissões de acesso concedidas aos usuários quando você criou as diretrizes, os anotadores humanos e os administradores da área de trabalho podem ser capazes de atualizar as diretrizes depois de abri-las, por exemplo, para incluir esclarecimentos e exemplos.
 
 ### Diretrizes de anotação
@@ -231,102 +239,169 @@ O exemplo apresentado aqui é uma diretriz simples que foi criada para um domín
 
 O sistema de tipos não usa subtipos ou funções de entidade, nem tipos ou classes de menção.
 
-<table cellpadding="4" cellspacing="0" summary="" id="wks_guidelinesexample__table_okd_5kj_f5" class="table" width="100%" rules="rows" frame="void" border="0"><thead class="thead" align="left"><tr class="row"><th class="entry ncol thleft" valign="top" width="23.584905660377355%" id="d1735e810">Tipo de entidade</th>
-<th class="entry ncol thleft" valign="top" width="37.971698113207545%" id="d1735e812">Diretrizes</th>
-<th class="entry ncol thleft" valign="top" width="38.44339622641509%" id="d1735e814">Exemplos</th>
-</tr>
-</thead>
-<tbody class="tbody"><tr class="row"><td class="entry ncol" valign="top" width="23.584905660377355%" headers="d1735e810 "><p class="p wrapper">ACCIDENT_OUTCOME</p></td>
-<td class="entry ncol" valign="top" width="37.971698113207545%" headers="d1735e812 "><p class="p wrapper">Uma consequência de um acidente. Aplica-se a humanos (por exemplo, falecimento) e carros (por exemplo, amassado).
-Pode incluir "rebocado" e "implementação de airbag" como indicadores de gravidade de danos e "levado
+<table summary="Esta tabela descreve os tipos de entidade.">
+  <caption>Tabela 1. Tipos de Entidade</caption>
+  <tr>
+    <th style="vertical-align:bottom; text-align:left" width="24%" id="d1735e810">Tipo de entidade</th>
+    <th style="vertical-align:bottom; text-align:left" width="38%" id="d1735e812">Diretrizes</th>
+    <th style="vertical-align:bottom; text-align:left" width="38%" id="d1735e814">Exemplos</th>
+  </tr>
+  <tr>
+    <td headers="d1735e810">
+      <p>ACCIDENT_OUTCOME</p>
+    </td>
+    <td headers="d1735e812">
+      <p>Uma consequência de um acidente. Aplica-se a humanos (por exemplo, falecimento) e carros (por exemplo, amassado). Pode incluir "rebocado" e "implementação de airbag" como indicadores de gravidade de danos e "levado
 para o hospital" (mas não funerária) como indicadores de gravidade de ferimento. Pode incluir
-negação.</p></td>
-<td class="entry ncol" valign="top" width="38.44339622641509%" headers="d1735e814 "><p class="p wrapper">"[acidente]", "[ferimento]", "sofreu [perda total]", "[sem ferimentos]", "[rebocado] devido a
+negação.</p>
+    </td>
+    <td headers="d1735e814">
+      <p>"[acidente]", "[ferimento]", "sofreu [perda total]", "[sem ferimentos]", "[rebocado] devido a
 [dano impeditivo]", [não rebocado], "airbag [não implementou]" (o airbag em si tem que ser PART_OF_CAR,
-relacionado ao sufferedFrom para este ACCIDENT_OUTCOME) e indicações de gravidade.</p></td>
-</tr>
-<tr class="row"><td class="entry ncol" valign="top" width="23.584905660377355%" headers="d1735e810 "><p class="p wrapper">CONDITION</p></td>
-<td class="entry ncol" valign="top" width="37.971698113207545%" headers="d1735e812 "><p class="p wrapper">As condições meteorológicas ou de estrada; um aspecto do cenário que pode afetar a probabilidade de acidente
-e pode mudar de dia para dia, mas não é sobre o carro ou motorista.</p><p class="p">Pode ser um erro do motorista ou
+relacionado ao sufferedFrom para este ACCIDENT_OUTCOME) e indicações de gravidade.</p>
+    </td>
+  </tr>
+  <tr>
+    <td headers="d1735e810">
+      <p>CONDITION</p>
+    </td>
+    <td headers="d1735e812 ">
+      <p>As condições meteorológicas ou de estrada; um aspecto do cenário que pode afetar a probabilidade de acidente
+e pode mudar de dia para dia, mas não é sobre o carro ou motorista.</p>
+      <p>Pode ser um erro do motorista ou
 falha mecânica e deve parecer ser problemático. Deve excluir STRUCTURE.</p>
-</td>
-<td class="entry ncol" valign="top" width="38.44339622641509%" headers="d1735e814 "><p class="p wrapper">"seco", "chuvoso", "construção", "tráfego pesado", "luz do dia", mas não "coberto de grama" ou
-"embriagado".</p><p class="p">"pneu furado", "hipercorrigido" (como em direção), "dormindo", "embriagado", "[falhou
+    </td>
+    <td headers="d1735e814">
+      <p>"seco", "chuvoso", "construção", "tráfego pesado", "luz do dia", mas não "coberto de grama" ou
+"embriagado".</p><p>"pneu furado", "hipercorrigido" (como em direção), "dormindo", "embriagado", "[falhou
 ao contornar]CONDITION uma [curva]STRUCTURE", "[saiu] da faixa" ou do acostamento, mas não "tentando
 passar" a menos que esta frase seja acompanhada por "sem espaço suficiente" ou algo semelhante, nem
 "saindo da estrada", que é um INCIDENT.</p>
-</td>
-</tr>
-<tr class="row"><td class="entry ncol" valign="top" width="23.584905660377355%" headers="d1735e810 "><p class="p wrapper">INCIDENT</p></td>
-<td class="entry ncol" valign="top" width="37.971698113207545%" headers="d1735e812 "><p class="p wrapper">Uma menção real de uma colisão, ou um movimento do carro que é claramente inadequado e
-provavelmente destrutivo, como sair da estrada, ou algum outro incidente prejudicial, como um incêndio de carro. </p><p class="p">Não
+    </td>
+  </tr>
+  <tr>
+    <td headers="d1735e810">
+      <p>INCIDENT</p>
+    </td>
+    <td headers="d1735e812">
+      <p>Uma menção real de uma colisão, ou um movimento do carro que é claramente inadequado e
+provavelmente destrutivo, como sair da estrada, ou algum outro incidente prejudicial, como um incêndio de carro. </p>
+      <p>Não
 correferencie movimentos idênticos entre si, como "atingido", "empurrado para trás" e
-"parou", mesmo se eles estão intimamente associados. </p>
-<p class="p">Exclua STRUCTURE da extensão;
+"parou", mesmo se eles estão intimamente associados.</p>
+      <p>Exclua STRUCTURE da extensão;
 Por exemplo, "[parou]INCIDENT em uma [valeta]STRUCTURE" ou "[ficando em contato]INCIDENT com
 o [guardrail]STRUCTURE".</p>
-</td>
-<td class="entry ncol" valign="top" width="38.44339622641509%" headers="d1735e814 "><p class="p wrapper"> "colisão", "atingido", "capotou", "em contato", "contra", "empurrado", "passageiro foi
+    </td>
+    <td headers="d1735e814">
+      <p> "colisão", "atingido", "capotou", "em contato", "contra", "empurrado", "passageiro foi
 [ejetado]", "rolou um quarto de volta" -- o quarto de volta indicando gravidade, mas sendo parte do
-incidente, não um ACCIDENT_OUTCOME (não anotar rotação de veículo).</p><p class="p">"parou" em
+incidente, não um ACCIDENT_OUTCOME (não anotar rotação de veículo).</p>
+      <p>"parou" em
 um local ao qual o veículo não pertence, como um aterro ou em movimento de um impacto, ou "saiu
-da estrada" (não apenas saindo de uma faixa, que pode ser uma causa). </p>
-</td>
-</tr>
-<tr class="row"><td class="entry ncol" valign="top" width="23.584905660377355%" headers="d1735e810 "><p class="p wrapper">MANUFACTURER</p></td>
-<td class="entry ncol" valign="top" width="37.971698113207545%" headers="d1735e812 "><p class="p wrapper">A empresa que faz o veículo.</p></td>
-<td class="entry ncol" valign="top" width="38.44339622641509%" headers="d1735e814 "><p class="p wrapper">Toyota, Mazda, General Motors</p></td>
-</tr>
-<tr class="row"><td class="entry ncol" valign="top" width="23.584905660377355%" headers="d1735e810 "><p class="p wrapper">MODEL</p></td>
-<td class="entry ncol" valign="top" width="37.971698113207545%" headers="d1735e812 "><p class="p wrapper">O tipo específico de carro, feito por um fabricante específico. Exclua quaisquer termos adicionais/apare
+da estrada" (não apenas saindo de uma faixa, que pode ser uma causa).</p>
+    </td>
+  </tr>
+  <tr>
+    <td headers="d1735e810">
+      <p>MANUFACTURER</p>
+    </td>
+    <td headers="d1735e812">
+      <p>A empresa que faz o veículo.</p>
+    </td>
+    <td headers="d1735e814">
+      <p>Toyota, Mazda, General Motors</p>
+    </td>
+  </tr>
+  <tr>
+    <td headers="d1735e810">
+      <p>MODEL</p>
+    </td>
+    <td headers="d1735e812">
+      <p>O tipo específico de carro, feito por um fabricante específico. Exclua quaisquer termos adicionais/apare
 indicadores de linha como "LX" ou "SE" (por exemplo, anotar somente "Xterra" para a frase "Xterra
-SE").</p></td>
-<td class="entry ncol" valign="top" width="38.44339622641509%" headers="d1735e814 "><p class="p wrapper">Camry</p></td>
-</tr>
-<tr class="row"><td class="entry ncol" valign="top" width="23.584905660377355%" headers="d1735e810 "><p class="p wrapper">MODEL_YEAR</p></td>
-<td class="entry ncol" valign="top" width="37.971698113207545%" headers="d1735e812 "><p class="p wrapper">O ano do modelo que faz parte do nome do carro.</p></td>
-<td class="entry ncol" valign="top" width="38.44339622641509%" headers="d1735e814 "><p class="p wrapper">'99, 2001</p></td>
-</tr>
-<tr class="row"><td class="entry ncol" valign="top" width="23.584905660377355%" headers="d1735e810 "><p class="p wrapper">PART_OF_CAR</p></td>
-<td class="entry ncol" valign="top" width="37.971698113207545%" headers="d1735e812 "><p class="p wrapper">Uma peça de um veículo, dentro ou fora dele, independentemente se especificamente
+SE").</p>
+    </td>
+    <td headers="d1735e814">
+      <p>Camry</p>
+    </td>
+  </tr>
+  <tr>
+    <td headers="d1735e810">
+      <p>MODEL_YEAR</p>
+    </td>
+    <td headers="d1735e812">
+      <p>O ano do modelo que faz parte do nome do carro.</p>
+    </td>
+    <td headers="d1735e814">
+      <p>'99, 2001</p>
+    </td>
+  </tr>
+  <tr>
+    <td headers="d1735e810">
+      <p>PART_OF_CAR</p>
+    </td>
+    <td headers="d1735e812">
+      <p>Uma peça de um veículo, dentro ou fora dele, independentemente se especificamente
 envolvido no incidente. Exclua listas de recursos de tais peças. Inclua as indicações de
 onde a peça está no carro ou algo que só se refira a uma parte de um carro sem ser uma
-peça específica.</p><p class="p">Pode ser plural. Pode incluir especificação de posição no veículo, como
+peça específica.</p><p>Pode ser plural. Pode incluir especificação de posição no veículo, como
 "[airbag do motorista]", "[porta RF ]" (significando direita frontal), "[RR] passageiro", "[airbags LF e RF]",
 "[limitações passivas/automáticas de primeira linha]", "[sistema de segurança] com recursos do EDR".</p>
-<p class="p">Inclua
+      <p>Inclua
 barcos rebocados, tanques, etc., exceto semi-trailers, os quais têm
 um ano/modelo/fabricante distinto.</p>
-</td>
-<td class="entry ncol" valign="top" width="38.44339622641509%" headers="d1735e814 "><p class="p wrapper">Seção cruzada, plano frontal, pneu, volante, airbag, etc.</p></td>
-</tr>
-<tr class="row"><td class="entry ncol" valign="top" width="23.584905660377355%" headers="d1735e810 "><p class="p wrapper">PERSON</p></td>
-<td class="entry ncol" valign="top" width="37.971698113207545%" headers="d1735e812 "><p class="p wrapper">Qualquer pessoa descrita em um cenário de acidente em um relatório (pode ser um motorista ou um
-passageiro/ocupante de um veículo, pedestre ou testemunha). </p><p class="p">Não anote adjetivos. Em vez de "um [69 anos] dirigia", anote "um [homem] de 69 anos de idade dirigia". Pode ser plural, por exemplo,
-"LR e RF [ocupantes]". Exclua as pessoas que chegam após o incidente. </p>
-<p class="p">Na ausência de um
+    </td>
+    <td headers="d1735e814">
+      <p>Seção cruzada, plano frontal, pneu, volante, airbag, etc.</p>
+    </td>
+  </tr>
+  <tr>
+    <td headers="d1735e810">
+      <p>PERSON</p>
+    </td>
+    <td headers="d1735e812">
+      <p>Qualquer pessoa descrita em um cenário de acidente em um relatório (pode ser um motorista ou um
+passageiro/ocupante de um veículo, pedestre ou testemunha).</p>
+      <p>Não anote adjetivos. Em vez de "um [69 anos] dirigia", anote "um [homem] de 69 anos de idade dirigia". Pode ser plural, por exemplo, "LR e RF [ocupantes]". Exclua as pessoas que chegam após o incidente.</p>
+      <p>Na ausência de um
 tipo de entidade "animal", use PERSON para identificação de animais selvagens envolvidos em/causando colisões, pois a capacidade
-de movimentação os torna mais como PERSON que STRUCTURE. </p>
-<p class="p">Nota: "airbag do passageiro" é um
-PART_OF_CAR; que não significa que uma pessoa está presente. </p>
-</td>
-<td class="entry ncol" valign="top" width="38.44339622641509%" headers="d1735e814 "><p class="p wrapper">Motorista, ocupante, paciente, criança</p></td>
-</tr>
-<tr class="row"><td class="entry ncol" valign="top" width="23.584905660377355%" headers="d1735e810 "><p class="p wrapper">STRUCTURE</p></td>
-<td class="entry ncol" valign="top" width="37.971698113207545%" headers="d1735e812 "><p class="p wrapper">Uma estrutura que está em uma estrada, está próxima ou faz parte dela. Inclua adjetivos de estrada específicos provavelmente
-para serem relevantes à configuração de um acidente; omita outros adjetivos.</p></td>
-<td class="entry ncol" valign="top" width="38.44339622641509%" headers="d1735e814 "><p class="p wrapper">[duas faixas, estrada de mão dupla], [faixa esquerda], sentido oeste-leste [faixa], 2 pés [valeta], [linha de faixa direita],
-[rampa de saída], [coluna], [árvore], inclinação acentuada [aterro]</p></td>
-</tr>
-<tr class="row"><td class="entry ncol" valign="top" width="23.584905660377355%" headers="d1735e810 "><p class="p wrapper">VEHICLE</p></td>
-<td class="entry ncol" valign="top" width="37.971698113207545%" headers="d1735e812 "><p class="p wrapper">Qualquer referência ao veículo diferente de MODEL, MANUFACTURER e MODEL_YEAR. Pode ser plural, em
-cujo caso a correferência é muito improvável e sem relação de parte do grupo. </p><p class="p">Considere somente os veículos
+de movimentação os torna mais como PERSON que STRUCTURE.</p>
+      <p>Nota: "airbag do passageiro" é um
+PART_OF_CAR; que não significa que uma pessoa está presente.</p>
+    </td>
+    <td headers="d1735e814">
+      <p>Motorista, ocupante, paciente, criança</p>
+    </td>
+  </tr>
+  <tr>
+    <td headers="d1735e810">
+      <p>STRUCTURE</p>
+    </td>
+    <td headers="d1735e812">
+      <p>Uma estrutura que está em uma estrada, está próxima ou faz parte dela. Inclua adjetivos de estrada específicos provavelmente
+para serem relevantes à configuração de um acidente; omita outros adjetivos.</p>
+    </td>
+    <td headers="d1735e814">
+     <p>[duas faixas, estrada de mão dupla], [faixa esquerda], sentido oeste-leste [faixa], 2 pés [valeta], [linha de faixa direita],
+[rampa de saída], [coluna], [árvore], inclinação acentuada [aterro]</p>
+    </td>
+  </tr>
+  <tr>
+    <td headers="d1735e810">
+      <p>VEHICLE</p>
+    </td>
+    <td headers="d1735e812">
+      <p>Qualquer referência ao veículo diferente de MODEL, MANUFACTURER e MODEL_YEAR. Pode ser plural, em
+cujo caso a correferência é muito improvável e sem relação de parte do grupo.</p>
+      <p>Considere somente os veículos
 que fazem parte do cenário; exclua os veículos de emergência que responderam posteriormente, por exemplo. Bicicletas
 são VEHICLEs.</p>
-</td>
-<td class="entry ncol" valign="top" width="38.44339622641509%" headers="d1735e814 "><p class="p wrapper">"o [caminhão]", "o [carro]", "[V1]'s"</p></td>
-</tr>
-</tbody>
+    </td>
+    <td headers="d1735e814">
+      <p>"o [caminhão]", "o [carro]", "[V1]'s"</p>
+    </td>
+  </tr>
 </table>
 
 #### Tipos de relação
@@ -334,55 +409,117 @@ são VEHICLEs.</p>
 
 O sistema de tipos usa tipos de relação, mas não classes relação ou outros atributos de relações. A negação não está codificada por uma classe de relação, mas sim pelas extensões das menções, por exemplo, [sem ocupantes]PERSON foi [internado]ACCIDENT_OUTCOME com as duas menções vinculadas pelo tipo de relação sufferedFrom.
 
-<table cellpadding="4" cellspacing="0" summary="" id="wks_guidelinesexample__table_z25_m4j_f5" class="table" width="100%" rules="rows" frame="void" border="0"><thead class="thead" align="left"><tr class="row"><th class="entry ncol thleft" valign="top" width="33.26996197718631%" id="d1735e923">Tipos de entidade possíveis para a primeira menção</th>
-<th class="entry ncol thleft" valign="top" width="19.011406844106464%" id="d1735e925">Tipo de relação</th>
-<th class="entry ncol thleft" valign="top" width="47.71863117870722%" id="d1735e927">Tipos de entidade possíveis para a segunda menção</th>
-</tr>
-</thead>
-<tbody class="tbody"><tr class="row"><td class="entry ncol" valign="top" width="33.26996197718631%" headers="d1735e923 "><p class="p wrapper">VEHICLE, MODEL, MANUFACTURER [<b>2</b>]</p></td>
-<td class="entry ncol" valign="top" width="19.011406844106464%" headers="d1735e925 "><p class="p wrapper">hasProperty</p></td>
-<td class="entry ncol" valign="top" width="47.71863117870722%" headers="d1735e927 "><p class="p wrapper">MANUFACTURER, MODEL, MODEL_YEAR</p></td>
-</tr>
-<tr class="row"><td class="entry ncol" valign="top" width="33.26996197718631%" headers="d1735e923 "><p class="p wrapper">PERSON</p></td>
-<td class="entry ncol" valign="top" width="19.011406844106464%" headers="d1735e925 "><p class="p wrapper">occupantOf</p></td>
-<td class="entry ncol" valign="top" width="47.71863117870722%" headers="d1735e927 "><p class="p wrapper">VEHICLE, MODEL, MANUFACTURER, MODEL_YEAR [<b>1</b>], PART_OF_CAR, STRUCTURE</p></td>
-</tr>
-<tr class="row"><td class="entry ncol" valign="top" width="33.26996197718631%" headers="d1735e923 "><p class="p wrapper">PERSON, PART_OF_CAR, STRUCTURE, VEHICLE, MODEL, MANUFACTURER,
-MODEL_YEAR [<b>1</b>]</p></td>
-<td class="entry ncol" valign="top" width="19.011406844106464%" headers="d1735e925 "><p class="p wrapper">sufferedFrom</p></td>
-<td class="entry ncol" valign="top" width="47.71863117870722%" headers="d1735e927 "><p class="p wrapper">ACCIDENT_OUTCOME</p></td>
-</tr>
-<tr class="row"><td class="entry ncol" valign="top" width="33.26996197718631%" headers="d1735e923 "><p class="p wrapper">VEHICLE</p></td>
-<td class="entry ncol" valign="top" width="19.011406844106464%" headers="d1735e925 "><p class="p wrapper">driveUnder</p></td>
-<td class="entry ncol" valign="top" width="47.71863117870722%" headers="d1735e927 "><p class="p wrapper">CONDITION, ACCIDENT_CAUSE</p></td>
-</tr>
-<tr class="row"><td class="entry ncol" valign="top" width="33.26996197718631%" headers="d1735e923 "><p class="p wrapper">PART_OF_CAR</p></td>
-<td class="entry ncol" valign="top" width="19.011406844106464%" headers="d1735e925 "><p class="p wrapper">locatedOn</p></td>
-<td class="entry ncol" valign="top" width="47.71863117870722%" headers="d1735e927 "><p class="p wrapper">VEHICLE, MODEL, MANUFACTURER, MODEL_YEAR [<b>1</b>]</p></td>
-</tr>
-<tr class="row"><td class="entry ncol" valign="top" width="33.26996197718631%" headers="d1735e923 "><p class="p wrapper">ACCIDENT_OUTCOME</p></td>
-<td class="entry ncol" valign="top" width="19.011406844106464%" headers="d1735e925 "><p class="p wrapper">outcomeOf</p></td>
-<td class="entry ncol" valign="top" width="47.71863117870722%" headers="d1735e927 "><p class="p wrapper">INCIDENT</p></td>
-</tr>
-<tr class="row"><td class="entry ncol" valign="top" width="33.26996197718631%" headers="d1735e923 "><p class="p wrapper">INCIDENT</p></td>
-<td class="entry ncol" valign="top" width="19.011406844106464%" headers="d1735e925 "><p class="p wrapper">causedBy</p></td>
-<td class="entry ncol" valign="top" width="47.71863117870722%" headers="d1735e927 "><p class="p wrapper">CONDITION, ACCIDENT_CAUSE <strong class="ph b">(lembrete: requer prova textual da
-causalidade)</strong></p></td>
-</tr>
-<tr class="row"><td class="entry ncol" valign="top" width="33.26996197718631%" headers="d1735e923 "><p class="p wrapper">INCIDENT</p></td>
-<td class="entry ncol" valign="top" width="19.011406844106464%" headers="d1735e925 "><p class="p wrapper">impactPoint</p></td>
-<td class="entry ncol" valign="top" width="47.71863117870722%" headers="d1735e927 "><p class="p wrapper">O PERSON, PART_OF_CAR, STRUCTURE, VEHICLE, MANUFACTURER, MODEL ou
-MODEL_YEAR [<b>1</b>] que é atingido ou envolvido no acidente.</p><p class="p">impactPoint para STRUCTURE
+<table summary="Esta tabela descreve os tipos de relação.">
+  <caption>Tabela 2. Tipos de Relação</caption>
+  <tr>
+    <th style="vertical-align:bottom; text-align:left" width="33%" id="d1735e923">
+      Tipos de entidade possíveis para a primeira menção
+    </th>
+    <th style="vertical-align:bottom; text-align:center" width="19%" id="d1735e925">
+      Tipo de relação
+    </th>
+    <th style="vertical-align:bottom; text-align:left" width="48%" id="d1735e927">
+      Tipos de entidade possíveis para a segunda menção
+    </th>
+  </tr>
+  <tr>
+    <td headers="d1735e923">
+      VEHICLE, MODEL, MANUFACTURER [<b>2</b>]
+    </td>
+    <td style="text-align:center" headers="d1735e925">
+      hasProperty
+    </td>
+    <td headers="d1735e927">
+      MANUFACTURER, MODEL, MODEL_YEAR
+    </td>
+  </tr>
+  <tr>
+    <td headers="d1735e923">
+      PERSON
+    </td>
+    <td style="text-align:center" headers="d1735e925">
+      occupantOf
+    </td>
+    <td headers="d1735e927">
+      VEHICLE, MODEL, MANUFACTURER, MODEL_YEAR [<b>1</b>], PART_OF_CAR, STRUCTURE
+    </td>
+  </tr>
+  <tr>
+    <td headers="d1735e923">
+      PERSON, PART_OF_CAR, STRUCTURE, VEHICLE, MODEL, MANUFACTURER,
+MODEL_YEAR [<b>1</b>]
+    </td>
+    <td style="text-align:center" headers="d1735e925">
+      sufferedFrom
+    </td>
+    <td headers="d1735e927">
+      ACCIDENT_OUTCOME
+    </td>
+  </tr>
+  <tr>
+    <td headers="d1735e923">
+      VEHICLE
+    </td>
+    <td style="text-align:center" headers="d1735e925">
+      driveUnder
+    </td>
+    <td headers="d1735e927">
+      CONDITION, ACCIDENT_CAUSE
+    </td>
+  </tr>
+  <tr>
+    <td headers="d1735e923">
+      PART_OF_CAR
+    </td>
+    <td style="text-align:center" headers="d1735e925">
+      locatedOn
+    </td>
+    <td headers="d1735e927">
+      VEHICLE, MODEL, MANUFACTURER, MODEL_YEAR [<b>1</b>]
+    </td>
+  </tr>
+  <tr>
+    <td headers="d1735e923">
+      ACCIDENT_OUTCOME
+    </td>
+    <td style="text-align:center" headers="d1735e925">
+      outcomeOf
+    </td>
+    <td headers="d1735e927">
+      INCIDENT
+    </td>
+  </tr>
+  <tr>
+    <td headers="d1735e923">
+      INCIDENT
+    </td>
+    <td style="text-align:center" headers="d1735e925">
+      causedBy
+    </td>
+    <td headers="d1735e927">
+      CONDITION, ACCIDENT_CAUSE <strong>(lembrete: requer evidência textual da causalidade)</strong>
+    </td>
+  </tr>
+  <tr>
+    <td headers="d1735e923">
+      INCIDENT
+    </td>
+    <td style="text-align:center" headers="d1735e925">
+      impactPoint
+    </td>
+    <td headers="d1735e927">
+      <p>O PERSON, PART_OF_CAR, STRUCTURE, VEHICLE, MANUFACTURER, MODEL ou
+MODEL_YEAR [<b>1</b>] que é atingido ou envolvido no acidente.</p>
+      <p>impactPoint para STRUCTURE
 não inclui apenas especificar o local de um impacto que não envolva aquela STRUCTURE,
 então não se aplica a dois veículos que colidem em uma [interseção]STRUCTURE, mas se aplica a um
 veículo atingindo um [aterro]STRUCTURE.</p>
-</td>
-</tr>
-</tbody>
+    </td>
+  </tr>
 </table>
 
 #### Notas da tabela
+{: #table_notes}
 
-**1** A notação VEHICLE/MODEL/MANUFACTURER/MODEL_YEAR refere-se a uma menção de um veículo. As últimas três são respectivamente para casos em que o texto diz algo como "o Accord", "o Honda" ou, provavelmente raramente, "o ano 99". Os quatro tipos de entidade estão em ordem de prioridade, então em "o motorista do Honda Accord 99", a relação seria o motorista (como PERSON) occupantOf Accord (como MODEL), em cujo caso Acordo teria a relação hasProperty com Honda e 99.
-
-**2** MODEL e MANUFACTURER podem somente ser o primeiro argumento de hasProperty, somente quando eles aparecem como substantivos (referências a um veículo). MODEL pode ter a relação hasProperty com MANUFACTURER e MODEL_YEAR, como em "Honda Accord 99 dirigido". MANUFACTURER pode somente ter a relação hasProperty com MODEL_YEAR, como em "Honda 99 dirigido".
+1.  A notação VEHICLE/MODEL/MANUFACTURER/MODEL_YEAR refere-se a uma menção de um veículo. As últimas três são respectivamente para casos em que o texto diz algo como "o Accord", "o Honda" ou, provavelmente raramente, "o ano 99". Os quatro tipos de entidade estão em ordem de prioridade, então em "o motorista do Honda Accord 99", a relação seria o motorista (como PERSON) occupantOf Accord (como MODEL), em cujo caso Acordo teria a relação hasProperty com Honda e 99.
+1.  MODEL e MANUFACTURER só podem ser o primeiro argumento de hasProperty, somente quando aparecem como substantivos (referências a um veículo). MODEL pode ter a relação hasProperty com MANUFACTURER e MODEL_YEAR, como em "Honda Accord 99 dirigido". MANUFACTURER pode somente ter a relação hasProperty com MODEL_YEAR, como em "Honda 99 dirigido".

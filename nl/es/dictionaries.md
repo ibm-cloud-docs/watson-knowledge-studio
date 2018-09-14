@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -23,7 +23,7 @@ Esta documentación es para {{site.data.keyword.knowledgestudiofull}} en {{site.
 # Creación de diccionarios
 {: #dictionaries}
 
-Los diccionarios ayudan a los anotadores automáticos de {{site.data.keyword.knowledgestudioshort}} a comprender el idioma del dominio.
+Los diccionarios ayudan a los modelos de aprendizaje automático de {{site.data.keyword.knowledgestudioshort}} a comprender el idioma del dominio.
 {: shortdesc}
 
 ## Diccionarios
@@ -33,9 +33,9 @@ En el aprendizaje automático, un diccionario agrupa palabras y frases que tiene
 
 Un diccionario es una lista de palabras y frases que son equivalentes para fines de extracción de información, lo que significa que son intercambiables para los fines de identificación de menciones de entidades y de relaciones.
 
-Tenga en cuenta este ejemplo: una entrada de diccionario contiene los siete días de la semana. Para anotar un documento, un anotador humano asigna el tipo de entidad DAY_OF_WEEK a menciones de Lunes y Viernes en el texto. Dado que el diccionario equipara los siete días de la semana, ayudará a garantizar que un modelo de aprendizaje automático anote correctamente apariciones de Martes, Miércoles y el resto de los días de la semana en documentos no vistos en tiempo de ejecución. Además, equiparar estas palabras también beneficia la extracción de información en el texto circundante. Lo que aprende el modelo de aprendizaje automático de ejemplos de entrenamiento sobre los textos cerca de Lunes y Viernes se aplica a los textos que el modelo de aprendizaje automático ve cerca de otros días de la semana porque el diccionario indica que estos términos son equivalentes para fines de extracción de información.
+Tenga en cuenta este ejemplo: una entrada de diccionario contiene los siete días de la semana. Para anotar un documento, un anotador humano asigna el tipo de entidad `DAY_OF_WEEK` a menciones de *Lunes* y *Viernes* en el texto. Dado que el diccionario equipara los siete días de la semana, ayudará a garantizar que un modelo de aprendizaje automático anote correctamente apariciones de *Martes*, *Miércoles*, y el resto de los días de la semana en documentos no vistos en tiempo de ejecución. Además, equiparar estas palabras también beneficia la extracción de información en el texto circundante. Lo que aprende el modelo de aprendizaje automático de ejemplos de entrenamiento sobre los textos cerca de *Lunes* y *Viernes* se aplica a los textos que el modelo de aprendizaje automático ve cerca de otros días de la semana porque el diccionario indica que estos términos son equivalentes para fines de extracción de información.
 
-> **Nota:** No es necesario crear un diccionario que contenga información de los días de la semana; se crean varios diccionarios de finalidad general como este en la aplicación. Otros incluyen países, nombres de lugares, palabras de números, animales, plantas, enfermedades, palabras de medida (como onza y metro), y palabras de título de saludo (como Mr. (Señor) y Mrs. (Señora)). No puede inhabilitar ni editar diccionarios incorporados.
+> **Nota:** No es necesario crear un diccionario que contenga información de los días de la semana. Se crean varios diccionarios de finalidad general como este en la aplicación. Otros diccionarios incorporados incluyen países, nombres de lugares, palabras de números, animales, plantas, enfermedades, palabras de medida (como *onza* y *metro*), y palabras de título de saludo (como *Mr.* (Señor) y *Mrs.* (Señora)). No puede inhabilitar ni editar diccionarios incorporados.
 
 Evite añadir entradas que tengan varios significados. Por ejemplo, en un dominio sobre automovilismo, tiene sentido incluir el término *banco*, que hace referencia a una característica vial, solo si las instituciones financieras no se tratan también frecuentemente en el texto. Si se dan ambos sentidos de la palabra con frecuencia en los documentos de origen, será mejor dejarla fuera de ambos tipos de diccionarios: el diccionario que está asociado con características viales, y el que está asociado con las instituciones financieras.
 
@@ -52,6 +52,7 @@ Los diccionarios se utilizan en un par de formas, todas opcionales. Los utiliza 
 - **Uso de la preanotación**
 
     Los diccionarios son importantes para los siguientes procesos de preanotación.
+
     - Preanotador del diccionario: Asocie un diccionario con un tipo de entidad desde el sistema de tipos al ejecutar el preanotador del diccionario.
     - Modelo basado en reglas: Puede asociar un diccionario opcionalmente con una clase de regla. Las clases se correlacionarán con tipos de entidades desde el sistema de tipos al ejecutar el modelo basado en reglas para preanotar documentos. Como resultado, los términos del diccionario se correlacionan, aunque no directamente, con los tipos de entidades también para el modelo basado en reglas.
 
@@ -59,9 +60,9 @@ Los diccionarios se utilizan en un par de formas, todas opcionales. Los utiliza 
 
 ### Consideraciones sobre el idioma
 
-- Para el portugués de Brasil, el inglés, el francés, el alemán, el italiano y el español, {{site.data.keyword.knowledgestudioshort}} no proporciona actualmente una opción para especificar coincidencias del diccionario que no distingan entre mayúsculas y minúsculas, pero sí entradas del diccionario que coinciden con texto en mayúsculas. Por ejemplo, "vehicle" ("vehículo") del diccionario coincide con "vehicle", "Vehicle" o "VEHICLE" del texto, mientras que "Sat" del diccionario coincide con "Sat" o "SAT" del texto, pero no con "sat".
+- Para el portugués de Brasil, el inglés, el francés, el alemán, el italiano y el español, {{site.data.keyword.knowledgestudioshort}} no proporciona actualmente una opción para especificar coincidencias del diccionario que no distingan entre mayúsculas y minúsculas, pero sí entradas del diccionario que coinciden con texto en mayúsculas. Por ejemplo, *vehicle* ("vehículo") del diccionario coincide con *vehicle*, *Vehicle* o *VEHICLE* del texto, mientras que *Sat* del diccionario coincide con *Sat* o *SAT* del texto, pero no con *sat*.
 - Para el japonés y el coreano, la coincidencia del diccionario durante la preanotación distingue entre mayúsculas y minúsculas.
-- Para el árabe, {{site.data.keyword.knowledgestudioshort}} presupone que el texto en árabe se almacena sin formato y trata el formato numérico como una propiedad de nivel de almacenamiento. Para obtener detalles sobre cómo maneja {{site.data.keyword.knowledgestudioshort}} el formato de caracteres y el formato numérico en árabe, consulte [Configuración de soporte para árabe](/docs/services/watson-knowledge-studio/language-support.html#wks_langsupp_ar).
+- Para el árabe, {{site.data.keyword.knowledgestudioshort}} presupone que el texto en árabe se almacena sin formato y trata el formato numérico como una propiedad de nivel de almacenamiento. Para obtener detalles sobre cómo maneja {{site.data.keyword.knowledgestudioshort}} el formato de caracteres y el formato numérico en árabe, consulte [Configuración de soporte para árabe](/docs/services/watson-knowledge-studio/language-support-arabic.html).
 
 ### Diccionario de archivo CSV
 {: #wks_dictionaries__cvsdict}
@@ -77,61 +78,70 @@ lemma,poscode,surface
 
 Las líneas restantes del archivo especifican las entradas de diccionario, donde:
 
-- **`lema`**
+- **lema**
 
     Especifica el formato de palabras más representativo para la entrada.
 
-- **`poscode (árabe, portugués de Brasil, inglés, francés, alemán, italiano y español)`**
+- **poscode** (árabe, portugués de Brasil, inglés, francés, alemán, italiano y español)
 
     Especifica un código que identifica la categoría léxica. Esta información de categoría léxica la utiliza el anotador del diccionario para ayudar con la señalización de la frase.
-    - 0 - Desconocido
+    - `0` - Desconocido
 
-        > **Nota:** Este código soporta el caso de ejemplo donde desea cargar un diccionario grande generado automáticamente que no incluya la información de la categoría léxica en cada entrada. Puede asignar Desconocido a todas las entradas de forma predeterminada. Evite utilizar este código, si es posible.
+        > **Nota:** Este código soporta el caso de ejemplo donde desea cargar un diccionario grande generado automáticamente que no incluya la información de la categoría léxica en cada entrada. Puede asignar *desconocido* a todas las entradas de forma predeterminada. Evite utilizar este código, si es posible.
 
-    - 1 - Pronombre
-    - 2 - Verbo
-    - 3 - Nombre
-    - 4 - Adjetivo
-    - 5 - Adverbio
-    - 6 - Adposición
-    - 7 - Interjección
-    - 8 - Conjunción
-    - 9 - Determinador
-    - 10 - Cuantificador
+    - `1` - Pronombre
+    - `2` - Verbo
+    - `3` - Nombre
+    - `4` - Adjetivo
+    - `5` - Adverbio
+    - `6` - Adposición
+    - `7` - Interjección
+    - `8` - Conjunción
+    - `9` - Determinador
+    - `10` - Cuantificador
 
-    En inglés, nombre(3), verbo(2) y adjetivo(4) son las partes de discurso más comunes utilizadas para las entradas de diccionario.
+    En inglés, nombre (`3`), verbo (`2`) y adjetivo (`4`) son las partes de discurso más comunes utilizadas para las entradas de diccionario.
 
-    > **Nota:** La categoría léxica no determina automáticamente el tipo de una mención. No presuponga que todos los nombres equivalen a las menciones de tipo de entidad ni que todos los verbos equivalen a menciones de tipo de relación. Por ejemplo, *American* es un adjetivo pero podría anotarse mejor como tipo de entidad GPE (entidad geopolítica) o PERSON. *Met* es un verbo, pero podría anotarse mejor como un EVENT_MEETING.
+    > **Nota:** La categoría léxica no determina automáticamente el tipo de una mención. No presuponga que todos los nombres equivalen a las menciones de tipo de entidad ni que todos los verbos equivalen a menciones de tipo de relación. Por ejemplo, *American* es un adjetivo pero podría anotarse mejor como tipo de entidad **GPE** (entidad geopolítica) o `PERSON`. *Met* es un verbo, pero podría anotarse mejor como un `EVENT_MEETING`.
 
     En otros idiomas, como el alemán, que utiliza palabras compuestas, la exactitud de la información de categoría léxica es incluso más importante para ayudar a determinar los límites de palabras.
 
-- **`poscode (japonés)`**
+- **poscode** (chino)
+
+    Especifica un código que identifica la categoría léxica. El valor de categoría léxica es importante para la señalización de texto y la preanotación en idiomas como el chino, que no utilizan el espacio en blanco para denotar límites de palabras.
+    - `32` - Nombre
+    - `31` - Nombre (Nombre de familia)
+    - `35` - Nombre (Organización)
+    - `34` - Nombre (Otros)
+    - `33` - Nombre (Nombre de persona)
+
+- **poscode** (japonés)
 
     Especifica un código que identifica la categoría léxica. El valor de categoría léxica es importante para la señalización del texto y para la preanotación en idiomas como el japonés, que no utilizan espacio en blanco para denotar límites de palabras.
-    - 19 - Nombre
-    - 23 - Prefijo común
-    - 24 - Sufijo común
-    - 140 - Nombre propio (Nombre)
-    - 141 - Nombre propio (Apellidos)
-    - 146 - Nombre propio (Nombre de persona)
-    - 142 - Nombre propio (Organización)
-    - 144 - Nombre propio (Nombre de lugar)
-    - 143 - Nombre propio (Región)
-    - 145 - Nombre propio (Otros)
+    - `19` - Nombre
+    - `23` - Prefijo común
+    - `24` - Sufijo común
+    - `140` - Nombre propio (Nombre)
+    - `141` - Nombre propio (Apellidos)
+    - `146` - Nombre propio (Nombre de persona)
+    - `142` - Nombre propio (Organización)
+    - `144` - Nombre propio (Nombre de lugar)
+    - `143` - Nombre propio (Región)
+    - `145` - Nombre propio (Otros)
 
-- **`poscode (coreano)`**
+- **poscode** (coreano)
 
     Especifica un código que identifica la categoría léxica. El valor de categoría léxica es importante para la señalización de texto y la preanotación en idiomas como el coreano, que no utilizan el espacio en blanco para denotar límites de palabras.
-    - 10010 - Nombre
-    - 10300 - Nombre propio (Nombre)
-    - 10310 - Nombre propio (Apellidos)
-    - 110360 - Nombre propio (Nombre de persona)
-    - 10320 - Nombre propio (Organización)
-    - 10340 - Nombre propio (Nombre de lugar)
-    - 10330 - Nombre propio (Región)
-    - 10350 - Nombre propio (Otros)
+    - `10010` - Nombre
+    - `10300` - Nombre propio (Nombre)
+    - `10310` - Nombre propio (Apellidos)
+    - `110360` - Nombre propio (Nombre de persona)
+    - `10320` - Nombre propio (Organización)
+    - `10340` - Nombre propio (Nombre de lugar)
+    - `10330` - Nombre propio (Región)
+    - `10350` - Nombre propio (Otros)
 
-- **`superficie`**
+- **superficie**
 
     Especifica los términos equivalentes, también llamados formas superficiales. Repita el lema como una forma superficial y utilice una coma para separar varias formas superficiales. Si una forma superficial incluye una coma, ponga la forma superficial entre comillas.
 
@@ -151,7 +161,7 @@ premium,4,premium,premium-grade
 
 **Tareas relacionadas**:
 
-[Preanotación de documentos con el Preanotador de diccionarios](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannot)
+[Preanotación de documentos con un diccionario](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannot)
 
 ## Adición de diccionarios a un espacio de trabajo
 {: #wks_projdictionaries}
@@ -166,7 +176,7 @@ Se aplican las siguientes restricciones a los diccionarios:
 
 - Máximo de 15.000 entradas por diccionario
 
-    > **Nota:** Este límite no se aplica a los diccionarios cargados como un archivo CSV de diccionario. Los diccionarios de solo lectura pueden contener más entradas.
+    > **Nota:** Este límite no se aplica a los diccionarios cargados como un archivo `CSV` de diccionario. Los diccionarios de solo lectura pueden contener más entradas.
 
 - Máximo de 64 diccionarios por espacio de trabajo
 
@@ -174,35 +184,31 @@ Se aplican las siguientes restricciones a los diccionarios:
 
 Para añadir un diccionario al espacio de trabajo:
 
-1. Inicie sesión como un administrador o gestor de proyectos de {{site.data.keyword.knowledgestudioshort}} y abra el separador **Activos y herramientas** > **Preanotadores** > **Diccionarios**.
+1. Inicie sesión como un administrador o gestor de proyectos de {{site.data.keyword.knowledgestudioshort}} y abra la página **Activos** > **Diccionarios**.
 1. Efectúe una de las tareas siguientes:
 
-    - Pulse el botón **Cargar diccionario**, seleccione un diccionario y, a continuación, pulse **Cargar**. Después de cargar un diccionario, pulse **Gestionar diccionarios** para ver el diccionario y asociarlo con un tipo de entidad.
+    - Junto al botón **Crear diccionario**, pulse el icono **Menú** y, a continuación, seleccione **Cargar diccionario**. Seleccione un diccionario y, a continuación, pulse **Cargar**. Después de cargar un diccionario, selecciónelo para ver el diccionario y asociarlo con un tipo de entidad.
 
-        - Puede cargar un archivo ZIP que contenga un diccionario descargado de otro espacio de trabajo de {{site.data.keyword.knowledgestudioshort}}. Debe cargar el sistema de tipos descargado desde el otro espacio de trabajo en formato JSON para poder cargar el archivo de diccionario correspondiente. Puede editar y añadir entradas a un diccionario que reutilice de otro espacio de trabajo de {{site.data.keyword.knowledgestudioshort}}. Consulte [Carga de recursos desde otro espacio de trabajo](/docs/services/watson-knowledge-studio/exportimport.html) para obtener más detalles.
+    Puede cargar un archivo ZIP que contenga un diccionario descargado de otro espacio de trabajo de {{site.data.keyword.knowledgestudioshort}}. Debe cargar el sistema de tipos descargado desde el otro espacio de trabajo en formato JSON para poder cargar el archivo de diccionario correspondiente. Puede editar y añadir entradas a un diccionario que reutilice de otro espacio de trabajo de {{site.data.keyword.knowledgestudioshort}}. Consulte [Carga de recursos desde otro espacio de trabajo](/docs/services/watson-knowledge-studio/exportimport.html) para obtener más detalles.
 
-        La carga de un archivo CSV también está soportada, pero cargar directamente como un diccionario crea un diccionario de solo vista previa que no puede editar ni utilizar para preanotar documentos. Para cargar un archivo CSV que pueda editar y utilizar para la preanotación, pulse **Gestionar diccionarios** y, a continuación, **Crear diccionario** para crear un diccionario en primer lugar y, a continuación, cargar el contenido de CSV como entradas a dicho diccionario creado recientemente.
+    La carga de un archivo CSV también está soportada, pero cargar directamente como un diccionario crea un diccionario de solo vista previa que no puede editar ni utilizar para preanotar documentos. Para cargar un archivo CSV que pueda editar y utilizar para la preanotación, pulse **Crear diccionario** para crear un diccionario en primer lugar y, a continuación, cargar el contenido de CSV como entradas a dicho diccionario creado recientemente.
 
-    - Pulse el botón **Gestionar diccionarios** para crear un diccionario nuevo al que puede añadir entradas de diccionario.
+    - Pulse el botón **Crear diccionario** para crear un diccionario vacío al que puede añadir entradas de diccionario. Especifique un nombre descriptivo para el diccionario y, a continuación, pulse **Guardar**.
 
-        Pulse el botón **Crear diccionario** y especifique un nombre descriptivo para el diccionario. Seleccione el tipo de entidad que describa mejor el propósito del diccionario y, a continuación, pulse **Guardar**.
+2. Para añadir entradas al diccionario, realice una de las siguientes tareas:
 
-1. Para añadir entradas al diccionario, realice una de las siguientes tareas:
+    - Pulse **Añadir entrada** para añadir una entrada de diccionario. Especifique el *lema* (el formato de palabra más representativo para el término).
+    - Pulse **Cargar** para cargar un archivo `CSV` que contenga entradas de diccionario, y, a continuación, examine para seleccionar el archivo. El archivo `CSV` debe ser inferior a 1 MB.
 
-    - Pulse **Añadir entrada** para añadir una entrada de diccionario. Especifique el lema (el formato de palabra más representativo para el término).
-    - Pulse **Cargar** para cargar un archivo `CSV` que contenga entradas de diccionario, y, a continuación, examine para seleccionar el archivo. El archivo CSV debe ser inferior a 1 MB.
+3. Después de cargar o de añadir entradas, podrá editar las entradas.
 
-1. Después de cargar o de añadir entradas, podrá editar las entradas.
+    Abra una entrada para especificar términos equivalentes, llamados *formas superficiales*. Cada forma superficial debe tener 256 o menos caracteres. Puede cambiar cuál de las formas superficiales se utilizará como lema. Por ejemplo, el lema *{{site.data.keyword.IBM_notm}}* puede tener formas superficiales como *{{site.data.keyword.IBM_notm}} Corp.* e *International Business Machines, Inc.*.
 
-    Abra una entrada para especificar términos equivalentes, llamados formas superficiales. Cada forma superficial debe tener 256 o menos caracteres. Puede cambiar cuál de las formas superficiales se utilizará como lema.
-
-    Por ejemplo, el lema *{{site.data.keyword.IBM_notm}}* puede tener formas superficiales como *{{site.data.keyword.IBM_notm}} Corp.* e *International Business Machines, Inc.*.
-
-1. Seleccione la categoría léxica apropiada para cada lema y forma superficial del diccionario.
+4. Seleccione la categoría léxica apropiada para cada lema y forma superficial del diccionario.
 
     La información de categoría léxica la utiliza el señalizador, y durante la preanotación.
 
-1. Pulse **Guardar** para almacenar los cambios.
+5. Pulse **Guardar** para almacenar los cambios.
 
 ### Qué hacer a continuación
 
@@ -210,8 +216,8 @@ Ejecute el preanotador, que utiliza los diccionarios creados para realizar un pa
 
 **Tareas relacionadas**:
 
-[Preanotación de documentos con el Preanotador de diccionarios](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannot)
+[Preanotación de documentos con un diccionario](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannot)
 
 **Referencia relacionada**:
 
-[Soporte de varios idiomas](/docs/services/watson-knowledge-studio/language-support.html)
+[Soporte de idioma](/docs/services/watson-knowledge-studio/language-support.html)

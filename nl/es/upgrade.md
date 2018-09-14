@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-30"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -26,7 +26,7 @@ Esta documentación es para {{site.data.keyword.knowledgestudiofull}} en {{site.
 Para actualizar el nivel del servicio, consulte la página {{site.data.keyword.knowledgestudioshort}} del [catálogo de {{site.data.keyword.cloud_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/catalog/services/knowledge-studio){: new_window}.
 {: shortdesc}
 
-Si actualiza desde el Plan gratuito de {{site.data.keyword.knowledgestudioshort}}, necesitará migrar manualmente los espacios de trabajo siguiendo el proceso [copia de seguridad y restauración](/docs/services/watson-knowledge-studio/backup-restore.html).
+Si actualiza desde un plan Lite de {{site.data.keyword.knowledgestudioshort}} a un plan estándar, {{site.data.keyword.knowledgestudioshort}} utiliza la migración in situ. No es necesario realizar ninguna migración manual.
 
 **Nota**: En este momento, degradar su plan en {{site.data.keyword.cloud_notm}} no está soportado. Puede, sin embargo, gestionar los usuarios, el almacenamiento, la facturación y el uso.
   - Para obtener información sobre la desactivación de las cuentas de usuario en {{site.data.keyword.knowledgestudioshort}}, consulte [Ensamblaje de un equipo](/docs/services/watson-knowledge-studio/team.html#deactivating-user-accounts).

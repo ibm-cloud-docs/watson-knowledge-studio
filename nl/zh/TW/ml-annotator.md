@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -32,38 +32,87 @@ lastupdated: "2018-04-04"
 
 ![開發機器學習模型的工作流程](images/wks-checklist.svg "顯示您要建立模型時必須執行的重要步驟") 圖 1. 開發機器學習模型的工作流程
 
-<table cellpadding="4" cellspacing="0" summary="建立及修正模型" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d14771e70" class="stentry thleft thbot">步驟</th>
-<th valign="bottom" align="left" id="d14771e72" class="stentry thleft thbot">說明</th>
-</tr>
-<tr class="strow"><td valign="top" headers="d14771e70" class="stentry"><p class="p wrapper">建立工作區。</p></td>
-<td valign="top" headers="d14771e72" class="stentry"><p class="p wrapper">請參閱[建立工作區](/docs/services/watson-knowledge-studio/create-project.html)。工作區包含用來建立模型的資源，包括：</p><dl class="dl"><dt class="dt dlterm">類型系統</dt>
-<dd class="dd"><p class="p wrapper">上傳或建立類型系統，然後定義註釋人員在註釋文字時可以套用的實體類型和關係類型。模型程序管理員通常會與您領域的主題專家合作，一起定義類型系統。請參閱[建立類型系統](/docs/services/watson-knowledge-studio/typesystem.html)。</p></dd>
-<dt class="dt dlterm">來源文件</dt>
-<dd class="dd"><p class="p wrapper">將代表您領域內容的範例文件上傳至工作區，以建立語料庫。請參閱[新增註釋的文件](/docs/services/watson-knowledge-studio/document-for-annotation.html)。將語料庫分割為文件集、指定在所有文件集之間共用的文件百分比，並將文件集指派給註釋人員。請參閱[建立及指派註釋集](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_projdocsets)。</p></dd>
-<dt class="dt dlterm">字典</dt>
-<dd class="dd"><p class="p wrapper">上傳或建立用於註釋文字的字典。您可以選擇手動新增字典項目，或從檔案上傳項目，然後編輯項目。請參閱[建立字典](/docs/services/watson-knowledge-studio/dictionaries.html)。</p></dd>
-</dl>
-</td>
-</tr>
-<tr class="strow"><td valign="top" headers="d14771e70" class="stentry"><p class="p wrapper"><strong class="ph b">選用</strong>：預先註釋文件</p></td>
-<td valign="top" headers="d14771e72" class="stentry"><p class="p wrapper">根據工作區字典中的術語、{{site.data.keyword.nlushort}} 類型的提及，或是根據您定義的規則，預先註釋文件。請參閱[引導註釋](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannotate)。</p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d14771e70" class="stentry"><p class="p wrapper">註釋文件</p></td>
-<td valign="top" headers="d14771e72" class="stentry"><ol class="ol"><li class="li"><p class="p wrapper">專案經理會將註釋作業指派給註釋人員、配置註釋人員之間的協議臨界值，並提供註釋準則供註釋人員遵循。請參閱[建立註釋作業](/docs/services/watson-knowledge-studio/annotate-documents.html#wks_hatask)。</p></li>
-<li class="li"><p class="p wrapper">註釋人員使用基準編輯器來手動註釋文件。註釋人員會識別您領域內容中感興趣的提及項目，並使用實體類型加以標記。註釋人員也會識別提及項目之間的關係（例如，Mary 是 IBM 的員工），以及提及項目如何共同參照相同的實體（例如，出現「她」時是指 Mary）。請參閱[註釋文件](/docs/services/watson-knowledge-studio/user-guide.html)。</p></li>
-</ol>
-</td>
-</tr>
-<tr class="strow"><td valign="top" headers="d14771e70" class="stentry"><p class="p wrapper">裁定及提升文件</p></td>
-<td valign="top" headers="d14771e72" class="stentry"><p class="p wrapper">接受或拒絕由註釋人員產生的基準，並裁定任何註釋差異以解決衝突。評估註釋人員努力的正確性和一致性，可能是由資深註釋人員或具有比專案經理更豐富之主題經驗的使用者負責。請參閱[裁定](/docs/services/watson-knowledge-studio/build-groundtruth.html#wks_haperform)。</p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d14771e70" class="stentry"><p class="p wrapper">訓練模型</p></td>
-<td valign="top" headers="d14771e72" class="stentry"><p class="p wrapper">建立機器學習模型。請參閱[建立機器學習模型](/docs/services/watson-knowledge-studio/train-ml.html#wks_madocsets)。</p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d14771e70" class="stentry"><p class="p wrapper">評估模型。</p></td>
-<td valign="top" headers="d14771e72" class="stentry"><p class="p wrapper">評估模型的正確性。請參閱[評估模型新增的註釋](/docs/services/watson-knowledge-studio/train-ml.html#wks_matest)。根據模型的正確性，此步驟可能會導致需要一再重新執行較早的步驟，直到達到最佳正確性為止。如需根據常見效能問題所更新項目的相關構想，請參閱[分析機器學習模型效能](/docs/services/watson-knowledge-studio/evaluate-ml.html)。</p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d14771e70" class="stentry"><p class="p wrapper">發佈模型。</p></td>
-<td valign="top" headers="d14771e72" class="stentry"><p class="p wrapper">匯出或部署模型。請參閱[使用機器學習模型](/docs/services/watson-knowledge-studio/publish-ml.html)。</p></td>
-</tr>
+<table summary="建立及修正模型">
+  <caption>表 1. 建立及修正工作流程</caption>
+  <tr>
+    <th style="vertical-align:bottom; text-align:left" id="d14771e70">步驟</th>
+    <th style="vertical-align:bottom; text-align:left" id="d14771e72">說明</th>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d14771e70">
+      <p>建立工作區。</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d14771e72">
+      <p>請參閱[建立工作區](/docs/services/watson-knowledge-studio/create-project.html)。工作區包含用來建立模型的資源，包括：</p>
+      <dl>
+        <dt>類型系統</dt>
+        <dd>
+          <p>上傳或建立類型系統，然後定義註釋人員在註釋文字時可以套用的實體類型和關係類型。模型程序管理員通常會與您領域的主題專家合作，一起定義類型系統。請參閱[建立類型系統](/docs/services/watson-knowledge-studio/typesystem.html)。</p>
+        </dd>
+        <dt>來源文件</dt>
+        <dd>
+          <p>將代表您領域內容的範例文件上傳至工作區，以建立語料庫。請參閱[新增註釋的文件](/docs/services/watson-knowledge-studio/documents-for-annotation.html)。將語料庫分割為文件集、指定在所有文件集之間共用的文件百分比，並將文件集指派給註釋人員。請參閱[建立及指派註釋集](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_projdocsets)。</p>
+        </dd>
+        <dt>字典</dt>
+        <dd>
+          <p>上傳或建立用於註釋文字的字典。您可以選擇手動新增字典項目，或從檔案上傳項目，然後編輯項目。請參閱[建立字典](/docs/services/watson-knowledge-studio/dictionaries.html)。</p>
+        </dd>
+      </dl>
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d14771e70">
+      <p><strong>選用</strong>：預先註釋文件</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d14771e72">
+      <p>根據工作區字典中的術語、{{site.data.keyword.nlushort}} 類型的提及，或是根據您定義的規則，預先註釋文件。請參閱[引導註釋](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannotate)。</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d14771e70">
+      <p>註釋文件</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d14771e72">
+      <ol>
+        <li>
+          <p>專案經理會將註釋作業指派給註釋人員、配置註釋人員之間的協議臨界值，並提供註釋準則供註釋人員遵循。請參閱[建立註釋作業](/docs/services/watson-knowledge-studio/annotate-documents.html#wks_hatask)。</p>
+        </li>
+        <li>
+          <p>註釋人員使用基準編輯器來手動註釋文件。註釋人員會識別您領域內容中感興趣的提及項目，並使用實體類型加以標記。註釋人員也會識別提及項目之間的關係（例如，Mary 是 IBM 的員工），以及提及項目如何共同參照相同的實體（例如，出現「她」時是指 Mary）。請參閱[註釋文件](/docs/services/watson-knowledge-studio/user-guide.html)。</p>
+        </li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d14771e70">
+      <p>裁定及提升文件</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d14771e72">
+      <p>接受或拒絕由註釋人員產生的基準，並裁定任何註釋差異以解決衝突。評估註釋人員努力的正確性和一致性，可能是由資深註釋人員或具有比專案經理更豐富之主題經驗的使用者負責。請參閱[裁定](/docs/services/watson-knowledge-studio/build-groundtruth.html#wks_haperform)。</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d14771e70">
+      <p>訓練模型</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d14771e72">
+      <p>建立機器學習模型。請參閱[建立機器學習模型](/docs/services/watson-knowledge-studio/train-ml.html#wks_madocsets)。</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d14771e70">
+      <p>評估模型。</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d14771e72">
+      <p>評估模型的正確性。請參閱[評估模型新增的註釋](/docs/services/watson-knowledge-studio/train-ml.html#wks_matest)。根據模型的正確性，此步驟可能會導致需要一再重新執行較早的步驟，直到達到最佳正確性為止。如需根據常見效能問題所更新項目的相關構想，請參閱[分析機器學習模型效能](/docs/services/watson-knowledge-studio/evaluate-ml.html)。</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d14771e70">
+      <p>發佈模型。</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d14771e72">
+      <p>匯出或部署模型。請參閱[使用機器學習模型](/docs/services/watson-knowledge-studio/publish-ml.html)。</p>
+    </td>
+  </tr>
 </table>

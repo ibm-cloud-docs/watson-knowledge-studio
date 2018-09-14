@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -28,10 +28,8 @@ Ce glossaire contient les termes utilisés dans {{site.data.keyword.knowledgestu
 
 Les références croisées suivantes sont utilisées dans ce glossaire : 
 
-- "Voir" renvoie d'un terme à un synonyme préconisé ou d'un acronyme ou d'une abréviation à la forme complète définie.
-- "Voir aussi" fait référence à un terme connexe ou opposé.
-
-Pour consulter les glossaires d'autres produits {{site.data.keyword.IBM}}, allez sur [www.ibm.com/software/globalization/terminology ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://www.ibm.com/software/globalization/terminology/){: new_window}.
+- *Voir* renvoie à un synonyme du terme considéré ou à une forme complète d'un acronyme ou d'une abréviation.
+- *Voir aussi* renvoie à un terme connexe ou opposé.
 
 [A](/docs/services/watson-knowledge-studio/glossary.html#gloss_A) [C](/docs/services/watson-knowledge-studio/glossary.html#gloss_C) [D](/docs/services/watson-knowledge-studio/glossary.html#gloss_D) [E](/docs/services/watson-knowledge-studio/glossary.html#gloss_E) [F](/docs/services/watson-knowledge-studio/glossary.html#gloss_F) [G](/docs/services/watson-knowledge-studio/glossary.html#gloss_G) [K](/docs/services/watson-knowledge-studio/glossary.html#gloss_K) [L](/docs/services/watson-knowledge-studio/glossary.html#gloss_L) [M](/docs/services/watson-knowledge-studio/glossary.html#gloss_M) [N](/docs/services/watson-knowledge-studio/glossary.html#gloss_N) [O](/docs/services/watson-knowledge-studio/glossary.html#gloss_O) [P](/docs/services/watson-knowledge-studio/glossary.html#gloss_P) [R](/docs/services/watson-knowledge-studio/glossary.html#gloss_R) [S](/docs/services/watson-knowledge-studio/glossary.html#gloss_S) [T](/docs/services/watson-knowledge-studio/glossary.html#gloss_T) [V](/docs/services/watson-knowledge-studio/glossary.html#gloss_V)
 
@@ -114,7 +112,7 @@ Pour consulter les glossaires d'autres produits {{site.data.keyword.IBM}}, allez
 
 - **données d'apprentissage**
 
-    Jeu de documents annotés qui peut servir à entraîner les annotateurs d'apprentissage automatique. Voir aussi [données aveugles](/docs/services/watson-knowledge-studio/glossary.html#gloss_D) et [données de test](/docs/services/watson-knowledge-studio/glossary.html#gloss_T).
+    Jeu de documents annotés qui peut servir à entraîner les modèles d'apprentissage automatique. Voir aussi [données aveugles](/docs/services/watson-knowledge-studio/glossary.html#gloss_D) et [données de test](/docs/services/watson-knowledge-studio/glossary.html#gloss_D).
 
 - **données de référence**
 
@@ -303,7 +301,7 @@ Pour consulter les glossaires d'autres produits {{site.data.keyword.IBM}}, allez
 
 - **type de relation**
 
-    Définit une relation binaire et unidirectionnelle entre deux entités. Par exemple, Marie employedBy {{site.data.keyword.IBM_notm}} est une relation valide, mais pas {{site.data.keyword.IBM_notm}} employedBy Marie.
+    Définit une relation binaire et unidirectionnelle entre deux entités. Par exemple, `Marie` `employedBy` {{site.data.keyword.IBM_notm}} est une relation valide, mais pas {{site.data.keyword.IBM_notm}} `employedBy` `Marie`.
 
 ## V
 {: #gloss_V}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-08-09"
 
 ---
 
@@ -25,6 +25,82 @@ Essa documentação destina-se ao {{site.data.keyword.knowledgestudiofull}} no {
 
 Os novos recursos e mudanças a seguir no {{site.data.keyword.knowledgestudiofull}} estão disponíveis.
 {: shortdesc}
+
+## Agosto de 2018
+{: #august2018}
+
+### Novos recursos e mudanças
+{: #new-august2018}
+
+- Introduzida uma nova opção para migração automatizada de instâncias do plano Padrão da plataforma {{site.data.keyword.IBM_notm}} Marketplace descontinuada para a plataforma [{{site.data.keyword.cloud_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/blogs/bluemix/2017/12/watson-knowledge-studio-ibm-cloud/){: new_window}. Se tiver uma instância Padrão na plataforma descontinuada, você terá a opção de migrar. Para obter mais informações, consulte  [ Migrando para o  {{site.data.keyword.cloud_notm}} ](/docs/services/watson-knowledge-studio/client-migration.html).
+
+## Julho de 2018
+{: #july2018}
+
+### Novos recursos e mudanças
+{: #new-july2018}
+
+- A página **Modelos implementados** foi atualizada para incluir modelos de instâncias do {{site.data.keyword.knowledgestudioshort}} que são gerenciadas por [*grupos de recursos* do IAM ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/docs/iam/users_roles.html){: new_window}, além de modelos que são gerenciados por [*organizações* Cloud Foundry ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window}.
+
+   O que você vê na página Modelos implementados depende da [região ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/docs/resources/services_region.html){: new_window} que hospeda sua instância do {{site.data.keyword.knowledgestudioshort}}. Se a região suportar instâncias gerenciadas por ambos os métodos de gerenciamento de acesso, você verá uma guia para cada método. Os modelos de instâncias gerenciadas pelo IAM estão listados na guia **Grupos de recursos**. Os modelos de instâncias gerenciadas pelo Cloud Foundry estão listados na guia **Organizações**.
+
+  Se a região suportar instâncias gerenciadas somente por um dos métodos de gerenciamento de acesso, você verá apenas uma lista de modelos, pois apenas um método de gerenciamento de acesso será aplicável.
+
+   Para visualizar a página **Modelos implementados**, no menu **Configurações** na barra de menus superior direita, clique em **Gerenciar modelos implementados**. Para obter informações sobre como remover a implementação de modelos na página **Modelos implementados**, veja [Removendo a implementação de modelos de aprendizado de máquina](/docs/services/watson-knowledge-studio/publish-ml.html#undeploy-view-model) e [Removendo a implementação de modelos baseados em regra](/docs/services/watson-knowledge-studio/rule-annotator-model-use.html#undeploy-view-model).
+
+- A navegação foi mudada para melhor se alinhar com o fluxo de trabalho do {{site.data.keyword.knowledgestudioshort}}. Além disso, a seguinte funcionalidade foi reorganizada:
+
+    - Na versão anterior, o gerenciamento de dicionários foi incluído como parte da página Pré-anotadores. Agora, o gerenciamento de dicionários está localizado na página Dicionários na seção Ativos da navegação.
+    - Na versão anterior, a funcionalidade de anotação humana foi distribuída entre as guias Menções, Relações e Correferências na seção Anotação de documento da navegação. Agora, a funcionalidade é mesclada sob a página Tarefas de anotação na seção Modelo de aprendizado de máquina da navegação.
+    - Para gerenciar as tarefas de anotação humana, na versão anterior, você localizou a guia Tarefas na página Ativos e Ferramentas > Documentos. Agora, você inclui tarefas e gerencia tarefas existentes na página Tarefas de anotação na seção Modelo de aprendizado de máquina da navegação.
+    - Na versão anterior, as páginas Regras, Regex e Dicionários eram páginas separadas na seção Anotação de documento da navegação. Agora, a funcionalidade é mesclada na página Regras na seção Modelo baseado em regra da navegação.
+
+    Para obter mais detalhes sobre as mudanças de navegação, veja a Figura 1 e a Tabela 3.
+
+![Capturas de tela da navegação anterior (lado esquerdo) e da nova navegação (lado direito).](images/nav3-0718.svg "Capturas de Tela da navegação anterior e nova navegação. Os detalhes sobre as mudanças estão listados na Tabela 3 e no texto anterior.") Figura 1. Capturas de tela da navegação anterior (lado esquerdo) e da nova navegação (lado direito).
+
+| Recurso | Local anterior |Local atual |
+|---------|--------------------------|----------------------|
+| Tarefas de anotação | Ativos & Ferramentas > Documentos > Tarefas | Modelo de Aprendizagem de Máquina > Tarefas de Anotação |
+| Guia Coreferences | Anotação do Documento | Modelo de aprendizado de máquina > Tarefas de anotação > tarefa > conjunto de anotação > documento |
+| Página Dicionários (Gerenciamento) | Ativos & Tools > Pré-annotators > Gerenciar Dicionários | Ativos |
+| Guia Dicionários (mapeamento para classes para modelo baseado em regra) | Anotação do Documento | Modelo Baseado em Regra > Regras |
+| Página Documentos | Ativos & Ferramentas | Ativos |
+| Página Tipos de Entidade | Ativos & Ferramentas | Ativos |
+| Guia Menções | Anotação do Documento | Modelo de aprendizado de máquina > Tarefas de anotação > tarefa > conjunto de anotação > documento |
+| Página Desempenho | Gerenciamento de modelo | Modelo de Aprendizagem |
+| Página de pré-anotadores | Ativos & Ferramentas | Modelo de Aprendizado de Máquina > Pré-anotação |
+| Guia Regex | Anotação do Documento | Modelo Baseado em Regra > Regras |
+| Página Tipos de Relação | Ativos & Ferramentas | Ativos |
+| Guia Relações | Anotação do Documento | Modelo de aprendizado de máquina > Tarefas de anotação > tarefa > conjunto de anotação > documento |
+| Guia Regras | Anotação do Documento | Modelo baseado em regra |
+| Guia Tarefas | Ativos & Ferramentas > Documentos | Modelo de Aprendizagem de Máquina > Tarefas de Anotação |
+| Página Versões (modelo de aprendizado de máquina) | Gerenciamento de modelo | Modelo de Aprendizagem |
+| Página Versões (modelo baseado em regra) | Gerenciamento de modelo | Modelo baseado em regra |
+{: caption="Tabela 3. Mudanças na navegação (julho de 2018)" caption-side="top"}
+
+## Maio de 2018
+{: #may2018}
+
+### Novos recursos e mudanças
+{: #new-may2018}
+
+- Um problema de configuração foi corrigido que fazia com que as instâncias de serviço na região Sydney não aparecessem na região Sul dos EUA.
+- Na janela Implementar Modelo, se a região na qual você está implementando suportar os *grupos de recursos* do {{site.data.keyword.iamlong}} e os *espaços* do Cloud Foundry, para ver a lista, será necessário escolher o método de gerenciamento de acesso que sua instância de serviço usa. Para obter mais informações sobre o Cloud Foundry e o {{site.data.keyword.iamshort}}, veja [Grupos de recursos e gerenciamento de acesso ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/blogs/bluemix/2017/12/resource-groups-access-management/){: new_window}.
+- Incluída a configuração de coleta de dados na página Detalhes do serviço. Para obter mais informações sobre coleta de dados, veja [Resolução de problemas, suporte e FAQs](/docs/services/watson-knowledge-studio/troubleshooting.html#content)
+- Suporte ao idioma chinês (tradicional) incluído.
+- Os usuários que têm a função Administrador agora podem ver o número de áreas de trabalho que são usadas. Essas informações estão disponíveis na página Detalhes do serviço.
+- O {{site.data.keyword.alchemylanguagefull}} não está mais disponível para implementar modelos. Para obter informações, veja [Retirada do serviço {{site.data.keyword.alchemyapishort}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/blogs/bluemix/2017/03/bye-bye-alchemyapi/){: new_window}.
+- Agora, se você excluir uma área de trabalho, será solicitado que confirme sua ação. Esperamos que essa confirmação evite exclusões acidentais.
+- A documentação inclui alguns novos detalhes sobre privacidade de dados. Leia mais em  [ Segurança de Informações ](/docs/services/watson-knowledge-studio/information-security.html).
+
+## Abril de 2018
+{: #april2018}
+
+### Novos recursos e mudanças
+{: #new-april2018}
+
+- O plano Grátis do {{site.data.keyword.knowledgestudioshort}} foi substituído pelo plano Lite. Para obter mais informações, veja [Acessar Lite com o Watson {{site.data.keyword.knowledgestudioshort}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/blogs/bluemix/2018/04/go-lite-watson-knowledge-studio/){: new_window}.
 
 ## Março de 2018
 {: #march2018}

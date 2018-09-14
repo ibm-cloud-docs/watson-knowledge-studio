@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -34,7 +34,7 @@ Führen Sie die folgenden Schritte aus, um Ihre Daten zu sichern und wiederherzu
 
 1. [In Erfahrung bringen, welche Daten gesichert werden können](#data)
 1. [Sicherung vorbereiten](#prepare)
-1. [Artefakte aus der aktuellen Instanz exportieren](#export)
+1. [Artefakte aus der aktuellen Instanz herunterladen](#export)
 1. [Arbeitsbereiche in der neuen Instanz erneut erstellen](#recreateproj)
 1. [Arbeitsbereichsdaten wiederherstellen](#restoredata)
 1. [Modelle wiederherstellen](#restoremodels)
@@ -69,7 +69,7 @@ Führen Sie die folgenden Schritte aus, um die Sicherung und Wiederherstellung I
 
 1. Tokenizer-Verwendung verstehen
 
-    In Arbeitsbereichen für Modelle für maschinelles Lernen wird standardmäßig der Tokenizer für maschinelles Lernen verwendet.Wenn Sie einen wörterverzeichnisbasierten Tokenizer verwenden und aufgrund Ihrer speziellen Anforderungen beibehalten müssen, können Sie den Arbeitsbereich so konfigurieren, dass nach der Wiederherstellung der wörterverzeichnisbasierte Tokenizer verwendet wird. Weitere Informationen hierzu finden Sie unter [Tokenizer](/docs/services/watson-knowledge-studio/create-project.html#wks_tokenizer).
+    In Arbeitsbereichen für Modelle für maschinelles Lernen wird standardmäßig der Tokenizer für maschinelles Lernen verwendet. Wenn Sie einen wörterverzeichnisbasierten Tokenizer verwenden und aufgrund Ihrer speziellen Anforderungen beibehalten müssen, können Sie den Arbeitsbereich so konfigurieren, dass nach der Wiederherstellung der wörterverzeichnisbasierte Tokenizer verwendet wird. Weitere Informationen hierzu finden Sie unter [Tokenizer](/docs/services/watson-knowledge-studio/create-project.html#wks_tokenizer).
 
 1. Modellressourcen verwalten
 
@@ -89,7 +89,7 @@ Führen Sie die folgenden Schritte aus, um die Sicherung und Wiederherstellung I
 
     Wenn Sie Arbeitsbereiche über mehrere Instanzen migrieren, sollten Sie in Betracht ziehen, eine Liste der Benutzer und ihrer Rollen für die Instanz zu erstellen, die Sie sichern möchten. Ein Benutzer mit der Rolle 'Administrator' kann die Liste von der Seite 'Benutzerkontoverwaltung' aus drucken. Nachdem die Arbeitsbereiche in der neuen Instanz erneut erstellt wurden, muss ein Benutzer mit der Rolle 'Administrator' die Benutzer hinzufügen und ihnen Rollen zuordnen.
 
-    Weitere Informationen zu den Rollen finden Sie unter [Team zusammenstellen](/docs/services/watson-knowledge-studio/team.html).
+    Weitere Informationen zu Rollen finden Sie in [Benutzerrollen in {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/roles.html).
 
 1. Arbeitsbereichsinformationen notieren
 
@@ -108,7 +108,9 @@ Laden Sie für jeden Arbeitsbereich, den Sie migrieren möchten, die folgenden A
 - Typsystem
 - Wörterverzeichnisse
 
-  **Hinweis**: Nur bearbeitbare Wörterverzeichnisse werden heruntergeladen. Sie können keine schreibgeschützten Wörterverzeichnisse herunterladen.
+  **Hinweis**:
+    - Nur bearbeitbare Wörterverzeichnisse werden heruntergeladen. Sie können keine schreibgeschützten Wörterverzeichnisse herunterladen.
+    - Bei Wörterverzeichnissen werden Entitätstypzuordnungen nicht migriert. Nachdem Sie diese Artefakte wiederhergestellt haben, müssen Sie die Wörterverzeichnisse möglicherweise den Entitätstypen zuordnen. 
 
 - Dokumente
 
@@ -133,17 +135,20 @@ Sie können jeden Arbeitsbereich erneut erstellen, indem Sie die folgenden Infor
 
 Laden Sie nach dem erneuten Erstellen der Arbeitsbereiche die Artefakte hoch, die zuvor heruntergeladen wurden.
 
-1. Laden Sie das Typsystem aus der zuvor erstellten Typsystemsicherung hoch. Details hierzu finden Sie unter [Ressourcen aus einem anderen Arbeitsbereich hochladen](/docs/services/watson-knowledge-studio/exportimport.html).
+1. Laden Sie das Typsystem aus der zuvor erstellten Typsystemsicherung hoch.
+   Details hierzu finden Sie unter [Ressourcen aus einem anderen Arbeitsbereich hochladen](/docs/services/watson-knowledge-studio/exportimport.html).
 
   **Hinweis**: Erst nach dem Hochladen des Typsystems können Sie andere Artefakte hochladen, die Sie aus der Sicherung des Arbeitsbereichs übernehmen möchten.
 
-1. Laden Sie die Wörterverzeichnisse aus der zuvor erstellten Sicherung der Wörterverzeichnisse hoch. Details hierzu finden Sie unter [Ressourcen aus einem anderen Arbeitsbereich hochladen](/docs/services/watson-knowledge-studio/exportimport.html).
+1. Laden Sie die Wörterverzeichnisse aus der zuvor erstellten Sicherung der Wörterverzeichnisse hoch.
+   Details hierzu finden Sie unter [Ressourcen aus einem anderen Arbeitsbereich hochladen](/docs/services/watson-knowledge-studio/exportimport.html).
 
   Wenn in der vorherigen Version des Arbeitsbereichs schreibgeschützte Wörterverzeichnisse verwendet wurden, laden Sie sie aus der ursprünglichen Quelle erneut in diesen Arbeitsbereich hoch.
 
-  **Hinweis**: Wenn Sie Wörterverzeichnisse hinzufügen, wird der wörterverzeichnisbasierte Vorannotator automatisch erstellt. Beim Ausführen des Annotators für Wörterverzeichnisse ordnen Sie dem Wörterverzeichnis einen Entitätstyp zu.
+1. Für Wörterverzeichnisvorannotatoren ordnen Sie die Wörterverzeichnisse einem Entitätstyp zu. Wörterverzeichnisse, für die keine Zuordnungen für Entitätstypen vorhanden sind, wenden keine Annotationen an, wenn Sie Dokumente vorab mit Annotationen versehen.
 
-1. Laden Sie die Dokumente, die Sie aus der vorherigen Version des Arbeitsbereichs heruntergeladen haben, in diese Version des Arbeitsbereichs hoch. Details hierzu finden Sie unter [Ressourcen aus einem anderen Arbeitsbereich hochladen](/docs/services/watson-knowledge-studio/exportimport.html).
+1. Laden Sie die Dokumente, die Sie aus der vorherigen Version des Arbeitsbereichs heruntergeladen haben, in diese Version des Arbeitsbereichs hoch.
+   Details hierzu finden Sie unter [Ressourcen aus einem anderen Arbeitsbereich hochladen](/docs/services/watson-knowledge-studio/exportimport.html).
 
 ## Modelle wiederherstellen
 {: #restoremodels}
@@ -152,9 +157,9 @@ Jetzt sind alle Artefakte, die zum Trainieren des Modells in der vorherigen (ges
 
 Führen Sie die folgenden Schritte aus, um ein Modell für maschinelles Lernen, das Sie in der vorherigen Instanz bereitgestellt hatten, erneut bereitzustellen:
 
-1. Trainieren Sie das Modell für maschinelles Lernen. Details hierzu finden Sie unter [Modell für maschinelles Lernen erstellen](/docs/services/watson-knowledge-studio/train-ml.html).
+1. [Trainieren Sie das Modell für maschinelles Lernen](/docs/services/watson-knowledge-studio/train-ml.html).
 
-  **Hinweise**: Wenden Sie keine Vorannotatoren auf die annotierten Dokumente an, die Sie in diesen Arbeitsbereich migriert haben Andernfalls gehen alle Annotationen in den betreffenden Dokumenten verloren, die von Annotatorbenutzern hinzugefügt wurden.
+  **Hinweise**: Wenden Sie keine Vorannotationen auf die annotierten Dokumente an, die Sie in diesen Arbeitsbereich migriert haben. Andernfalls gehen alle Annotationen in den betreffenden Dokumenten verloren, die von Annotatorbenutzern hinzugefügt wurden.
 
 1. Stellen Sie das Modell erneut bereit, nachdem Sie es erstellt haben. Details hierzu finden Sie unter [Modell für maschinelles Lernen verwenden](/docs/services/watson-knowledge-studio/publish-ml.html).
 
@@ -168,6 +173,6 @@ Führen Sie die folgenden Schritte aus, um ein regelbasiertes Modell erneut bere
 
 Wenn Sie im vorherigen Arbeitsbereich Annotationstasks erstellt hatten, die noch nicht abgeschlossen waren, führen Sie die folgenden Schritte aus, um die betreffenden Annotationstasks erneut zu erstellen:
 
-1. Laden Sie alle noch nicht annotierten Dokumente hoch, die Sie jedoch zur Ground Truth hinzufügen möchten, um das Modell zu verbessern.
-1. Erstellen Sie Dokumentgruppen für die Annotation aus den neu importierten Dokumenten. Diese Gruppen werden jetzt als _Annotationsgruppen_ bezeichnet. Details hierzu finden Sie unter [Annotationsgruppen erstellen und zuordnen](/docs/services/watson-knowledge-studio/document-for-annotation.html).
-1. Erstellen Sie die Annotationstasks erneut. Weisen Sie den Tasks denselben Namen sowie ein geeignetes Fälligkeitsdatum zu und ordnen Sie Annotationsgruppen den gewünschten Annotatorbenutzern zu.
+1. [Laden Sie alle noch nicht annotierten Dokumente hoch](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_projadd), die Sie jedoch zur Ground Truth hinzufügen möchten, um das Modell zu verbessern.
+1. Erstellen Sie aus den neu importierten und nicht annotierten Dokumenten [Annotationsgruppen](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_projdocsets).
+1. [Erstellen Sie die Annotationstasks erneut](/docs/services/watson-knowledge-studio/annotate-documents.html#wks_hatask). Weisen Sie den Tasks denselben Namen sowie ein geeignetes Fälligkeitsdatum zu und ordnen Sie Annotationsgruppen den gewünschten Annotatorbenutzern zu.

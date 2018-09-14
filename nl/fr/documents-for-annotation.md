@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -27,6 +27,7 @@ Pour entraîner un modèle d'apprentissage automatique, vous devez ajouter à vo
 {: shortdesc}
 
 ## A propos de cette tâche
+{: #annotation_about}
 
 Pour définir les règles d'un modèle à base de règles, vous devez ajouter ou transférer des documents d'où vous pourrez tirer les motifs à définir en tant que règles. Pour plus d'informations, consultez [Ajouter des documents pour définir des règles](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html). Cette section décrit seulement comment ajouter des documents pour l'annotation.
 
@@ -38,7 +39,7 @@ Pour entraîner un modèle d'apprentissage automatique, vous devez rassembler de
 Efforcez-vous de trouver des documents d'entraînement qui soient vraiment représentatifs du contenu présentant un intérêt dans le domaine concerné, c'est-à-dire qui contiennent de nombreuses mentions pertinentes qu'il est donc utile d'annoter. Pour choisir les meilleurs documents, suivez ces quelques consignes :
 
 - Efforcez-vous de fournir un ensemble de documents dont la taille totale est d'environ 300 000 mots. Prévoyez davantage de mots pour un système de types complexe, moins pour un système simple.
-- Limitez chaque document à une page ou deux de contenu (moins de 2000 mots, l'idéal étant un volume proche de de 1000 mots par document). Au début de l'élaboration du modèle, il est également conseillé de limiter chaque document à quelques paragraphes. Marquer les mentions et les relations dans un long document est à la portée de l'annotateur humain, mais celui-ci aura certainement plus de difficultés à marquer les coréférences s'étalant sur plusieurs pages.
+- Limitez chaque document à une page ou deux de contenu (moins de 2000 mots, l'idéal étant un volume proche de 1000 mots par document). Au début de l'élaboration du modèle, il est également conseillé de limiter chaque document à quelques paragraphes. Marquer les mentions et les relations dans un long document est à la portée de l'annotateur humain, mais celui-ci aura certainement plus de difficultés à marquer les coréférences s'étalant sur plusieurs pages.
 - Assurez-vous que les données dans les documents sont réparties entre tous les types d'entités, sous-types et rôles, ainsi qu'entre les relations entre eux. A terme, l'objectif à atteindre est d'avoir au moins 50 annotations pour chaque type d'entité et 50 pour chaque type de relation dans la collection de documents.
 - Encore une fois, les documents doivent représenter l'étendue du sujet que l'application couvrira, mais en cas d'asymétrie dans la fréquence d'occurrence des types d'entités et des types de relations, essayez d'obtenir au moins 50 exemplaires de chaque type, voire davantage pour les types d'entités dont les mentions ont tendance à être des syntagmes.
 - Le jeu que vous créez pour l'entraînement doit contenir au moins 10 documents annotés.
@@ -55,7 +56,7 @@ Vous pouvez ajouter des documents de différentes manières et dans différents 
 ### Fichiers CSV
 {: #wks_sampledoc__wks_samplecsv}
 
-A partir de votre machine locale, vous pouvez transférer un fichier CSV à deux colonnes contenant des échantillons de textes. Vous ne devez transférer qu'un seul fichier CSV à la fois. La première colonne contiendra le nom de fichier du document, la deuxième contiendra le texte du document. Pour un aperçu du format nécessaire, consultez le fichier <a href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/documents-new.csv" download>`documents-new.csv`<img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe" class="style-scope doc-content"></a>, qui fait partie des exemples de fichiers des tutoriels.
+A partir de votre machine locale, vous pouvez transférer un fichier CSV à deux colonnes contenant des échantillons de textes. Vous ne devez transférer qu'un seul fichier CSV à la fois. La première colonne contiendra le nom de fichier du document, la deuxième contiendra le texte du document. Pour un aperçu du format nécessaire, consultez le fichier <a href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/documents-new.csv" download>`documents-new.csv` <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe" class="style-scope doc-content"></a>, qui fait partie des exemples de fichiers des tutoriels.
 
 ### Documents d'un autre espace de travail Watson Knowledge Studio
 {: #wks_sampledoc__wks_samplecorpus}
@@ -72,6 +73,7 @@ Pour aider à entraîner un modèle, vous pouvez transférer des documents qui o
 Un annotateur humain peut alors réviser, supprimer et compléter les annotations dans ces documents. Vous pouvez aussi faire l'impasse sur l'annotation humaine et utiliser ces fichiers pour créer les jeux de données d'entraînement, de test et aveugles qui serviront à évaluer et améliorer les performances du modèle. Pour des détails sur la façon de créer ces fichiers et les conditions qu'ils doivent remplir pour pouvoir être transférés, consultez [Transférer des documents pré-annotés](/docs/services/watson-knowledge-studio/preannotation.html#wks_uima).
 
 ### Anonymiser les données
+{: #wks_anonymizing}
 
 Si vous voulez construire un modèle qui soit optimisé pour vos données et que, pour des raisons de confidentialités, il n'est pas souhaitable que vos documents soient transférés en l'état vers {{site.data.keyword.knowledgestudioshort}}, vous pouvez y supprimer toutes les données personnelles, puis utiliser la version anonymisée des documents pour entraîner le modèle. Vous ne devez pas expurger l'information ni la remplacer par des variables. Les meilleurs résultats sont obtenus lorsque les vraies informations sont remplacées par de fausses informations du même type.
 
@@ -83,57 +85,62 @@ Par exemple, si vous voulez occulter les noms de clients, au lieu de les expurge
 Pour entraîner un modèle, vous devez ajouter à votre espace de travail des exemples de documents représentatifs des contenus relatifs à votre domaine.
 
 ### A propos de cette tâche
+{: #wks_projadd_about}
 
 Il est bon de commencer par une collection de documents relativement petite. Utilisez-la pour entraîner les annotateurs humains (si votre espace de travail met en jeu un processus d'annotation humaine) et pour peaufiner vos directives d'annotation. Il est plus facile pour un annotateur humain d'identifier les chaînes de coréférences dans les petits documents. A mesure que l'exactitude des annotations s'améliore, vous pouvez ajouter davantage de documents au corpus afin de donner plus de relief à l'effort d'entraînement.
 
 ### Procédure
+{: #wks_projadd_procedure}
 
 Pour ajouter des documents à un espace de travail :
 
 1. Connectez-vous en tant qu'administrateur ou chef de projet {{site.data.keyword.knowledgestudioshort}} et sélectionnez votre espace de travail.
-1. Sélectionnez l'onglet **Actifs & Outils** > **Documents** > **Jeux de documents**.
+1. Sélectionnez l'onglet **Actifs** > **Documents** > **Jeux de documents**.
 1. Cliquez sur **Transférer des jeux de documents** pour ajouter des documents au corpus.
 1. Transférez les documents dans l'un des formats suivants. Vous ne devez transférer qu'un seul type de fichier à la fois.
 
-    <table border="1" frame="hsides" rules="rows" cellpadding="4" cellspacing="0" summary="Chaque ligne du tableau décrit une option." class="simpletable choicetable choicetableborder">
-      <thead><tr><th id="d31095e284-option" valign="bottom" align="left" class="ncol thleft thbot">Option</th>
-          <th id="d31095e284-desc" valign="bottom" align="left" class="ncol thleft thbot">Description</th></tr></thead>
-      <tbody><tr class="strow chrow"><td valign="top" headers="d31095e284-option" id="d31095e286" class="stentry choption ncol"><p class="p wrapper"><strong>Fichier CSV</strong></p></td>
-          <td valign="top" headers="d31095e284-desc d31095e286" class="stentry chdesc ncol"><p class="p wrapper">Choisissez (en le faisant glisser ou en le sélectionnant sur votre
-              système local) un unique fichier CSV contenant vos échantillons de documents, puis cliquez sur <b>Transférer</b>. La première colonne contiendra
-              le nom de fichier du document, la deuxième contiendra le texte du document.
-              Le fichier CSV doit être au format UTF-8.</p></td>
-        </tr>
-        <tr class="strow chrow"><td valign="top" headers="d31095e284-option" id="d31095e294" class="stentry choption ncol"><p class="p wrapper"><strong>Fichiers texte</strong></p></td>
-          <td valign="top" headers="d31095e284-desc d31095e294" class="stentry chdesc ncol"><p class="p wrapper">Choisissez (en les faisant glisser ou en les sélectionnant sur votre système local) un ou plusieurs fichiers texte, puis cliquez sur <b>Transférer</b>. Les fichiers texte doivent être au format UTF-8.</p></td>
-        </tr>
-        <tr class="strow chrow"><td valign="top" headers="d31095e284-option" id="d31095e302" class="stentry choption ncol"><p class="p wrapper"><strong>Fichiers DOCXML</strong></p></td>
-          <td valign="top" headers="d31095e284-desc d31095e302" class="stentry chdesc ncol"><p class="p wrapper">Choisissez (en les faisant glisser ou en les sélectionnant sur votre
-système local) un ou plusieurs fichiers <code>DOCXML</code>, puis cliquez sur <b>Transférer</b>. Les fichiers <code>DOCXML</code> doivent être des documents ayant été téléchargés d'un autre modèle d'apprentissage automatique.
-Ils doivent être au format UTF-8. Ils sont transférés tels quels, sans être réanalysés ni redécoupés en unités lexicales.</p></td>
-        </tr>
-        <tr class="strow chrow"><td valign="top" headers="d31095e284-option" id="d31095e316" class="stentry choption ncol"><p class="p wrapper"><strong>Fichier ZIP</strong></p></td>
-          <td valign="top" headers="d31095e284-desc d31095e316" class="stentry chdesc ncol"><p class="p wrapper">Si vous avez précédemment téléchargé des documents d'un espace de travail
-Watson Knowledge Studio, choisissez le fichier <code>ZIP</code> qui les contient (en le faisant glisser ou en le sélectionnant sur votre système local). Si vous voulez inclure les annotations qui ont été ajoutées aux documents avant qu'ils ne soient téléchargés,
-veillez à sélectionner l'option d'inclusion des données de référence avant de cliquer sur <b>Transférer</b>. Seules seront importées (transférées) les annotations ayant été promues au rang de données de référence avant que les documents ne soient téléchargés. </p><p class="p wrapper"><b>Restriction :</b> Lorsque les documents annotés sont importés, ils
-sont réanalysés et redécoupés en unités lexicales. Cela peut changer ce que Watson Knowledge Studio considère comme étant les limites des phrases dans ces documents. Comme les annotations sont définies phrase par phrase, certaines d'entre elles pourraient être invalidées au cours
-de ce processus. Après avoir transféré des documents originaires d'un autre espace de travail, faites un
-examen rapide des annotations pour remédier à toute divergence. </p>
-            <p class="p">Avant de transférer des annotations de référence, vous devez transférer le système de types
-de l'espace de travail d'origine dans l'espace de travail en cours. Pour les détails, consultez [Transférer des ressources d'un autre espace de travail ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](exportimport.html){: new_window}.</p>
-            <p class="p">Si vous avez précédemment téléchargé des documents annotés,
-contenus dans des fichiers XMI au format UIMA CAS, vous pouvez transférer le fichier
-<code>ZIP</code> qui a servi à ce téléchargement. Pensez, dans ce cas, à indiquer qu'il s'agit du type de contenu à transférer avant de cliquer sur <b>Transférer</b>. Pour des détails sur la façon de créer ces fichiers et les conditions qu'ils doivent remplir pour
-pouvoir être transférés, consultez
-[Transférer des documents pré-annotés ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](preannotation.html#wks_uima){: new_window}.</p>
-          </td>
-        </tr>
-      </tbody>
+    <table summary="Chaque ligne du tableau décrit une option.">
+      <caption>Tableau 1. Options de transfert</caption>
+      <tr>
+        <th style="vertical-align:bottom; text-align:left" id="d31095e284-option">
+          Option
+        </th>
+        <th style="vertical-align:bottom; text-align:left" id="d31095e284-desc">
+          Description
+        </th>
+      </tr>
+      <tr>
+        <td headers="d31095e284-option" id="d31095e286">
+          <p><strong>Fichier CSV</strong></p>
+        </td>
+        <td headers="d31095e284-desc d31095e286">
+          <p>Choisissez (en le faisant glisser ou en le sélectionnant sur votre système local) un unique fichier CSV contenant vos échantillons de documents, puis cliquez sur <b>Transférer</b>. La première colonne contiendra le nom de fichier du document, la deuxième contiendra le texte du document. Le fichier CSV doit être au format UTF-8.</p>
+        </td>
+      </tr>
+      <tr>
+        <td headers="d31095e284-option" id="d31095e294">
+          <p><strong>Fichiers texte</strong></p>
+        </td>
+        <td headers="d31095e284-desc d31095e294">
+          <p>Choisissez (en les faisant glisser ou en les sélectionnant sur votre système local) un ou plusieurs fichiers texte, puis cliquez sur <b>Transférer</b>. Les fichiers texte doivent être au format UTF-8.</p>
+        </td>
+      </tr>
+      <tr>
+        <td headers="d31095e284-option" id="d31095e316">
+          <p><strong>Fichier ZIP</strong></p>
+        </td>
+        <td headers="d31095e284-desc d31095e316">
+          <p>Si vous avez précédemment téléchargé des documents d'un espace de travail Watson Knowledge Studio, choisissez le fichier <code>ZIP</code> qui les contient (en le faisant glisser ou en le sélectionnant sur votre système local). Si vous voulez inclure les annotations qui ont été ajoutées aux documents avant qu'ils ne soient téléchargés, veillez à sélectionner l'option d'inclusion des données de référence avant de cliquer sur <b>Transférer</b>. Seules seront importées (transférées) les annotations ayant été promues au rang de données de référence avant que les documents ne soient téléchargés. </p><p><b>Restriction :</b> Lorsque les documents annotés sont importés, ils sont réanalysés et redécoupés en unités lexicales. Cela peut changer ce que Watson Knowledge Studio considère comme étant les limites des phrases dans ces documents. Comme les annotations sont définies phrase par phrase, certaines d'entre elles pourraient être invalidées au cours de ce processus. Après avoir transféré des documents originaires d'un autre espace de travail, faites un examen rapide des annotations pour remédier à toute divergence.</p>
+          <p>Avant de transférer des annotations de référence, vous devez transférer le système de types de l'espace de travail d'origine dans l'espace de travail en cours. Pour les détails, consultez [Transférer des ressources d'un autre espace de travail ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](exportimport.html){: new_window}.</p>
+          <p>Si vous avez précédemment téléchargé des documents annotés, contenus dans des fichiers XMI au format UIMA CAS, vous pouvez transférer le fichier <code>ZIP</code> qui a servi à ce téléchargement. Pensez, dans ce cas, à indiquer qu'il s'agit du type de contenu à transférer avant de cliquer sur <b>Transférer</b>. Pour des détails sur la façon de créer ces fichiers et les conditions qu'ils doivent remplir pour pouvoir être transférés, consultez [Transférer des documents pré-annotés ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](preannotation.html#wks_uima){: new_window}.</p>
+        </td>
+      </tr>
     </table>
 
 1. Lorsque les documents ont été ajoutés, cliquez sur leurs noms pour prévisualiser et vérifier leur contenu. Par exemple, vérifiez que les fichiers texte sont au format UTF-8 et exempts de problèmes d'accents ou de normalisation des caractères. Vérifiez également la qualité de segmentation du texte en phrases. Si vous relevez des défauts, il se pourrait que vous deviez prétraiter les fichiers avant de les ajouter au corpus. Ils doivent en effet être aussi propres et bien formatés que possible avant de passer entre les mains des annotateurs humains.
 
 ### Que faire ensuite
+{: #wks_projadd_next}
 
 Divisez le corpus en plusieurs jeux de documents et affectez ces derniers à des annotateurs humains.
 
@@ -143,33 +150,36 @@ Divisez le corpus en plusieurs jeux de documents et affectez ces derniers à des
 Une fois les documents ajoutés, divisez-les en jeux pour qu'ils puissent être annotés par plusieurs annotateurs humains. Pour obtenir des scores de convergence entre annotateurs, vous devez leur affecter au moins deux annotateurs humains et spécifier quel pourcentage de documents se chevauchent entre les jeux.
 
 ### Avant de commencer
+{: #wks_projdocsets_prereqs}
 
 - Vous devez transférer les jeux de documents avant de pouvoir les diviser en jeux d'annotations.
 - Vous devez créer un compte d'utilisateur dans {{site.data.keyword.knowledgestudioshort}} pour chaque annotateur humain qui travaillera sur des documents de cet espace de travail.
 
 ### A propos de cette tâche
+{: #wks_projdocsets_about}
 
 > **Attention :** Si vous utilisez Google Chrome, vous ne pouvez pas transférer un grand nombre de fichiers (par exemple, plus de 300) en les sélectionnant dans un dossier. Utilisez Firefox (qui n'a pas cette limite) ou sélectionnez un plus petit nombre de fichiers et faites alors plusieurs transferts.
 
 Vous pouvez créer un maximum de 1 000 jeux d'annotations par espace de travail.
 
 ### Procédure
+{: #wks_projdocsets_procedure}
 
 Pour créer un jeu d'annotations :
 
 1. Connectez-vous en tant qu'administrateur ou chef de projet {{site.data.keyword.knowledgestudioshort}} et sélectionnez votre espace de travail.
-1. Sélectionnez l'onglet **Actifs & Outils** > **Documents** > **Jeux d'annotations**.
+1. Sélectionnez l'onglet **Actifs** > **Documents** > **Jeux d'annotations**.
 1. Cliquez sur **Créer des jeux d'annotations**.
 
     1. Pour le jeu de base, sélectionnez la collection de documents que vous voulez diviser en jeux d'annotations. Il peut s'agir de tous les documents du corpus ou seulement de ceux qui ont été précédemment alloués à un jeu de documents.
 
     1. Pour la valeur de chevauchement, spécifiez le pourcentage de documents que vous voulez inclure dans chaque jeu d'annotations. Les scores de convergence entre annotateurs ne peuvent être calculés qu'à partir du moment où au moins deux annotateurs humains annotent les mêmes documents. Par exemple, si vous spécifiez une valeur de chevauchement de 20 % pour un corpus de 30 documents et que vous divisez celui-ci en trois jeux de documents, 6 documents (soit 20 %) seront annotés par tous les annotateurs humains. Les 24 documents restants seront répartis entre les trois annotateurs humains (8 chacun). Chaque annotateur recevra donc 14 documents à annoter (6 + 8).
 
-    > **Remarque :** Un jeu d'annotations que vous prévoyez d'utiliser pour entraîner un modèle d'apprentissage automatique doit contenir au moins 10 documents annotés. 
+    > **Remarque :** Un jeu d'annotations que vous prévoyez d'utiliser pour entraîner un modèle d'apprentissage automatique doit contenir au moins 10 documents annotés.
 
     1. Sélectionnez un nom d'utilisateur dans la liste des annotateurs humains.
 
-        > **Remarque :** Si vous avez un abonnement à un plan gratuit, associez-vous au jeu d'annotations. Ce plan ne vous autorise pas à ajouter d'autres utilisateurs ni à leur attribuer le rôle d'annotateur humain. Mais en vous ajoutant vous-même, vous pouvez tenir le rôle d'annotateur humain et tester comment un véritable annotateur humain interagirait avec l'éditeur de données de référence pour annoter des documents.
+        > **Remarque :** Si vous avez un abonnement à un plan Lite, associez-vous au jeu d'annotations. Ce plan ne vous autorise pas à ajouter d'autres utilisateurs ni à leur attribuer le rôle d'annotateur humain. Mais en vous ajoutant vous-même, vous pouvez tenir le rôle d'annotateur humain et tester comment un véritable annotateur humain interagirait avec l'éditeur de données de référence pour annoter des documents.
 
     1. Donnez un nom au jeu d'annotations.
 
@@ -178,26 +188,68 @@ Pour créer un jeu d'annotations :
 1. Après avoir affecté tous les annotateurs humains qui travailleront dans cet espace, cliquez sur **Générer** pour créer les jeux d'annotations. Lorsqu'ils se connecteront à l'éditeur de données de référence, les annotateurs humains ne verront que les jeux d'annotations qui leur sont attribués.
 
 **Tâches connexes** :
+{: #wks_related_tasks}
 
 [Constituer une équipe](/docs/services/watson-knowledge-studio/team.html)
 
 ## Supprimer des documents
-{: #wks_projdelete}
+{: #wks_deletedocs}
 
-Vous pouvez retirer un document si vous déterminez qu'il n'est pas représentatif de textes du domaine concerné susceptibles de profiter au modèle.
+Vous pouvez supprimer un document si vous déterminez qu'il n'est pas représentatif de textes du domaine concerné susceptibles de profiter au modèle.
 
-### Procédure
+Pour supprimer un document, choisissez l'option qui s'applique à votre cas :
+- [Supprimer un document qui n'est associé à aucune tâche d'annotation](#deletenotask)
+- [Supprimer un document associé à une tâche d'annotation lorsque l'annotation humaine *n'a pas encore commencé*](#deletenoanno)
+- [Supprimer un document associé à une tâche d'annotation lorsque l'annotation humaine *a déjà commencé*](#deleteanno)
 
-Pour supprimer un document, effectuez les étapes suivantes :
+### Supprimer un document qui n'est associé à aucune tâche d'annotation
+{: #deletenotask}
+
+Si le document que vous voulez supprimer n'est pas associé à une tâche d'annotation, procédez comme suit pour le supprimer.
+
+#### Procédure
+{: #deletenotaskp}
 
 1. Connectez-vous en tant qu'administrateur {{site.data.keyword.knowledgestudioshort}} et sélectionnez votre espace de travail.
-1. Sélectionnez l'onglet **Actifs & Outils** > **Documents** > **Jeux de documents**.
-1. Localisez le document que vous voulez retirer et cliquez sur **Supprimer**.
-1. Vous ne pouvez pas supprimer un document faisant partie d'un jeu d'annotations qui a été associé à une tâche d'annotation. S'il fait partie d'un jeu d'annotations qui n'a pas encore été associé à une tâche, vous pouvez le supprimer en suivant les étapes ci-dessus.
+1. Sélectionnez l'onglet **Actifs** > **Documents** > **Jeux de documents**.
+2. Sélectionnez le jeu de documents contenant le document que vous voulez supprimer. Le jeu de documents s'ouvre.
+3. Localisez le document que vous voulez retirer et cliquez sur **Supprimer**.
 
-    Effectuez l'une des opérations suivantes si le document est associé à une tâche d'annotation :
-    - Si les annotateurs humains n'ont pas commencé à annoter les documents, supprimez la tâche d'annotation, puis supprimez le document. Pour supprimer la tâche d'annotation, ouvrez l'onglet **Actifs & Outils** > **Documents** > **Tâches**, localisez la tâche d'annotation à laquelle le document est associé, cliquez sur son icône **Afficher le menu**, puis cliquez sur **Supprimer**. Vous pouvez ensuite recréer la tâche d'annotation et lui associer le même jeu d'annotations, qui contient maintenant un document de moins.
-    - Si les annotateurs humains ont commencé à annoter les documents, ne supprimez pas la tâche, sous peine de perdre leur travail. Vous pouvez leur dire de continuer à travailler, mais d'ignorer le document non voulu dans le jeu. Laissez-les terminer l'annotation du jeu de documents et ajouter celui-ci aux données de référence. Le document doit être supprimé du jeu avant toute exécution du modèle d'apprentissage automatique. En effet, un document non annoté ne doit pas servir à entraîner un modèle d'apprentissage automatique, car celui-ci apprend autant de ce qui est annoté que de ce qui ne l'est pas. Vous pouvez maintenant supprimer le document non désiré, qui fait actuellement partie des données de référence, à partir de l'onglet **Actifs & Outils** > **Documents** > **Jeux de documents**.
+### Supprimer un document associé à une tâche d'annotation lorsque l'annotation humaine n'a pas encore commencé
+{: #deletenoanno}
+
+Si le document que vous voulez supprimer est associé à une tâche d'annotation et que l'annotation humaine *n'a pas encore commencé*, procédez comme suit pour le supprimer.
+
+#### Procédure
+{: #deletenoannop}
+
+1. Connectez-vous en tant qu'administrateur {{site.data.keyword.knowledgestudioshort}} et sélectionnez votre espace de travail.
+1. Supprimez la tâche d'annotation :
+
+  a. Ouvrez la page **Modèle d'apprentissage automatique** > **Tâches d'annotation**.
+
+  b. Localisez la tâche d'annotation à laquelle le document est associé, cliquez sur son icône **Afficher le menu**, puis cliquez sur **Supprimer**.
+
+1. Supprimez le document conformément à la procédure [Supprimer un document qui n'est associé à aucune tâche d'annotation](#deletenotask).
+1. Une fois le document supprimé, vous pouvez recréer la tâche d'annotation et lui associer le même jeu d'annotations, qui contient maintenant un document de moins.
+
+### Supprimer un document associé à une tâche d'annotation lorsque l'annotation humaine a déjà commencé
+{: #deleteanno}
+
+Si le document que vous voulez supprimer est associé à une tâche d'annotation et que l'annotation humaine *a commencé*, procédez comme suit pour le supprimer.
+
+**Attention** : Ne supprimez pas une tâche si l'annotation humaine est en cours. Vous perdriez sinon le travail déjà accompli.
+
+#### Procédure
+{: #deleteannop}
+
+1. Dites aux annotateurs humains d'ignorer le document non voulu dans le jeu.
+1. Lorsque le travail d'annotation des autres documents est achevé et que les annotateurs humains ont soumis tous les documents pour ajouter le jeu aux données de référence, [passez en revue et acceptez les documents soumis](/docs/services/watson-knowledge-studio/build-groundtruth.html#wks_haaccuracy).
+1. [Résolvez les éventuels conflits d'annotations](/docs/services/watson-knowledge-studio/build-groundtruth.html#wks_haadjudicate).
+1. Lorsque tous les documents font partie des données de référence et que la tâche est terminée, supprimez celle-ci conformément à la procédure [Supprimer un document associé à une tâche d'annotation lorsque l'annotation humaine n'a pas encore commencé](#deletenoannop).
+1. Supprimez le document conformément à la procédure [Supprimer un document qui n'est associé à aucune tâche d'annotation](#deletenotask).
+
+  **Remarque **: Vous pouvez vérifier que les annotations des documents restants ne sont pas perdues en téléchargeant les jeux de documents et en examinant les documents dans le dossier `gt`.
 
 ## Modèle de données
 {: #wks_datamodel}

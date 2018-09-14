@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -28,10 +28,8 @@ Este glosario incluye términos y definiciones para {{site.data.keyword.knowledg
 
 En este glosario se emplean las siguientes referencias cruzadas:
 
-- Véase le remite desde un término a su sinónimo preferido, o desde un acrónimo o abreviatura a la definición completa.
-- Véase también remite a un término relacionado u opuesto.
-
-Para ver glosarios de otros productos de {{site.data.keyword.IBM}}, vaya a [www.ibm.com/software/globalization/terminology ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://www.ibm.com/software/globalization/terminology/){: new_window}.
+- *Véase* remite al lector de un término a su sinónimo preferido, o de un acrónimo o abreviatura a la definición completa.
+- *Véase también* le remite a un término relacionado u opuesto.
 
 [A](/docs/services/watson-knowledge-studio/glossary.html#gloss_A) [B](/docs/services/watson-knowledge-studio/glossary.html#gloss_B) [C](/docs/services/watson-knowledge-studio/glossary.html#gloss_C) [D](/docs/services/watson-knowledge-studio/glossary.html#gloss_D) [E](/docs/services/watson-knowledge-studio/glossary.html#gloss_E) [F](/docs/services/watson-knowledge-studio/glossary.html#gloss_F) [G](/docs/services/watson-knowledge-studio/glossary.html#gloss_G) [H](/docs/services/watson-knowledge-studio/glossary.html#gloss_H) [I](/docs/services/watson-knowledge-studio/glossary.html#gloss_I) [K](/docs/services/watson-knowledge-studio/glossary.html#gloss_K) [L](/docs/services/watson-knowledge-studio/glossary.html#gloss_L) [M](/docs/services/watson-knowledge-studio/glossary.html#gloss_M) [N](/docs/services/watson-knowledge-studio/glossary.html#gloss_N) [O](/docs/services/watson-knowledge-studio/glossary.html#gloss_O) [P](/docs/services/watson-knowledge-studio/glossary.html#gloss_P) [R](/docs/services/watson-knowledge-studio/glossary.html#gloss_R) [S](/docs/services/watson-knowledge-studio/glossary.html#gloss_S) [T](/docs/services/watson-knowledge-studio/glossary.html#gloss_T)
 
@@ -273,7 +271,7 @@ Para ver glosarios de otros productos de {{site.data.keyword.IBM}}, vaya a [www.
 
 - **tipo de relación**
 
-    Una relación binaria y unidireccional entre dos entidades. Por ejemplo, Mary employedBy {{site.data.keyword.IBM_notm}} es una relación válida; {{site.data.keyword.IBM_notm}} employedBy Mary, no.
+    Una relación binaria y unidireccional entre dos entidades. Por ejemplo, `Mary` `employedBy` {{site.data.keyword.IBM_notm}} es una relación válida; {{site.data.keyword.IBM_notm}} `employedBy` `Mary`, no.
 
 - **rol**
 
@@ -303,11 +301,11 @@ Para ver glosarios de otros productos de {{site.data.keyword.IBM}}, vaya a [www.
 
 - **entrenar**
 
-    Proceso de configurar una instancia de {{site.data.keyword.watson}} con componentes que permiten que el sistema funcione en un dominio determinado (por ejemplo: contenido del corpus, datos de entrenamiento que generan modelos de aprendizaje automático, algoritmos mediante programación, anotadores, u otros componentes de datos de campo) y luego de realizar mejoras y actualizaciones en estos componentes basándose en el análisis de exactitud.
+    Proceso de configurar una instancia de {{site.data.keyword.watson}} con componentes que permiten que el sistema funcione en un dominio determinado (por ejemplo: contenido del corpus, datos de entrenamiento que generan modelos de aprendizaje automático, algoritmos mediante programación u otros componentes de datos de campo) y luego de realizar mejoras y actualizaciones en estos componentes basándose en el análisis de exactitud.
 
 - **datos de entrenamiento**
 
-    Un conjunto de documentos anotados que pueden utilizarse para entrenar anotadores de aprendizaje automático. Véase también [datos ciegos](/docs/services/watson-knowledge-studio/glossary.html#gloss_B) y [datos de prueba](/docs/services/watson-knowledge-studio/glossary.html#gloss_T).
+    Un conjunto de documentos anotados que pueden utilizarse para entrenar modelos de aprendizaje automático. Véase también [datos ciegos](/docs/services/watson-knowledge-studio/glossary.html#gloss_B) y [datos de prueba](/docs/services/watson-knowledge-studio/glossary.html#gloss_T).
 
 - **verdadero negativo**
 

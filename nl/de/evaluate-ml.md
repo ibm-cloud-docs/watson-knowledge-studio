@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-08-03"
 
 ---
 
@@ -27,6 +27,7 @@ Diese Dokumentation bezieht sich auf {{site.data.keyword.knowledgestudiofull}} o
 {: shortdesc}
 
 ## Informationen zu diesem Vorgang
+{: #evaluate-ml_about}
 
 Zum Analysieren der Leistung können Sie eine Zusammenfassung der Statistikdaten für Entitätstypen, Beziehungstypen und koreferenzierte Erwähnungen anzeigen. Außerdem können sie die Statistikdaten analysieren, die in ein er *Fehlermatrix* dargestellt werden. Anhand der Fehlermatrix können Sie die vom Modell für maschinelles Lernen hinzugefügten Annotationen mit den Annotationen in der Ground Truth vergleichen.
 
@@ -50,24 +51,25 @@ Die Modellstatistikdaten stellen die folgenden Metriken bereit:
 
 - **Prozentsatz der Korpusdichte (nach Wörteranzahl)**
 
-    Ein Messwert für die Ground Truth, der angibt, welche Anzahl aus der Gesamtzahl der (annotierten und nicht annotierten) Wörter mit einem angegebenen Entitäts- oder Benziehungstyp annotiert wurde. Dieser Statistikwert ist für koreferenzierte Erwähnungen nicht verfügbar. Dieser Wert ermöglicht den Vergleich zwischen den vorherrschenden Erwähnungen dieses Typs und allen anderen Wörtern in Ihren fachspezifischen Dokumenten.
+    Ein Messwert für die Ground Truth, der angibt, welche Anzahl aus der Gesamtzahl der (annotierten und nicht annotierten) Wörter mit einem angegebenen Entitäts- oder Beziehungstyp annotiert wurde. Dieser Statistikwert ist für koreferenzierte Erwähnungen nicht verfügbar. Dieser Wert ermöglicht den Vergleich zwischen den vorherrschenden Erwähnungen dieses Typs und allen anderen Wörtern in Ihren fachspezifischen Dokumenten.
 
 - **Prozentsatz der Dokumente, die den Typ enthalten**
 
     Ein Messwert für die Ground Truth, der angibt, wie viele Dokumente einen bestimmten Entitäts- oder Beziehungstyp enthalten. Dieser Statistikwert ist für koreferenzierte Erwähnungen nicht verfügbar. Mithilfe dieses Werts können Sie beurteilen, ob die Dokumente in der Gruppe für das Fachgebiet repräsentativ genug sind. Wenn der Prozentsatz für Schlüsselentitätstypen niedrig ist, sollten Sie in Betracht ziehen, weitere Dokumente mit Erwähnungen der unterrepräsentierten Typen hinzuzufügen.
 
 ## Vorgehensweise
+{: #evaluate-ml_procedure}
 
 So zeigen Sie die Leistungsstatistik für die Trainingsqualität eines Modells an:
 
 1. Melden Sie sich als {{site.data.keyword.knowledgestudioshort}}-Administrator oder -Projektleiter an und wählen Sie Ihren Arbeitsbereich aus.
-1. Wählen Sie **Modellverwaltung** > **Leistung** aus. 
+1. Wählen Sie **Modell für maschinelles Lernen** > **Leistung** aus. 
 1. Wählen Sie den Link **Detaillierte Statistik** für Erwähnungen, Beziehungen oder Koreferenzen aus.
-1. Geben Sie in der Ansicht **Zusammenfassung** an, ob Sie Test- oder Trainingsdaten auswerten möchten, und geben Sie anschließend an, für welchen Annotationstyp Statistikdaten angezeigt werden sollen: Entitätstypen, Beziehungstypen oder koreferenzierte Erwähnungen. Dabei ist zu beachten, dass Blinddaten nur in seltenen Fällen analysiert werden, sofern die Scores für Testdaten für Sie eine hohe Konfidenz aufweisen. Beim Blättern durch die Daten werden Sie erkennen, dass Elemente mit niedrigen Scores markiert und hervorgehoben sind, um darauf hinzuweisen, dass sie untersucht und optimiert werden sollten. Das dreieckige Warnsymbol zeigt an, dass der F1-Wert kleiner als der feste Wert 0,5 ist.
+1. Geben Sie in der Ansicht **Zusammenfassung** an, ob Sie Test- oder Trainingsdaten auswerten möchten, und geben Sie anschließend an, für welchen Annotationstyp Statistikdaten angezeigt werden sollen: Entitätstypen, Beziehungstypen oder koreferenzierte Erwähnungen. Beim Blättern durch die Daten werden Sie erkennen, dass Elemente mit niedrigen Scores markiert und hervorgehoben sind, um darauf hinzuweisen, dass sie untersucht und optimiert werden sollten. Das dreieckige Warnsymbol zeigt an, dass der F1-Wert kleiner als der feste Wert 0,5 ist.
 
-    Beispiel: Der F1-Score für manche Entitätstypen kann hoch sein, weil das betreffende Dokument sowohl durch Vorannotierung als auch von einem Benutzerannotator annotiert wurde. Dagegen kann der F1-Score für andere Entitätstypen niedrig sein, weil Unterschiede in den Ausdrücken und Unterschiede in der Textinterpretation oder Regelauslegung der Annotatorbenutzer es dem Modell für maschinelles Lernen erschweren, das Muster zu erkennen und die richtigen Annotationen einzufügen.
+    Beispiel: Der F1-Score für manche Entitätstypen kann hoch sein, weil das betreffende Dokument sowohl durch Vorannotierung als auch von einem Annotatorbenutzer annotiert wurde. Dagegen kann der F1-Score für andere Entitätstypen niedrig sein, weil Unterschiede in den Ausdrücken und Unterschiede in der Textinterpretation oder Regelauslegung der Annotatorbenutzer es dem Modell für maschinelles Lernen erschweren, das Muster zu erkennen und die richtigen Annotationen einzufügen.
 
-1. Geben Sie in der Ansicht **Fehlermatrix** für Testdaten an, für welchen Annotationstyp Statistikdaten angezeigt werden sollen: Entätstypen oder Beziehungstypen. Für jeden Entitätstyp oder Beziehungstyp gilt Folgendes:
+1. Geben Sie in der Ansicht **Fehlermatrix** für Testdaten an, für welchen Annotationstyp Statistikdaten angezeigt werden sollen: Entitätstypen oder Beziehungstypen. Für jeden Entitätstyp oder Beziehungstyp gilt Folgendes:
 
     - In jeder Zeile der Matrix wird Ground Truth angezeigt, d. h. Entitätstypen und Beziehunstypen, die von Annotatorbenutzern hinzugefügt wurden.
     - In jeder Spalte der Matrix werden die Decodierungsergebnisse angezeigt, d. h. Annotationstokens, die vom Modell für maschinelles Lernen hinzugefügt wurden.
@@ -80,15 +82,19 @@ So zeigen Sie die Leistungsstatistik für die Trainingsqualität eines Modells a
 
     Das folgende Beispiel für eine Fehlermatrix zeigt die Ergebnisse der Anwendung eines Modells für maschinelles Lernen auf Dokumente, die sich mit Verkehrsunfällen befassen.
 
-    <table cellpadding="4" cellspacing="0" summary="Beispiel einer Fehlermatrix für Unfallberichte" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d15356e164" class="stentry thleft thbot">Entitätstypen</th>
-        <th valign="bottom" align="left" id="d15356e166" class="stentry thleft thbot">HERSTELLER</th>
-        <th valign="bottom" align="left" id="d15356e168" class="stentry thleft thbot">MODELL</th>
-        <th valign="bottom" align="left" id="d15356e170" class="stentry thleft thbot">O</th>
+    <table summary="Beispiel für die Fehlermatrix eines Problemberichts">
+       <caption>Tabelle 1. Beispiel für die Fehlermatrix</caption>
+       <tr>
+        <th style="vertical-align:bottom; text-align:left" id="d15356e164">Entitätstypen</th>
+        <th style="vertical-align:bottom; text-align:center" id="d15356e166">HERSTELLER</th>
+        <th style="vertical-align:bottom; text-align:center" id="d15356e168">MODELL</th>
+        <th style="vertical-align:bottom; text-align:center" id="d15356e170">O</th>
       </tr>
-      <tr class="strow"><td valign="top" headers="d15356e164" class="stentry"><p class="p wrapper">HERSTELLER</p></td>
-        <td valign="top" headers="d15356e166" class="stentry"><p class="p wrapper">515</p></td>
-        <td valign="top" headers="d15356e168" class="stentry"><p class="p wrapper">5</p></td>
-        <td valign="top" headers="d15356e170" class="stentry"><p class="p wrapper">44</p></td>
+      <tr>
+        <td style="vertical-align:top; text-align:left" headers="d15356e164">HERSTELLER</td>
+        <td style="vertical-align:top; text-align:center" headers="d15356e166">515</td>
+        <td style="vertical-align:top; text-align:center" headers="d15356e168">5</td>
+        <td style="vertical-align:top; text-align:center" headers="d15356e170">44</td>
       </tr>
     </table>
     {: #evaluate-ml__datasimpletable_yms_hff_cw}
@@ -109,125 +115,137 @@ Veränderliche Einflussfaktoren wie Komplexität des Typsystems, Zweckmäßigkei
 
 In der folgenden Tabelle werden Maßnahmen zum Beheben der häufigsten Probleme für das Leistungsverhalten von Modellen für maschinelles Lernen vorgeschlagen.
 
-<table cellpadding="4" cellspacing="0" summary="In der Tabelle werden häufig auftretende Probleme in der ersten senkrechten Spalte und vorgeschlagene Behebungsmaßnahmen in der ersten waagerechten Zeile aufgelistet. Das Zeichen 'X' gibt an, welche Maßnahme bei welchem Problem angewendet werden sollte." border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d15356e221" class="stentry thleft thbot">Problem</th>
-<th valign="bottom" align="left" id="d15356e223" class="stentry thleft thbot">Wörterverzeichnisse hinzufügen</th>
-<th valign="bottom" align="left" id="d15356e225" class="stentry thleft thbot">Dokumentgruppen bearbeiten</th>
-<th valign="bottom" align="left" id="d15356e227" class="stentry thleft thbot">Typspezifische Dokumente hinzufügen</th>
-<th valign="bottom" align="left" id="d15356e229" class="stentry thleft thbot">Weitere Annotationen im Korpus hinzufügen</th>
-<th valign="bottom" align="left" id="d15356e231" class="stentry thleft thbot">Annotationen der Annotatorbenutzer korrigieren</th>
-<th valign="bottom" align="left" id="d15356e233" class="stentry thleft thbot">Richtlinien für Annotatorbenutzer ergänzen</th>
-<th valign="bottom" align="left" id="d15356e235" class="stentry thleft thbot">Typsystem aktualisieren</th>
-<th valign="bottom" align="left" id="d15356e237" class="stentry thleft thbot">Weitere Untersuchungen vornehmen</th>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Niedriger F1-Score</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper">X</p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Niedriger Score für Genauigkeit</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper">X</p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Niedriger Score für Vollständigkeit</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Niedriger % der Annotierungen</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Geringe Dichte</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Wenige Dokumente des Typs</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Falsche Kategorisierung</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Nicht erkannte Annotationen</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Diskrepanz zwischen Test- und Trainingsergebnissen</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Niedriger F1-Score beim Testen von Trainingsdaten</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper">X</p></td>
-</tr>
+<table summary="Die Tabelle listet allgemeine Probleme unter der ersten Spalte und empfohlene Fixes in der ersten Zeile auf. X-Markierungen geben an, welcher Fix auf welches Problem angewendet werden soll.">     <caption>Tabelle 2. Fixes für allgemeine Leistungsprobleme</caption>
+    <tr>
+      <th style="vertical-align:bottom; text-align:left" id="d15356e221">Problem</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e223">Wörterverzeichnisse hinzufügen</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e225">Dokumentgruppen bearbeiten</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e227">Typspezifische Dokumente hinzufügen</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e229">Weitere Annotationen im Korpus hinzufügen</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e231">Annotationen der Annotatorbenutzer korrigieren</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e233">Richtlinien für Annotatorbenutzer ergänzen</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e235">Typsystem aktualisieren</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e237">Weitere Untersuchungen vornehmen</th>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Niedriger F1-Score</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237">X</td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Niedriger Score für Genauigkeit</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237">X</td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Niedriger Score für Vollständigkeit</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Geringe Annotationen %</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Geringe Dichte</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Wenige Dokumente des Typs</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Falsche Kategorisierung</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Nicht erkannte Annotationen </td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Diskrepanz zwischen Test- und Trainingsergebnissen </td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Niedriger F1-Score beim Testen von Trainingsdaten</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237">X</td>
+    </tr>
 </table>
-
- {: #evaluate-ml_cheat__datasimpletable_nhm_5ym_cw}
+{: #evaluate-ml_cheat__datasimpletable_nhm_5ym_cw}
 
 ### Beschreibung der Korrekturmaßnahmen
+{: #evaluate-ml_fixes}
 
 - **Wörterverzeichnisse hinzufügen**
 
-    Ein Wörterverzeichnis enthält Beispiele für die Oberflächenformen eines bestimmten Entitätstyps. Es kann hilfreich sein, ein neues Wörterverzeichnis oder neue Einträge in einem bestehenden Wörterverzeichnis hinzuzufügen, wenn die Trainingsstatistik zeigt, dass Annotationen des jeweiligen Typs in den Triningsdaten nur selten vorkommen. Wenn der Entitätstyp eine zentraler Bestandteil des betreffenden Fachgebiets ist und nur selten vorkommt, kann dies darauf hindeuten, dass die in den Trainingsdaten de facto *vorhandenen* Oberflächenformen für den Typ vom Modell für maschinelles Lernen nicht erkannt werden. Die Bereitstellung weiterer Beispiele für Oberflächenformen kann dazu beitragen, das Problem zu beheben.
+    Ein Wörterverzeichnis enthält Beispiele für die Oberflächenformen eines bestimmten Entitätstyps. Es kann hilfreich sein, ein neues Wörterverzeichnis oder neue Einträge in einem bestehenden Wörterverzeichnis hinzuzufügen, wenn die Trainingsstatistik zeigt, dass Annotationen des jeweiligen Typs in den Trainingsdaten nur selten vorkommen. Wenn der Entitätstyp eine zentraler Bestandteil des betreffenden Fachgebiets ist und nur selten vorkommt, kann dies darauf hindeuten, dass die in den Trainingsdaten de facto *vorhandenen* Oberflächenformen für den Typ vom Modell für maschinelles Lernen nicht erkannt werden. Die Bereitstellung weiterer Beispiele für Oberflächenformen kann dazu beitragen, das Problem zu beheben.
 
 - **Dokumentgruppen bearbeiten**
 
@@ -245,17 +263,17 @@ In der folgenden Tabelle werden Maßnahmen zum Beheben der häufigsten Probleme 
 
 - **Annotationen der Annotatorbenutzer korrigieren**
 
-    Überprüfen Sie, ob Ihre Trainingsdaten konsistent und vollständig annotiert sind. Ein Modell für maschinelles Lernen lernt aus Ihren Annotationen der Ground Truth. Wenn ein Satz zum Beispiel den Ausdruck 'Obama-Familie' enthält und Sie 'Obama' in einem Satz als PERSON beschriften und 'Obama-Familie' in einem anderen Satz als MENSCHEN führt diese Inkonsistenz dazu, dass das Modell für maschinelles Lernen die Annotation nicht korrekt erlernen kann. Ebenso gilt: Wenn Sie 'Obama' in einem Satz als PERSON beschriften und denselben Namen in einem anderen Satz gar nicht beschriften, ist der Annotationserfolg unvollständig und das Modell für maschinelles Lernen wird unzureichend trainiert. Solche inkonsistenen und unvollständigen Beschriftungen werden auch als *Typenverwirrung* bezeichnet. In vielen Fällen entstehen solche Typenverwirrungen und daraus resultierende Fehler allein dadurch, dass mehrere Annotatorbenutzer eine Dokumentgruppe mit Überschneidungen bearbeiten. Achten Sie darauf, welche Probleme beim Beheben von Konflikten in Dokumenten auftreten. Sie können Einblicke in tiefere Probleme ermöglichen, die das Typsystem betreffen. Wenn keine weitere Optimierung des Typsystems möglich ist, kann es erforderlich werden, die Annotationsrichtlinien zu aktualisieren und Beispiele anzugeben. Sie können Abbildungen für häufige Fehler und für das korrekte Annotieren von Erwähnungen in bestimmten Situationen angeben.
+    Überprüfen Sie, ob Ihre Trainingsdaten konsistent und vollständig annotiert sind. Ein Modell für maschinelles Lernen lernt aus Ihren Annotationen der Ground Truth. Wenn ein Satz zum Beispiel den Ausdruck 'Obama-Familie' enthält und Sie 'Obama' in einem Satz als PERSON beschriften und 'Obama-Familie' in einem anderen Satz als MENSCHEN führt diese Inkonsistenz dazu, dass das Modell für maschinelles Lernen die Annotation nicht korrekt erlernen kann. Ebenso gilt: Wenn Sie 'Obama' in einem Satz als PERSON beschriften und denselben Namen in einem anderen Satz gar nicht beschriften, ist der Annotationserfolg unvollständig und das Modell für maschinelles Lernen wird unzureichend trainiert. Solche Inkonsistenzen und unvollständigen Beschriftungen werden auch als *Typenverwirrung* bezeichnet. In vielen Fällen entstehen solche Typenverwirrungen und daraus resultierende Fehler allein dadurch, dass mehrere Annotatorbenutzer eine Dokumentgruppe mit Überschneidungen bearbeiten. Achten Sie darauf, welche Probleme beim Beheben von Konflikten in Dokumenten auftreten. Sie können Einblicke in tiefere Probleme ermöglichen, die das Typsystem betreffen. Wenn keine weitere Optimierung des Typsystems möglich ist, kann es erforderlich werden, die Annotationsrichtlinien zu aktualisieren und Beispiele anzugeben. Sie können Abbildungen für häufige Fehler und für das korrekte Annotieren von Erwähnungen in bestimmten Situationen angeben.
 
     Ein weiterer Hinweis auf inkonsistente Annotationen ist es, wenn zwar genügend Annotationen vorhanden sind, aber der Wert für ihre Dichte im Korpus niedrig ist. Die Dichte kann beeinträchtigt werden, wenn eine signifikante Erwähnung, die in der Literatur des Fachgebiets häufig vorkommt, innerhalb der Dokumentgruppe mit verschiedenen Typen annotiert wird.
 
     Ein niedriger Score für die Genauigkeit deutet häufig darauf hin, dass die Konsistenz der Annotationen verbessert werden sollte. Überarbeiten Sie zu diesem Zweck die Annotationsrichtlinien, verbessern Sie die Schulung der Annotatorbenutzer und stellen Sie sicher, dass die Annotatorbenutzer im Team arbeiten und nicht isoliert voneinander.
 
-    Überprüfen Sie den Score für die Übereinstimmung der Annotatoren. Dieser Score misst den Grad der Übereinstimmung in den Ergebnissen verschiedener Annotatoren für dasselbe Dokument und ist damit ein überaus hilfreicher Zahlenwert. Dieser Score gibt nicht nur Aufschluss über die Qualität der Ground Truth-Dokumente, die zum Trainieren des Modells für maschinelles Lernen verwendet werden, er gibt auch die Obergrenze der Leistung des Modells für maschinelles Lernen an. Ein Modell, das mit diesen Dokumenten trainiert wird, kann kaum eine bessere Leistung erreichen als die bestmögliche Übereinstimmung der Annotatorbenutzer. Wenn die Leistung beispielsweise konstant bei 75 liegt und keinen höheren Wert erreicht, sollten Sie die Ergebnisse für die Übereinstimmung der Annotatoren überprüfen. Liegt der Score für die Übereinstimmung der Annotatoren bei 80, dann sollten Sie die Schulung der Annotatorbenutzer verbessern und sicherstellen, dass Konflikte bei der Beurteilung korrekt (gemäß den Annotaionsrichlinien) behoben werden. Wenn sich die Annotatorbenutzer nicht darüber einigen können, wie eine bestimmte Textstelle annotiert werden sollte, ist die Wahrscheinlichkeit gering, dass ein Modell für maschinelles Lernen die richtigen Beschriftungen zuordnet.
+    Überprüfen Sie den Score für die Übereinstimmung der Annotatoren. Dieser Score misst den Grad der Übereinstimmung in den Ergebnissen verschiedener Annotatoren für dasselbe Dokument und ist damit ein überaus hilfreicher Zahlenwert. Dieser Score gibt nicht nur Aufschluss über die Qualität der Ground Truth-Dokumente, die zum Trainieren des Modells für maschinelles Lernen verwendet werden, er gibt auch die Obergrenze der Leistung des Modells für maschinelles Lernen an. Ein Modell, das mit diesen Dokumenten trainiert wird, kann kaum eine bessere Leistung erreichen als die bestmögliche Übereinstimmung der Annotatorbenutzer. Wenn die Leistung beispielsweise konstant bei 75 liegt und keinen höheren Wert erreicht, sollten Sie die Ergebnisse für die Übereinstimmung der Annotatoren überprüfen. Liegt der Score für die Übereinstimmung der Annotatoren bei 80, dann sollten Sie die Schulung der Annotatorbenutzer verbessern und sicherstellen, dass Konflikte bei der Beurteilung korrekt (gemäß den Annotationsrichlinien) behoben werden. Wenn sich die Annotatorbenutzer nicht darüber einigen können, wie eine bestimmte Textstelle annotiert werden sollte, ist die Wahrscheinlichkeit gering, dass ein Modell für maschinelles Lernen die richtigen Beschriftungen zuordnet.
 
 - **Richtlinien für Annotatorbenutzer ergänzen**
 
-    Verständliche und umfassende Annotatorrichtlinien sind ein zentraler Baustein für die Entwicklung übereinstimmender und erfolgreichen Annotationen. Die Aufgabe der Annotatorbenutzer ist nicht leicht. Manche Nuancen bei der Zuordnung von Entitäts- und Beziehungstypen sind nicht leicht zu antizipieren. Sie treten erst bei der konkreten Bearbeitung der Dokumente des Fachgebiets zutage. Die Richtlinien können den Annotatorbenutzern beim Auswerten von Dokumenten eine Prüfung auf den ordnungsgemäßen Zustand der Dokumente ermöglichen. Richtlinien sollten stets eine dynamische und veränderbare Richtschnur sein, besonders am Anfang des Annotatierungsprozesses. Sie sind ein wichtiges Werkzeug für Feedback: Die Annotatorbenutzer gewinnen beim Annotieren einiger Dokumente neue Erkenntnisse, vertiefen diese Erkenntnisse durch weitere Dokumente und können so immer wieder neue Tipps und Tricks zu den Richtlinien beitragen. Schwierige Entscheidungen sollten unbedingt durch Beispiele und erprobte Methoden veranschaulicht werden. Die beste Weg, um festzustellen, welche Ergänzungen in den Annotationsrichtlinien vorgenommen werden sollten, ist die sorgfältige Überprüfung von Dokumentkonflikten. Beispiele aus der Praxis für unterschiedliche Vorgehensweisen, die zu abweichenden Annotationsergebnissen führen, können eine wertvolle Hilfe für Annotatorbenutzer beim Annotieren neuer Dokumente sein.
+    Verständliche und umfassende Annotatorrichtlinien sind ein zentraler Baustein für die Entwicklung übereinstimmender und erfolgreichen Annotationen. Die Aufgabe der Annotatorbenutzer ist nicht leicht. Manche Nuancen bei der Zuordnung von Entitäts- und Beziehungstypen sind nicht leicht zu antizipieren. Sie treten erst bei der konkreten Bearbeitung der Dokumente des Fachgebiets zutage. Die Richtlinien können den Annotatorbenutzern beim Auswerten von Dokumenten eine Prüfung auf den ordnungsgemäßen Zustand der Dokumente ermöglichen. Richtlinien sollten stets eine dynamische und veränderbare Richtschnur sein, besonders am Anfang des Annotationsprozesses. Sie sind ein wichtiges Werkzeug für Feedback: Die Annotatorbenutzer gewinnen beim Annotieren einiger Dokumente neue Erkenntnisse, vertiefen diese Erkenntnisse durch weitere Dokumente und können so immer wieder neue Tipps und Tricks zu den Richtlinien beitragen. Schwierige Entscheidungen sollten unbedingt durch Beispiele und erprobte Methoden veranschaulicht werden. Die beste Weg, um festzustellen, welche Ergänzungen in den Annotationsrichtlinien vorgenommen werden sollten, ist die sorgfältige Überprüfung von Dokumentkonflikten. Beispiele aus der Praxis für unterschiedliche Vorgehensweisen, die zu abweichenden Annotationsergebnissen führen, können eine wertvolle Hilfe für Annotatorbenutzer beim Annotieren neuer Dokumente sein.
 
 - **Typsystem aktualisieren**
 
@@ -277,14 +295,17 @@ In der folgenden Tabelle werden Maßnahmen zum Beheben der häufigsten Probleme 
 Optimieren Sie die Leistung Ihres Modells für maschinelles Lernen, um niedrigen F1-Scores entgegenzuwirken.
 
 ### Symptome
+{: #evaluate-mllowf1_symptoms}
 
 Der beste Wert für den F1-Score ist 1 und der schlechteste Wert ist 0. Ein niedriger F1-Score deutet auf geringe Genauigkeit und geringe Vollständigkeit hin. Das Modell für maschinelles Lernen generiert nicht zutreffende Annotationen und findet Annotationen nicht, die es finden sollte.
 
 ### Ursachen
+{: #evaluate-mllowf1_causes}
 
 Niedrige F1-Scores können viele verschiedene Ursachen haben. Sie hängen von Einflussfaktoren wie Fachgebiet, Komplexität des Typsystems, Zweckmäßigkeit der Trainingsdokumente, Erfahrung der Annotatorbenutzer und von weiteren Faktoren ab.
 
 ### Problem beheben
+{: #evaluate-mllowf1_resolving}
 
 Optimieren Sie die Leistung Ihres Modells für maschinelles Lernen, indem Sie mindestens einen der folgenden Schritte ausführen und anschließend das Modell erneut trainieren:
 
@@ -310,14 +331,17 @@ Optimieren Sie die Leistung Ihres Modells für maschinelles Lernen, indem Sie mi
 Optimieren Sie die Leistung Ihres Modells für maschinelles Lernen, um niedrigen Scores für die Genauigkeit entgegenzuwirken. Auf einer übergeordneten Ebene deutet eine geringe Genauigkeit darauf hin, dass die Konsistenz der Annotationen verbessert werden sollte.
 
 ### Symptome
+{: #evaluate-mllowp_symptoms}
 
 Der beste Score für die Genauigkeit ist 1 und der schlechteste Score ist 0. Ein niedriger Score für die Genauigkeit deutet darauf hin, dass vom Modell für maschinelles Lernen falsche Annotationen generiert wurden.
 
 ### Ursachen
+{: #evaluate-mllowp_causes}
 
 Niedrige Scores für die Genauigkeit können viele verschiedene Ursachen haben. Sie hängen von Einflussfaktoren wie Fachgebiet, Komplexität des Typsystems, Zweckmäßigkeit der Trainingsdokumente, Erfahrung der Annotatorbenutzer und von weiteren Faktoren ab.
 
 ### Problem beheben
+{: #evaluate-mllowp_resolving}
 
 Optimieren Sie die Leistung Ihres Modells für maschinelles Lernen, indem Sie mindestens einen der folgenden Schritte ausführen und anschließend das Modell erneut trainieren:
 
@@ -337,14 +361,17 @@ Abbildung 2. Niedrige Scores für die Genauigkeit verarbeiten
 Optimieren Sie die Leistung Ihres Modells für maschinelles Lernen, um niedrigen Scores für die Vollständigkeit entgegenzuwirken. Auf einer übergordneten Ebene deutet eine geringe Vollständigkeit darauf hin, dass weitere Trainingsdaten hinzugefügt werden sollten.
 
 ### Symptome
+{: #evaluate-mllowr_symptoms}
 
 Der beste Score für die Vollständigkeit ist 1 und der schlechteste Score ist 0. Ein niedriger Score für die Vollständigkeit deutet darauf hin, dass das Modell für maschinelles Lernen erforderliche Annotationen nicht erstellen konnte.
 
 ### Ursachen
+{: #evaluate-mllowr_causes}
 
 Niedrige Scores für die Vollständigkeit können viele verschiedene Ursachen haben. Sie hängen von Einflussfaktoren wie Fachgebiet, Komplexität des Typsystems, Zweckmäßigkeit der Trainingsdokumente, Erfahrung der Annotatorbenutzer und von weiteren Faktoren ab.
 
 ### Problem beheben
+{: #evaluate-mllowr_resolving}
 
 Optimieren Sie die Leistung Ihres Modells für maschinelles Lernen, indem Sie mindestens einen der folgenden Schritte ausführen und anschließend das Modell erneut trainieren:
 

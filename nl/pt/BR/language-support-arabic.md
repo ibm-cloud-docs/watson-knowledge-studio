@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -53,4 +53,4 @@ Para configurar a forma numérica no navegador Firefox:
 
 ### Referência relacionada
 
-[Suporte a diversos idiomas](/docs/services/watson-knowledge-studio/language-support.html)
+[Suporte ao idioma](/docs/services/watson-knowledge-studio/language-support.html)

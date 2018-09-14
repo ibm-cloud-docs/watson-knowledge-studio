@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -31,14 +31,15 @@ lastupdated: "2018-04-04"
 用於預先註釋文件的方法絕不會限制您可以使用產生模型的方式。例如，只因為您使用 {{site.data.keyword.nlushort}} 服務來預先註釋文件，並不表示您必須將建置的最終機器學習模型部署至 {{site.data.keyword.nlushort}} 服務。預先註釋只表示用來引導人工註釋程序。
 
 ## 重要注意事項
+{: #preannotation_notes}
 
 - 絕不對註釋人員已註釋的文件執行預先註釋程式，因為這樣會移除註釋人員所新增的註釋。
 - 您只能對文件執行一個預先註釋程式。如果您執行一個預先註釋程式，然後執行第二個預先註釋程式，則第二個預先註釋程式會移除第一個預先註釋程式所新增的註釋。請挑選最適合您使用案例的預先註釋方法，而且只使用一個預先註釋程式。
 
 ## 預先註釋方法
+{: #preannotation_methods}
 
 下列是可用的預先註釋程式：
->**附註**：{{site.data.keyword.alchemylanguageshort}} 服務已被淘汰。如需相關資訊，請參閱 [{{site.data.keyword.alchemyapishort}} 服務的淘汰 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/blogs/bluemix/2017/03/bye-bye-alchemyapi/){: new_window}。
 
 - **{{site.data.keyword.nlushort}}**
 
@@ -66,21 +67,24 @@ lastupdated: "2018-04-04"
 您可以使用 {{site.data.keyword.nlushort}} 服務，來預先註釋您新增至語料庫的文件。
 
 ### 開始之前
+{: #wks_preannotnlu_prereqs}
 
 判斷 {{site.data.keyword.nlushort}} 預先註釋程式是否可能為您的使用案例新增值。請檢閱支援的 [{{site.data.keyword.nlushort}} 服務實體類型及子類型 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/docs/services/natural-language-understanding/entity-types.html){: new_window} 的清單，以判斷它們與類型系統中的類型之間是否有自然重疊。若有的話，請繼續執行此程序。若沒有，請選擇不同的預先註釋程式來使用。
 
 ### 關於本作業
+{: #wks_preannotnlu_about}
 
 {{site.data.keyword.nlushort}} 是透過自然語言處理程序提供文字分析的服務。當您使用 {{site.data.keyword.nlushort}} 預先註釋程式時，它會呼叫 {{site.data.keyword.nlushort}} 服務來尋找及註釋文件中的實體。
 
 您必須指定您要服務尋找的實體類型，方法為將 {{site.data.keyword.nlushort}} 實體類型對映至已新增至 {{site.data.keyword.knowledgestudioshort}} 類型系統的 {{site.data.keyword.knowledgestudioshort}} 實體類型。只會尋找並註釋您所對映的實體類型提及項目。
 
 ### 程序
+{: #wks_preannotnlu_procedure}
 
 若要使用 {{site.data.keyword.nlushort}} 服務來預先註釋文件，請完成下列步驟：
 
 1. 以 {{site.data.keyword.knowledgestudioshort}} 管理者身分登入，並選取您的工作區。
-1. 選取**資產及工具** > **預先註釋程式** > **Natural Language Understanding** 標籤。
+1. 選取**機器學習模型** > **預先註釋** > **Natural Language Understanding** 標籤。
 1. 按一下**編輯**，將**實體類型**頁面上所定義的每一個實體類型對映至對應的 {{site.data.keyword.nlushort}} 實體類型。
 
     - {{site.data.keyword.nlushort}} 實體類型的下拉清單會預先移入 {{site.data.keyword.nlushort}} 服務所辨識的實體類型。
@@ -88,20 +92,28 @@ lastupdated: "2018-04-04"
     - 您無法將 {{site.data.keyword.nlushort}} 實體類型對映至 {{site.data.keyword.knowledgestudioshort}} 實體角色，只能對映至 {{site.data.keyword.knowledgestudioshort}} 實體類型。
     - 您可以將多個 {{site.data.keyword.nlushort}} 實體類型對映至單一 {{site.data.keyword.knowledgestudioshort}} 實體類型，或其他方式。例如，允許下列對映：
 
-    <table cellpadding="4" cellspacing="0" summary="實體類型的範例對映" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d20428e292" class="stentry thleft thbot">Watson Knowledge Studio 實體類型</th>
-        <th valign="bottom" align="left" id="d20428e298" class="stentry thleft thbot">{{site.data.keyword.nlushort}}實體類型</th>
+    <table summary="實體類型的範例對映">
+    <caption>表 1. 實體類型的範例對映</caption>
+      <tr>
+        <th style="vertical-align:bottom; text-align"left" id="d20428e292">Watson Knowledge Studio Entity Type</th>
+        <th style="vertical-align:bottom; text-align"left" id="d20428e298">{{site.data.keyword.nlushort}} 實體類型</th>
       </tr>
-      <tr class="strow"><td valign="top" headers="d20428e292" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">ENGINEER</p></li>
-            <li class="li"><p class="p wrapper">SCIENTIST</p></li>
-          </ul>
+      <tr>
+        <td headers="d20428e292">
+          ENGINEER<br/>
+          SCIENTIST
         </td>
-        <td valign="top" headers="d20428e298" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">Person</p></li>
-          </ul></td>
+        <td headers="d20428e298">
+          Person
+        </td>
       </tr>
-      <tr class="strow"><td valign="top" headers="d20428e292" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">LOCATION</p></li></td>
-        <td valign="top" headers="d20428e298" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">CityTown</p></li>
-            <li class="li"><p class="p wrapper">Country</p></li>
-          </ul>
+      <tr>
+        <td headers="d20428e292">
+          LOCATION
+        </td>
+        <td headers="d20428e298">
+          CityTown<br/>
+          Country
         </td>
       </tr>
     </table>
@@ -113,7 +125,8 @@ lastupdated: "2018-04-04"
 
 1. 選取您想要預先註釋的每一個文件集的勾選框。
 
-    如果您是第一次執行此預先註釋程式，請先驗證預先註釋程式可以如預期找到對映實體提及項目。建立一個文件集，其中包含代表性文件，或來自每一個不同資料來源的文件。{: tip}
+    如果您是第一次執行此預先註釋程式，請先驗證預先註釋程式可以如預期找到對映實體提及項目。建立一個文件集，其中包含代表性文件，或來自每一個不同資料來源的文件。
+    {: tip}
 
 1. 按一下**執行**。
 
@@ -142,32 +155,35 @@ lastupdated: "2018-04-04"
 若要協助註釋人員開始使用其註釋作業，您可以建立字典，並使用它來預先註釋您新增至語料庫的文件。
 
 ### 關於本作業
+{: #wks_preannot_about}
 
 當註釋人員開始使用已預先註釋的文件時，實體類型可能已根據字典項目標示一些提及項目。註釋人員可以變更或移除預先註釋的實體類型，並將實體類型指派給未註釋的提及項目。由字典進行的預先註釋不會註釋關係及互相參照。關係及互相參照必須由註釋人員註釋。
 
-**附註**：此作業顯示如何建立可編輯的字典。如果您要使用唯讀字典來上傳及預先註釋文件，請按一下**資產及工具** > **預先註釋程式** > **字典**標籤上提供的**上傳字典**按鈕。
+**附註**：此作業顯示如何建立可編輯的字典。如果您要使用唯讀字典來上傳及預先註釋文件，請按一下**建立字典**按鈕旁邊的**功能表**圖示。選取**上傳字典**。
 
 ### 程序
+{: #wks_preannot_procedure}
 
 若要建立可編輯字典並預先註釋文件，請執行下列動作：
 
 1. 以 {{site.data.keyword.knowledgestudioshort}} 管理者身分登入，並選取您的工作區。
-1. 選取**資產及工具** > **預先註釋程式** > **字典**標籤。
-1. 按一下**管理字典**，然後按一下**建立字典**。
+1. 選取**資產** > **字典**頁面。
+1. 按一下**建立字典**，輸入名稱，然後按一下**儲存**。
 1. 從**實體類型**清單中，選取要與字典相關聯的實體類型。
-1. 新增字典的項目，或上傳包含字典詞彙的檔案。
-1. 回到**預先註釋程式**頁面，在**字典**標籤上，按一下**套用此預先註釋程式**。
-1. 選取您想要預先註釋的每一個文件集的勾選框，然後按一下**執行**。
+3. 新增字典的項目，或上傳包含字典詞彙的檔案。
+4. 按一下**機器學習模型** > **預先註釋**。
+5. 在**字典**標籤上，按一下**套用此預先註釋程式**。
+6. 選取您想要預先註釋的每一個文件集的勾選框，然後按一下**執行**。
 
     預先註釋會套用至個別文件，而不會顧慮文件可能隸屬的各種文件集或註釋集。在已選取文件集與未選取文件集之間重疊的文件，在這兩個文件集中將為已預先註釋。
 
-1. 在建立字典之後，只要您想要使用字典來預先註釋您新增至語料庫的其他文件集，請隨時按一下**執行**。
+7. 在建立字典之後，只要您想要使用字典來預先註釋您新增至語料庫的其他文件集，請隨時按一下**執行**。
 
     > **限制：**如果您編輯字典來新增或移除項目，則必須重建包括已預先註釋之文件集的註釋作業。以您對字典註釋程式所做之變更為基礎的預先註釋，無法套用至已指派給註釋作業的註釋集。
 
 **相關資訊**：
 
-[字典](/docs/services/watson-knowledge-studio/dictionaries.html#wks_dictionaries)
+[建立字典](/docs/services/watson-knowledge-studio/dictionaries.html)
 
 [開始使用 > 新增字典](/docs/services/watson-knowledge-studio/tutorials-create-project.html#wks_tutless4)
 
@@ -177,21 +193,23 @@ lastupdated: "2018-04-04"
 您可以使用現有機器學習模型，來預先註釋您新增至語料庫的文件。
 
 ### 關於本作業
+{: #wks_preannotsire_about}
 
-在註釋 10 到 30 個文件之後，可對資料進行機器學習模型訓練。這類最小訓練模型不應用於正式作業，但可用作預先註釋模型，以協助加速後續文件的人工註釋。例如，如果您在訓練機器學習模型之後將文件新增至語料庫，則可以使用此模型來預先註釋新的文件集。絕不在人員所註釋的同一文件上執行預先註釋程式。預先註釋程式會移除人工註釋。
+在註釋 10 到 30 個文件之後，可對資料進行機器學習模型訓練。這類最小訓練模型不應用於正式作業，但可用來預先註釋文件，以協助加速後續文件的人工註釋。例如，如果您在訓練機器學習模型之後將文件新增至語料庫，則可以使用此模型來預先註釋新的文件集。絕不在人員所註釋的同一文件上執行預先註釋程式。預先註釋程式會移除人工註釋。
 
 ### 程序
+{: #wks_preannotsire_procedure}
 
 若要使用現有機器學習模型來預先註釋文件，請執行下列動作：
 
 1. 以 {{site.data.keyword.knowledgestudioshort}} 管理者身分登入，並選取您的工作區。
-1. 選取**模型管理** > **版本** > **機器學習**標籤。
-1. 按一下**執行此模型**。
-1. 選取您想要預先註釋的每一個文件集的勾選框，然後按一下**執行**。
+2. 選取**機器學習模型** > **版本**。
+3. 若要預先註釋新文件，請按一下**執行此模型**。
+4. 選取您想要預先註釋的每一個文件集的勾選框，然後按一下**執行**。
 
     預先註釋會套用至個別文件，而不會顧慮文件可能隸屬的各種文件集或註釋集。在已選取文件集與未選取文件集之間重疊的文件，在這兩個文件集中將為已預先註釋。
 
-1. 只要您想要使用機器學習模型來預先註釋您新增至語料庫的文件集，您隨時都可以按一下**執行此模型**。
+5. 只要您想要使用機器學習模型來預先註釋您新增至語料庫的文件集，您隨時都可以按一下**執行此模型**。
 
 ## 以規則型模型預先註釋文件
 {: #wks_preannotrule}
@@ -199,26 +217,28 @@ lastupdated: "2018-04-04"
 您可以使用現有規則型模型，來預先註釋您新增至語料庫的文件。
 
 ### 程序
+{: #wks_preannotrule_procedure}
 
 若要使用規則型模型來預先註釋文件，請完成下列步驟：
 
 1. 以 {{site.data.keyword.knowledgestudioshort}} 管理者身分登入，並選取您的工作區。
-1. 選取**模型管理** > **版本** > **規則型**標籤。
+1. 選取**規則型模型** > **版本** > **規則型模型**標籤。
 1. 如果尚未完成，請按一下**對映實體類型及類別**，將您已在 {{site.data.keyword.knowledgestudioshort}} 類型系統中定義的實體類型對映至一個以上的規則型模型類別。
+2. 針對您要對映的每一個實體類型，按一下**編輯**。
 
     - **類別名稱**直欄的下拉清單會預先移入與規則型模型相關聯的類別。
     - 您必須至少將一個實體類型對映至類別。
 
-1. 在**規則型**標籤上，按一下**執行此模型**，然後選取您要預先註釋的文件集或註釋集。請確定您選取的集合不包含具有人工註釋的文件。預先註釋程式會移除人工註釋。
+3. 在**規則型模型**標籤上，按一下**執行此模型**。
 
     除非您至少對映一個實體類型，否則**執行此模型**按鈕無法使用。
 
-1. 選取您想要預先註釋的每一個文件集的勾選框。
-1. 按一下**執行**。
+4. 選取您要預先註釋的文件集或註釋集。請確定您選取的集合不包含具有人工註釋的文件。預先註釋程式會移除人工註釋。
+5. 按一下**執行**。
 
     預先註釋會套用至個別文件，而不會顧慮文件可能隸屬的各種文件集。在已選取文件集與未選取文件集之間重疊的文件，在這兩個文件集中將顯示為已預先註釋。
 
-1. 只要您想要使用規則型模型來預先註釋您新增至語料庫的其他文件集，您隨時都可以按一下**執行此模型**。
+6. 只要您想要使用規則型模型來預先註釋您新增至語料庫的其他文件集，您隨時都可以按一下**執行此模型**。
 
     > **限制：**如果您編輯規則型模型的實體類型至類別對映，則必須重建包括已預先註釋之文件集的註釋作業。以您對預先註釋程式對映定義所做之變更為基礎的預先註釋，無法套用至已指派給註釋作業的文件集。
 
@@ -239,6 +259,7 @@ UIMA CAS XMI 是 Apache UIMA 的標準格式。提供的準則可讓您以正確
 您可以匯出已在 {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer Content Analytics 中搜索及分析的文件，並將分析的文件當作 XMI 檔上傳至 {{site.data.keyword.knowledgestudioshort}} 工作區。
 
 #### 程序
+{: #wks_uima_procedure}
 
 若要從 {{site.data.keyword.watson}} Explorer Content Analytics 集合中取得已分析的文件，請執行下列動作：
 
@@ -270,6 +291,7 @@ UIMA CAS XMI 是 Apache UIMA 的標準格式。提供的準則可讓您以正確
 您可以從 {{site.data.keyword.watson}}Explorer Content Analytics Studio 匯出已分析文件的集合，並將分析的文件當作 XMI 檔上傳至 {{site.data.keyword.knowledgestudioshort}} 專案。
 
 #### 程序
+{: #wks_uimawexstudio_procedure}
 
 若要從 Content Analytics Studio 集合中取得已分析的文件，請執行下列動作：
 
@@ -282,6 +304,7 @@ UIMA CAS XMI 是 Apache UIMA 的標準格式。提供的準則可讓您以正確
 1. 解壓縮 ZIP 檔中的所有檔案。解壓縮的內容包括 XMI 檔 (`*.xmi`)、UIMA TypeSystem 描述子檔案 (`TypeSystem.xml`) 及其他檔案。
 
 #### 下一步
+{: #wks_uimawexstudio_next}
 
 您必須定義 UIMA 類型與 {{site.data.keyword.knowledgestudioshort}} 實體類型之間的對映。您也必須建立 ZIP 檔，其中包含將已分析資料上傳至 {{site.data.keyword.knowledgestudioshort}} 工作區所需的所有檔案。
 
@@ -291,10 +314,12 @@ UIMA CAS XMI 是 Apache UIMA 的標準格式。提供的準則可讓您以正確
 在將 XMI 檔上傳至 {{site.data.keyword.knowledgestudioshort}} 工作區之前，您必須定義 UIMA 類型與 {{site.data.keyword.knowledgestudioshort}} 實體類型之間的對映。
 
 #### 開始之前
+{: #wks_uimawexmap_prereqs}
 
 {{site.data.keyword.knowledgestudioshort}} 工作區中的類型系統必須包括您要與 UIMA 類型相對映的實體類型。
 
 #### 程序
+{: #wks_uimawexmap_procedure}
 
 若要對映 UIMA 類型與 {{site.data.keyword.knowledgestudioshort}} 實體類型，請執行下列動作：
 
@@ -337,6 +362,7 @@ UIMA CAS XMI 是 Apache UIMA 的標準格式。提供的準則可讓您以正確
         {: screen}
 
 #### 下一步
+{: #wks_uimawexmap_next}
 
 您必須建立 ZIP 檔，其中包含將已分析資料上傳至 {{site.data.keyword.knowledgestudioshort}} 工作區所需的所有檔案。
 
@@ -354,12 +380,14 @@ UIMA CAS XMI 是 Apache UIMA 的標準格式。提供的準則可讓您以正確
 若要使用您所下載的已註釋文件來訓練模型，您必須建立 ZIP 檔，其中包含上傳 XMI 檔所需的所有檔案，然後將 ZIP 檔上傳至 {{site.data.keyword.knowledgestudioshort}} 工作區。
 
 #### 開始之前
+{: #wks_uimaweximport_prereqs}
 
 在上傳 ZIP 檔之前，請確保 {{site.data.keyword.knowledgestudioshort}} 工作區中的類型系統包括您已與 UIMA 類型相對映的實體類型。
 
 > **警告：**UIMA 分析引擎容許跨句子的註釋。在 {{site.data.keyword.knowledgestudioshort}} 中，註釋必須存在於單一句子的界限內。如果您上傳的 XMI 檔包括跨句子的註釋，則那些註釋不會出現在基準編輯器中。
 
 #### 程序
+{: #wks_uimaweximport_procedure}
 
 若要將預先註釋的文件上傳至 {{site.data.keyword.knowledgestudioshort}} 工作區，請執行下列動作：
 
@@ -372,7 +400,7 @@ UIMA CAS XMI 是 Apache UIMA 的標準格式。提供的準則可讓您以正確
 
 1. 將 ZIP 檔上傳至 {{site.data.keyword.knowledgestudioshort}} 工作區。
 
-    1. 以 {{site.data.keyword.knowledgestudioshort}} 管理者或專案經理身分登入，開啟您要新增文件的工作區，然後開啟**資產及工具** > **文件**頁面。
+    1. 以 {{site.data.keyword.knowledgestudioshort}} 管理者或專案經理身分登入，開啟您要新增文件的工作區，然後開啟**資產** > **文件**頁面。
     1. 按一下**上傳文件集**。
     1. 拖曳您建立的 ZIP 檔，或按一下來尋找並選取檔案。
     1. 選取勾選框，以指出 ZIP 檔包含 UIMA CAS XMI 檔。

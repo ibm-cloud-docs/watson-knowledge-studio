@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -34,112 +34,33 @@ Für einige der Services müssen Sie Details  zu der Serviceinstanz kennen, in d
 
 Sie können das Modell für maschinelles Lernen auch zum Vorannotieren neuer Dokumente verwenden. Details hierzu finden Sie unter [Dokumente mit einem Modell für maschinelles Lernen vorannotieren](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannotsire).
 
-## Modell für maschinelles Lernen in AlchemyLanguage bereitstellen
-{: #wks_mabluemix}
-
-Wenn die Leistung des Modells Ihren Erwartungen entspricht, können Sie eine Version des Modells in {{site.data.keyword.IBM_notm}} {{site.data.keyword.alchemylanguageshort}} bereitstellen. Diese Funktion, für die Sie einen {{site.data.keyword.alchemyapishort}}-Zugriffsschlüssel angeben müssen, ermöglicht Ihren Anwendungen die Verwendung des bereitgestellten Modells für maschinelles Lernen zum Annotieren von Dokumenten in Ihrem Fachgebiet.
-
-### Vorbereitungen
-
-Für die Bereitstellung und Verwendung des Modells müssen Sie über den erweiterten Plan für den Service {{site.data.keyword.alchemylanguageshort}} verfügen.
->Hinweis: Der Service {{site.data.keyword.alchemylanguageshort}} wird nicht mehr verwendet. Sie können dieses Modell nur in dem Service bereitstellen, wenn Sie über einen bereits bestehenden Plan verfügen.
-
-### Informationen zu diesem Vorgang
-
-Beim Bereitstellen des Modells für maschinelles Lernen wählen Sie die Modellversion aus, die Sie bereitstellen möchten. Für die Bereitstellung in diesem Service benötigen Sie einen Zugriffsschlüssel von {{site.data.keyword.IBM_notm}} {{site.data.keyword.alchemylanguageshort}}.
-
-Der Schlüssel muss mit einem Konto verknüpft sein, das zum Publizieren angepasster Modelle berechtigt ist. Andernfalls wird das Modell zwar erfolgreich bereitgestellt, aber Sie können es nicht verwenden.
-
-Den Schlüssel müssen Sie angeben, wenn Sie zum ersten Mal ein Modell in {{site.data.keyword.alchemylanguageshort}} bereitstellen. Anschließend können Sie den Schlüssel für mehrere Versionen des Modells wiederverwenden, die Sie bereitstellen. Für jeden Schlüssel gilt eine Obergrenze für die Anzahl der Modelle, die gleichzeitig bereitgestellt werden können.
-
-### Vorgehensweise
-
-So stellen Sie ein Modell für maschinelles Lernen in {{site.data.keyword.alchemylanguageshort}} bereit:
-
-1. Melden Sie sich als {{site.data.keyword.knowledgestudioshort}}-Administrator oder -Projektleiter an und wählen Sie Ihren Arbeitsbereich aus.
-1. Wählen Sie die Registerkarte **Modellverwaltung** > **Versionen** > **Maschinelles Lernen** aus.
-1. Wählen Sie die Version des Modells aus, das Sie bereitstellen möchten.
-
-    Wenn nur eine einzige funktionsfähige Version des Modells vorhanden ist, erstellen Sie einen Snapshot des aktuellen Modells. Dadurch wird das Modell versioniert, d. h. Sie können eine Modellversion bereitstellen und trotzdem fortfahren, die aktuelle Version zu verbessern. Die Option zum Bereitstellen wird erst angezeigt, wenn Sie mindestens eine Version erstellt haben.
-
-1. Klicken Sie auf **Bereitstellen**, wählen Sie den {{site.data.keyword.alchemylanguageshort}}-Service als Ziel für die Bereitstellung aus und klicken Sie auf **Weiter**.
-1. Geben Sie entweder den Schlüssel ein, den Sie von {{site.data.keyword.alchemylanguageshort}} erhalten haben, oder wählen Sie eine zuvor bereitgestellte Version des Modells aus, deren Schlüssel Sie wiederverwenden möchten, und klicken Sie auf **Bereitstellen**. Wenn der Schlüssel gültig ist, wird eine Bestätigung angezeigt, in der die Modell-ID enthalten ist. Diese Bestätigung bedeutet nicht, dass das Modell für die Verwendung durch Ihre Anwendungen bereit ist.
-1. Der Bereitstellungsprozess kann mehrere Minuten dauern. Um den Status der Bereitstellung zu prüfen, klicken Sie auf **Status** neben der Version, die Sie implementiert haben. Wenn die Bereitstellung des Modells noch nicht abgeschlossen ist, wird der Status 'Publizieren läuft' angezeigt. Wenn die Bereitstellung erfolgreich abgeschlossen ist, wird der Status in 'Verfügbar' geändert. Wenn Probleme aufgetreten sind, wird der Status 'Fehler' angezeigt.
-
-    Die Statusinformationen beinhalten die Modell-ID, die letzten vier Stellen des {{site.data.keyword.alchemyapishort}}-Schlüssels und ein Protokoll für den Bereitstellungsprozess. Über die Modell-ID (model_id) rufen Ihre Anwendungen das Modell für maschinelles Lernen auf. Anhand des {{site.data.keyword.alchemyapishort}}-Schlüssels können Sie die Anzahl der Bereitstellungen pro Schlüssel überwachen.
-
-### Nächste Schritte
-
-Um das bereitgestellte Modell zu verwenden, müssen Sie die Modell-ID kopieren und in den API-Aufruf Ihrer Anwendung einfügen. In dem Aufruf muss außerdem der {{site.data.keyword.alchemylanguageshort}}-Service mit dem erweiterten Plan angegeben werden, den Sie mit dem Modell und dem zugehörigen {{site.data.keyword.alchemyapishort}}-Zugriffsschlüssel verwenden möchten. Die folgenden Endpunkte werden unterstützt:
-
-- **&lt;*input-type*&gt;GetRankedNamedEntities**
-
-    Verwendet das angepasste Modell, dass Sie im Modellparameter angeben, um eine Liste der Erwähnungen aller bekannten Entitätstypen zu extrahieren, die in den von Ihnen bereitgestellten Eingabedaten gefunden werden. Zu den unterstützten Eingabetypen gehören Text, HTML oder eine öffentliche URL. Weitere Informationen zu der API und der zu verwendenden Syntax finden Sie unter [{{site.data.keyword.alchemylanguageshort}}&gt;Entitäten ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/alchemy-language/api/v1/#entities){: new_window}.
-
-- **&lt;*input-type*&gt;GetTypedRelations**
-
-    Verwendet das angepasste Modell, das Sie im Modellparameter angeben, um eine Liste der Instanzen bekannter Beziehungen zu extrahieren, die in den von Ihnen bereitgestellten Eingabedaten gefunden werden. Weitere Informationen zu der API und der zu verwendenden Syntax finden Sie unter [{{site.data.keyword.alchemylanguageshort}}&gt;TypedRelations ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/alchemy-language/api/v1/#typed-relations){: new_window}.
-
-#### Beispiele
-
-- Der folgende API-Aufruf sucht nach bekannten Entitätstypen in der Textzeichenfolge, die im Hauptteil der POST-Anforderung übergeben wird. Die Anforderung gibt die ID des erstellten Modells und einen Alchemy-API-Schlüssel an, der über die Berechtigungen zum Ausführen angepasster Modelle verfügt.
-
-    ```bash
-    curl -d 'text=Mary had a little lamb.'
-    "https://gateway-a.watsonplatform.net/calls/text/TextGetRankedNamedEntities?
-    showSourceText=1&
-    model=44476a63-c55t-451f-ad3r-8b23c0f4628c&
-    apikey=s3wee88r25wwe2p6442w99g8t77phll5323kkf3a&
-    outputMode=json"
-    ```
-    {: pre}
-
-    Die Antwort gibt `Mary` und `lamb` zurück, wenn es sich um Erwähnungen handelt, die von Ihrem Modell für maschinelles Lernen erkannt werden.
-
-- Der folgende API-Aufruf sucht nach bekannten Beziehungen in der Textzeichenfolge, die im Hauptteil der POST-Anforderung übergeben wird. Die Anforderung gibt die ID des erstellten Modells und einen Alchemy-API-Schlüssel an, der über die Berechtigungen zum Ausführen angepasster Modelle verfügt.
-
-    ```bash
-    curl -d 'text=Mary had a little lamb.'
-    "https://gateway-a.watsonplatform.net/calls/text/TextGetTypedRelations?
-    showSourceText=1&
-    model=44476a63-c55t-451f-ad3r-8b23c0f4628c&
-    apikey=s3wee88r25wwe2p6442w99g8t77phll5323kkf3a&
-    outputMode=json"
-    ```
-    {: pre}
-
-    Die Antwort gibt `EigentumVon` zurück, wenn diese Beziehung von Ihrem Modell für maschinelles Lernen erkannt wird.
-
-> **Hinweis:** Die Rücklaufzeichen wurden eingefügt, um die Bildschirmdarstellung der Beispiele zu verbessern. Geben Sie in der API-Syntax keine Rücklaufzeichen ein.
-
-Weitere Informationen finden Sie in der [Dokumentation für {{site.data.keyword.alchemylanguageshort}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/watson/developercloud/doc/alchemylanguage/customizing.shtml){: new_window}.
-
-#### Zugehörige Informationen
-
-[Probleme bei {{site.data.keyword.alchemylanguageshort}}-Modellen](/docs/services/watson-knowledge-studio/troubleshooting.html#wks_ts_deployed_model_deleted)
-
 ## Modell für maschinelles Lernen in IBM Watson Discovery bereitstellen
 {: #wks_madiscovery}
 
 Wenn die Leistung des Modells Ihren Erwartungen entspricht, können Sie eine Version des Modells in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}} bereitstellen. Diese Funktion ermöglicht Ihren Anwendungen, das bereitgestellte Modell für maschinelles Lernen zu verwenden, um die aus Ihren Daten gewonnenen Erkenntnissen um die Erkennung der relevanten Konzepte und Beziehungen für Ihr Fachgebiet zu erweitern.
 
 ### Vorbereitungen
+{: #wks_madiscovery_prereqs}
 
 Sie benötigen Administratorzugriff auf eine Instanz des {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}}-Service sowie die Namen des zugeordneten {{site.data.keyword.Bluemix_notm}}-Bereichs und der Instanz.
 
 ### Informationen zu diesem Vorgang
+{: #wks_madiscovery_about}
 
-Beim Bereitstellen des Modells für maschinelles Lernen wählen Sie die Modellversion aus, die Sie bereitstellen möchten. 
+Beim Bereitstellen des Modells für maschinelles Lernen wählen Sie die Modellversion aus, die Sie bereitstellen möchten.
 
 ### Vorgehensweise
+{: #wks_madiscovery_procedure}
 
 Führen Sie die folgenden Schritte aus, um das Modell für maschinelles Lernen in {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}} bereitzustellen:
 
 1. Melden Sie sich als {{site.data.keyword.knowledgestudioshort}}-Administrator oder -Projektleiter an und wählen Sie Ihren Arbeitsbereich aus.
-1. Wählen Sie die Registerkarte **Modellverwaltung** > **Versionen** > **Maschinelles Lernen** aus.
+1. Wählen Sie **Modell für maschinelles Lernen** > **Versionen** aus.
 1. Wählen Sie die Version des Modells aus, das Sie bereitstellen möchten.
 
     Wenn nur eine einzige funktionsfähige Version des Modells vorhanden ist, erstellen Sie einen Snapshot des aktuellen Modells. Dadurch wird das Modell versioniert, d. h. Sie können eine Modellversion bereitstellen und trotzdem fortfahren, die aktuelle Version zu verbessern. Die Option zum Bereitstellen wird erst angezeigt, wenn Sie mindestens eine Version erstellt haben.
+
+    **Hinweis**: Jede Version kann nur für eine Serviceinstanz implementiert werden. Wenn Sie dasselbe Modell in mehreren Instanzen implementieren möchten, müssen Sie für jede Instanz eine Version erstellen.
 
 1. Klicken Sie auf **Bereitstellen**, wählen Sie {{site.data.keyword.discoveryshort}} als Ziel für die Bereitstellung aus und klicken Sie anschließend auf **Weiter**.
 1. Wählen Sie den {{site.data.keyword.Bluemix_notm}}-Bereich und die Instanz aus. Wählen Sie eine andere Region aus, falls nötig.
@@ -151,8 +72,9 @@ Führen Sie die folgenden Schritte aus, um das Modell für maschinelles Lernen i
     Notieren Sie die Modell-ID (model_id), sobald sie angezeigt wird. Sie geben diese ID später im {{site.data.keyword.discoveryshort}}-Service an, damit der Service Ihr angepasstes Modell verwenden kann.
 
 ### Nächste Schritte
+{: #wks_madiscovery_next}
 
-Damit das bereitgestellte Modell verwendet werden kann, müssen Sie die Modell-ID nach entsprechender Aufforderung beim Konfigurationsprozess für die Aufbereitung des {{site.data.keyword.discoveryshort}}-Service, angeben. Details hierzu finden Sie in der [Dokumentation für den Service {{site.data.keyword.discoveryshort}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://www.ibm.com/watson/developercloud/doc/discovery/integrate-wks.shtml){: new_window}.
+Damit das bereitgestellte Modell verwendet werden kann, müssen Sie die Modell-ID nach entsprechender Aufforderung beim Konfigurationsprozess für die Aufbereitung des {{site.data.keyword.discoveryshort}}-Service, angeben. Details hierzu finden Sie in der [{{site.data.keyword.discoveryshort}}-Service-Dokumentation ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/docs/services/discovery/integrate-wks.html){: new_window}.
 
 ## Modell für maschinelles Lernen in IBM Watson Natural Language Understanding bereitstellen
 {: #wks_manlu}
@@ -160,22 +82,27 @@ Damit das bereitgestellte Modell verwendet werden kann, müssen Sie die Modell-I
 Wenn die Leistung des Modells Ihren Erwartungen entspricht, können Sie eine Version des Modells in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} {{site.data.keyword.nlushort}} bereitstellen. Mit dieser Funktion können Ihre Anwendungen das bereitgestellte Modell für maschinelles Lernen verwenden, um semantische Elemente der Texteingabe (einschließlich Entitäten und Beziehungen) zu analysieren.
 
 ### Vorbereitungen
+{: #wks_manlu_prereqs}
 
 Sie müssen über einen Service {{site.data.keyword.nlushort}} verfügen, der als Bereitstellungsziel verwendet werden kann. Außerdem müssen Sie die Namen des {{site.data.keyword.Bluemix_notm}}-Bereichs und der Instanz kennen, die dem Service zugeordnet sind. Die Namen des Bereichs und der Instanz können Sie abrufen, indem Sie sich bei {{site.data.keyword.Bluemix_notm}} anmelden. Wenn Sie nicht über ein {{site.data.keyword.Bluemix_notm}}-Konto verfügen, erstellen Sie ein Konto.
 
 ### Informationen zu diesem Vorgang
+{: #wks_manlu_about}
 
-Beim Bereitstellen des Modells für maschinelles Lernen wählen Sie die Modellversion aus, die Sie bereitstellen möchten. 
+Beim Bereitstellen des Modells für maschinelles Lernen wählen Sie die Modellversion aus, die Sie bereitstellen möchten.
 
 ### Vorgehensweise
+{: #wks_manlu_procedure}
 
 Führen Sie die folgenden Schritte aus, um ein Modell für maschinelles Lernen im Service {{site.data.keyword.nlushort}} bereitzustellen:
 
 1. Melden Sie sich als {{site.data.keyword.knowledgestudioshort}}-Administrator oder -Projektleiter an und wählen Sie Ihren Arbeitsbereich aus.
-1. Wählen Sie die Registerkarte **Modellverwaltung** > **Versionen** > **Maschinelles Lernen** aus.
+1. Wählen Sie **Modell für maschinelles Lernen** > **Versionen** aus.
 1. Wählen Sie die Version des Modells aus, das Sie bereitstellen möchten.
 
     Wenn nur eine einzige funktionsfähige Version des Modells vorhanden ist, erstellen Sie einen Snapshot des aktuellen Modells. Dadurch wird das Modell versioniert, d. h. Sie können eine Modellversion bereitstellen und trotzdem fortfahren, die aktuelle Version zu verbessern. Die Option zum Bereitstellen wird erst angezeigt, wenn Sie mindestens eine Version erstellt haben.
+
+    **Hinweis**: Jede Version kann nur für eine Serviceinstanz implementiert werden. Wenn Sie dasselbe Modell in mehreren Instanzen implementieren möchten, müssen Sie für jede Instanz eine Version erstellen.
 
 1. Klicken Sie auf **Bereitstellen**, wählen Sie {{site.data.keyword.nlushort}} als Ziel für die Bereitstellung aus und klicken Sie anschließend auf **Weiter**.
 1. Wählen Sie den {{site.data.keyword.Bluemix_notm}}-Bereich und die Instanz aus. Wählen Sie eine andere Region aus, falls nötig.
@@ -185,6 +112,7 @@ Führen Sie die folgenden Schritte aus, um ein Modell für maschinelles Lernen i
     Notieren Sie die Modell-ID (model_id), sobald sie angezeigt wird. Sie geben diese ID später im {{site.data.keyword.nlushort}}-Service an, damit der Service Ihr angepasstes Modell verwenden kann.
 
 ### Nächste Schritte
+{: #wks_manlu_next}
 
 Damit das bereitgestellte Modell verwendet wird, müssen Sie die Modell-ID Ihres angepassten Modells im Parameter `entities.model` angeben.
 
@@ -334,20 +262,33 @@ Sie können das Modell mit der Anforderung {{site.data.keyword.nlushort}} `GET /
     ```
     {: codeblock}
 
-Details hierzu finden Sie in der [Dokumentation für {{site.data.keyword.nlushort}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/watson/developercloud/doc/natural-language-understanding/index.html){: new_window}.
+Details hierzu finden Sie in der [Dokumentation für {{site.data.keyword.nlushort}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/docs/services/natural-language-understanding/index.html){: new_window}.
 
 ## Bereitstellung von Modellen aufheben
 {: #undeploy-view-model}
 
-Wenn Sie die Bereitstellung eines Modells aufheben oder ein Modell-ID abrufen möchten, öffnen Sie die Seite **Bereitgestellte Modelle**. Auf der Seite **Bereitgestellte Modelle** werden alle {{site.data.keyword.knowledgestudioshort}}-Modelle aufgelistet, die für Services in den Bereichen bereitgestellt wurden, auf die Sie Zugriff haben.
+Wenn Sie die Bereitstellung eines Modells aufheben oder ein Modell-ID abrufen möchten, öffnen Sie die Seite **Bereitgestellte Modelle**.
+
+### Informationen zu diesem Vorgang
+{: #wks_undeploy_about}
+
+Was Sie auf der Seite 'Bereitgestellte Modelle' sehen, hängt von der [-Region ![External link icon](../../icons/launch-glyph.svg "Symbol für externen Link") ](https://console.bluemix.net/docs/resources/services_region.html){: new_window} ab, in der Ihre {{site.data.keyword.knowledgestudioshort}}-Instanz gehostet wird. Wenn
+die Region Instanzen unterstützt, die von [IAM ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/docs/iam/users_roles.html){: new_window}- und [Cloud Foundry ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window}-Zugriffsmanagementmethoden unterstützt werden, werden für jede Methode eine Registerkarte angezeigt. Modelle aus Instanzen, die von IAM verwaltet werden, werden auf der Registerkarte **Ressourcengruppen** aufgelistet. Modelle aus Instanzen, die von Cloud verwaltet werden, werden auf der Registerkarte **Organisationen** aufgelistet. 
+
+Wenn die Region Instanzen unterstützt, die nur von einer der beiden Zugriffsmanagementmethoden verwaltet wird, wird nur eine Liste mit Modellen angezeigt, da nur eine einzige Zugriffsverwaltungsmethode anwendbar ist.
+
+### Vorgehensweise
+{: #wks_deploy_procedure}
 
 So können Sie die Bereitstellung eines Modells aufheben oder Modell-IDs finden:
 
-1. Melden Sie sich als {{site.data.keyword.knowledgestudioshort}}-Administrator oder -Projektleiter an und wählen Sie Ihren Arbeitsbereich aus.
+1. Starten Sie {{site.data.keyword.knowledgestudioshort}}.
 1. Wählen Sie im Menü **Einstellungen** in der rechten oberen Menüleiste die Option **Bereitgestellte Modelle verwalten** aus.
 1. Suchen Sie in der Liste der bereitgestellten Modelle das Modell, das Sie anzeigen oder dessen Bereitstellung Sie aufheben möchten.
 1. Um die Bereitstellung des Modells aufzuheben, klicken Sie in der letzten Spalte der betreffenden Zeile auf **Modellbereitstellung aufheben**.
 1. Die Modell-ID finden Sie in der Spalte **Modell-ID**.
+
+Alternativ können Sie die Bereitstellung der Modelle aus der Seite 'Versionen' für regelbasierte Modelle und Modelle für maschinelles Lernen zurücknehmen.
 
 ## Modell für maschinelles Lernen in IBM Watson Explorer wiederverwenden
 {: #wks_maexport}
@@ -355,24 +296,27 @@ So können Sie die Bereitstellung eines Modells aufheben oder Modell-IDs finden:
 Exportieren Sie das trainierte Modell für maschinelles Lernen für die Verwendung in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
 
 ### Vorbereitungen
+{: #wks_maexport_prereqs}
 
 Wenn Sie Beziehungstypen identifizieren und annotieren möchten, müssen Sie mindestens zwei Beziehungstypen definieren und Instanzen der Beziehung in der Ground Truth annotieren, bevor Sie das Modell exportieren. Wenn nur ein Beziehungstyp definiert und annotiert wird, kann dies zu Problemen in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer Version 11.0.1.0 führen.
 
 ### Informationen zu diesem Vorgang
+{: #wks_maexport_about}
 
 Nachdem das Modell für maschinelles Lernen zum Erkennen von Entitäten und Beziehungen für ein bestimmtes Fachgebiet trainiert wurde, können Sie es in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer wiederverwenden.
 
 Klicken Sie auf [diesen Link ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.youtube.com/watch?v=1VoS-xczBow&amp;feature=youtu.be){: new_window} um ein Video über das Exportieren und Verwenden eines Modells in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer abzuspielen, das kürzer als zwei Minuten ist.
 
 ### Vorgehensweise
+{: #wks_maexport_procedure}
 
 Führen Sie die folgenden Schritte aus, um ein Modell für maschinelles Lernen in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer wiederzuverwenden.
 
 1. Melden Sie sich als {{site.data.keyword.knowledgestudioshort}}-Administrator oder -Projektleiter an und wählen Sie Ihren Arbeitsbereich aus.
-1. Wählen Sie die Registerkarte **Modellverwaltung** > **Versionen** > **Maschinelles Lernen** aus.
+1. Wählen Sie **Modell für maschinelles Lernen** > **Versionen** aus.
 1. Klicken Sie auf **Aktuelles Modell exportieren**.
 
-    Wenn Sie einen kostenlosen Plan abonniert haben, ist keine Exportoption verfügbar.
+    Wenn Sie einen Lite-Plan abonniert haben, ist keine Exportoption verfügbar.
 
     Das Modell wird als ZIP-Datei gespeichert und Sie werden aufgefordert, die Datei herunterzuladen.
 
@@ -382,5 +326,6 @@ Führen Sie die folgenden Schritte aus, um ein Modell für maschinelles Lernen i
     Anschließend können Sie das Modell einem Modell für maschinelles Lernen in {{site.data.keyword.watson}} Explorer Content Analytics zuordnen. Nachdem Sie den Zuordnungsschritt ausgeführt haben, findet das Modell beim Durchsuchen von Dokumenten Instanzen der Entitäten und Beziehungen, die in dem Modell definiert sind. Informationen zum Importieren und Konfigurieren des Modells in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer finden Sie in der technischen Dokumentation zur Integration: [http://www.ibm.com/support/docview.wss?uid=swg27048147 ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://www.ibm.com/support/docview.wss?uid=swg27048147){: new_window}.
 
 #### Zugehörige Tasks
+{: #wks_maexport_related}
 
 [Analysierte Dokumente aus {{site.data.keyword.watson}} Explorer Content Analytics exportieren](/docs/services/watson-knowledge-studio/preannotation.html#wks_uimawexca)

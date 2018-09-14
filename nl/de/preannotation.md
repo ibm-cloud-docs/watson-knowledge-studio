@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -31,14 +31,15 @@ Das Vorannotieren erleichtert die Arbeit der Annotatorbenutzer, indem die offens
 Die zum Vorannotieren der Dokumente verwendete Methode verursacht keinerlei Einschränkungen für die Verwendung des resultierenden Modells. Beispiel: Wenn Sie den Service {{site.data.keyword.nlushort}} zum Vorannotieren von Dokumenten verwenden, bedeutet dies nicht, dass Sie das von Ihnen erstellte Modell für maschinelles Lernen im Service {{site.data.keyword.nlushort}} bereitstellen müssen. Die Vorannotierung dient lediglich dazu, den Annotierungsprozess durch die Annotationsbenutzer zu beschleunigen.
 
 ## Wichtige Hinweise
+{: #preannotation_notes}
 
 - Wenden Sie auf keinen Fall einen Vorannotator auf Dokumente an, die bereits von Annotatorbenutzern annotiert wurden, da sonst die von den Annotatorbenutzern hinzugefügten Annotationen verloren gehen.
 - Sie können nur einen Vorannotator auf Dokumente anwenden. Wenn Sie einen Vorannotator anwenden und danach einen zweiten Vorannotator, entfernt der zweite Vorannotator die vom ersten Vorannotator hinzugefügten Annotationen. Wählen Sie die Methode zum Vorannotieren aus, die für Ihren Anwendungsfall am besten geeignet ist, und wenden Sie nur diesen einen Vorannotator an.
 
 ## Methoden für die Vorannotation
+{: #preannotation_methods}
 
 Die folgenden Vorannotatoren stehen zur Verfügung:
->**Hinweis**: Der Service {{site.data.keyword.alchemylanguageshort}} wird nicht mehr verwendet. Weitere Informationen finden Sie unter [Zurückziehung des Service {{site.data.keyword.alchemyapishort}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/blogs/bluemix/2017/03/bye-bye-alchemyapi/){: new_window}.
 
 - **{{site.data.keyword.nlushort}}**
 
@@ -66,21 +67,24 @@ Alternativ können sie bereits annotierte Dokumente hochladen und als Ausgangspu
 Sie können mit dem Service {{site.data.keyword.nlushort}} Dokumente vorannotieren, die Sie zu Ihrem Korpus hinzufügen.
 
 ### Vorbereitungen
+{: #wks_preannotnlu_prereqs}
 
 Stellen Sie fest, ob der Vorannotator für {{site.data.keyword.nlushort}} in Ihrem Anwendungsfall von Nutzen sein kann. Prüfen Sie die [Liste der vom Service {{site.data.keyword.nlushort}} unterstützten Entitätstypen und Subtypen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/docs/services/natural-language-understanding/entity-types.html){: new_window}, um festzustellen, ob sich diese Typen mit den Typen in Ihrem Typsystem überschneiden. Wenn dies zutrifft, fahren Sie mit der hier beschriebenen Prozedur fort. Ist dies nicht der Fall, verwenden Sie einen anderen Vorannotator.
 
 ### Informationen zu diesem Vorgang
+{: #wks_preannotnlu_about}
 
 Der Service {{site.data.keyword.nlushort}} ermöglicht die Textanalyse durch die Verarbeitung natürlicher Sprache. Wenn Sie den Vorannotator für {{site.data.keyword.nlushort}} verwenden, wird der Service {{site.data.keyword.nlushort}} aufgerufen, um Entitäten in Ihren Dokumenten zu finden und zu annotieren.
 
 Sie müssen die Entitätstypen angeben, die der Service suchen soll, indem Sie die {{site.data.keyword.nlushort}}-Entitätstypen den entsprechenden {{site.data.keyword.knowledgestudioshort}}-Entitätstypen zuordnen, die Sie zum {{site.data.keyword.knowledgestudioshort}}-Typsystem hinzugefügt haben. Nur Erwähnungen der von Ihnen zugeordneten Entitätstypen werden gefunden und annotiert.
 
 ### Vorgehensweise
+{: #wks_preannotnlu_procedure}
 
 Führen Sie die folgenden Schritte aus, um den Service {{site.data.keyword.nlushort}} zum Vorannotieren von Dokumenten zu verwenden:
 
 1. Melden Sie sich als {{site.data.keyword.knowledgestudioshort}}-Administrator an und wählen Sie Ihren Arbeitsbereich aus.
-1. Wählen Sie die Registerkarte **Assets & Tools** > **Vorannotatoren** > **Natural Language Understanding** aus.
+1. Wählen Sie die Registerkarte **Modell für maschinelles Lernen** > **Vorannotation** > **Natural Language Understanding** aus.
 1. Klicken Sie auf **Bearbeiten**, um die auf der Seite **Entitätstypen** definierten Entitätstypen den entsprechenden Entitätstypen von {{site.data.keyword.nlushort}} zuzuordnen.
 
     - Die Dropdown-Liste der Entitätstypen von {{site.data.keyword.nlushort}} wird vorab mit Entitätstypen gefüllt, die von dem Service {{site.data.keyword.nlushort}} erkannt werden.
@@ -88,20 +92,28 @@ Führen Sie die folgenden Schritte aus, um den Service {{site.data.keyword.nlush
     - Sie dürfen keinen Entitätstyp von {{site.data.keyword.nlushort}} einer {{site.data.keyword.knowledgestudioshort}}-Entitätsrolle zuordnen. Nur {{site.data.keyword.knowledgestudioshort}}-Entitätstypen können zugeordnet werden.
     - Sie können mehr als einen Entitätstyp von {{site.data.keyword.nlushort}} einem einzelnen {{site.data.keyword.knowledgestudioshort}}-Entitätstyp zuordnen und umgekehrt. Beispielsweise sind die folgenden Zuordnungen zulässig:
 
-    <table cellpadding="4" cellspacing="0" summary="Beispielzuordnung für Entitätstypen" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d20428e292" class="stentry thleft thbot">Watson Knowledge Studio-Entitätstyp</th>
-        <th valign="bottom" align="left" id="d20428e298" class="stentry thleft thbot">Entitätstyp von {{site.data.keyword.nlushort}}</th>
+    <table summary="Beispiel für das Zuordnen von Entitätstypen">
+    <caption>Tabelle 1. Beispiel für das Zuordnen von Entitätstypen</caption>
+      <tr>
+        <th style="vertical-align:bottom; text-align"left" id="d20428e292">Watson Knowledge Studio Entity Type</th>
+        <th style="vertical-align:bottom; text-align"left" id="d20428e298">Entitätstyp von {{site.data.keyword.nlushort}}</th>
       </tr>
-      <tr class="strow"><td valign="top" headers="d20428e292" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">ENTWICKLER</p></li>
-            <li class="li"><p class="p wrapper">SCIENTIST</p></li>
-          </ul>
+      <tr>
+        <td headers="d20428e292">
+          ENTWICKLER<br/>
+          SCIENTIST
         </td>
-        <td valign="top" headers="d20428e298" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">Person</p></li>
-          </ul></td>
+        <td headers="d20428e298">
+          Person
+        </td>
       </tr>
-      <tr class="strow"><td valign="top" headers="d20428e292" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">POSITION</p></li></td>
-        <td valign="top" headers="d20428e298" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">StadtDorf</p></li>
-            <li class="li"><p class="p wrapper">Land</p></li>
-          </ul>
+      <tr>
+        <td headers="d20428e292">
+          POSITION
+        </td>
+        <td headers="d20428e298">
+          StadtDorf<br/>
+          Land
         </td>
       </tr>
     </table>
@@ -113,11 +125,12 @@ Führen Sie die folgenden Schritte aus, um den Service {{site.data.keyword.nlush
 
 1. Wählen Sie das Kontrollkästchen für jede Dokumentgruppe aus, die Sie vorannotieren möchten.
 
-    Wenn Sie diesen Vorannotator zum ersten Mal ausführen, prüfen Sie zunächst, dass der Vorannotator die Erwähnungen der zugeordneten Entitäten wie erwartet finden kann. Erstellen Sie eine Dokumentgruppe mit mindestens einem repräsentativen Dokument aus jeder eigenständigen Datenquelle.{: tip}
+    Wenn Sie diesen Vorannotator zum ersten Mal ausführen, prüfen Sie zunächst, dass der Vorannotator die Erwähnungen der zugeordneten Entitäten wie erwartet finden kann. Erstellen Sie eine Dokumentgruppe mit mindestens einem repräsentativen Dokument aus jeder eigenständigen Datenquelle.
+    {: tip}
 
 1. Klicken Sie auf **Ausführen**.
 
-    Wenn Sie eine Validierungsprüfung für den Vorannotator ausführen möchten, öffnen Sie die annotierten Dokumente und überprüfen Sie die hinzugefügten Annotationen. Vergewissern Sie sich, dass eine ausreichende Anzahl zutreffender Annotationen erstellt wurde. Wenn die Annotationen zutreffend sind, können Sie den Annotator erneut auf eine größere Menge von Dokumentgruppen oder auf umfangreichere Dokumentgruppen anwenden. Wenn die Annotationen nicht zutreffend sind, ziehen Sie in Betracht, Ihren Entitäten andere Entitatstypen von {{site.data.keyword.nlushort}} zuzuordnen. Wenn die Typen keine natürlichen Überschneidungen aufweisen, dann ist der Vorannotator für {{site.data.keyword.nlushort}} nicht die beste Wahl für Ihren Anwendungsfall.
+    Wenn Sie eine Validierungsprüfung für den Vorannotator ausführen möchten, öffnen Sie die annotierten Dokumente und überprüfen Sie die hinzugefügten Annotationen. Vergewissern Sie sich, dass eine ausreichende Anzahl zutreffender Annotationen erstellt wurde. Wenn die Annotationen zutreffend sind, können Sie den Annotator erneut auf eine größere Menge von Dokumentgruppen oder auf umfangreichere Dokumentgruppen anwenden. Wenn die Annotationen nicht zutreffend sind, ziehen Sie in Betracht, Ihren Entitäten andere Entitätstypen von {{site.data.keyword.nlushort}} zuzuordnen. Wenn die Typen keine natürlichen Überschneidungen aufweisen, dann ist der Vorannotator für {{site.data.keyword.nlushort}} nicht die beste Wahl für Ihren Anwendungsfall.
 
     Die Vorannotierung wird auf einzelne Dokumente angewendet, und zwar unabhängig davon, welchen Dokumentgruppen ein Dokument angehört. Ein Dokument, das Überschneidungen mit einer ausgewählten Dokumentgruppe und einer nicht ausgewählten Dokumentgruppe aufweist, wird in beiden Dokumentgruppen vorannotiert.
 
@@ -142,32 +155,35 @@ Die aus Dokumenten, die durch den Service {{site.data.keyword.nlushort}} voranno
 Als Hilfsmittel für die Annotationstasks der Annotatorbenutzer können Sie ein Wörterverzeichnis erstellen und zum Vorannotieren von Dokumenten verwenden, die Sie zum Korpus hinzufügen.
 
 ### Informationen zu diesem Vorgang
+{: #wks_preannot_about}
 
 Wenn ein Annotatorbenutzer mit dem Bearbeiten vorannotierter Dokumente beginnt, ist häufig bereits eine Reihe von Erwähnungen gemäß den Einträgen im Wörterverzeichnis mit Entitätstypen markiert. Der Annotatorbenutzer kann die vorannotierten Entitätstypen ändern oder entfernen und Entitätstypen für nicht annotierte Erwähnungen zuordnen. Beim Vorannotieren mithilfe eines Wörterverzeichnisses werden keine Beziehungen und Koreferenzen annotiert. Beziehungen und Koreferenzen müssen von Annotatorbenutzern annotiert werden.
 
-**Hinweis**: In dieser Task wird gezeigt, wie ein bearbeitbares Wörterverzeichnis erstellt wird. Wenn Sie Dokumente hochladen und mit einem schreibgeschützten Wörterverzeichnis vorannotieren möchten, klicken Sie auf die Schaltfläche **Wörterverzeichnis hochladen** auf der Registerkarte **Assets & Tools** > **Vorannotatoren** > **Wörterverzeichnisse**.
+**Hinweis**: In dieser Task wird gezeigt, wie ein bearbeitbares Wörterverzeichnis erstellt wird. Wenn Sie Dokumente hochladen und mit einem schreibgeschützten Wörterverzeichnis vorannotieren möchten, klicken Sie auf das **Menü**-Symbol neben der Schaltfläche **Wörterverzeichnis hochladen**. Wählen Sie **Wörterverzeichnis hochladen** aus.
 
 ### Vorgehensweise
+{: #wks_preannot_procedure}
 
 So können Sie ein bearbeitbares Wörterverzeichnis erstellen und Dokumente vorannotieren:
 
 1. Melden Sie sich als {{site.data.keyword.knowledgestudioshort}}-Administrator an und wählen Sie Ihren Arbeitsbereich aus.
-1. Wählen Sie die Registerkarte **Assets & Tools** > **Vorannotatoren** > **Wörterverzeichnisse** aus.
-1. Klicken Sie auf **Wörterverzeichnisse verwalten** und anschließend auf **Wörterverzeichnis erstellen**.
+1. Wählen Sie die Seite **Assets** > **Wörterverzeichnisse** aus.
+1. Klicken Sie auf **Wörterverzeichnis erstellen**, geben Sie einen Namen ein und klicken Sie anschließend auf **Speichern**.
 1. Wählen Sie in der Liste **Entitätstyp** einen Entitätstyp aus, der dem Wörterverzeichnis zugeordnet werden soll.
-1. Fügen Sie Einträge im Wörterverzeichnis hinzu oder laden Sie eine Datei mit Wörterverzeichniseinträgen hoch.
-1. Kehren Sie zur Seite **Vorannotatoren** auf der Registerkarte **Wörterverzeichnisse** zurück und klicken Sie auf **Diesen Vorannotator anwenden**.
-1. Wählen Sie das Kontrollkästchen für jede Dokumentgruppe aus, die Sie vorannotieren möchten, und klicken Sie auf **Ausführen**.
+3. Fügen Sie Einträge im Wörterverzeichnis hinzu oder laden Sie eine Datei mit Wörterverzeichniseinträgen hoch.
+4. Klicken Sie auf **Modell für maschinelles Lernen** > **Vorannotation**.
+5. Klicken Sie auf der Registerkarte **Wörterverzeichnisse** auf **Diesen Vorannotator anwenden**.
+6. Wählen Sie das Kontrollkästchen für jede Dokumentgruppe aus, die Sie vorannotieren möchten, und klicken Sie auf **Ausführen**.
 
     Die Vorannotierung wird auf einzelne Dokumente angewendet, und zwar unabhängig davon, welchen Dokumentgruppen oder Annotationsgruppen ein Dokument angehört. Ein Dokument, das Überschneidungen mit einer ausgewählten Dokumentgruppe und einer nicht ausgewählten Dokumentgruppe aufweist, wird in beiden Dokumentgruppen vorannotiert.
 
-1. Nachdem das Wörterverzeichnis erstellt wurde, können Sie jederzeit auf **Ausführen** klicken, um das Wörterverzeichnis zum Vorannotieren weiterer Dokumentgruppen zu verwenden, die Sie zum Korpus hinzufügen.
+7. Nachdem das Wörterverzeichnis erstellt wurde, können Sie jederzeit auf **Ausführen** klicken, um das Wörterverzeichnis zum Vorannotieren weiterer Dokumentgruppen zu verwenden, die Sie zum Korpus hinzufügen.
 
     > **Einschränkung:** Wenn Sie im Wörterverzeichnis Einträge hinzufügen oder entfernen, müssen Sie die Annotationstasks, in denen die vorannotierten Dokumentgruppen enthalten sind, erneut erstellen. Vorannotationen auf der Basis der Änderungen, die Sie an dem wörterverzeichnisbasierten Vorannotator vorgenommen haben, können nicht auf Annotationsgruppen angewendet werden, die bereits einer Annotationstask zugeordnet sind.
 
 **Zugehörige Informationen**:
 
-[Wörterverzeichnisse](/docs/services/watson-knowledge-studio/dictionaries.html#wks_dictionaries)
+[Wörterverzeichnisse erstellen](/docs/services/watson-knowledge-studio/dictionaries.html)
 
 [Einführung > Wörterverzeichnis hinzufügen](/docs/services/watson-knowledge-studio/tutorials-create-project.html#wks_tutless4)
 
@@ -177,21 +193,23 @@ So können Sie ein bearbeitbares Wörterverzeichnis erstellen und Dokumente vora
 Sie können ein bestehendes Modell für maschinelles Lernen zum Vorannotieren von Dokumenten verwenden, die Sie zum Korpus hinzufügen.
 
 ### Informationen zu diesem Vorgang
+{: #wks_preannotsire_about}
 
-Nachdem etwa 10 bis 30 Dokumente annotiert wurden, kann ein Modell für maschinelles Lernen anhand der resultierenden Daten trainiert werden. Ein solches Modell, das mit minimalem Aufwand trainiert wurde, sollte nicht in der Produktionsumgebung verwendet werden. Es kann jedoch als Modell zum Vorannotieren dienen, um die Bearbeitung weiterer Dokumente durch die Annotatorbenutzer zu beschleunigen. Wenn Sie zum Beispiel nach dem Trainieren des Modells für maschinelles Lernen Dokumente zum Korpus hinzufügen, können Sie das Modell zum Vorannotieren der neuen Dokumentgruppen verwenden. Wenden Sie einen Vorannotator nicht auf Dokumente an, die von einem Annotatorbenutzer annotiert wurden. Vorannotatoren löschen die von Annotatorbenutzern hinzugefügten Annotationen.
+Nachdem etwa 10 bis 30 Dokumente annotiert wurden, kann ein Modell für maschinelles Lernen anhand der resultierenden Daten trainiert werden. Ein solches minimal trainiertes Modell sollte nicht in einer Produktionsumgebung verwendet werden. Es kann jedoch dazu verwendet werden, Dokumente vorab zu annotieren, um die Bearbeitung weiterer Dokumente durch die Annotatorbenutzer zu beschleunigen. Wenn Sie zum Beispiel nach dem Trainieren des Modells für maschinelles Lernen Dokumente zum Korpus hinzufügen, können Sie das Modell zum Vorannotieren der neuen Dokumentgruppen verwenden. Wenden Sie einen Vorannotator nicht auf Dokumente an, die von einem Annotatorbenutzer annotiert wurden. Vorannotatoren löschen die von Annotatorbenutzern hinzugefügten Annotationen.
 
 ### Vorgehensweise
+{: #wks_preannotsire_procedure}
 
 So können Sie ein bestehendes Modell für maschinelles Lernen zum Vorannotieren von Dokumenten verwenden:
 
 1. Melden Sie sich als {{site.data.keyword.knowledgestudioshort}}-Administrator an und wählen Sie Ihren Arbeitsbereich aus.
-1. Wählen Sie die Registerkarte **Modellverwaltung** > **Versionen** > **Maschinelles Lernen** aus.
-1. Klicken Sie auf **Dieses Modell ausführen**.
-1. Wählen Sie das Kontrollkästchen für jede Dokumentgruppe aus, die Sie vorannotieren möchten, und klicken Sie auf **Ausführen**.
+2. Wählen Sie **Modell für maschinelles Lernen** > **Versionen** aus.
+3. Um neue Dokumente vorab zu annotieren, klicken Sie auf **Dieses Modell ausführen**.
+4. Wählen Sie das Kontrollkästchen für jede Dokumentgruppe aus, die Sie vorannotieren möchten, und klicken Sie auf **Ausführen**.
 
     Die Vorannotierung wird auf einzelne Dokumente angewendet, und zwar unabhängig davon, welchen Dokumentgruppen oder Annotationsgruppen ein Dokument angehört. Ein Dokument, das Überschneidungen mit einer ausgewählten Dokumentgruppe und einer nicht ausgewählten Dokumentgruppe aufweist, wird in beiden Dokumentgruppen vorannotiert.
 
-1. Sie können jederzeit auf **Dieses Modell ausführen** klicken, um das Modell für maschinelles Lernen zum Vorannotieren weiterer Dokumentgruppen zu verwenden, die Sie zum Korpus hinzufügen.
+5. Sie können jederzeit auf **Dieses Modell ausführen** klicken, um das Modell für maschinelles Lernen zum Vorannotieren weiterer Dokumentgruppen zu verwenden, die Sie zum Korpus hinzufügen.
 
 ## Dokumente mit dem regelbasierten Modell vorannotieren
 {: #wks_preannotrule}
@@ -199,26 +217,28 @@ So können Sie ein bestehendes Modell für maschinelles Lernen zum Vorannotieren
 Sie können ein bestehendes regelbasiertes Modell zum Vorannotieren von Dokumenten verwenden, die Sie zum Korpus hinzufügen.
 
 ### Vorgehensweise
+{: #wks_preannotrule_procedure}
 
 Führen Sie die folgenden Schritte aus, um das regelbasierte Modell zum Vorannotieren von Dokumenten zu verwenden:
 
 1. Melden Sie sich als {{site.data.keyword.knowledgestudioshort}}-Administrator an und wählen Sie Ihren Arbeitsbereich aus.
-1. Wählen Sie die Registerkarte **Modellverwaltung** > **Versionen** > **Regelbasiert** aus.
+1. Wählen Sie die Registerkarte **Regelbasiertes Modell** > **Versionen** > **Regelbasiertes Modell** aus.
 1. Falls noch nicht geschehen, klicken Sie auf **Entitätstypen und -klassen zuordnen**, um von Ihnen definierte Entitätstypen im {{site.data.keyword.knowledgestudioshort}}-Typsystem mindestens einer Klasse im regelbasierten Modell zuzuordnen.
+2. Klicken Sie für jeden Entitätstyp, den Sie zuordnen möchten, auf **Bearbeiten**.
 
     - Die Dropdown-Liste in der Spalte **Klassenname** wird vorab mit Klassen gefüllt, die dem regelbasierten Modell zugeordnet sind.
     - Sie müssen mindestens einen Entitätstyp  einer Klasse zuordnen.
 
-1. Klicken Sie auf der Registerkarte **Regelbasiert** auf **Dieses Modell ausführen** und wählen Sie anschließend die Dokumentgruppen oder Annotationsgruppen aus, die Sie vorannotieren möchten. Stellen Sie sicher, dass die von Ihnen ausgewählten Gruppen keine Dokumente mit Annnotationen von Annotatorbenutzern enthalten. Vorannotatoren löschen die von Annotatorbenutzern hinzugefügten Annotationen.
+3. Klicken Sie auf der Registerkarte **Regelbasiertes Modell** auf **Dieses Modell ausführen**.
 
     Die Schaltfläche **Dieses Modell ausführen** ist erst verfügbar, wenn Sie mindestens einen Entitätstyp einer Klasse zugeordnet haben.
 
-1. Wählen Sie das Kontrollkästchen für jede Dokumentgruppe aus, die Sie vorannotieren möchten.
-1. Klicken Sie auf **Ausführen**.
+4. Wählen Sie die Dokumentgruppen oder Annotationsgruppen aus, die Sie vorab annotieren möchten. Stellen Sie sicher, dass die von Ihnen ausgewählten Gruppen keine Dokumente mit Annotationen von Annotatorbenutzern enthalten. Vorannotatoren löschen die von Annotatorbenutzern hinzugefügten Annotationen.
+5. Klicken Sie auf **Ausführen**.
 
     Die Vorannotierung wird auf einzelne Dokumente angewendet, und zwar unabhängig davon, welchen Dokumentgruppen ein Dokument angehört. Ein Dokument, das Überschneidungen mit einer ausgewählten Dokumentgruppe und einer nicht ausgewählten Dokumentgruppe aufweist, wird in beiden Dokumentgruppen annotiert.
 
-1. Sie können jederzeit auf **Dieses Modell ausführen** klicken, um dieses regelbasierte Modell zum Vorannotieren weiterer Dokumente zu verwenden, die Sie zum Korpus hinzufügen.
+6. Sie können jederzeit auf **Dieses Modell ausführen** klicken, um dieses regelbasierte Modell zum Vorannotieren weiterer Dokumente zu verwenden, die Sie zum Korpus hinzufügen.
 
     > **Einschränkung:** Wenn Sie die Entitätstyp/Klasse-Zuordnung des regelbasierten Modells bearbeiten, müssen Sie die Annotationstasks, in denen die vorannotierten Dokumentgruppen enthalten sind, erneut erstellen. Vorannotationen auf der Basis der Änderungen, die Sie an der Vorannotatorzuordnung vorgenommen haben, können nicht auf Dokumentgruppen angewendet werden, die bereits einer Annotationstask zugeordnet sind.
 
@@ -239,6 +259,7 @@ Wenn Sie die importierten Dokumente Annotatorbenutzern zuweisen, werden die Doku
 Sie können Dokumente, die in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer Content Analytics durchsucht und analysiert wurden, exportieren und die analysierten Dokumente als XMI-Dateien in einen {{site.data.keyword.knowledgestudioshort}}-Arbeitsbereich hochladen.
 
 #### Vorgehensweise
+{: #wks_uima_procedure}
 
 So rufen Sie analysierte Dokumente aus einer {{site.data.keyword.watson}} Explorer Content Analytics-Dokumentsammlung ab:
 
@@ -270,6 +291,7 @@ Sie müssen eine Zuordnung zwischen den UIMA-Typen und {{site.data.keyword.knowl
 Sie können eine Sammlung analysierter Dokumente aus {{site.data.keyword.watson}} Explorer Content Analytics Studio exportieren und die analysierten Dokumente als XMI-Dateien in ein {{site.data.keyword.knowledgestudioshort}}-Projekt hochladen.
 
 #### Vorgehensweise
+{: #wks_uimawexstudio_procedure}
 
 So rufen Sie analysierte Dokumente aus einer Content Analytics Studio-Dokumentsammlung ab:
 
@@ -282,6 +304,7 @@ So rufen Sie analysierte Dokumente aus einer Content Analytics Studio-Dokumentsa
 1. Extrahieren Sie alle Dateien aus der ZIP-Datei. Der extrahierte Inhalt umfasst XMI-Dateien (`*.xmi`), die Deskriptordatei des UIMA-Typsystems (`TypeSystem.xml`) und weitere Dateien.
 
 #### Nächste Schritte
+{: #wks_uimawexstudio_next}
 
 Sie müssen eine Zuordnung zwischen den UIMA-Typen und {{site.data.keyword.knowledgestudioshort}}-Entitätstypen definieren. Außerdem müssen Sie eine ZIP-Datei erstellen, die alle erforderlichen Dateien zum Hochladen der analysierten Daten in einen {{site.data.keyword.knowledgestudioshort}}-Arbeitsbereich enthält.
 
@@ -291,10 +314,12 @@ Sie müssen eine Zuordnung zwischen den UIMA-Typen und {{site.data.keyword.knowl
 Vor dem Hochladen von XMI-Dateien in einen {{site.data.keyword.knowledgestudioshort}}-Arbeitsbereich müssen Sie Zuordnungen zwischen den UIMA-Typen und {{site.data.keyword.knowledgestudioshort}}-Entitätstypen definieren.
 
 #### Vorbereitungen
+{: #wks_uimawexmap_prereqs}
 
 Das Typsystem in Ihrem {{site.data.keyword.knowledgestudioshort}}-Arbeitsbereich muss die Entitätstypen enthalten, denen Sie die UIMA-Typen zuordnen möchten.
 
 #### Vorgehensweise
+{: #wks_uimawexmap_procedure}
 
 So ordnen Sie UIMA-Typen den {{site.data.keyword.knowledgestudioshort}}-Entitätstypen zu:
 
@@ -337,6 +362,7 @@ So ordnen Sie UIMA-Typen den {{site.data.keyword.knowledgestudioshort}}-Entität
         {: screen}
 
 #### Nächste Schritte
+{: #wks_uimawexmap_next}
 
 Sie müssen eine ZIP-Datei erstellen, die alle erforderlichen Dateien zum Hochladen der analysierten Dateien in einen {{site.data.keyword.knowledgestudioshort}}-Arbeitsbereich enthält.
 
@@ -354,12 +380,14 @@ Sie müssen eine ZIP-Datei erstellen, die alle erforderlichen Dateien zum Hochla
 Wenn Sie die vorannotierten Dokumente, die Sie heruntergeladen haben, zum Trainieren eines Modells verwenden möchten, müssen Sie eine ZIP-Datei erstellen, die alle erforderlichen Dateien zum Hochladen der XMI-Dateien enthält, und diese ZIP-Datei in einen {{site.data.keyword.knowledgestudioshort}}-Arbeitsbereich hochladen.
 
 #### Vorbereitungen
+{: #wks_uimaweximport_prereqs}
 
 Vergewissern Sie sich vor dem Hochladen der ZIP-Datei, dass das Typsystem in Ihrem {{site.data.keyword.knowledgestudioshort}}-Arbeitsbereich die Entitätstypen enthält, denen Sie die UIMA-Typen zugeordnet haben.
 
 > **Warnung:** UIMA-Analyseengines ermöglichen Annotationen über Satzgrenzen hinweg. In {{site.data.keyword.knowledgestudioshort}} müssen die Annotationen innerhalb der Grenzen eines einzigen Satzes liegen. Wenn die XMI-Dateien, die Sie hochladen, Annotationen enthalten, die sich über mehrere Sätze erstrecken, werden diese Annotationen nicht im Ground Truth-Editor angezeigt.
 
 #### Vorgehensweise
+{: #wks_uimaweximport_procedure}
 
 So laden Sie vorannotierte Dokumente in einen {{site.data.keyword.knowledgestudioshort}}-Arbeitsbereich hoch:
 
@@ -372,7 +400,7 @@ So laden Sie vorannotierte Dokumente in einen {{site.data.keyword.knowledgestudi
 
 1. Laden Sie die ZIP-Datei in einen {{site.data.keyword.knowledgestudioshort}}-Arbeitsbereich hoch.
 
-    1. Melden Sie sich als {{site.data.keyword.knowledgestudioshort}}-Administrator oder -Projektleiter an, öffnen Sie den Arbeitsbereich, zu dem Sie die Dokumente hinzufügen möchten, und öffnen Sie die Seite **Assets & Tools** > **Dokumente**.
+    1. Melden Sie sich als {{site.data.keyword.knowledgestudioshort}}-Administrator oder -Projektleiter an, öffnen Sie den Arbeitsbereich, zu dem Sie die Dokumente hinzufügen möchten, und öffnen Sie die Seite **Assets** > **Dokumente**.
     1. Klicken Sie auf **Dokumentgruppen hochladen**.
     1. Ziehen Sie die ZIP-Datei, die Sie erstellt haben, oder klicken Sie, um die Datei zu lokalisieren und auszuwählen.
     1. Wählen Sie das Kontrollkästchen aus, um anzugeben, dass die ZIP-Datei UIMA CAS XMI-Dateien enthält.

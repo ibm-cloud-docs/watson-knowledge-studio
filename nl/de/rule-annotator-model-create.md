@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-26"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -27,12 +27,14 @@ Nachdem Sie Regeln definiert haben, können Sie ein regelbasiertes Modell erstel
 {: shortdesc}
 
 ## Vorgehensweise
+{: #wks_rule_train_procedure}
 
 Führen Sie die folgenden Schritte aus, um ein regelbasiertes Modell zu erstellen:
 
 1. Melden Sie sich als {{site.data.keyword.knowledgestudioshort}}-Administrator oder -Projektleiter an und wählen Sie Ihren Arbeitsbereich aus.
-1. Wählen Sie die Registerkarte **Modellverwaltung** > **Versionen** > **Regelbasiert** aus.
-1. Ordnen Sie die Entitätstypen aus Ihrem Typsystem mindestens einer Klasse zu, die Sie zum Definieren von Regeln verwendet haben.
+1. Wählen Sie die Registerkarte **Regelbasiertes Modell** > **Versionen** > **Regelbasiertes Modell** aus.
+2. Klicken Sie auf **Entitätstypen und -klassen zuordnen**.
+3. Ordnen Sie die Entitätstypen aus Ihrem Typsystem mindestens einer Klasse zu, die Sie zum Definieren von Regeln verwendet haben.
 
   Nach dem Zuordnen der Entitätstypen können Sie das [regelbasierte Modell bereitstellen](/docs/services/watson-knowledge-studio/rule-annotator-model-use.html) oder beim Erstellen eines Modells für maschinelles Lernen zum [Vorannotieren von Dokumenten](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannotrule) verwenden.
 

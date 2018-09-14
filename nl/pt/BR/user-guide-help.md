@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-16"
 
 ---
 
@@ -29,11 +29,11 @@ Descubra o que fazer se você tiver perguntas ou precisar de ajuda. Para onde ir
 ## Problemas de acesso
 
 - Se não for possível acessar a instância do {{site.data.keyword.knowledgestudioshort}}, trabalhe com o proprietário da área de trabalho para assegurar que ele tenha convidado você para associar-se à área de trabalho.
-- Se for possível chegar à instância do {{site.data.keyword.knowledgestudioshort}}, mas você não vir nenhuma área de trabalho listada, trabalhe com o administrador ou gerente da área de trabalho para resolver o problema. O administrador, que é uma pessoa com a função Administrador, ou o gerenciador, que é uma pessoa com a função ProjectManager no {{site.data.keyword.knowledgestudioshort}}, deve 1.) associar você com um conjunto de anotações e 2.) criar uma tarefa que designa você para anotar os documentos no conjunto. Você não verá a área de trabalho listada na página inicial do {{site.data.keyword.knowledgestudioshort}} até que alguém tenha executado essas ações.
+- Se for possível chegar à instância do {{site.data.keyword.knowledgestudioshort}}, mas você não vir nenhuma área de trabalho listada, trabalhe com o administrador ou gerente da área de trabalho para resolver o problema. O administrador, que é uma pessoa com a função Administrativa, ou o gerente, que é uma pessoa com a função de Gerente de Projeto no {{site.data.keyword.knowledgestudioshort}}, deve 1.) associar você com um conjunto de anotações e 2.) criar uma tarefa que designa você para anotar os documentos no conjunto. Você não verá a área de trabalho listada na página inicial do {{site.data.keyword.knowledgestudioshort}} até que alguém tenha executado essas ações.
 
 ## Usando o editor de verdade absoluta
 
-Primeiro, revise as informações neste guia do usuário. Se você ainda tem dúvidas sobre como usar o editor de verdade absoluta, é possível verificar o fórum da comunidade para ver se alguém fez sua pergunta e recebeu uma resposta. Ou é possível pedir ajuda aos membros da comunidade. Para acessar o fórum da comunidade do {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}}, acesse: [https://developer.ibm.com/answers/topics/wks/?smartspace=watson ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/answers/topics/wks/?smartspace=watson){: new_window}.
+Primeiro, revise as informações em [Anotando documentos](/docs/services/watson-knowledge-studio/user-guide.html). Se você ainda tiver perguntas sobre como usar o editor de verdade absoluta, verifique uma das comunidades do desenvolvedor, que estão vinculadas na parte inferior do índice. Caso não consiga localizar a resposta para a sua pergunta, poste a pergunta você mesmo.
 
 ## Decisões de anotação
 

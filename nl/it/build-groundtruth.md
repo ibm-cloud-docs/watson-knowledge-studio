@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -36,7 +36,7 @@ Un flusso di lavoro tipico include i seguenti passi:
 
     In alcuni casi, un gestore del progetto potrebbe volere una percentuale maggiore di sovrapposizione per la valutazione dell'accordo tra annotatori rispetto a quella della decisione delle differenze. Ad esempio, se l'accordo tra annotatori sembra OK, il gestore del progetto potrebbe decidere che è OK e promuovere una annotazione a ground truth.
 
-1. Come il gestore del progetto risolve i conflitti di annotazione, le annotazioni approvate sono promosse a ground truth. 
+1. Come il gestore del progetto risolve i conflitti di annotazione, le annotazioni approvate sono promosse a ground truth.
 
 Tieni presente che l'annotazione umana richiede sempre dei giudizi. Le linee guida di annotazione possono fare molto per garantire che il testo venga annotato in modo corretto e congruente, ma anche le migliori linee guida sono aperte all'interpretazione umana. Per ottenere il ground truth, dovrai investire del tempo nella preparazione degli annotatori umani in modo che possano fare le valutazioni migliori quando analizzano il contenuto del dominio.
 
@@ -51,31 +51,38 @@ I punteggi dell'accordo tra annotatori mostrano quanto differentemente gli annot
 
 Per aiutarti a identificare le aree che richiedono un controllo, i punteggi che sono sotto il valore che hai specificato per la soglia dell'accordo tra annotatori sono evidenziati in rosso. Nelle prime fasi del tuo progetto di annotazione, potresti trovare che i punteggi di relazione sono spesso peggiori rispetto a quelli della citazione perché un'annotazione di relazione perfetta richiede che siano prima in accordo le citazioni che definiscono la relazione.
 
-Il punteggio nella colonna **All** è un *punteggio Fleiss Kappa*. Rappresenta quanto coerentemente la stessa annotazione è stata applicata da più annotatori umani tra i documenti di sovrapposizione nell'attività. Il valore, che è compreso nell'intervallo fino a 1 ma può anche essere negativo, può aiutarti a identificare i punti deboli nelle linee guida di annotazione o di annotatori umani particolari. Le seguenti linee guida (*Landis e Koch, 1977*) forniscono un punto di partenza per valutare le prestazioni generali:
+Il punteggio nella colonna **All** è un *punteggio Fleiss Kappa*. Rappresenta quanto coerentemente la stessa annotazione è stata applicata da più annotatori umani tra i documenti di sovrapposizione nell'attività. Il valore, che è compreso nell'intervallo fino a 1 ma può anche essere negativo, può aiutarti a identificare i punti deboli nelle linee guida di annotazione o di annotatori umani particolari. Le seguenti linee guida (*Landis e Koch, 1977*) forniscono un punto di partenza per valutare le prestazioni generali.
 
-<table cellpadding="4" cellspacing="0" summary="" id="wks_haiaa__table_p5s_dx1_f5" class="table" rules="rows" frame="void" border="0"><thead class="thead" align="left"><tr class="row"><th class="entry ncol thleft" align="left" valign="top" id="d12741e148">Punteggio</th>
-<th class="entry ncol thleft" align="left" valign="top" id="d12741e150">Livello d'accordo</th>
-</tr>
-</thead>
-<tbody class="tbody"><tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">&lt; 0</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Scarso</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">.01 - .20</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Leggero</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">.21 - .40</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Discreto</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">.41 - .60</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Moderato</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">.61 - .80</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Considerevole </p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">.81 - 1.0</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Perfetto</p></td>
-</tr>
-</tbody>
+<table style="width:60%" summary="Questa tabella fornisce le linee guida tra annotatori generali per la valutazione delle prestazioni generali.">
+  <caption>Tabella 1. Linee guida tra annotatori</caption>
+  <tr>
+    <th style="vertical-align:bottom; text-align:center" id="d12741e148">Punteggio</th>
+    <th style="vertical-align:bottom; text-align:center" id="d12741e150">Livello d'accordo</th>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">&lt; 0</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Scarso</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">.01 - .20</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Leggero</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">.21 - .40</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Discreto</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">.41 - .60</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Moderato</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">.61 - .80</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Considerevole</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">.81 - 1.0</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Perfetto</td>
+  </tr>
 </table>
 
 Il punteggio nelle altre colonne è una *misurazione F1*. Rappresenta la coerenza dell'annotazione tra una coppia di annotatori umani. Il valore può essere compreso nell'intervallo tra 0 e 1, dove l'accordo perfetto viene indicato da 1. Cosa costituisce un livello accettabile di accordo dipende dai tuoi dati del dominio e sistema tipo. Ma per fornire un esempio, queste sono le soglie F1 che i gestori del progetto si aspettano di rispettare o superare nei progetti che si basano sul sistema tipo KLUE.
@@ -94,17 +101,19 @@ Generalmente, un sistema tipo che include molti tipi di entità e relazione è a
 Quando determini quali documenti devono essere promossi a ground truth, devi controllare i punteggi dell'accordo tra annotatori. I documenti con i punteggi bassi sono candidati per essere rifiutati e restituiti all'annotatore umano per un miglioramento.
 
 ### Informazioni su quest'attività
+{: #wks_haaccuracy_about}
 
-Quando esamini l'accordo tra annotatori, esamini i documenti che sono stati annotati da più di un annotatore umano. Se un documento non è condiviso tra più serie di annotazioni e annotatori umani, non c'è un accordo tra annotatori da calcolare. Quando aggiungi le serie di annotazioni a un'attività, assicurati che le serie che vuoi confrontare contengano gli stessi documenti di sovrapposizione. Puoi vedere quali documenti sono in una serie di annotazioni aprendo la pagina **Assets & Tools** > **Documents**, facendo clic sulla scheda **Annotation Sets** e poi sui nomi delle serie.
+Quando esamini l'accordo tra annotatori, esamini i documenti che sono stati annotati da più di un annotatore umano. Se un documento non è condiviso tra più serie di annotazioni e annotatori umani, non c'è un accordo tra annotatori da calcolare. Quando aggiungi le serie di annotazioni a un'attività, assicurati che le serie che vuoi confrontare contengano gli stessi documenti di sovrapposizione. Puoi vedere quali documenti sono in una serie di annotazioni aprendo la pagina **Assets**> **Documents**, facendo clic sulla scheda **Annotation Sets** e poi sui nomi delle serie.
 
 Potresti riscontrare situazioni in cui non si trovano dei documenti di sovrapposizione. Questo potrebbe succedere, ad esempio, se crei le serie di annotazioni in due round e le aggiungi alla stessa attività. Anche se le serie di annotazioni sono state create circa nello stesso momento, non hanno alcun documento in comune. Un altro esempio, se crei le serie di annotazioni con i documenti di sovrapposizione, ma aggiungi una serie di annotazioni per attività invece di aggiungerle tutte a una sola attività, non saranno trovati i documenti di sovrapposizione e l'accordo tra annotatori non può essere calcolato.
 
 ### Procedura
+{: #wks_haaccuracy_procedure}
 
 Per valutare l'accordo di annotazione tra annotatori umani:
 
-1. Accedi come amministratore o gestore del progetto {{site.data.keyword.knowledgestudioshort}} e seleziona il tuo spazio di lavoro. 
-1. Seleziona la scheda **Assets & Tools** > **Documents** > **Tasks** e apri l'attività che vuoi valutare.
+1. Accedi come amministratore o gestore del progetto {{site.data.keyword.knowledgestudioshort}} e seleziona il tuo spazio di lavoro.
+1. Seleziona la pagina **Machine Learning Model** > **Annotation Tasks** e apri l'attività che vuoi valutare.
 1. Fai clic su **Calculate Inter-Annotator Agreement**. La vista predefinita mostra i punteggi di accordo per quanto coerentemente le coppie di annotatori umani hanno annotato le citazioni. La riga più in alto mostra la coerenza generale tra ogni coppia di annotatori e la tabella di seguito mostra quanto coerentemente una coppia ha etichettato citazioni specifiche nel testo.
 1. Per esplorare quanto coerentemente le coppie di annotatori umani hanno annotato le relazioni e le coreferenze, seleziona **Relation** o **Coreference** dal primo menu.
 1. Per esplorare quanto coerentemente una coppia di annotatori umani ha annotato le entità, le relazioni e le coreferenze in documenti di sovrapposizione specifici, seleziona **Document** nel secondo menu e poi seleziona la coppia di annotatori che vuoi valutare.
@@ -116,7 +125,7 @@ Per valutare l'accordo di annotazione tra annotatori umani:
 ## Giudizio
 {: #wks_haperform}
 
-Se più annotatori umani lavorano allo stesso documento, avrai probabilmente bisogno di risolvere le incongruenze tra le annotazioni prima di promuoverle a ground truth. Questo processo di risoluzione dei conflitti è noto come giudizio. 
+Se più annotatori umani lavorano allo stesso documento, avrai probabilmente bisogno di risolvere le incongruenze tra le annotazioni prima di promuoverle a ground truth. Questo processo di risoluzione dei conflitti è noto come giudizio.
 
 Quando approvi le serie di annotazioni inviate dagli annotatori umani, i documenti che non si sovrappongono tra le serie di annotazioni vengono promossi a ground truth. Prima di promuovere i documenti che si sovrappongono, dovresti controllare le annotazioni per i conflitti. Quando trovi istanze in disaccordo, devi decidere come risolvere il conflitto, selezionando l'annotazione corretta tra quelle applicate dagli annotatori umani o selezionando un'annotazione differente da applicare.
 
@@ -150,11 +159,13 @@ Questi sono alcuni esempi di vari modi di disaccordo degli annotatori umani:
 
 Il giudizio è un passo che ti consente di rivedere i conflitti di annotazione nei documenti di sovrapposizione prima di promuovere le annotazioni a ground truth. Puoi confrontare le annotazioni aggiunte da una coppia di annotatori umani o confrontare le annotazioni umane al ground truth corrente.
 
-### Prima di cominciare 
+### Prima di cominciare
+{: #wks_haadjudicate_prereq}
 
 Fai clic su [questo link ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.youtube.com/watch?v=EbexfsuXxoQ&amp;feature=youtu.be){: new_window} per guardare un video di 3 minuti che illustra come giudicare i documenti.
 
 ### Informazioni su quest'attività
+{: #wks_haadjudicate_about}
 
 Dopo che gli annotatori umani hanno completato le loro attività di annotazione, devono inviare le proprie serie di annotazioni complete per la revisione. Quando valuti i punteggi di accordo tra annotatori, puoi vedere come coppie di annotatori diverse annotano lo stesso documento. Se il punteggio di accordo tra annotatori è accettabile, approva la serie di annotazioni. Se un documento non si sovrappone tra le serie di annotazioni nell'attività, le annotazioni nel documento approvato vengono promosse a ground truth. Se un documento si sovrappone tra le serie di annotazioni, dovrai giudicare il documento e risolvere tutti i conflitti di annotazione presenti prima di promuovere le annotazioni a ground truth.
 
@@ -163,11 +174,12 @@ Ad esempio, quando giudichi un documento, potresti vedere che un annotatore ha a
 {{site.data.keyword.knowledgestudioshort}} supporta la capacità di giudicare tra due serie di annotazioni alla volta o tra una serie di annotazioni e il ground truth corrente. Se un documento si sovrappone tra più di due serie di annotazioni, giudica le due serie di annotazioni con cui hai più confidenza (forse perché hai una maggiore fiducia negli annotatori umani) per determinare il ground truth del documento. E giudica quindi il resto delle serie di annotazioni in base ai risultati del giudizio iniziale.
 
 ### Procedura
+{: #wks_haadjudicate_procedure}
 
 Per controllare i documenti di sovrapposizione e per risolvere i conflitti:
 
-1. Accedi come amministratore o gestore del progetto {{site.data.keyword.knowledgestudioshort}} e seleziona il tuo spazio di lavoro. 
-1. Seleziona la scheda **Assets & Tools** > **Documents** > **Tasks** e apri l'attività che vuoi valutare.
+1. Accedi come amministratore o gestore del progetto {{site.data.keyword.knowledgestudioshort}} e seleziona il tuo spazio di lavoro.
+1. Seleziona la pagina **Machine Learning Model** > **Annotation Tasks** e apri l'attività che vuoi valutare.
 1. Conferma che almeno due serie di annotazioni siano nello stato **In conflict**.
 1. Fai clic su **Check Overlapping Documents for Conflicts**. I documenti che sono in conflitto vengono elencati.
 1. Se vuoi ignorare i conflitti in un documento di sovrapposizione e promuovere la annotazioni a ground truth senza giudicarle, fai clic su **Accept**.
@@ -177,7 +189,7 @@ Per controllare i documenti di sovrapposizione e per risolvere i conflitti:
     Lo strumento di decisione mostra quanti conflitti di citazioni, relazioni e catene di coreferenza esistono. Devi risolvere i conflitti di citazione prima di passare ai conflitti tra le relazioni e le catene di coreferenza.
 
 1. Fai clic per evidenziare una frase che contiene i conflitti. Per rendere più facile concentrarsi sui conflitti non risolti, potresti voler deselezionare la casella di spunta **Resolved** e assicurarti che **Unresolved** sia selezionata.
-1. Fai clic sulle singole annotazioni e poi su **Accept** o **Reject**. Per annullare una decisione che hai preso, premi `Ctrl+Z`.
+1. Fai clic sulle singole annotazioni e poi su **Accept** o **Reject**. Per annullare una decisione che hai preso, premi Ctrl+Z.
 
     Puoi anche fare clic su più di una annotazione e poi fare clic per accettare o rifiutare tutte le annotazioni selezionate. Se decidi che vuoi deselezionare un'annotazione, annulla le selezioni facendo clic su uno spazio vuoto tra le frasi o premendo il tasto **Esc**.
 

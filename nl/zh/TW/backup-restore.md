@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -34,7 +34,7 @@ _手動資料移轉_ 是指備份某個實例的資料，並在另一個實例�
 
 1. [瞭解哪些資料可以備份](#data)
 1. [準備進行備份](#prepare)
-1. [匯出現行實例中的構件](#export)
+1. [從現行實例中下載構件](#export)
 1. [在新的實例上重建工作區](#recreateproj)
 1. [還原工作區資料](#restoredata)
 1. [還原模型](#restoremodels)
@@ -89,7 +89,7 @@ _手動資料移轉_ 是指備份某個實例的資料，並在另一個實例�
 
     如果您要在不同的實例之間移轉工作區，請考量建立您所備份之實例的使用者及其角色清單。具有 Admin 角色的人員可以從「使用者帳戶管理」頁面列印該清單。在新實例上重建工作區之後，具有 Admin 角色的人員必須新增使用者並指派其角色。
 
-    如需角色的相關資訊，請參閱[組合團隊](/docs/services/watson-knowledge-studio/team.html)。
+    如需角色的相關資訊，請參閱 [{{site.data.keyword.knowledgestudioshort}} 中的使用者角色](/docs/services/watson-knowledge-studio/roles.html)。
 
 1. 記下工作區資訊。
 
@@ -108,7 +108,9 @@ _手動資料移轉_ 是指備份某個實例的資料，並在另一個實例�
 - 類型系統
 - 字典
 
-  **附註**：只會下載可編輯的字典。您無法下載唯讀字典。
+  **附註**：
+    - 只會下載可編輯的字典。您無法下載唯讀字典。
+    - 對於字典，不會移轉實體類型對映。在還原這些構件之後，您必須視需要將字典對映至實體類型。
 
 - 文件
 
@@ -141,7 +143,7 @@ _手動資料移轉_ 是指備份某個實例的資料，並在另一個實例�
 
   如果您在舊版工作區中使用任何唯讀字典，請將它們從其原始來源重新上傳至這個工作區。
 
-  **附註**：新增字典時，會自動建立字典預先註釋程式。您可在執行預先註釋程式時，建立字典與實體類型的關聯。
+1. 對於字典預先註釋程式，請建立字典與實體類型的關聯。沒有實體類型對映的字典在您預先註解文件時不會套用註釋。
 
 1. 將下載自舊版工作區的文件上傳至這個版本的工作區。
    如需詳細資料，請參閱[從其他工作區上傳資源](/docs/services/watson-knowledge-studio/exportimport.html)。
@@ -153,9 +155,9 @@ _手動資料移轉_ 是指備份某個實例的資料，並在另一個實例�
 
 若要重新部署您已在先前實例中部署的機器學習模型，請完成下列步驟：
 
-1. 訓練機器學習模型。如需詳細資料，請參閱[建立機器學習模型](/docs/services/watson-knowledge-studio/train-ml.html)。
+1. [訓練機器學習模型](/docs/services/watson-knowledge-studio/train-ml.html)。
 
-  **附註**：不要在已移轉至這個工作區的已註釋文件上執行任何預先註釋程式，因為這會遺失該文件中由註釋人員所新增的所有註釋。
+  **附註**：不要在已移轉至這個工作區的已註釋文件上執行預先註釋程式，因為這會遺失這些文件中由註釋人員所新增的註釋。
 
 1. 建立模型之後，請重新進行部署。如需詳細資料，請參閱[使用機器學習模型](/docs/services/watson-knowledge-studio/publish-ml.html)。
 
@@ -169,6 +171,6 @@ _手動資料移轉_ 是指備份某個實例的資料，並在另一個實例�
 
 如果您有任何已建立但在前一個工作區中未完成的註釋作業，請完成下列步驟來重建不完整的註釋作業：
 
-1. 上傳尚未註釋但想要新增至基準以繼續改善模型的任何文件。
-1. 從新匯入且未註釋的文件中，建立文件集以進行註釋。現在，這些集合稱為_註釋集_。如需詳細資料，請參閱[建立及指派註釋集](/docs/services/watson-knowledge-studio/document-for-annotation.html)。
-1. 重建註釋作業。為作業提供相同的名稱、適當的到期日，並將註釋集指派給適當的註釋人員。
+1. [上傳](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_projadd)任何尚未註釋但想要新增至基準以繼續改善模型的文件。
+1. 從新匯入且未註釋的文件中，[建立註釋集](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_projdocsets)。
+1. [重建註釋作業](/docs/services/watson-knowledge-studio/annotate-documents.html#wks_hatask)。為作業提供相同的名稱、適當的到期日，並將註釋集指派給適當的註釋人員。

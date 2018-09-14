@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -42,6 +42,7 @@ lastupdated: "2018-04-04"
 這些問題的答案通常會產生問題的最佳說明，從而引導您解決問題。
 
 ### 問題的症狀為何？
+{: #ts_overview_symptoms}
 
 開始說明問題時，最常見的問題是「是什麼問題？」。這個問題看似直接明確；不過，您可以將它細分為數個更有針對性的問題，從而更詳細地說明問題。這些問題可能包括：
 
@@ -50,6 +51,7 @@ lastupdated: "2018-04-04"
 - 系統如何失敗？例如，是陷入迴圈、當機、損毀、效能降低，還是結果不正確？
 
 ### 問題發生的位置？
+{: #ts_overview_where}
 
 判斷問題的發生位置往往不容易，但它卻是解決問題的最重要步驟之一。報告元件與失敗元件之間可能存在許多技術層面。當您探索問題時，網路、磁碟和驅動程式只是少數幾個會考量到的元件。
 
@@ -63,6 +65,7 @@ lastupdated: "2018-04-04"
 如果某一層報告問題，但問題不一定是出自該層。識別問題發生位置包括瞭解問題所在的環境。請花一些時間完整說明問題環境，其中包括作業系統和版本、所有對應的軟體和版本，以及硬體資訊。請確認您的執行環境是受支援的配置；許多問題的發生都可以追溯到不相容的軟體層次，可能未料到它們會一起執行，或尚未一起經歷完整的測試。
 
 ### 問題發生的時間？
+{: #ts_overview_when}
 
 請針對導致失敗的事件制定一份詳細的時間表，特別是那些只出現一次的情況。逆向運作可讓您輕鬆地制定時間表：從報告錯誤的時間開始（盡可能精確，甚至精細到毫秒），然後透過可用的日誌及資訊逆向運作。一般而言，只需要查看在診斷日誌中找到的第一個可疑事件即可。
 
@@ -76,6 +79,7 @@ lastupdated: "2018-04-04"
 回應這些類型的問題可提供您調查問題的參考範圍。
 
 ### 問題是在哪些狀況下發生？
+{: #ts_overview_conditions}
 
 知道發生問題時有哪些系統及應用程式正在執行，是疑難排解的重要部分。這些環境相關問題可協助您識別問題的主要原因：
 
@@ -86,6 +90,7 @@ lastupdated: "2018-04-04"
 回答這類問題可協助您說明問題發生的環境，並找出所有相依關係的關聯性。請記住，只因為許多問題可能大致同時發生，並不表示這些問題彼此相關聯。
 
 ### 問題能否重新產生？
+{: #ts_overview_reproduce}
 
 從疑難排解的角度來說，理想的問題是可以重新產生的問題。一般而言，當問題能夠重新產生時，您可以支配更多的工具與程序，以協助您進行調查。因此，可以重新產生的問題通常較容易除錯及解決。
 
@@ -95,60 +100,27 @@ lastupdated: "2018-04-04"
 - 是否有多位使用者或多個應用程式發生相同類型的問題？
 - 問題能否藉由執行單一指令、一組指令或特定的應用程式重建？
 
-## AlchemyLanguage 模型問題
-{: #wks_ts_deployed_model_deleted}
+## 無法在「精簡」方案上建立實例
+{: #wks_ts_lite}
 
 ### 問題
+{: #wks_ts_lite_problem}
 
-您無法部署 AlchemyLanguage 模型，或者部署成功，但模型無法使用。
-
-### 症狀
-
-- 您已部署模型，但狀態顯示發生錯誤。
-- 您已部署模型且狀態指出模型可用，但您無法使用。
-- 已順利部署模型且之前可以運作，但現在無法運作。
+您嘗試在「精簡」方案上建立 {{site.data.keyword.knowledgestudioshort}} 實例，但看到錯誤訊息：`Error 331: We are unable to process your request. Please try again later or contact the {{site.data.keyword.IBM_notm}} Helpdesk.`
 
 ### 原因
+{: #wks_ts_lite_causes}
 
-下列事件可能會導致已部署的模型發生問題：
-
-- 如果您在將金鑰新增至 REST API 呼叫的 `apikey` 參數時，打錯 {{site.data.keyword.alchemyapishort}} 金鑰，則此呼叫會失敗。對於模型 ID 也一樣。最好是複製並貼上模型 ID 及 API 金鑰，以避免打錯。
-- 如果您提供無效的 {{site.data.keyword.alchemyapishort}} 金鑰，或未獲授權可部署自訂模型，則部署程序會指出已順利部署模型，但您將無法使用。
-- 在 {{site.data.keyword.Bluemix}} 中使用 {{site.data.keyword.alchemylanguageshort}} 時，如果您刪除所有與 {{site.data.keyword.Bluemix_notm}} 中 {{site.data.keyword.alchemyapishort}} 金鑰相關聯的服務實例，則任何參照該金鑰的已部署模型都將從服務中移除。{{site.data.keyword.Bluemix_notm}} 會定期檢查已登錄的模型是否與有效金鑰相關聯，以及是否已刪除所有未與其相關聯的模型。如果您的模型是針對已刪除的金鑰而部署的，則模型的狀態會變更為 `error`。
+{{site.data.keyword.knowledgestudioshort}} 不允許每個組織有多個「精簡」方案 。
 
 ### 解決問題
-
-1. 檢查部署的狀態。
-
-    以 {{site.data.keyword.knowledgestudioshort}} 管理者身分登入。在**模型管理** > **版本**頁面上，檢視**狀態**直欄，以檢查已部署之模型的狀態。
-
-1. 如果模型的部署狀態是 `error` 或狀態是 `available`，但當您嘗試使用模型時，模型無法運作，請按一下**取消部署**來撤銷模型的部署。
-1. 重新部署模型。
-
-    只使用有權部署模型的有效 {{site.data.keyword.alchemyapishort}} 金鑰，並在將模型 ID 及 API 金鑰作為參數新增至 API 呼叫時，複製並貼上它們。
-
-**相關作業**：
-
-[將機器學習模型部署至 {{site.data.keyword.IBM_notm}} {{site.data.keyword.alchemylanguageshort}}](/docs/services/watson-knowledge-studio/publish-ml.html#wks_mabluemix)
-
-## 無法建立免費帳戶
-{: #wks_ts_free}
-
-### 問題
-
-您嘗試建立免費帳戶，但看到錯誤訊息：`Error 331: We are unable to process your request. Please try again later or contact the {{site.data.keyword.IBM_notm}} Helpdesk.`
-
-### 原因
-
-{{site.data.keyword.knowledgestudioshort}} 不允許每個組織有多個免費帳戶。
-
-### 解決問題
+{: #wks_ts_lite_resolve}
 
 建立不包括在組織中的帳戶。
 
-如果您需要使用現行帳戶來進行免費試用，且您的使用者帳戶與付費帳戶相關聯，則可以提交支援問題單。如需相關資訊，請參閱[與 {{site.data.keyword.IBM_notm}} 支援中心聯絡](/docs/services/watson-knowledge-studio/troubleshooting.html#ts_contactingibmsupport)。
+如果您需要在「精簡」方案上對 {{site.data.keyword.knowledgestudioshort}} 實例使用現行帳戶，且您的使用者帳戶與付費帳戶相關聯，則可以建立一個案例。如需相關資訊，請參閱[與 {{site.data.keyword.IBM_notm}} 支援中心聯絡](/docs/services/watson-knowledge-studio/troubleshooting.html#ts_contactingibmsupport)。
 
-如果您需要使用現行帳戶來進行免費試用，但您的使用者帳戶未與付費帳戶相關聯，請將您的問題張貼至 [{{site.data.keyword.IBM_notm}}developerWorks Answers](https://developer.ibm.com/answers/topics/wks/)，確定將問題標記為 **WKS**。
+如果您需要在「精簡」方案上對 {{site.data.keyword.knowledgestudioshort}} 實例使用現行帳戶，且您的使用者帳戶並未與付費帳戶相關聯，請將您的問題張貼至 [{{site.data.keyword.IBM_notm}} developerWorks Answers ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/answers/topics/watson-knowledge-studio/){: new_window}。將問題標記為 **WATSON-KNOWLEDGE-STUDIO**。
 
 ## 無法存取應用程式
 {: #wks_ts_access}
@@ -158,21 +130,36 @@ lastupdated: "2018-04-04"
 您必須具有 {{site.data.keyword.IBM_notm}} 使用者登錄認證，才能要求 {{site.data.keyword.IBM_notm}} {{site.data.keyword.knowledgestudioshort}} 的實例。
 
 ### 管理者
+{: #wks_ts_access_administrator}
 
 每一個 {{site.data.keyword.knowledgestudioshort}} 實例都有一個與其相關聯的管理者角色。最初註冊使用此應用程式的人員會自動獲得管理者角色。管理者可以邀請其他人員。
 
 如需如何邀請人員使用您的應用程式實例的相關資訊，請參閱[組合團隊](/docs/services/watson-knowledge-studio/team.html)。
 
 ### 註釋人員
+{: #wks_ts_access_annotator}
 
 如果您已受邀使用某人的 {{site.data.keyword.knowledgestudioshort}} 實例，以作為註釋人員，則可能會收到電子郵件邀請。首先，如果您還沒有 {{site.data.keyword.IBM_notm}} 登錄認證，則必須向 {{site.data.keyword.IBM_notm}} 登錄。在向 {{site.data.keyword.IBM_notm}} 登錄並接受邀請之後，您即獲授與實例的存取權。不過，在您獲授與存取權之後，以及在您開始註釋文件之前，管理者或實例的專案經理必須將您新增至工作區，並將註釋作業指派給您。直到您獲指派作業之後，才可在 {{site.data.keyword.knowledgestudioshort}} 實例中執行任何動作。若要註釋文件，請使用基準編輯器。使用 Google Chrome 瀏覽器以獲得最佳效能。
 
 如需使用基準編輯器的說明，請參閱[註釋文件](/docs/services/watson-knowledge-studio/user-guide.html)。
 
-## 實驗性服務：*實驗性* 是什麼意思？
+## 資料收集
+{: #content}
+
+若為「標準」方案（精簡、標準、專業），依預設，{{site.data.keyword.knowledgestudioshort}} 會使用用戶端資料來改善服務。此資料僅用於聚集中。用戶端資料不會共用，也不會成為公用資料。
+
+如果您具備 Admin 角色，則可以藉由在「服務詳細資料」頁面上選取資料收集設定，來變更此預設行為。
+
+若為「超值」方案及「專用」帳戶，{{site.data.keyword.knowledgestudioshort}} 不會使用用戶端資料來改善服務。
+
+如需相關資訊，請參閱最新的 [{{site.data.keyword.knowledgestudioshort}} 服務說明 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/software/sla/sladb.nsf/searchsaas/?searchview&searchorder=4&searchmax=0&query=Knowledge+Studio){: new_window}。
+
+## 實驗性服務與功能：*實驗性* 是什麼意思？
 {: #experimental}
 
-如需實驗性服務的相關資訊，請參閱 [{{site.data.keyword.Bluemix_notm}} 文件](/docs/services/index.html#experimental_services)。如需實驗性服務的完整資料，請參閱最新版本的 [{{site.data.keyword.Bluemix_notm}} 服務說明 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://www.ibm.com/software/sla/sladb.nsf/searchsaas/?searchview&searchorder=4&searchmax=0&query=IBM+Bluemix+Service+Description){: new_window}。
+{{site.data.keyword.IBM_notm}} 會釋出實驗性服務及功能，供您試用。這些服務可能不穩定、經常使用與舊版不相容的方式變更，並且可能會在短時間內停止使用。不建議在正式作業環境中使用這些服務及功能。
+
+如需實驗性服務的相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} 文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/docs/get-support/servicessupport.html#s-services-exporcont){: new_window}。如需實驗性服務的完整資料，請參閱最新版本的 [{{site.data.keyword.cloud_notm}} 服務說明 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/software/sla/sladb.nsf/sla/bm?OpenDocument){: new_window}。
 
 ## 儲存空間問題
 {: #storage}
@@ -180,6 +167,7 @@ lastupdated: "2018-04-04"
 取決於您的訂閱方案，您可能達到方案指定的儲存空間限制，因而阻止您執行您要完成的作業。
 
 ### 症狀
+{: #storage_symptoms}
 
 嘗試執行下列其中一項作業時，您可能會看到關於已超出容許之儲存空間的訊息：
 
@@ -188,10 +176,12 @@ lastupdated: "2018-04-04"
 - 對文件執行預先註釋程式
 
 ### 原因
+{: #storage_causes}
 
 已達到儲存空間限制，或如果要繼續執行動作，將會超出此限制。
 
 ### 解決問題
+{: #storage_resolve}
 
 儲存空間的最大消耗者是機器學習及規則型模型。若要釋放空間，您可以採取下列動作：
 
@@ -209,28 +199,18 @@ lastupdated: "2018-04-04"
 
 「{{site.data.keyword.IBM_notm}} 支援中心」提供產品問題報告協助、回答常見問題，以及協助使用者解決產品問題。
 
-### 開始之前
+- **未與付費帳戶相關聯的精簡方案客戶**
 
-首先，請查看是否有記載您所遭遇問題的解決方案。在「[{{site.data.keyword.IBM_notm}} 支援入口網站」![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/home/entry/portal){: new_window} 上搜尋 {{site.data.keyword.knowledgestudioshort}}。在搜尋結果頁面上，按一下**支援**標籤，以查看來自 TechNotes、{{site.data.keyword.IBM_notm}} Redbooks 及文件的結果。按一下**適用於開發人員**標籤，以查看來自 {{site.data.keyword.IBM_notm}} developerWorks 社群的結果，例如部落格及討論區問題。
+    藉由詢問開發人員社群的會員，來取得問題的協助及回答。如需鏈結，請參閱目錄底端的「開發人員社群」一節。
 
-在嘗試搜尋「[{{site.data.keyword.IBM_notm}} 支援入口網站」![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/home/entry/portal){: new_window} 來尋找答案或解決方案之後，您可以與「{{site.data.keyword.IBM_notm}} 支援中心」聯絡。您具有的支援類型取決於您的服務類型。
+- **與付費帳戶相關聯的客戶**
 
-- **免費方案使用者**
+    身為與付費帳戶相關聯的客戶，您也可以提出問題，並從其他使用者的問題中學習。開發人員社群開放每個人使用，是一個開始的好地方。如需鏈結，請參閱目錄底端的「開發人員社群」一節。
 
-    藉由詢問開發人員社群的會員，來取得問題的協助及回答。如需開發人員社群的鏈結，請參閱目錄中的**開發人員社群**一節。
+    **若要與「{{site.data.keyword.IBM_notm}} 支援中心」聯絡，請執行下列動作：**
 
-- **付費方案使用者**
+    您必須獲授權可在「{{site.data.keyword.cloud_notm}} 服務入口網站」上建立支援案例。
 
-    身為付費方案使用者，您也可以提出問題，並從其他使用者的問題中學習。討論區開放每個人使用，是一個開始的好地方。如需鏈結，請參閱目錄中的**開發人員社群**一節。
-
-    從「[{{site.data.keyword.IBM_notm}} 雲端服務入口網站」![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://watson.service-now.com/wcp){: new_window} 提交問題單。
-
-    > **附註：**您必須已獲授權，才能將問題提交給 {{site.data.keyword.IBM_notm}}。
-
-### 程序
-
-若要與「{{site.data.keyword.IBM_notm}} 支援中心」聯絡來解決問題，請執行下列動作：
-
-1. 定義問題、收集背景資訊並判斷問題的嚴重性。
-1. 收集診斷資訊（如果可能的話）。
-1. 將問題提交給「{{site.data.keyword.IBM_notm}} 支援中心」。如需聯絡詳細資料，請參閱[軟體即服務 (SaaS) 支援手冊 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www-01.ibm.com/software/support/acceleratedvalue/SaaS_Handbook_V18.pdf){: new_window}。
+    1. 定義問題、收集背景資訊並判斷問題的嚴重性。
+    1. 收集診斷資訊（如果可能的話）。
+    1. 在 [{{site.data.keyword.cloud_notm}} 服務入口網站 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://watson.service-now.com/wcp){: new_window} 上建立案例。

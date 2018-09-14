@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -32,91 +32,7 @@ Antes de um modelo poder ser implementado para uso por um serviço, deve-se ter 
 
 Para alguns dos serviços, deve-se saber detalhes sobre a instância de serviço que você planeja implementar, como o nome do espaço e o nome da instância de serviço do {{site.data.keyword.Bluemix_notm}}. As informações de espaço e nome da instância estão disponíveis na página de serviços do {{site.data.keyword.Bluemix_notm}}.
 
-Também é possível pré-anotar documentos novos com o modelo de aprendizado de máquina. Veja [Pré-anotando documentos com um modelo de aprendizado de máquina](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannotsire) para obter detalhes.
-
-## Implementando modelo de aprendizado de máquina para AlchemyLanguage
-{: #wks_mabluemix}
-
-Quando você está satisfeito com o desempenho do modelo, é possível implementar uma versão dele no {{site.data.keyword.IBM_notm}} {{site.data.keyword.alchemylanguageshort}}. Esse recurso, que requer que você forneça uma chave de acesso do {{site.data.keyword.alchemyapishort}}, permite que seus aplicativos usem o modelo de aprendizado a máquina implementado para anotar documentos em seu domínio.
-
-### Antes de Começar
-
-Deve-se ter o plano Avançado do serviço {{site.data.keyword.alchemylanguageshort}} para poder implementar e usar o modelo.
->Nota: o serviço {{site.data.keyword.alchemylanguageshort}} foi descontinuado. Não será possível implementar esse modelo no serviço, a menos que você tenha um plano existente.
-
-### Sobre essa Tarefa
-
-Quando você implementar o modelo de aprendizado de máquina, você selecionará a versão dele que deseja implementar. Para implementar esse serviço, deve-se ter uma chave de acesso do {{site.data.keyword.IBM_notm}} {{site.data.keyword.alchemylanguageshort}}.
-
-A chave deve pertencer a uma conta que está autorizada a publicar modelos customizados ou o modelo será implementado com êxito, mas você não será capaz de usá-lo.
-
-Deve-se especificar a chave na primeira vez em que você implementar um modelo no {{site.data.keyword.alchemylanguageshort}}. É possível, então, reutilizar a chave com múltiplas versões do modelo que você implementa. Cada chave tem um número máximo de modelos que podem ser implementados ao mesmo tempo.
-
-### Procedimento
-
-Para implementar um modelo de aprendizado de máquina no {{site.data.keyword.alchemylanguageshort}}:
-
-1. Efetue login como um administrador ou gerente de projeto do {{site.data.keyword.knowledgestudioshort}} e selecione a sua área de trabalho.
-1. Selecione a guia **Gerenciamento de modelo** > **Versões** > **Aprendizado de máquina**.
-1. Escolha a versão do modelo que você deseja implementar.
-
-    Se houver apenas uma versão de trabalho do modelo, crie uma captura instantânea do modelo atual. Isso provê versões ao modelo, o que permite que você implemente uma versão, enquanto continua a melhorar a versão atual. A opção para implementar não aparece até que você crie pelo menos uma versão.
-
-1. Clique em **Implementar** e escolher implementá-lo no serviço {{site.data.keyword.alchemylanguageshort}} e, em seguida, clique em **Avançar**.
-1. Digite a chave que você obteve por meio do {{site.data.keyword.alchemylanguageshort}} ou selecione uma versão anteriormente implementada do modelo que tem uma chave que você deseja reutilizar e clique em **Implementar**. Se a chave for válida, uma confirmação que contenha o ID do modelo será exibida. Essa confirmação não significa que o modelo esteja pronto para uso por seus aplicativos.
-1. O processo de implementação pode levar alguns minutos. Para verificar o status da implementação, clique em **Status** ao lado da versão que você implementou. Se o modelo ainda estiver sendo implementado, o status indicará "publicando". Após a implementação ser concluída, o status mudará para "disponível", se a implementação foi bem-sucedida, ou para "erro", se ocorreram problemas.
-
-    As informações de status incluem o ID do modelo, os últimos quatro dígitos da chave do {{site.data.keyword.alchemyapishort}} e um log do processo de implementação. O ID do modelo (model_id) é como os seus aplicativos chamam o modelo de aprendizado de máquina. Use a tecla {{site.data.keyword.alchemyapishort}} para acompanhar o número de implementações por chave.
-
-### O que fazer em seguida
-
-Para usar o modelo implementado, deve-se copiar e colar o ID do modelo em sua chamada API do aplicativo. A chamada também deve especificar o serviço de plano Avançado do {{site.data.keyword.alchemylanguageshort}} que você deseja usar com o modelo e sua chave de acesso do {{site.data.keyword.alchemyapishort}} associada. Os terminais a seguir são suportados:
-
-- **&lt;*input-type*&gt;GetRankedNamedEntities**
-
-    Usa o modelo customizado que você especifica no parâmetro de modelo para extrair uma lista de menções de todos os tipos de entidade conhecidos que ele localiza na entrada que você fornece. Tipos de entrada suportados incluem texto, HTML ou uma URL pública. Veja [{{site.data.keyword.alchemylanguageshort}}&gt;Entidades ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/alchemy-language/api/v1/#entities){: new_window} para obter informações adicionais sobre a API e a sintaxe a serem usadas.
-
-- **&lt;*input-type*&gt;GetTypedRelations**
-
-    Usa o modelo customizado que você especifica no parâmetro de modelo para extrair uma lista de instâncias de relacionamentos conhecidos que ele localiza na entrada fornecida. Veja [{{site.data.keyword.alchemylanguageshort}}&gt;TypedRelations ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/alchemy-language/api/v1/#typed-relations){: new_window} para obter mais informações sobre a API e a sintaxe a ser usada.
-
-#### Exemplos
-
-- A chamada API a seguir procura tipos de entidade conhecidos na sequência de texto que é passada no corpo de POST. A solicitação especifica o ID do modelo que foi criado e uma chave API Alchemy que tem direitos para executar modelos customizados.
-
-    ```bash
-    curl -d 'text=Mary had a little lamb.'
-    "https://gateway-a.watsonplatform.net/calls/text/TextGetRankedNamedEntities?
-    showSourceText=1&
- model=44476a63-c55t-451f-ad3r-8b23c0f4628c&
- apikey=s3wee88r25wwe2p6442w99g8t77phll5323kkf3a&
- outputMode=json"
-    ```
-    {: pre}
-
-    A resposta retorna `Mary` e `lamb` se essas são menções reconhecidas pelo seu modelo de aprendizado de máquina.
-
-- A chamada API a seguir procura relacionamentos conhecidos na sequência de texto que é passada no corpo de POST. A solicitação especifica o ID do modelo que foi criado e uma chave API Alchemy que tem direitos para executar modelos customizados.
-
-    ```bash
-    curl -d 'text=Mary had a little lamb.'
-    "https://gateway-a.watsonplatform.net/calls/text/TextGetTypedRelations?
-    showSourceText=1&
- model=44476a63-c55t-451f-ad3r-8b23c0f4628c&
- apikey=s3wee88r25wwe2p6442w99g8t77phll5323kkf3a&
- outputMode=json"
-    ```
-    {: pre}
-
-    A resposta retorna `ownedBy` se esse relacionamento é reconhecido pelo seu modelo de aprendizado de máquina.
-
-> **Nota:** os retornos de linha são incluídos para formatar melhor os exemplos para a tela. Não inclua retornos de linha na sintaxe da API.
-
-Para obter mais informações, veja a documentação do [{{site.data.keyword.alchemylanguageshort}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/watson/developercloud/doc/alchemylanguage/customizing.shtml){: new_window}.
-
-#### Informações relacionadas
-
-[Problemas de modelo do {{site.data.keyword.alchemylanguageshort}}](/docs/services/watson-knowledge-studio/troubleshooting.html#wks_ts_deployed_model_deleted)
+Também é possível pré-anotar documentos novos com o modelo de aprendizado de máquina. Veja [Pré-anotando documentos com o modelo de aprendizado de máquina](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannotsire) para obter detalhes.
 
 ## Implementando um modelo de aprendizado de máquina no IBM Watson Discovery
 {: #wks_madiscovery}
@@ -124,22 +40,27 @@ Para obter mais informações, veja a documentação do [{{site.data.keyword.alc
 Quando você está satisfeito com o desempenho do modelo, é possível implementar uma versão dele no {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}}. Esse recurso permite que seus aplicativos usem o modelo de aprendizado de máquina implementado para enriquecer os insights que você obtém de seus dados para incluir o reconhecimento de conceitos e relações que são relevantes para seu domínio.
 
 ### Antes de Começar
+{: #wks_madiscovery_prereqs}
 
 Deve-se ter acesso administrativo a uma instância de serviço do {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}} e saber os nomes do espaço e da instância de serviço do {{site.data.keyword.Bluemix_notm}} que estão associados com ela.
 
 ### Sobre essa Tarefa
+{: #wks_madiscovery_about}
 
 Quando você implementar o modelo de aprendizado de máquina, você selecionará a versão dele que deseja implementar.
 
 ### Procedimento
+{: #wks_madiscovery_procedure}
 
 Para implementar um modelo de aprendizado de máquina no {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}}, conclua as etapas a seguir:
 
 1. Efetue login como um administrador ou gerente de projeto do {{site.data.keyword.knowledgestudioshort}} e selecione a sua área de trabalho.
-1. Selecione a guia **Gerenciamento de modelo** > **Versões** > **Aprendizado de máquina**.
+1. Selecione  ** Modelo de Aprendizado de Máquina **  >  ** Versões **.
 1. Escolha a versão do modelo que você deseja implementar.
 
     Se houver apenas uma versão de trabalho do modelo, crie uma captura instantânea do modelo atual. Isso provê versões ao modelo, o que permite que você implemente uma versão, enquanto continua a melhorar a versão atual. A opção para implementar não aparece até que você crie pelo menos uma versão.
+
+    **Nota**: cada versão pode ser implementada em somente uma instância de serviço. Se você desejar implementar o mesmo modelo em mais de uma instância, crie uma versão para cada instância.
 
 1. Clique em **Implementar**, escolha implementá-lo no {{site.data.keyword.discoveryshort}} e, em seguida, clique em **Avançar**.
 1. Selecione o espaço e a instância do {{site.data.keyword.Bluemix_notm}}. Se necessário, selecione uma região diferente.
@@ -151,8 +72,9 @@ Para implementar um modelo de aprendizado de máquina no {{site.data.keyword.wat
     Quando disponível, anote o ID do modelo (model_id). Você fornecerá esse ID para o serviço do {{site.data.keyword.discoveryshort}} para ativar o serviço para usar o seu modelo customizado.
 
 ### O que fazer em seguida
+{: #wks_madiscovery_next}
 
-Para usar o modelo implementado, você deverá fornecer o ID do modelo quando ele for solicitado durante o processo de configuração de enriquecimento de serviço do {{site.data.keyword.discoveryshort}}. Para obter mais detalhes, veja a documentação do serviço [{{site.data.keyword.discoveryshort}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://www.ibm.com/watson/developercloud/doc/discovery/integrate-wks.shtml){: new_window}.
+Para usar o modelo implementado, você deverá fornecer o ID do modelo quando ele for solicitado durante o processo de configuração de enriquecimento de serviço do {{site.data.keyword.discoveryshort}}. Para obter mais detalhes, veja a [documentação do serviço {{site.data.keyword.discoveryshort}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/docs/services/discovery/integrate-wks.html){: new_window}.
 
 ## Implementando um modelo de aprendizado de máquina no IBM Watson Natural Language Understanding
 {: #wks_manlu}
@@ -160,22 +82,27 @@ Para usar o modelo implementado, você deverá fornecer o ID do modelo quando el
 Quando você está satisfeito com o desempenho do modelo, é possível implementar uma versão dele no {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} {{site.data.keyword.nlushort}}. Esse recurso permite que seus aplicativos usem o modelo de aprendizado de máquina implementado para analisar os recursos de semântica de entrada de texto, incluindo entidades e relações.
 
 ### Antes de Começar
+{: #wks_manlu_prereqs}
 
 Deve-se ter um serviço {{site.data.keyword.nlushort}} no qual implementar. Além disso, deve-se saber os nomes de espaço e instância do {{site.data.keyword.Bluemix_notm}} que estão associados ao serviço. Se você não se lembra dos nomes de espaço ou instância, localize-os efetuando login no {{site.data.keyword.Bluemix_notm}}. Se você não tem uma conta do {{site.data.keyword.Bluemix_notm}}, inscreva-se para obter uma conta.
 
 ### Sobre essa Tarefa
+{: #wks_manlu_about}
 
 Quando você implementar o modelo de aprendizado de máquina, você selecionará a versão dele que deseja implementar.
 
 ### Procedimento
+{: #wks_manlu_procedure}
 
 Para implementar um modelo de aprendizado de máquina no serviço {{site.data.keyword.nlushort}}, conclua as etapas a seguir:
 
 1. Efetue login como um administrador ou gerente de projeto do {{site.data.keyword.knowledgestudioshort}} e selecione a sua área de trabalho.
-1. Selecione a guia **Gerenciamento de modelo** > **Versões** > **Aprendizado de máquina**.
+1. Selecione  ** Modelo de Aprendizado de Máquina **  >  ** Versões **.
 1. Escolha a versão do modelo que você deseja implementar.
 
     Se houver apenas uma versão de trabalho do modelo, crie uma captura instantânea do modelo atual. Isso provê versões ao modelo, o que permite que você implemente uma versão, enquanto continua a melhorar a versão atual. A opção para implementar não aparece até que você crie pelo menos uma versão.
+
+    **Nota**: cada versão pode ser implementada em somente uma instância de serviço. Se você desejar implementar o mesmo modelo em mais de uma instância, crie uma versão para cada instância.
 
 1. Clique em **Implementar**, escolha implementá-lo no {{site.data.keyword.nlushort}} e, em seguida, clique em **Avançar**.
 1. Selecione o espaço e a instância do {{site.data.keyword.Bluemix_notm}}. Se necessário, selecione uma região diferente.
@@ -185,6 +112,7 @@ Para implementar um modelo de aprendizado de máquina no serviço {{site.data.ke
     Quando disponível, anote o ID do modelo (model_id). Você fornecerá esse ID para o serviço do {{site.data.keyword.nlushort}} para ativar o serviço para usar o seu modelo customizado.
 
 ### O que fazer em seguida
+{: #wks_manlu_next}
 
 Para usar o modelo implementado, deve-se especificar o ID do modelo de seu modelo customizado no parâmetro `entities.model`.
 
@@ -322,20 +250,32 @@ Para usar o modelo implementado, deve-se especificar o ID do modelo de seu model
     ```
     {: codeblock}
 
-Veja a documentação do [{{site.data.keyword.nlushort}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/watson/developercloud/doc/natural-language-understanding/index.html){: new_window} para obter mais detalhes.
+Consulte a [Documentação do {{site.data.keyword.nlushort}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/docs/services/natural-language-understanding/index.html){: new_window} para obter mais detalhes.
 
 ## Removendo a implementação de modelos
 {: #undeploy-view-model}
 
-Se você desejar remover a implementação de um modelo ou localizar um ID do modelo, visualize a página **Modelos implementados**. A página **Modelos implementados** mostra todos os modelos do {{site.data.keyword.knowledgestudioshort}} que são implementados em serviços nos espaços aos quais você tem acesso.
+Se você desejar remover a implementação de um modelo ou localizar um ID do modelo, visualize a página **Modelos implementados**.
+
+### Sobre essa Tarefa
+{: #wks_undeploy_about}
+
+O que você vê na página Modelos implementados depende da [região ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/docs/resources/services_region.html){: new_window} que hospeda sua instância do {{site.data.keyword.knowledgestudioshort}}. Se a região suportar instâncias gerenciadas pelos métodos de gerenciamento de acesso [IAM ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/docs/iam/users_roles.html){: new_window} e [Cloud Foundry ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window}, você verá uma guia para cada método. Os modelos de instâncias gerenciadas pelo IAM estão listados na guia **Grupos de recursos**. Os modelos de instâncias gerenciadas pelo Cloud Foundry estão listados na guia **Organizações**.
+
+Se a região suportar instâncias gerenciadas somente por um dos métodos de gerenciamento de acesso, você verá apenas uma lista de modelos, pois apenas um método de gerenciamento de acesso será aplicável.
+
+### Procedimento
+{: #wks_deploy_procedure}
 
 Para remover a implementação de modelos ou localizar IDs de modelo:
 
-1. Efetue login como um administrador ou gerente de projeto do {{site.data.keyword.knowledgestudioshort}} e selecione a sua área de trabalho.
+1. Ative o {{site.data.keyword.knowledgestudioshort}}.
 1. No menu **Configurações** na barra de menus superior direita, selecione **Gerenciar modelos implementados**.
 1. Na lista de modelos implementados, localize o modelo que você deseja visualizar ou do qual deseja remover a implementação.
 1. Para remover a implementação do modelo, na última coluna dessa linha, clique em **Remover a implementação do modelo**.
 1. Para localizar o ID do modelo, veja a coluna **ID do modelo**.
+
+Como alternativa, é possível remover a implementação de modelos de páginas de Versões para modelos baseados em regras e modelos de aprendizado de máquina.
 
 ## Alavancando um modelo de aprendizado de máquina no IBM Watson Explorer
 {: #wks_maexport}
@@ -343,24 +283,27 @@ Para remover a implementação de modelos ou localizar IDs de modelo:
 Exporte o modelo de aprendizado de máquina treinado para que possa ser usado no {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
 
 ### Antes de Começar
+{: #wks_maexport_prereqs}
 
 Se você escolhe identificar os tipos de relação e anotá-los, deve-se definir pelo menos dois tipos de relação e anotar as instâncias dos relacionamentos na verdade absoluta antes de exportar o modelo. A definição e anotação de somente um tipo de relação podem causar problemas subsequentes no {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer, liberação 11.0.1.0.
 
 ### Sobre essa Tarefa
+{: #wks_maexport_about}
 
 Agora que o modelo de aprendizado de máquina está treinado para reconhecer entidades e relacionamentos para um domínio específico, é possível alavancá-lo no {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
 
 Clique [neste link ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.youtube.com/watch?v=1VoS-xczBow&amp;feature=youtu.be){: new_window} para assistir a um vídeo de menos de 2 minutos que ilustra como exportar um modelo e usá-lo no {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
 
 ### Procedimento
+{: #wks_maexport_procedure}
 
 Para alavancar um modelo de aprendizado de máquina no {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer, conclua as etapas a seguir.
 
 1. Efetue login como um administrador ou gerente de projeto do {{site.data.keyword.knowledgestudioshort}} e selecione a sua área de trabalho.
-1. Selecione a guia **Gerenciamento de modelo** > **Versões** > **Aprendizado de máquina**.
+1. Selecione  ** Modelo de Aprendizado de Máquina **  >  ** Versões **.
 1. Clique em **Exportar modelo atual**.
 
-    Se você tiver uma assinatura de plano grátis, nenhuma opção de exportação estará disponível.
+    Se você tiver uma assinatura do plano Lite, nenhuma opção de exportação estará disponível.
 
     O modelo é salvo como um arquivo ZIP e você é solicitado a fazer download do arquivo.
 
@@ -370,5 +313,6 @@ Para alavancar um modelo de aprendizado de máquina no {{site.data.keyword.IBM_n
     É possível então mapear o modelo para um modelo de aprendizado de máquina no {{site.data.keyword.watson}} Explorer Content Analytics. Depois de executar a etapa de mapeamento, quando você efetua crawl dos documentos, o modelo localiza instâncias das entidades e relações que seu modelo entende. Para saber como importar e configurar o modelo no {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer, veja o documento técnico que descreve a integração: [http://www.ibm.com/support/docview.wss?uid=swg27048147 ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://www.ibm.com/support/docview.wss?uid=swg27048147){: new_window}.
 
 #### Tarefas relacionadas
+{: #wks_maexport_related}
 
 [Exportando documentos analisados do {{site.data.keyword.watson}} Explorer Content Analytics](/docs/services/watson-knowledge-studio/preannotation.html#wks_uimawexca)

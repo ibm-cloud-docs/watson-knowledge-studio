@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -35,12 +35,14 @@ lastupdated: "2018-04-04"
 ## 類型系統
 {: #wks_exportimport_expimp_type}
 
-若要下載類型系統，請開啟**資產 & 工具** > **實體類型**頁面，然後按**下載類型**。系統會建立一個名為 `types-ID.json` 的檔案，並提示您將檔案下載至本端系統。如果要在新工作區中使用這個類型系統，請開啟**實體類型**頁面，並上傳您下載的 `JSON` 檔。
+若要下載類型系統，請開啟**資產** > **實體類型**頁面，然後按**下載類型**。系統會建立一個名為 `types-ID.json` 的檔案，並提示您將檔案下載至本端系統。如果要在新工作區中使用這個類型系統，請開啟**實體類型**頁面，並上傳您下載的 `JSON` 檔。
 
 ## 字典
 {: #wks_exportimport_expimp_dict}
 
-若要下載一個以上的字典，請選取**資產 & 工具** > **預先註釋程式** > **字典**標籤，然後按**下載字典**。對於您下載的每一個字典，系統會建立一個名為 `dictionary name_timestamp.csv` 的檔案、將檔案結合成一個名為 `workspace name_dictionary_timestamp.zip` 的 `ZIP` 檔，並提示您將檔案下載至本端系統。您也可以開啟字典然後按**下載**，來下載個別的字典。無法下載您已上傳作為字典 CSV 檔的僅供預覽字典。
+若要下載所有字典，請選取**資產** > **字典**頁面，按一下**建立字典**按鈕旁邊的**功能表**圖示，然後選取**下載字典**。對於您下載的每一個字典，系統會建立一個名為 `dictionary name_timestamp.csv` 的檔案、將檔案結合成一個名為 `workspace name_dictionary_timestamp.zip` 的 `ZIP` 檔，並提示您將檔案下載至本端系統。
+
+您可以開啟字典然後按**下載**，來下載個別的字典。無法下載您已上傳作為字典 CSV 檔的僅供預覽字典。
 
 將下載的字典上傳至新的工作區之前，您必須先從舊工作區下載類型系統，並將它上傳至新的工作區。類型系統和字典必須源自相同的 {{site.data.keyword.knowledgestudioshort}} 工作區，且類型系統必須在您上傳字典之前就存在於新的工作區。
 
@@ -49,7 +51,7 @@ lastupdated: "2018-04-04"
 ## 文件
 {: #wks_exportimport_expimp_doc}
 
-若要下載您新增至語料庫的文件，請開啟**資產 & 工具** > **文件** > **文件集**標籤，然後按**下載文件集**。系統會建立一個名為 `corpus-ID.zip` 的檔案，並提示您將檔案下載至本端系統。`ZIP` 檔包含語料庫中的所有文件。新增至註釋集的註釋會包含在 ZIP 檔中，但只有在已核准註釋集並提升為基準之後，才會包含在內。
+若要下載您新增至語料庫的文件，請開啟**資產** > **文件** > **文件集**標籤，然後按**下載文件集**。系統會建立一個名為 `corpus-ID.zip` 的檔案，並提示您將檔案下載至本端系統。`ZIP` 檔包含語料庫中的所有文件。新增至註釋集的註釋會包含在 ZIP 檔中，但只有在已核准註釋集並提升為基準之後，才會包含在內。
 
 > **限制：**已預先註釋的任何文件，在下載時會模糊成為無法閱讀的格式。即使是那些文件中由註釋人員新增的註釋也無法閱讀。
 
@@ -59,10 +61,8 @@ lastupdated: "2018-04-04"
 
 **相關概念**：
 
-[類型系統](/docs/services/watson-knowledge-studio/artifacts.html#wks_typesystem)
+[構件類型](/docs/services/watson-knowledge-studio/artifacts.html)
 
-[字典](/docs/services/watson-knowledge-studio/artifacts.html#wks_dictionaries)
+[新增文件以進行註釋](/docs/services/watson-knowledge-studio/documents-for-annotation.html)
 
-[機器學習註釋人員的文件](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_t_docs_intro)
-
-[規則型註釋人員的文件](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html)
+[新增文件以定義規則](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -32,6 +32,7 @@ Nachdem Sie die Problembereiche des Modells identifiziert haben, können Sie Ma�
 Nach dem Erstellen eines Modells für maschinelles Lernen können Sie einen Snapshot erstellen, um eine Sicherungsversion der aktuellen Ressourcen aufzubewahren, damit sie in einer späteren Phase bei Bedarf wiederhergestellt werden können.
 
 ### Informationen zu diesem Vorgang
+{: #wks_maversions_about}
 
 Der F1-Score ist ein Indikator für die Qualität des Modells. Wenn die Leistungsbewertung für das Modell positiv ausfällt, kann es hilfreich sein, eine Version der Komponente zu speichern, bevor Änderungen an den Ressourcen vorgenommen werden. Falls die Änderungen zu einer schlechteren Leistung führen, können Sie auf eine gespeicherte Version zurückgreifen. Beim Wiederherstellen einer gespeicherten Version, werden alle Annotationstasks archiviert, da sie nicht länger gültig sind.
 
@@ -51,20 +52,21 @@ Die folgenden Ressourcen werden nicht erfasst:
 - Wörterverzeichnisse, da sie sehr umfangreich sein können und unterschiedliche Wörterverzeichnistypen auf verschiedene Arten verwaltet werden
 
 ### Vorgehensweise
+{: #wks_maversions_procedure}
 
 So können Sie Versionen der Modelle für maschinelles Lernen erstellen und wiederherstellen:
 
 1. Melden Sie sich als {{site.data.keyword.knowledgestudioshort}}-Administrator oder -Projektleiter an und wählen Sie Ihren Arbeitsbereich aus.
-1. Wählen Sie **Modellverwaltung** > **Leistung** aus. Leistungsstatistikdaten zur aktuellen Version (als 'Version 1.0' bezeichnet) werden angezeigt.
-1. Erstellen Sie einen Snapshot der aktuellen Version auf der Registerkarte **Modellverwaltung** > **Versionen** > **Maschinelles Lernen**, indem Sie auf **Snapshot erstellen** klicken. Die Ressourcen der Version 1.0 werden eingefroren und die neue Version 1.1 wird zur aktuellen Version. Für jede neue Version, die Sie erstellen, wird die Nebenversionsnummer um eins erhöht (z. B. von 1.0 auf 1.1 und dann auf 1.2).
+1. Wählen Sie **Modell für maschinelles Lernen** > **Leistung** aus. Leistungsstatistikdaten zur aktuellen Version (als 'Version 1.0' bezeichnet) werden angezeigt.
+1. Um einen Snapshot der aktuellen Version zu erstellen, klicken Sie auf **Modell für maschinelles Lernen** > **Versionen**. Klicken Sie dann auf **Snapshot erstellen**. Die Ressourcen der Version 1.0 werden eingefroren und die neue Version 1.1 wird zur aktuellen Version. Für jede neue Version, die Sie erstellen, wird die Nebenversionsnummer um eins erhöht (z. B. von 1.0 auf 1.1 und dann auf 1.2).
 1. Überarbeiten Sie die Arbeitsbereichsressourcen nach Bedarf, und führen Sie ein erneutes Trainieren und Auswerten des Modells durch.
 1. Wenn Sie mit der Leistung des Modells zufrieden sind und die neue Version speichern möchten, bevor Sie weitere Änderungen vornehmen, erstellen Sie erneut eine Version. Fahren Sie mit dem Überarbeiten der Ressourcen und dem Trainieren des Modells nach Bedarf fort und erstellen Sie für jede Iteration, die Sie aufbewahren möchten, eine neue Version.
 1. Wenn die Leistung des überarbeiteten Modells nicht Ihren Erwartungen entspricht, können Sie eine vorherige Version wiederherstellen und anschließend weitere Tests vornehmen.
 
-    1. Öffnen Sie die Registerkarte **Assets & Tools** > **Vorannotatoren** > **Wörterverzeichnisse** und laden Sie die Wörterverzeichnisse herunter, die im wiederhergestellten Modell wiederverwendet werden sollen.
-    1. Kehren Sie zur Registerkarte **Modellverwaltung** > **Versionen** > **Maschinelles Lernen** zurück und klicken Sie auf **Hochstufen** für die Version, die Sie wiederherstellen möchten. Die hochgestufte Version wird zur aktuellen Version und die Versionsnummer wird in 2.0 geändert. Beim Hochstufen einer Version wird die Hauptversionsnummer erhöht und die Nebenversionsnummer auf 0 gesetzt (z. B. von 1.1 auf 2.0).
-    1. Öffnen Sie die Registerkarte **Wörterverzeichnisse** und laden Sie die Wörterverzeichnisse hoch, die zuvor heruntergeladen wurden.
-    1. Wenn nach dem Testen der neuen Version Änderungen in der Ground Truth erforderlich sind, öffnen Sie die Registerkarte **Assets & Tools** > **Dokumente** > **Tasks** und erstellen Sie eine neue Annotationstask.
+    1. Öffnen Sie die Seite **Assets** > **Wörterverzeichnisse** und laden Sie die Wörterverzeichnisse herunter, die im wiederhergestellten Modell wiederverwendet werden sollen.
+    1. Klicken Sie auf **Modell für maschinelles Lernen** > **Versionen** und auf **Hochstufen** für die Version, die Sie wiederherstellen möchten. Die hochgestufte Version wird zur aktuellen Version und die Versionsnummer wird in 2.0 geändert. Beim Hochstufen einer Version wird die Hauptversionsnummer erhöht und die Nebenversionsnummer auf 0 gesetzt (z. B. von 1.1 auf 2.0).
+    1. Öffnen Sie die Seite **Wörterverzeichnisse** und laden Sie die Wörterverzeichnisse hoch, die zuvor heruntergeladen wurden.
+    1. Wenn nach dem Testen der neuen Version Änderungen in der Ground Truth erforderlich sind, öffnen Sie die Seite **Modell für maschinelles Lernen** > **Annotationstasks** und erstellen Sie eine neue Annotationstask.
 
 ## Typsystem ändern, ohne von Annotatorbenutzern erstellte Annotationen zu verlieren
 {: #wks_projtypesysmod}
@@ -72,16 +74,18 @@ So können Sie Versionen der Modelle für maschinelles Lernen erstellen und wied
 Beim Trainieren eines Modells machen die Leistungsstatistiken möglicherweise Änderungen erforderlich. Im Allgemeinen soll das Typsystem der Realität möglichst nahe kommen, bevor umfangreiche Annotationstasks gestartet werden. Wenn Sie das Typsystem ändern, nachdem die Annotatorbenutzer mit ihrer Arbeit begonnen haben, müssen die Annotatorbenutzer die bereits annotierten Dokumente erneut bearbeiten. Die Annotatorbenutzer müssen beurteilen, ob die Änderungen des Typsystems anwendbar sind.
 
 ### Informationen zu diesem Vorgang
+{: #wks_projtypesysmod_about}
 
 Dieser Prozess gibt das aktuelle Typsystem, die Tastenkombinationen für den Ground Truth-Editor und die Farbeinstellungen an alle Dokumentgruppen in einer Task weiter.
 
 ### Vorgehensweise
+{: #wks_projtypesysmod_procedure}
 
 So ändern Sie das Typsystem, ohne die bisherigen Arbeitsergebnisse der Annotatorbenutzer zu verlieren:
 
 1. Ändern Sie das Typsystem, z. B. indem Sie Entitätstypen oder Beziehungstypen hinzufügen oder entfernen.
 1. Entscheiden Sie, ob die Änderungen in bestehende Tasks der Annotatorbenutzer übernommen werden sollen.
-1. Öffnen Sie auf der Registerkarte **Assets & Tools** > **Dokumente** > **Tasks** jede Task, die Sie aktualisieren möchten, und klicken Sie auf **Aktualisiertes Typsystem anwenden**.
+1. Öffnen Sie auf jeder Seite **Modell für maschinelles Lernen** > **Annotationstasks** jede Task, die Sie aktualisieren möchten, und klicken Sie auf **Aktualisiertes Typsystem anwenden**.
 
     Wenn Sie Entitäts- oder Beziehungstypen aus dem Typsystem entfernt haben, werden alle Vorkommen der betreffenden Typen in den Dokumenten grau dargestellt. Diese ungültigen Typen werden vom Modell für maschinelles Lernen ignoriert. Sie können jedoch weiterhin Dokumentgruppen einreichen und genehmigen.
 
@@ -91,6 +95,7 @@ So ändern Sie das Typsystem, ohne die bisherigen Arbeitsergebnisse der Annotato
     > **Hinweis:** Wenn die Task abgeschlossene Dokumente enthält, können diese von den Annotatorbenutzern erst bearbeitet werden, um Typsystemänderungen zu beurteilen, nachdem sie wieder in einen bearbeitbaren Status versetzt wurden. Zu diesem Zweck müssen die Annotatorbenutzer die betreffenden Dokumentgruppen einreichen, damit sie von Ihnen abgelehnt werden können.
 
 **Zugehörige Konzepte**:
+{: #wks_projtypesysmod_related}
 
 [Typsysteme](/docs/services/watson-knowledge-studio/typesystem.html#wks_typesystem)
 
@@ -116,10 +121,12 @@ Die Dokumente, die Sie zum System hinzufügen, müssen beim Erstellen eines Mode
 Das Ziel von {{site.data.keyword.knowledgestudioshort}} besteht darin, die effiziente Zusammenarbeit großer Teams bei der Erstellung von Modellen zu unterstützen. Das Produkt setzt voraus, dass Modelle von einem Team erstellt werden, zu dem eine Gruppe von Annotatorbenutzern und eine separate Person oder Gruppe gehören, die das Modell zusammenstellen, testen und optimieren. Aufgrund dieser Annahme ist die Anwendung so konzipiert, dass proportional bemessene Dokumentgruppierungen aus einer einzelnen Dokumentgruppe per Push-Operation an die Test-, Trainings- und Blinddatensets übertragen werden. Wenn Ihr Team jedoch nicht entsprechend aufgeteilt ist (d. h. die gleichen Personen arbeiten als Annotatorbenutzer und überprüfen die Testergebnisse des Modells im Detail), müssen Sie gegebenenfalls die Zuordnung der Dokumente in diesen Gruppen so anpassen, dass die Dokumente entsprechend getrennt werden.
 
 ### Wozu wird ein Blinddatenset benötigt?
+{: #wks_mamanagedata_why}
 
 Da Sie Testdaten verwenden, um die Genauigkeit des Modells im Detail zu bewerten, lernen Sie die Dokumente und ihre Beschaffenheit immer besser kennen. Beispielsweise erkennen Sie deutlich, welche Entitätstypen, Beziehungstypen und Texttypen in den Dokumenten vom Modell für maschinelles Lernen am besten erkannt werden und welche nicht. Dieses Wissen ist wichtig und hilft Ihnen, die richtigen Verbesserungen vorzunehmen, um das Typsystem zu optimieren, mit Trainingsdaten die Lücken zu füllen, Wörterverzeichnisse hinzuzufügen usw. Da die Testdokumente mehrfach (iterativ) verwendet werden, um das Modell zu verbessern, haben sie indirekte Auswirkungen auf das Trainieren des Modells. Aus diesem Grund ist ein blindes (unbekanntes) Datenset von großer Bedeutung.
 
 ### Wie kann ich steuern, welche Dokumente einer Gruppe zugeordnet werden?
+{: #wks_mamanagedata_how}
 
 Beim Erstellen eines Modells für maschinelles Lernen müssen Sie angeben, welcher Anteil der Dokumente aus der Gruppe den Trainings-, Test- und Blinddatensets zugeordnet werden sollen. {{site.data.keyword.knowledgestudioshort}} wendet automatisch das Verhältnis 70:23:7 auf die Dokumentgruppen an, die Sie zum Erstellen eines Modells für maschinelles Lernen verwenden. Sie können dieses Verhältnis ändern.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-26"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -27,12 +27,14 @@ Depois de definir regras, é possível criar um modelo baseado em regra.
 {: shortdesc}
 
 ## Procedimento
+{: #wks_rule_train_procedure}
 
 Para criar um modelo baseado em regra. Conclua as etapas a seguir:
 
 1. Efetue login como um administrador ou gerente de projeto do {{site.data.keyword.knowledgestudioshort}} e selecione a sua área de trabalho.
-1. Selecione a guia **Gerenciamento de modelo** > **Versões** > **Baseado em regra**.
-1. Mapeie os tipos de entidade de seu sistema de tipos para uma ou mais classes que você usou para definir regras.
+1. Selecione a guia **Modelo baseado em regra** > **Versões** > **Modelo baseado em regra**.
+2. Clique em  ** Mapear Tipos de Entidade e Classes **.
+3. Mapeie os tipos de entidade de seu sistema de tipos para uma ou mais classes que você usou para definir regras.
 
   Após os tipos de entidade serem mapeados, é possível [implementar o modelo baseado em regra](/docs/services/watson-knowledge-studio/rule-annotator-model-use.html) ou usá-lo para [pré-anotar documentos](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannotrule) no processo de criação de um modelo de aprendizado de máquina.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -43,7 +43,7 @@ Veja [Criando um modelo de aprendizado de máquina](/docs/services/watson-knowle
 
 ## Construir um modelo baseado em regra
 
-O {{site.data.keyword.knowledgestudioshort}} fornece um editor de Regras que simplifica o processo de localizar e capturar padrões comuns em seus documentos como regras. É possível então criar um modelo que reconhece os padrões de regra e implementá-lo para uso em outros serviços.
+O {{site.data.keyword.knowledgestudioshort}} fornece um editor de regras que simplifica o processo de descoberta e captura de padrões comuns em seus documentos como regras. É possível então criar um modelo que reconhece os padrões de regra e implementá-lo para uso em outros serviços.
 
 Veja [Criando um modelo baseado em regra](/docs/services/watson-knowledge-studio/rule-annotator.html) para obter mais detalhes.
 

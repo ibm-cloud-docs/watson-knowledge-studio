@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-04-04"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-本文档适用于 {{site.data.keyword.cloud}} 上的 {{site.data.keyword.knowledgestudiofull}}。要查看 {{site.data.keyword.IBM_notm}} Marketplace 上先前版本的 {{site.data.keyword.knowledgestudioshort}} 文档，请[单击此链接 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/docs/services/knowledge-studio/index.html){: new_window}。
+本文档适用于 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}。要查看 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 先前版本的文档，请[单击此链接 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/docs/services/knowledge-studio/index.html){: new_window}。
 {: tip}
 
 # 关于
@@ -35,7 +35,7 @@ lastupdated: "2018-04-04"
 ![机器学习模型构建过程概览图](images/wks-ovw-anno.svg "显示可以在新文档中查找实体和关系的机器学习模型的构建过程。") 图 1. 机器学习模型构建过程概览图
 
 1. 团队根据一组特定于领域的源文档来创建类型系统，以用于为将使用该模型的应用程序的相关信息定义实体类型和关系类型。
-1. 包含两个或更多人类注释者的组对一小组源文档进行注释，以标注表示实体类型的词，标识其中文本识别到实体提及项之间关系的关系类型，以及定义指代来识别指同一事物（即，同一实体）的不同提及项。解决了注释中的任何不一致情况后，会构建一组最佳注释的文档，这些文档即构成参考标准。
+1. 包含两个或更多人工注释者的组对一小组源文档进行注释，以标注表示实体类型的词，标识其中文本识别到实体提及项之间关系的关系类型，以及定义指代来识别指同一事物（即，同一实体）的不同提及项。解决了注释中的任何不一致情况后，会构建一组最佳注释的文档，这些文档即构成参考标准。
 1. {{site.data.keyword.knowledgestudioshort}} 使用参考标准来培训模型。
 1. 已培训的模型用于在从未见过的新文档中查找实体、关系和指代。
 
@@ -54,7 +54,7 @@ lastupdated: "2018-04-04"
 
 使用 {{site.data.keyword.knowledgestudioshort}} 执行以下任务： 
 
-- 使用 {{site.data.keyword.nlushort}} 服务在文档中自动查找实体并对实体进行注释，从而引导注释。人类注释者开始对文档进行注释时，可以看到已由该服务做出的注释，并且可以复查这些注释并在其中添加内容。有关详细信息，请参阅[使用 {{site.data.keyword.nlushort}} 对文档进行预注释](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannotnlu)。
+- 使用 {{site.data.keyword.nlushort}} 服务在文档中自动查找实体并对实体进行注释，从而引导注释。人工注释者开始对文档进行注释时，可以看到已由该服务做出的注释，并且可以复查这些注释并在其中添加内容。有关详细信息，请参阅[使用 {{site.data.keyword.nlushort}} 对文档进行预注释](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannotnlu)。
 - 上传 [UIMA CAS XMI 格式](/docs/services/watson-knowledge-studio/preannotation.html#wks_uimaweximport)的已分析文档。例如，可以上传从 {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer 内容分析集合或 [{{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer Content Analytics Studio](/docs/services/watson-knowledge-studio/preannotation.html#wks_uimawexstudio) 中导出的 UIMA CAS XMI 文件。
 - 部署[机器学习](/docs/services/watson-knowledge-studio/publish-ml.html#wks_madiscovery)或[基于规则的](/docs/services/watson-knowledge-studio/rule-annotator-model-use.html#wks_rule_discovery)模型，以用于 {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}} 服务。
 - 部署[机器学习](/docs/services/watson-knowledge-studio/publish-ml.html#wks_manlu)或[基于规则的](/docs/services/watson-knowledge-studio/rule-annotator-model-use.html#wks_rule_nlu)模型，以用于 {{site.data.keyword.nlushort}} 服务。

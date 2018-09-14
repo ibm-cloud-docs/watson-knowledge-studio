@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-30"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -26,7 +26,7 @@ Cette documentation concerne {{site.data.keyword.knowledgestudiofull}} on {{site
 Pour passer à un niveau de service supérieur, consultez la [page {{site.data.keyword.knowledgestudioshort}} du catalogue {{site.data.keyword.cloud_notm}}![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/catalog/services/knowledge-studio){: new_window}.
 {: shortdesc}
 
-Si vous venez du plan gratuit {{site.data.keyword.knowledgestudioshort}}, vous devrez faire migrer manuellement vos espaces de travail en suivant la procédure de [sauvegarde et restauration](/docs/services/watson-knowledge-studio/backup-restore.html).
+Si vous passez du plan Lite de {{site.data.keyword.knowledgestudioshort}} au plan Standard, {{site.data.keyword.knowledgestudioshort}} utilise la migration en place. Vous n'avez pas besoin d'effectuer de migration manuelle.
 
 **Remarque **: Vous ne pouvez pas repasser à un plan de niveau inférieur sur {{site.data.keyword.cloud_notm}}. Vous pouvez cependant gérer le nombre d'utilisateurs, le stockage, la facturation et l'utilisation.
   - Pour des informations sur la désactivation de comptes d'utilisateur dans {{site.data.keyword.knowledgestudioshort}}, consultez [Constituer une équipe](/docs/services/watson-knowledge-studio/team.html#deactivating-user-accounts).

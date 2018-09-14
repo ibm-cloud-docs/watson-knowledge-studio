@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-08-29"
 
 ---
 
@@ -32,17 +32,19 @@ En {{site.data.keyword.knowledgestudiofull}}, la creación del modelo de aprendi
 Al crear un modelo de aprendizaje automático, seleccione los conjuntos de documentos que desee utilizar para entrenar el modelo y especifique el porcentaje de documentos que se utilizarán como datos de entrenamiento, datos de prueba y datos ciegos.
 
 ### Acerca de esta tarea
+{: #wks_madocsets_about}
 
 Al explorar las métricas de rendimiento, puede identificar maneras de mejorar la exactitud del modelo.
 
-> **Restricción:** Solo se pueden entrenar tres anotadores de aprendizaje automático a la vez por instancia de {{site.data.keyword.knowledgestudioshort}}. Si la instancia contiene varios espacios de trabajo y el número de anotadores de aprendizaje automático que se están entrenando en otros espacios de trabajo ya lleva 3, su solicitud para entrenar el modelo de aprendizaje automático en el espacio de trabajo se pondrá en cola hasta que haya finalizado el resto de los procesos de entrenamiento.
+> **Restricción:** Solo se pueden entrenar tres modelos de aprendizaje automático a la vez por instancia de {{site.data.keyword.knowledgestudioshort}}. Si la instancia contiene varios espacios de trabajo y el número de modelos de aprendizaje automático que se están entrenando en otros espacios de trabajo ya lleva 3, su solicitud para entrenar el modelo de aprendizaje automático en el espacio de trabajo se pondrá en cola hasta que haya finalizado el resto de los procesos de entrenamiento.
 
 ### Procedimiento
+{: #wks_madocsets_procedure}
 
 Para crear un modelo de aprendizaje automático:
 
 1. Inicie sesión como administrador de {{site.data.keyword.knowledgestudioshort}} y seleccione el espacio de trabajo.
-1. Seleccione **Gestión de modelos** > **Rendimiento**.
+1. Seleccione **Modelo de aprendizaje automático** > **Rendimiento**.
 1. Verifique que todos los conjuntos de documentos hayan sido aprobados y que todos los conflictos de anotación hayan sido resueltos mediante adjudicación. Solo se pueden utilizar para entrenar el modelo los documentos que se han convertido en datos de campo mediante adjudicación o aprobación.
 1. Pulse **Entrenar y evaluar**.
 1. Opcional: Para especificar cómo desea asignar documentos desde sus conjuntos de documentos que utilizarán los conjuntos de entrenamiento a nivel de sistema, conjuntos de pruebas o ciegos, pulse **Editar valores**.
@@ -65,21 +67,36 @@ Para crear un modelo de aprendizaje automático:
 
 1. Tras crear el modelo, seleccione una de las acciones siguientes:
 
-    <table border="1" frame="hsides" rules="rows" cellpadding="4" cellspacing="0" summary="Cada fila de esta tabla describe una opción para una elección." class="simpletable choicetable choicetableborder">
-      <thead><tr><th id="d33883e137-option" valign="bottom" align="left" class="ncol thleft thbot">Opción</th>
-          <th id="d33883e137-desc" valign="bottom" align="left" class="ncol thleft thbot">Descripción</th></tr></thead>
-      <tbody><tr class="strow chrow"><td valign="top" headers="d33883e137-option" id="d33883e139" class="stentry choption ncol"><p class="p wrapper"><strong>Registro</strong></p></td>
-          <td valign="top" headers="d33883e137-desc d33883e139" class="stentry chdesc ncol"><p class="p wrapper">Visualice el archivo de registro para ver si se ha producido algún problema.</p></td>
-        </tr>
-        <tr class="strow chrow"><td valign="top" headers="d33883e137-option" id="d33883e144" class="stentry choption ncol"><p class="p wrapper"><strong>Detalles</strong></p></td>
-          <td valign="top" headers="d33883e137-desc d33883e144" class="stentry chdesc ncol"><p class="p wrapper">Visualice las estadísticas de rendimiento de las anotaciones, cambie los conjuntos de documentos que desee utilizar
-              para entrenar y probar el modelo, y cree versiones de instantáneas de los artefactos del modelo.</p></td>
-        </tr>
-        <tr class="strow chrow"><td valign="top" headers="d33883e137-option" id="d33883e149" class="stentry choption ncol"><p class="p wrapper"><strong>Exportar</strong></p></td>
-          <td valign="top" headers="d33883e137-desc d33883e149" class="stentry chdesc ncol"><p class="p wrapper">Exporte un archivo <code>ZIP</code> al sistema local que contenga los componentes
-              necesarios para que el modelo se ejecute en un entorno de ejecución de aprendizaje automático.</p></td>
-        </tr>
-      </tbody>
+    <table summary="Cada fila de esta tabla describe una opción para una elección.">
+      <caption>Tabla 1. Opciones de documento</caption>
+      <tr>
+        <th style="vertical-align:bottom; text-align"left" id="d33883e137-option">Option</th>
+        <th style="vertical-align:bottom; text-align"left" id="d33883e137-desc">Descripción</th>
+      </tr>
+      <tr>
+        <td style="vertical-align:top; text-align"left" headers="d33883e137-option" id="d33883e139">
+          <p><strong>Log</strong></p>
+        </td>
+        <td style="vertical-align:top; text-align"left" headers="d33883e137-desc d33883e139">
+          <p>Visualice el archivo de registro para ver si se ha producido algún problema.</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="vertical-align:top; text-align"left" headers="d33883e137-option" id="d33883e144">
+          <p><strong>Details</strong></p>
+        </td>
+        <td style="vertical-align:top; text-align"left" headers="d33883e137-desc d33883e144">
+          <p>Visualice las estadísticas de rendimiento de las anotaciones, cambie los conjuntos de documentos que desee utilizar para entrenar y probar el modelo, y cree versiones de instantáneas de los artefactos del modelo.</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="vertical-align:top; text-align"left" headers="d33883e137-option" id="d33883e149">
+          <p><strong>Export</strong></p>
+        </td>
+        <td style="vertical-align:top; text-align"left" headers="d33883e137-desc d33883e149">
+          <p>Si tiene un plan estándar o un plan premium, puede exportar un archivo <code>ZIP</code> al sistema local que contenga los componentes necesarios para que el modelo se ejecute en un entorno de ejecución de aprendizaje automático, como {{site.data.keyword.watson}} Explorer.</p>
+        </td>
+      </tr>
     </table>
 
 ## Evaluación de anotaciones añadidas por el modelo
@@ -88,10 +105,11 @@ Para crear un modelo de aprendizaje automático:
 Puede comparar la vista de datos de campo para anotaciones añadidas por anotadores humanos a las anotaciones añadidas por el modelo.
 
 ### Procedimiento
+{: #wks_matest_procedure}
 
 Para evaluar las anotaciones añadidas por el modelo:
 
-1. Seleccione **Gestión de modelos** > **Rendimiento** > **Entrenar y evaluar**. Se mostrará la página Conjuntos de entrenamiento/prueba/ciegos.
+1. Seleccione **Modelo de aprendizaje automático** > **Rendimiento** > **Entrenar y evaluar**. Se mostrará la página Conjuntos de entrenamiento/prueba/ciegos.
 1. Pulse **Ver datos de campo** para el conjunto de entrenamiento o el conjunto de pruebas para ver las anotaciones añadidas mediante preanotación y mediante anotadores humanos. Se abrirá el editor de datos de campo. Pulse para abrir documentos individuales y vea cómo se han anotado las menciones, las relaciones y las menciones correferenciadas.
 1. En la página **Rendimiento**, pulse **Ver resultados de descodificación** para ver las anotaciones que el modelo de aprendizaje automático ha añadido a los documentos del conjunto de pruebas. Este botón solo está disponible después de evaluar el modelo. Al ver los resultados, puede ver cómo ha etiquetado el modelo de aprendizaje automático las menciones, las relaciones y las menciones correferenciadas en los datos de prueba.
 1. Si desea cambiar cómo se dividen los documentos entre conjuntos de datos de entrenamiento, prueba y ciegos, pulse **Rendimiento** > **Entrenar y evaluar** > **Editar valores**. Por ejemplo, si los resultados iniciales parecen aceptables, es posible que desee aumentar el número de documentos en el conjunto de pruebas para probar más los resultados del modelo de aprendizaje automático. Puede cambiar la proporción para cómo se dividen automáticamente los documentos para fines distintos, o puede seleccionar conjuntos de documentos específicos para utilizar como datos de entrenamiento, datos de prueba y datos ciegos.

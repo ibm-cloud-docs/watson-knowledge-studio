@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -59,9 +59,9 @@ Para criar uma área de trabalho, conclua as etapas a seguir:
 
 1. Opcional: se você deseja incluir gerenciadores de projeto na área de trabalho, expanda a seção **Opções avançadas** e selecione na lista os nomes das pessoas que você deseja incluir como gerentes de projeto. O administrador pode incluir ou remover gerentes de projeto posteriormente, editando a área de trabalho.
 
-    Somente os nomes de pessoas que você designou à função de gerente de projeto na página Gerenciamento de conta do usuário para a instância são exibidos. Veja [Montando a equipe](/docs/services/watson-knowledge-studio/team.html) para obter mais informações sobre a inclusão de usuários.
+    Somente os nomes de pessoas que você designou à função de gerente de projeto na página Gerenciamento de conta do usuário para a instância são exibidos. Veja [Montando uma equipe](/docs/services/watson-knowledge-studio/team.html) para obter mais informações sobre como incluir usuários.
 
-    > **Nota:** se você tiver uma assinatura de plano grátis, ignore esta etapa. Não é possível incluir outros usuários, então não é possível designar ninguém à função de gerente de projeto. Você não precisa de um gerente de projeto separado. Como um administrador, é possível executar todas as tarefas que um gerente de projeto normalmente executaria.
+    > **Nota:** se você tiver uma assinatura do plano Lite, ignore esta etapa. Não é possível incluir outros usuários, então não é possível designar ninguém à função de gerente de projeto. Você não precisa de um gerente de projeto separado. Como um administrador, é possível executar todas as tarefas que um gerente de projeto normalmente executaria.
 
 1. Clique em **Criar**.
 
@@ -77,7 +77,7 @@ Para mudar a descrição da área de trabalho ou o nome da área de trabalho ou 
 
 **Referência relacionada**:
 
-[Suporte a diversos idiomas](/docs/services/watson-knowledge-studio/language-support.html)
+[Suporte ao idioma](/docs/services/watson-knowledge-studio/language-support.html)
 
 ## Tokenizers
 {: #wks_tokenizer}
@@ -111,199 +111,384 @@ Para cada etapa do processo de desenvolvimento de modelo, esta tabela resume as 
 
 ### Todos os tipos de modelo
 
-<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d25459e252" class="stentry thleft thbot">Tarefa</th>
-<th valign="bottom" align="left" id="d25459e254" class="stentry thleft thbot">Uso típico</th>
-<th valign="bottom" align="left" id="d25459e256" class="stentry thleft thbot">Formatos de entrada suportados</th>
-<th valign="bottom" align="left" id="d25459e258" class="stentry thleft thbot">Formatos de saída suportados</th>
-<th valign="bottom" align="left" id="d25459e260" class="stentry thleft thbot">Limites e requisitos</th>
-</tr>
-<tr class="strow"><td valign="top" headers="d25459e252" class="stentry"><p class="p wrapper">Gerenciamento de sistema de tipos</p></td>
-<td valign="top" headers="d25459e254" class="stentry"><p class="p wrapper">Crie um sistema de tipos ou faça upload e modifique um sistema de tipos existente.</p><p class="p">Defina tipos de entidade
+<table summary="Esta tabela fornece um resumo de entrada, saída e limitações para todos os tipos de modelo.">
+  <caption>Tabela 1. Todos os tipos de modelo</caption>
+  <tr>
+    <th style="vertical-align:bottom; text-align:left" id="d25459e252">
+      Tarefa
+    </th>
+    <th style="vertical-align:bottom; text-align:left" id="d25459e254">
+      Uso típico
+    </th>
+    <th style="vertical-align:bottom; text-align:left" id="d25459e256">
+      Formatos de entrada suportados
+    </th>
+    <th style="vertical-align:bottom; text-align:left" id="d25459e258">
+      Formatos de saída suportados
+    </th>
+    <th style="vertical-align:bottom; text-align:left" id="d25459e260">
+      Limites e requisitos
+    </th>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d25459e252">
+      <p>Gerenciamento de sistema de tipos</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e254">
+      <p>Crie um sistema de tipos ou faça upload e modifique um sistema de tipos existente.</p>
+      <p>Defina tipos de entidade
 e tipos de relação para seu domínio.</p>
-<p class="p">Não é possível ver uma visualização do sistema
+      <p>Não é possível ver uma visualização do sistema
 de tipos.</p>
-</td>
-<td valign="top" headers="d25459e256" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">Arquivo JSON que você transferiu por download de uma
-área de trabalho
-do Watson Knowledge
-Studio</p></li>
-<li class="li"><p class="p wrapper">Arquivo ZIP que você transferiu por download do Human Annotation Tool (HAT)</p></li>
-</ul>
-</td>
-<td valign="top" headers="d25459e258" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">JSON</p></li>
-</ul>
-</td>
-<td valign="top" headers="d25459e260" class="stentry"><p class="p wrapper">Para evitar a sobrecarga visual para anotação humana, defina não mais que 50 tipos de entidade e 50
-tipos de relação.</p><p class="p">Limitação de tamanho do arquivo para fazer upload de um sistema de tipos: 20 MB</p>
-</td>
-</tr>
-<tr class="strow"><td valign="top" headers="d25459e252" class="stentry"><p class="p wrapper">Gerenciamento de dicionário</p></td>
-<td valign="top" headers="d25459e254" class="stentry"><p class="p wrapper">Faça upload de um arquivo de dicionário CSV no modo somente leitura ou um ZIP de dicionários que você transferiu por download
-de outra área de trabalho.</p><p class="p">Crie um novo dicionário e, em seguida, faça upload de um arquivo CSV de entradas de termos ou inclua
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e256">
+      <ul>
+        <li>
+          <p>Arquivo JSON transferido por download de uma área de trabalho do {{site.data.keyword.knowledgestudioshort}}</p>
+        </li>
+        <li>
+          <p>Arquivo ZIP que você transferiu por download do Human Annotation Tool (HAT)</p>
+        </li>
+      </ul>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e258">
+      <ul>
+        <li>
+          <p>JSON</p>
+        </li>
+      </ul>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e260">
+      <p>Para evitar a sobrecarga visual para anotação humana, defina não mais que 50 tipos de entidade e 50
+tipos de relação.</p>
+      <p>Limitação de tamanho do arquivo para fazer upload de um sistema de tipos: 20 MB</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d25459e252">
+      <p>Gerenciamento de dicionário</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e254">
+      <p>Faça upload de um arquivo de dicionário CSV no modo somente leitura ou um ZIP de dicionários que você transferiu por download
+de outra área de trabalho.</p>
+      <p>Crie um novo dicionário e, em seguida, faça upload de um arquivo CSV de entradas de termos ou inclua
 entradas de termos nele.</p>
-</td>
-<td valign="top" headers="d25459e256" class="stentry"><p class="p wrapper">Arquivo de dicionário:</p><ul class="ul bullets"><li class="li"><p class="p wrapper">Arquivo CSV em formato UTF-8</p></li>
-<li class="li"><p class="p wrapper">ZIP de dicionários transferidos por download de outra área de trabalho</p></li>
-</ul><p class="p wrapper">
-Arquivo de entradas de termos:</p><ul class="ul bullets"><li class="li"><p class="p wrapper">Arquivo CSV em formato UTF-8</p></li>
-</ul>
-</td>
-<td valign="top" headers="d25459e258" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">Arquivo CSV em formato UTF-8</p></li>
-<li class="li"><p class="p wrapper">ZIP de dicionários para uso em outra área de trabalho</p></li>
-</ul>
-</td>
-<td valign="top" headers="d25459e260" class="stentry"><p class="p wrapper">Limitações de tamanho do arquivo:</p><ul class="ul bullets"><li class="li"><p class="p wrapper">1 MB por arquivo CSV de entradas de termos</p></li>
-<li class="li"><p class="p wrapper">16 MB por arquivo CSV de dicionário somente leitura</p></li>
-<li class="li"><p class="p wrapper">15.000 entradas por dicionário, exceto um dicionário somente leitura</p></li>
-<li class="li"><p class="p wrapper">64 dicionários por área de trabalho</p></li>
-</ul>
-</td>
-</tr>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e256">
+      <p>Arquivo de dicionário:</p>
+      <ul>
+        <li>
+          <p>Arquivo CSV em formato UTF-8</p>
+        </li>
+        <li>
+          <p>ZIP de dicionários transferidos por download de outra área de trabalho</p>
+        </li>
+      </ul>
+      <p>Arquivo de entradas de termos:</p>
+      <ul>
+        <li>
+          <p>Arquivo CSV em formato UTF-8</p>
+        </li>
+      </ul>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e258">
+      <ul>
+        <li>
+          <p>Arquivo CSV em formato UTF-8</p>
+        </li>
+        <li>
+          <p>ZIP de dicionários para uso em outra área de trabalho</p>
+        </li>
+      </ul>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e260">
+      <p>Limitações de tamanho do arquivo:</p>
+      <ul>
+        <li>
+          <p>1 MB por arquivo CSV de entradas de termos</p>
+        </li>
+        <li>
+          <p>16 MB por arquivo CSV de dicionário somente leitura</p>
+        </li>
+        <li>
+          <p>15.000 entradas por dicionário, exceto um dicionário somente leitura</p>
+        </li>
+        <li>
+          <p>64 dicionários por área de trabalho</p>
+        </li>
+      </ul>
+    </td>
+  </tr>
 </table>
 
  {: #wks_formats__datasimpletable_xxj_qr5_2y}
 
 ### Modelo de aprendizado de máquina
 
-<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d25459e331" class="stentry thleft thbot">Tarefa</th>
-<th valign="bottom" align="left" id="d25459e333" class="stentry thleft thbot">Uso típico</th>
-<th valign="bottom" align="left" id="d25459e335" class="stentry thleft thbot">Formatos de entrada suportados</th>
-<th valign="bottom" align="left" id="d25459e337" class="stentry thleft thbot">Formatos de saída suportados</th>
-<th valign="bottom" align="left" id="d25459e339" class="stentry thleft thbot">Limites e requisitos</th>
-</tr>
-<tr class="strow"><td valign="top" headers="d25459e331" class="stentry"><p class="p wrapper">Gerenciamento de documentos </p></td>
-<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Faça upload de um pequeno subconjunto, representante de documentos </p><p class="p">Faça upload de documentos que contêm
+<table summary="Esta tabela fornece um resumo de entrada, saída e limitações para o modelo de aprendizado de máquina.">
+  <caption>Tabela 2. Modelo de aprendizado de</caption>
+  <tr>
+    <th style="vertical-align:botton; text-align:left" id="d25459e331">Tarefa</th>
+    <th style="vertical-align:botton; text-align:left" id="d25459e333">Uso típico</th>
+    <th style="vertical-align:botton; text-align:left" id="d25459e335">Formatos de entrada suportados</th>
+    <th style="vertical-align:botton; text-align:left" id="d25459e337">Formatos de saída suportados</th>
+    <th style="vertical-align:botton; text-align:left" id="d25459e339">Limites e requisitos</th>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d25459e331">
+      <p>Gerenciamento de documentos </p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e333">
+      <p>Faça upload de um pequeno subconjunto, representante de documentos</p>
+      <p>Faça upload de documentos que contêm
 anotações incluídas anteriormente por um anotador humano, um modelo de aprendizado de máquina ou um
 mecanismo de análise
 UIMA</p>
-<p class="p">Não é possível
-alimentar o corpus inteiro do
-IBM Watson Explorer
-para calcular documentos de valor alto para
-anotação. </p>
-</td>
-<td valign="top" headers="d25459e335" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">Arquivo CSV em formato UTF-8</p></li>
-<li class="li"><p class="p wrapper">Arquivo DOCXML no formato UTF-8</p></li>
-<li class="li"><p class="p wrapper">Texto no formato UTF-8</p></li>
-<li class="li"><p class="p wrapper">Arquivo ZIP que contém documentos transferidos por download de outro corpus</p></li>
-<li class="li"><p class="p wrapper">Arquivo ZIP que contém documentos em
+      <p>Não é possível alimentar o corpus inteiro do {{site.data.keyword.ibmwatson_notm}} Explorer para calcular documentos de valor alto para anotação.</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e335">
+      <ul>
+        <li>
+          <p>Arquivo CSV em formato UTF-8</p>
+        </li>
+        <li>
+          <p>Texto no formato UTF-8</p>
+        </li>
+        <li>
+          <p>Arquivo ZIP que contém documentos transferidos por download de outro corpus</p>
+        </li>
+        <li>
+          <p>Arquivo ZIP que contém documentos em
 formato
-XMI do UIMA CAS</p></li>
-</ul>
-</td>
-<td valign="top" headers="d25459e337" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">Archive ZIP de documentos</p></li>
-</ul>
-</td>
-<td valign="top" headers="d25459e339" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">40.000 caracteres por documento</p></li>
-<li class="li"><p class="p wrapper">10.000 documentos por área de trabalho</p></li>
-<li class="li"><p class="p wrapper">1.000 conjuntos de documentos (incluindo conjuntos de anotações) por área de trabalho</p></li>
-</ul>
-</td>
-</tr>
-<tr class="strow"><td valign="top" headers="d25459e331" class="stentry"><p class="p wrapper">Pré-anotação</p></td>
-<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Use um dicionário ou
-pré-anotador do {{site.data.keyword.nlushort}}
+XMI do UIMA CAS</p>
+        </li>
+      </ul>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e337">
+      <ul>
+        <li>
+          <p>Archive ZIP de documentos</p>
+        </li>
+      </ul>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e339">
+      <ul>
+        <li>
+          <p>40.000 caracteres por documento</p>
+        </li>
+        <li>
+          <p>10.000 documentos por área de trabalho</p>
+        </li>
+        <li>
+          <p>1.000 conjuntos de documentos (incluindo conjuntos de anotações) por área de trabalho</p>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d25459e331">
+      <p>Pré-anotação</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e333">
+       <p>Use um dicionário ou
+pré-anotador do {{site.data.keyword.nlufull}}
 para fornecer
-um ponto de início para anotação humana.</p><p class="p">Não é possível anotar novamente um corpus do
-IBM Watson Discovery Advisor
-ou
-IBM Watson Explorer.</p>
-</td>
-<td valign="top" headers="d25459e335" class="stentry"><p class="p wrapper">Documentos brutos. </p><p class="p wrapper"><b>Nota:</b> não pré-anote os documentos que um anotador humano já
+um ponto de início para anotação humana.</p>
+       <p>Não é possível anotar novamente um corpus do {{site.data.keyword.ibmwatson_notm}} Explorer.</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e335">
+      <p>Documentos brutos.</p>
+      <p><b>Nota:</b> não pré-anote os documentos que um anotador humano já
 anotou ou você perderá o trabalho feito pelo anotador humano.</p>
-</td>
-<td valign="top" headers="d25459e337" class="stentry"><p class="p wrapper">Documentos parcialmente anotados</p></td>
-<td valign="top" headers="d25459e339" class="stentry"><p class="p wrapper">Nenhuma</p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d25459e331" class="stentry"><p class="p wrapper">Anotação de documento</p></td>
-<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Gerenciar anotação humana</p><p class="p">Anote as entidades, as relações e cadeias de correferência para criar
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e337">
+      <p>Documentos parcialmente anotados</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e339">
+      <p>Nenhuma</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d25459e331">
+      <p>Anotação de documento</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e333">
+      <p>Gerenciar anotação humana</p><p>Anote as entidades, as relações e cadeias de correferência para criar
 verdade absoluta</p>
-</td>
-<td valign="top" headers="d25459e335" class="stentry"><p class="p wrapper">Tarefa de anotação</p></td>
-<td valign="top" headers="d25459e337" class="stentry"><p class="p wrapper">Verdade absoluta</p></td>
-<td valign="top" headers="d25459e339" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">256 tarefas de anotação ativas por área de trabalho</p></li>
-</ul>
-</td>
-</tr>
-<tr class="strow"><td valign="top" headers="d25459e331" class="stentry"><p class="p wrapper">Treinamento e refinamento</p></td>
-<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Treine um modelo de aprendizado de máquina supervisionado para extrair informações específicas do domínio do
-texto não estruturado.</p><p class="p">Avalie e melhore um modelo de aprendizado de máquina supervisionado.</p>
-<p class="p">Não é possível
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e335">
+      <p>Tarefa de anotação</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e337">
+      <p>Verdade absoluta</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e339">
+      <ul>
+        <li>
+          <p>256 tarefas de anotação ativas por área de trabalho</p>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d25459e331">
+      <p>Treinamento e refinamento</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e333">
+      <p>Treine um modelo de aprendizado de máquina supervisionado para extrair informações específicas do domínio do
+texto não estruturado.</p><p>Avalie e melhore um modelo de aprendizado de máquina supervisionado.</p>
+      <p>Não é possível
 criar um modelo de aprendizado de máquina semisupervisionado ou não supervisionado.</p>
-<p class="p">Não é possível
+      <p>Não é possível
 fazer engenharia de recurso extensivo.</p>
-</td>
-<td valign="top" headers="d25459e335" class="stentry"><p class="p wrapper">Não aplicável</p></td>
-<td valign="top" headers="d25459e337" class="stentry"><p class="p wrapper">Modelo de aprendizado de máquina</p></td>
-<td valign="top" headers="d25459e339" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">1 modelo de aprendizado de máquina por área de trabalho</p></li>
-<li class="li"><p class="p wrapper">10 versões de modelo por área de trabalho</p></li>
-<li class="li"><p class="p wrapper">O número máximo de áreas de trabalho é determinado por seu plano de assinatura.</p></li>
-<li class="li"><p class="p wrapper">O número máximo de ações de treinamento que é possível executar por mês é determinado por seu plano de assinatura. </p></li>
-</ul>
-</td>
-</tr>
-<tr class="strow"><td valign="top" headers="d25459e331" class="stentry"><p class="p wrapper">Publicação</p></td>
-<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Publique um modelo de aprendizado de máquina para usar para executar a extração de texto em outro
-
-Aplicativos
-do Watson. </p></td>
-<td valign="top" headers="d25459e335" class="stentry"><p class="p wrapper">Não aplicável</p></td>
-<td valign="top" headers="d25459e337" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">ID do modelo (para uso em serviços do AlchemyLanguage ou do Watson Discovery) </p></li>
-<li class="li"><p class="p wrapper">Arquivo ZIP (para uso no
-IBM Watson
-Explorer)</p></li>
-</ul>
-</td>
-<td valign="top" headers="d25459e339" class="stentry">
-  <p class="p">Para implementar em AlchemyLanguage, deve-se ter um ID válido de chave de plano avançado do AlchemyLanguage.</p>
-  <p class="p">Para implementar o serviço do Watson Discovery, deve-se saber os nomes do espaço e da instância do {{site.data.keyword.cloud_notm}} do serviço.</p>
-</td>
-</tr>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e335">
+      <p>Não aplicável</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e337">
+      <p>Modelo de aprendizado de máquina</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e339">
+      <ul>
+        <li>
+          <p>1 modelo de aprendizado de máquina por área de trabalho</p>
+        </li>
+        <li>
+          <p>10 versões de modelo por área de trabalho</p>
+        </li>
+        <li>
+          <p>O número máximo de áreas de trabalho é determinado por seu plano de assinatura.</p>
+        </li>
+        <li>
+          <p>O número máximo de ações de treinamento que é possível executar por mês é determinado por seu plano de assinatura.</p>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d25459e331">
+      <p>Publicação</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e333">
+      <p>Publique um modelo de aprendizado de máquina a ser usado para executar a extração de texto em outros aplicativos do {{site.data.keyword.watson}}.</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e335">
+      <p>Não aplicável</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e337">
+      <ul>
+        <li>
+          <p>ID de modelo (para uso no {{site.data.keyword.nlufull}} ou no {{site.data.keyword.discoveryfull}})</p>
+        </li>
+        <li>
+          <p>Arquivo ZIP (para uso no  {{site.data.keyword.ibmwatson_notm}}  Explorer)</p>
+        </li>
+      </ul>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e339">
+      <p>Para implementar em serviços {{site.data.keyword.watson}}, o espaço de serviço do {{site.data.keyword.cloud_notm}} e os nomes de instâncias devem ser conhecidos.</p>
+    </td>
+  </tr>
 </table>
 
 ### Modelo baseado em regra
 
-<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d25459e509" class="stentry thleft thbot">Tarefa</th>
-<th valign="bottom" align="left" id="d25459e511" class="stentry thleft thbot">Uso típico</th>
-<th valign="bottom" align="left" id="d25459e513" class="stentry thleft thbot">Formatos de entrada suportados</th>
-<th valign="bottom" align="left" id="d25459e515" class="stentry thleft thbot">Formatos de saída suportados</th>
-<th valign="bottom" align="left" id="d25459e517" class="stentry thleft thbot">Limites e requisitos</th>
-</tr>
-<tr class="strow"><td valign="top" headers="d25459e509" class="stentry"><p class="p wrapper">Editor de regras</p></td>
-<td valign="top" headers="d25459e511" class="stentry"><p class="p">Crie ou faça upload de documentos para o editor de Regras por meio do qual definirá classes, expressões regulares
-e regras.</p>
-</td>
-<td valign="top" headers="d25459e513" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">Texto simples (incluído no editor)</p></li>
-<li class="li"><p class="p wrapper">Arquivo CSV em formato UTF-8</p></li>
-<li class="li"><p class="p wrapper">Copiado do conjunto de documentos Todos</p></li>
-</ul>
-</td>
-<td valign="top" headers="d25459e515" class="stentry"><p class="p wrapper">Nenhuma</p></td>
-<td valign="top" headers="d25459e517" class="stentry"><ul class="ul bullets">
-<li class="li"><p class="p wrapper">1 modelo baseado em regra por área de trabalho</p></li>
-<li class="li"><p class="p wrapper">5.000 caracteres por documento</p></li>
-<li class="li"><p class="p wrapper">100 documentos por área de trabalho</p></li>
-<li class="li"><p class="p wrapper">O tamanho máximo de título do documento é 256 caracteres</p></li>
-<li class="li"><p class="p wrapper">200 regras por área de trabalho</p></li>
-<li class="li"><p class="p wrapper">400 classes por área de trabalho</p></li>
-<li class="li"><p class="p wrapper">Grupo de 100 expressões regulares por área de trabalho</p></li>
-<li class="li"><p class="p wrapper">100 entradas de expressão regular por grupo de expressões regulares</p></li>
-<li class="li"><p class="p wrapper">1.000 caracteres por entrada de expressão regular</p></li>
-<li class="li"><p class="p wrapper">5 versões de modelo baseado em regra por área de trabalho</p></li>
-</ul>
-</td>
-</tr>
-<tr class="strow"><td valign="top" headers="d25459e509" class="stentry"><p class="p wrapper">Publicação</p></td>
-<td valign="top" headers="d25459e511" class="stentry"><p class="p wrapper">Publique um modelo baseado em regra para usar para executar o reconhecimento padrão em outros
-aplicativos
-do Watson.</p></td>
-<td valign="top" headers="d25459e513" class="stentry"><p class="p wrapper">Não aplicável</p></td>
-<td valign="top" headers="d25459e515" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">ID do modelo (para uso em serviços do AlchemyLanguage ou do Watson Discovery) </p></li>
-</ul>
-</td>
-<td valign="top" headers="d25459e517" class="stentry">
-  <p class="p">Para implementar em AlchemyLanguage, deve-se ter um ID válido de chave de plano avançado do AlchemyLanguage.</p>
-  <p class="p">Para implementar o serviço do Watson Discovery, deve-se saber os nomes do espaço e da instância do {{site.data.keyword.cloud_notm}} do serviço.</p>
-</td>
-</tr>
+<table summary="Esta tabela fornece um resumo de entrada, saída e limitações para o modelo baseado em regra.">
+  <caption>Tabela 3. Modelo baseado em regra</caption>
+  <tr>
+    <th style="vertical-align:bottom; text-align:left" id="d25459e509">
+      Tarefa
+    </th>
+    <th style="vertical-align:bottom; text-align:left" id="d25459e511">
+      Uso típico
+    </th>
+    <th style="vertical-align:bottom; text-align:left" id="d25459e513">
+      Formatos de entrada suportados
+    </th>
+    <th style="vertical-align:bottom; text-align:left" id="d25459e515">
+      Formatos de saída suportados
+    </th>
+    <th style="vertical-align:bottom; text-align:left" id="d25459e517">
+      Limites e requisitos
+    </th>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d25459e509">
+      <p>Editor de regras</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e511">
+      <p>Crie ou faça upload de documentos para o editor de regras por meio do qual as classes, expressões regulares e regras são definidas.</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e513">
+      <ul>
+        <li>
+          <p>Texto simples (incluído no editor)</p>
+        </li>
+        <li>
+          <p>Arquivo CSV em formato UTF-8</p>
+        </li>
+        <li>
+          <p>Copiado do conjunto de documentos Todos</p>
+        </li>
+      </ul>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e515">
+      <p>Nenhuma</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e517">
+      <ul>
+        <li>
+          <p>1 modelo baseado em regra por área de trabalho</p>
+        </li>
+        <li>
+          <p>5.000 caracteres por documento</p>
+        </li>
+        <li>
+          <p>100 documentos por área de trabalho</p>
+        </li>
+        <li>
+          <p>O tamanho máximo de título do documento é 256 caracteres</p>
+        </li>
+        <li>
+          <p>200 regras por área de trabalho</p>
+        </li>
+        <li>
+          <p>400 classes por área de trabalho</p>
+        </li>
+        <li>
+          <p>Grupo de 100 expressões regulares por área de trabalho</p>
+        </li>
+        <li>
+          <p>100 entradas de expressão regular por grupo de expressões regulares</p>
+        </li>
+        <li>
+          <p>1.000 caracteres por entrada de expressão regular</p>
+        </li>
+        <li>
+          <p>5 versões de modelo baseado em regra por área de trabalho</p>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d25459e509">
+      <p>Publicação</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e511">
+      <p>Publique um modelo baseado em regra a ser usado para executar reconhecimento de padrão em outros aplicativos do {{site.data.keyword.watson}}.</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e513">
+      <p>Não aplicável</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e515">
+      <ul>
+        <li>
+          <p>ID de modelo (para uso no {{site.data.keyword.nlufull}} ou no {{site.data.keyword.discoveryfull}})</p>
+        </li>
+      </ul>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e517">
+      <p>Para implementar em serviços {{site.data.keyword.watson}}, o espaço de serviço do {{site.data.keyword.cloud_notm}} e os nomes de instâncias devem ser conhecidos.</p>
+    </td>
+  </tr>
 </table>

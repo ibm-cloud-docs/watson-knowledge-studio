@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -34,10 +34,10 @@ Evita la modifica simultanea di regole, classi ed espressioni regolari da parte 
 
 Per definire una regola, completa la seguente procedura:
 
-1. Accedi come amministratore o gestore del progetto {{site.data.keyword.knowledgestudioshort}} e apri la pagina **Rules**.
-1. Fai clic sul segno più (+) accanto ai documenti per aggiungerne uno.
+1. Accedi come amministratore o gestore del progetto {{site.data.keyword.knowledgestudioshort}} e fai clic su **Rule-based Model** > **Rules**.
+1. Fai clic sul segno più (+) accanto all'intestazione Documents per aggiungere un documento.
 
-    Consulta [Aggiunta di documenti per la definizione delle regole](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html) per i dettagli.
+    Per ulteriori informazioni, vedi [Aggiunta di documenti per la definizione delle regole](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html).
 
     Ad esempio, potresti aggiungere un documento denominato `My Document` che contiene questa sola riga di testo:
 
@@ -51,38 +51,38 @@ Per definire una regola, completa la seguente procedura:
     1. Dal pannello **Class**, fai clic sul segno più (+) accanto alla classe.
     1. Aggiungi un nome della classe.
 
-        Se assocerai la classe a un'espressione o a un dizionario, considera di chiamarla in un modo in cui puoi identificarne l'origine. Ad esempio, se pensi di utilizzare un'espressione regolare per definire un modello per alcune frasi, puoi creare una classe denominata AGE_REGEX. E se pensi di utilizzare un dizionario per annotare il produttore di automobili nella frase, puoi aggiungere una classe denominata MANUFACTURER_DICT.
+        Se assocerai la classe a un'espressione o a un dizionario, considera di chiamarla in un modo in cui puoi identificarne l'origine. Ad esempio, se pensi di utilizzare un'espressione regolare per definire un modello per l'età nella frase di esempio, puoi creare una classe denominata `AGE_REGEX`. Se pensi di utilizzare un dizionario per annotare il produttore di automobili nella frase, puoi aggiungere una classe denominata `MANUFACTURER_DICT`.
 
         Tieni a mente queste regole di denominazione:
         - Il primo carattere in un nome della classe deve essere alfabetico.
-        - Utilizza solo i seguenti caratteri ASCII alfanumerici e il carattere di sottolineatura nei valori che aggiungi alle classi: da A a Z, da a a z, da 0 a 9.
+        - Utilizza solo i seguenti caratteri ASCII alfanumerici e il carattere di sottolineatura nei valori che aggiungi alle classi: da `A` a `Z`, da `a` a `z`, da `0` a `9`.
         - I nomi non possono contenere spazi.
         - I nomi non possono essere più lunghi di 64 caratteri.
 
-1. Facoltativo: per annotare velocemente le classi nel documento, puoi associare un dizionario all'editor della regola. I termini nel documento che corrispondono alle voci nel dizionario vengono automaticamente annotati alla classe appropriata.
+1. Facoltativo: per annotare velocemente le classi in un documento, puoi associare un dizionario all'editor della regola. I termini in un documento che corrispondono alle voci nel dizionario vengono automaticamente annotati nella classe che selezioni per il dizionario. 
 
-    1. Fai clic sulla scheda **Dictionaries** nel pannello.
+    1. Fai clic sulla scheda **Dictionaries**.
 
         Vengono visualizzati tutti i dizionari che hai creato.
 
-        Se non hai aggiunto un dizionario, apri la scheda **Dictionaries** dalla barra di navigazione principale per aggiungerne uno. Consulta [Creazione dei dizionari](/docs/services/watson-knowledge-studio/dictionaries.html) per ulteriori informazioni.
+        Se non hai aggiunto un dizionario, apri la pagina **Assets** > **Dictionaries** dalla barra di navigazione principale per aggiungerne uno. Consulta [Creazione dei dizionari](/docs/services/watson-knowledge-studio/dictionaries.html) per ulteriori informazioni.
 
-    1. Fai clic su un dizionario e definisci un'associazione della classe per esso e poi fai clic su **Save**.
+    1. Fai clic su un dizionario, associa una classe al dizionario e poi fai clic su **Save**.
 
-        Ad esempio, se hai un dizionario che contiene i nomi dell'organizzazione, puoi associarlo alla regola e assegnargli la classe ORGANIZATION_DICT. Tutti i nomi dell'organizzazione presenti nei tuoi documenti di esempio saranno annotati come istanze della classe ORGANIZATION_DICT.
+        Ad esempio, se hai un dizionario che contiene i nomi dell'organizzazione, puoi creare una classe di regole denominata `ORGANIZATION` e associarla al dizionario. Tutti i nomi dell'organizzazione presenti nei tuoi documenti di esempio saranno annotati come istanze della classe `ORGANIZATION`.
 
     Se successivamente vuoi rimuovere l'associazione del dizionario dall'editor della regola, puoi rimuovere l'associazione della classe. Per far ciò, scegli l'opzione vuota all'inizio dell'elenco a discesa.
 
-1. Facoltativo: per definire un'espressione regolare per aiutarti a creare una regola, fai clic su **Regex** dalla navigazione.
+2. Facoltativo: per definire un'espressione regolare per aiutarti a creare una regola, fai clic sulla scheda **Regex**.
 
-    1. Fai clic sul segno più (+) accanto alle espressioni regolari per aggiungerne una.
-    1. Fornisci un nome all'espressione regolare. Ad esempio, MyAgeRegex.
+    1. Fai clic sul segno più (+) accanto all'intestazione Regular Expressions.
+    2. Fornisci un nome all'espressione regolare. Ad esempio, `MyAgeRegex`.
 
         Il nome non può essere più lungo di 64 caratteri.
 
-    1. Associa l'espressione a una classe. Ad esempio, AGE_REGEX.
-    1. Fai clic su **Add Entry**.
-    1. Aggiungi l'espressione.
+    3. Associa l'espressione a una classe. Ad esempio, `AGE_REGEX`.
+    4. Fai clic su **Add Entry**.
+    5. Aggiungi l'espressione.
 
         Ad esempio, per acquisire un numero che rappresenta un'età (fino a 99), puoi specificare `[0-9]{1,2}`. Per acquisire le espressioni di tempo, come *12:30 AM*, potresti specificare questa espressione della regola:
 
@@ -91,20 +91,20 @@ Per definire una regola, completa la seguente procedura:
         ```
         {: screen}
 
-        Puoi facoltativamente modificare il numero minimo e massimo di token della parola. In inglese, i token sono spesso equivalenti alle parole perché delimitati da spazi bianchi in una frase. Tuttavia, non sempre hanno una corrispondenza di uno a uno con le parole; altri elementi di testo vengono considerati token in alcune situazioni. Ad esempio, i trattini nel termine *50-year-old* contano ognuno come un token, il che significa che il numero totale di token utilizzato in questo termine è 5. E il testo *12:30 PM* contiene 4 token. (`12 | : | 30 | PM`)
+        Puoi facoltativamente modificare il numero minimo e massimo di token della parola. In inglese, i token sono spesso equivalenti alle parole perché delimitati da spazi bianchi in una frase. Tuttavia, non sempre hanno una corrispondenza di uno a uno con le parole. Altri elementi di testo vengono considerati token in alcune situazioni. Ad esempio, i trattini nel termine *50-year-old* contano ognuno come un token, il che significa che il numero totale di token utilizzato in questo termine è 5. E il testo *12:30 PM* contiene 4 token. (`12 | : | 30 | PM`)
 
         Fai clic su **Add**.
 
-    1. Ripeti i precedenti due passi se vuoi aggiungere ulteriori espressioni.
-    1. Fai clic su **Save**.
+    6. Ripeti i precedenti due passi se vuoi aggiungere ulteriori espressioni.
+    7. Fai clic su **Save**.
 
-    L'editor regex si chiude e viene visualizzato il documento. Dovresti vedere la classe che hai definito per l'espressione regolare applicata al testo che vuoi gli corrisponda. Se non è così, controlla la tua espressione. Potrebbe essere necessario revisionarla perché corrisponda al testo che vuoi trovi.
+    L'editor regex si chiude e viene visualizzato il documento. Dovresti vedere la classe che hai definito per l'espressione regolare applicata al testo che vuoi gli corrisponda. Se non visualizzi l'annotazione, controlla la tua espressione. Potrebbe essere necessario revisionarla perché corrisponda al testo che vuoi trovi.
 
-    ![L'editor della regola che mostra la scheda "Regex" selezionata, un'espressione della regola "Age" associata alla classe "AGE_REGEX" e un documento che mostra il testo "50" evidenziato in giallo. Il testo evidenziato corrisponde all'espressione regolare che hai creato.](images/rule_step3.jpg)
+    ![L'editor della regola che mostra la scheda "Regex" selezionata, un'espressione regolare della regola "Age" associata alla classe "AGE_REGEX" e un documento che mostra il testo "50" evidenziato in giallo. Il testo evidenziato corrisponde all'espressione regolare che hai creato.](images/rule_step3.jpg "L'editor della regola che mostra ")
 
-1. Per definire una regola, fai clic su **Rules** dalla navigazione.
-1. Apri il documento con il modello che vuoi acquisire come una regola. Ad esempio, se hai creato un documento intitolato `My Document` con il testo di esempio che contiene la frase `50-year-old`, apri tale documento.
-1. Dal testo nel documento, seleziona i caratteri che illustrano il modello che vuoi acquisire. Ad esempio, puoi selezionare i seguenti trattini (-) e parole:
+3. Per definire una regola, fai clic su **Rules** dalla navigazione.
+4. Apri il documento con il modello che vuoi acquisire come una regola. Ad esempio, se hai creato un documento intitolato `My Document` con il testo di esempio che contiene la frase `50-year-old`, apri tale documento.
+5. Dal testo nel documento, seleziona i caratteri che illustrano il modello che vuoi acquisire. Ad esempio, puoi selezionare i seguenti trattini (-) e parole:
 
     ```
     50-year-old
@@ -113,13 +113,13 @@ Per definire una regola, completa la seguente procedura:
 
     Dopo aver selezionato i caratteri puoi aggiungere una regola.
 
-1. Fai clic sul segno più (+) nel pannello **Rules**.
+6. Fai clic sul segno più (+) nel pannello **Rules**.
 
     L'editor della regola rappresenta il testo che hai selezionato come due livelli di celle. Le celle nel livello superiore sono dove annoti le classi dei token sottostanti. Il livello inferiore è dove definisci le condizioni in cui i token partecipano nel modello.
 
-    ![L'editor della regola che mostra come è che il pannello "Create a rule" dopo che selezioni il testo dal tuo documento e fai clic sul segno più nel pannello "Rules". Vengono mostrati i seguenti elementi grafici: il campo "Rule name" con inserito il termine "AGE", il pannello "Create a rule"e il pannello "Class". Nel pannello "Create a rule", le celle con le righe punteggiate vengono mostrate in cima. Una cella per ogni token del testo che era stato selezionato. In queste celle annoti le classi dei token. In fondo al pannello "Create a rule", vengono mostrate le celle con righe continue. Ogni cella contiene un token di testo selezionato, "50-year-old". I token sono "50", "-" (trattino), "year", "-" e "old". Ogni cella con riga continua ha due icone accanto ad essa che puoi utilizzare per modificare la condizione della parola o dell'annotazione.](images/rule_step4.jpg)
+    ![L'editor della regola che mostra il pannello "Create a rule".](images/rule_step4.jpg "L'editor della regola che mostra come ")
 
-1. Definisci le condizioni per le quali ciascun token partecipa al modello.
+7. Definisci le condizioni per le quali ciascun token partecipa al modello.
 
     Nel livello inferiore delle celle, fai clic sul primo token per controllarne le condizioni. Se vuoi indicare che possono essere utilizzati tutti i token nella posizione corrente nel modello, fai clic su **Open Properties** e seleziona **Allow any token**. Fai clic su **Close Properties**. Se un token è un regex, come ad esempio `AGE_REGEX` nell'esempio, **Allow any token** non è disponibile.
 
@@ -128,57 +128,63 @@ Per definire una regola, completa la seguente procedura:
     Per indicare che è necessario un tipo particolare di token, puoi definire i seguenti tipi di impostazioni della condizione:
     - **Impostazione di ripetizione**: specifica quante volte il token corrente deve essere incluso nel modello. Puoi modificare l'impostazione di ripetizione ma ne può essere specificata solo una per token. Le opzioni sono descritte nella seguente tabella.
 
-    <table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable">
-      <tr class="sthead">
-        <th valign="bottom" align="left" id="d27028e471" class="stentry thleft thbot">Opzione di impostazione</th>
-        <th valign="bottom" align="left" id="d27028e473" class="stentry thleft thbot">Descrizione</th>
+    <table summary="">
+      <caption>Tabella 1. Impostazioni di ripetizione </caption>
+      <tr>
+        <th style="vertical-align:bottom; text-align:left" id="d27028e471">
+          Opzione di impostazione
+        </th>
+        <th style="vertical-align:bottom; text-align:left" id="d27028e473">
+          Descrizione
+        </th>
       </tr>
-      <tr class="strow">
-        <td valign="top" headers="d27028e471" class="stentry">
-          <p class="p wrapper">Obbligatorio (esattamente 1)</p>
+      <tr>
+        <td headers="d27028e471">
+          <p>Obbligatorio (esattamente 1)</p>
         </td>
-        <td valign="top" headers="d27028e473" class="stentry">
-          <p class="p wrapper">Questo token deve essere presente nel modello
+        <td headers="d27028e473">
+          <p>Questo token deve essere presente nel modello
             una volta. Questa opzione viene applicata per impostazione predefinita,
-            ma può essere modificata.</p></td>
-      </tr>
-      <tr class="strow">
-        <td valign="top" headers="d27028e471" class="stentry">
-          <p class="p wrapper">Ripetizione di 1 o più volte</p>
+            ma può essere modificata.</p>
         </td>
-        <td valign="top" headers="d27028e473" class="stentry">
-          <p class="p wrapper">Questo token deve essere presente nel modello
+      </tr>
+      <tr>
+        <td headers="d27028e471">
+          <p>Ripetizione di 1 o più volte</p>
+        </td>
+        <td headers="d27028e473">
+          <p>Questo token deve essere presente nel modello
             almeno una volta e può essere ripetuto più volte.</p>
         </td>
       </tr>
-      <tr class="strow">
-        <td valign="top" headers="d27028e471" class="stentry">
-          <p class="p wrapper">Ripetizione di 0 o più volte</p>
+      <tr>
+        <td headers="d27028e471">
+          <p>Ripetizione di 0 o più volte</p>
         </td>
-        <td valign="top" headers="d27028e473" class="stentry">
-          <p class="p wrapper">Questo token può facoltativamente essere ripetuto nel modello
+        <td headers="d27028e473">
+          <p>Questo token può facoltativamente essere ripetuto nel modello
             molte volte ma non deve essere ripetuto.</p>
         </td>
       </tr>
-      <tr class="strow">
-        <td valign="top" headers="d27028e471" class="stentry">
-          <p class="p wrapper">Ricorrenza di 0 o 1 volta</p>
+      <tr>
+        <td headers="d27028e471">
+          <p>Ricorrenza di 0 o 1 volta</p>
         </td>
-        <td valign="top" headers="d27028e473" class="stentry">
-          <p class="p wrapper">Questo token è facoltativo.</p>
+        <td headers="d27028e473">
+          <p>Questo token è facoltativo.</p>
         </td>
       </tr>
-      <tr class="strow">
-        <td valign="top" headers="d27028e471" class="stentry">
-          <p class="p wrapper">Avanzato: _personalizzata_</p>
+      <tr>
+        <td headers="d27028e471">
+          <p>Avanzato: _personalizzata_</p>
         </td>
-        <td valign="top" headers="d27028e473" class="stentry">
-          <p class="p wrapper">Questo token deve essere ripetuto nel modello
+        <td headers="d27028e473">
+          <p>Questo token deve essere ripetuto nel modello
             il numero di volte qui specificato. Per definire
             un'impostazione di ripetizione personalizzata, fai clic su
             <b>Open Properties</b>,
             seleziona **Advanced** e poi seleziona il numero esatto di ripetizioni o l'intervallo delle ripetizioni che vuoi definire.</p>
-          <p class="note">
+          <p>
             Il numero massimo di ripetizioni consentite per un token è
             5.</p>
         </td>
@@ -187,169 +193,175 @@ Per definire una regola, completa la seguente procedura:
 
     - **Impostazione della funzione**: deve essere definita almeno una della impostazioni della funzione. Puoi aggiungere ulteriori funzioni al numero di condizioni che deve essere soddisfatto dal testo per corrispondere a questo modello. Le opzioni sono descritte nella seguente tabella.
 
-    <table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable">
-      <tr class="sthead">
-        <th valign="bottom" align="left" id="d27028e512" class="stentry thleft thbot">Opzione di impostazione</th>
-        <th valign="bottom" align="left" id="d27028e514" class="stentry thleft thbot">Condizione che aggiunge</th>
+    <table summary="">
+      <caption>Tabella 2. Impostazioni delle funzioni</caption>
+      <tr>
+        <th style="vertical-align:bottom; text-align:left" id="d27028e512">
+          Opzione di impostazione
+        </th>
+        <th style="vertical-align:bottom; text-align:left" id="d27028e514">
+          Condizione che aggiunge
+        </th>
       </tr>
-      <tr class="strow">
-        <td valign="top" headers="d27028e512" class="stentry">
-          <p class="p wrapper">Testo </p>
+      <tr>
+        <td headers="d27028e512">
+          <p>Testo</p>
         </td>
-        <td valign="top" headers="d27028e514" class="stentry">
-          <p class="p wrapper">Deve corrispondere al testo esatto in questo
+        <td headers="d27028e514">
+          <p>Deve corrispondere al testo esatto in questo
             token. Questa opzione viene applicata per impostazione predefinita. Puoi rimuoverla
             ma solo se aggiungi un'impostazione differente come condizione
             o applichi l'impostazione token Any.</p>
         </td>
       </tr>
-      <tr class="strow">
-        <td valign="top" headers="d27028e512" class="stentry">
-          <p class="p wrapper">Lunghezza</p>
+      <tr>
+        <td headers="d27028e512">
+          <p>Lunghezza</p>
         </td>
-        <td valign="top" headers="d27028e514" class="stentry">
-          <p class="p wrapper">Deve corrispondere alla lunghezza dei caratteri
+        <td headers="d27028e514">
+          <p>Deve corrispondere alla lunghezza dei caratteri
             di questo token. La lunghezza viene contata a partire da 0 da davanti
             al primo carattere.</p>
         </td>
       </tr>
     </table>
 
-    Il resto delle opzioni variano a seconda del tipo di token. 
+    Il resto delle opzioni variano a seconda del tipo di token.
 
     - **Token non annotati che non corrispondono a un regex o a un termine del dizionario**: queste impostazioni sono disponibili per i token che non vengono annotati e non corrispondono a un regex o a un termine del dizionario.
 
-    <table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable">
-      <tr class="sthead">
-        <th valign="bottom" align="left" id="d27028e535" class="stentry thleft thbot">Opzione di impostazione</th>
-        <th valign="bottom" align="left" id="d27028e537" class="stentry thleft thbot">Descrizione</th>
+    <table summary="">
+      <caption>Tabella 3. Impostazioni token non annotato</caption>
+      <tr>
+        <th style="vertical-align:bottom; text-align:left" id="d27028e535">Opzione di impostazione</th>
+        <th style="vertical-align:bottom; text-align:left" id="d27028e537">Descrizione</th>
       </tr>
-      <tr class="strow">
-        <td valign="top" headers="d27028e535" class="stentry">
-          <p class="p wrapper">Parte del discorso</p>
+      <tr>
+        <td headers="d27028e535">
+          <p>Parte del discorso</p>
         </td>
-        <td valign="top" headers="d27028e537" class="stentry">
-          <p class="p wrapper">Deve essere la stessa parte del discorso
-            di questo token. Sono supportati i seguenti tipi: </p>
-          <ul class="ul bullets">
-            <li class="li">
-              <p class="p wrapper">aggettivo</p>
+        <td headers="d27028e537">
+          <p>Deve essere la stessa parte del discorso
+            di questo token. Sono supportati i seguenti tipi:</p>
+          <ul>
+            <li>
+              aggettivo
             </li>
-            <li class="li">
-              <p class="p wrapper">apposizione </p>
+            <li>
+              apposizione
             </li>
-            <li class="li">
-              <p class="p wrapper">avverbio</p>
+            <li>
+              avverbio
             </li>
-            <li class="li">
-              <p class="p wrapper">congiunzione</p>
+            <li>
+              congiunzione
             </li>
-            <li class="li">
-              <p class="p wrapper">determinativo</p>
+            <li>
+              determinativo
             </li>
-            <li class="li">
-              <p class="p wrapper">esclamazione </p>
+            <li>
+              esclamazione
             </li>
-            <li class="li">
-              <p class="p wrapper">nome </p>
+            <li>
+              nome
             </li>
-            <li class="li">
-              <p class="p wrapper">numeri </p>
+            <li>
+              numeri
             </li>
-            <li class="li">
-              <p class="p wrapper">pronome</p>
+            <li>
+              pronome
             </li>
-            <li class="li">
-              <p class="p wrapper">residuo</p>
+            <li>
+              residuo
             </li>
-            <li class="li">
-              <p class="p wrapper">verbo </p>
+            <li>
+              verbo
             </li>
           </ul>
         </td>
       </tr>
-      <tr class="strow">
-        <td valign="top" headers="d27028e535" class="stentry">
-          <p class="p wrapper">Lemma</p>
+      <tr>
+        <td headers="d27028e535">
+          <p>Lemma</p>
         </td>
-        <td valign="top" headers="d27028e537" class="stentry">
-          <p class="p wrapper">Deve avere lo stesso lemma di questo
+        <td headers="d27028e537">
+          <p>Deve avere lo stesso lemma di questo
             token.</p>
         </td>
       </tr>
-      <tr class="strow">
-        <td valign="top" headers="d27028e535" class="stentry">
-          <p class="p wrapper">Tipo carattere</p>
+      <tr>
+        <td headers="d27028e535">
+          <p>Tipo carattere</p>
         </td>
-        <td valign="top" headers="d27028e537" class="stentry">
-          <p class="p wrapper">Deve avere lo stesso tipo di carattere di questo
-            token. Sono supportati i seguenti tipi: </p>
-          <ul class="ul bullets">
-            <li class="li">
-              <p class="p wrapper">Arabo: contiene una sequenza
+        <td headers="d27028e537">
+          <p>Deve avere lo stesso tipo di carattere di questo
+            token. Sono supportati i seguenti tipi:</p>
+          <ul>
+            <li>
+              <p>Arabo: contiene una sequenza
                 di caratteri arabi</p>
             </li>
-            <li class="li">
-              <p class="p wrapper">Numeri cinesi: contiene solo
+            <li>
+              <p>Numeri cinesi: contiene solo
                 numeri cinesi.</p>
             </li>
-            <li class="li">
-              <p class="p wrapper">Punteggiatura finale della frase:
+            <li>
+              <p>Punteggiatura finale della frase:
                 i caratteri di punteggiatura che separano una proposizione
                 o una frase dalla successiva</p>
             </li>
-            <li class="li">
-              <p class="p wrapper">Han: contiene caratteri Han</p>
+            <li>
+              <p>Han: contiene caratteri Han</p>
             </li>
-            <li class="li">
-              <p class="p wrapper">Hangul: contiene caratteri sillabici
+            <li>
+              <p>Hangul: contiene caratteri sillabici
                 Hangul coreani</p>
             </li>
-            <li class="li">
-              <p class="p wrapper">Ebraico: contiene una sequenza di
+            <li>
+              <p>Ebraico: contiene una sequenza di
                 caratteri ebraici</p>
             </li>
-            <li class="li">
-              <p class="p wrapper">Hiragana: contiene i caratteri sillabici
+            <li>
+              <p>Hiragana: contiene i caratteri sillabici
                 Hiragana giapponesi</p>
             </li>
-            <li class="li">
-              <p class="p wrapper">Ideografico: contiene un
+            <li>
+              <p>Ideografico: contiene un
                 ideogramma o un simbolo che rappresenta un'idea
                 o una cosa</p>
             </li>
-            <li class="li">
-              <p class="p wrapper">Katakana: contiene i caratteri sillabici
+            <li>
+              <p>Katakana: contiene i caratteri sillabici
                 Katakana giapponesi</p>
             </li>
-            <li class="li">
-              <p class="p wrapper">Minuscolo: contiene solo
+            <li>
+              <p>Minuscolo: contiene solo
                 caratteri alfanumerici minuscoli</p>
             </li>
-            <li class="li">
-              <p class="p wrapper">Numerico: contiene solo caratteri
+            <li>
+              <p>Numerico: contiene solo caratteri
                 numerici</p>
             </li>
-            <li class="li">
-              <p class="p wrapper">Punteggiatura: uno o più caratteri
+            <li>
+              <p>Punteggiatura: uno o più caratteri
                 che forniscono la punteggiatura nel
                 testo</p>
             </li>
-            <li class="li">
-              <p class="p wrapper">Sillabico: contiene caratteri
+            <li>
+              <p>Sillabico: contiene caratteri
                 sillabici</p>
             </li>
-            <li class="li">
-              <p class="p wrapper">Thai: contiene caratteri
+            <li>
+              <p>Thai: contiene caratteri
                 thai</p>
             </li>
-            <li class="li">
-              <p class="p wrapper">Iniziali maiuscole: inizia con un solo carattere alfabetico
+            <li>
+              <p>Iniziali maiuscole: inizia con un solo carattere alfabetico
                 maiuscolo, seguito da uno o più
                 caratteri minuscoli</p>
             </li>
-            <li class="li">
-              <p class="p wrapper">Maiuscolo: un token che contiene solo
+            <li>
+              <p>Maiuscolo: un token che contiene solo
                 caratteri alfabetici maiuscoli</p>
             </li>
           </ul>
@@ -359,18 +371,20 @@ Per definire una regola, completa la seguente procedura:
 
     - **Corrispondenza della regola:**
 
-    <table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable">
-      <tr class="sthead">
-        <th valign="bottom" align="left" id="d27028e617" class="stentry thleft thbot">Opzione di impostazione</th>
-        <th valign="bottom" align="left" id="d27028e619" class="stentry thleft thbot">Descrizione</th>
+    <table summary="">
+      <caption>Tabella 4. Corrispondenza della regola</caption>
+      <tr>
+        <th style="vertical-align:bottom; text-align:left" id="d27028e617">
+          Opzione di impostazione</th>
+        <th style="vertical-align:bottom; text-align:left" id="d27028e619">
+          Descrizione</th>
       </tr>
-      <tr class="strow">
-        <td valign="top" headers="d27028e617" class="stentry">
-          <p class="p wrapper">Corrispondenza della regola </p>
+      <tr>
+        <td headers="d27028e617">
+          <p>Corrispondenza della regola</p>
         </td>
-        <td valign="top" headers="d27028e619" class="stentry">
-          <p class="p wrapper">Deve corrispondere alla classe denominata.
-            Ricorda, una classe può essere derivata da un regex,
+        <td headers="d27028e619">
+          <p>Deve corrispondere alla classe denominata. Ricorda, una classe può essere derivata da un regex,
             un dizionario o una regola. Se la classe qui specificata
             è stata derivata da un'espressione regolare, ad esempio, questo token
             deve corrispondere al modello di ricerca
@@ -379,7 +393,7 @@ Per definire una regola, completa la seguente procedura:
       </tr>
     </table>
 
-1. Per i token che hanno annotazioni aggiunte indirettamente da una corrispondenza di annotazione del dizionario o espressione regolare, puoi scegliere se il modello dovrebbe richiedere tutte le parole con lo stesso tipo di annotazione o invece le parole al momento evidenziate che sono state annotate.
+8. Per i token che hanno annotazioni aggiunte indirettamente da una corrispondenza di annotazione del dizionario o espressione regolare, puoi scegliere se il modello dovrebbe richiedere tutte le parole con lo stesso tipo di annotazione o invece le parole al momento evidenziate che sono state annotate.
 
     Nel livello inferiore delle celle, puoi vedere quali celle sono incluse nel modello perché una riga orizzontale le collega tra loro. Dove un'annotazione è stata applicata, c'è una suddivisione. Le celle con le parole originali sono visualizzate sotto a una cella con l'etichetta di annotazione. Puoi fare clic su una serie di celle o modificare il percorso della riga e quindi modificare le celle incluse nel modello.
 
@@ -387,7 +401,7 @@ Per definire una regola, completa la seguente procedura:
 
     ![Il pannello "Create a rule" che mostra una modifica del token, "50", che utilizza l'annotazione, "AGE_REGEX", nella regola. Per impostazione predefinite, viene utilizzata l'annotazione "AGE_REGEX", ma puoi modificare il modello in modo che sia invece utilizzata la parola evidenziata, "50".](images/rule_step5.jpg)
 
-1. Dopo aver configurato l'ordine del modello, puoi annotare i token nel testo.
+9. Dopo aver configurato l'ordine del modello, puoi annotare i token nel testo.
 
     Dal livello superiore delle celle, fai clic su quelle che rappresentano i token che vuoi annotare e poi applica loro un'etichetta della classe. Per selezionare più celle, fai clic su una di esse, premi il tasto **Shift** e fai clic sulle ulteriori celle.
 
@@ -397,8 +411,8 @@ Per definire una regola, completa la seguente procedura:
 
     ![La sezione "Create a rule" che mostra la finestra "Assign class" che si apre quando fai clic su un token. La finestra mostra un campo in cui puoi immettere il nome della nuova classe o selezionare una classe esistente dall'elenco.](images/rule_step6.jpg)
 
-1. Fornisci un nome alla regola. 
+10. Fornisci un nome alla regola.
 
     Il nome della regola non può essere più lungo di 64 caratteri.
 
-1. Fai clic su **Save** nel pannello Rules per salvare la regola.
+11. Fai clic su **Save** nel pannello Rules per salvare la regola.

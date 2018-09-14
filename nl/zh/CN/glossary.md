@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -28,10 +28,8 @@ lastupdated: "2018-04-04"
 
 在本词汇表中使用了以下交叉引用：
 
-- “请参阅”将指引您查阅当前术语的首选同义词，或者查阅首字母缩略词或缩写词的已定义完整形式。
-- “另请参阅”将指引您查阅相关术语或对照术语。
-
-要查看其他 {{site.data.keyword.IBM}} 产品的词汇表，请转至 [www.ibm.com/software/globalization/terminology ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://www.ibm.com/software/globalization/terminology/){: new_window}。
+- *请参阅*用于将您从某个术语引向某个首选同义词，或者从首字母缩略词或缩写引向已定义的完整形式。
+- *另请参阅*指引您查看相关术语或对照术语。
 
  [B](/docs/services/watson-knowledge-studio/glossary.html#gloss_B) [C](/docs/services/watson-knowledge-studio/glossary.html#gloss_C) [F](/docs/services/watson-knowledge-studio/glossary.html#gloss_F) [G](/docs/services/watson-knowledge-studio/glossary.html#gloss_G) [H](/docs/services/watson-knowledge-studio/glossary.html#gloss_H) [J](/docs/services/watson-knowledge-studio/glossary.html#gloss_J) [K](/docs/services/watson-knowledge-studio/glossary.html#gloss_K) [L](/docs/services/watson-knowledge-studio/glossary.html#gloss_L) [M](/docs/services/watson-knowledge-studio/glossary.html#gloss_M) [P](/docs/services/watson-knowledge-studio/glossary.html#gloss_P) [R](/docs/services/watson-knowledge-studio/glossary.html#gloss_R) [S](/docs/services/watson-knowledge-studio/glossary.html#gloss_S) [T](/docs/services/watson-knowledge-studio/glossary.html#gloss_T)
  [W](/docs/services/watson-knowledge-studio/glossary.html#gloss_W)
@@ -57,11 +55,11 @@ lastupdated: "2018-04-04"
 
 - **裁定 (adjudication)**
 
-    一个迭代式过程，通过比较不同的人类注释者添加到同一文档的注释来解决注释冲突。
+    一个迭代式过程，通过比较不同的人工注释者添加到同一文档的注释来解决注释冲突。
 
 - **参考标准 (ground truth)**
 
-    已检查数据的集合，由人类注释者添加的注释组成，用于调整机器学习模型以适应特定领域。参考标准用于培训机器学习模型，度量模型性能（精确和召回率），并计算空余空间以决定开发工作的重点应该放在哪里才能提高性能。参考标准的准确性至关重要，因为参考标准中的不准确之处与使用该参考标准的组件的不准确之处相关。
+    已检查数据的集合，由人工注释者添加的注释组成，用于调整机器学习模型以适应特定领域。参考标准用于培训机器学习模型，度量模型性能（精确和召回率），并计算空余空间以决定开发工作的重点应该放在哪里才能提高性能。参考标准的准确性至关重要，因为参考标准中的不准确之处与使用该参考标准的组件的不准确之处相关。
 
 - **测试数据 (testing data)**
 
@@ -77,7 +75,7 @@ lastupdated: "2018-04-04"
 
 - **词语索引 (concordance)**
 
-    这种方法用于确保在整个文档内以及在各个注释集之间使用相同实体类型对同一提及项进行注释。词语索引有助于确保多次出现的提及项的一致性，而无需人类注释者手动标注每次出现的提及项。
+    这种方法用于确保在整个文档内以及在各个注释集之间使用相同实体类型对同一提及项进行注释。词语索引有助于确保多次出现的提及项的一致性，而无需人工注释者手动标注每次出现的提及项。
 
 - **词元 (lemma)**
 
@@ -103,7 +101,7 @@ lastupdated: "2018-04-04"
 
 - **关系类型 (relation type)**
 
-    两个实体之间的二元单向关系。例如，Mary employedBy {{site.data.keyword.IBM_notm}} 是有效关系；{{site.data.keyword.IBM_notm}} employedBy Mary 则不是。
+    两个实体之间的二元单向关系。例如，`Mary` `employedBy` {{site.data.keyword.IBM_notm}} 是有效关系；{{site.data.keyword.IBM_notm}} `employedBy` `Mary` 不是有效关系。
 
 - **管理 (curate)**
 
@@ -181,18 +179,18 @@ lastupdated: "2018-04-04"
 
 - **培训 (train)**
 
-    这是使用支持系统在特定领域中运行的组件（例如：语料库内容、用于生成机器学习模型的培训数据、编程算法、注释器或其他参考标准组件）设置 {{site.data.keyword.watson}} 实例，然后根据准确性分析对这些组件进行改进和更新的过程。
+    这是使用支持系统在特定领域中运行的组件（例如：语料库内容、用于生成机器学习模型的培训数据、编程算法或其他参考标准组件）设置 {{site.data.keyword.watson}} 实例，然后根据准确性分析对这些组件进行改进和更新的过程。
 
 - **培训数据 (training data)**
 
-    一组已注释的文档，可用于培训机器学习注释器。另请参阅[盲区数据 (blind data)](/docs/services/watson-knowledge-studio/glossary.html#gloss_M) 和[测试数据 (testing data)](/docs/services/watson-knowledge-studio/glossary.html#gloss_C)。
+    一组已注释的文档，可用于培训机器学习模型。另请参阅[盲区数据 (blind data)](/docs/services/watson-knowledge-studio/glossary.html#gloss_B) 和[测试数据 (testing data)](/docs/services/watson-knowledge-studio/glossary.html#gloss_T)。
 
 ## [R]
 {: #gloss_R}
 
-- **人类注释者 (human annotator)**
+- **人工注释者 (human annotator)**
 
-    一个主题专家，通过识别提及项、实体类型关系和提及项指代来复查、修改和扩充预注释的结果。人类注释者通过在上下文中检查文本，帮助确定参考标准并提高机器学习模型的准确性。
+    一个主题专家，通过识别提及项、实体类型关系和提及项指代来复查、修改和扩充预注释的结果。人工注释者通过在上下文中检查文本，帮助确定参考标准并提高机器学习模型的准确性。
 
 ## [S]
 {: #gloss_S}
@@ -243,7 +241,7 @@ lastupdated: "2018-04-04"
 
 - **预注释 (pre-annotation)**
 
-    这是在人工注释之前对一组文档进行注释的过程。可以使用基于规则的模型、机器学习模型、{{site.data.keyword.nlufull}} 或字典对文档进行预注释。预注释可以帮助人类注释者更快地准备一组参考标准文档。
+    这是在人工注释之前对一组文档进行注释的过程。可以使用基于规则的模型、机器学习模型、{{site.data.keyword.nlufull}} 或字典对文档进行预注释。预注释可以帮助人工注释者更快地准备一组参考标准文档。
 
 ## [Z]
 {: #gloss_Z}
@@ -282,11 +280,11 @@ lastupdated: "2018-04-04"
 
 - **注释集 (annotation set)**
 
-    在人工注释中，是指从语料库中抽取的文档集合，这些文档允许工作负载由多个人类注释者共享。在基于机器的注释中，是指可用作盲区数据、培训数据或测试数据的文档集合。
+    在人工注释中，是指从语料库中抽取的文档集合，这些文档允许工作负载由多个人工注释者共享。在基于机器的注释中，是指可用作盲区数据、培训数据或测试数据的文档集合。
 
 - **注释器/注释者 (annotator)**
 
-    请参阅[人类注释者 (human annotator)](/docs/services/watson-knowledge-studio/glossary.html#gloss_R) 和[机器学习注释器 (machine learning annotator)](/docs/services/watson-knowledge-studio/glossary.html#gloss_J)。
+    请参阅[人工注释者 (human annotator)](/docs/services/watson-knowledge-studio/glossary.html#gloss_R) 和[机器学习注释器 (machine learning annotator)](/docs/services/watson-knowledge-studio/glossary.html#gloss_J)。
 
 - **注释者间一致性 (inter-annotator agreement)**
 
@@ -314,7 +312,7 @@ lastupdated: "2018-04-04"
 
 - **字典预注释器 (dictionary pre-annotator)**
 
-    一个组件，用于标识文本中与一组特定词匹配的提及项。字典预注释器使用特定于领域的术语来对文本进行预注释，可以使人类注释者能够更快地准备好一组参考标准文档。
+    一个组件，用于标识文本中与一组特定词匹配的提及项。字典预注释器使用特定于领域的术语来对文本进行预注释，可以使人工注释者能够更快地准备好一组参考标准文档。
 
 
 ## F
@@ -326,6 +324,6 @@ lastupdated: "2018-04-04"
 
 - **Fleiss Kappa 分数 (Fleiss Kappa score)**
 
-    这是多个人类注释者对重叠文档应用同一注释的一致程度的度量。Fleiss Kappa 分数的最佳值为 1，最差值为 0。
+    这是多个人工注释者对重叠文档应用同一注释的一致程度的度量。Fleiss Kappa 分数的最佳值为 1，最差值为 0。
 
 

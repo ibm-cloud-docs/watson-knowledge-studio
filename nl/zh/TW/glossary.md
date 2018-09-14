@@ -28,13 +28,11 @@ lastupdated: "2018-04-04"
 
 本名詞解釋使用下列交互參照：
 
-- 「請參閱」可讓您從詞彙參照偏好的同義字，或從字首語或縮寫參照已定義的完整形式。
-- 「另請參閱」可讓您參照相關或對照的詞彙。
+- *請參閱* 可讓您從詞彙參照偏好的同義字，或從字首語或縮寫參照已定義的完整形式。
+- *另請參閱* 可讓您參照相關或對照的詞彙。
 
-若要檢視其他 {{site.data.keyword.IBM}} 產品的名詞解釋，請前往 [www.ibm.com/software/globalization/terminology ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://www.ibm.com/software/globalization/terminology/){: new_window}。
-
-[三劃](#gloss_3) [四劃](#gloss_4) [五劃](#gloss_5) [六劃](#gloss_6) [七劃](#gloss_7) [八劃](#gloss_8) [九劃](#gloss_9) [十劃](#gloss_10) 
-[十一劃](#gloss_11) [十二劃](#gloss_12) [十三劃](#gloss_13) [十四劃](#gloss_14) [十六劃](#gloss_16) [十九劃](#gloss_19) [二十一劃](#gloss_21) [F](#gloss_F)
+[三劃](/docs/services/watson-knowledge-studio/glossary.html#gloss_3) [四劃](/docs/services/watson-knowledge-studio/glossary.html#gloss_4) [五劃](/docs/services/watson-knowledge-studio/glossary.html#gloss_5) [六劃](/docs/services/watson-knowledge-studio/glossary.html#gloss_6) [七劃](/docs/services/watson-knowledge-studio/glossary.html#gloss_7) [八劃](/docs/services/watson-knowledge-studio/glossary.html#gloss_8) [九劃](/docs/services/watson-knowledge-studio/glossary.html#gloss_9) [十劃](/docs/services/watson-knowledge-studio/glossary.html#gloss_10) 
+[十一劃](/docs/services/watson-knowledge-studio/glossary.html#gloss_11) [十二劃](/docs/services/watson-knowledge-studio/glossary.html#gloss_12) [十三劃](/docs/services/watson-knowledge-studio/glossary.html#gloss_13) [十四劃](/docs/services/watson-knowledge-studio/glossary.html#gloss_14) [十六劃](/docs/services/watson-knowledge-studio/glossary.html#gloss_16) [十九劃](/docs/services/watson-knowledge-studio/glossary.html#gloss_19) [二十一劃](/docs/services/watson-knowledge-studio/glossary.html#gloss_21) [F](/docs/services/watson-knowledge-studio/glossary.html#gloss_F)
 
 ## 三劃
 {: #gloss_3}
@@ -46,14 +44,6 @@ lastupdated: "2018-04-04"
 ## 四劃
 {: #gloss_4}
 
-- **分析引擎 (analysis engine)**
-
-    該程式用來分析構件（例如文件）及推斷其相關資訊，並實作「UIMA 分析引擎」介面規格。分析引擎是從稱為註釋程式的構成要素所建構的。分析引擎可以包含單一註釋程式（稱為基本分析引擎）或多個註釋程式（稱為聚集分析引擎）。
-    
-- **文件集 (document set)**
-
-    文件集合。一起匯入的文件會成為一個文件集。為訓練目的（測試、訓練、盲目）而分組在一起的已註釋文件會產生為文件集。
-
 - **互相參照 (coreference)**
 
     兩個單字或詞組之間的關係，兩者都參照相同的人員或事物，而其中一個作為另一個的語言先行詞。例如，詞組 "She taught herself" 中的兩個代名詞之間有互相參照，但是詞組 "She taught her" 中則未互相參照。互相參照會鏈結相同文字中兩個相等的實體。
@@ -62,27 +52,35 @@ lastupdated: "2018-04-04"
 
     註釋為互相參照的實體清單。當您將提及項目註釋為互相參照時，系統會建立一個互相參照鏈結。該鏈結提供一種方式，讓您檢視上下文中的所有提及項目，並驗證所有出現項目都屬於同一個實體類型。
     
+- **分析引擎 (analysis engine)**
+
+    該程式用來分析構件（例如文件）及推斷其相關資訊，並實作「UIMA 分析引擎」介面規格。分析引擎是從稱為註釋程式的構成要素所建構的。分析引擎可以包含單一註釋程式（稱為基本分析引擎）或多個註釋程式（稱為聚集分析引擎）。
+    
+- **文件集 (document set)**
+
+    文件集合。一起匯入的文件會成為一個文件集。為訓練目的（測試、訓練、盲目）而分組在一起的已註釋文件會產生為文件集。
+
 ## 五劃
 {: #gloss_5}
-
-- **正確性 (accuracy)**
-
-    測量機器學習模型所產生之註釋的正確性。另請參閱[查準率 (precision)](#gloss_9) 及[查全率 (recall)](#gloss_9)。
-
-- **正確性分析 (accuracy analysis)**
-
-    分析機器學習模型分數，以判定是否需要變更以提高正確性。
 
 - **本體 (ontology)**
 
     明確且正式的表示法規格，用來表示物件、概念以及某些感興趣區域與其間關係中可能存在的其他實體。
+
+- **正確性 (accuracy)**
+
+    測量機器學習模型所產生之註釋的正確性。另請參閱[查準率 (precision)](/docs/services/watson-knowledge-studio/glossary.html#gloss_9) 及[查全率 (recall)](/docs/services/watson-knowledge-studio/glossary.html#gloss_9)。
+
+- **正確性分析 (accuracy analysis)**
+
+    分析機器學習模型分數，以判定是否需要變更以提高正確性。
 
 ## 六劃
 {: #gloss_6}
 
 - **字典 (dictionary)**
 
-    可用來預先註釋文件的單字集合。系統會為文件文字中每一個符合字典內詞彙的單字建立新的註釋。機器學習模型可使用一個以上的獨立字典來進行配置，這些字典一般都屬於特定領域，例如，化學藥品字典以及財富管理字典。另請參閱[詞目 (lemma)](#gloss_12) 及[表面形式 (surface form)](#gloss_8)
+    可用來預先註釋文件的單字集合。系統會為文件文字中每一個符合字典內詞彙的單字建立新的註釋。機器學習模型可使用一個以上的獨立字典來進行配置，這些字典一般都屬於特定領域，例如，化學藥品字典以及財富管理字典。另請參閱[詞目 (lemma)](/docs/services/watson-knowledge-studio/glossary.html#gloss_12) 及[表面形式 (surface form)](/docs/services/watson-knowledge-studio/glossary.html#gloss_8)
 
 - **字典預先註釋程式 (dictionary pre-annotator)**
 
@@ -108,33 +106,41 @@ lastupdated: "2018-04-04"
 
 - **盲目資料 (blind data)**
 
-    以基準註釋的一組文件，例如問題與答案配對、語意註釋及段落判斷。開發人員絕不會發行或看見盲目資料，該資料用來定期測試系統，以評估所看不到資料的效能。對盲目資料進行測試，可避免因為過度配適到已知問題集或註釋而降低正確性。所報告的結果應該只來自在盲目資料上執行的測試。另請參閱[測試資料 (testing data)](#gloss_12) 及[訓練資料 (training data)](#gloss_10)。
+    以基準註釋的一組文件，例如問題與答案配對、語意註釋及段落判斷。開發人員絕不會發行或看見盲目資料，該資料用來定期測試系統，以評估所看不到資料的效能。對盲目資料進行測試，可避免因為過度配適到已知問題集或註釋而降低正確性。所報告的結果應該只來自在盲目資料上執行的測試。另請參閱[測試資料 (testing data)](/docs/services/watson-knowledge-studio/glossary.html#gloss_12) 及[訓練資料 (training data)](/docs/services/watson-knowledge-studio/glossary.html#gloss_10)。
 
-- **表面形式 (surface form)**
+- **知識圖 (knowledge graph)**
 
-    單字或多字單元在語料庫中發現時的形式。例如，詞目 'organize' 的一些表面形式為詞彙 'organizing' 及 'organized'。另請參閱[字典 (dictionary)](#gloss_6) 及[詞目 (lemma)](#gloss_12)。
+    此模型合併類型化實體、其關係、內容及階層式分類架構，用來代表給定領域的概念組織。以來自結構化及非結構化資料來源的輸入載入知識圖儲存庫之後，使用者及應用程式可以存取知識圖，以探索特定領域的重要知識元素、探索互動，以及發現其他關係。
 
 - **空餘空間分析 (headroom analysis)**
 
     此程序藉由解決在執行正確性分析時所識別到的一些問題類別，來判定可以預期的正確性、查準率或查全率的改善空間有多大。
 
-- **知識圖 (knowledge graph)**
+- **表面形式 (surface form)**
 
-    此模型合併類型化實體、其關係、內容及階層式分類架構，用來代表給定領域的概念組織。以來自結構化及非結構化資料來源的輸入載入知識圖儲存庫之後，使用者及應用程式可以存取知識圖，以探索特定領域的重要知識元素、探索互動，以及發現其他關係。
+    單字或多字單元在語料庫中發現時的形式。例如，詞目 'organize' 的一些表面形式為詞彙 'organizing' 及 'organized'。另請參閱[字典 (dictionary)](/docs/services/watson-knowledge-studio/glossary.html#gloss_6) 及[詞目 (lemma)](/docs/services/watson-knowledge-studio/glossary.html#gloss_12)。
 
 ## 九劃
 {: #gloss_9}
 
 - **查全率 (recall)**
 
-    此測量指定傳回的相關結果數佔所有可用相關結果數的百分比。查全率是一種靈敏度測量，是由正確的正數結果數目除以應該傳回的正數結果數目所決定的。同時使用查準率及查全率，是測量正確性的最佳方式。另請參閱[精準度 (accuracy)](#gloss_A) 及[查準率 (precision)](/docs/services/watson-knowledge-studio
+    此測量指定傳回的相關結果數佔所有可用相關結果數的百分比。查全率是一種靈敏度測量，是由正確的正數結果數目除以應該傳回的正數結果數目所決定的。同時使用查準率及查全率，是測量正確性的最佳方式。另請參閱[精準度 (accuracy)](/docs/services/watson-knowledge-studio/glossary.html#gloss_A) 及[查準率 (precision)](/docs/services/watson-knowledge-studio
 
 - **查準率 (precision)**
 
-    此測量指定相關結果的比例。查準率是一個正數預測值，是由正確的正數結果數目除以所有正數結果數目所決定的。同時使用查準率及查全率，是測量正確性的最佳方式。另請參閱[正確性 (accuracy)](#gloss_5) 及[查全率 (recall)](#gloss_9)。
+    此測量指定相關結果的比例。查準率是一個正數預測值，是由正確的正數結果數目除以所有正數結果數目所決定的。同時使用查準率及查全率，是測量正確性的最佳方式。另請參閱[正確性 (accuracy)](/docs/services/watson-knowledge-studio/glossary.html#gloss_5) 及[查全率 (recall)](/docs/services/watson-knowledge-studio/glossary.html#gloss_9)。
 
 ## 十劃
 {: #gloss_10}
+
+- **效能 (performance)**
+
+    在回答問題、探索關係或註釋文字時（舉例說明），測量 {{site.data.keyword.watson}} 系統的正確性、查準率及查全率。
+
+- **特性 (feature)**
+
+    類型的資料成員或屬性。
 
 - **真否定 (true negative)**
 
@@ -144,40 +150,32 @@ lastupdated: "2018-04-04"
 
     實際上正確的答案或註釋，且預測為正確。
 
-- **特性 (feature)**
-
-    類型的資料成員或屬性。
-
-- **效能 (performance)**
-
-    在回答問題、探索關係或註釋文字時（舉例說明），測量 {{site.data.keyword.watson}} 系統的正確性、查準率及查全率。
-
 - **訓練 (train)**
 
-    這個程序會使用可讓系統在特定領域中運作的元件（例如：語料庫內容、產生機器學習模型的訓練資料、程式化演算法、註釋程式或其他基準元件）來設定 {{site.data.keyword.watson}} 實例，然後根據正確性分析來改善及更新這些元件。
+    這個程序會使用可讓系統在特定領域中運作的元件（例如：語料庫內容、產生機器學習模型的訓練資料、程式化演算法或其他基準元件）來設定 {{site.data.keyword.watson}} 實例，然後根據正確性分析來改善及更新這些元件。
 
 - **訓練資料 (training data)**
 
-    一組已註釋的文件，可用來訓練機器學習註釋程式。另請參閱[盲目資料 (blind data)](#gloss_8) 及[測試資料 (testing data)](#gloss_12)。
+    一組已註釋的文件，可用來訓練機器學習模型。另請參閱[盲目資料 (blind data)](/docs/services/watson-knowledge-studio/glossary.html#gloss_8) 及[測試資料 (testing data)](/docs/services/watson-knowledge-studio/glossary.html#gloss_12)。
 
 ## 十一劃
 {: #gloss_11}
 
-- **規則集 (rule set)**
+- **基準 (ground truth)**
 
-    一組規則，定義用來註釋文字的型樣。如果套用型樣，則會對相符的註釋執行規則的動作。規則一般會指定必須符合的條件、選用限量元、符合文字必須履行的其他限制清單，以及發生相符時要採取的動作，例如，建立新註釋或修改現有註釋。
+    用來讓機器學習模型適應特定領域的一組已審查資料（包含註釋人員所新增的註釋）。基準用來訓練機器學習模型、測量模型效能（查準率及查全率）以及計算空餘空間，以決定開發工作的焦點要放在哪裡才能提高效能。基準的正確性很重要，因為基準不正確會造成使用該基準的元件也不正確。
+
+- **混淆矩陣 (confusion matrix)**
+
+    提供已註釋文件集之詳細數字分析的表格。此表格用來比較機器學習模型所新增之註釋與基準中的註釋。此表格會報告[誤肯定 (false positives)](/docs/services/watson-knowledge-studio/glossary.html#gloss_14)、[誤否定 (false negatives)](/docs/services/watson-knowledge-studio/glossary.html#gloss_14)。
 
 - **處理引擎保存檔 (processing engine archive, PEAR)**
 
     此為 `.pear` 保存檔，包括 Unstructured Information Management Architecture (UIMA) 分析引擎，以及使用該引擎來進行自訂分析時所需的所有資源。
 
-- **混淆矩陣 (confusion matrix)**
+- **規則集 (rule set)**
 
-    提供已註釋文件集之詳細數字分析的表格。此表格用來比較機器學習模型所新增之註釋與基準中的註釋。此表格會報告[誤肯定 (false positives)](#gloss_14)、[誤否定 (false negatives)](#gloss_14)。
-
-- **基準 (ground truth)**
-
-    用來讓機器學習模型適應特定領域的一組已審查資料（包含註釋人員所新增的註釋）。基準用來訓練機器學習模型、測量模型效能（查準率及查全率）以及計算空餘空間，以決定開發工作的焦點要放在哪裡才能提高效能。基準的正確性很重要，因為基準不正確會造成使用該基準的元件也不正確。
+    一組規則，定義用來註釋文字的型樣。如果套用型樣，則會對相符的註釋執行規則的動作。規則一般會指定必須符合的條件、選用限量元、符合文字必須履行的其他限制清單，以及發生相符時要採取的動作，例如，建立新註釋或修改現有註釋。
 
 ## 十二劃
 {: #gloss_12}
@@ -186,29 +184,17 @@ lastupdated: "2018-04-04"
 
     您在領域資料中視為相關的一段文字。例如，在關於汽車的類型系統中，出現的詞彙諸如「安全氣囊」、Ford Explorer 及「兒童防制系統」可能都是相關的提及項目。
 
-- **詞目 (lemma)**
-
-    單字的正規化或標準形式。一般而言，詞目是名詞或動詞的未衍生及未變形形式。例如，詞彙 'organizing' 及 'organized' 的詞目為 'organize'。另請參閱[字典 (dictionary)](#gloss_6) 及[表面形式 (surface form)](#gloss_8)。
-
-- **詞性 (part of speech, POS)**
-
-    在字典中，會指派詞性 (POS) 標籤給個別的詞彙項目。例如，「快速移動」這個單字可識別為動詞或名詞。
-
-- **裁定 (adjudication)**
-
-    藉由比較不同註釋人員新增至相同文件的註釋，來解決註釋衝突的反覆運算程序。
-
-- **詞語索引 (concordance)**
-
-    提供一種方式來確保相同的提及項目在整個文件中以及各註釋集間都註釋相同的實體類型。「詞語索引」可協助確保多次出現提及項目的一致性，而不需要註釋人員在每一次出現時手動加上標籤。
-
 - **測試資料 (testing data)**
 
-    一組已註釋的文件，可用來在汲取及訓練之後評估系統度量。另請參閱[盲目資料 (blind data)](#gloss_8) 及[訓練資料 (training data)](#gloss_10)。
+    一組已註釋的文件，可用來在汲取及訓練之後評估系統度量。另請參閱[盲目資料 (blind data)](/docs/services/watson-knowledge-studio/glossary.html#gloss_8) 及[訓練資料 (training data)](/docs/services/watson-knowledge-studio/glossary.html#gloss_10)。
 
 - **策劃 (curate)**
 
     選取、收集、保留及維護與特定主題相關的內容。策劃會建立資料、維護資料並將值新增至資料；它會將資料轉換成受信任的資訊與知識。
+
+- **裁定 (adjudication)**
+
+    藉由比較不同註釋人員新增至相同文件的註釋，來解決註釋衝突的反覆運算程序。
 
 - **註釋 (annotation)**
 
@@ -224,7 +210,7 @@ lastupdated: "2018-04-04"
 
 - **註釋程式 (annotator)**
 
-    請參閱[註釋人員 (human annotator)](#gloss_12) 及[機器學習註釋程式 (machine learning annotator)](#gloss_16)。
+    請參閱[註釋人員 (human annotator)](/docs/services/watson-knowledge-studio/glossary.html#gloss_12) 及[機器學習註釋程式 (machine learning annotator)](/docs/services/watson-knowledge-studio/glossary.html#gloss_16)。
 
 - **註釋程序管理員 (annotation process manager)**
 
@@ -233,6 +219,18 @@ lastupdated: "2018-04-04"
 - **註釋集 (annotation set)**
 
     在人工註釋中，這是從語料庫（容許多位註釋人員共用工作負載）中擷取的文件集合。在機器型註釋中，這是可作為盲目資料、訓練資料或測試資料的文件集合。
+
+- **詞目 (lemma)**
+
+    單字的正規化或標準形式。一般而言，詞目是名詞或動詞的未衍生及未變形形式。例如，詞彙 'organizing' 及 'organized' 的詞目為 'organize'。另請參閱[字典 (dictionary)](/docs/services/watson-knowledge-studio/glossary.html#gloss_6) 及[表面形式 (surface form)](/docs/services/watson-knowledge-studio/gloss_8)。
+
+- **詞性 (part of speech, POS)**
+
+    在字典中，會指派詞性 (POS) 標籤給個別的詞彙項目。例如，「快速移動」這個單字可識別為動詞或名詞。
+
+- **詞語索引 (concordance)**
+
+    提供一種方式來確保相同的提及項目在整個文件中以及各註釋集間都註釋相同的實體類型。「詞語索引」可協助確保多次出現提及項目的一致性，而不需要註釋人員在每一次出現時手動加上標籤。
 
 ## 十三劃
 {: #gloss_13}
@@ -252,6 +250,16 @@ lastupdated: "2018-04-04"
 ## 十四劃
 {: #gloss_14}
 
+- **實體類型 (entity type)**
+
+    提及項目在不考慮上下文的情況下所代表的實體類型。例如，實體類型 ORGANIZATION 可能會註釋 {{site.data.keyword.IBM_notm}} 這個提及項目。
+
+    在實體關係模型中，實體類型是要建模的事物或提及項目所參照的事物，例如人員或工作區的名稱。不同的實體類型有不同的屬性集，例如「暱稱」或「故鄉」，並透過「住在」之類的關係來連接。實體類型單獨存在，且可以唯一地識別。
+
+- **語料庫 (corpus)**
+
+    已新增至工作區並用來訓練機器學習模型的來源文件集合。
+
 - **誤否定 (false negative)**
 
     正確的答案或註釋，但預測為不正確。
@@ -259,16 +267,6 @@ lastupdated: "2018-04-04"
 - **誤肯定 (false positive)**
 
     不正確的答案或註釋，但預測為正確。
-
-- **語料庫 (corpus)**
-
-    已新增至工作區並用來訓練機器學習模型的來源文件集合。
-
-- **實體類型 (entity type)**
-
-    提及項目在不考慮上下文的情況下所代表的實體類型。例如，實體類型 ORGANIZATION 可能會註釋 {{site.data.keyword.IBM_notm}} 這個提及項目。
-
-    在實體關係模型中，實體類型是要建模的事物或提及項目所參照的事物，例如人員或工作區的名稱。不同的實體類型有不同的屬性集，例如「暱稱」或「故鄉」，並透過「住在」之類的關係來連接。實體類型單獨存在，且可以唯一地識別。
 
 ## 十六劃
 {: #gloss_16}
@@ -279,7 +277,7 @@ lastupdated: "2018-04-04"
 
 - **機器學習註釋程式 (machine learning annotator)**
 
-    請參閱[機器學習模型 (machine learning model)](#gloss_16)。
+    請參閱[機器學習模型 (machine learning model)](/docs/services/watson-knowledge-studio/glossary.html#gloss_16)。
 
 - **機器學習模型 (machine learning model)**
 
@@ -294,7 +292,7 @@ lastupdated: "2018-04-04"
 
 - **關係類型 (relation type)**
 
-    兩個實體之間的二進位單向關係。例如，Mary employedBy {{site.data.keyword.IBM_notm}} 是有效的關係；{{site.data.keyword.IBM_notm}} employedBy Mary 則不是。
+    兩個實體之間的二進位單向關係。例如，`Mary` `employedBy` {{site.data.keyword.IBM_notm}} 是有效的關係；{{site.data.keyword.IBM_notm}} `employedBy` `Mary` 則不是。
 
 - **類型系統 (type system)**
 

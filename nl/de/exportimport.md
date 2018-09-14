@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -35,12 +35,14 @@ Die Dateien, die Sie herunterladen, sind vom Betriebssystem unabhängig. Auf den
 ## Typsysteme
 {: #wks_exportimport_expimp_type}
 
-Um ein Typsystem herunterzuladen, öffnen Sie die Seite **Assets & Tools** > **Entitätstypen** und klicken Sie auf **Typen herunterladen**. Das System erstellt eine Datei mit dem Namen `types-ID.json` und fordert Sie auf, die Datei in Ihr lokales System herunterzuladen. Wenn Sie dieses Typsystem in einem neuen Arbeitsbereich verwenden möchten, öffnen Sie die Seite **Entitätstypen** und laden Sie die `JSON`-Datei hoch, die Sie zuvor heruntergeladen haben.
+Um ein Typsystem herunterzuladen, öffnen Sie die Seite **Assets** > **Entitätstypen** und klicken Sie auf **Typen herunterladen**. Das System erstellt eine Datei mit dem Namen `types-ID.json` und fordert Sie auf, die Datei in Ihr lokales System herunterzuladen. Wenn Sie dieses Typsystem in einem neuen Arbeitsbereich verwenden möchten, öffnen Sie die Seite **Entitätstypen** und laden Sie die `JSON`-Datei hoch, die Sie zuvor heruntergeladen haben.
 
 ## Wörterverzeichnisse
 {: #wks_exportimport_expimp_dict}
 
-Um mindestens ein Wörterverzeichnis herunterzuladen, wählen Sie die Registerkarte **Assets & Tools** > **Vorannotatoren** > **Wörterverzeichnisse** aus und klicken Sie auf **Wörterverzeichnisse herunterladen**. Für jedes Wörterverzeichnis, das Sie herunterladen, erstellt das System eine Datei mit dem Namen `wörterverzeichnisname_zeitmarke.csv` , komprimiert die erstellten Dateien zu einer `ZIP`-Datei mit dem Namen `arbeitsverzeichnisname_wörterverzeichnis_zeitmarke.zip` und fordert Sie auf, die Datei in Ihr lokales System herunterzuladen. Sie können auch ein einzelnes Wörterverzeichnis herunterladen, indem Sie das Wörterverzeichnis öffnen und auf **Herunterladen** klicken. Schreibgeschützte Wörterverzeichnisse, die Sie als CSV-Datei hochgeladen haben, können nicht heruntergeladen werden.
+Wenn Sie alle Wörterverzeichnisse herunterladen möchten, wählen Sie die Seite **Assets** > **Wörterverzeichnisse** aus, klicken Sie auf das **Menü**-Symbol neben der Schaltfläche **Wörterverzeichnis erstellen** und wählen Sie **Wörterverzeichnisse herunterladen** aus. Für jedes Wörterverzeichnis, das Sie herunterladen, erstellt das System eine Datei mit dem Namen `wörterverzeichnisname_zeitmarke.csv` , komprimiert die erstellten Dateien zu einer `ZIP`-Datei mit dem Namen `arbeitsverzeichnisname_wörterverzeichnis_zeitmarke.zip` und fordert Sie auf, die Datei in Ihr lokales System herunterzuladen.
+
+Sie können ein einzelnes Wörterverzeichnis herunterladen, indem Sie das Wörterverzeichnis öffnen und auf **Herunterladen** klicken. Schreibgeschützte Wörterverzeichnisse, die Sie als CSV-Datei hochgeladen haben, können nicht heruntergeladen werden.
 
 Bevor Sie ein heruntergeladenes Wörterverzeichnis in einen neuen Arbeitsbereich hochladen, müssen Sie das Typsystem aus dem ursprünglichen Arbeitsbereich herunterladen und in den neuen Arbeitsbereich hochladen. Das Typsystem und die Wörterverzeichnisse müssen aus demselben {{site.data.keyword.knowledgestudioshort}}-Arbeitsbereich stammen und das Typsystem muss in dem neuen Arbeitsbereich vorhanden sein, bevor Sie die Wörterverzeichnisse hochladen.
 
@@ -49,7 +51,7 @@ Um Wörterverzeichnisse hochzuladen, öffnen Sie die Registerkarte **Wörterverz
 ## Dokumente
 {: #wks_exportimport_expimp_doc}
 
-Um Dokumente herunterzuladen, die Sie zum Korpus hinzugefügt haben, öffnen Sie die Registerkarte **Assets & Tools** > **Dokumente** > **Dokumentgruppen** und klicken Sie auf **Dokumentgruppen herunterladen**. Das System erstellt eine Datei mit dem Namen `corpus-ID.zip` und fordert Sie auf, die Datei in Ihr lokales System herunterzuladen. Die `ZIP`-Datei enthält alle Dokumente aus dem Korpus. Annotationen, die in Annotationsgruppen hinzugefügt wurden, werden in die ZIP-Datei einbezogen, jedoch erst, nachdem die Annotationsgruppen genehmigt und in die Ground Truth hochgestuft wurden.
+Um Dokumente herunterzuladen, die Sie zum Korpus hinzugefügt haben, öffnen Sie die Registerkarte **Assets** > **Dokumente** > **Dokumentgruppen** und klicken Sie auf **Dokumentgruppen herunterladen**. Das System erstellt eine Datei mit dem Namen `corpus-ID.zip` und fordert Sie auf, die Datei in Ihr lokales System herunterzuladen. Die `ZIP`-Datei enthält alle Dokumente aus dem Korpus. Annotationen, die in Annotationsgruppen hinzugefügt wurden, werden in die ZIP-Datei einbezogen, jedoch erst, nachdem die Annotationsgruppen genehmigt und in die Ground Truth hochgestuft wurden.
 
 > **Einschränkung:** Alle vorannotierten Dokumente werden beim Herunterladen durch ein nicht lesbares Format unkenntlich gemacht. Ereignisannotationen in diesen Dokumenten, die von Annotatorbenutzern hinzugefügt wurden, sind nicht lesbar.
 
@@ -59,10 +61,8 @@ Um Dokumente hochzuladen, öffnen Sie die Registerkarte **Dokumentgruppen** im n
 
 **Zugehörige Konzepte**:
 
-[Typsysteme](/docs/services/watson-knowledge-studio/artifacts.html#wks_typesystem)
+[Artefakttypen](/docs/services/watson-knowledge-studio/artifacts.html)
 
-[Wörterverzeichnisse](/docs/services/watson-knowledge-studio/artifacts.html#wks_dictionaries)
+[Dokumente zum Annotieren hinzufügen](/docs/services/watson-knowledge-studio/documents-for-annotation.html)
 
-[Dokumente für Annotatoren für maschinelles Lernen](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_t_docs_intro)
-
-[Dokumente für regelbasierte Annotatoren](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html)
+[Dokumente zum Definieren von Regeln hinzufügen](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html)

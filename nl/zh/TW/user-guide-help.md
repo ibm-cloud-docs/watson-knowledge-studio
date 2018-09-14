@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-16"
 
 ---
 
@@ -29,11 +29,11 @@ lastupdated: "2018-04-04"
 ## 存取問題
 
 - 如果您無法存取 {{site.data.keyword.knowledgestudioshort}} 實例，請與工作區擁有者合作，確保他已邀請您加入工作區。
-- 如果您可以到達 {{site.data.keyword.knowledgestudioshort}} 實例，但看不到任何列出的工作區，請與工作區的管理者或管理員合作來解決問題。管理者（具有 Admin 角色的人員）或管理員（在 {{site.data.keyword.knowledgestudioshort}} 中具有 ProjectManager 角色的人員），必須 1.) 使您與註釋集相關聯，以及 2.) 建立作業來指派您註釋集合中的文件。在某人執行這些動作之前，您看不到 {{site.data.keyword.knowledgestudioshort}} 首頁上列出的工作區。
+- 如果您可以到達 {{site.data.keyword.knowledgestudioshort}} 實例，但看不到任何列出的工作區，請與工作區的管理者或管理員合作來解決問題。管理者（具有 Admin 角色的人員）或管理員（在 {{site.data.keyword.knowledgestudioshort}} 中具有「專案經理」 角色的人員），必須 1.) 使您與註釋集相關聯，以及 2.) 建立作業來指派您註釋集合中的文件。在某人執行這些動作之前，您看不到 {{site.data.keyword.knowledgestudioshort}} 首頁上列出的工作區。
 
 ## 使用基準編輯器
 
-首先，請檢閱本使用手冊中的資訊。如果您關於如何使用基準編輯器仍有疑問，可以檢查社群討論區，看看其他人是否已問過您的問題並得到回答。或者，您可以要求社群成員提供協助。若要存取 {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Developer 社群討論區，請移至：[https://developer.ibm.com/answers/topics/wks/?smartspace=watson ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/answers/topics/wks/?smartspace=watson){: new_window}。
+首先，請檢閱[註釋文件](/docs/services/watson-knowledge-studio/user-guide.html)中的資訊。如果您仍有關於如何使用基準編輯器的問題，請檢查其中一個可從目錄底端鏈結到的開發人員社群。如果您找不到問題的答案，請自行張貼該問題。
 
 ## 決定註釋
 

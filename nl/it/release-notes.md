@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-08-09"
 
 ---
 
@@ -26,6 +26,82 @@ Questa documentazione è per {{site.data.keyword.knowledgestudiofull}} su {{site
 Sono disponibili le seguenti nuove funzioni e modifiche a {{site.data.keyword.knowledgestudiofull}}.
 {: shortdesc}
 
+## Agosto 2018
+{: #august2018}
+
+### Nuove funzioni e modifiche
+{: #new-august2018}
+
+- Introdotta una nuova opzione per la migrazione automatizzata delle istanze del piano standard dalla piattaforma {{site.data.keyword.IBM_notm}} Marketplace obsoleta alla piattaforma [{{site.data.keyword.cloud_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/blogs/bluemix/2017/12/watson-knowledge-studio-ibm-cloud/){: new_window}. Se hai un'istanza standard nella piattaforma obsoleta, avrai l'opzione di migrarla. Per ulteriori informazioni, vedi [Migrazione a {{site.data.keyword.cloud_notm}}](/docs/services/watson-knowledge-studio/client-migration.html).
+
+## Luglio 2018
+{: #july2018}
+
+### Nuove funzioni e modifiche
+{: #new-july2018}
+
+- La pagina **Deployed Models** è stata aggiornata per includere i modelli dalle istanze {{site.data.keyword.knowledgestudioshort}} gestiti dai *gruppi di risorse* [IAM ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/iam/users_roles.html){: new_window}, in aggiunta ai modelli gestiti dalle *organizzazioni* [Cloud Foundry ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window}.
+
+   Ciò che viene visualizzato nella pagina Deployed Models dipende dalla [regione ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/resources/services_region.html){: new_window} che ospita la tua istanza {{site.data.keyword.knowledgestudioshort}}. Se la regione supporta le istanze gestite da solo uno dei metodi di gestione dell'accesso, visualizzi una scheda per ogni metodo. I modelli dalle istanze gestite da IAM sono elencate nella scheda **Resource Groups**. I modelli dalle istanze gestite da Cloud Foundry sono elencate nella scheda **Organizations**.
+
+  Se la regione supporta le istanze gestite da solo uno dei metodi di gestione dell'accesso, visualizzi solo un elenco di modelli, perché viene applicato solo un metodo di gestione dell'accesso.
+
+   Per visualizzare la pagina **Deployed Models**, dal menu **Settings** nella barra del menu in alto a destra, fai clic su **Manage deployed models**. Per informazioni sull'annullamento della distribuzione dei modelli nella pagina **Deployed Models**, consulta [Annullamento della distribuzione dei modelli di machine learning](/docs/services/watson-knowledge-studio/publish-ml.html#undeploy-view-model) e [Annullamento della distribuzione dei modelli basati sulla regola](/docs/services/watson-knowledge-studio/rule-annotator-model-use.html#undeploy-view-model).
+
+- La navigazione è stata modificata per un migliore allineamento con il flusso di lavoro di {{site.data.keyword.knowledgestudioshort}}. Inoltre, è stata riorganizzata la seguente funzionalità:
+
+    - Nella versione precedente, la gestione dei dizionari era inclusa come parte della pagina Pre-annotators. Ora, la gestione dei dizionari si trova nella pagina Dictionaries nella sezione Assets della navigazione.
+    - Nella versione precedente, la funzionalità di annotazione umana era distribuita tra le schede Mentions, Relations e Coreferences nella sezione Document Annotation della navigazione. Ora, la funzionalità è unita alla pagina Annotation Tasks nella sezione Machine Learning Model della navigazione.
+    - Per gestire le attività di annotazione umana, nella versione precedente, trovavi la scheda Tasks nella pagina Assets & Tools > Documents. Ora, aggiungi le attività e gestisci le attività esistenti nella pagina Annotation Tasks nella sezione Machine Learning Model della navigazione. 
+    - Nella versione precedente, le pagine Rules, Regex e Dictionaries erano pagine separate nella sezione Document Annotation della navigazione. Ora, la funzionalità è unita alla pagina Rules nella sezione Rule-based Model della navigazione.
+
+    Per ulteriori dettagli sulle modifiche alla navigazione, consulta la Figura 1 e la Tabella 3.
+
+![Schermate della precedente navigazione (lato sinistro) e della nuova navigazione (lato destro).](images/nav3-0718.svg "Schermate della navigazione precedente e della nuova navigazione. I dettagli delle modifiche sono elencati nella Tabella 3 e nel testo precedente.") Figura 1. Schermate della precedente navigazione (lato sinistro) e della nuova navigazione (lato destro).
+
+| Funzione | Ubicazione precedente | Ubicazione corrente |
+|---------|--------------------------|----------------------|
+| Attività di annotazione | Assets & Tools > Documents > Tasks | Machine Learning Model > Annotation Tasks |
+| Scheda Coreferences | Document Annotation | Machine Learning Model > Annotation Tasks > task > annotation set > document |
+| Pagina Dictionaries (gestione) | Assets & Tools > Pre-annotators > Manage Dictionaries | Assets |
+| Scheda Dictionaries (associazione alle classi del modello basato sulla regola) | Document Annotation | Rule-based Model > Rules |
+| Pagina Documents | Assets & Tools | Assets |
+| Pagina Entity Types | Assets & Tools | Assets |
+| Scheda Mentions | Document Annotation | Machine Learning Model > Annotation Tasks > task > annotation set > document |
+| Pagina Performance | Model Management | Machine Learning Model |
+| Pagina Pre-annotators | Assets & Tools | Machine Learning Model > Pre-annotation |
+| Scheda Regex  | Document Annotation | Rule-based Model > Rules |
+| Pagina Relation Types | Assets & Tools | Assets |
+| Scheda Relations | Document Annotation | Machine Learning Model > Annotation Tasks > task > annotation set > document |
+| Scheda Rules | Document Annotation | Rule-based Model |
+| Scheda Tasks | Assets & Tools > Documents | Machine Learning Model > Annotation Tasks |
+| Pagina Versions (modello di machine learning) | Model Management | Machine Learning Model |
+| Pagina Versions (modello basato sulla regola) | Model Management | Rule-based Model |
+{: caption="Tabella 3. Modifiche alla navigazione (luglio 2018)" caption-side="top"}
+
+## Maggio 2018
+{: #may2018}
+
+### Nuove funzioni e modifiche
+{: #new-may2018}
+
+- È stato risolto un problema di configurazione che ha causato la mancata visualizzazione delle istanze del servizio nella regione di Sydney nella regione Stati Uniti Sud.
+- Nella finestra Deploy Model, se la regione di cui stai eseguendo la distribuzione supporta sia i *gruppi di risorse* {{site.data.keyword.iamlong}} che gli *spazi* Cloud Foundry, per visualizzare l'elenco, dovrai scegliere il metodo di gestione dell'accesso utilizzato dalla tua istanza del servizio. Per ulteriori informazioni su Cloud Foundry e {{site.data.keyword.iamshort}}, vedi [Resource Groups and Access Management ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/blogs/bluemix/2017/12/resource-groups-access-management/){: new_window}.
+- È stata aggiunta l'impostazione di raccolta dei dati nella pagina Service Details. Per ulteriori informazioni sulla raccolta dati, consulta [Risoluzione dei problemi, supporto e FAQ](/docs/services/watson-knowledge-studio/troubleshooting.html#content)
+- È stato aggiunto il supporto lingua per il cinese (tradizionale).
+- Gli utenti che dispongono del ruolo Admin possono ora visualizzare il numero di aree di lavoro utilizzate. Queste informazioni sono disponibili nella pagina Service Details.
+- {{site.data.keyword.alchemylanguagefull}} non è più disponibile per la distribuzione dei modelli. Per informazioni, consulta [Retirement of {{site.data.keyword.alchemyapishort}} service ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/blogs/bluemix/2017/03/bye-bye-alchemyapi/){: new_window}.
+- Ora, se elimini uno spazio di lavoro, ti verrà richiesto di confermare l'azione. Ci auguriamo che questa conferma impedisca delle cancellazioni accidentali.
+- La documentazione include alcuni nuovi dettagli sulla privacy dei dati. Ulteriori informazioni in [Sicurezza informatica](/docs/services/watson-knowledge-studio/information-security.html).
+
+## Aprile 2018
+{: #april2018}
+
+### Nuove funzioni e modifiche
+{: #new-april2018}
+
+- Il piano gratuito di {{site.data.keyword.knowledgestudioshort}} è stato sostituito con il piano Lite. Per ulteriori informazioni, vedi [Go Lite with Watson {{site.data.keyword.knowledgestudioshort}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/blogs/bluemix/2018/04/go-lite-watson-knowledge-studio/){: new_window}.
+
 ## Marzo 2018
 {: #march2018}
 
@@ -36,7 +112,7 @@ Sono disponibili le seguenti nuove funzioni e modifiche a {{site.data.keyword.kn
 - È ora disponibile una traduzione in francese dell'interfaccia {{site.data.keyword.knowledgestudioshort}}.
 - {{site.data.keyword.alchemylanguagefull}} non è più disponibile come pre-annotatore. Invece di {{site.data.keyword.alchemylanguageshort}}, puoi utilizzare {{site.data.keyword.nlushort}} per pre-annotare i tuoi documenti. Per ulteriori informazioni, vedi [Inizio dell'annotazione](/docs/services/watson-knowledge-studio/preannotation.html).
 
-## Dicembre 2017 
+## Dicembre 2017
 {: #december2017}
 
 ### Nuove funzioni e modifiche
@@ -89,7 +165,7 @@ Sono disponibili le seguenti nuove funzioni e modifiche a {{site.data.keyword.kn
 |----------|----------|----------|
 | _progetto_ | _spazio di lavoro_ | Questo termine è stato modificato perché anche {{site.data.keyword.Bluemix_notm}} utilizza il termine _progetto_ |
 | _importa_ e _esporta_ | _carica_ e _scarica_ | Viene ora fatto riferimento ai termini _importa_ e _esporta_ con _carica_ e _scarica_ quando utilizzati nei termini dei documenti e dei tipi di entità. Il termine _esporta_ viene ancora utilizzato quando si fa riferimento all'esportazione di un modello alle applicazioni come {{site.data.keyword.watson}} Explorer. |
-{: caption="Tabella 1. Modifiche alla terminologia della versione {{site.data.keyword.Bluemix_notm}} " caption-side="top"}
+{: caption="Tabella 1. Modifiche alla terminologia della versione {{site.data.keyword.Bluemix_notm}}" caption-side="top"}
 
 - Per la release {{site.data.keyword.Bluemix_notm}} [sperimentale](/docs/services/watson-knowledge-studio/troubleshooting.html#experimental), alcuni passi dell'attività della documentazione non corrispondono nella nuova interfaccia. La documentazione corrisponde all'interfaccia nel {{site.data.keyword.IBM_notm}} Marketplace. La seguente tabella riepiloga le modifiche alla navigazione della release [sperimentale](/docs/services/watson-knowledge-studio/troubleshooting.html#experimental):
 
@@ -100,14 +176,14 @@ Sono disponibili le seguenti nuove funzioni e modifiche a {{site.data.keyword.kn
 |Scheda Dictionaries | Navigazione principale | Assets & Tools > Pre-annotators |
 |Pagina Dictionary Mapping | Annotator Component | Assets & Tools > Pre-annotators |
 |Sheda Entity Types | Type System | Assets & Tools > Entity Types |
-|Ground Truth Editor | Human Annotation | Scheda Document Annotation  |
+|Ground Truth Editor | Human Annotation | Scheda Document Annotation |
 |Sheda Ground Truth Editor Settings | Human Annotation | Settings > Document Annotation Settings |
 |Modelli, esecuzione ed esportazione | Annotator Component | Model Management > Versions |
 |Scheda Rules | Navigazione principale | Document Annotation > Rules |
 |Scheda Statistics | Annotator Component > Details | Model Management > Performance |
 |Tabella Summary (dalla scheda Statistics) | Annotator Component > Details | Model Management > Performance > Detailed Statistics link |
 |Scheda Type Mapping (dal modello basato sulla regola) | Annotator Component > Details | Model Management > Versions > Rule-based model type mapping |
-{: caption="Tabella 2. Modifiche alla navigazione della versione {{site.data.keyword.Bluemix_notm}} " caption-side="top"}
+{: caption="Tabella 2. Modifiche alla navigazione della versione {{site.data.keyword.Bluemix_notm}}" caption-side="top"}
 
 ## Luglio 2017
 {: #july2017}

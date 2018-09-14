@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-26"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -20,19 +20,21 @@ lastupdated: "2018-03-26"
 Questa documentazione è per {{site.data.keyword.knowledgestudiofull}} su {{site.data.keyword.cloud}}. Per visualizzare la documentazione della versione precedente di {{site.data.keyword.knowledgestudioshort}} nel {{site.data.keyword.IBM_notm}} Marketplace, [fai clic su questo link ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/services/knowledge-studio/rule-annotator-model-create.html){: new_window}.
 {: tip}
 
-# Creazione del modello basato sulla regola 
+# Creazione del modello basato sulla regola
 {: #wks_rule_train}
 
 Dopo aver definito le regole, puoi creare un modello basato sulla regola.
 {: shortdesc}
 
 ## Procedura
+{: #wks_rule_train_procedure}
 
 Per creare un modello basato sulla regola, completa la seguente procedura:
 
 1. Accedi come amministratore o gestore del progetto {{site.data.keyword.knowledgestudioshort}} e seleziona il tuo spazio di lavoro.
-1. Seleziona la scheda **Model Management** > **Versions** > **Rule-based**.
-1. Associa i tipi di entità dal tuo sistema tipo a una o più classi che hai utilizzato per definire le regole.
+1. Seleziona la scheda **Rule-based Model** > **Versions** > **Rule-based Model**.
+2. Fai clic su **Map entity types and classes**.
+3. Associa i tipi di entità dal tuo sistema tipo a una o più classi che hai utilizzato per definire le regole.
 
   Dopo aver associato i tipi di entità, puoi [distribuire il modello basato sulla regola](/docs/services/watson-knowledge-studio/rule-annotator-model-use.html) o utilizzarlo per [pre-annore i documenti](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannotrule) nel processo di creazione di un modello di machine learning.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -26,26 +26,25 @@ Questa documentazione è per {{site.data.keyword.knowledgestudiofull}} su {{site
 Per isolare e risolvere i problemi con i tuoi prodotti {{site.data.keyword.IBM_notm}}, puoi utilizzare le informazioni sulla risoluzione dei problemi e sul supporto. Queste informazioni contengono le istruzioni sull'utilizzo delle risorse di determinazione del problema fornite con i tuoi prodotti {{site.data.keyword.IBM_notm}}, incluso {{site.data.keyword.knowledgestudiofull}}.
 {: shortdesc}
 
-## Tecniche per la risoluzione dei problemi  
+## Tecniche per la risoluzione dei problemi
 {: #ts_overview}
 
 La *risoluzione dei problemi* è un approccio sistematico alla risoluzione di un problema. L'obiettivo della risoluzione dei problemi è determinare il motivo per cui
-qualcosa non funziona nel modo previsto e come risolvere il problema.
-Alcune tecniche comuni possono essere utili per l'attività di risoluzione
+qualcosa non funziona nel modo previsto e come risolvere il problema. Alcune tecniche comuni possono essere utili per l'attività di risoluzione
 dei problemi.
-
 
 Il primo passo per la risoluzione dei problemi è la descrizione dettagliata del problema. La descrizione del problema aiuta l'utente e il rappresentante del supporto tecnico {{site.data.keyword.IBM_notm}} a identificare la possibile causa scatenante del problema. In questa fase bisogna porsi le seguenti domande basilari:
 
-- Quali sono i sintomi del problema? 
-- Dove si evidenzia il problema? 
+- Quali sono i sintomi del problema?
+- Dove si evidenzia il problema?
 - Quando si presenta il problema?
 - Sotto quali condizioni si presenta il problema?
-- È possibile riprodurre il problema? 
+- È possibile riprodurre il problema?
 
 Rispondendo a queste domande si ottiene una descrizione chiara del problema che può agevolarne la risoluzione.
 
-### Quali sono i sintomi del problema? 
+### Quali sono i sintomi del problema?
+{: #ts_overview_symptoms}
 
 Quando si comincia a descrivere un problema, la domanda
 più ovvia è "Qual è il problema?". Questa domanda potrebbe sembrare diretta, tuttavia è possibile scomporla
@@ -56,7 +55,8 @@ del problema. Queste domande possono includere.
 - Quali sono i codici errore e i messaggi?
 - Qual è il malfunzionamento del sistema? Ad esempio, si tratta di un loop, di una sospensione, di un'interruzione, di un peggioramento delle prestazioni o di risultato non corretto?
 
-### Dove si evidenzia il problema? 
+### Dove si evidenzia il problema?
+{: #ts_overview_where}
 
 La determinazione del punto di origine del problema non è sempre facile, ma è uno dei passi più importanti della risoluzione di un problema. Tra i componenti
 che segnalano il malfunzionamento e i componenti malfunzionanti possono
@@ -66,13 +66,14 @@ Le domande seguenti aiutano a individuare il punto esatto in cui si verifica il 
 
 - Il problema è specifico di una piattaforma o sistema operativo o si verifica su più piattaforme o sistemi operativi?
 - La configurazione e l'ambiente correnti sono supportati?
-- Il problema viene rilevato da tutti gli utenti? 
+- Il problema viene rilevato da tutti gli utenti?
 - (Per le installazioni su più siti). Tutti i siti presentano il problema?
 
 Seppure un livello segnali un problema, ciò non presuppone che esso sia necessariamente l'origine. Parte dell'identificazione dell'origine di un problema è conoscere l'ambiente in cui
-il problema è presente. È sempre utile dedicare tempo alla descrizione completa dell'ambiente del problema indicando sistema operativo e versione, tutti i software corrispondenti e relative versioni e le informazioni sull'hardware. Verificare che si utilizzi un ambiente che ha una configurazione supportata: molti problemi possono essere tracciati a livelli non compatibili di software che magari non possono essere eseguiti insieme o che non sono stati testati completamente insieme. 
+il problema è presente. È sempre utile dedicare tempo alla descrizione completa dell'ambiente del problema indicando sistema operativo e versione, tutti i software corrispondenti e relative versioni e le informazioni sull'hardware. Verificare che si utilizzi un ambiente che ha una configurazione supportata: molti problemi possono essere tracciati a livelli non compatibili di software che magari non possono essere eseguiti insieme o che non sono stati testati completamente insieme.
 
 ### Quando si presenta il problema?
+{: #ts_overview_when}
 
 Sviluppare una scala del tempo dettagliata degli eventi che si sono verificati
 fino ad un errore, soprattutto per i casi che rappresentano ricorrenze univoche. Il modo più facile per sviluppare una linea temporale consiste nel
@@ -95,6 +96,7 @@ risposta a questi tipi di domande può fornire un quadro di riferimento
 in cui ricercare il problema.
 
 ### Sotto quali condizioni si presenta il problema?
+{: #ts_overview_conditions}
 
 Sapere quali sistemi e applicazioni sono in esecuzione nel momento in cui si verifica un problema è un aspetto importante della risoluzione dei problemi. Le domande relative al proprio ambiente possono aiutare a identificare la causa principale del problema:
 
@@ -106,7 +108,8 @@ specifica sequenza di eventi?
 Rispondere a questo tipo di domande può facilitare l'illustrazione dell'ambiente in cui si verifica il problema e a correlare eventuali dipendenze. Tenere presente che se più problemi si sono verificati più o meno contemporaneamente questo da solo
 non significa che i problemi siano necessariamente correlati.
 
-### È possibile riprodurre il problema? 
+### È possibile riprodurre il problema?
+{: #ts_overview_reproduce}
 
 Da un punto di
 vista della risoluzione dei problemi, il problema ideale è un problema che
@@ -114,66 +117,33 @@ vista della risoluzione dei problemi, il problema ideale è un problema che
 un problema, si dispone di un maggior numero di strumenti o procedure per effettuare le opportune
 verifiche. Di conseguenza, i problemi che possono essere riprodotti sono spesso più facili da risolvere.
 
-Tuttavia, questi problemi hanno uno svantaggio: se il problema ha un impatto aziendale notevole, non si desidera che venga riprodotto. Se possibile, ricreare il problema in un ambiente di test o di sviluppo che offre in genere una maggiore flessibilità e un maggiore controllo durante l'analisi. 
+Tuttavia, questi problemi hanno uno svantaggio: se il problema ha un impatto aziendale notevole, non si desidera che venga riprodotto. Se possibile, ricreare il problema in un ambiente di test o di sviluppo che offre in genere una maggiore flessibilità e un maggiore controllo durante l'analisi.
 
 - È possibile ricreare il problema in un sistema di test?
 - Più utenti o applicazioni riscontrano lo stesso tipo di problema?
 - È possibile ricreare il problema eseguendo un unico comando, una serie di comandi o una particolare applicazione?
 
-## Problemi con il modello AlchemyLanguage
-{: #wks_ts_deployed_model_deleted}
+## Impossibile creare un'istanza nel piano Lite
+{: #wks_ts_lite}
 
 ### Problema
+{: #wks_ts_lite_problem}
 
-Non puoi distribuire un modello AlchemyLanguage oppure la distribuzione ha avuto esito positivo ma il modello non è disponibile per l'utilizzo.
-
-### Sintomi
-
-- Hai distribuito un modello ma lo stato mostra che si è verificato un errore.
-- Hai distribuito un modello e lo stato indica che il modello era disponibile ma non puoi utilizzarlo.
-- Il modello è stato distribuito correttamente e funzionava precedentemente ma non ora non più.
+Provi a creare un'istanza {{site.data.keyword.knowledgestudioshort}} nel piano Lite e visualizzi il messaggio di errore, `Error 331: We are unable to process your request. Please try again later or contact the {{site.data.keyword.IBM_notm}} Helpdesk.`
 
 ### Cause
+{: #wks_ts_lite_causes}
 
-I seguenti eventi possono causare problemi con i modelli distribuiti:
-
-- Se hai sbagliato a immettere la chiave {{site.data.keyword.alchemyapishort}} quando la aggiungi al parametro `apikey` della chiamata API REST, la chiamata avrà esito negativo. Lo stesso vale per l'ID del modello. È meglio copiare e incollare l'ID del modello e la chiave API per evitare errori di battitura.
-- Se fornisci una chiave {{site.data.keyword.alchemyapishort}} non valida o se non sei autorizzato a distribuire un modello personalizzato, il processo di distribuzione indicherà che il modello è stato distribuito correttamente ma non potrai utilizzarlo.
-- Se, mentre utilizzi {{site.data.keyword.alchemylanguageshort}} in {{site.data.keyword.Bluemix}}, elimini tutte le istanze del servizio associate a una chiave {{site.data.keyword.alchemyapishort}} in {{site.data.keyword.Bluemix_notm}}, tutti i modelli distribuiti che fanno riferimento a tale chiave saranno rimossi dal servizio. {{site.data.keyword.Bluemix_notm}} controlla periodicamente se i modelli registrati sono associati a una chiave valida e tutti quelli che non lo sono vengono eliminati. Se il tuo modello è stato distribuito con una chiave che è stata eliminata, lo stato si modificherà in `error`.
+{{site.data.keyword.knowledgestudioshort}} non consente più di un pano Lite per organizzazione.
 
 ### Risoluzione del problema
-
-1. Controlla lo stato della distribuzione.
-
-    Accedi come amministratore {{site.data.keyword.knowledgestudioshort}}. Nella pagina **Model Management** > **Versions**, visualizza la colonna **Status** per controllare lo stato del modello che hai distribuito.
-
-1. Se lo stato della distribuzione del modello è `error` o `available` ma il modello non funziona quando provi ad utilizzarlo, ritiralo dalla distribuzione facendo clic su **Undeploy**.
-1. Ridistribuisci il modello.
-
-    Utilizza solo una chiave {{site.data.keyword.alchemyapishort}} valida che ha l'autorizzazione a distribuire i modelli e copia e incolla l'ID del modello e la chiave API quando li aggiungi come parametri alla chiamata API.
-
-**Attività correlate**:
-
-[Distribuzione di un modello di machine learning a {{site.data.keyword.IBM_notm}} {{site.data.keyword.alchemylanguageshort}}](/docs/services/watson-knowledge-studio/publish-ml.html#wks_mabluemix)
-
-## Impossibile creare un account gratuito
-{: #wks_ts_free}
-
-### Problema
-
-Provi a creare un account gratuito e visualizzi il messaggio di errore, `Error 331: We are unable to process your request. Please try again later or contact the {{site.data.keyword.IBM_notm}} Helpdesk.`
-
-### Cause
-
-{{site.data.keyword.knowledgestudioshort}} non consente più di un account gratuito per organizzazione.
-
-### Risoluzione del problema
+{: #wks_ts_lite_resolve}
 
 Crea un account che non sia incluso nell'organizzazione.
 
-Se devi utilizzare il tuo account corrente per la prova gratuita ed è associato a un account a pagamento, puoi inviare un ticket di supporto. Per ulteriori informazioni, vedi [Come contattare il supporto {{site.data.keyword.IBM_notm}}](/docs/services/watson-knowledge-studio/troubleshooting.html#ts_contactingibmsupport).
+Se devi utilizzare il tuo account corrente per un'istanza di {{site.data.keyword.knowledgestudioshort}} su un piano Lite e il tuo account utente è associato a un account a pagamento, puoi creare un caso. Per ulteriori informazioni, vedi [Come contattare il supporto {{site.data.keyword.IBM_notm}}](/docs/services/watson-knowledge-studio/troubleshooting.html#ts_contactingibmsupport).
 
-Se devi utilizzare il tuo account corrente per la prova gratuita e non è associato a un account a pagamento, inserisci il tuo problema in [{{site.data.keyword.IBM_notm}} developerWorks Answers](https://developer.ibm.com/answers/topics/wks/), assicurandoti di contrassegnare la domanda, **WKS**.
+Se devi utilizzare il tuo account corrente per un'istanza di {{site.data.keyword.knowledgestudioshort}} su un piano Lite e il tuo account non è associato a un account a pagamento, inserisci il tuo problema in [{{site.data.keyword.IBM_notm}} developerWorks Answers ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/answers/topics/watson-knowledge-studio/){: new_window}. Contrassegna la domanda con **WATSON-KNOWLEDGE-STUDIO**.
 
 ## Impossibile accedere all'applicazione
 {: #wks_ts_access}
@@ -183,21 +153,36 @@ Scopri come concedere l'accesso utenti a {{site.data.keyword.knowledgestudioshor
 Devi avere le credenziali di registrazione dell'utente {{site.data.keyword.IBM_notm}} per richiedere un'istanza di {{site.data.keyword.IBM_notm}} {{site.data.keyword.knowledgestudioshort}}.
 
 ### Amministratore
+{: #wks_ts_access_administrator}
 
 Ogni istanza di {{site.data.keyword.knowledgestudioshort}} ha un ruolo di amministratore associato. Alla persona che originariamente si è registrata per utilizzare l'applicazione viene automaticamente assegnato il ruolo di amministratore. L'amministratore può invitare altre persone.
 
 Per le informazioni su come invitare le persone ad utilizzare la tua istanza dell'applicazione, consulta [Assemblaggio del team](/docs/services/watson-knowledge-studio/team.html).
 
 ### Annotatore umano
+{: #wks_ts_access_annotator}
 
 Se sei stato invitato nell'istanza di {{site.data.keyword.knowledgestudioshort}} di qualcuno, per coprire il ruolo di annotatore umano, probabilmente hai ricevuto un invito email. Per prima cosa, devi registrarti con {{site.data.keyword.IBM_notm}} se non hai già le credenziali di registrazione di {{site.data.keyword.IBM_notm}}. Una volta registrato con {{site.data.keyword.IBM_notm}} e accettato l'invito, ti viene fornito l'accesso all'istanza. Tuttavia, dopo che ti è stato fornito l'accesso e prima di poter iniziare ad annotare i documenti, l'amministratore o un gestore del progetto dell'istanza deve aggiungerti a uno spazio di lavoro e assegnarti un'attività di annotazione. Finché non vieni assegnato a un'attività non puoi effettuare alcuna azione nell'istanza di {{site.data.keyword.knowledgestudioshort}}. Per annotare i documenti utilizza l'editor ground truth. Utilizza un browser Google Chrome per prestazioni migliori.
 
 Per l'utilizzo dell'editor ground truth, consulta [Annotazione dei documenti](/docs/services/watson-knowledge-studio/user-guide.html).
 
-## Servizi sperimentali: cosa significa *sperimentale*?
+## Raccolta dei dati 
+{: #content}
+
+Per i piani standard (Lite, standard, pro), per impostazione predefinita, {{site.data.keyword.knowledgestudioshort}} utilizza i dati del client per migliorare il servizio. Questi dati sono utilizzati solo in forma aggregata. I dati del client non vengono condivisi o resi pubblici.
+
+Se hai il ruolo di amministratore, puoi modificare questo comportamento predefinito selezionando l'impostazione di raccolta dei dati nella pagina Service Details.
+
+Per i piani premium e gli account dedicati, {{site.data.keyword.knowledgestudioshort}} non utilizza i dati del client per migliorare il servizio.
+
+Per ulteriori informazioni, consulta la [Descrizione del servizio {{site.data.keyword.knowledgestudioshort}} più recente ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/software/sla/sladb.nsf/searchsaas/?searchview&searchorder=4&searchmax=0&query=Knowledge+Studio){: new_window}.
+
+## Servizi e funzioni sperimentali: cosa significa *sperimentale*?
 {: #experimental}
 
-Per informazioni sui servizi sperimentali, consulta la [documentazione {{site.data.keyword.Bluemix_notm}}](/docs/services/index.html#experimental_services). Per i dettagli completi sui servizi sperimentali, consulta l'ultima versione di [{{site.data.keyword.Bluemix_notm}} Service Description ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://www.ibm.com/software/sla/sladb.nsf/searchsaas/?searchview&searchorder=4&searchmax=0&query=IBM+Bluemix+Service+Description){: new_window}.
+{{site.data.keyword.IBM_notm}} rilascia servizi e funzioni sperimentali da provare. Questi servizi potrebbero non essere stabili, essere modificati frequentemente in modi non compatibili con le versioni precedenti e potrebbero essere sospesi con breve preavviso. Questi servizi e funzioni non sono consigliati per l'utilizzo in ambienti di produzione.
+
+Per ulteriori informazioni sui servizi sperimentali, consulta la [Documentazione di {{site.data.keyword.cloud_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/get-support/servicessupport.html#s-services-exporcont){: new_window}. Per i dettagli completi sui servizi sperimentali, consulta l'ultima versione di [{{site.data.keyword.cloud_notm}} Service Description ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/software/sla/sladb.nsf/sla/bm?OpenDocument){: new_window}.
 
 ## Problemi con lo spazio di archiviazione
 {: #storage}
@@ -205,6 +190,7 @@ Per informazioni sui servizi sperimentali, consulta la [documentazione {{site.da
 A seconda del tuo piano di sottoscrizione, potresti raggiungere il limite di archiviazione specificato per il tuo piano e non poter eseguire le attività che vuoi completare.
 
 ### Sintomi
+{: #storage_symptoms}
 
 Potresti visualizzare un messaggio sull'aver superato lo spazio di archiviazione consentito quando provi ad eseguire una di queste attività:
 
@@ -213,12 +199,14 @@ Potresti visualizzare un messaggio sull'aver superato lo spazio di archiviazione
 - Eseguire un pre-annotatore sui documenti
 
 ### Cause
+{: #storage_causes}
 
 Il limite di archiviazione è stato raggiunto o potrebbe essere superato se l'azione dovesse procedere.
 
 ### Risoluzione del problema
+{: #storage_resolve}
 
-I più grandi consumatori di spazio di archiviazione sono i modelli di machine learning e basati sulla regola. Per liberare spazio, puoi effettuare le seguenti azioni: 
+I più grandi consumatori di spazio di archiviazione sono i modelli di machine learning e basati sulla regola. Per liberare spazio, puoi effettuare le seguenti azioni:
 
 - Elimina l'istantanea delle versioni di ogni modello che non prevedi sia necessario ripristinare.
 - Elimina tutti i modelli di cui non hai bisogno.
@@ -229,33 +217,23 @@ Dopo aver rimosso i modelli o le versioni del modello, attendi un'ora prima di r
 Per gestire la tua fatturazione mensile, se ti è stato assegnato il ruolo di amministratore e hai un account standard o premium, puoi impostare un limite di archiviazione nella pagina Service Details in {{site.data.keyword.knowledgestudioshort}}. Per visualizzare la pagina Service Details e impostare il limite di archiviazione, dalla barra di navigazione principale in {{site.data.keyword.knowledgestudioshort}}, fai clic sull'icona **Settings**, sul link **View/modify service details** e poi sul link **Set storage limit**.
 {: tip}
 
-## Come contattare il supporto IBM 
+## Come contattare il supporto IBM
 {: #ts_contactingibmsupport}
 
 Il supporto {{site.data.keyword.IBM_notm}} fornisce assistenza con i difetti del prodotto, le risposte alle FAQ e aiuta gli utenti a risolvere i problemi con il prodotto.
 
-### Prima di cominciare
+- **Clienti del piano Lite non associati a un account a pagamento**
 
-Per prima cosa, cerca se una soluzione del problema che stai avendo è documentata. Cerca {{site.data.keyword.knowledgestudioshort}} nel [{{site.data.keyword.IBM_notm}} Support Portal ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/support/home/entry/portal){: new_window}. Nella pagina dei risultati della ricerca, fai clic sulla scheda **Support** per visualizzare i risultati dalle tech note, {{site.data.keyword.IBM_notm}} Redbooks e dalla documentazione. Fai clic sulla scheda **For developers** per visualizzare i risultati dalla community {{site.data.keyword.IBM_notm}} developerWorks, come blog e domande sul forum.
+    Richiedi assistenza e risposte alle domande chiedendo ai colleghi della community di sviluppatori. Per i link, consulta la sezione "Developer community" alla fine della tabella dei contenuti.
 
-Dopo aver tentato di trovare la tua risposta o soluzione cercando nel [{{site.data.keyword.IBM_notm}} Support Portal ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/support/home/entry/portal){: new_window}, puoi contattare il supporto {{site.data.keyword.IBM_notm}}. Il tipo di supporto che hai dipende dal tuo tipo di servizio.
+- **Clienti associati a un account a pagamento**
 
-- **Utenti del piano gratuito**
+    Come cliente associato a un account a pagamento, anche tu puoi fare domande e imparare dalle domande di altri utenti. Le community di sviluppatori sono aperte a chiunque e sono un buon punto di partenza. Per i link, consulta la sezione "Developer community" alla fine della tabella dei contenuti.
 
-    Richiedi assistenza e risposte alle domande chiedendo ai colleghi della community di sviluppatori. Per i link alle community di sviluppatori, consulta la sezione **Developer community** nella tabella dei contenuti.
+    **Per contattare il supporto di {{site.data.keyword.IBM_notm}}:**
 
-- **Utenti del piano a pagamento**
+    Devi essere autorizzato a creare casi di supporto nel portale servizio {{site.data.keyword.cloud_notm}}.
 
-    Come utente di un piano a pagamento, anche tu puoi fare domande e imparare dalle domande di altri utenti. I forum sono aperti a chiunque e sono un buon punto di partenza. Per i link, consulta la sezione **Developer community** nella tabella dei contenuti.
-
-    Invia un ticket del problema dal [{{site.data.keyword.IBM_notm}} Cloud Service Portal ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://watson.service-now.com/wcp){: new_window}.
-
-    > **Nota:** devi essere autorizzato per inviare i problemi a {{site.data.keyword.IBM_notm}}.
-
-### Procedura
-
-Per contattare il supporto {{site.data.keyword.IBM_notm}} per un problema:
-
-1. Definisci il problema, raccogli le informazioni di background e determina la gravità del problema.
-1. Raccogli le informazioni di diagnostica, se possibile.
-1. Invia il problema al supporto {{site.data.keyword.IBM_notm}}. Per i dettagli di contatto, fai riferimento a [Software as a Service support guide ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www-01.ibm.com/software/support/acceleratedvalue/SaaS_Handbook_V18.pdf){: new_window}.
+    1. Definisci il problema, raccogli le informazioni di background e determina la gravità del problema.
+    1. Raccogli le informazioni di diagnostica, se possibile.
+    1. Crea un caso nel [portale servizio {{site.data.keyword.cloud_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://watson.service-now.com/wcp){: new_window}.

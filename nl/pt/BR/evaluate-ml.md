@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-08-03"
 
 ---
 
@@ -27,6 +27,7 @@ Revise as anotações que foram incluídas pelo modelo treinado para determinar 
 {: shortdesc}
 
 ## Sobre essa Tarefa
+{: #evaluate-ml_about}
 
 É possível analisar o desempenho visualizando um resumo de estatísticas para tipos de entidade, tipos de relação e menções correferenciadas. É possível também analisar as estatísticas apresentadas em uma *matriz de confusão*. A matriz de confusão ajuda você a comparar as anotações incluídas pelo modelo de aprendizado de máquina com as anotações na verdade absoluta.
 
@@ -57,13 +58,14 @@ As estatísticas do modelo fornecem as métricas a seguir:
     Uma medida de verdade absoluta que mostra quantos documentos contêm um determinado tipo de entidade ou tipo de relação. Essa estatística não está disponível para menções correferenciadas. Esse valor pode ajudá-lo a avaliar se os documentos no conjunto representam o domínio suficientemente. Se a porcentagem é baixa para tipos de entidade-chave, você pode desejar incluir mais documentos com menções de tipos sub-representados.
 
 ## Procedimento
+{: #evaluate-ml_procedure}
 
 Para visualizar estatísticas de desempenho do quão bem o modelo foi treinado:
 
 1. Efetue login como um administrador ou gerente de projeto do {{site.data.keyword.knowledgestudioshort}} e selecione a sua área de trabalho.
-1. Selecione **Gerenciamento de modelo** > **Desempenho**.
+1. Selecione  ** Modelo de Aprendizado de Máquina **  >  ** Desempenho **.
 1. Para as menções, relações ou correferências, selecione o link **Estatísticas detalhadas**.
-1. Na visualização **Resumo** visualização, especifique se você deseja avaliar dados de teste ou dados de treinamento e, em seguida, especifique o tipo de anotações para as quais deseja ver estatísticas: tipos de entidade, tipos de relação ou menções correferenciadas. Observe que os dados ocultos seriam analisados muito raramente e não até você se sentir relativamente confiante nas pontuações de dados de teste. Conforme você rola pelos dados, os itens que têm pontuações baixas são sinalizados e destacados para indicar que eles requerem investigação e melhoria. O ícone de aviso em triângulo indica que o valor F1 é menor que o valor fixo, 0,5.
+1. Na visualização **Resumo** visualização, especifique se você deseja avaliar dados de teste ou dados de treinamento e, em seguida, especifique o tipo de anotações para as quais deseja ver estatísticas: tipos de entidade, tipos de relação ou menções correferenciadas. Conforme você rola pelos dados, os itens que têm pontuações baixas são sinalizados e destacados para indicar que eles requerem investigação e melhoria. O ícone de aviso em triângulo indica que o valor F1 é menor que o valor fixo, 0,5.
 
     Por exemplo, a pontuação F1 para alguns tipos de entidade pode ser alta porque o documento foi anotado por meio de pré-anotação, assim como por um anotador humano. Mas a pontuação F1 para outros tipos de entidade pode ser baixa porque as diferenças nas frases e as diferenças em como os anotadores humanos interpretam o texto ou as diretrizes de anotação tornam mais difícil para o modelo de aprendizado de máquina reconhecer o padrão e aplicar a anotação correta.
 
@@ -80,15 +82,19 @@ Para visualizar estatísticas de desempenho do quão bem o modelo foi treinado:
 
     Por exemplo, o exemplo de matriz de confusão a seguir mostra os resultados de um modelo de aprendizado de máquina executado em documentos que lidam com incidentes de tráfego.
 
-    <table cellpadding="4" cellspacing="0" summary="Exemplo de matriz de confusão de relatório de incidente" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d15356e164" class="stentry thleft thbot">Tipos de entidade</th>
-        <th valign="bottom" align="left" id="d15356e166" class="stentry thleft thbot">MANUFACTURER</th>
-        <th valign="bottom" align="left" id="d15356e168" class="stentry thleft thbot">MODEL</th>
-        <th valign="bottom" align="left" id="d15356e170" class="stentry thleft thbot">O</th>
+    <table summary="Exemplo de matriz de confusão do relatório de incidente">
+       <caption>Tabela 1. Exemplo de Matriz de Confusão</caption>
+       <tr>
+        <th style="vertical-align:bottom; text-align:left" id="d15356e164">Tipos de entidade</th>
+        <th style="vertical-align:bottom; text-align:center" id="d15356e166">MANUFACTURER</th>
+        <th style="vertical-align:bottom; text-align:center" id="d15356e168">MODEL</th>
+        <th style="vertical-align:bottom; text-align:center" id="d15356e170">O</th>
       </tr>
-      <tr class="strow"><td valign="top" headers="d15356e164" class="stentry"><p class="p wrapper">MANUFACTURER</p></td>
-        <td valign="top" headers="d15356e166" class="stentry"><p class="p wrapper">515</p></td>
-        <td valign="top" headers="d15356e168" class="stentry"><p class="p wrapper">5</p></td>
-        <td valign="top" headers="d15356e170" class="stentry"><p class="p wrapper">44</p></td>
+      <tr>
+        <td style="vertical-align:top; text-align:left" headers="d15356e164">MANUFACTURER</td>
+        <td style="vertical-align:top; text-align:center" headers="d15356e166">515</td>
+        <td style="vertical-align:top; text-align:center" headers="d15356e168">5</td>
+        <td style="vertical-align:top; text-align:center" headers="d15356e170">44</td>
       </tr>
     </table>
     {: #evaluate-ml__datasimpletable_yms_hff_cw}
@@ -109,121 +115,134 @@ Use esta folha de dicas para ajudá-lo a determinar as etapas que podem ser toma
 
 A tabela a seguir sugere correções para os problemas mais comuns de desempenho do modelo de aprendizado de máquina.
 
-<table cellpadding="4" cellspacing="0" summary="The tabela lista os problemas comuns naquela primeira coluna e as correções sugeridas na primeira linha. As marcas X indicam qual correção aplicar para qual problema." border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d15356e221" class="stentry thleft thbot">Problema</th>
-<th valign="bottom" align="left" id="d15356e223" class="stentry thleft thbot">Incluir dicionários</th>
-<th valign="bottom" align="left" id="d15356e225" class="stentry thleft thbot">Editar conjuntos de documentos</th>
-<th valign="bottom" align="left" id="d15356e227" class="stentry thleft thbot">Inclua documentos de tipo específico</th>
-<th valign="bottom" align="left" id="d15356e229" class="stentry thleft thbot">Anotar mais corpus</th>
-<th valign="bottom" align="left" id="d15356e231" class="stentry thleft thbot">Corrigir anotações humanas</th>
-<th valign="bottom" align="left" id="d15356e233" class="stentry thleft thbot">Aprimorar diretrizes do anotador humano</th>
-<th valign="bottom" align="left" id="d15356e235" class="stentry thleft thbot">Atualizar o sistema de tipos</th>
-<th valign="bottom" align="left" id="d15356e237" class="stentry thleft thbot">Investigar mais</th>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">F1 baixo</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper">P</p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper">P</p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper">P</p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">P</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper">P</p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper">P</p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper">P</p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper">P</p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Baixa precisão</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">P</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper">P</p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper">P</p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper">P</p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper">P</p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Baixa rechamada</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper">P</p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper">P</p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper">P</p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">P</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">% de baixa anotação</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper">P</p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper">P</p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">P</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Baixa densidade</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper">P</p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper">P</p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">P</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Alguns documentos do tipo</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper">P</p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">P</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper">P</p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Categorização incorreta</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper">P</p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper">P</p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Anotações perdidas</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper">P</p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">P</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Diferença entre resultados de teste e treinamento </p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper">P</p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">F1 baixo para testar dados de treinamento</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper">P</p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper">P</p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper">P</p></td>
-</tr>
+<table summary="A tabela lista problemas comuns nessa primeira coluna e as correções sugeridas na primeira linha. As marcas X indicam qual correção aplicar a qual problema.">
+    <caption>Tabela 2. Correções para problemas comuns de desempenho</caption>
+    <tr>
+      <th style="vertical-align:bottom; text-align:left" id="d15356e221">Problema</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e223">Incluir dicionários</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e225">Editar conjuntos de documentos</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e227">Inclua documentos de tipo específico</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e229">Anotar mais corpus</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e231">Corrigir anotações humanas</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e233">Aprimorar diretrizes do anotador humano</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e235">Atualizar o sistema de tipos</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e237">Investigar mais</th>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">F1 baixo</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223">P</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225">P</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227">P</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">P</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231">P</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233">P</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235">P</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237">P</td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Baixa precisão</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">P</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231">P</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233">P</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235">P</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237">P</td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Baixa rechamada</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223">P</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225">P</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227">P</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">P</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">% de anotação baixa</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225">P</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227">P</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">P</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Baixa densidade</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225">P</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227">P</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">P</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Alguns documentos do tipo</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227">P</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">P</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235">P</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Categorização incorreta</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223">P</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235">P</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Anotações perdidas </td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223">P</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">P</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Diferença entre resultados de teste e treinamento </td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225">P</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">F1 baixo para testar dados de treinamento</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231">P</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233">P</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237">P</td>
+    </tr>
 </table>
-
- {: #evaluate-ml_cheat__datasimpletable_nhm_5ym_cw}
+{: #evaluate-ml_cheat__datasimpletable_nhm_5ym_cw}
 
 ### Descrições de correções
+{: #evaluate-ml_fixes}
 
 - **Incluir dicionários**
 
@@ -277,14 +296,17 @@ A tabela a seguir sugere correções para os problemas mais comuns de desempenho
 Ajuste o desempenho de seu modelo de aprendizado de máquina para direcionar as pontuações F1 baixas.
 
 ### Sintomas
+{: #evaluate-mllowf1_symptoms}
 
 Uma pontuação F1 atinge seu melhor valor em 1 e pior valor em 0. Uma pontuação F1 baixa é uma indicação de precisão fraca e rechamada fraca. O modelo de aprendizado de máquina gera anotações erradas e falha ao localizar anotações que ele deveria ter localizado.
 
 ### Causas
+{: #evaluate-mllowf1_causes}
 
 As pontuações F1 baixas podem ocorrer por muitas razões diferentes que dependem do domínio, complexidade do sistema de tipos, adequação de documentos de treinamento, qualificações do anotador humano e outros fatores.
 
 ### Solução do Problema
+{: #evaluate-mllowf1_resolving}
 
 Ajuste o desempenho de seu modelo de aprendizado de máquina executando uma ou mais das etapas a seguir e, em seguida, treinando novamente seu modelo:
 
@@ -310,14 +332,17 @@ Ajuste o desempenho de seu modelo de aprendizado de máquina executando uma ou m
 Ajuste o desempenho de seu modelo de aprendizado de máquina para resolver pontuações de baixa precisão. Em um alto nível, a baixa precisão indica uma necessidade de melhorar a consistência de anotação.
 
 ### Sintomas
+{: #evaluate-mllowp_symptoms}
 
 Uma pontuação de precisão atinge seu melhor valor em 1 e pior valor em 0. Uma pontuação de baixa precisão indica que o modelo de aprendizado de máquina gerou anotações incorretas.
 
 ### Causas
+{: #evaluate-mllowp_causes}
 
 As pontuações de baixa precisão podem ocorrer por muitas razões diferentes que dependem do domínio, complexidade do sistema de tipos, adequação de documentos de treinamento, qualificações do anotador humano e outros fatores.
 
 ### Solução do Problema
+{: #evaluate-mllowp_resolving}
 
 Ajuste o desempenho de seu modelo de aprendizado de máquina executando uma ou mais das etapas a seguir e, em seguida, recicle o seu modelo:
 
@@ -337,14 +362,17 @@ Figura 2. Como resolver pontuações de baixa precisão
 Ajuste o desempenho de seu modelo de aprendizado de máquina para endereçar as pontuações de baixa rechamada. Em um alto nível, a baixa rechamada indica uma necessidade de incluir mais dados de treinamento.
 
 ### Sintomas
+{: #evaluate-mllowr_symptoms}
 
 Uma pontuação de rechamada atinge seu melhor valor em 1 e pior valor em 0. Uma pontuação de baixa rechamada indica que o modelo de aprendizado de máquina falhou ao criar anotações que ele deveria ter criado.
 
 ### Causas
+{: #evaluate-mllowr_causes}
 
 As pontuações de baixa rechamada podem ocorrer por várias razões diferentes que dependem do domínio, complexidade do sistema de tipos, adequação de documentos de treinamento, qualificações do anotador humano e outros fatores.
 
 ### Solução do Problema
+{: #evaluate-mllowr_resolving}
 
 Ajuste o desempenho de seu modelo de aprendizado de máquina executando uma ou mais das etapas a seguir e, em seguida, recicle o seu modelo:
 

@@ -1,8 +1,8 @@
-﻿---
+---
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-08-29"
 
 ---
 
@@ -32,17 +32,19 @@ Dans {{site.data.keyword.knowledgestudiofull}}, la création d'un modèle d'appr
 Lorsque vous créez un modèle d'apprentissage automatique, vous devez sélectionner les jeux de documents à utiliser pour l'entraîner et spécifier les pourcentages de documents à utiliser comme données d'apprentissage, données de test et données aveugles.
 
 ### A propos de cette tâche
+{: #wks_madocsets_about}
 
 En explorant les métriques de performances, vous pouvez identifier différents moyens d'améliorer l'exactitude du modèle.
 
-> **Restriction :** Seuls trois annotateurs d'apprentissage automatique par instance {{site.data.keyword.knowledgestudioshort}} peuvent être entraînés à la fois. Si votre instance contient plusieurs espaces de travail et que trois annotateurs d'apprentissage automatique sont déjà en cours d'entraînement dans d'autres espaces de travail, votre demande d'entraînement du modèle dans votre propre espace sera mise en file d'attente jusqu'à ce que les autres entraînements soient terminés.
+> **Restriction :** Seuls trois modèles d'apprentissage automatique par instance {{site.data.keyword.knowledgestudioshort}} peuvent être entraînés à la fois. Si votre instance contient plusieurs espaces de travail et que trois modèles d'apprentissage automatique sont déjà en cours d'entraînement dans d'autres espaces de travail, votre demande d'entraînement du modèle dans votre propre espace sera mise en file d'attente jusqu'à ce que les autres entraînements soient terminés.
 
 ### Procédure
+{: #wks_madocsets_procedure}
 
 Pour créer un modèle d'apprentissage automatique :
 
 1. Connectez-vous en tant qu'administrateur {{site.data.keyword.knowledgestudioshort}} et sélectionnez votre espace de travail.
-1. Sélectionnez **Gestion des modèles** > **Performances**.
+1. Sélectionnez **Modèle d'apprentissage automatique** > **Performances**.
 1. Vérifiez que tous les jeux de documents ont été approuvés et que tous les conflits d'annotations ont été résolus par le biais d'un arbitrage. Seuls les documents qui sont devenus données de référence par le biais d'un arbitrage ou d'une approbation peuvent servir à entraîner le modèle.
 1. Cliquez sur **Entraîner et évaluer**.
 1. Optionnel : pour spécifier comment les documents de vos jeux de documents doivent se répartir entre jeu d'entraînement, jeu de test et jeu aveugle, cliquez sur **Editer les paramètres**.
@@ -65,22 +67,36 @@ Pour créer un modèle d'apprentissage automatique :
 
 1. Une fois le modèle créé, choisissez l'une des actions suivantes :
 
-    <table border="1" frame="hsides" rules="rows" cellpadding="4" cellspacing="0" summary="Chaque ligne du tableau décrit une option" class="simpletable choicetable choicetableborder">
-      <thead><tr><th id="d33883e137-option" valign="bottom" align="left" class="ncol thleft thbot">Option</th>
-          <th id="d33883e137-desc" valign="bottom" align="left" class="ncol thleft thbot">Description</th></tr></thead>
-      <tbody><tr class="strow chrow"><td valign="top" headers="d33883e137-option" id="d33883e139" class="stentry choption ncol"><p class="p wrapper"><strong>Journal</strong></p></td>
-          <td valign="top" headers="d33883e137-desc d33883e139" class="stentry chdesc ncol"><p class="p wrapper">Permet de consulter le fichier journal pour voir s'il y a eu des problèmes.</p></td>
-        </tr>
-        <tr class="strow chrow"><td valign="top" headers="d33883e137-option" id="d33883e144" class="stentry choption ncol"><p class="p wrapper"><strong>Détails</strong></p></td>
-          <td valign="top" headers="d33883e137-desc d33883e144" class="stentry chdesc ncol"><p class="p wrapper">Permet de consulter les statistiques de performances d'annotation, de changer les jeux de documents à utiliser pour
-l'entraînement et le test du modèle et de créer des versions instantanées des artefacts
-du modèle.</p></td>
-        </tr>
-        <tr class="strow chrow"><td valign="top" headers="d33883e137-option" id="d33883e149" class="stentry choption ncol"><p class="p wrapper"><strong>Exporter</strong></p></td>
-          <td valign="top" headers="d33883e137-desc d33883e149" class="stentry chdesc ncol"><p class="p wrapper">Permet d'exporter vers votre système local un fichier <code>ZIP</code> contenant les composants dont le modèle a besoin pour fonctionner dans un environnement d'exécution
-d'apprentissage automatique.</p></td>
-        </tr>
-      </tbody>
+    <table summary="Chaque ligne du tableau décrit une option.">
+      <caption>Tableau 1. Options des documents</caption>
+      <tr>
+        <th style="vertical-align:bottom; text-align"left" id="d33883e137-option">Option</th>
+        <th style="vertical-align:bottom; text-align"left" id="d33883e137-desc">Description</th>
+      </tr>
+      <tr>
+        <td style="vertical-align:top; text-align"left" headers="d33883e137-option" id="d33883e139">
+          <p><strong>Log</strong></p>
+        </td>
+        <td style="vertical-align:top; text-align"left" headers="d33883e137-desc d33883e139">
+          <p>Permet de consulter le fichier journal pour voir s'il y a eu des problèmes.</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="vertical-align:top; text-align"left" headers="d33883e137-option" id="d33883e144">
+          <p><strong>Details</strong></p>
+        </td>
+        <td style="vertical-align:top; text-align"left" headers="d33883e137-desc d33883e144">
+          <p>Permet de consulter les statistiques de performances d'annotation, de changer les jeux de documents à utiliser pour l'entraînement et le test du modèle et de créer des versions instantanées des artefacts du modèle.</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="vertical-align:top; text-align"left" headers="d33883e137-option" id="d33883e149">
+          <p><strong>Export</strong></p>
+        </td>
+        <td style="vertical-align:top; text-align"left" headers="d33883e137-desc d33883e149">
+          <p>Si vous avez un plan Standard ou Premium, vous pouvez exporter vers votre système local un fichier <code>ZIP</code> contenant les composants dont le modèle a besoin pour fonctionner dans un environnement d'exécution d'apprentissage automatique, tel que {{site.data.keyword.watson}} Explorer.</p>
+        </td>
+      </tr>
     </table>
 
 ## Evaluer les annotations ajoutées par le modèle
@@ -89,10 +105,11 @@ d'apprentissage automatique.</p></td>
 Vous pouvez comparer la vue des données de référence, qui contient les annotations ajoutées par les annotateurs humains, aux annotations que le modèle a ajoutées.
 
 ### Procédure
+{: #wks_matest_procedure}
 
 Pour évaluer les annotations ajoutées par le modèle :
 
-1. Sélectionnez **Gestion des modèles** > **Performances** > **Entraîner et évaluer**. La page Jeu d'entraînement / Jeu de test / Jeu aveugle apparaît.
+1. Sélectionnez **Modèle d'apprentissage automatique** > **Performances** > **Entraîner et évaluer**. La page Jeu d'entraînement / Jeu de test / Jeu aveugle apparaît.
 1. Cliquez sur **Afficher les données de référence** pour le jeu d'entraînement ou le jeu de test pour voir les annotations qui ont été ajoutées par la pré-annotation et par les annotateurs humains. L'éditeur de données de référence s'ouvre. Cliquez pour ouvrir un document et voir comment les mentions, relations et mentions coréférencées y ont été annotées.
 1. Sur la page **Performances**, cliquez sur **Afficher les résultats de décodage** pour voir les annotations que le modèle d'apprentissage automatique a ajoutées aux documents du jeu de test. Ce bouton n'est disponible qu'après l'évaluation du modèle. Les résultats affichés vous permettent de constater dans quelle mesure le modèle d'apprentissage automatique a bien étiqueté les mentions, les relations et les mentions coréférencées dans les données de test.
 1. Si vous voulez changer la répartition des documents entre jeu d'entraînement, jeu de test et jeu aveugle, cliquez sur **Performances** > **Entraîner et évaluer** > **Editer les paramètres**. Par exemple, si les premiers résultats semblent acceptables, vous voudrez peut-être augmenter le nombre de documents dans le jeu de test afin de placer la barre plus haut. Vous pouvez spécifier un ratio pour chaque usage (données d'entraînement, données de test et données aveugles) et laisser le système répartir lui-même les documents proportionnellement, ou bien vous pouvez indiquer vous-même les jeux de documents spécifiques à utiliser pour ces trois groupes de données.

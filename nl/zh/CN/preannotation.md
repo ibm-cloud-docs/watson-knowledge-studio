@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -17,28 +17,29 @@ lastupdated: "2018-04-04"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-本文档适用于 {{site.data.keyword.cloud}} 上的 {{site.data.keyword.knowledgestudiofull}}。要查看 {{site.data.keyword.IBM_notm}} Marketplace 上先前版本的 {{site.data.keyword.knowledgestudioshort}} 的文档，请[单击此链接 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/docs/services/knowledge-studio/preannotation.html){: new_window}。
+本文档适用于 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}。要查看 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 先前版本的文档，请[单击此链接 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/docs/services/knowledge-studio/preannotation.html){: new_window}。
 {: tip}
 
 # 引导注释
 {: #preannotation}
 
-通过对工作空间中的文档进行预注释，可简化人类注释者的工作。预注释器是 {{site.data.keyword.knowledgestudioshort}} 字典、基于规则的模型或机器学习模型，您可以运行预注释器来自动查找并注释提及项。
+通过对工作空间中的文档进行预注释，可简化人工注释者的工作。预注释器是 {{site.data.keyword.knowledgestudioshort}} 字典、基于规则的模型或机器学习模型，您可以运行预注释器来自动查找并注释提及项。
 {: shortdesc}
 
-预注释使人类注释者的工作更轻松，因为它涵盖简单明了的注释，并开始开展对文档进行注释的作业。
+预注释使人工注释者的工作更轻松，因为它涵盖简单明了的注释，并开始开展对文档进行注释的作业。
 
 用于对文档进行预注释的方法绝不会限制您可以使用所生成模型的方式。例如，仅仅因为使用 {{site.data.keyword.nlushort}} 服务来对文档进行预注释，并不意味着您必须将构建的最终机器学习模型部署到 {{site.data.keyword.nlushort}} 服务。预注释仅用于引导人工注释过程。
 
 ## 重要注意事项
+{: #preannotation_notes}
 
-- 切勿对人类注释者已注释的文档运行预注释器，因为这将除去人类注释者添加的注释。
+- 切勿对人工注释者已注释的文档运行预注释器，因为这将除去人工注释者添加的注释。
 - 只能对文档运行一个预注释器。如果运行了一个预注释器，然后运行第二个预注释器，那么第二个预注释器将除去第一个预注释器添加的注释。选取最适合您的用例的预注释方法，并仅使用这一个预注释器。
 
 ## 预注释方法
+{: #preannotation_methods}
 
 以下预注释器可用：
->**注**：{{site.data.keyword.alchemylanguageshort}} 服务已弃用。有关更多信息，请参阅 [{{site.data.keyword.alchemyapishort}} 服务引退 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/blogs/bluemix/2017/03/bye-bye-alchemyapi/){: new_window}。
 
 - **{{site.data.keyword.nlushort}}**
 
@@ -66,21 +67,24 @@ lastupdated: "2018-04-04"
 可以使用 {{site.data.keyword.nlushort}} 服务对添加到语料库的文档进行预注释。
 
 ### 开始之前
+{: #wks_preannotnlu_prereqs}
 
 确定 {{site.data.keyword.nlushort}} 预注释器是否有可能为您的用例增加价值。查看支持的 [{{site.data.keyword.nlushort}} 服务实体类型和子类型 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/docs/services/natural-language-understanding/entity-types.html){: new_window} 的列表，以确定它们与类型系统中的类型之间是否存在自然重叠。如果是，请继续执行此过程。否则，请选择其他预注释器来使用。
 
 ### 关于本任务
+{: #wks_preannotnlu_about}
 
 {{site.data.keyword.nlushort}} 是通过自然语言处理来提供文本分析的服务。使用 {{site.data.keyword.nlushort}} 预注释器时，它会调用 {{site.data.keyword.nlushort}} 服务以在文档中查找和注释实体。
 
 必须通过将 {{site.data.keyword.nlushort}} 实体类型映射到已添加到 {{site.data.keyword.knowledgestudioshort}} 类型系统的相应 {{site.data.keyword.knowledgestudioshort}} 实体类型，指定希望服务查找的实体类型。仅会查找并注释映射的实体类型的提及项。
 
 ### 过程
+{: #wks_preannotnlu_procedure}
 
 要使用 {{site.data.keyword.nlushort}} 服务对文档进行预注释，请完成以下步骤：
 
 1. 以 {{site.data.keyword.knowledgestudioshort}} 管理员身份登录，然后选择工作空间。
-1. 选择**资产和工具** > **预注释器** > **Natural Language Understanding** 选项卡。
+1. 选择**机器学习模型** > **预注释** > **Natural Language Understanding** 选项卡。
 1. 单击**编辑**以将**实体类型**页面上定义的每个实体类型映射到相应的 {{site.data.keyword.nlushort}} 实体类型。
 
     - {{site.data.keyword.nlushort}} 实体类型的下拉列表会使用 {{site.data.keyword.nlushort}} 服务识别到的实体类型进行预填充。
@@ -88,20 +92,28 @@ lastupdated: "2018-04-04"
     - 不能将 {{site.data.keyword.nlushort}} 实体类型映射到 {{site.data.keyword.knowledgestudioshort}} 实体角色，而只能映射到 {{site.data.keyword.knowledgestudioshort}} 实体类型。
     - 可以将多个 {{site.data.keyword.nlushort}} 实体类型映射到一个 {{site.data.keyword.knowledgestudioshort}} 实体类型，反之亦然。例如，允许以下映射：
 
-    <table cellpadding="4" cellspacing="0" summary="实体类型的样本映射" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d20428e292" class="stentry thleft thbot">Watson Knowledge Studio 实体类型</th>
-        <th valign="bottom" align="left" id="d20428e298" class="stentry thleft thbot">{{site.data.keyword.nlushort}} 实体类型</th>
+    <table summary="样本实体类型映射">
+    <caption>表 1. 样本实体类型映射</caption>
+      <tr>
+        <th style="vertical-align:bottom; text-align"left" id="d20428e292">Watson Knowledge Studio Entity Type</th>
+        <th style="vertical-align:bottom; text-align"left" id="d20428e298">{{site.data.keyword.nlushort}} 实体类型</th>
       </tr>
-      <tr class="strow"><td valign="top" headers="d20428e292" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">ENGINEER</p></li>
-            <li class="li"><p class="p wrapper">SCIENTIST</p></li>
-          </ul>
+      <tr>
+        <td headers="d20428e292">
+          ENGINEER<br/>
+          SCIENTIST
         </td>
-        <td valign="top" headers="d20428e298" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">Person</p></li>
-          </ul></td>
+        <td headers="d20428e298">
+          Person
+        </td>
       </tr>
-      <tr class="strow"><td valign="top" headers="d20428e292" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">LOCATION</p></li></td>
-        <td valign="top" headers="d20428e298" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">CityTown</p></li>
-            <li class="li"><p class="p wrapper">Country</p></li>
-          </ul>
+      <tr>
+        <td headers="d20428e292">
+          LOCATION
+        </td>
+        <td headers="d20428e298">
+          CityTown<br/>
+          Country
         </td>
       </tr>
     </table>
@@ -131,7 +143,7 @@ lastupdated: "2018-04-04"
 
 由 {{site.data.keyword.nlushort}} 服务预注释的文档所生成的参考标准不能直接在 {{site.data.keyword.knowledgestudioshort}} 外部使用。您可以下载参考标准（不可读格式）以将其从一个 {{site.data.keyword.knowledgestudioshort}} 工作空间移至另一个工作空间。您可以继续开发参考标准，并使用它来构建机器学习模型或基于规则的模型，这些模型可以部署用于 {{site.data.keyword.knowledgestudioshort}} 外部的服务。
 
-> **限制**：下载使用 {{site.data.keyword.nlushort}} 预注释的文档时，这些文档都会隐藏为不可读格式。而且，这些文档中的所有注释也都会隐藏，包括人类注释者添加到文档的注释。
+> **限制**：下载使用 {{site.data.keyword.nlushort}} 预注释的文档时，这些文档都会隐藏为不可读格式。而且，这些文档中的所有注释也都会隐藏，包括人工注释者添加到文档的注释。
 
 **相关信息**：
 
@@ -140,35 +152,38 @@ lastupdated: "2018-04-04"
 ## 使用字典对文档进行预注释
 {: #wks_preannot}
 
-为了帮助人类注释者开始处理其注释任务，您可以创建字典，并使用该字典对添加到语料库的文档进行预注释。
+为了帮助人工注释者开始处理其注释任务，您可以创建字典，并使用该字典对添加到语料库的文档进行预注释。
 
 ### 关于本任务
+{: #wks_preannot_about}
 
-当人类注释者开始处理已预注释的文档时，可能有若干提及项已经基于字典条目由实体类型进行了标记。人类注释者可以更改或除去预注释的实体类型，也可以将实体类型分配给未注释的提及项。通过字典进行的预注释不会对关系和指代进行注释。关系和指代必须由人类注释者进行注释。
+当人工注释者开始处理已预注释的文档时，可能有若干提及项已经基于字典条目由实体类型进行了标记。人工注释者可以更改或除去预注释的实体类型，也可以将实体类型分配给未注释的提及项。通过字典进行的预注释不会对关系和指代进行注释。关系和指代必须由人工注释者进行注释。
 
-**注**：此任务显示如何创建可编辑的字典。如果要上传文档并使用只读字典对文档进行预注释，请单击**资产和工具** > **预注释器** > **字典**选项卡上提供的**上传字典**按钮。
+**注**：此任务显示如何创建可编辑的字典。如果要上传文档并使用只读字典对其进行预注释，请单击**创建字典**按钮旁边的**菜单**图标。选择**上传字典**。
 
 ### 过程
+{: #wks_preannot_procedure}
 
 要创建可编辑的字典并对文档进行预注释，请执行以下操作：
 
 1. 以 {{site.data.keyword.knowledgestudioshort}} 管理员身份登录，然后选择工作空间。
-1. 选择**资产和工具** > **预注释器** > **字典**选项卡。
-1. 单击**管理字典**，然后单击**创建字典**。
+1. 选择**资产** > **字典**页面。
+1. 单击**创建字典**，输入名称，然后单击**保存**。
 1. 从**实体类型**列表中，选择要与字典关联的实体类型。
-1. 为字典添加条目或上传包含字典术语的文件。
-1. 返回到**预注释器**页面，然后在**字典**选项卡上，单击**应用此预注释器**。
-1. 选中要对其进行预注释的每个文档集的对应复选框，然后单击**运行**。
+3. 为字典添加条目或上传包含字典术语的文件。
+4. 单击**机器学习模型** > **预注释**。
+5. 在**字典**选项卡上，单击**应用此预注释器**。
+6. 选中要对其进行预注释的每个文档集的对应复选框，然后单击**运行**。
 
     预注释会应用于单个文档，而不考虑文档可能属于的各种文档集或注释集。在所选文档集和未选文档集之间重叠的文档将在这两个文档集内进行预注释。
 
-1. 创建字典后，如果要使用此字典对添加到语料库的其他文档集进行预注释，请随时单击**运行**。
+7. 创建字典后，如果要使用此字典对添加到语料库的其他文档集进行预注释，请随时单击**运行**。
 
     > **限制**：如果编辑字典以添加或除去条目，那么必须重新创建包含已预注释的文档集的注释任务。对于基于对字典注释器所做更改的预注释，无法将这些预注释应用于已分配给注释任务的注释集。
 
 **相关信息**：
 
-[字典](/docs/services/watson-knowledge-studio/dictionaries.html#wks_dictionaries)
+[创建字典](/docs/services/watson-knowledge-studio/dictionaries.html)
 
 [入门 > 添加字典](/docs/services/watson-knowledge-studio/tutorials-create-project.html#wks_tutless4)
 
@@ -178,21 +193,23 @@ lastupdated: "2018-04-04"
 可以使用现有机器学习模型对添加到语料库的文档进行预注释。
 
 ### 关于本任务
+{: #wks_preannotsire_about}
 
-注释了 10 到 30 个文档后，可以基于这些数据来培训机器学习模型。此类最低限度培训的模型不应在生产中使用，但可用作预注释模型，以帮助加快对后续文档的人工注释。例如，如果在培训机器学习模型后向语料库添加了文档，那么可以使用该模型对新的文档集进行预注释。切勿对已由人员注释的文档运行预注释器。预注释器会除去人工注释。
+注释了 10 到 30 个文档后，可以基于这些数据来培训机器学习模型。此类最低限度培训的模型不应在生产中使用，但可用于对文档进行预注释，以帮助加快对后续文档的人工注释。例如，如果在培训机器学习模型后向语料库添加了文档，那么可以使用该模型对新的文档集进行预注释。切勿对已由人员注释的文档运行预注释器。预注释器会除去人工注释。
 
 ### 过程
+{: #wks_preannotsire_procedure}
 
 要使用现有机器学习模型对文档进行预注释，请执行以下操作：
 
 1. 以 {{site.data.keyword.knowledgestudioshort}} 管理员身份登录，然后选择工作空间。
-1. 选择**模型管理** > **版本** > **机器学习**选项卡。
-1. 单击**运行此模型**。
-1. 选中要对其进行预注释的每个文档集的对应复选框，然后单击**运行**。
+2. 选择**机器学习模型** > **版本**。
+3. 要对新文档进行预注释，请单击**运行此模型**。
+4. 选中要对其进行预注释的每个文档集的对应复选框，然后单击**运行**。
 
     预注释会应用于单个文档，而不考虑文档可能属于的各种文档集或注释集。在所选文档集和未选文档集之间重叠的文档将在这两个文档集内进行预注释。
 
-1. 如果要使用机器模型对添加到语料库的其他文档集进行预注释，可以随时单击**运行此模型**。
+5. 如果要使用机器模型对添加到语料库的其他文档集进行预注释，可以随时单击**运行此模型**。
 
 ## 使用基于规则的模型对文档进行预注释
 {: #wks_preannotrule}
@@ -200,26 +217,28 @@ lastupdated: "2018-04-04"
 可以使用现有基于规则的模型对添加到语料库的文档进行预注释。
 
 ### 过程
+{: #wks_preannotrule_procedure}
 
 要使用基于规则的模型对文档进行预注释，请完成以下步骤：
 
 1. 以 {{site.data.keyword.knowledgestudioshort}} 管理员身份登录，然后选择工作空间。
-1. 选择**模型管理** > **版本** > **基于规则**选项卡。
+1. 选择**基于规则的模型** > **版本** > **基于规则的模型**选项卡。
 1. 请单击**映射实体类型和类**以将 {{site.data.keyword.knowledgestudioshort}} 类型系统中定义的实体类型映射到一个或多个基于规则的模型类（如果尚未完成此操作）。
+2. 对于要映射的每个实体类型，单击**编辑**。
 
     - **类名**列的下拉列表会使用与基于规则的模型关联的类进行预填充。
     - 必须至少将一个实体类型映射到类。
 
-1. 在**基于规则**选项卡上，单击**运行此模型**，然后选择要对其进行预注释的文档集或注释集。请确保选择的集不包含具有人工注释的文档。预注释器会除去人工注释。
+3. 在**基于规则的模型**选项卡上，单击**运行此模型**。
 
     至少将一个实体类型映射到类后，**应用此模型**按钮才可用。
 
-1. 选中要对其进行预注释的每个文档集的对应复选框。
-1. 单击**运行**。
+4. 选择要对其进行预注释的文档集或注释集。请确保选择的集不包含具有人工注释的文档。预注释器会除去人工注释。
+5. 单击**运行**。
 
     预注释会应用于单个文档，而不考虑文档可能属于的各种文档集。在所选文档集和未选文档集之间重叠的文档将在这两个文档集内显示为已预注释。
 
-1. 如果要使用基于规则的模型对添加到语料库的其他文档集进行预注释，可以随时单击**运行此模型**。
+6. 如果要使用基于规则的模型对添加到语料库的其他文档集进行预注释，可以随时单击**运行此模型**。
 
     > **限制**：如果编辑了基于规则的模型的实体类型到类映射，那么必须重新创建包含已预注释的文档集的注释任务。对于基于对预注释器映射定义所做更改的预注释，无法将这些预注释应用于已分配给注释任务的文档集。
 
@@ -232,7 +251,7 @@ lastupdated: "2018-04-04"
 
 UIMA CAS XMI 是一种标准格式的 Apache UIMA。提供了有关如何通过 {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer 中已分析集合来创建正确格式的文件的准则。如果使用其他 Apache UIMA 实现，请针对您的用途调整这些准则。无论以何种方式创建 XMI 文件，针对创建类型系统映射文件和 ZIP 文件的需求对于所有人都是相同的。
 
-如果将导入的文档分配给人类注释者，那么这些文档会在参考标准编辑器中显示为已预注释，并且可能已对若干提及项进行注释。因此，人类注释者有更多时间专注于将注释准则应用于未标记的提及项。或者，可以绕过人工注释步骤，而使用预注释的文档来立即开始培训和评估机器学习模型。
+如果将导入的文档分配给人工注释者，那么这些文档会在参考标准编辑器中显示为已预注释，并且可能已对若干提及项进行注释。因此，人工注释者有更多时间专注于将注释准则应用于未标记的提及项。或者，可以绕过人工注释步骤，而使用预注释的文档来立即开始培训和评估机器学习模型。
 
 ### 从 Watson Explorer Content Analytics 导出已分析的文档
 {: #wks_uimawexca}
@@ -240,6 +259,7 @@ UIMA CAS XMI 是一种标准格式的 Apache UIMA。提供了有关如何通过 
 可以导出在 {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer Content Analytics 中已搜寻并分析的文档，然后将已分析的文档作为 XMI 文件上传到 {{site.data.keyword.knowledgestudioshort}} 工作空间。
 
 #### 过程
+{: #wks_uima_procedure}
 
 要从 {{site.data.keyword.watson}} Explorer Content Analytics 集合中获取已分析的文档，请执行以下操作：
 
@@ -271,6 +291,7 @@ UIMA CAS XMI 是一种标准格式的 Apache UIMA。提供了有关如何通过 
 可以从 {{site.data.keyword.watson}} Explorer Content Analytics Studio 导出已分析文档的集合，并将已分析的文档作为 XMI 文件上传到 {{site.data.keyword.knowledgestudioshort}} 项目。
 
 #### 过程
+{: #wks_uimawexstudio_procedure}
 
 要从 Content Analytics Studio 集合中获取已分析的文档，请执行以下操作：
 
@@ -283,6 +304,7 @@ UIMA CAS XMI 是一种标准格式的 Apache UIMA。提供了有关如何通过 
 1. 解压缩该 ZIP 文件中的所有文件。解压缩的内容包括 XMI 文件 (`*.xmi`)、UIMA TypeSystem 描述符文件 (`TypeSystem.xml`) 和其他文件。
 
 #### 后续步骤
+{: #wks_uimawexstudio_next}
 
 必须定义 UIMA 类型和 {{site.data.keyword.knowledgestudioshort}} 实体类型之间的映射。此外，还必须创建一个 ZIP 文件，其中包含将已分析的数据上传到 {{site.data.keyword.knowledgestudioshort}} 工作空间所需的所有文件。
 
@@ -292,10 +314,12 @@ UIMA CAS XMI 是一种标准格式的 Apache UIMA。提供了有关如何通过 
 将 XMI 文件上传到 {{site.data.keyword.knowledgestudioshort}} 工作空间之前，必须定义 UIMA 类型与 {{site.data.keyword.knowledgestudioshort}} 实体类型之间的映射。
 
 #### 开始之前
+{: #wks_uimawexmap_prereqs}
 
 {{site.data.keyword.knowledgestudioshort}} 工作空间中的类型系统必须包含要将 UIMA 类型映射到的实体类型。
 
 #### 过程
+{: #wks_uimawexmap_procedure}
 
 要将 UIMA 类型映射到 {{site.data.keyword.knowledgestudioshort}} 实体类型，请执行以下操作：
 
@@ -338,6 +362,7 @@ UIMA CAS XMI 是一种标准格式的 Apache UIMA。提供了有关如何通过 
         {: screen}
 
 #### 后续步骤
+{: #wks_uimawexmap_next}
 
 必须创建一个 ZIP 文件，其中包含将已分析的数据上传到 {{site.data.keyword.knowledgestudioshort}} 工作空间所需的所有文件。
 
@@ -355,12 +380,14 @@ UIMA CAS XMI 是一种标准格式的 Apache UIMA。提供了有关如何通过 
 要使用下载的已预注释文档来培训模型，必须创建一个 ZIP 文件，其中包含上传 XMI 文件所需的所有文件，然后将该 ZIP 文件上传到 {{site.data.keyword.knowledgestudioshort}} 工作空间。
 
 #### 开始之前
+{: #wks_uimaweximport_prereqs}
 
 上传 ZIP 文件之前，请确保 {{site.data.keyword.knowledgestudioshort}} 工作空间中的类型系统包含已将 UIMA 类型映射到的实体类型。
 
 > **警告**：UIMA 分析引擎允许注释跨多个语句。在 {{site.data.keyword.knowledgestudioshort}} 中，注释必须位于单个语句的边界内。如果上传的 XMI 文件包含跨语句的注释，那么这些注释不会显示在参考标准编辑器中。
 
 #### 过程
+{: #wks_uimaweximport_procedure}
 
 要将预注释的文档上传到 {{site.data.keyword.knowledgestudioshort}} 工作空间，请执行以下操作：
 
@@ -373,7 +400,7 @@ UIMA CAS XMI 是一种标准格式的 Apache UIMA。提供了有关如何通过 
 
 1. 将该 ZIP 文件上传到 {{site.data.keyword.knowledgestudioshort}} 工作空间。
 
-    1. 以 {{site.data.keyword.knowledgestudioshort}} 管理员或项目经理身份登录，打开要向其添加文档的工作空间，然后打开**资产和工具** > **文档**页面。
+    1. 以 {{site.data.keyword.knowledgestudioshort}} 管理员或项目经理身份登录，打开要向其添加文档的工作空间，然后打开**资产** > **文档**页面。
     1. 单击**上传文档集**。
     1. 拖动所创建的 ZIP 文件，或者单击以找到并选择该文件。
     1. 选中相应复选框以指示 ZIP 文件包含 UIMA CAS XMI 文件。
