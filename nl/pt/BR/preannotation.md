@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -31,14 +31,15 @@ A pré-anotação torna a tarefa dos anotadores humanos mais fácil porque ela c
 O método que você usa para pré-anotar documentos em nenhuma forma restringe os modos em que é possível usar o modelo resultante. Por exemplo, só porque você usa o serviço {{site.data.keyword.nlushort}} para pré-anotar documentos, não significa que se deve implementar o modelo de aprendizado de máquina final construído para o serviço {{site.data.keyword.nlushort}}. A pré-anotação destina-se exclusivamente a autoinicializar o processo de anotação humana.
 
 ## Notas importantes
+{: #preannotation_notes}
 
 - Nunca execute uma pré-anotador em documentos que os anotadores humanos anotaram porque as anotações incluídas pelos anotadores humanos serão removidas.
 - É possível executar somente um pré-anotador em documentos. Se você executar um pré-anotador e, em seguida, executar um segundo pré-anotador, o segundo pré-anotador removerá as anotações que foram incluídas pelo primeiro pré-anotador. Escolha o método de pré-anotação que melhor se ajusta ao seu caso de uso e use somente esse pré-anotador.
 
 ## Métodos de pré-anotação
+{: #preannotation_methods}
 
 Os pré-anotadores a seguir estão disponíveis:
->**Nota**: o serviço {{site.data.keyword.alchemylanguageshort}} foi descontinuado. Para obter mais informações, veja [Aposentadoria do serviço {{site.data.keyword.alchemyapishort}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/blogs/bluemix/2017/03/bye-bye-alchemyapi/){: new_window}.
 
 - **{{site.data.keyword.nlushort}}**
 
@@ -66,21 +67,24 @@ Como alternativa, é possível fazer upload de documentos já anotados e usá-lo
 É possível usar o serviço {{site.data.keyword.nlushort}} para pré-anotar documentos que você inclui em seu corpus.
 
 ### Antes de Começar
+{: #wks_preannotnlu_prereqs}
 
 Determine se o pré-anotador do {{site.data.keyword.nlushort}} deve incluir valor para seu caso de uso. Revise a lista de tipos e subtipos de entidade do serviço [{{site.data.keyword.nlushort}} suportados ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/docs/services/natural-language-understanding/entity-types.html){: new_window} para determinar se há uma sobreposição natural entre eles e os tipos em seu sistema de tipos. Se sim, continue com este procedimento. Se não, escolha um pré-anotador diferente para usar.
 
 ### Sobre essa Tarefa
+{: #wks_preannotnlu_about}
 
 O {{site.data.keyword.nlushort}} é um serviço que oferece análise de texto por meio do processamento de linguagem natural. Quando você usa o pré-anotador do {{site.data.keyword.nlushort}}, ele chama o serviço {{site.data.keyword.nlushort}} para localizar e anotar entidades em seus documentos.
 
 Deve-se especificar os tipos de entidade que você deseja que o serviço procure mapeando os tipos de entidade do {{site.data.keyword.nlushort}} para os tipos de entidade do {{site.data.keyword.knowledgestudioshort}} correspondentes que você incluiu no sistema de tipos do {{site.data.keyword.knowledgestudioshort}}. Somente menções de tipos de entidade que você mapear serão localizados e anotados.
 
 ### Procedimento
+{: #wks_preannotnlu_procedure}
 
 Para usar o serviço {{site.data.keyword.nlushort}} para pré-anotar documentos, conclua as etapas a seguir:
 
 1. Efetue login como um administrador do {{site.data.keyword.knowledgestudioshort}} e selecione a sua área de trabalho.
-1. Selecione a guia **Ativos e ferramentas** > **Pré-anotadores** > **Natural Language Understanding**.
+1. Selecione a guia **Modelo de aprendizado de máquina** > **Pré-anotação** > **Entendimento da língua natural**.
 1. Clique em **Editar** para mapear cada tipo de entidade que é definido na página **Tipos de entidade** para os tipos de entidade do {{site.data.keyword.nlushort}} correspondentes.
 
     - A lista suspensa dos tipos de entidade do {{site.data.keyword.nlushort}} é pré-preenchida com os tipos de entidade reconhecidos pelo serviço {{site.data.keyword.nlushort}}.
@@ -88,20 +92,28 @@ Para usar o serviço {{site.data.keyword.nlushort}} para pré-anotar documentos,
     - Não é possível mapear um tipo de entidade do {{site.data.keyword.nlushort}} para uma função de entidade do {{site.data.keyword.knowledgestudioshort}}, somente tipos de entidade do {{site.data.keyword.knowledgestudioshort}}.
     - É possível mapear mais de um tipo de entidade do {{site.data.keyword.nlushort}} para um único tipo de entidade do {{site.data.keyword.knowledgestudioshort}} ou o contrário. Por exemplo, os mapeamentos a seguir são permitidos:
 
-    <table cellpadding="4" cellspacing="0" summary="Mapeamento de amostra de tipos de entidade" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d20428e292" class="stentry thleft thbot">Tipo de entidade do Watson Knowledge Studio</th>
-        <th valign="bottom" align="left" id="d20428e298" class="stentry thleft thbot">Tipo de entidade do {{site.data.keyword.nlushort}}</th>
+    <table summary="Mapeamento de amostra de tipos de entidade">
+    <caption>Tabela 1. Mapeamento de amostra de tipos de entidade</caption>
+      <tr>
+        <th style="vertical-align:bottom; text-align"left" id="d20428e292">Watson Knowledge Studio Entity Type</th>
+        <th style="vertical-align:bottom; text-align"left" id="d20428e298">Tipo de entidade do {{site.data.keyword.nlushort}}</th>
       </tr>
-      <tr class="strow"><td valign="top" headers="d20428e292" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">ENGINEER</p></li>
-            <li class="li"><p class="p wrapper">SCIENTIST</p></li>
-          </ul>
+      <tr>
+        <td headers="d20428e292">
+          ENGINEER<br/>
+          SCIENTIST
         </td>
-        <td valign="top" headers="d20428e298" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">Pessoa</p></li>
-          </ul></td>
+        <td headers="d20428e298">
+          Pessoa
+        </td>
       </tr>
-      <tr class="strow"><td valign="top" headers="d20428e292" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">LOCALIDADE</p></li></td>
-        <td valign="top" headers="d20428e298" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">CityTown</p></li>
-            <li class="li"><p class="p wrapper">País</p></li>
-          </ul>
+      <tr>
+        <td headers="d20428e292">
+          LOCALIDADE
+        </td>
+        <td headers="d20428e298">
+          CityTown<br/>
+          País
         </td>
       </tr>
     </table>
@@ -143,32 +155,35 @@ A verdade absoluta que é produzida por documentos que foram pré-anotados pelo 
 Para ajudar na introdução dos anotadores humanos às suas tarefas de anotação, é possível criar um dicionário e usá-lo para pré-anotar documentos que você inclui no corpus.
 
 ### Sobre essa Tarefa
+{: #wks_preannot_about}
 
 Quando um anotador humano começa a trabalhar em documentos que foram pré-anotados, é provável que um número de menções já esteja marcado por tipos de entidade com base nas entradas de dicionário. O anotador humano pode mudar ou remover os tipos de entidade pré-anotados e designar tipos de entidade a menções não anotadas. A pré-anotação por um dicionário não anota relações e correferências. As relações e correferências devem ser anotadas por anotadores humanos.
 
-**Nota**: esta tarefa mostra como criar um dicionário que é editável. Se você deseja fazer upload e pré-anotar seus documentos com um dicionário somente leitura, clique no botão **Fazer upload do dicionário** que está disponível na guia **Ativos e ferramentas** > **Pré-anotadores** > **Dicionários**.
+**Nota**: esta tarefa mostra como criar um dicionário que é editável. Se você deseja fazer upload e pré-anotar seus documentos com um dicionário somente leitura, clique no ícone **Menu** ao lado do botão **Criar dicionário**. Selecione  ** Upload de Dicionário **.
 
 ### Procedimento
+{: #wks_preannot_procedure}
 
 Para criar um dicionário editável e pré-anotar documentos:
 
 1. Efetue login como um administrador do {{site.data.keyword.knowledgestudioshort}} e selecione a sua área de trabalho.
-1. Selecione a guia **Ativos e ferramentas** > **Pré-anotadores** > **Dicionários**.
-1. Clique em **Gerenciar dicionários** e, em seguida, clique em **Criar dicionário**.
+1. Selecione a página  ** Ativos **  >  ** Dicionários ** .
+1. Clique em **Criar dicionário**, insira um nome e, em seguida, clique em **Salvar**.
 1. Na lista **Tipo de entidade**, selecione um tipo de entidade para associar com o dicionário.
-1. Inclua entradas para o dicionário ou faça upload de um arquivo que contenha os termos do dicionário.
-1. Volte para a página **Pré-anotadores** e, na guia **Dicionários**, clique em **Aplicar este pré-anotador**.
-1. Marque a caixa de seleção para cada conjunto de documentos que você deseja pré-anotar e clique em **Executar**.
+3. Inclua entradas para o dicionário ou faça upload de um arquivo que contenha os termos do dicionário.
+4. Clique em  ** Modelo de aprendizado de máquina **  >  ** Pré-anotação **.
+5. Na guia **Dicionários**, clique em **Aplicar este pré-anotador**.
+6. Marque a caixa de seleção para cada conjunto de documentos que você deseja pré-anotar e clique em **Executar**.
 
     A pré-anotação é aplicada a documentos individuais sem considerar os vários conjuntos de documentos ou conjuntos de anotações aos quais um documento pode pertencer. Um documento que se sobrepõe entre um conjunto de documentos selecionado e um conjunto de documentos não selecionado será previamente anotado em ambos os conjuntos de documentos.
 
-1. Depois que o dicionário é criado, clique em **Executar** a qualquer momento que desejar usar o dicionário para pré-anotar conjuntos de documentos adicionais incluídos no corpus.
+7. Depois que o dicionário é criado, clique em **Executar** a qualquer momento que desejar usar o dicionário para pré-anotar conjuntos de documentos adicionais incluídos no corpus.
 
     > **Restrição:** se você edita o dicionário para incluir ou remover entradas, deve-se recriar as tarefas de anotação que incluem os conjuntos de documentos pré-anotados. A pré-anotação com base nas mudanças que você faz no anotador de dicionário não pode ser aplicada a conjuntos de anotações que já estão designados a uma tarefa de anotação.
 
 **Informações relacionadas**:
 
-[Dicionários](/docs/services/watson-knowledge-studio/dictionaries.html#wks_dictionaries)
+[Criando dicionários](/docs/services/watson-knowledge-studio/dictionaries.html)
 
 [Introdução > Incluindo um dicionário](/docs/services/watson-knowledge-studio/tutorials-create-project.html#wks_tutless4)
 
@@ -178,21 +193,23 @@ Para criar um dicionário editável e pré-anotar documentos:
 É possível usar o modelo de aprendizado de máquina existente para pré-anotar documentos que você inclui no corpus.
 
 ### Sobre essa Tarefa
+{: #wks_preannotsire_about}
 
-Depois que 10 a 30 documentos são anotados, um modelo de aprendizado de máquina pode ser treinado nos dados. Tal modelo minimamente treinado não deve ser usado em uma produção, mas pode ser usado como um modelo de pré-anotação que pode ajudar a acelerar a anotação humana de documentos subsequentes. Por exemplo, se você inclui documentos no corpus depois de treinar um modelo de aprendizado de máquina, é possível usar o modelo para pré-anotar os novos conjuntos de documentos. Nunca execute um pré-anotador nos mesmos documentos que foram anotados por uma pessoa. Os pré-anotadores removem a anotação humana.
+Depois que 10 a 30 documentos são anotados, um modelo de aprendizado de máquina pode ser treinado nos dados. Esse modelo minimamente treinado não deve ser usado em uma produção, mas pode ser usado para pré-anotar documentos para ajudar a acelerar a anotação humana de documentos subsequentes. Por exemplo, se você inclui documentos no corpus depois de treinar um modelo de aprendizado de máquina, é possível usar o modelo para pré-anotar os novos conjuntos de documentos. Nunca execute um pré-anotador nos mesmos documentos que foram anotados por uma pessoa. Os pré-anotadores removem a anotação humana.
 
 ### Procedimento
+{: #wks_preannotsire_procedure}
 
 Para usar o modelo de aprendizado de máquina existente para pré-anotar documentos:
 
 1. Efetue login como um administrador do {{site.data.keyword.knowledgestudioshort}} e selecione a sua área de trabalho.
-1. Selecione a guia **Gerenciamento de modelo** > **Versões** > **Aprendizado de máquina**.
-1. Clique em **Executar este modelo**.
-1. Marque a caixa de seleção para cada conjunto de documentos que você deseja pré-anotar e clique em **Executar**.
+2. Selecione  ** Modelo de Aprendizado de Máquina **  >  ** Versões **.
+3. Para pré-anotar novos documentos, clique em **Executar este modelo**.
+4. Marque a caixa de seleção para cada conjunto de documentos que você deseja pré-anotar e clique em **Executar**.
 
     A pré-anotação é aplicada a documentos individuais sem considerar os vários conjuntos de documentos ou conjuntos de anotações aos quais um documento pode pertencer. Um documento que se sobrepõe entre um conjunto de documentos selecionado e um conjunto de documentos não selecionado será previamente anotado em ambos os conjuntos de documentos.
 
-1. É possível clicar em **Executar este modelo** a qualquer momento que desejar usar o modelo de aprendizado de máquina para pré-anotar conjuntos de documentos adicionais incluídos no corpus.
+5. É possível clicar em **Executar este modelo** a qualquer momento que desejar usar o modelo de aprendizado de máquina para pré-anotar conjuntos de documentos adicionais incluídos no corpus.
 
 ## Pré-anotando documentos com o modelo baseado em regra
 {: #wks_preannotrule}
@@ -200,26 +217,28 @@ Para usar o modelo de aprendizado de máquina existente para pré-anotar documen
 É possível usar um modelo baseado em regra existente para pré-anotar documentos que você inclui no corpus.
 
 ### Procedimento
+{: #wks_preannotrule_procedure}
 
 Para usar o modelo baseado em regra para anotar documentos, conclua as etapas a seguir:
 
 1. Efetue login como um administrador do {{site.data.keyword.knowledgestudioshort}} e selecione a sua área de trabalho.
-1. Selecione a guia **Gerenciamento de modelo** > **Versões** > **Baseado em regra**.
+1. Selecione a guia **Modelo baseado em regra** > **Versões** > **Modelo baseado em regra**.
 1. Se ainda não tiver concluído, clique em **Mapear tipos de entidade e classes** para mapear tipos de entidade que você definiu no sistema de tipos do {{site.data.keyword.knowledgestudioshort}} para uma ou mais classes de modelo baseado em regra.
+2. Clique em **Editar** para cada tipo de entidade que você deseja mapear.
 
     - A lista suspensa da coluna **Nome de classe** é pré-preenchida com classes que estão associadas ao modelo baseado em regra.
     - Deve-se mapear pelo menos um tipo de entidade para uma classe.
 
-1. Na guia **Baseado em regra**, clique em **Executar este modelo** e, em seguida, selecione os conjuntos de documentos ou conjuntos de anotações que você deseja pré-anotar. Assegure-se de que os conjuntos selecionados não contenham documentos que possuem anotações humanas. Os pré-anotadores removem a anotação humana.
+3. Na guia **Modelo baseado em regra**, clique em **Executar este modelo**.
 
     O botão **Executar este modelo** não estará disponível até você mapear pelo menos um tipo de entidade para uma classe.
 
-1. Marque a caixa de seleção para cada conjunto de documentos que você deseja pré-anotar.
-1. Clique em **Run**.
+4. Selecione os conjuntos de documentos ou conjuntos de anotações que você deseja pré-anotar. Assegure-se de que os conjuntos selecionados não contenham documentos que possuem anotações humanas. Os pré-anotadores removem a anotação humana.
+5. Clique em **Executar**.
 
     A pré-anotação é aplicada a documentos individuais sem considerar os vários conjuntos de documentos aos quais um documento pode pertencer. Um documento que se sobrepõe entre um conjunto de documentos selecionado e um documento não selecionado aparecerá pré-anotado em ambos os conjuntos de documentos.
 
-1. É possível clicar em **Executar este modelo** a qualquer momento que desejar usar o modelo baseado em regra para pré-anotar conjuntos de documentos adicionais que você inclui no corpus.
+6. É possível clicar em **Executar este modelo** a qualquer momento que desejar usar o modelo baseado em regra para pré-anotar conjuntos de documentos adicionais que você inclui no corpus.
 
     > **Restrição:** se você edita o mapeamento de tipo de entidade para classe do modelo baseado em regra, deve-se recriar as tarefas de anotação que incluem os conjuntos de documentos pré-anotados. A pré-anotação com base nas mudanças que você faz na definição de mapeamento de pré-anotador não poderá ser aplicada a conjuntos de documentos que já estiverem designados a uma tarefa de anotação.
 
@@ -240,6 +259,7 @@ Se você designa os documentos importados para anotadores humanos, os documentos
 É possível exportar os documentos que foram submetidos a crawl e analisados no {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer Content Analytics e fazer upload dos documentos analisados como arquivos XMI em uma área de trabalho do {{site.data.keyword.knowledgestudioshort}}.
 
 #### Procedimento
+{: #wks_uima_procedure}
 
 Para obter documentos analisados de uma coleção do {{site.data.keyword.watson}} Explorer Content Analytics:
 
@@ -271,6 +291,7 @@ Deve-se definir um mapeamento entre os tipos do UIMA e tipos de entidade do {{si
 É possível exportar uma coleção de documentos analisados do {{site.data.keyword.watson}} Explorer Content Analytics Studio e fazer upload dos documentos analisados como arquivos XMI em um projeto do {{site.data.keyword.knowledgestudioshort}}.
 
 #### Procedimento
+{: #wks_uimawexstudio_procedure}
 
 Para obter documentos analisados de uma coleção do Content Analytics Studio:
 
@@ -283,6 +304,7 @@ Para obter documentos analisados de uma coleção do Content Analytics Studio:
 1. Extraia todos os arquivos do arquivo ZIP. Os conteúdos extraídos incluem arquivos XMI (`*.xmi`), o arquivo descritor do UIMA TypeSystem (`TypeSystem.xml`) e outros arquivos.
 
 #### O que fazer em seguida
+{: #wks_uimawexstudio_next}
 
 Deve-se definir um mapeamento entre os tipos do UIMA e tipos de entidade do {{site.data.keyword.knowledgestudioshort}}. Deve-se também criar um arquivo ZIP que contenha todos os arquivos que são necessários para fazer upload dos dados analisados em uma área de trabalho do {{site.data.keyword.knowledgestudioshort}}.
 
@@ -292,10 +314,12 @@ Deve-se definir um mapeamento entre os tipos do UIMA e tipos de entidade do {{si
 Antes de fazer upload de arquivos XMI em uma área de trabalho do {{site.data.keyword.knowledgestudioshort}}, deve-se definir mapeamentos entre os tipos UIMA e os tipos de entidade do {{site.data.keyword.knowledgestudioshort}}.
 
 #### Antes de Começar
+{: #wks_uimawexmap_prereqs}
 
 O sistema de tipos na área de trabalho do {{site.data.keyword.knowledgestudioshort}} deve incluir os tipos de entidade para os quais você deseja mapear os tipos UIMA.
 
 #### Procedimento
+{: #wks_uimawexmap_procedure}
 
 Para mapear tipos UIMA para tipos de entidade do {{site.data.keyword.knowledgestudioshort}}:
 
@@ -338,6 +362,7 @@ Para mapear tipos UIMA para tipos de entidade do {{site.data.keyword.knowledgest
         {: screen}
 
 #### O que fazer em seguida
+{: #wks_uimawexmap_next}
 
 Deve-se criar um arquivo ZIP que contenha todos os arquivos que são necessários para fazer upload dos dados analisados em uma área de trabalho do {{site.data.keyword.knowledgestudioshort}}.
 
@@ -355,12 +380,14 @@ Deve-se criar um arquivo ZIP que contenha todos os arquivos que são necessário
 Para usar os documentos pré-anotados transferidos por download para treinar um modelo, deve-se criar um arquivo ZIP que contém todos os arquivos necessários para fazer upload dos arquivos XMI e, em seguida, fazer upload do arquivo ZIP em uma área de trabalho do {{site.data.keyword.knowledgestudioshort}}.
 
 #### Antes de Começar
+{: #wks_uimaweximport_prereqs}
 
 Antes de fazer upload do arquivo ZIP, assegure-se de que o sistema de tipos na área de trabalho do {{site.data.keyword.knowledgestudioshort}} inclua os tipos de entidade para os quais você mapeou os tipos UIMA.
 
 > **Aviso:** os mecanismos de análise UIMA permitem que as anotações abranjam as sentenças. No {{site.data.keyword.knowledgestudioshort}}, as anotações devem existir dentro dos limites de uma única sentença. Se os arquivos XMI dos quais você faz upload incluem anotações que abrangem sentenças, essas anotações não aparecem no editor de verdade absoluta.
 
 #### Procedimento
+{: #wks_uimaweximport_procedure}
 
 Para fazer upload de documentos pré-anotados em uma área de trabalho do {{site.data.keyword.knowledgestudioshort}}:
 
@@ -373,7 +400,7 @@ Para fazer upload de documentos pré-anotados em uma área de trabalho do {{site
 
 1. Faça upload do arquivo ZIP para uma área de trabalho do {{site.data.keyword.knowledgestudioshort}}.
 
-    1. Efetue login como um administrador ou gerente de projeto do {{site.data.keyword.knowledgestudioshort}}, abra a área de trabalho na qual você deseja incluir os documentos e abra a página **Ativos e ferramentas** > **Documentos**.
+    1. Efetue login como um administrador ou gerente de projeto do {{site.data.keyword.knowledgestudioshort}}, abra a área de trabalho na qual você deseja incluir os documentos e abra a página **Ativos** > **Documentos**.
     1. Clique em **Fazer upload de conjuntos de documentos**.
     1. Arraste o arquivo ZIP criado ou clique para localizar e selecionar o arquivo.
     1. Marque a caixa de seleção para indicar que o arquivo ZIP contém arquivos UIMA CAS XMI.

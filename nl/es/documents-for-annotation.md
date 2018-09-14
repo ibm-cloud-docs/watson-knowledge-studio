@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -27,6 +27,7 @@ Para entrenar un modelo de aprendizaje automático, debe añadir documentos que 
 {: shortdesc}
 
 ## Acerca de esta tarea
+{: #annotation_about}
 
 Para definir reglas para el modelo basado en reglas, añada o cargue documentos desde los que pueda definir patrones a definir como reglas. Consulte [Añadir documentos para definir reglas](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html) para obtener más información. Esta sección describe cómo añadir documentos solo para la anotación.
 
@@ -55,7 +56,7 @@ Puede añadir documentos de las siguientes maneras:
 ### Archivos CSV
 {: #wks_sampledoc__wks_samplecsv}
 
-Puede cargar un archivo CSV de dos columnas que contenga texto de muestra desde la máquina local. Cargue un archivo CSV a la vez. La primera columna del archivo CSV especifica el nombre de archivo del documento. La segunda columna del archivo contiene el texto del documento. Para obtener un ejemplo del formato requerido, consulte el archivo <a href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/documents-new.csv" download>`documents-new.csv`<img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo" class="style-scope doc-content"></a> en los archivos de muestra de la guía de aprendizaje.
+Puede cargar un archivo CSV de dos columnas que contenga texto de muestra desde la máquina local. Cargue un archivo CSV a la vez. La primera columna del archivo CSV especifica el nombre de archivo del documento. La segunda columna del archivo contiene el texto del documento. Para obtener un ejemplo del formato requerido, consulte el archivo <a href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/documents-new.csv" download>`documents-new.csv` <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo" class="style-scope doc-content"></a> en los archivos de muestra de la guía de aprendizaje.
 
 ### Documentos de otro espacio de trabajo de Watson Knowledge Studio
 {: #wks_sampledoc__wks_samplecorpus}
@@ -72,6 +73,7 @@ Para ayudar a entrenar un modelo, puede cargar documentos que fueron preanotados
 Un anotador humano puede revisar, suprimir y añadir anotaciones a estos documentos, o puede omitir la anotación humana y utilizar estos archivos para crear conjuntos de documentos de entrenamiento, de prueba y ciegos para evaluar y mejorar el rendimiento del modelo. Para obtener detalles sobre cómo crear estos archivos y requisitos para cargarlos, consulte [Carga de documentos preanotados](/docs/services/watson-knowledge-studio/preannotation.html#wks_uima).
 
 ### Creación de datos anónimos
+{: #wks_anonymizing}
 
 Si desea crear un modelo optimizado para sus datos, pero no desea cargar los datos tal cual en {{site.data.keyword.knowledgestudioshort}} por motivos de privacidad, puede despojar los documentos de cualquier información personalmente identificable (PII) en primer lugar y, a continuación, utilizar esos documentos convertidos en anónimos para entrenar el modelo. No redacte la información ni la sustituya en bloque por variables. Para obtener mejores resultados, sustituya la información real por información falsa del mismo tipo.
 
@@ -83,71 +85,62 @@ Por ejemplo, si la PII que desea proteger son los nombres de clientes, en lugar 
 Para entrenar un modelo, debe añadir documentos que son representativos del contenido de dominio a su espacio de trabajo.
 
 ### Acerca de esta tarea
+{: #wks_projadd_about}
 
 Como mejor práctica, empiece con una recopilación de documentos relativamente pequeña. Utilice estos documentos para entrenar los anotadores humanos (si el espacio de trabajo implica anotación humana) y para refinar las directrices de anotación. Los documentos pequeños pueden ayudar a los anotadores humanos a identificar cadenas de correferencia mediante el documento. A medida que mejore la exactitud de la anotación, podrá añadir más documentos al corpus para proporcionar mayor profundidad al esfuerzo de entrenamiento.
 
 ### Procedimiento
+{: #wks_projadd_procedure}
 
 Para añadir documentos a un espacio de trabajo:
 
 1. Inicie sesión como un administrador o gestor de proyectos de {{site.data.keyword.knowledgestudioshort}}, y seleccione su espacio de trabajo.
-1. Seleccione el separador **Activos y herramientas** > **Documentos** > **Conjuntos de documentación**.
+1. Seleccione el separador **Activos**> **Documentos** > **Conjuntos de documentación**.
 1. Pulse **Cargar conjuntos de documentos** para añadir documentos al corpus.
 1. Cargue documentos en uno de los siguientes formatos. Puede cargar un tipo de archivo a la vez.
 
-    <table border="1" frame="hsides" rules="rows" cellpadding="4" cellspacing="0" summary="Cada fila de esta tabla describe una opción para una elección." class="simpletable choicetable choicetableborder">
-      <thead><tr><th id="d31095e284-option" valign="bottom" align="left" class="ncol thleft thbot">Opción</th>
-          <th id="d31095e284-desc" valign="bottom" align="left" class="ncol thleft thbot">Descripción</th></tr></thead>
-      <tbody><tr class="strow chrow"><td valign="top" headers="d31095e284-option" id="d31095e286" class="stentry choption ncol"><p class="p wrapper"><strong>Archivo CSV</strong></p></td>
-          <td valign="top" headers="d31095e284-desc d31095e286" class="stentry chdesc ncol"><p class="p wrapper">Arrastre un único archivo CSV que contenga los documentos de ejemplo o pulse para localizar el archivo en
-              el sistema local y, a continuación, pulse <b>Cargar</b>. La primera columna del archivo CSV
-              especifica el nombre de archivo del documento. La segunda columna del archivo contiene el texto del documento.
-              El archivo CSV debe estar en formato UTF-8.</p></td>
-        </tr>
-        <tr class="strow chrow"><td valign="top" headers="d31095e284-option" id="d31095e294" class="stentry choption ncol"><p class="p wrapper"><strong>Archivos de texto</strong></p></td>
-          <td valign="top" headers="d31095e284-desc d31095e294" class="stentry chdesc ncol"><p class="p wrapper">Arrastre uno o varios archivos de texto desde el sistema local o pulse para localizar y seleccionar los archivos
-              y, a continuación, pulse <b>Cargar</b>. Los archivos de texto deben estar en formato UTF-8.</p></td>
-        </tr>
-        <tr class="strow chrow"><td valign="top" headers="d31095e284-option" id="d31095e302" class="stentry choption ncol"><p class="p wrapper"><strong>Archivos DOCXML</strong></p></td>
-          <td valign="top" headers="d31095e284-desc d31095e302" class="stentry chdesc ncol"><p class="p wrapper">Arrastre uno o varios archivos <code>DOCXML</code> desde el sistema local o pulse para localizar
-              y seleccionar los archivos y, a continuación, pulse <b>Cargar</b>. Los archivos <code>DOCXML</code>
-              deben ser documentos descargados desde otro modelo de aprendizaje automático, y deben estar en
-              formato UTF-8. Estos documentos no se vuelven a señalizar al cargarlos.</p></td>
-        </tr>
-        <tr class="strow chrow"><td valign="top" headers="d31095e284-option" id="d31095e316" class="stentry choption ncol"><p class="p wrapper"><strong>Archivo ZIP</strong></p></td>
-          <td valign="top" headers="d31095e284-desc d31095e316" class="stentry chdesc ncol"><p class="p wrapper">Si ha descargado previamente documentos desde un espacio de trabajo de
-              Watson Knowledge
-              Studio,
-              arrastre el archivo
-              <code>ZIP</code> que contiene los documentos descargados o pulse para localizar y seleccionar el
-              archivo. Si desea incluir anotaciones añadidas a los documentos antes de que se descargaran,
-              asegúrese de que la opción para incluir los datos de campo esté seleccionada antes de pulsar
-              <b>Cargar</b>. Solo se importarán las anotaciones promocionadas a datos de campo antes de que se descarguen los
-              documentos. </p><p class="p wrapper"><b>Restricción:</b> Cuando se importen los documentos anotados,
-              se volverán a señalizar. Este proceso puede cambiar lo que
-              Watson Knowledge
-              Studio
-              considera como los límites de la frase
-              en ellos. Dado que las anotaciones están definidas por la frase, algunas anotaciones podrían ser
-              invalidadas durante este proceso. Después de cargar documentos desde otro espacio de trabajo, realice una revisión rápida
-              de las anotaciones para enfrentarse a las discrepancias. </p>
-            <p class="p">Debe cargar el sistema de tipos desde el
-              espacio de trabajo original al espacio de trabajo actual antes de cargar las anotaciones de datos de campo. Para obtener detalles, consulte [Carga de recursos desde otro espacio de trabajo ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](exportimport.html){: new_window}.</p>
-            <p class="p">Si ha descargado previamente documentos anotados que
-              están en
-              formato UIMA
-              CAS XMI, puede
-              cargar el archivo <code>ZIP</code> que contiene el contenido analizado. Especifique que este es
-              el tipo de contenido que desea cargar antes de pulsar <b>Cargar</b>. Para obtener detalles
-              sobre cómo crear estos archivos y requisitos para cargarlos, consulte [Carga de documentos preanotados ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](preannotation.html#wks_uima){: new_window}.</p>
-          </td>
-        </tr>
-      </tbody>
+    <table summary="Cada fila de esta tabla describe una opción para una elección.">
+      <caption>Tabla 1. Opciones de carga</caption>
+      <tr>
+        <th style="vertical-align:bottom; text-align:left" id="d31095e284-option">
+          Opción
+        </th>
+        <th style="vertical-align:bottom; text-align:left" id="d31095e284-desc">
+          Descripción
+        </th>
+      </tr>
+      <tr>
+        <td headers="d31095e284-option" id="d31095e286">
+          <p><strong>Archivo CSV</strong></p>
+        </td>
+        <td headers="d31095e284-desc d31095e286">
+          <p>Arrastre un único archivo CSV que contenga los documentos de ejemplo o pulse para localizar el archivo en el sistema local y, a continuación, pulse <b>Cargar</b>. La primera columna del archivo CSV especifica el nombre de archivo del documento. La segunda columna del archivo contiene el texto del documento. El archivo CSV debe estar en formato UTF-8.</p>
+        </td>
+      </tr>
+      <tr>
+        <td headers="d31095e284-option" id="d31095e294">
+          <p><strong>Archivos de texto</strong></p>
+        </td>
+        <td headers="d31095e284-desc d31095e294">
+          <p>Arrastre uno o varios archivos de texto desde el sistema local o pulse para localizar y seleccionar los archivos y, a continuación, pulse <b>Cargar</b>. Los archivos de texto deben estar en formato UTF-8.</p>
+        </td>
+      </tr>
+      <tr>
+        <td headers="d31095e284-option" id="d31095e316">
+          <p><strong>Archivo ZIP</strong></p>
+        </td>
+        <td headers="d31095e284-desc d31095e316">
+          <p>Si ha descargado previamente documentos desde un espacio de trabajo de Watson Knowledge Studio, arrastre el archivo <code>ZIP</code> que contiene los documentos descargados o pulse para localizar y seleccionar el archivo. Si desea incluir anotaciones añadidas a los documentos antes de que se descargaran, asegúrese de que la opción para incluir los datos de campo esté seleccionada antes de pulsar <b>Cargar</b>. Solo se importarán las anotaciones promocionadas a datos de campo antes de que se descarguen los documentos. </p><p><b>Restricción:</b> Cuando se importen los documentos anotados, se volverán a señalizar. Este proceso puede cambiar lo que Watson Knowledge Studio considera como los límites de la frase en ellos. Dado que las anotaciones están definidas por la frase, algunas anotaciones podrían ser invalidadas durante este proceso. Después de cargar documentos desde otro espacio de trabajo, realice una revisión rápida de las anotaciones para enfrentarse a las discrepancias.</p>
+          <p>Debe cargar el sistema de tipos desde el espacio de trabajo original al espacio de trabajo actual antes de cargar las anotaciones de datos de campo. Para obtener detalles, consulte [Carga de recursos desde otro espacio de trabajo ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](exportimport.html){: new_window}.</p>
+          <p>Si ha descargado previamente documentos anotados que están en formato UIMA CAS XMI, puede cargar el archivo <code>ZIP</code> que contiene el contenido analizado. Especifique que este es el tipo de contenido que desea cargar antes de pulsar <b>Cargar</b>. Para obtener detalles sobre cómo crear estos archivos y requisitos para cargarlos, consulte [Carga de documentos preanotados ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](preannotation.html#wks_uima){: new_window}.</p>
+        </td>
+      </tr>
     </table>
 
 1. Cuando los documentos se hayan añadido, pulse los nombres de documentos para previsualizarlos y verificar que el contenido es correcto. Por ejemplo, verifique que los archivos de texto estén en formato UTF-8 y que no sean visibles problemas de marcas diacríticas ni de normalización de caracteres en los documentos, y compruebe si hay saltos de frase pobres. Si existen problemas, puede que necesite preprocesar los archivos antes de añadirlos al corpus. Desea que los documentos estén lo más limpios y con mejor formato como sea posible antes de comenzar el diccionario o la anotación humana.
 
 ### Qué hacer a continuación
+{: #wks_projadd_next}
 
 Antes de iniciar las tareas de anotación humana, divida el corpus en varios conjuntos de documentos y asigne los conjuntos de documentos a anotadores humanos.
 
@@ -157,22 +150,25 @@ Antes de iniciar las tareas de anotación humana, divida el corpus en varios con
 Después de añadir documentos, divida los documentos en conjuntos para que los puedan anotar varios anotadores humanos. Para ver las puntuaciones de acuerdo entre anotadores, debe asignar al menos dos anotadores humanos y especificar que algún porcentaje de los documentos se solapan entre los conjuntos.
 
 ### Antes de empezar
+{: #wks_projdocsets_prereqs}
 
 - Debe cargar los conjuntos de documentos antes de dividirlos en conjuntos de anotaciones.
 - Debe crear cuentas de usuario en {{site.data.keyword.knowledgestudioshort}} para todos los anotadores humanos que trabajarán en documentos en este espacio de trabajo.
 
 ### Acerca de esta tarea
+{: #wks_projdocsets_about}
 
 > **Atención:** Si utiliza el navegador Google Chrome, no podrá cargar un gran número de archivos (como más de 300) seleccionándolos desde una carpeta. La solución temporal es utilizar el navegador Firefox o seleccionar un número más pequeños de archivos y cargar archivos muchas veces.
 
 Puede crear un máximo de 1.000 conjuntos de anotaciones por espacio de trabajo.
 
 ### Procedimiento
+{: #wks_projdocsets_procedure}
 
 Para crear un conjunto de anotaciones:
 
 1. Inicie sesión como un administrador o gestor de proyectos de {{site.data.keyword.knowledgestudioshort}}, y seleccione su espacio de trabajo.
-1. Seleccione el separador **Activos y herramientas** > **Documentos** > **Conjuntos de anotaciones**.
+1. Seleccione el separador **Activos**> **Documentos** > **Conjuntos de anotaciones**.
 1. Pulse **Crear conjuntos de anotaciones**.
 
     1. Para el conjunto base, seleccione la recopilación de documentos que desea dividir en conjuntos de anotaciones, ya sean todos los documentos del corpus o documentos asignados previamente a un conjunto de documentos.
@@ -183,7 +179,7 @@ Para crear un conjunto de anotaciones:
 
     1. Seleccione un nombre de usuario de la lista de anotadores humanos.
 
-        > **Nota:** Si tiene una suscripción a un plan gratuito, asóciese con el conjunto de anotaciones. No puede añadir otros usuarios ni asignarlos al rol de anotador humano. Pero al añadirse usted mismo, puede rellenar el rol de un anotador humano y probar cómo interactuará un anotador humano real con el editor de datos de campo para anotar documentos.
+        > **Nota:** Si tiene una suscripción a un plan Lite, asóciese con el conjunto de anotaciones. No puede añadir otros usuarios ni asignarlos al rol de anotador humano. Pero al añadirse usted mismo, puede rellenar el rol de un anotador humano y probar cómo interactuará un anotador humano real con el editor de datos de campo para anotar documentos.
 
     1. Asigne un nombre al conjunto de anotaciones.
 
@@ -192,26 +188,68 @@ Para crear un conjunto de anotaciones:
 1. Cuando termine de asignar todos los anotadores humanos que trabajarán en este espacio de trabajo, pulse **Generar** para crear los conjuntos de anotaciones. Cuando los anotadores humanos inician sesión en el editor de datos de campo, verán solo los conjuntos de anotaciones asignados a ellos.
 
 **Tareas relacionadas**:
+{: #wks_related_tasks}
 
 [Ensamblaje de un equipo](/docs/services/watson-knowledge-studio/team.html)
 
 ## Supresión de documentos
-{: #wks_projdelete}
+{: #wks_deletedocs}
 
-Puede eliminar un documento si determina que no representa el texto del sector estándar que beneficiará al modelo.
+Puede suprimir un documento si determina que no representa el texto del sector estándar que beneficiará al modelo.
 
-### Procedimiento
+Para suprimir un documento, elija la opción que se aplica a su situación:
+- [Supresión de un documento que no se ha asociado con una tarea de anotación](#deletenotask)
+- [Supresión de un documento asociado con una tarea de anotación y la anotación humana *no se ha iniciado*](#deletenoanno)
+- [Supresión de un documento asociado con una tarea de anotación y la anotación humana *se ha iniciado*](#deleteanno)
 
-Para suprimir un documento, efectúe los pasos siguientes:
+### Supresión de un documento que no se ha asociado con una tarea de anotación
+{: #deletenotask}
+
+Si el documento que desea suprimir no está asociado con una tarea de anotación, siga estos pasos para suprimir el documento.
+
+#### Procedimiento
+{: #deletenotaskp}
 
 1. Inicie sesión como administrador de {{site.data.keyword.knowledgestudioshort}} y seleccione el espacio de trabajo.
-1. Seleccione el separador **Activos y herramientas** > **Documentos** > **Conjuntos de documentos**.
-1. Busque el documento que desea eliminar y, a continuación, pulse **Suprimir**.
-1. No puede suprimir un documento incluido en un conjunto de anotaciones que se ha asociado con una tarea de anotaciones. Si el documento forma parte de un conjunto de anotaciones pero no se ha asociado aún con una tarea, puede suprimir el documento siguiendo los pasos anteriores.
+1. Seleccione el separador **Activos**> **Documentos** > **Conjuntos de documentos**.
+2. Seleccione el conjunto de documentos que contiene el documento que desea suprimir. Se abrirá el conjunto de documentos.
+3. Busque el documento que desea eliminar y, a continuación, pulse **Suprimir**.
 
-    Realice una de las siguientes tareas si el documento está asociado con una tarea de anotación:
-    - Si los anotadores humanos no han empezado a anotar los documentos, suprima la tarea de anotación y, a continuación, suprima el documento. Para suprimir una tarea de anotación, abra el separador **Activos y herramientas** > **Documentos** > **Tareas**, busque la tarea de anotación con la que está asociado el documento, pulse el icono **Mostrar menú** en la tarea y, a continuación, pulse **Suprimir**. Posteriormente, puede volver a crear la tarea de anotación y asociar el mismo conjunto de anotaciones, que ahora tiene un documento menos en él.
-    - Si los anotadores humanos han empezado a anotar los documentos, no suprima la tarea o perderá su trabajo. Puede decirles que sigan trabajando, pero que ignoren el documento no deseado en el conjunto. Haga que finalicen el resto del trabajo de anotación, y pase por el proceso de obtener el conjunto añadido a los datos de campo. Una vez añadido, pero antes de que alguien ejecute el modelo de aprendizaje automático, suprima el documento no deseado. No desea utilizar el documento no anotado para entrenar un modelo porque el modelo de aprendizaje automático aprende tanto de lo que no anota como de lo que sí anota. Ahora puede suprimir el documento no deseado, que actualmente forma parte de los datos de campo, desde el separador **Activos y herramientas** > **Documentos** > **Conjuntos de documentos**.
+### Supresión de un documento asociado con una tarea de anotación y la anotación humana no se ha iniciado
+{: #deletenoanno}
+
+Si el documento que desea suprimir está asociado con una tarea de anotación y la anotación humana *aún no se ha iniciado*, siga estos pasos para suprimir el documento.
+
+#### Procedimiento
+{: #deletenoannop}
+
+1. Inicie sesión como administrador de {{site.data.keyword.knowledgestudioshort}} y seleccione el espacio de trabajo.
+1. Suprima la tarea de anotación:
+
+  a. Abra la página **Modelo de aprendizaje automático** > **Tareas de anotación**.
+
+  b. Busque la tarea de anotación con la que está asociado el documento, pulse el icono **Mostrar menú** en la tarea y, a continuación, pulse **Suprimir**.
+
+1. Suprima el documento tal como se describe en [Supresión de un documento que no se ha asociado con una tarea de anotación](#deletenotask).
+1. Después de suprimir el documento, vuelva a crear la tarea de anotación y asocie el mismo conjunto de anotaciones, que ahora tiene un documento menos.
+
+### Supresión de un documento asociado con una tarea de anotación y la anotación humana se ha iniciado
+{: #deleteanno}
+
+Si el documento que desea suprimir está asociado con una tarea de anotación y la anotación humana *se ha iniciado*, siga estos pasos para suprimir el documento.
+
+**Atención**: no suprima una tarea si la anotación humana está en curso. Si lo hace, perderá el trabajo que está en curso.
+
+#### Procedimiento
+{: #deleteannop}
+
+1. Indique a los anotadores humanos que ignoren el documento no deseado en el conjunto.
+1. Una vez finalizado el trabajo de anotación en los demás documentos, y cuando los anotadores humanos envíen todos los documentos para añadir el conjunto a los datos de campo, [revise y acepte los documentos enviados](/docs/services/watson-knowledge-studio/build-groundtruth.html#wks_haaccuracy).
+1. [Resuelva los conflictos de anotación](/docs/services/watson-knowledge-studio/build-groundtruth.html#wks_haadjudicate).
+1. Cuando todos los documentos formen parte de los datos de campo y la tarea se haya completado, suprima la tarea tal como se describe en [Supresión de un documento asociado con una tarea de anotación y la anotación humana no se ha iniciado](#deletenoannop).
+1. Suprima el documento tal como se describe en [Supresión de un documento que no se ha asociado con una tarea de anotación](#deletenotask).
+
+  **Nota**: Puede confirmar que las anotaciones en los documentos restantes no se pierden descargando los conjuntos de documentos y revisando los documentos en la carpeta `gt`.
 
 ## Modelo de datos
 {: #wks_datamodel}

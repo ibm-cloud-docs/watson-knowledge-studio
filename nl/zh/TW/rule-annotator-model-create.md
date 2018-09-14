@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-26"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -27,12 +27,14 @@ lastupdated: "2018-03-26"
 {: shortdesc}
 
 ## 程序
+{: #wks_rule_train_procedure}
 
 若要建立規則型模型，請完成下列步驟：
 
 1. 以 {{site.data.keyword.knowledgestudioshort}} 管理者或專案經理身分登入，並選取您的工作區。
-1. 選取**模型管理** > **版本** > **規則型**標籤。
-1. 將類型系統中的實體類型對映至您用來定義規則的一個以上類別。
+1. 選取**規則型模型** > **版本** > **規則型模型**標籤。
+2. 按一下**對映實體類型及類別**。
+3. 將類型系統中的實體類型對映至您用來定義規則的一個以上類別。
 
   對映實體類型之後，您可以在建立機器學習模型的程序中，[部署規則型模型](/docs/services/watson-knowledge-studio/rule-annotator-model-use.html)或用它來[預先註釋文件](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannotrule)。
 

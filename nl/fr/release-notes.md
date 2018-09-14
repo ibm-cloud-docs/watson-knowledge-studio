@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-08-09"
 
 ---
 
@@ -26,6 +26,82 @@ Cette documentation concerne {{site.data.keyword.knowledgestudiofull}} on {{site
 Les nouvelles fonctionnalités et modifications suivantes sont disponibles dans {{site.data.keyword.knowledgestudiofull}}.
 {: shortdesc}
 
+## Août 2018
+{: #august2018}
+
+### Nouvelles fonctionnalités et changements
+{: #new-august2018}
+
+- Une nouvelle option a été introduite pour automatiser la migration des instances avec plan Standard de la plateforme {{site.data.keyword.IBM_notm}} Marketplace (aujourd'hui dépréciée) vers la plateforme [{{site.data.keyword.cloud_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/blogs/bluemix/2017/12/watson-knowledge-studio-ibm-cloud/){: new_window}. Si vous avez une instance Standard sur l'ancienne plateforme, vous aurez la possibilité de la faire migrer. Pour plus d'informations, consultez [Migrer sur {{site.data.keyword.cloud_notm}}](/docs/services/watson-knowledge-studio/client-migration.html).
+
+## Juillet 2018
+{: #july2018}
+
+### Nouvelles fonctionnalités et changements
+{: #new-july2018}
+
+- La page **Modèles déployés** a été mise à jour pour inclure les modèles des instances de {{site.data.keyword.knowledgestudioshort}} gérés par les [*groupes de ressources* IAM ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/iam/users_roles.html){: new_window}, en complément des modèles gérés par les [*organisations* Cloud Foundry ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window}.
+
+   Ce que vous voyez sur la page Modèles déployés dépend de la [région ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/resources/services_region.html){: new_window} qui héberge votre instance {{site.data.keyword.knowledgestudioshort}}. Si la région prend en charge les instances gérées par les deux méthodes de gestion des accès, un onglet est visible pour chaque méthode. Les modèles des instances gérées par IAM sont listés sous l'onglet **Groupes de ressources**. Les modèles des instances gérées par Cloud Foundry sont listés sous l'onglet **Organisations**. 
+
+  Si la région prend en charge les instances gérées par seulement une des deux méthodes de gestion des accès, vous ne voyez qu'une seule liste de modèles, car une seule méthode de gestion des accès est applicable.
+
+   Pour afficher la page **Modèles déployés**, dans le menu **Paramètres** de la barre de menus, en haut à droite, cliquez sur **Gérer les modèles déployés**. Pour des informations sur le retrait de modèles du déploiement dans la page **Modèles déployés**, consultez [Retirer des modèles d'apprentissage automatique du déploiement](/docs/services/watson-knowledge-studio/publish-ml.html#undeploy-view-model) et [Retirer des modèles à base de règles du déploiement](/docs/services/watson-knowledge-studio/rule-annotator-model-use.html#undeploy-view-model).
+
+- La navigation a changé pour être en meilleure adéquation avec l'enchaînement d'opérations dans {{site.data.keyword.knowledgestudioshort}}. Les fonctionnalités suivantes ont également été réorganisées :
+
+    - Dans la version précédente, la gestion des dictionnaires faisait partie de la page Pré-annotateurs. Elle est à présent située sur la page Dictionnaires, dans la section Actifs de la navigation.
+    - Dans la version précédente, la fonctionnalité d'annotation humaine était répartie entre les onglets Mentions, Relations et Coréférences, dans la section Annotation de document de la navigation. Elle est à présent regroupée sous la page Tâches d'annotation, dans la section Modèle d'apprentissage automatique de la navigation.
+    - Dans la version précédente, pour gérer les tâches d'annotation humaine, il fallait aller à l'onglet Tâches, sous la page Actifs & Outils > Documents. A présent, l'ajout de tâches et la gestion des tâches existantes se déroulent sous la page Tâches d'annotation, dans la section Modèle d'apprentissage automatique de la navigation.
+    - Dans la version précédente, les pages Règles, Expressions régulières et Dictionnaires étaient des pages distinctes dans la section Annotation de document de la navigation. Elles sont à présent regroupées sous la page Règles, dans la section Modèle à base de règles de la navigation.
+
+    Pour plus de détails sur les changements dans la navigation, référez-vous à la Figure 1 et au Tableau 3.
+
+![Captures d'écran de l'ancienne navigation (à gauche) et de la nouvelle navigation (à droite).](images/nav3-0718.svg "Captures d'écran de l'ancienne navigation et de la nouvelle navigation. Les changements sont listés dans le Tableau 3 et détaillés dans le texte qui précède.") Figure 1. Captures d'écran de l'ancienne navigation (à gauche) et de la nouvelle navigation (à droite).
+
+| Fonction | Emplacement précédent | Emplacement actuel |
+|---------|--------------------------|----------------------|
+| Tâches d'annotation | Actifs & Outils > Documents > Tâches | Modèle d'apprentissage automatique > Tâches d'annotation |
+| Coréférences (onglet) | Annotation de documents | Modèle d'apprentissage automatique > Tâches d'annotation > tâche > jeu d'annotations > document |
+| Dictionnaires (page) (gestion) | Actifs & Outils > Pré-annotateurs > Gérer les dictionnaires | Actifs |
+| Dictionnaires (onglet) (association à des classes pour un modèle à base de règles) | Annotation de documents | Modèle à base de règles > Règles |
+| Documents (page) | Actifs & Outils | Actifs |
+| Types d'entités (page) | Actifs & Outils | Actifs |
+| Mentions (onglet) | Annotation de documents | Modèle d'apprentissage automatique > Tâches d'annotation > tâche > jeu d'annotations > document |
+| Performances (page) | Gestion des modèles | Modèle d'apprentissage automatique |
+| Pré-annotateurs (page) | Actifs & Outils | Modèle d'apprentissage automatique > Pré-annotation |
+| Expressions régulières (onglet) | Annotation de documents | Modèle à base de règles > Règles |
+| Types de relation (page) | Actifs & Outils | Actifs |
+| Relations (onglet) | Annotation de documents | Modèle d'apprentissage automatique > Tâches d'annotation > tâche > jeu d'annotations > document |
+| Règles (onglet) | Annotation de documents | Modèle à base de règles |
+| Tâches (onglet) | Actifs & Outils > Documents | Modèle d'apprentissage automatique > Tâches d'annotation |
+| Versions (page) (modèle d'apprentissage automatique) | Gestion des modèles | Modèle d'apprentissage automatique |
+| Versions (page) (modèle à base de règles) | Gestion des modèles | Modèle à base de règles |
+{: caption="Tableau 3. Changements dans la navigation (juillet 2018)" caption-side="top"}
+
+## Mai 2018
+{: #may2018}
+
+### Nouvelles fonctionnalités et changements
+{: #new-may2018}
+
+- Un problème de configuration a été corrigé, qui faisait que les instances de service dans la Région Sydney n'apparaissaient pas dans la Région Sud des Etats-Unis.
+- Dans la fenêtre Déployer le modèle, si la région cible du déploiement prend en charge à la fois les *groupes de ressources* {{site.data.keyword.iamlong}} et les *espaces* Cloud Foundry, pour voir la liste, vous devez choisir la méthode de gestion des accès qu'utilise votre instance de service. Pour plus d'informations sur Cloud Foundry et {{site.data.keyword.iamshort}}, consultez [Resource Groups and Access Management ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/blogs/bluemix/2017/12/resource-groups-access-management/){: new_window}.
+- Ajout d'une option Collecte de données sur la page Détails du service. Pour plus d'informations sur la collecte de données, consultez [Dépannage, assistance et FAQ](/docs/services/watson-knowledge-studio/troubleshooting.html#content)
+- Le support multilingue s'est enrichi du chinois (traditionnel).
+- Les utilisateurs ayant le rôle d'administrateur (Admin) peuvent à présent voir le nombre d'espaces de travail utilisés. Cette information est disponible sur la page Détails du service. 
+- {{site.data.keyword.alchemylanguagefull}} n'est plus disponible comme cible de déploiement de modèles. Pour des informations, consultez [Retirement of {{site.data.keyword.alchemyapishort}} service ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/blogs/bluemix/2017/03/bye-bye-alchemyapi/){: new_window}.
+- Dorénavant, si vous supprimez un espace de travail, il vous sera demandé de confirmer votre action. Le but est de prévenir les suppressions accidentelles.
+- La documentation inclut des nouveautés à propos de la confidentialité des données personnelles. Lisez-en plus dans [Sécurité de l'information](/docs/services/watson-knowledge-studio/information-security.html).
+
+## Avril 2018
+{: #april2018}
+
+### Nouvelles fonctionnalités et changements
+{: #new-april2018}
+
+- Le plan gratuit {{site.data.keyword.knowledgestudioshort}} a été remplacé par le plan Lite. Pour plus d'informations, consultez [Go Lite with Watson {{site.data.keyword.knowledgestudioshort}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/blogs/bluemix/2018/04/go-lite-watson-knowledge-studio/){: new_window}.
+
 ## Mars 2018
 {: #march2018}
 
@@ -34,7 +110,7 @@ Les nouvelles fonctionnalités et modifications suivantes sont disponibles dans 
 
 - Une page **Modèles déployés** est disponible, dans laquelle vous pouvez voir tous les modèles {{site.data.keyword.knowledgestudioshort}} déployés dans des services des espaces auxquels vous avez accès. Pour afficher la page **Modèles déployés**, dans le menu **Paramètres** de la barre de menus, en haut à droite, cliquez sur **Gérer les modèles déployés**. Pour des informations sur le retrait de modèles du déploiement et leur visualisation dans la page **Modèles déployés**, consultez [Retirer des modèles d'apprentissage automatique du déploiement](/docs/services/watson-knowledge-studio/publish-ml.html#undeploy-view-model) et [Retirer des modèles à base de règles du déploiement](/docs/services/watson-knowledge-studio/rule-annotator-model-use.html#undeploy-view-model).
 - Une traduction en français de l'interface de {{site.data.keyword.knowledgestudioshort}} est à présent disponible.
-- {{site.data.keyword.alchemylanguagefull}} est plus disponible en tant que pré-annotateur. A la place d'{{site.data.keyword.alchemylanguageshort}}, vous pouvez utiliser {{site.data.keyword.nlushort}} pour pré-annoter vos documents. Pour plus d'informations, consultez [Amorcer le processus d'annotation](/docs/services/watson-knowledge-studio/preannotation.html).
+- {{site.data.keyword.alchemylanguagefull}} n'est plus disponible en tant que pré-annotateur. A la place d'{{site.data.keyword.alchemylanguageshort}}, vous pouvez utiliser {{site.data.keyword.nlushort}} pour pré-annoter vos documents. Pour plus d'informations, consultez [Amorcer le processus d'annotation](/docs/services/watson-knowledge-studio/preannotation.html).
 
 ## Décembre 2017
 {: #december2017}

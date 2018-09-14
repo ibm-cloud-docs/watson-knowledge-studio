@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -30,11 +30,11 @@ La _Migrazione dei dati manuale_ è il processo di backup dei tuoi dati da un'is
 
 **Nota**: {{site.data.keyword.knowledgestudioshort}} su {{site.data.keyword.cloud_notm}} utilizza il termine _spazio di lavoro_, mentre {{site.data.keyword.knowledgestudioshort}} nel {{site.data.keyword.IBM_notm}} Marketplace utilizza _progetto_. La funzionalità è la stessa. È diversa soltanto la terminologia.
 
-Per eseguire il backup e ripristinare i dati completa la seguente procedura: 
+Per eseguire il backup e ripristinare i dati completa la seguente procedura:
 
 1. [Comprendi di quali dati è possibile eseguire il backup](#data)
 1. [Prepara il backup](#prepare)
-1. [Esporta le risorse dall'istanza corrente](#export)
+1. [Scarica le risorse dall'istanza corrente](#export)
 1. [Ricrea gli spazi di lavoro nella nuova istanza](#recreateproj)
 1. [Ripristina i dati dello spazio di lavoro](#restoredata)
 1. [Ripristina i modelli](#restoremodels)
@@ -43,20 +43,20 @@ Per eseguire il backup e ripristinare i dati completa la seguente procedura:
 ## È possibile eseguire il backup dei dati
 {: #data}
 
-Le seguenti risorse possono essere sottoposte a backup e migrate manualmente: 
+Le seguenti risorse possono essere sottoposte a backup e migrate manualmente:
 
-- Dizionari modificabili. 
+- Dizionari modificabili.
 - Sistema tipo
 - Serie di documenti ground truth approvati
 
-I seguenti tipi di risorse non possono essere sottoposti a backup e migrati manualmente: 
+I seguenti tipi di risorse non possono essere sottoposti a backup e migrati manualmente:
 
 - Documenti di annotazione umana in corso
 - Attività di annotazione
 - Modelli e istantanee
 - Dizionari in sola lettura
 
-## Preparazione del backup 
+## Preparazione del backup
 {: #prepare}
 
 Per preparare il backup e il ripristino dei tuoi dati, completa la seguente procedura:
@@ -89,14 +89,14 @@ Per preparare il backup e il ripristino dei tuoi dati, completa la seguente proc
 
     Se stai migrando gli spazi di lavoro tra istanze differenti, considera di fare un elenco degli utenti e dei rispettivi ruoli dell'istanza di cui stati eseguendo il backup. Qualcuno con il ruolo di amministratore può stampare l'elenco dalla pagina User Account Management. Dopo che sono stati ricreati gli spazi di lavoro nella nuova istanza, qualcuno con il ruolo di amministratore deve aggiungere gli utenti e assegnarne i ruoli.
 
-    Consulta [Assemblaggio di un team](/docs/services/watson-knowledge-studio/team.html) per ulteriori informazioni sui ruoli.
+    Per ulteriori informazioni sui ruoli, consulta [Ruoli utente in {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/roles.html).
 
 1. Prendi nota delle informazioni dello spazio di lavoro.
 
     Mentre hai ancora accesso all'istanza corrente, per ogni spazio di lavoro che vuoi migrare, prendi nota delle seguenti informazioni:
     - Nome dello spazio di lavoro
     - Descrizione dello spazio di lavoro
-    - Proprietario dello spazio di lavoro 
+    - Proprietario dello spazio di lavoro
     - Lingua
     - Se hai attività di annotazione incomplete, poiché non è possibile eseguirne il backup o migrarle, prendi nota degli annotatori umani che sono assegnati alle attività incomplete nello spazio di lavoro. Prendi anche nota dei dettagli dell'attività, come il nome, la data di scadenza e quali serie di documenti sono assegnate a quali utenti.
 
@@ -108,7 +108,9 @@ Per ogni spazio di lavoro che vuoi migrare, scarica le seguenti risorse. Archivi
 - Sistema tipo
 - Dizionari
 
-  **Nota**: saranno scaricati solo i dizionari modificabili. Non puoi scaricare i dizionari in sola lettura.
+  **Nota**:
+    - Saranno scaricati solo i dizionari modificabili. Non puoi scaricare i dizionari in sola lettura.
+    - Per i dizionari, le associazioni dei tipi di entità non vengono migrate. Dopo che hai ripristinato queste risorse, dovrai associare i dizionari ai tipi di entità, se necessario.
 
 - Documenti
 
@@ -143,7 +145,7 @@ Dopo aver ricreato gli spazi di lavoro, carica le risorse scaricate precedenteme
 
   Se hai utilizzato i dizionari in sola lettura nella versione precedente dello spazio di lavoro, ricaricali in questo spazio di lavoro dalla loro sorgente originale.
 
-  **Nota**: quando aggiungi i dizionari, viene creato automaticamente il pre-annotatore del dizionario. Associa il dizionario a un tipo di entità nel momento in cui esegui il pre-annotatore.
+1. Per i pre-annotatori del dizionario, associa i dizionari a un tipo di entità. I dizionari che non hanno associazioni ai tipi di entità non applicheranno le annotazioni quando pre-annoti i documenti.
 
 1. Carica i documenti che hai scaricato dalla versione precedente dello spazio di lavoro in questa versione.
    Per i dettagli, vedi [Caricamento delle risorse da un altro spazio di lavoro](/docs/services/watson-knowledge-studio/exportimport.html).
@@ -155,13 +157,13 @@ A questo punto, tutte le risorse che sono state utilizzate per preparare il mode
 
 Per ridistribuire un modello di machine learning che hai distribuito nell'istanza precedente, completa la seguente procedura:
 
-1. Prepara il modello di machine learning. Per i dettagli, vedi [Creazione di un modello di machine learning](/docs/services/watson-knowledge-studio/train-ml.html).
+1. [Prepara il modello di machine learning](/docs/services/watson-knowledge-studio/train-ml.html).
 
-  **Nota**: non eseguire alcun pre-annotatore sui documenti annotati che hai migrato a questo spazio di lavoro perché perderanno tutte le annotazioni che sono state aggiunte dagli annotatori umani.
+  **Nota**: non eseguire i pre-annotatori sui documenti annotati che hai migrato a questo spazio di lavoro perché perderanno le annotazioni che sono state aggiunte dagli annotatori umani.
 
 1. Dopo aver creato il modello, ridistribuiscilo. Per i dettagli, vedi [Utilizzo di un modello di machine learning](/docs/services/watson-knowledge-studio/publish-ml.html).
 
-Per ridistribuire un modello basato sulla regola che hai distribuito nell'istanza precedente, completa la seguente procedura: 
+Per ridistribuire un modello basato sulla regola che hai distribuito nell'istanza precedente, completa la seguente procedura:
 
 1. [Crea il modello basato sulla regola](/docs/services/watson-knowledge-studio/rule-annotator-model-create.html).
 1. [Distribuisci il modello basato sulla regola](/docs/services/watson-knowledge-studio/rule-annotator-model-use.html).
@@ -171,6 +173,6 @@ Per ridistribuire un modello basato sulla regola che hai distribuito nell'istanz
 
 Se hai delle attività di annotazione che hai creato ma non completato nello spazio di lavoro precedente, completa la seguente procedura per ricrearle.
 
-1. Carica tutti i documenti che non sono ancora stati annotati ma che vuoi aggiungere a ground truth per continuare a migliorare il modello.
-1. Dai documenti appena importati e non annotati, crea le serie di documenti per l'annotazione. Queste serie sono ora denominate _serie di annotazioni_. Per i dettagli, vedi [Creazione e assegnazione delle serie di annotazioni](/docs/services/watson-knowledge-studio/document-for-annotation.html).
-1. Ricrea le attività di annotazione. Fornisci all'attività lo stesso nome, una data di scadenza appropriata e assegna le serie di annotazioni agli annotatori umani appropriati.
+1. [Carica tutti i documenti](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_projadd) che non sono ancora stati annotati ma che vuoi aggiungere a ground truth per continuare a migliorare il modello.
+1. Dai documenti appena importati e non annotati, [crea le serie di annotazioni](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_projdocsets).
+1. [Ricrea le attività di annotazione](/docs/services/watson-knowledge-studio/annotate-documents.html#wks_hatask). Fornisci all'attività lo stesso nome, una data di scadenza appropriata e assegna le serie di annotazioni agli annotatori umani appropriati.

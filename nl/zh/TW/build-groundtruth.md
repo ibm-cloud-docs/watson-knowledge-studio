@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -51,31 +51,38 @@ lastupdated: "2018-04-04"
 
 為了協助您識別需要調查的區域，如果分數低於您指定的註釋人員內部協議臨界值，則會以紅色強調顯示。在註釋專案的早期階段中，您可能會發現，關係分數通常低於提及項目分數，因為完美的關係註釋需要定義該關係的提及項目先在協議中。
 
-**全部**直欄中的分數是 *Fleiss Kappa 分數*。其代表在作業中所有重疊的文件之間，多位註釋人員套用相同註釋的一致程度。該值範圍上限為 1，甚至是負數，可協助您識別註釋準則或特定註釋人員的弱點。下列準則（*Landis 及 Koch，1977*）提供評量整體效能的起始點：
+**全部**直欄中的分數是 *Fleiss Kappa 分數*。其代表在作業中所有重疊的文件之間，多位註釋人員套用相同註釋的一致程度。該值範圍上限為 1，甚至是負數，可協助您識別註釋準則或特定註釋人員的弱點。下列準則（*Landis 及 Koch，1977*）提供評量整體效能的起始點。
 
-<table cellpadding="4" cellspacing="0" summary="" id="wks_haiaa__table_p5s_dx1_f5" class="table" rules="rows" frame="void" border="0"><thead class="thead" align="left"><tr class="row"><th class="entry ncol thleft" align="left" valign="top" id="d12741e148">分數</th>
-<th class="entry ncol thleft" align="left" valign="top" id="d12741e150">協議層次</th>
-</tr>
-</thead>
-<tbody class="tbody"><tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">&lt; 0</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">極差</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">.01 - .20</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">差</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">.21 - .40</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">普通</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">.41 - .60</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">中等</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">.61 - .80</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">優良</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">.81 - 1.0</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">完美</p></td>
-</tr>
-</tbody>
+<table style="width:60%" summary="此表格提供用於評量整體效能的一般註釋人員內部準則。">
+  <caption>表 1. 註釋人員內部準則</caption>
+  <tr>
+    <th style="vertical-align:bottom; text-align:center" id="d12741e148">分數</th>
+    <th style="vertical-align:bottom; text-align:center" id="d12741e150">協議層次</th>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">&lt; 0</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">極差</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">.01 - .20</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">差</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">.21 - .40</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">普通</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">.41 - .60</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">中等</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">.61 - .80</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">優良</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">.81 - 1.0</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">完美</td>
+  </tr>
 </table>
 
 其他直欄中的分數是 *F1 測量*。其代表一對註釋人員之間的註釋一致性層次。值的範圍從 0 到 1，其中，完美協議以分數 1 表示。可接受協議層次的組成視您的領域資料及類型系統而定。不過，為提供範例，以下是在以 KLUE 類型系統為基礎的專案中，專案經理預期符合或超出的 F1 臨界值：
@@ -93,18 +100,20 @@ lastupdated: "2018-04-04"
 
 決定哪些文件要升級成基準時，您必須檢閱註釋人員內部協議分數。分數低的文件可能會被拒絕，並退回給註釋人員以進行改善。
 
-### 關於本作業
+### 關於此作業
+{: #wks_haaccuracy_about}
 
-當您檢查註釋人員內部協議時，也會檢查已由多位註釋人員所註釋的文件。如果文件未在多個註釋集及註釋人員之間共用，則沒有註釋人員內部協議可計算。當您將註釋集新增至作業時，請確定要比較的集合包含相同的重疊文件。您可以藉由開啟**資產及工具** > **文件**頁面，然後按一下**註釋集**標籤，再按一下集合的名稱，來查看哪些文件位於註釋集中。
+當您檢查註釋人員內部協議時，也會檢查已由多位註釋人員所註釋的文件。如果文件未在多個註釋集及註釋人員之間共用，則沒有註釋人員內部協議可計算。當您將註釋集新增至作業時，請確定要比較的集合包含相同的重疊文件。您可以藉由開啟**資產** > **文件**頁面，然後按一下**註釋集**標籤，再按一下集合的名稱，來查看哪些文件位於註釋集中。
 
 您可能遇到找不到任何重疊文件的情況。例如，如果您在兩個回合中建立註釋集並將它們新增至相同作業，則可能會發生此情況。即使幾乎同時建立了註釋集，也沒有任何共同文件。而另一個範例是，如果您使用重疊文件來建立註釋集，但每個作業新增一個註釋集，而非將所有註釋集新增至單一作業，則會找不到任何重疊文件，且無法計算註釋人員內部協議。
 
 ### 程序
+{: #wks_haaccuracy_procedure}
 
 若要評量註釋人員之間的註釋協議，請執行下列動作：
 
 1. 以 {{site.data.keyword.knowledgestudioshort}} 管理者或專案經理身分登入，並選取您的工作區。
-1. 選取**資產及工具** > **文件** > **作業**標籤，然後開啟您要評估的作業。
+1. 選取**機器學習模型** > **註釋作業**頁面，然後開啟您要評估的作業。
 1. 按一下**計算註釋人員內部協議**。預設視圖會顯示協議的分數，表示一對註釋人員註釋提及項目的一致程度。第一列顯示每一對註釋人員之間的整體一致性，而下面的表格顯示一對註釋人員在文字中標示特定提及項目的一致程度。
 1. 若要探索一對註釋人員註釋關係及互相參照的一致程度，請從第一個功能表中選取**關係**或**互相參照**。
 1. 若要探索一對註釋人員在特定重疊文件中註釋實體、關係或互相參照的一致程度，請在第二個功能表中選取**文件**，然後選取您要評估的一對註釋人員。
@@ -151,10 +160,12 @@ lastupdated: "2018-04-04"
 裁定這一個步驟，容許您先檢閱重疊文件中的註釋衝突，然後再將註釋升級成基準。您可以比較一對註釋人員所新增的註釋，或者比較人工註釋與現行基準。
 
 ### 開始之前
+{: #wks_haadjudicate_prereq}
 
 按一下[此鏈結 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.youtube.com/watch?v=EbexfsuXxoQ&amp;feature=youtu.be){: new_window}，觀看一部 3 分鐘的影片，其說明如何裁定文件。
 
-### 關於本作業
+### 關於此作業
+{: #wks_haadjudicate_about}
 
 註釋人員完成其註釋作業之後，必須提交他們已完成的註釋集，以供檢閱。當您評估註釋人員內部協議分數時，您可以看到一對註釋人員註釋相同文件的差異度。如果註釋人員內部協議分數是可接受的，則核准註釋集。如果文件在作業中的註釋集之間未重疊，則會將已核准文件中的註釋升級成基準。如果文件在註釋集之間重疊，您應該先裁定文件，並解決所有註釋衝突，然後再將註釋升級成基準。
 
@@ -163,11 +174,12 @@ lastupdated: "2018-04-04"
 {{site.data.keyword.knowledgestudioshort}} 支援一次裁定兩個註釋集，或者一次裁定一個註釋集和現行基準。如果文件在超過兩個註釋集之間重疊，請裁定您最有信心的兩個註釋集（或許是因為您對註釋人員較有信心），以判斷要用於文件的基準。然後，根據起始裁定的結果，來裁定剩餘的註釋集。
 
 ### 程序
+{: #wks_haadjudicate_procedure}
 
 若要檢視重疊的文件及解決衝突，請執行下列動作：
 
 1. 以 {{site.data.keyword.knowledgestudioshort}} 管理者或專案經理身分登入，並選取您的工作區。
-1. 選取**資產及工具** > **文件** > **作業**標籤，然後開啟您要評估的作業。
+1. 選取**機器學習模型** > **註釋作業**頁面，然後開啟您要評估的作業。
 1. 確認至少兩個註釋集處於**衝突中**狀態。
 1. 按一下**檢查重疊文件的衝突**。即會列出發生衝突的文件。
 1. 如果您要忽略重疊文件中的衝突，並在不裁定它們的情況下，將註釋升級成基準，請按一下**接受**。
@@ -177,17 +189,19 @@ lastupdated: "2018-04-04"
     裁定工具會顯示存在的提及項目、關係及互相參照鏈結衝突的數目。您必須先解決提及項目的衝突，然後才能繼續解決關係與互相參照鏈結之間的衝突。
 
 1. 按一下以強調顯示包含衝突的句子。為了讓您更容易專注在尚未解決的衝突，您可以清除**已解決**勾選框，並確定已選取**尚未解決**勾選框。
-1. 按一下個別註釋，然後按一下**接受**或**拒絕**。若要復原您剛才所做的決定，請按 `Ctrl+Z`。
+1. 按一下個別註釋，然後按一下**接受**或**拒絕**。若要復原您剛才所做的決定，請按 Ctrl+Z。
 
     您也可以按一下多個註釋，然後按一下以接受或拒絕所有已選取的註釋。如果您決定要取消選取您已選取的註釋，請按一下句子之間的空白處，或按 **Esc** 鍵，來清除您的選擇。
 
-    如果註釋準則先前已連接至專案，且您需要協助來選擇要套用的正確註釋，請按一下**檢視準則**。視管理準則的網站所設定的存取權而定，您可能可以在開啟這些準則（例如，若要新增說明及範例）之後予以更新。{: tip}
+    如果註釋準則先前已連接至專案，且您需要協助來選擇要套用的正確註釋，請按一下**檢視準則**。視管理準則的網站所設定的存取權而定，您可能可以在開啟這些準則（例如，若要新增說明及範例）之後予以更新。
+    {: tip}
 
 1. 若要將不同的實體類型套用至提及項目，請拒絕現行註釋，選取提及項目，例如 `Barack Obama`，然後選取正確的實體類型，例如 `Person`。
 1. 繼續接受、拒絕及修訂句子中的其他衝突。在解決句子中的所有衝突之後，請按一下**選取所有註釋**鏈結，然後按一下**接受**。
 1. 按一下箭頭圖示，以移至下一個句子。繼續進行，直到文件中所有提及項目衝突都已獲解決為止。
 
-    若要儲存進行中的工作，或暫時暫停現行裁定階段作業，請隨時按一下**儲存**。如果要捨棄您所做的所有變更，請按一下**捨棄**。如果您已儲存先前的裁定階段作業，且已準備好繼續進行裁定，請按一下**繼續**以從您上次停止的地方開始裁定衝突。如果您已捨棄先前的裁定階段作業，則必須啟動新的裁定階段作業。{: tip}
+    若要儲存進行中的工作，或暫時暫停現行裁定階段作業，請隨時按一下**儲存**。如果要捨棄您所做的所有變更，請按一下**捨棄**。如果您已儲存先前的裁定階段作業，且已準備好繼續進行裁定，請按一下**繼續**以從您上次停止的地方開始裁定衝突。如果您已捨棄先前的裁定階段作業，則必須啟動新的裁定階段作業。
+    {: tip}
 
 1. 解決提及項目衝突之後，請切換裁定模式，以解決在關係註釋與互相參照鏈結註釋之間發生的所有衝突。
 

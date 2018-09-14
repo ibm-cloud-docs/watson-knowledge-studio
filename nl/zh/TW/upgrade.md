@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-30"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -26,7 +26,7 @@ lastupdated: "2018-01-30"
 若要升級服務的層次，請參閱 [{{site.data.keyword.cloud_notm}} 型錄 {{site.data.keyword.knowledgestudioshort}} 頁面 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/catalog/services/knowledge-studio){: new_window}。
 {: shortdesc}
 
-如果您從 {{site.data.keyword.knowledgestudioshort}} 免費方案升級，您需要在[備份和還原](/docs/services/watson-knowledge-studio/backup-restore.html)程序之後手動移轉工作區。
+如果您從 {{site.data.keyword.knowledgestudioshort}}「精簡」方案升級至「標準」方案，則 {{site.data.keyword.knowledgestudioshort}} 會使用就地移轉。您不需要進行任何手動移轉。
 
 **附註**：目前不支援在 {{site.data.keyword.cloud_notm}} 上將您的方案降級。不過，您可以管理使用者、儲存空間、計費及用量。
   - 如需在 {{site.data.keyword.knowledgestudioshort}} 中取消啟動使用者帳戶的相關資訊，請參閱[組合團隊](/docs/services/watson-knowledge-studio/team.html#deactivating-user-accounts)。

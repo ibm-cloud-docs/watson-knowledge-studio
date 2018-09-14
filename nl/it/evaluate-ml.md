@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-08-03"
 
 ---
 
@@ -27,6 +27,7 @@ Controlla le annotazioni che sono state aggiunte dal modello preparato per deter
 {: shortdesc}
 
 ## Informazioni su quest'attività
+{: #evaluate-ml_about}
 
 Puoi analizzare le prestazioni visualizzando un riepilogo delle statistiche dei tipi di entità, dei tipi di relazione e delle citazioni con coreferenza. Puoi inoltre analizzare le statistiche presentate in una *matrice di confusione*. La matrice di confusione ti aiuta a confrontare le annotazioni aggiunte dal modello di machine learning alle annotazioni nel ground truth.
 
@@ -57,13 +58,14 @@ Le statistiche del modello forniscono le seguenti metriche:
     Una misurazione del ground truth che mostra quanti documenti contengono un tipo di entità o di relazione selezionato. Questa statistica non è disponibile per le citazioni di coreferenza. Questo valore può aiutarti a valutare se i documenti nella serie rappresentano il dominio in modo sufficiente. Se la percentuale è bassa per i tipi di entità chiave, potresti voler aggiungere ulteriori documenti con le citazioni dei tipi meno rappresentati.
 
 ## Procedura
+{: #evaluate-ml_procedure}
 
 Per visualizzare le statistiche delle prestazioni su quanto bene è stato preparato il modello:
 
 1. Accedi come amministratore o gestore del progetto {{site.data.keyword.knowledgestudioshort}} e seleziona il tuo spazio di lavoro.
-1. Seleziona **Model Management** > **Performance**.
+1. Seleziona **Machine Learning Model** > **Performance**.
 1. Per le citazioni, le relazioni o le coreferenze, seleziona il link **Detailed Statistics**.
-1. Nella vista **Summary**, specifica se vuoi valutare i dati di test o di preparazione e quindi specifica il tipo di citazioni di cui vuoi vedere le statistiche: tipi di entità, tipi di relazione o citazioni con coreferenza. Tieni presente che i dati senza indicazioni dovrebbero essere analizzati molto raramente e non finché hai abbastanza confidenza con i punteggi dei dati di test. Quando scorri attraverso i dati, gli elementi che hanno punteggi bassi vengono contrassegnati e evidenziati per indicare che richiedono indagini e miglioramenti. L'icona di avvertenza a forma di triangolo indica che il valore F1 è inferiore al valore stabilito, 0.5.
+1. Nella vista **Summary**, specifica se vuoi valutare i dati di test o di preparazione e quindi specifica il tipo di citazioni di cui vuoi vedere le statistiche: tipi di entità, tipi di relazione o citazioni con coreferenza. Quando scorri attraverso i dati, gli elementi che hanno punteggi bassi vengono contrassegnati e evidenziati per indicare che richiedono indagini e miglioramenti. L'icona di avvertenza a forma di triangolo indica che il valore F1 è inferiore al valore stabilito, 0.5.
 
     Ad esempio, il punteggio F1 di alcuni tipi di entità potrebbe essere alto perché il documento è stato annotato tramite la pre-annotazione nonché da un annotatore umano. Ma il punteggio F1 di altri tipi di entità potrebbe essere basso perché le differenze nella formulazione e su come gli annotatori umani interpretano il testo o le linee guida, rende più difficile al modello di machine learning di riconoscere il pattern e applicare l'annotazione corretta.
 
@@ -80,15 +82,19 @@ Per visualizzare le statistiche delle prestazioni su quanto bene è stato prepar
 
     Ad esempio, la seguente matrice di confusione mostra i risultati di un modello di machine learning in esecuzione sui documenti che trattano di incidenti stradali.
 
-    <table cellpadding="4" cellspacing="0" summary="Esempio di matrice di confusione sul report di incidenti" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d15356e164" class="stentry thleft thbot">Tipi di entità</th>
-        <th valign="bottom" align="left" id="d15356e166" class="stentry thleft thbot">MANUFACTURER</th>
-        <th valign="bottom" align="left" id="d15356e168" class="stentry thleft thbot">MODEL</th>
-        <th valign="bottom" align="left" id="d15356e170" class="stentry thleft thbot">O</th>
+    <table summary="Esempio di matrice di confusione sul report di incidenti">
+       <caption>Tabella 1. Esempio di matrice di confusione</caption>
+       <tr>
+        <th style="vertical-align:bottom; text-align:left" id="d15356e164">Tipi di entità</th>
+        <th style="vertical-align:bottom; text-align:center" id="d15356e166">MANUFACTURER</th>
+        <th style="vertical-align:bottom; text-align:center" id="d15356e168">MODEL</th>
+        <th style="vertical-align:bottom; text-align:center" id="d15356e170">O</th>
       </tr>
-      <tr class="strow"><td valign="top" headers="d15356e164" class="stentry"><p class="p wrapper">MANUFACTURER</p></td>
-        <td valign="top" headers="d15356e166" class="stentry"><p class="p wrapper">515</p></td>
-        <td valign="top" headers="d15356e168" class="stentry"><p class="p wrapper">5</p></td>
-        <td valign="top" headers="d15356e170" class="stentry"><p class="p wrapper">44</p></td>
+      <tr>
+        <td style="vertical-align:top; text-align:left" headers="d15356e164">MANUFACTURER</td>
+        <td style="vertical-align:top; text-align:center" headers="d15356e166">515</td>
+        <td style="vertical-align:top; text-align:center" headers="d15356e168">5</td>
+        <td style="vertical-align:top; text-align:center" headers="d15356e170">44</td>
       </tr>
     </table>
     {: #evaluate-ml__datasimpletable_yms_hff_cw}
@@ -109,121 +115,134 @@ Utilizza questa scheda di riferimento per aiutarti a determinare i passi che puo
 
 La seguente tabella suggerisce le correzioni ai problemi delle prestazioni del modello di machine learning più comuni.
 
-<table cellpadding="4" cellspacing="0" summary="La tabella elenca i problemi comuni nella prima colonna e le correzioni suggerite nella prima riga. La X indica quale correzione applicare a quale problema." border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d15356e221" class="stentry thleft thbot">Problema</th>
-<th valign="bottom" align="left" id="d15356e223" class="stentry thleft thbot">Aggiungi dizionari</th>
-<th valign="bottom" align="left" id="d15356e225" class="stentry thleft thbot">Modifica serie di documenti</th>
-<th valign="bottom" align="left" id="d15356e227" class="stentry thleft thbot">Aggiungi documenti specifici per tipo</th>
-<th valign="bottom" align="left" id="d15356e229" class="stentry thleft thbot">Annota ulteriore corpus</th>
-<th valign="bottom" align="left" id="d15356e231" class="stentry thleft thbot">Correggi annotazioni umane</th>
-<th valign="bottom" align="left" id="d15356e233" class="stentry thleft thbot">Migliora le linee guida dell'annotatore umano</th>
-<th valign="bottom" align="left" id="d15356e235" class="stentry thleft thbot">Aggiorna sistema tipo</th>
-<th valign="bottom" align="left" id="d15356e237" class="stentry thleft thbot">Investiga ulteriormente</th>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">F1 basso</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper">X</p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Precisione bassa</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper">X</p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Richiamo basso</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Annotazione bassa %</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Densità bassa</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Pochi documenti del tipo</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Categorizzazione non corretta</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Annotazioni perse </p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">Differenza tra i risultati di preparazione e test </p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">F1 basso per i dati di preparazione di test</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper">X</p></td>
-</tr>
+<table summary="La tabella elenca i problemi comuni nella prima colonna e le correzioni suggerite nella prima riga. La X indica quale correzione applicare a quale problema.">
+    <caption>Tabella 2. Correzioni ai problemi di prestazioni comuni </caption>
+    <tr>
+      <th style="vertical-align:bottom; text-align:left" id="d15356e221">Problema</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e223">Aggiungi dizionari</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e225">Modifica serie di documenti</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e227">Aggiungi documenti specifici per tipo</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e229">Annota ulteriore corpus</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e231">Correggi annotazioni umane</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e233">Migliora le linee guida dell'annotatore umano</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e235">Aggiorna sistema tipo</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e237">Investiga ulteriormente</th>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">F1 basso</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237">X</td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Precisione bassa</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237">X</td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Richiamo basso</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Annotazione bassa %</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Densità bassa</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Pochi documenti del tipo</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Categorizzazione non corretta</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Annotazioni perse </td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">Differenza tra i risultati di preparazione e test </td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">F1 basso per i dati di preparazione di test</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237">X</td>
+    </tr>
 </table>
-
- {: #evaluate-ml_cheat__datasimpletable_nhm_5ym_cw}
+{: #evaluate-ml_cheat__datasimpletable_nhm_5ym_cw}
 
 ### Descrizione delle correzioni
+{: #evaluate-ml_fixes}
 
 - **Aggiungi dizionari**
 
@@ -232,7 +251,7 @@ La seguente tabella suggerisce le correzioni ai problemi delle prestazioni del m
 - **Modifica serie di documenti**
 
     Assicurati di avere abbastanza dati di preparazione generali. Per imparare, un modello di machine learning ha bisogno di abbastanza contenuto. Mira a fornire circa 300.000 parole. (Puoi eseguire uno strumento di conteggio delle parole sui tuoi documenti di origine per controllare la quantità). Se la tua serie di preparazione è troppo piccola, aggiungi documenti al corpus. Non basta avere una manciata di documenti che preparano ogni relazione o tipo di entità importante; vuoi molti documenti che illustrano come vengono utilizzati questi tipi nella letteratura tipica del dominio.
-  - Assicurati che l'assortimento di documenti utilizzato per il test e la preparazione sia simile. Ad esempio, non utilizzare i documenti da un'origine dati per la serie di dati di test e i documenti da un'altra per la serie di dati di preparazione. Origini dati differenti potrebbero rappresentare le informazioni sul tipo di entità e relazione in modi completamente diversi. È meglio utilizzare una combinazione di documenti da tutte le origini dati in entrambe le serie di dati per ottenere la serie più completa di esempi di utilizzo disponibili dalla letteratura del settore. Se i punteggi delle prestazioni generali per un'esecuzione del test differiscono notevolmente dall'esecuzione della preparazione, potrebbe essere a causa delle inconsistenze nelle serie di dati utilizzate per ognuna. 
+  - Assicurati che l'assortimento di documenti utilizzato per il test e la preparazione sia simile. Ad esempio, non utilizzare i documenti da un'origine dati per la serie di dati di test e i documenti da un'altra per la serie di dati di preparazione. Origini dati differenti potrebbero rappresentare le informazioni sul tipo di entità e relazione in modi completamente diversi. È meglio utilizzare una combinazione di documenti da tutte le origini dati in entrambe le serie di dati per ottenere la serie più completa di esempi di utilizzo disponibili dalla letteratura del settore. Se i punteggi delle prestazioni generali per un'esecuzione del test differiscono notevolmente dall'esecuzione della preparazione, potrebbe essere a causa delle inconsistenze nelle serie di dati utilizzate per ognuna.
   - Non perdere tempo con i documenti formattati in modo errato. I documenti di testo che aggiungi al corpus devono essere nel formato UTF-8. Se il tuo documento è stato convertito da altri formati per l'utilizzo della codifica UTF-8, potresti vedere segni diacritici e altri problemi con la normalizzazione del carattere. Questa formattazione non corretta può causare una rappresentazione token non accurata. Se i token della parola utilizzati per rappresentare una citazione sono diversi tra i documenti, si indebolisce l'esempio e ha un impatto negativo sul machine learning.
 
 - **Aggiungi documenti specifici per tipo**
@@ -271,22 +290,25 @@ La seguente tabella suggerisce le correzioni ai problemi delle prestazioni del m
 
     Se i tuoi sistema tipo, dizionario e documenti di origine sono completi e l'annotazione umana è stata fatta bene ma il modello di machine learning non funziona ancora bene, qualcosa potrebbe essere andata storta nel processo di preparazione del modello. Ad esempio, dovresti sempre vedere punteggi generali alti (oltre il 95%) quando verifichi i dati di preparazione.
 
-## Analisi dei punteggi F1 bassi 
+## Analisi dei punteggi F1 bassi
 {: #evaluate-mllowf1}
 
 Ottimizza le prestazioni del tuo modello di machine learning per risolvere i punteggi F1 bassi.
 
 ### Sintomi
+{: #evaluate-mllowf1_symptoms}
 
 Un punteggio F1 raggiunge il suo migliore valore con 1 e il peggiore con 0. Un punteggio F1 basso è un'indicazione di precisione o richiamo bassi. Il modello di machine genera annotazioni errate e non riesce a trovare le annotazioni che dovrebbero venire trovate.
 
 ### Cause
+{: #evaluate-mllowf1_causes}
 
-I punteggi F1 bassi possono verificarsi per molti motivi che dipendono dal dominio, la complessità del sistema tipo, l'appropriatezza dei documenti di preparazione, le capacità dell'annotatore umano e altri fattori  
+I punteggi F1 bassi possono verificarsi per molti motivi che dipendono dal dominio, la complessità del sistema tipo, l'appropriatezza dei documenti di preparazione, le capacità dell'annotatore umano e altri fattori
 
-### Risoluzione del problema 
+### Risoluzione del problema
+{: #evaluate-mllowf1_resolving}
 
-Ottimizza le prestazioni del tuo modello di machine learning eseguendo uno o più dei seguenti passi e poi riprepara il modello: 
+Ottimizza le prestazioni del tuo modello di machine learning eseguendo uno o più dei seguenti passi e poi riprepara il modello:
 
 1. Identifica i tipi per cui si verifica più comunemente l'accuratezza bassa.
 
@@ -304,56 +326,62 @@ Ottimizza le prestazioni del tuo modello di machine learning eseguendo uno o pi�
 
 ![Come risolvere i punteggi F1 bassi.](images/wks_lowf1.svg "Questa immagine contiene un diagramma di flusso per risoluzione dei punteggi F1 bassi.") Figura 1. Come risolvere i punteggi F1 bassi
 
-## Analisi dei punteggi di precisione bassi 
+## Analisi dei punteggi di precisione bassi
 {: #evaluate-mllowp}
 
 Ottimizza le prestazioni del tuo modello di machine learning per risolvere i punteggi di precisione bassi. A un livello elevato, la precisione bassa indica un bisogno di migliorare la consistenza dell'annotazione.
 
 ### Sintomi
+{: #evaluate-mllowp_symptoms}
 
 Un punteggio di precisione raggiunge il suo migliore valore con 1 e il peggiore con 0. Un punteggio di precisione basso indica che il modello di machine learning ha generato annotazioni non corrette.
 
 ### Cause
+{: #evaluate-mllowp_causes}
 
-I punteggi di precisione bassi possono verificarsi per molti motivi che dipendono dal dominio, la complessità del sistema tipo, l'appropriatezza dei documenti di preparazione, le capacità dell'annotatore umano e altri fattori  
+I punteggi di precisione bassi possono verificarsi per molti motivi che dipendono dal dominio, la complessità del sistema tipo, l'appropriatezza dei documenti di preparazione, le capacità dell'annotatore umano e altri fattori
 
-### Risoluzione del problema 
+### Risoluzione del problema
+{: #evaluate-mllowp_resolving}
 
-Ottimizza le prestazioni del tuo modello di machine learning eseguendo uno o più dei seguenti passi e riprepara il modello: 
+Ottimizza le prestazioni del tuo modello di machine learning eseguendo uno o più dei seguenti passi e riprepara il modello:
 
-1. Identifica i tipi per cui si verifica più comunemente la precisione bassa. 
+1. Identifica i tipi per cui si verifica più comunemente la precisione bassa.
 1. Identifica i tipi confusi più comunemente. Queste informazioni possono essere trovate ricercando i numeri che sono fuori dalla diagonale nella matrice di confusione.
 1. Controlla gli errori con cui il modello di machine learning ha un'elevata fiducia.
-1. Trova i modelli nei falsi negativi nella matrice di confusione. 
+1. Trova i modelli nei falsi negativi nella matrice di confusione.
 1. Se alcuni tipi hanno punteggi di precisione bassi, controlla la chiarezza delle linee guida di annotazione che si applicano a questi tipi.
 
 ![Come risolvere i punteggi di precisione bassi.](images/wks_lowprec.svg "Questa immagine contiene un diagramma di flusso per la risoluzione dei punteggi di precisione bassi.")
 
 Figura 2. Come risolvere i punteggi di precisione bassi
 
-## Analisi dei punteggi di richiamo bassi 
+## Analisi dei punteggi di richiamo bassi
 {: #evaluate-mllowr}
 
-Ottimizza le prestazioni del tuo modello di machine learning per risolvere i punteggi di richiamo bassi. A un livello elevato, il richiamo indica un bisogno di aggiungere ulteriori dati di preparazione. 
+Ottimizza le prestazioni del tuo modello di machine learning per risolvere i punteggi di richiamo bassi. A un livello elevato, il richiamo indica un bisogno di aggiungere ulteriori dati di preparazione.
 
 ### Sintomi
+{: #evaluate-mllowr_symptoms}
 
 Un punteggio di richiamo raggiunge il suo migliore valore con 1 e il peggiore con 0. Un punteggio di richiamo basso indica che il modello di machine learning non è riuscito a creare le annotazioni che dovevano venire create.
 
 ### Cause
+{: #evaluate-mllowr_causes}
 
-I punteggi di richiamo bassi possono verificarsi per molti motivi che dipendono dal dominio, la complessità del sistema tipo, l'appropriatezza dei documenti di preparazione, le capacità dell'annotatore umano e altri fattori  
+I punteggi di richiamo bassi possono verificarsi per molti motivi che dipendono dal dominio, la complessità del sistema tipo, l'appropriatezza dei documenti di preparazione, le capacità dell'annotatore umano e altri fattori
 
-### Risoluzione del problema 
+### Risoluzione del problema
+{: #evaluate-mllowr_resolving}
 
-Ottimizza le prestazioni del tuo modello di machine learning eseguendo uno o più dei seguenti passi e riprepara il modello: 
+Ottimizza le prestazioni del tuo modello di machine learning eseguendo uno o più dei seguenti passi e riprepara il modello:
 
-1. Identifica i tipi per cui si verifica più comunemente il richiamo basso. 
+1. Identifica i tipi per cui si verifica più comunemente il richiamo basso.
 1. Identifica i tipi confusi più comunemente. Queste informazioni possono essere trovate ricercando i numeri che sono fuori dalla diagonale nella matrice di confusione.
 1. Controlla gli errori con cui il modello di machine learning ha un'elevata fiducia.
-1. Trova i modelli nei falsi positivi nella matrice di confusione. 
+1. Trova i modelli nei falsi positivi nella matrice di confusione.
 1. Se alcuni tipi hanno punteggi di richiamo bassi, controlla la chiarezza delle linee guida di annotazione che si applicano a questi tipi.
 
 ![Come risolvere i punteggi di richiamo bassi.](images/wks_lowrecall.svg "Questa immagine contiene un diagramma di flusso per la risoluzione dei punteggi di richiamo bassi.")
 
-Figura 3. Come risolvere i punteggi di richiamo bassi 
+Figura 3. Come risolvere i punteggi di richiamo bassi

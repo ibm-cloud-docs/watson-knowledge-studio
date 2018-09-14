@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -35,12 +35,14 @@ Os arquivos dos quais você faz download são independentes do sistema operacion
 ## Sistemas de tipos
 {: #wks_exportimport_expimp_type}
 
-Para fazer download de um sistema de tipos, abra a página **Ativos e ferramentas** > **Tipos de entidade** e clique em **Fazer download de tipos**. O sistema cria um arquivo chamado `types-ID.json` e solicita que você faça download do arquivo para seu sistema local. Para usar esse sistema de tipos em uma nova área de trabalho, abra a página **Tipos de entidade** e faça upload do arquivo `JSON` transferido por download.
+Para fazer download de um sistema de tipos, abra a página **Ativos** > **Tipos de entidade** e clique em **Fazer download de tipos**. O sistema cria um arquivo chamado `types-ID.json` e solicita que você faça download do arquivo para seu sistema local. Para usar esse sistema de tipos em uma nova área de trabalho, abra a página **Tipos de entidade** e faça upload do arquivo `JSON` transferido por download.
 
 ## Dicionários
 {: #wks_exportimport_expimp_dict}
 
-Para fazer download de um ou mais dicionários, selecione a guia **Ativos e ferramentas** > **Pré-anotadores** > **Dicionários** e clique em **Fazer download de dicionários**. Para cada dicionário transferido por download, o sistema cria um arquivo chamado `dictionary name_timestamp.csv`, combina os arquivos em um arquivo `ZIP` chamado `workspace name_dictionary_timestamp.zip` e solicita que você faça download do arquivo para seu sistema local. Também é possível fazer download de um dicionário individual abrindo o dicionário e clicando em **Fazer download**. Os dicionários somente de visualização transferidos por upload como um arquivo CSV de dicionário não podem ser transferidos por download.
+Para fazer download de todos os dicionários, selecione a página **Ativos** > **Dicionários**, clique no ícone **Menu** ao lado do botão **Criar dicionário** e selecione **Fazer download de dicionários**. Para cada dicionário transferido por download, o sistema cria um arquivo chamado `dictionary name_timestamp.csv`, combina os arquivos em um arquivo `ZIP` chamado `workspace name_dictionary_timestamp.zip` e solicita que você faça download do arquivo para seu sistema local.
+
+É possível fazer download de um dicionário individual, abrindo o dicionário e clicando em **Download**. Os dicionários somente de visualização transferidos por upload como um arquivo CSV de dicionário não podem ser transferidos por download.
 
 Antes de fazer upload de um dicionário transferido por download para uma nova área de trabalho, deve-se fazer download do sistema de tipos da área de trabalho antiga e fazer upload dele na nova área de trabalho. O sistema de tipos e os dicionários devem se originar da mesma área de trabalho do {{site.data.keyword.knowledgestudioshort}} e o sistema de tipos deve existir na nova área de trabalho antes de fazer upload dos dicionários.
 
@@ -49,7 +51,7 @@ Para fazer upload de dicionários, abra a guia **Dicionários** e inclua um arqu
 ## Documentos
 {: #wks_exportimport_expimp_doc}
 
-Para fazer download de documentos que você incluiu no corpus, abra a guia **Ativos e ferramentas** > **Documentos** > **Conjuntos de documentos** e clique em **Fazer download de conjuntos de documentos**. O sistema cria um arquivo chamado `corpus-ID.zip` e solicita que você faça download do arquivo para seu sistema local. O arquivo `ZIP` contém todos os documentos no corpus. As anotações que foram incluídas em conjuntos de anotações são incluídas no arquivo ZIP, mas somente após os conjuntos de anotações terem sido aprovados e promovidos para verdade absoluta.
+Para fazer download de documentos que você incluiu no corpus, abra a guia **Ativos** > **Documentos** > **Conjuntos de documentos** e clique em **Fazer download de conjuntos de documentos**. O sistema cria um arquivo chamado `corpus-ID.zip` e solicita que você faça download do arquivo para seu sistema local. O arquivo `ZIP` contém todos os documentos no corpus. As anotações que foram incluídas em conjuntos de anotações são incluídas no arquivo ZIP, mas somente após os conjuntos de anotações terem sido aprovados e promovidos para verdade absoluta.
 
 > **Restrição:** qualquer documento que for pré-anotado será ocultado em um formato não legível quando for transferido por download. Até as anotações nesses documentos que foram incluídas por anotação humana são ilegíveis.
 
@@ -59,10 +61,8 @@ Para fazer upload de documentos, abra a guia **Conjuntos de documentos** na nova
 
 **Conceitos relacionados**:
 
-[Sistema de tipos](/docs/services/watson-knowledge-studio/artifacts.html#wks_typesystem)
+[Tipos de artefatos](/docs/services/watson-knowledge-studio/artifacts.html)
 
-[Dicionários](/docs/services/watson-knowledge-studio/artifacts.html#wks_dictionaries)
+[Incluindo documentos para anotação](/docs/services/watson-knowledge-studio/documents-for-annotation.html)
 
-[Documentos para anotadores de aprendizado de máquina](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_t_docs_intro)
-
-[Documentos para anotadores baseados em regra](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html)
+[ Incluindo Documentos para Definir Regras ](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html)

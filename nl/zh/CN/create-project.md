@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-04-04"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-本文档适用于 {{site.data.keyword.cloud}} 上的 {{site.data.keyword.knowledgestudiofull}}。要查看 {{site.data.keyword.IBM_notm}} Marketplace 上先前版本的 {{site.data.keyword.knowledgestudioshort}} 的文档，请[单击此链接 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/docs/services/knowledge-studio/create-project.html){: new_window}。
+本文档适用于 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}。要查看 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 先前版本的文档，请[单击此链接 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/docs/services/knowledge-studio/create-project.html){: new_window}。
 {: tip}
 
 # 创建工作空间
@@ -61,7 +61,7 @@ lastupdated: "2018-04-04"
 
     这将仅显示在实例的“用户帐户管理”页面中为其分配“项目经理”角色的人员的姓名。有关添加用户的更多信息，请参阅[组建团队](/docs/services/watson-knowledge-studio/team.html)。
 
-    > **注**：如果您具有免费套餐预订，请跳过此步骤。您无法添加其他用户，因此也无法为任何人分配“项目经理”角色。您无需单独的项目经理。作为管理员，您可以执行项目经理通常会执行的所有任务。
+    > **注**：如果您有轻量套餐预订，请跳过此步骤。您无法添加其他用户，因此也无法为任何人分配“项目经理”角色。您无需单独的项目经理。作为管理员，您可以执行项目经理通常会执行的所有任务。
 
 1. 单击**创建**。
 
@@ -77,7 +77,7 @@ lastupdated: "2018-04-04"
 
 **相关参考**：
 
-[多语言支持](/docs/services/watson-knowledge-studio/language-support.html)
+[语言支持](/docs/services/watson-knowledge-studio/language-support.html)
 
 ## 记号化器
 {: #wks_tokenizer}
@@ -111,165 +111,356 @@ lastupdated: "2018-04-04"
 
 ### 所有模型类型
 
-<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d25459e252" class="stentry thleft thbot">任务</th>
-<th valign="bottom" align="left" id="d25459e254" class="stentry thleft thbot">典型用途</th>
-<th valign="bottom" align="left" id="d25459e256" class="stentry thleft thbot">支持的输入格式</th>
-<th valign="bottom" align="left" id="d25459e258" class="stentry thleft thbot">支持的输出格式</th>
-<th valign="bottom" align="left" id="d25459e260" class="stentry thleft thbot">限制和需求</th>
-</tr>
-<tr class="strow"><td valign="top" headers="d25459e252" class="stentry"><p class="p wrapper">类型系统管理</p></td>
-<td valign="top" headers="d25459e254" class="stentry"><p class="p wrapper">创建类型系统或上传并修改现有类型系统。</p><p class="p">针对领域定义实体类型和关系类型。</p>
-<p class="p">您看不到类型系统的可视化。</p>
-</td>
-<td valign="top" headers="d25459e256" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">从 Watson Knowledge Studio 工作空间下载的 JSON 文件</p></li>
-<li class="li"><p class="p wrapper">从 Human Annotation Tool (HAT) 下载的 ZIP 文件</p></li>
-</ul>
-</td>
-<td valign="top" headers="d25459e258" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">JSON</p></li>
-</ul>
-</td>
-<td valign="top" headers="d25459e260" class="stentry"><p class="p wrapper">为了避免人工注释时产生视觉疲劳，定义实体类型和关系类型时，数量都不要超过 50 个。</p><p class="p">上传类型系统的文件大小限制：20 MB</p>
-</td>
-</tr>
-<tr class="strow"><td valign="top" headers="d25459e252" class="stentry"><p class="p wrapper">字典管理</p></td>
-<td valign="top" headers="d25459e254" class="stentry"><p class="p wrapper">以只读方式上传 CSV 字典文件或从其他工作空间下载的字典 ZIP。</p><p class="p">创建新字典，然后上传术语条目的 CSV 文件或向其添加术语条目。</p>
-</td>
-<td valign="top" headers="d25459e256" class="stentry"><p class="p wrapper">字典文件：</p><ul class="ul bullets"><li class="li"><p class="p wrapper">UTF-8 格式的 CSV 文件</p></li>
-<li class="li"><p class="p wrapper">从其他工作空间下载的字典 ZIP</p></li>
-</ul><p class="p wrapper">
-术语条目文件：</p><ul class="ul bullets"><li class="li"><p class="p wrapper">UTF-8 格式的 CSV 文件</p></li>
-</ul>
-</td>
-<td valign="top" headers="d25459e258" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">UTF-8 格式的 CSV 文件</p></li>
-<li class="li"><p class="p wrapper">要在其他工作空间中使用的字典 ZIP</p></li>
-</ul>
-</td>
-<td valign="top" headers="d25459e260" class="stentry"><p class="p wrapper">文件大小限制：</p><ul class="ul bullets"><li class="li"><p class="p wrapper">每个 CSV 术语条目文件 1 MB</p></li>
-<li class="li"><p class="p wrapper">每个 CSV 只读字典文件 16 MB</p></li>
-<li class="li"><p class="p wrapper">每个字典 15,000 个条目（只读字典除外）</p></li>
-<li class="li"><p class="p wrapper">每个工作空间 64 个字典</p></li>
-</ul>
-</td>
-</tr>
+<table summary="此表提供所有模型类型的输入、输出和限制摘要。">
+<caption>表 1. 所有模型类型</caption>
+  <tr>
+    <th style="vertical-align:bottom; text-align:left" id="d25459e252">
+任务</th>
+    <th style="vertical-align:bottom; text-align:left" id="d25459e254">
+典型用途</th>
+    <th style="vertical-align:bottom; text-align:left" id="d25459e256">
+支持的输入格式</th>
+    <th style="vertical-align:bottom; text-align:left" id="d25459e258">
+支持的输出格式</th>
+    <th style="vertical-align:bottom; text-align:left" id="d25459e260">
+限制和需求</th>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d25459e252">
+      <p>类型系统管理</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e254">
+      <p>创建类型系统或上传并修改现有类型系统。</p>
+      <p>针对领域定义实体类型和关系类型。</p>
+      <p>您看不到类型系统的可视化。</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e256">
+      <ul>
+        <li>
+          <p>从 {{site.data.keyword.knowledgestudioshort}} 工作空间下载的 JSON 文件</p>
+        </li>
+        <li>
+          <p>从 Human Annotation Tool (HAT) 下载的 ZIP 文件</p>
+        </li>
+      </ul>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e258">
+      <ul>
+        <li>
+          <p>JSON</p>
+        </li>
+      </ul>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e260">
+      <p>为了避免人工注释时产生视觉疲劳，定义实体类型和关系类型时，数量都不要超过 50 个。</p>
+      <p>上传类型系统的文件大小限制：20 MB</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d25459e252">
+      <p>字典管理</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e254">
+      <p>以只读方式上传 CSV 字典文件或从其他工作空间下载的字典 ZIP。</p>
+      <p>创建新字典，然后上传术语条目的 CSV 文件或向其添加术语条目。</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e256">
+      <p>字典文件：</p>
+      <ul>
+        <li>
+          <p>UTF-8 格式的 CSV 文件</p>
+        </li>
+        <li>
+          <p>从其他工作空间下载的字典 ZIP</p>
+        </li>
+      </ul>
+      <p>术语条目文件：</p>
+      <ul>
+        <li>
+          <p>UTF-8 格式的 CSV 文件</p>
+        </li>
+      </ul>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e258">
+      <ul>
+        <li>
+          <p>UTF-8 格式的 CSV 文件</p>
+        </li>
+        <li>
+          <p>要在其他工作空间中使用的字典 ZIP</p>
+        </li>
+      </ul>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e260">
+      <p>文件大小限制：</p>
+      <ul>
+        <li>
+          <p>每个 CSV 术语条目文件 1 MB</p>
+        </li>
+        <li>
+          <p>每个 CSV 只读字典文件 16 MB</p>
+        </li>
+        <li>
+          <p>每个字典 15,000 个条目（只读字典除外）</p>
+        </li>
+        <li>
+          <p>每个工作空间 64 个字典</p>
+        </li>
+      </ul>
+    </td>
+  </tr>
 </table>
 
  {: #wks_formats__datasimpletable_xxj_qr5_2y}
 
 ### 机器学习模型
 
-<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d25459e331" class="stentry thleft thbot">任务</th>
-<th valign="bottom" align="left" id="d25459e333" class="stentry thleft thbot">典型用途</th>
-<th valign="bottom" align="left" id="d25459e335" class="stentry thleft thbot">支持的输入格式</th>
-<th valign="bottom" align="left" id="d25459e337" class="stentry thleft thbot">支持的输出格式</th>
-<th valign="bottom" align="left" id="d25459e339" class="stentry thleft thbot">限制和需求</th>
-</tr>
-<tr class="strow"><td valign="top" headers="d25459e331" class="stentry"><p class="p wrapper">文档管理</p></td>
-<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">上传一小部分代表性文档</p><p class="p">上传包含先前由人类注释者、机器学习模型或 UIMA 分析引擎添加的注释的文档</p>
-<p class="p">无法从 IBM Watson Explorer 中获取整个语料库，以用于计算高值文档进行注释。</p>
-</td>
-<td valign="top" headers="d25459e335" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">UTF-8 格式的 CSV 文件</p></li>
-<li class="li"><p class="p wrapper">UTF-8 格式的 DOCXML 文件</p></li>
-<li class="li"><p class="p wrapper">UTF-8 格式的文本</p></li>
-<li class="li"><p class="p wrapper">包含从其他语料库下载的文档的 ZIP 文件</p></li>
-<li class="li"><p class="p wrapper">包含 UIMA CAS XMI 格式文档的 ZIP 文件</p></li>
-</ul>
-</td>
-<td valign="top" headers="d25459e337" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">文档的 ZIP 归档文件</p></li>
-</ul>
-</td>
-<td valign="top" headers="d25459e339" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">每个文档 40,000 个字符</p></li>
-<li class="li"><p class="p wrapper">每个工作空间 10,000 个文档</p></li>
-<li class="li"><p class="p wrapper">每个工作空间 1,000 个文档集（包括注释集）</p></li>
-</ul>
-</td>
-</tr>
-<tr class="strow"><td valign="top" headers="d25459e331" class="stentry"><p class="p wrapper">预注释</p></td>
-<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">使用字典或 {{site.data.keyword.nlushort}} 预注释器来提供人工注释的起点。</p><p class="p">无法通过 IBM Watson Discovery Advisor 或 IBM Watson Explorer 对语料库进行重新注释。</p>
-</td>
-<td valign="top" headers="d25459e335" class="stentry"><p class="p wrapper">原始文档。</p><p class="p wrapper"><b>注</b>：不要对人类注释者已注释的文档进行预注释，否则将丢失人类注释者完成的工作。</p>
-</td>
-<td valign="top" headers="d25459e337" class="stentry"><p class="p wrapper">部分注释的文档</p></td>
-<td valign="top" headers="d25459e339" class="stentry"><p class="p wrapper">无</p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d25459e331" class="stentry"><p class="p wrapper">文档注释</p></td>
-<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">管理人工注释</p><p class="p">对实体、关系和指代链进行注释以创建参考标准</p>
-</td>
-<td valign="top" headers="d25459e335" class="stentry"><p class="p wrapper">注释任务</p></td>
-<td valign="top" headers="d25459e337" class="stentry"><p class="p wrapper">参考标准</p></td>
-<td valign="top" headers="d25459e339" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">每个工作空间 256 个活动注释任务</p></li>
-</ul>
-</td>
-</tr>
-<tr class="strow"><td valign="top" headers="d25459e331" class="stentry"><p class="p wrapper">培训和优化</p></td>
-<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">培训受监督的机器学习模型，以从非结构化文本中抽取特定于领域的信息。</p><p class="p">评估和改进受监督的机器学习模型。</p>
-<p class="p">无法创建半监督或未监督的机器学习模型。</p>
-<p class="p">无法执行广泛的功能工程设计。</p>
-</td>
-<td valign="top" headers="d25459e335" class="stentry"><p class="p wrapper">不适用</p></td>
-<td valign="top" headers="d25459e337" class="stentry"><p class="p wrapper">机器学习模型</p></td>
-<td valign="top" headers="d25459e339" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">每个工作空间 1 个机器学习模型</p></li>
-<li class="li"><p class="p wrapper">每个工作空间 10 个模型版本</p></li>
-<li class="li"><p class="p wrapper">最大工作空间数由预订套餐确定。</p></li>
-<li class="li"><p class="p wrapper">每月可以执行的最大培训操作数由预订套餐确定。</p></li>
-</ul>
-</td>
-</tr>
-<tr class="strow"><td valign="top" headers="d25459e331" class="stentry"><p class="p wrapper">发布</p></td>
-<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">发布机器学习模型，以用于在其他 Watson 应用程序中
-
-执行文本抽取。</p></td>
-<td valign="top" headers="d25459e335" class="stentry"><p class="p wrapper">不适用</p></td>
-<td valign="top" headers="d25459e337" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">模型标识（用于 AlchemyLanguage 或 Watson Discovery 服务）</p></li>
-<li class="li"><p class="p wrapper">ZIP 文件（用于 IBM Watson Explorer）</p></li>
-</ul>
-</td>
-<td valign="top" headers="d25459e339" class="stentry">
-  <p class="p">要部署到 AlchemyLanguage，您必须具有有效的 AlchemyLanguage 高级套餐密钥标识。</p>
-  <p class="p">要部署到 Watson Discovery 服务，您必须知道服务 {{site.data.keyword.cloud_notm}} 空间和实例名称。</p>
-</td>
-</tr>
+<table summary="此表提供机器学习模型的输入、输出和限制摘要。">
+<caption>表 2. 机器学习模型</caption>
+  <tr>
+    <th style="vertical-align:botton; text-align:left" id="d25459e331">任务</th>
+    <th style="vertical-align:botton; text-align:left" id="d25459e333">典型用途</th>
+    <th style="vertical-align:botton; text-align:left" id="d25459e335">支持的输入格式</th>
+    <th style="vertical-align:botton; text-align:left" id="d25459e337">支持的输出格式</th>
+    <th style="vertical-align:botton; text-align:left" id="d25459e339">限制和需求</th>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d25459e331">
+      <p>文档管理</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e333">
+      <p>上传一小部分代表性文档</p>
+      <p>上传包含先前由人工注释者、机器学习模型或 UIMA 分析引擎添加的注释的文档</p>
+      <p>无法从 {{site.data.keyword.ibmwatson_notm}} Explorer 中获取整个语料库来计算高值文档的注释。</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e335">
+      <ul>
+        <li>
+          <p>UTF-8 格式的 CSV 文件</p>
+        </li>
+        <li>
+          <p>UTF-8 格式的文本</p>
+        </li>
+        <li>
+          <p>包含从其他语料库下载的文档的 ZIP 文件</p>
+        </li>
+        <li>
+          <p>包含 UIMA CAS XMI 格式文档的 ZIP 文件</p>
+        </li>
+      </ul>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e337">
+      <ul>
+        <li>
+          <p>文档的 ZIP 归档文件</p>
+        </li>
+      </ul>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e339">
+      <ul>
+        <li>
+          <p>每个文档 40,000 个字符</p>
+        </li>
+        <li>
+          <p>每个工作空间 10,000 个文档</p>
+        </li>
+        <li>
+          <p>每个工作空间 1,000 个文档集（包括注释集）</p>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d25459e331">
+      <p>预注释</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e333">
+       <p>使用字典或 {{site.data.keyword.nlufull}} 预注释器来提供人工注释的起点。</p>
+       <p>无法通过 {{site.data.keyword.ibmwatson_notm}} Explorer 对语料库进行重新注释。</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e335">
+      <p>原始文档。</p>
+      <p><b>注</b>：不要对人工注释者已注释的文档进行预注释，否则将丢失人工注释者完成的工作。</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e337">
+      <p>部分注释的文档</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e339">
+      <p>无</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d25459e331">
+      <p>文档注释</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e333">
+      <p>管理人工注释</p><p>对实体、关系和指代链进行注释以创建参考标准</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e335">
+      <p>注释任务</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e337">
+      <p>参考标准</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e339">
+      <ul>
+        <li>
+          <p>每个工作空间 256 个活动注释任务</p>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d25459e331">
+      <p>培训和优化</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e333">
+      <p>培训受监督的机器学习模型，以从非结构化文本中抽取特定于领域的信息。</p><p>评估和改进受监督的机器学习模型。</p>
+      <p>无法创建半监督或未监督的机器学习模型。</p>
+      <p>无法执行广泛的功能工程设计。</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e335">
+      <p>不适用</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e337">
+      <p>机器学习模型</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e339">
+      <ul>
+        <li>
+          <p>每个工作空间 1 个机器学习模型</p>
+        </li>
+        <li>
+          <p>每个工作空间 10 个模型版本</p>
+        </li>
+        <li>
+          <p>最大工作空间数由预订套餐确定。</p>
+        </li>
+        <li>
+          <p>每月可以执行的最大培训操作数由预订套餐确定。</p>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d25459e331">
+      <p>发布</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e333">
+      <p>发布机器学习模型，以用于在其他 {{site.data.keyword.watson}} 应用程序中执行文本抽取。</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e335">
+      <p>不适用</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e337">
+      <ul>
+        <li>
+          <p>模型标识（在 {{site.data.keyword.nlufull}} 或 {{site.data.keyword.discoveryfull}} 中使用）</p>
+        </li>
+        <li>
+          <p>ZIP 文件（在 {{site.data.keyword.ibmwatson_notm}} Explorer 中使用）</p>
+        </li>
+      </ul>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e339">
+      <p>要部署到 {{site.data.keyword.watson}} 服务，必须知道 {{site.data.keyword.cloud_notm}} 服务空间和实例名称。</p>
+    </td>
+  </tr>
 </table>
 
 ### 基于规则的模型
 
-<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d25459e509" class="stentry thleft thbot">任务</th>
-<th valign="bottom" align="left" id="d25459e511" class="stentry thleft thbot">典型用途</th>
-<th valign="bottom" align="left" id="d25459e513" class="stentry thleft thbot">支持的输入格式</th>
-<th valign="bottom" align="left" id="d25459e515" class="stentry thleft thbot">支持的输出格式</th>
-<th valign="bottom" align="left" id="d25459e517" class="stentry thleft thbot">限制和需求</th>
-</tr>
-<tr class="strow"><td valign="top" headers="d25459e509" class="stentry"><p class="p wrapper">规则编辑器</p></td>
-<td valign="top" headers="d25459e511" class="stentry"><p class="p">创建文档或将文档上传到规则编辑器，在其中定义类、正则表达式和规则。</p>
-</td>
-<td valign="top" headers="d25459e513" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">纯文本（在编辑器中添加）</p></li>
-<li class="li"><p class="p wrapper">UTF-8 格式的 CSV 文件</p></li>
-<li class="li"><p class="p wrapper">从“所有文档集”中复制的内容</p></li>
-</ul>
-</td>
-<td valign="top" headers="d25459e515" class="stentry"><p class="p wrapper">无</p></td>
-<td valign="top" headers="d25459e517" class="stentry"><ul class="ul bullets">
-<li class="li"><p class="p wrapper">每个工作空间 1 个基于规则的模型</p></li>
-<li class="li"><p class="p wrapper">每个文档 5,000 个字符</p></li>
-<li class="li"><p class="p wrapper">每个工作空间 100 个文档</p></li>
-<li class="li"><p class="p wrapper">文档标题的最大大小为 256 个字符</p></li>
-<li class="li"><p class="p wrapper">每个工作空间 200 个规则</p></li>
-<li class="li"><p class="p wrapper">每个工作空间 400 个类</p></li>
-<li class="li"><p class="p wrapper">每个工作空间 100 个正则表达式组</p></li>
-<li class="li"><p class="p wrapper">每个正则表达式组 100 个正则表达式条目</p></li>
-<li class="li"><p class="p wrapper">每个正则表达式条目 1,000 个字符</p></li>
-<li class="li"><p class="p wrapper">每个工作空间 5 个基于规则的模型版本</p></li>
-</ul>
-</td>
-</tr>
-<tr class="strow"><td valign="top" headers="d25459e509" class="stentry"><p class="p wrapper">发布</p></td>
-<td valign="top" headers="d25459e511" class="stentry"><p class="p wrapper">发布基于规则的模型，以用于在其他 Watson 应用程序中执行模式识别。</p></td>
-<td valign="top" headers="d25459e513" class="stentry"><p class="p wrapper">不适用</p></td>
-<td valign="top" headers="d25459e515" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">模型标识（用于 AlchemyLanguage 或 Watson Discovery 服务）</p></li>
-</ul>
-</td>
-<td valign="top" headers="d25459e517" class="stentry">
-  <p class="p">要部署到 AlchemyLanguage，您必须具有有效的 AlchemyLanguage 高级套餐密钥标识。</p>
-  <p class="p">要部署到 Watson Discovery 服务，您必须知道服务 {{site.data.keyword.cloud_notm}} 空间和实例名称。</p>
-</td>
-</tr>
+<table summary="此表提供基于规则的模型的输入、输出和限制摘要。">
+<caption>表 3. 基于规则的模型</caption>
+  <tr>
+    <th style="vertical-align:bottom; text-align:left" id="d25459e509">
+任务</th>
+    <th style="vertical-align:bottom; text-align:left" id="d25459e511">
+典型用途</th>
+    <th style="vertical-align:bottom; text-align:left" id="d25459e513">
+支持的输入格式</th>
+    <th style="vertical-align:bottom; text-align:left" id="d25459e515">
+支持的输出格式</th>
+    <th style="vertical-align:bottom; text-align:left" id="d25459e517">
+限制和需求</th>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d25459e509">
+      <p>规则编辑器</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e511">
+      <p>创建文档或将文档上传到规则编辑器，在其中定义类、正则表达式和规则。</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e513">
+      <ul>
+        <li>
+          <p>纯文本（在编辑器中添加）</p>
+        </li>
+        <li>
+          <p>UTF-8 格式的 CSV 文件</p>
+        </li>
+        <li>
+          <p>从“所有文档集”中复制的内容</p>
+        </li>
+      </ul>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e515">
+      <p>无</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e517">
+      <ul>
+        <li>
+          <p>每个工作空间 1 个基于规则的模型</p>
+        </li>
+        <li>
+          <p>每个文档 5,000 个字符</p>
+        </li>
+        <li>
+          <p>每个工作空间 100 个文档</p>
+        </li>
+        <li>
+          <p>文档标题的最大大小为 256 个字符</p>
+        </li>
+        <li>
+          <p>每个工作空间 200 个规则</p>
+        </li>
+        <li>
+          <p>每个工作空间 400 个类</p>
+        </li>
+        <li>
+          <p>每个工作空间 100 个正则表达式组</p>
+        </li>
+        <li>
+          <p>每个正则表达式组 100 个正则表达式条目</p>
+        </li>
+        <li>
+          <p>每个正则表达式条目 1,000 个字符</p>
+        </li>
+        <li>
+          <p>每个工作空间 5 个基于规则的模型版本</p>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d25459e509">
+      <p>发布</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e511">
+      <p>发布基于规则的模型，以用于在其他 {{site.data.keyword.watson}} 应用程序中执行模式识别。</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e513">
+      <p>不适用</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e515">
+      <ul>
+        <li>
+          <p>模型标识（在 {{site.data.keyword.nlufull}} 或 {{site.data.keyword.discoveryfull}} 中使用）</p>
+        </li>
+      </ul>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e517">
+      <p>要部署到 {{site.data.keyword.watson}} 服务，必须知道 {{site.data.keyword.cloud_notm}} 服务空间和实例名称。</p>
+    </td>
+  </tr>
 </table>

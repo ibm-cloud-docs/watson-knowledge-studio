@@ -17,7 +17,7 @@ lastupdated: "2018-04-04"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-本文档适用于 {{site.data.keyword.cloud}} 上的 {{site.data.keyword.knowledgestudiofull}}。要查看 {{site.data.keyword.IBM_notm}} Marketplace 上先前版本的 {{site.data.keyword.knowledgestudioshort}} 文档，请[单击此链接 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/docs/services/knowledge-studio/language-support.html){: new_window}。
+本文档适用于 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}。要查看 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 先前版本的文档，请[单击此链接 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/docs/services/knowledge-studio/language-support.html){: new_window}。
 {: tip}
 
 # 语言支持
@@ -60,7 +60,7 @@ lastupdated: "2018-04-04"
 > - 实体类型名称的长度不能超过 64 个字符。
 > - 关系类型名称的长度不能超过 128 个字符。
 >
-> 因此，例如，人类注释者在参考标准编辑器中对日语文本进行注释时，可以应用的实体类型和关系类型名称将不会是日语。
+> 因此，例如，人工注释者在参考标准编辑器中对日语文本进行注释时，可以应用的实体类型和关系类型名称将不会是日语。
 
 ### 相关任务
 

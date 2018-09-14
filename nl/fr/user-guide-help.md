@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-16"
 
 ---
 
@@ -29,11 +29,11 @@ Découvrez ce qu'il faut faire si vous avez des questions ou si vous avez besoin
 ## Problèmes d'accès
 
 - Si vous ne parvenez pas à accéder à l'instance {{site.data.keyword.knowledgestudioshort}}, vérifiez, auprès du propriétaire de l'espace de travail, qu'il vous a bien invité à rejoindre cet espace.
-- Si vous parvenez à accéder à l'instance {{site.data.keyword.knowledgestudioshort}}, mais que vous ne voyez aucun espace de travail dans la liste, adressez-vous à l'administrateur ou au chef de projet en charge de l'espace de travail. L'administrateur, qui est la personne ayant le rôle Admin, ou le chef de projet, utilisateur ayant le rôle ProjectManager dans {{site.data.keyword.knowledgestudioshort}}, doit 1.) vous associer à un jeu d'annotations et 2.) créer une tâche vous affectant à l'annotation des documents de ce jeu. Tant que quelqu'un n'a pas effectué ces opérations, vous ne verrez pas l'espace de travail listé sur la page d'accueil de {{site.data.keyword.knowledgestudioshort}}.
+- Si vous parvenez à accéder à l'instance {{site.data.keyword.knowledgestudioshort}}, mais que vous ne voyez aucun espace de travail dans la liste, adressez-vous à l'administrateur ou au chef de projet en charge de l'espace de travail. L'administrateur, qui est la personne ayant le rôle Admin, ou le chef de projet, utilisateur ayant le rôle Chef de projet dans {{site.data.keyword.knowledgestudioshort}}, doit 1.) vous associer à un jeu d'annotations et 2.) créer une tâche qui vous affecte à l'annotation des documents du jeu. Tant que quelqu'un n'a pas effectué ces opérations, vous ne verrez pas l'espace de travail listé sur la page d'accueil de {{site.data.keyword.knowledgestudioshort}}.
 
 ## Utiliser l'éditeur de données de référence
 
-Commencez pas passer en revue le contenu de ce guide d'utilisation. Si vous avez toujours des questions sur la façon d'utiliser l'éditeur de données de référence, vous pouvez consulter le forum de la communauté pour voir si quelqu'un d'autre a déjà posé une question analogue à la vôtre et s'il a reçu une réponse. Vous pouvez aussi demander aux membres de la communauté de vous aider. Pour accéder au forum de la communauté des développeurs {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}}, allez à : [https://developer.ibm.com/answers/topics/wks/?smartspace=watson ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/answers/topics/wks/?smartspace=watson){: new_window}.
+Commencez pas passer en revue le contenu de la rubrique [Annoter des documents](/docs/services/watson-knowledge-studio/user-guide.html). Si vous avez toujours des questions sur la façon d'utiliser l'éditeur de données de référence, consultez l'une des communautés de développeurs dont les liens figurent à la fin de la table des matières. Si vous ne trouvez pas la réponse à votre question, postez celle-ci.
 
 ## Décisions d'annotation
 

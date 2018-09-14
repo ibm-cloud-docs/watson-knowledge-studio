@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -32,91 +32,7 @@ Prima che un modello possa essere distribuito per l'utilizzo a un servizio, devi
 
 Per alcuni servizi, devi conoscere i dettagli sull'istanza del servizio a cui pensi di eseguire la distribuzione, come il nome dell'istanza del servizio e dello spazio {{site.data.keyword.Bluemix_notm}}. Le informazioni sul nome dell'istanza del servizio e dello spazio sono disponibili dalla pagina dei servizi {{site.data.keyword.Bluemix_notm}}.
 
-Puoi anche pre-annotare i nuovi documenti con il modello di machine learning. Consulta [Pre-annotazione dei documenti con un modello di machine learning](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannotsire) per i dettagli.
-
-## Distribuzione di un modello di machine learning a AlchemyLanguage
-{: #wks_mabluemix}
-
-Quando sei soddisfatto delle prestazioni del modello, puoi distribuirne una versione a {{site.data.keyword.IBM_notm}} {{site.data.keyword.alchemylanguageshort}}. Questa funzione, che ti richiede di fornire una chiave di accesso {{site.data.keyword.alchemyapishort}}, abilita le tue applicazioni ad utilizzare il modello di machine learning distribuito per annotare i documenti nel tuo dominio.
-
-### Prima di cominciare
-
-Devi avere un piano avanzato del servizio {{site.data.keyword.alchemylanguageshort}} per poter distribuire ed utilizzare il modello.
->Nota: il servizio {{site.data.keyword.alchemylanguageshort}} è obsoleto. Non puoi distribuire questo modello al servizio se non hai un piano esistente.
-
-### Informazioni su quest'attività
-
-Quando distribuisci il modello di machine learning, seleziona la versione che vuoi distribuire. Per distribuire questo servizio, devi avere una chiave di accesso da {{site.data.keyword.IBM_notm}} {{site.data.keyword.alchemylanguageshort}}.
-
-La chiave deve appartenere a un account che è autorizzato a pubblicare i modelli personalizzati o il modello sarà distribuito, ma non potrai utilizzarlo.
-
-Devi specificare la chiave la prima volta che distribuisci un modello a {{site.data.keyword.alchemylanguageshort}}. Puoi quindi riutilizzare la chiave con più versioni del modello che distribuisci. Ogni chiave ha un numero massimo di modelli che possono essere distribuiti contemporaneamente.
-
-### Procedura
-
-Per distribuire un modello di machine learning a {{site.data.keyword.alchemylanguageshort}} :
-
-1. Accedi come amministratore o gestore del progetto {{site.data.keyword.knowledgestudioshort}} e seleziona il tuo spazio di lavoro.
-1. Seleziona la scheda **Model Management** > **Versions** > **Machine learning**.
-1. Scegli la versione del modello che vuoi distribuire.
-
-    Se esiste solo una versione funzionante del modello, crea un'istantanea del modello corrente. Queste versioni del modello ti abilitano a distribuire una versione mentre continui a migliorare la versione corrente. L'opzione di distribuzione non viene visualizzata finché non crei almeno una versione.
-
-1. Fai clic su **Deploy** e scegli di distribuirlo al servizio {{site.data.keyword.alchemylanguageshort}} e poi fai clic su **Next**.
-1. Immetti la chiave che hai ottenuto da {{site.data.keyword.alchemylanguageshort}} o seleziona una versione distribuita precedente del modello che ha una chiave che vuoi riutilizzare e fai clic su **Deploy**. Se la chiave è valida, viene visualizzata una conferma che contiene l'ID del modello. Questa conferma non significa che il modello è pronto per l'utilizzo da parte delle tue applicazioni.
-1. Il processo di distribuzione potrebbe richiedere alcuni minuti. Per controllare lo stato della distribuzione, fai clic su **Status** accanto alla versione che hai distribuito. Se il modello sta ancora venendo distribuito, lo stato indica "publishing". Dopo il completamento della distribuzione, lo stato viene modificato con "available" se è ha avuto esito positivo o con "error" se si sono verificati dei problemi.
-
-    Le informazioni sullo stato includono l'ID del modello, le ultime quattro cifre della chiave {{site.data.keyword.alchemyapishort}} e un log del processo di distribuzione. L'ID del modello (model_id) è come le tue applicazioni denominano il modello di machine learning. Utilizza la chiave {{site.data.keyword.alchemyapishort}} per tenere traccia del numero di distribuzioni per chiave.
-
-### Operazioni successive
-
-Per utilizzare il modello distribuito, devi copiare e incollare l'ID del modello nella chiamata API della tua applicazione. La chiamata deve inoltre specificare il servizio del piano avanzato di {{site.data.keyword.alchemylanguageshort}} che vuoi utilizzare con il modello e la rispettiva chiave di accesso {{site.data.keyword.alchemyapishort}} associata. Sono supportati i seguenti endpoint:
-
-- **&lt;*input-type*&gt;GetRankedNamedEntities**
-
-    Utilizza il modello personalizzato che specifichi nel parametro del modello per estrarre un elenco di citazioni di tutti i tipi di entità conosciuti che trova nell'input che fornisci. I tipi di input supportati includono testo, HTML o un URL pubblico. Consulta [{{site.data.keyword.alchemylanguageshort}}&gt;Entities ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/alchemy-language/api/v1/#entities){: new_window} per ulteriori informazioni sull'API e la sintassi da utilizzare.
-
-- **&lt;*input-type*&gt;GetTypedRelations**
-
-    Utilizza il modello personalizzato che specifichi nel parametro del modello per estrarre un elenco di istanze di relazioni note che trova nell'input che fornisci. Consulta [{{site.data.keyword.alchemylanguageshort}}&gt;TypedRelations ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/alchemy-language/api/v1/#typed-relations){: new_window} per ulteriori informazioni sull'API e la sintassi da utilizzare.
-
-#### Esempi
-
-- La seguente chiamata API ricerca i tipi di entità noti nella stringa di testo che viene passata nel corpo POST. La richiesta specifica l'ID del modello che è stato creato e una chiave API Alchemy che dispone dei diritti per eseguire i modelli personalizzati.
-
-    ```bash
-    curl -d 'text=Mary had a little lamb.'
-    "https://gateway-a.watsonplatform.net/calls/text/TextGetRankedNamedEntities?
-    showSourceText=1&
-    model=44476a63-c55t-451f-ad3r-8b23c0f4628c&
-    apikey=s3wee88r25wwe2p6442w99g8t77phll5323kkf3a&
-    outputMode=json"
-    ```
-    {: pre}
-
-    La risposta restituisce `Mary` e `lamb` se queste sono citazioni che vengono riconosciute dal tuo modello di machine learning.
-
-- La seguente chiamata API ricerca le relazioni note nella stringa di testo che viene passata nel corpo POST. La richiesta specifica l'ID del modello che è stato creato e una chiave API Alchemy che dispone dei diritti per eseguire i modelli personalizzati.
-
-    ```bash
-    curl -d 'text=Mary had a little lamb.'
-    "https://gateway-a.watsonplatform.net/calls/text/TextGetTypedRelations?
-    showSourceText=1&
-    model=44476a63-c55t-451f-ad3r-8b23c0f4628c&
-    apikey=s3wee88r25wwe2p6442w99g8t77phll5323kkf3a&
-    outputMode=json"
-    ```
-    {: pre}
-
-    La risposta restituisce `ownedBy` se tale relazione viene riconosciuta dal tuo modello di machine learning.
-
-> **Nota:** viene incluso il ritorno a capo per formattare in modo migliore gli esempi della schermata. Non includere il ritorno a capo nella sintassi dell'API.
-
-Per ulteriori informazioni, consulta la [documentazione {{site.data.keyword.alchemylanguageshort}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/watson/developercloud/doc/alchemylanguage/customizing.shtml){: new_window}.
-
-#### Informazioni correlate
-
-[Problemi con il modello {{site.data.keyword.alchemylanguageshort}} ](/docs/services/watson-knowledge-studio/troubleshooting.html#wks_ts_deployed_model_deleted)
+Puoi anche pre-annotare i nuovi documenti con il modello di machine learning. Consulta [Pre-annotazione dei documenti con il modello di machine learning](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannotsire) per i dettagli.
 
 ## Distribuzione di un modello di machine learning a IBM Watson Discovery
 {: #wks_madiscovery}
@@ -124,22 +40,27 @@ Per ulteriori informazioni, consulta la [documentazione {{site.data.keyword.alch
 Quando sei soddisfatto delle prestazioni del modello, puoi distribuirne una versione a {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}}. Questa funzione abilita le tue applicazioni ad utilizzare il modello di machine learning distribuito per arricchire le informazioni dettagliate che ottieni dai tuoi dati con il riconoscimento dei concetti e delle relazioni che sono rilevanti nel tuo dominio.
 
 ### Prima di cominciare
+{: #wks_madiscovery_prereqs}
 
 Devi avere l'ascesso amministrativo all'istanza del servizio {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}} e conoscere i nomi dell'istanza e dello spazio {{site.data.keyword.Bluemix_notm}} ad esso associati.
 
 ### Informazioni su quest'attività
+{: #wks_madiscovery_about}
 
 Quando distribuisci il modello di machine learning, seleziona la versione che vuoi distribuire.
 
 ### Procedura
+{: #wks_madiscovery_procedure}
 
 Per distribuire un modello di machine learning a {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}}, completa la seguente procedura:
 
 1. Accedi come amministratore o gestore del progetto {{site.data.keyword.knowledgestudioshort}} e seleziona il tuo spazio di lavoro.
-1. Seleziona la scheda **Model Management** > **Versions** > **Machine learning**.
+1. Seleziona **Machine Learning Model** > **Versions**.
 1. Scegli la versione del modello che vuoi distribuire.
 
     Se esiste solo una versione funzionante del modello, crea un'istantanea del modello corrente. Queste versioni del modello ti abilitano a distribuire una versione mentre continui a migliorare la versione corrente. L'opzione di distribuzione non viene visualizzata finché non crei almeno una versione.
+
+    **Nota**: ogni versione può essere distribuita ad una sola istanza del servizio. Se vuoi distribuire lo stesso modello a più di un'istanza, crea una versione per ciascuna istanza.
 
 1. Fai clic su **Deploy**, scegli di distribuirlo a {{site.data.keyword.discoveryshort}} e poi fai clic su **Next**.
 1. Seleziona l'istanza e lo spazio {{site.data.keyword.Bluemix_notm}}. Se necessario, seleziona una regione differente.
@@ -151,8 +72,9 @@ Per distribuire un modello di machine learning a {{site.data.keyword.watson}} {{
     Quando disponibile, prendi nota dell'ID del modello (model_id). Fornirai questo ID al servizio {{site.data.keyword.discoveryshort}} per abilitarlo ad utilizzare il tuo modello personalizzato.
 
 ### Operazioni successive
+{: #wks_madiscovery_next}
 
-Per utilizzare il modello distribuito, devi fornire l'ID del modello quando viene richiesto durante il processo di configurazione del miglioramento del servizio {{site.data.keyword.discoveryshort}}. Per ulteriori dettagli, consulta la [documentazione del servizio {{site.data.keyword.discoveryshort}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://www.ibm.com/watson/developercloud/doc/discovery/integrate-wks.shtml){: new_window}.
+Per utilizzare il modello distribuito, devi fornire l'ID del modello quando viene richiesto durante il processo di configurazione del miglioramento del servizio {{site.data.keyword.discoveryshort}}. Per ulteriori dettagli, consulta la [documentazione del servizio {{site.data.keyword.discoveryshort}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/services/discovery/integrate-wks.html){: new_window}.
 
 ## Distribuzione di un modello di machine learning a IBM Watson Natural Language Understanding
 {: #wks_manlu}
@@ -160,22 +82,27 @@ Per utilizzare il modello distribuito, devi fornire l'ID del modello quando vien
 Quando sei soddisfatto delle prestazioni del modello, puoi distribuirne una versione a {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} {{site.data.keyword.nlushort}}. Questa funzione abilita le tue applicazioni ad utilizzare il modello di machine learning distribuito per analizzare le funzioni semantiche dell'input di testo, incluse le entità e le relazioni.
 
 ### Prima di cominciare
+{: #wks_manlu_prereqs}
 
 Devi avere un servizio {{site.data.keyword.nlushort}} a cui distribuire. E devi conoscere i nomi dell'istanza e dello spazio {{site.data.keyword.Bluemix_notm}} associati al servizio. Se non ricordi i nomi dell'istanza e dello spazio, trovali accedendo a {{site.data.keyword.Bluemix_notm}}. Se non hai un account {{site.data.keyword.Bluemix_notm}}, registrane uno.
 
 ### Informazioni su quest'attività
+{: #wks_manlu_about}
 
 Quando distribuisci il modello di machine learning, seleziona la versione che vuoi distribuire.
 
 ### Procedura
+{: #wks_manlu_procedure}
 
 Per distribuire un modello di machine learning al servizio  {{site.data.keyword.nlushort}}, completa la seguente procedura:
 
 1. Accedi come amministratore o gestore del progetto {{site.data.keyword.knowledgestudioshort}} e seleziona il tuo spazio di lavoro.
-1. Seleziona la scheda **Model Management** > **Versions** > **Machine learning**.
+1. Seleziona **Machine Learning Model** > **Versions**.
 1. Scegli la versione del modello che vuoi distribuire.
 
     Se esiste solo una versione funzionante del modello, crea un'istantanea del modello corrente. Queste versioni del modello ti abilitano a distribuire una versione mentre continui a migliorare la versione corrente. L'opzione di distribuzione non viene visualizzata finché non crei almeno una versione.
+
+    **Nota**: ogni versione può essere distribuita ad una sola istanza del servizio. Se vuoi distribuire lo stesso modello a più di un'istanza, crea una versione per ciascuna istanza.
 
 1. Fai clic su **Deploy**, scegli di distribuirlo a {{site.data.keyword.nlushort}} e poi fai clic su **Next**.
 1. Seleziona l'istanza e lo spazio {{site.data.keyword.Bluemix_notm}}. Se necessario, seleziona una regione differente.
@@ -185,6 +112,7 @@ Per distribuire un modello di machine learning al servizio  {{site.data.keyword.
     Quando disponibile, prendi nota dell'ID del modello (model_id). Fornirai questo ID al servizio {{site.data.keyword.nlushort}} per abilitarlo ad utilizzare il tuo modello personalizzato.
 
 ### Operazioni successive
+{: #wks_manlu_next}
 
 Per utilizzare il modello distribuito, devi specificare l'ID del modello del tuo modello personalizzato nel parametro `entities.model`.
 
@@ -255,7 +183,7 @@ Puoi utilizzare il modello con la richiesta {{site.data.keyword.nlushort}} `GET 
 
 - **relazioni**
 
-    Il seguente comando trova le relazioni presenti nella frase che viene passata utilizzando il parametro di testo: 
+    Il seguente comando trova le relazioni presenti nella frase che viene passata utilizzando il parametro di testo:
 
     ```bash
     curl -G -u "3330af09-4b22-4f2d-a54c-1cb099df1fa8":"338rTJSvPVqeG"
@@ -269,7 +197,7 @@ Puoi utilizzare il modello con la richiesta {{site.data.keyword.nlushort}} `GET 
     ```
     {: pre}
 
-    Il servizio restituisce un oggetto JSON delle istanze che trova dei tipi di relazione che sono stati definiti nel modello personalizzato: 
+    Il servizio restituisce un oggetto JSON delle istanze che trova dei tipi di relazione che sono stati definiti nel modello personalizzato:
 
     ```javascript
     {
@@ -334,20 +262,32 @@ Puoi utilizzare il modello con la richiesta {{site.data.keyword.nlushort}} `GET 
     ```
     {: codeblock}
 
-Consulta la [documentazione {{site.data.keyword.nlushort}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/watson/developercloud/doc/natural-language-understanding/index.html){: new_window} per ulteriori dettagli.
+Consulta la [documentazione {{site.data.keyword.nlushort}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/services/natural-language-understanding/index.html){: new_window} per ulteriori dettagli.
 
 ## Annullamento della distribuzione dei modelli
 {: #undeploy-view-model}
 
-Se vuoi annullare la distribuzione di un modello o trovare un ID del modello, consulta la pagina **Deployed Models**. La pagina **Deployed Models** mostra tutti i modelli {{site.data.keyword.knowledgestudioshort}} distribuiti ai servizi negli spazi a cui hai accesso.
+Se vuoi annullare la distribuzione di un modello o trovare un ID del modello, consulta la pagina **Deployed Models**.
+
+### Informazioni su quest'attività
+{: #wks_undeploy_about}
+
+Ciò che viene visualizzato nella pagina Deployed Models dipende dalla [regione ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/resources/services_region.html){: new_window} che ospita la tua istanza {{site.data.keyword.knowledgestudioshort}}. Se la regione supporta le istanze gestite dai metodi di gestione dell'accesso [IAM ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/iam/users_roles.html){: new_window} e [Cloud Foundry ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window}, visualizzi una scheda per ogni metodo. I modelli dalle istanze gestite da IAM sono elencate nella scheda **Resource Groups**. I modelli dalle istanze gestite da Cloud Foundry sono elencate nella scheda **Organizations**.
+
+Se la regione supporta le istanze gestite da solo uno dei metodi di gestione dell'accesso, visualizzi solo un elenco di modelli, perché viene applicato solo un metodo di gestione dell'accesso.
+
+### Procedura
+{: #wks_deploy_procedure}
 
 Per annullare la distribuzione dei modelli o trovare gli ID del modello:
 
-1. Accedi come amministratore o gestore del progetto {{site.data.keyword.knowledgestudioshort}} e seleziona il tuo spazio di lavoro.
+1. Avvia {{site.data.keyword.knowledgestudioshort}}.
 1. Dal menu **Settings** nella barra del menu in alto a destra, seleziona **Manage deployed models**.
 1. Dall'elenco di modelli distribuiti, trova il modello che vuoi visualizzare o di cui vuoi annullare la distribuzione.
 1. Per annullare la distribuzione di un modello, dall'ultima colonna di tale riga, fai clic su **Undeploy model**.
 1. Per trovare l'ID del modello, consulta la colonna **Model ID**.
+
+In alternativa, puoi annullare la distribuzione dei modelli dalle pagine Versions dei modelli basati sulla regola e di machine learning.
 
 ## Utilizzo di un modello di machine learning in IBM Watson Explorer
 {: #wks_maexport}
@@ -355,24 +295,27 @@ Per annullare la distribuzione dei modelli o trovare gli ID del modello:
 Esporta il modello di machine learning preparato in modo che possa essere utilizzato in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
 
 ### Prima di cominciare
+{: #wks_maexport_prereqs}
 
 Se scegli di identificare i tipi di relazione e annotarli, devi definire almeno due tipi di relazione e annotare le istanze delle relazioni nel ground truth prima di esportare il modello. Definire e annotare un solo tipo di relazione può causare problemi successivi in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer, release 11.0.1.0.
 
 ### Informazioni su quest'attività
+{: #wks_maexport_about}
 
 Ora che il modello di machine learning è preparato per riconoscere le entità e le relazioni di un determinato dominio, puoi utilizzarlo in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
 
 Fai clic su [questo link ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.youtube.com/watch?v=1VoS-xczBow&amp;feature=youtu.be){: new_window} per guardare un video di meno di 2 minuti che illustra come esportare un modello e utilizzarlo in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
 
 ### Procedura
+{: #wks_maexport_procedure}
 
 Per utilizzare un modello di machine learning in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer, completa la seguente procedura.
 
 1. Accedi come amministratore o gestore del progetto {{site.data.keyword.knowledgestudioshort}} e seleziona il tuo spazio di lavoro.
-1. Seleziona la scheda **Model Management** > **Versions** > **Machine learning**.
+1. Seleziona **Machine Learning Model** > **Versions**.
 1. Fai clic su **Export current model**.
 
-    Se hai una sottoscrizione di piano gratuito, l'opzione di esportazione non è disponibile. 
+    Se hai una sottoscrizione di piano Lite, l'opzione di esportazione non è disponibile. 
 
     Il modello viene salvato come un file ZIP e ti viene richiesto di scaricarlo.
 
@@ -382,5 +325,6 @@ Per utilizzare un modello di machine learning in {{site.data.keyword.IBM_notm}} 
     Puoi quindi associare il modello a un modello di machine learning in {{site.data.keyword.watson}} Explorer Content Analytics. Dopo aver eseguito il passo di associazione, quando effettui una ricerca per indicizzazione dei documenti, il modello trova le istanze delle entità e delle relazioni comprese dal tuo modello. Per imparare come importare e configurare in modello in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer, consulta la documentazione tecnica che descrive l'integrazione: [http://www.ibm.com/support/docview.wss?uid=swg27048147 ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://www.ibm.com/support/docview.wss?uid=swg27048147){: new_window}.
 
 #### Attività correlate
+{: #wks_maexport_related}
 
 [Esportazione dei documenti analizzati da {{site.data.keyword.watson}} Explorer Content Analytics](/docs/services/watson-knowledge-studio/preannotation.html#wks_uimawexca)

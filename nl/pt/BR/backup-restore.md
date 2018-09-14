@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -34,7 +34,7 @@ Para fazer backup e restaurar seus dados, conclua as etapas a seguir:
 
 1. [Entender quais dados podem ser submetidos a backup](#data)
 1. [Preparar para o backup](#prepare)
-1. [Exportar artefatos da instância atual](#export)
+1. [ Fazer download de artefatos a partir da instância atual ](#export)
 1. [Recriar espaços na nova instância](#recreateproj)
 1. [Restaurar os dados da área de trabalho](#restoredata)
 1. [Restaurar os modelos](#restoremodels)
@@ -89,7 +89,7 @@ Para preparar para fazer backup e restaurar seus dados, conclua as etapas a segu
 
     Se você está migrando áreas de trabalho entre instâncias diferentes, considere fazer uma lista de usuários e suas funções para a instância que está sendo submetida a backup. Alguém com a função de Administrador pode imprimir a lista na página Gerenciamento de conta do usuário. Após as áreas de trabalho serem recriadas na nova instância, alguém com função de Administrador deve incluir os usuários e designar suas funções.
 
-    Veja [Montando uma equipe](/docs/services/watson-knowledge-studio/team.html) para obter mais informações sobre as funções.
+    Para obter mais informações sobre funções, veja [Funções de usuário no {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/roles.html).
 
 1. Anote as informações de área de trabalho.
 
@@ -108,7 +108,9 @@ Para cada área de trabalho que você deseja migrar, faça download dos artefato
 - Sistema de tipos
 - Dicionários
 
-  **Nota**: somente dicionários editáveis serão transferidos por download. Não é possível fazer download de dicionários somente leitura.
+  ** Nota **:
+    - Apenas dicionários editáveis serão transferidos por download. Não é possível fazer download de dicionários somente leitura.
+    - Para dicionários, os mapeamentos de tipo de entidade não são migrados. Depois de restaurar esses artefatos, será necessário mapear os dicionários para tipos de entidade, conforme necessário.
 
 - Documentos
 
@@ -143,7 +145,7 @@ Depois de recriar as áreas de trabalho, faça upload dos artefatos transferidos
 
   Se você usou os dicionários somente leitura na versão anterior da área de trabalho, faça upload deles nessa área de trabalho por meio de sua fonte original.
 
-  **Nota**: quando você inclui dicionários, o pré-anotador de dicionário é criado automaticamente. Você associa o dicionário com um tipo de entidade no momento em que executa o pré-anotador.
+1. Para os pré-anotadores de dicionário, associe os dicionários a um tipo de entidade. Os dicionários que não têm mapeamentos para tipos de entidades não aplicarão anotações quando você pré-anotar documentos.
 
 1. Faça upload dos documentos que você transferiu por download da versão anterior da área de trabalho para esta versão da área de trabalho.
    Para obter detalhes, veja [Fazendo upload de recursos de outra área de trabalho](/docs/services/watson-knowledge-studio/exportimport.html).
@@ -155,9 +157,9 @@ Neste ponto, todos os artefatos que foram usados para treinar o modelo na versã
 
 Para reimplementar um modelo de aprendizado de máquina que você implementou na instância anterior, conclua as etapas a seguir:
 
-1. Treine o modelo de aprendizado de máquina. Para obter detalhes, veja [Criando um modelo de aprendizado de máquina](/docs/services/watson-knowledge-studio/train-ml.html).
+1. [ Treinar o modelo de aprendizado de máquina ](/docs/services/watson-knowledge-studio/train-ml.html).
 
-  **Nota**: não execute nenhum pré-anotador em documentos anotados que você migrou para essa área de trabalho porque eles perderão quaisquer anotações neles que foram incluídas por anotadores humanos.
+  **Nota**: não execute pré-anotadores em documentos anotados que foram migrados para essa área de trabalho porque eles perderão anotações que foram incluídas por anotadores humanos.
 
 1. Depois de criar o modelo, implemente-o novamente. Para obter detalhes, veja [Usando o modelo de aprendizado de máquina](/docs/services/watson-knowledge-studio/publish-ml.html).
 
@@ -171,6 +173,6 @@ Para reimplementar um modelo baseado em regra que você implementou na instânci
 
 Se você tinha quaisquer tarefas de anotação que foram criadas, mas não concluídas na área de trabalho anterior, conclua as etapas a seguir para recriar as tarefas de anotação incompletas:
 
-1. Faça upload de quaisquer documentos que não foram anotados ainda, mas que você deseja incluir na verdade absoluta para continuar a melhorar o modelo.
-1. Dos documentos recentemente importados e não anotados, crie conjuntos de documentos para anotação. Esses conjuntos são agora chamados de _conjuntos de anotações_. Para obter detalhes, veja [Criando e designando conjuntos de anotações](/docs/services/watson-knowledge-studio/document-for-annotation.html).
-1. Recrie as tarefas de anotação. Dê à tarefa o mesmo nome, uma data de vencimento apropriada e designe conjuntos de anotações aos anotadores humanos apropriados.
+1. [Faça upload de quaisquer documentos](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_projadd) que ainda não tenham sido anotados, mas que você deseja incluir na verdade absoluta para continuar a melhorar o modelo.
+1. Por meio dos documentos recém-importados e não anotados, [crie conjuntos de anotações](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_projdocsets).
+1. [ Recrear as tarefas de anotação ](/docs/services/watson-knowledge-studio/annotate-documents.html#wks_hatask). Dê à tarefa o mesmo nome, uma data de vencimento apropriada e designe conjuntos de anotações aos anotadores humanos apropriados.

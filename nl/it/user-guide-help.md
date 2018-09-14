@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-16"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-04-04"
 Questa documentazione è per {{site.data.keyword.knowledgestudiofull}} su {{site.data.keyword.cloud}}. Per visualizzare la documentazione della versione precedente di {{site.data.keyword.knowledgestudioshort}} nel {{site.data.keyword.IBM_notm}} Marketplace, [fai clic su questo link ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/services/knowledge-studio/user-guide-help.html){: new_window}.
 {: tip}
 
-# Risoluzione dei problemi con l'editor ground truth 
+# Risoluzione dei problemi con l'editor ground truth
 {: #ts_user_contactingsupport}
 
 Scopri cosa fare se hai domande o hai bisogno di aiuto. Dove andare per l'assistenza dipende dal tipo di problema che stai avendo.
@@ -33,7 +33,7 @@ Scopri cosa fare se hai domande o hai bisogno di aiuto. Dove andare per l'assist
 
 ## Utilizzo dell'editor ground truth
 
-Innanzitutto, controlla le informazioni in questa guida utente. Se hai ancora domande su come utilizzare l'editor ground truth, puoi controllare il forum della community per vedere se qualcun altro ha già fatto questa domanda e ha ricevuto una risposta. O puoi chiedere assistenza ai membri della community. Per accedere al forum della community {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Developer, vai a: [https://developer.ibm.com/answers/topics/wks/?smartspace=watson ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/answers/topics/wks/?smartspace=watson){: new_window}.
+Innanzitutto, controlla le informazioni nell'[Annotazione dei documenti](/docs/services/watson-knowledge-studio/user-guide.html). Se hai ancora domande su come utilizzare l'editor ground truth, controlla una delle nostre community di sviluppatori, a cui puoi collegarti dalla parte inferiore della tabella dei contenuti. Se non riesci a trovare la risposta alla tua domanda, inserisci la domanda tu stesso.
 
 ## Decisioni di annotazione
 

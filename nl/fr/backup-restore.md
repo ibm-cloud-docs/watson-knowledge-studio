@@ -1,8 +1,8 @@
-﻿---
+---
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -34,7 +34,7 @@ Pour sauvegarder et restaurer vos données, effectuez les étapes suivantes :
 
 1. [Découvrez quelles données peuvent être sauvegardées](#data)
 1. [Préparez la sauvegarde](#prepare)
-1. [Exportez les artefacts de l'instance en cours](#export)
+1. [Téléchargez les artefacts de l'instance en cours](#export)
 1. [Recréez les espaces de travail sur la nouvelle instance](#recreateproj)
 1. [Restaurez les données des espaces de travail](#restoredata)
 1. [Restaurez les modèles](#restoremodels)
@@ -53,7 +53,7 @@ Les artefacts suivants ne peuvent pas être sauvegardés ni migrer manuellement 
 
 - Documents pour lesquels l'annotation humaine est en cours
 - Tâches d'annotation
-- Modèes et instantanés
+- Modèles et instantanés
 - Dictionnaires en lecture seule
 
 ## Préparer la sauvegarde
@@ -63,7 +63,8 @@ Pour préparer la sauvegarde et la restauration de vos données, effectuez les �
 
 1. Terminez tout travail en cours dans votre espace de travail.
 
-    - > **Important :** Finissez les taches d'annotation en cours. Seuls peuvent être sauvegardés les documents qui ont été annotés, soumis à arbitrage, approuvés et promus au rang de documents de référence. Si le travail d'annotation n'est pas terminé, vous perdrez tout le bénéfice de l'effort d'annotation qui n'est pas totalement achevé.
+    - >
+          **Important :** Finissez les taches d'annotation en cours. Seuls peuvent être sauvegardés les documents qui ont été annotés, soumis à arbitrage, approuvés et promus au rang de documents de référence. Si le travail d'annotation n'est pas terminé, vous perdrez tout le bénéfice de l'effort d'annotation qui n'est pas totalement achevé.
 
     - Si vous avez créé des tâches d'annotation dans le but de suivre le travail à réaliser, mais que celui-ci n'a pas commencé et qu'il n'est pas prévu qu'il commence avant que l'espace de travail ne soit restauré, faites la liste des tâches d'annotation en attente. Veillez à noter quels jeux de documents ont été importés mais n'ont pas encore été ajoutés aux données de référence. Pensez également à noter qui vous avez affecté à l'annotation de chaque jeu de documents. Une fois l'espace de travail restauré, il vous faudra retransférer ces jeux de documents et recréer les tâches d'annotation.
 
@@ -89,7 +90,7 @@ Pour préparer la sauvegarde et la restauration de vos données, effectuez les �
 
     Si vous faites migrer un espace de travail d'une instance à une autre, faites la liste des utilisateurs et de leurs rôles respectifs dans l'instance d'origine (celle de l'espace de travail que vous sauvegardez). Cette liste peut être imprimée par une personne ayant le rôle Admin à partir de la page User Account Management (gestion des comptes d'utilisateur). Une fois l'espace de travail recréé sur la nouvelle instance, un administrateur (rôle Admin) devra y ajouter les utilisateurs et leur réattribuer les rôles qu'ils avaient dans l'espace d'origine.
 
-    Pour plus d'informations sur les rôles, consultez [Constituer une équipe](/docs/services/watson-knowledge-studio/team.html).
+    Pour plus d'informations sur les rôles, consultez [Rôles d'utilisateur dans {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/roles.html).
 
 1. Prenez note des informations concernant l'espace de travail.
 
@@ -108,7 +109,9 @@ Pour chaque espace de travail que vous faites migrer, téléchargez les artefact
 - Système de types
 - Dictionnaires
 
-  **Remarque **: Seuls les dictionnaires éditables seront téléchargés. Les dictionnaires en lecture seule ne se téléchargent pas.
+  **Remarque **:
+    - Seuls les dictionnaires éditables seront téléchargés. Les dictionnaires en lecture seule ne se téléchargent pas.
+    - Les associations de types d'entités aux dictionnaires ne migrent pas. Après avoir restauré ces artefacts, vous devrez si besoin est réassocier les dictionnaires aux types d'entités.
 
 - Documents
 
@@ -143,7 +146,7 @@ Après avoir recréé les espaces de travail, transférez les artefacts précéd
 
   Si vous utilisiez des dictionnaires en lecture seule dans la version précédente de l'espace de travail, retransférez-les dans le nouvel espace à partir de leur source d'origine.
 
-  **Remarque **: Lorsque vous ajoutez des dictionnaires, le pré-annotateur à base de dictionnaire est automatiquement créé. Lorsque vous exécutez ce pré-annotateur, vous devez associer un dictionnaire à un type d'entité du système de types.
+1. Pour les pré-annotateurs à base de dictionnaires, associez les dictionnaires à un type d'entité. Les dictionnaires qui n'ont pas d'association à un type d'entité n'appliqueront pas d'annotations si vous les utiliser pour pré-annoter des documents.
 
 1. Transférez dans cette version de l'espace de travail les documents que vous avez téléchargés de la version précédente de l'espace de travail.
    Pour les détails, consultez [Transférer des ressources d'un autre espace de travail](/docs/services/watson-knowledge-studio/exportimport.html).
@@ -155,7 +158,7 @@ A ce stade, tous les artefacts qui servaient à entraîner le modèle dans la ve
 
 Pour redéployer un modèle d'apprentissage automatique que vous avez déployé dans l'instance précédente, effectuez les étapes suivantes :
 
-1. Entraînez le modèle d'apprentissage automatique. Pour les détails, consultez [Créer un modèle d'apprentissage automatique](/docs/services/watson-knowledge-studio/train-ml.html).
+1. [Entraînez le modèle d'apprentissage automatique](/docs/services/watson-knowledge-studio/train-ml.html).
 
   **Remarque **: N'exécutez pas de pré-annotateur sur des documents annotés que vous avez fait migrer dans cet espace de travail, car vous perdriez toutes les annotations que les annotateurs humains y ont ajoutées.
 
@@ -171,6 +174,6 @@ Pour redéployer un modèle à base de règles que vous avez déployé dans l'in
 
 Si des tâches d'annotation étaient en cours et n'ont pas été achevées dans l'espace de travail précédent, effectuez les étapes suivantes pour les recréer :
 
-1. Transférez les éventuels documents qui n'ont pas encore été annotés, mais que vous souhaitez ajouter aux données de référence pour continuer à améliorer le modèle.
-1. A partir des documents nouvellement importés et non annotés, créez des jeux de documents en vue de leur annotation. Ces jeux sont maintenant appelés _jeux d'annotations_. Pour les détails, consultez [Créer et affecter des jeux d'annotations](/docs/services/watson-knowledge-studio/document-for-annotation.html).
-1. Recréez les tâches d'annotation. Donnez-leur le même nom que dans l'espace précédent, fixez leur date d'exigibilité et affectez les jeux d'annotations aux annotateurs humains appropriés.
+1. [Transférez les éventuels documents](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_projadd) qui n'ont pas encore été annotés, mais que vous souhaitez ajouter aux données de référence pour continuer à améliorer le modèle.
+1. A partir des documents nouvellement importés et non annotés, [créez des jeux d'annotations](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_projdocsets).
+1. [Recréez les tâches d'annotation](/docs/services/watson-knowledge-studio/annotate-documents.html#wks_hatask). Donnez-leur le même nom que dans l'espace précédent, fixez leur date d'exigibilité et affectez les jeux d'annotations aux annotateurs humains appropriés.

@@ -17,7 +17,7 @@ lastupdated: "2018-04-04"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-この文書は、{{site.data.keyword.cloud}} 上の {{site.data.keyword.knowledgestudiofull}} に関するものです。前のバージョンの {{site.data.keyword.IBM_notm}} マーケットプレイス上の {{site.data.keyword.knowledgestudioshort}} に関する文書を参照するには、[このリンクをクリックしてください ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/docs/services/knowledge-studio/language-support.html){: new_window}。
+この文書は、{{site.data.keyword.cloud}} 上の {{site.data.keyword.knowledgestudiofull}} に関するものです。 前のバージョンの {{site.data.keyword.IBM_notm}} マーケットプレイス上の {{site.data.keyword.knowledgestudioshort}} に関する文書を参照するには、[このリンクをクリックしてください ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/docs/services/knowledge-studio/language-support.html){: new_window}。
 {: tip}
 
 # 言語サポート
@@ -25,7 +25,7 @@ lastupdated: "2018-04-04"
 
 {{site.data.keyword.knowledgestudiofull}} は、モデルのトレーニングをいくつかの言語でサポートしています。
 
-複数言語のサポートは、製品自体が翻訳されることを意味しません。{{site.data.keyword.knowledgestudioshort}} のユーザー・インターフェース、メッセージ、および資料は、英語でのみ提供されています。
+複数言語のサポートは、製品自体が翻訳されることを意味しません。 {{site.data.keyword.knowledgestudioshort}} のユーザー・インターフェース、メッセージ、および資料は、英語でのみ提供されています。
 {: shortdesc}
 
 以下の言語でモデルをトレーニングできます。
@@ -42,7 +42,7 @@ lastupdated: "2018-04-04"
 - 韓国語
 - スペイン語
 
-サポートには、ワークスペースへのこれらの言語の文書の追加、辞書の追加、事前アノテーションの実行、グランド・トゥルース・エディターを使用した文書へのアノテーション付け、および、機械学習モデルのトレーニングを行う機能が含まれています。言語を選択すると、辞書項目の処理、テキストのトークン化、およびセンテンスの分割に、言語固有のテンプレートが適用されるようになります。さまざまな言語の辞書がどのように処理されるのかについては、『[辞書](/docs/services/watson-knowledge-studio/dictionaries.html#wks_dictionaries)』を参照してください。
+サポートには、ワークスペースへのこれらの言語の文書の追加、辞書の追加、事前アノテーションの実行、グランド・トゥルース・エディターを使用した文書へのアノテーション付け、および、機械学習モデルのトレーニングを行う機能が含まれています。 言語を選択すると、辞書項目の処理、テキストのトークン化、およびセンテンスの分割に、言語固有のテンプレートが適用されるようになります。 さまざまな言語の辞書がどのように処理されるのかについては、『[辞書](/docs/services/watson-knowledge-studio/dictionaries.html#wks_dictionaries)』を参照してください。
 
 > **注:** ルール・エディターおよびルール・ベース・モデルは、双方向テキストを処理できないため、アラビア語の文書に使用することはできません。
 

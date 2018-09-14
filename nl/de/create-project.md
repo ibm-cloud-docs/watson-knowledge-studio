@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -55,13 +55,13 @@ Führen Sie die folgenden Schritte aus, um einen Arbeitsbereich zu erstellen:
 1. Geben Sie an, welche Sprache die Dokumente in Ihrem Arbeitsbereich verwenden sollen. Dokumente, die Sie zum Arbeitsbereich hinzufügen, oder Wörterverzeichnisse, die Sie erstellen oder hochladen, müssen in der von Ihnen angegebenen Sprache vorliegen.
 1. Optional: Wenn die Anwendung anstelle des standardmäßigen Tokenizers für maschinelles Lernen einen anderen Tokenizer verwenden soll, erweitern Sie den Abschnitt **Erweiterte Optionen** und wählen Sie **Wörterverzeichnisbasierter Tokenizer** aus.
 
-    Der Standardtokenizer ist leistungsfähiger als der wörterverzeichnisbasierte Tokenizer. Er nutzt die Ergebnisse des maschinellen Lernprozesses in der Sprache der Quellendokumente, um die Token in den Quellendokumenten zu identifizieren. Dies ermöglicht größere Genauigkeit beim Identifizieren der Token, da die stärker differenzierten Sprachmuster der natürlichen Sprache berücksichtigt werden können. Der wörterverzeichnisbasierte Tokenizer identifiziert Token mithilfe von Sprachregeln. Weitere Informationen finden Sie unter [Tokenizer](/docs/services/watson-knowledge-studio/create-project.html#wks_tokenizer).
+    Der Standardtokenizer ist leistungsfähiger als der wörterverzeichnisbasierte Tokenizer. Er nutzt die Ergebnisse des maschinellen Lernprozesses in der Sprache der Quellendokumente, um die Token in den Quellendokumenten zu identifizieren. Dies ermöglicht größere Genauigkeit beim Identifizieren der Token, da die stärker differenzierten Sprachmuster der natürlichen Sprache berücksichtigt werden können. Der wörterverzeichnisbasierte Tokenizer identifiziert Token mithilfe von Sprachregeln. Siehe [Tokenizer](/docs/services/watson-knowledge-studio/create-project.html#wks_tokenizer).
 
 1. Optional: Wenn Sie Projektleiter zum Arbeitsbereich hinzufügen möchten, erweitern Sie den Abschnitt **Erweiterte Optionen** und wählen Sie in der Liste die Namen der Personen aus, die Sie als Projektleiter hinzufügen möchten. Der Administrator kann später durch das Bearbeiten des Arbeitsbereichs Projektleiter hinzufügen oder entfernen.
 
     Es werden nur die Namen der Personen angezeigt, denen Sie auf der Seite 'Benutzerkontoverwaltung' die Rolle des Projektleiters für diese Instanz zugeordnet haben. Weitere Informationen zum Hinzufügen von Benutzern finden Sie unter [Team zusammenstellen](/docs/services/watson-knowledge-studio/team.html).
 
-    > **Hinweis:** Wenn Sie einen kostenlosen Plan abonniert haben, können Sie diesen Schritt überspringen. Unter einem kostenlosen Plan können Sie keine Benutzer hinzufügen und auch keinem Benutzer die Rolle des Projektleiters zuordnen. Sie benötigen keinen zusätzlichen Projektleiter. Als Administrator können Sie auch alle Tasks ausführen, die sonst ein Projektleiter ausführen würde.
+    > **Hinweis:** Wenn Sie einen Lite-Plan abonniert haben, können Sie diesen Schritt überspringen. Unter einem kostenlosen Plan können Sie keine Benutzer hinzufügen und auch keinem Benutzer die Rolle des Projektleiters zuordnen. Sie benötigen keinen zusätzlichen Projektleiter. Als Administrator können Sie auch alle Tasks ausführen, die sonst ein Projektleiter ausführen würde.
 
 1. Klicken Sie auf **Erstellen**.
 
@@ -77,7 +77,7 @@ Ein Administrator kann den Arbeitsbereich jederzeit bearbeiten, um die Beschreib
 
 **Zugehörige Referenzinformationen**:
 
-[Unterstützung verschiedener Landessprachen](/docs/services/watson-knowledge-studio/language-support.html)
+[Sprachunterstützung](/docs/services/watson-knowledge-studio/language-support.html)
 
 ## Tokenizer
 {: #wks_tokenizer}
@@ -111,209 +111,380 @@ Diese Tabelle enthält für jede Phase der Modellentwicklung eine Zusammenfassun
 
 ### Alle Modelltypen
 
-<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d25459e252" class="stentry thleft thbot">Task</th>
-<th valign="bottom" align="left" id="d25459e254" class="stentry thleft thbot">Typische Verwendung</th>
-<th valign="bottom" align="left" id="d25459e256" class="stentry thleft thbot">Unterstützte Eingabeformate</th>
-<th valign="bottom" align="left" id="d25459e258" class="stentry thleft thbot">Unterstützte Ausgabeformate</th>
-<th valign="bottom" align="left" id="d25459e260" class="stentry thleft thbot">Einschränkungen und Anforderungen</th>
-</tr>
-<tr class="strow"><td valign="top" headers="d25459e252" class="stentry"><p class="p wrapper">Typsystemverwaltung</p></td>
-<td valign="top" headers="d25459e254" class="stentry"><p class="p wrapper">Ein Typsystem erstellen oder ein vorhandenes Typsystem hochladen und ändern.</p><p class="p">Definieren Sie Entitätstypen
+<table summary="Diese Tabelle fasst die Eingaben, Ausgaben und die Beschränkungen für alle Modelltypen zusammen.">
+  <caption>Tabelle 1. Alle Modelltypen</caption>
+  <tr>
+    <th style="vertical-align:bottom; text-align:left" id="d25459e252">
+      Task
+    </th>
+    <th style="vertical-align:bottom; text-align:left" id="d25459e254">
+      Typische Verwendung
+    </th>
+    <th style="vertical-align:bottom; text-align:left" id="d25459e256">
+      Unterstützte Eingabeformate
+    </th>
+    <th style="vertical-align:bottom; text-align:left" id="d25459e258">
+      Unterstützte Ausgabeformate
+    </th>
+    <th style="vertical-align:bottom; text-align:left" id="d25459e260">
+      Einschränkungen und Anforderungen
+    </th>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d25459e252">
+      <p>Typsystemverwaltung</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e254">
+      <p>Ein Typsystem erstellen oder ein vorhandenes Typsystem hochladen und ändern.</p>
+      <p>Definieren Sie Entitätstypen
 und Beziehungstypen für Ihr Fachgebiet.</p>
-<p class="p">Es wird keine Darstellung des Typsystems
+      <p>Es wird keine Darstellung des Typsystems
 angezeigt.</p>
-</td>
-<td valign="top" headers="d25459e256" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">JSON-Datei, die Sie aus einem
-Watson Knowledge Studio-Arbeitsbereich heruntergeladen haben</p></li>
-<li class="li"><p class="p wrapper">ZIP-Datei, die Sie aus dem Tool für Annotatorbenutzer (Human Annotation Tool, HAT) heruntergeladen haben</p></li>
-</ul>
-</td>
-<td valign="top" headers="d25459e258" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">JSON</p></li>
-</ul>
-</td>
-<td valign="top" headers="d25459e260" class="stentry"><p class="p wrapper">Um eine unübersichtliche grafische Darstellung zu vermeiden, nicht mehr
-als 50 Entitätstypen und 50 Beziehungstypen definieren.</p><p class="p">Begrenzte Dateigröße zum Hochladen eines Typsystems: 20 MB</p>
-</td>
-</tr>
-<tr class="strow"><td valign="top" headers="d25459e252" class="stentry"><p class="p wrapper">Wörterverzeichnisverwaltung</p></td>
-<td valign="top" headers="d25459e254" class="stentry"><p class="p wrapper">Eine CSV-Wörterverzeichnisdatei im Lesezugriffsmodus hochladen oder eine ZIP-Datei mit Wörterverzeichnissen, die
-Sie aus einem anderen Arbeitsbereich heruntergeladen haben.</p><p class="p">Neues Wörterverzeichnis erstellen und anschließend eine CSV-Datei mit
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e256">
+      <ul>
+        <li>
+          <p>JSON-Datei, die Sie aus einem {{site.data.keyword.knowledgestudioshort}}-Arbeitsbereich heruntergeladen haben</p>
+        </li>
+        <li>
+          <p>ZIP-Datei, die Sie aus dem Tool für Annotatorbenutzer (Human Annotation Tool, HAT) heruntergeladen haben</p>
+        </li>
+      </ul>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e258">
+      <ul>
+        <li>
+          <p>JSON</p>
+        </li>
+      </ul>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e260">
+      <p>Um eine unübersichtliche grafische Darstellung zu vermeiden, nicht mehr
+als 50 Entitätstypen und 50 Beziehungstypen definieren.</p>
+      <p>Begrenzte Dateigröße zum Hochladen eines Typsystems: 20 MB</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d25459e252">
+      <p>Wörterverzeichnisverwaltung</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e254">
+      <p>Eine CSV-Wörterverzeichnisdatei im Lesezugriffsmodus hochladen oder eine ZIP-Datei mit Wörterverzeichnissen, die
+Sie aus einem anderen Arbeitsbereich heruntergeladen haben.</p>
+      <p>Neues Wörterverzeichnis erstellen und anschließend eine CSV-Datei mit
 Begriffseinträgen hochladen oder Begriffseinträge in der Datei hinzufügen.</p>
-</td>
-<td valign="top" headers="d25459e256" class="stentry"><p class="p wrapper">Wörterverzeichnisdatei:</p><ul class="ul bullets"><li class="li"><p class="p wrapper">CSV-Datei im UTF-8-Format</p></li>
-<li class="li"><p class="p wrapper">ZIP-Datei mit Wörterverzeichnissen, die aus einem anderen Arbeitsbereich heruntergeladen wurde</p></li>
-</ul><p class="p wrapper">
-Datei mit Begriffseinträgen:</p><ul class="ul bullets"><li class="li"><p class="p wrapper">CSV-Datei im UTF-8-Format</p></li>
-</ul>
-</td>
-<td valign="top" headers="d25459e258" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">CSV-Datei im UTF-8-Format</p></li>
-<li class="li"><p class="p wrapper">ZIP-Datei mit Wörterverzeichnissen für die Verwendung in einem anderen Arbeitsbereich</p></li>
-</ul>
-</td>
-<td valign="top" headers="d25459e260" class="stentry"><p class="p wrapper">Beschränkungen der Dateigröße</p><ul class="ul bullets"><li class="li"><p class="p wrapper">1 MB pro CSV-Datei mit Begriffseinträgen</p></li>
-<li class="li"><p class="p wrapper">16 MB pro schreibgeschützte CSV-Wörterverzeichnisdatei</p></li>
-<li class="li"><p class="p wrapper">15.000 Einträge pro Wörterverzeichnis, außer bei einem schreibgeschützten Wörterverzeichnis</p></li>
-<li class="li"><p class="p wrapper">64 Wörterverzeichnisse pro Arbeitsbereich</p></li>
-</ul>
-</td>
-</tr>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e256">
+      <p>Wörterverzeichnisdatei:</p>
+      <ul>
+        <li>
+          <p>CSV-Datei im UTF-8-Format</p>
+        </li>
+        <li>
+          <p>ZIP-Datei mit Wörterverzeichnissen, die aus einem anderen Arbeitsbereich heruntergeladen wurde</p>
+        </li>
+      </ul>
+      <p>Datei mit Begriffseinträgen:</p>
+      <ul>
+        <li>
+          <p>CSV-Datei im UTF-8-Format</p>
+        </li>
+      </ul>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e258">
+      <ul>
+        <li>
+          <p>CSV-Datei im UTF-8-Format</p>
+        </li>
+        <li>
+          <p>ZIP-Datei mit Wörterverzeichnissen für die Verwendung in einem anderen Arbeitsbereich</p>
+        </li>
+      </ul>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e260">
+      <p>Beschränkungen der Dateigröße</p>
+      <ul>
+        <li>
+          <p>1 MB pro CSV-Datei mit Begriffseinträgen</p>
+        </li>
+        <li>
+          <p>16 MB pro schreibgeschützte CSV-Wörterverzeichnisdatei</p>
+        </li>
+        <li>
+          <p>15.000 Einträge pro Wörterverzeichnis, außer bei einem schreibgeschützten Wörterverzeichnis</p>
+        </li>
+        <li>
+          <p>64 Wörterverzeichnisse pro Arbeitsbereich</p>
+        </li>
+      </ul>
+    </td>
+  </tr>
 </table>
 
  {: #wks_formats__datasimpletable_xxj_qr5_2y}
 
 ### Modell für maschinelles Lernen
 
-<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d25459e331" class="stentry thleft thbot">Task</th>
-<th valign="bottom" align="left" id="d25459e333" class="stentry thleft thbot">Typische Verwendung</th>
-<th valign="bottom" align="left" id="d25459e335" class="stentry thleft thbot">Unterstützte Eingabeformate</th>
-<th valign="bottom" align="left" id="d25459e337" class="stentry thleft thbot">Unterstützte Ausgabeformate</th>
-<th valign="bottom" align="left" id="d25459e339" class="stentry thleft thbot">Einschränkungen und Anforderungen</th>
-</tr>
-<tr class="strow"><td valign="top" headers="d25459e331" class="stentry"><p class="p wrapper">Dokumentverwaltung </p></td>
-<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Kleine repräsentative Teilgruppe der Dokumente hochladen</p><p class="p">Dokumente mit Annotationen hochladen,
+<table summary="Diese Tabelle fasst die Eingaben, Ausgaben und die Beschränkungen für das Modell für maschinelles Lernen zusammen.">
+  <caption>Tabelle 2. Modell für maschinelles Lernen</caption>
+  <tr>
+    <th style="vertical-align:botton; text-align:left" id="d25459e331">Task</th>
+    <th style="vertical-align:botton; text-align:left" id="d25459e333">Typische Verwendung</th>
+    <th style="vertical-align:botton; text-align:left" id="d25459e335">Unterstützte Eingabeformate</th>
+    <th style="vertical-align:botton; text-align:left" id="d25459e337">Unterstützte Ausgabeformate</th>
+    <th style="vertical-align:botton; text-align:left" id="d25459e339">Einschränkungen und Anforderungen</th>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d25459e331">
+      <p>Dokumentverwaltung </p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e333">
+      <p>Kleine repräsentative Teilgruppe der Dokumente hochladen</p>
+      <p>Dokumente mit Annotationen hochladen,
 die von einem Annotatorbenutzer hinzugefügt wurden, von einem Modell für maschinelles Lernen oder von einer UIMA-Analyseengine</p>
-<p class="p">Es ist nicht möglich, den gesamten Korpus aus
-IBM Watson Explorer einzupflegen, hochwertige Dokumente
-für die Annotation zu berechnen. </p>
-</td>
-<td valign="top" headers="d25459e335" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">CSV-Datei im UTF-8-Format</p></li>
-<li class="li"><p class="p wrapper">DOCXML-Datei im UTF-8-Format</p></li>
-<li class="li"><p class="p wrapper">Text im UTF-8-Format</p></li>
-<li class="li"><p class="p wrapper">ZIP-Datei mit Dokumenten, die aus einem anderen Korpus heruntergeladen wurden</p></li>
-<li class="li"><p class="p wrapper">ZIP-Datei mit Dokumenten im UIMA CAS XMI-Format</p></li>
-</ul>
-</td>
-<td valign="top" headers="d25459e337" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">ZIP-Archivdatei mit Dokumenten</p></li>
-</ul>
-</td>
-<td valign="top" headers="d25459e339" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">40.000 Zeichen pro Dokument</p></li>
-<li class="li"><p class="p wrapper">10.000 Dokumente pro Arbeitsbereich</p></li>
-<li class="li"><p class="p wrapper">1.000 Dokumentgruppen (einschließlich Annotationsgruppen) pro Arbeitsbereich</p></li>
-</ul>
-</td>
-</tr>
-<tr class="strow"><td valign="top" headers="d25459e331" class="stentry"><p class="p wrapper">Vorannotation</p></td>
-<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Mit einem Wörterverzeichnis oder
-dem Vorannotator von {{site.data.keyword.nlushort}} einen
-Ausgangspunkt für Annotatorbenutzer bereitstellen.</p><p class="p">Ein Korpus aus
-IBM Watson Discovery Advisor
-oder
-IBM Watson Explorer kann nicht erneut
-annotiert werden.</p>
-</td>
-<td valign="top" headers="d25459e335" class="stentry"><p class="p wrapper">Unformatierte Dokumente. </p><p class="p wrapper"><b>Hinweis:</b> Beim
+      <p>Es ist nicht möglich, den gesamten Korpus aus {{site.data.keyword.ibmwatson_notm}} Explorer einzupflegen, hochwertige Dokumente für die Annotation zu berechnen. </p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e335">
+      <ul>
+        <li>
+          <p>CSV-Datei im UTF-8-Format</p>
+        </li>
+        <li>
+          <p>Text im UTF-8-Format</p>
+        </li>
+        <li>
+          <p>ZIP-Datei mit Dokumenten, die aus einem anderen Korpus heruntergeladen wurden</p>
+        </li>
+        <li>
+          <p>ZIP-Datei mit Dokumenten im UIMA CAS XMI-Format</p>
+        </li>
+      </ul>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e337">
+      <ul>
+        <li>
+          <p>ZIP-Archivdatei mit Dokumenten</p>
+        </li>
+      </ul>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e339">
+      <ul>
+        <li>
+          <p>40.000 Zeichen pro Dokument</p>
+        </li>
+        <li>
+          <p>10.000 Dokumente pro Arbeitsbereich</p>
+        </li>
+        <li>
+          <p>1.000 Dokumentgruppen (einschließlich Annotationsgruppen) pro Arbeitsbereich</p>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d25459e331">
+      <p>Vorannotation</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e333">
+       <p>Mit einem Wörterverzeichnis oder
+dem Vorannotator von {{site.data.keyword.nlufull}} einen
+Ausgangspunkt für Annotatorbenutzer bereitstellen.</p>
+       <p>Ein Korpus aus {{site.data.keyword.ibmwatson_notm}} Explorer kann nicht erneut annotiert werden.</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e335">
+      <p>Unformatierte Dokumente.</p>
+      <p><b>Hinweis:</b> Beim
 Vorannotieren von Dokumenten, die bereits  von einem Annotatorbenutzer annotiert wurden, geht das Arbeitsergebnis
 des Annotatorbenutzers verloren.</p>
-</td>
-<td valign="top" headers="d25459e337" class="stentry"><p class="p wrapper">Teilweise annotierte Dokumente</p></td>
-<td valign="top" headers="d25459e339" class="stentry"><p class="p wrapper">Keine</p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d25459e331" class="stentry"><p class="p wrapper">Dokumentannotation</p></td>
-<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Arbeit der Annotatorbenutzer verwalten</p><p class="p">Durch Annotieren von Entitäten, Beziehungen und Koreferenzketten
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e337">
+      <p>Teilweise annotierte Dokumente</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e339">
+      <p>Keine</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d25459e331">
+      <p>Dokumentannotation</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e333">
+      <p>Arbeit der Annotatorbenutzer verwalten</p><p>Durch Annotieren von Entitäten, Beziehungen und Koreferenzketten
 die Ground Truth erstellen</p>
-</td>
-<td valign="top" headers="d25459e335" class="stentry"><p class="p wrapper">Annotationstask</p></td>
-<td valign="top" headers="d25459e337" class="stentry"><p class="p wrapper">Ground Truth</p></td>
-<td valign="top" headers="d25459e339" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">256 aktive Annotationstasks pro Arbeitsbereich</p></li>
-</ul>
-</td>
-</tr>
-<tr class="strow"><td valign="top" headers="d25459e331" class="stentry"><p class="p wrapper">Training und Optimierung</p></td>
-<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Ein überwachtes Modell für maschinelles Lernen trainieren,
-um fachspezifische Informationen aus unstrukturiertem Text zu extrahieren.</p><p class="p">Ein überwachtes Modell für maschinelles Lernen auswerten und verbessern.</p>
-<p class="p">Es kann kein teilweise oder gar nicht überwachtes Modell für maschinelles Lernen
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e335">
+      <p>Annotationstask</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e337">
+      <p>Ground Truth</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e339">
+      <ul>
+        <li>
+          <p>256 aktive Annotationstasks pro Arbeitsbereich</p>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d25459e331">
+      <p>Training und Optimierung</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e333">
+      <p>Ein überwachtes Modell für maschinelles Lernen trainieren,
+um fachspezifische Informationen aus unstrukturiertem Text zu extrahieren.</p><p>Ein überwachtes Modell für maschinelles Lernen auswerten und verbessern.</p>
+      <p>Es kann kein teilweise oder gar nicht überwachtes Modell für maschinelles Lernen
 erstellt werden.</p>
-<p class="p">Es kann keine umfangreiche Entwicklungsarbeit
+      <p>Es kann keine umfangreiche Entwicklungsarbeit
 für Funktionen durchgeführt werden.</p>
-</td>
-<td valign="top" headers="d25459e335" class="stentry"><p class="p wrapper">Nicht zutreffend</p></td>
-<td valign="top" headers="d25459e337" class="stentry"><p class="p wrapper">Modell für maschinelles Lernen</p></td>
-<td valign="top" headers="d25459e339" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">1 Modell für maschinelles Lernen pro Arbeitsbereich</p></li>
-<li class="li"><p class="p wrapper">10 Modellversionen pro Arbeitsbereich</p></li>
-<li class="li"><p class="p wrapper">Maximale Anzahl der Arbeitsbereiche wird durch den Abonnementplan festgelegt</p></li>
-<li class="li"><p class="p wrapper">Maximale Anzahl der Trainingsaktionen, die pro Monat ausgeführt werden können, wird durch den Abonnementplan festgelegt</p></li>
-</ul>
-</td>
-</tr>
-<tr class="strow"><td valign="top" headers="d25459e331" class="stentry"><p class="p wrapper">Veröffentlichung</p></td>
-<td valign="top" headers="d25459e333" class="stentry"><p class="p wrapper">Modell für maschinelles Lernen, das zum Durchführen der Textextraktion in anderen
-
-Watson-Anwendungen
-verwendet wird. </p></td>
-<td valign="top" headers="d25459e335" class="stentry"><p class="p wrapper">Nicht zutreffend</p></td>
-<td valign="top" headers="d25459e337" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">Modell-ID (für die Verwendung in
-AlchemyLanguage-
-oder
-Watson Discovery-
-Services) </p></li>
-<li class="li"><p class="p wrapper">ZIP-Datei (für die Verwendung in
-IBM Watson Explorer
-)</p></li>
-</ul>
-</td>
-<td valign="top" headers="d25459e339" class="stentry">
-  <p class="p">Für die Bereitstellung in AlchemyLanguage
-    ist eine gültige Schlüssel-ID des AlchemyLanguage
-    Advanced-Plans erforderlich.</p>
-  <p class="p">Für die Bereitstellung im Watson Discovery-Service
-    müssen der {{site.data.keyword.cloud_notm}}-Bereich und
-    die Instanznamen bekannt sein.</p>
-</td>
-</tr>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e335">
+      <p>Nicht zutreffend</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e337">
+      <p>Modell für maschinelles Lernen</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e339">
+      <ul>
+        <li>
+          <p>1 Modell für maschinelles Lernen pro Arbeitsbereich</p>
+        </li>
+        <li>
+          <p>10 Modellversionen pro Arbeitsbereich</p>
+        </li>
+        <li>
+          <p>Maximale Anzahl der Arbeitsbereiche wird durch den Abonnementplan festgelegt</p>
+        </li>
+        <li>
+          <p>Maximale Anzahl der Trainingsaktionen, die pro Monat ausgeführt werden können, wird durch den Abonnementplan festgelegt</p>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d25459e331">
+      <p>Veröffentlichung</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e333">
+      <p>Veröffentlichen Sie ein Modell für maschinelles Lernen, das zum Durchführen der Textextraktion in anderen {{site.data.keyword.watson}}-Anwendungen verwendet werden soll.</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e335">
+      <p>Nicht zutreffend</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e337">
+      <ul>
+        <li>
+          <p>Modell-ID (zur Verwendung in {{site.data.keyword.nlufull}} oder {{site.data.keyword.discoveryfull}})</p>
+        </li>
+        <li>
+          <p>ZIP-Datei (zur Verwendung in {{site.data.keyword.ibmwatson_notm}} Explorer)</p>
+        </li>
+      </ul>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e339">
+      <p>Für die Bereitstellung in den {{site.data.keyword.watson}}-Services müssen der {{site.data.keyword.cloud_notm}}-Servicebereich und die Instanznamen bekannt sein.</p>
+    </td>
+  </tr>
 </table>
 
 ### Regelbasiertes Modell
 
-<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d25459e509" class="stentry thleft thbot">Task</th>
-<th valign="bottom" align="left" id="d25459e511" class="stentry thleft thbot">Typische Verwendung</th>
-<th valign="bottom" align="left" id="d25459e513" class="stentry thleft thbot">Unterstützte Eingabeformate</th>
-<th valign="bottom" align="left" id="d25459e515" class="stentry thleft thbot">Unterstützte Ausgabeformate</th>
-<th valign="bottom" align="left" id="d25459e517" class="stentry thleft thbot">Einschränkungen und Anforderungen</th>
-</tr>
-<tr class="strow"><td valign="top" headers="d25459e509" class="stentry"><p class="p wrapper">Regeleditor</p></td>
-<td valign="top" headers="d25459e511" class="stentry"><p class="p">Dokumente im Regeleditor erstellen oder in den Regeleditor hochladen, aus denen
-Klassen, reguläre Ausdrücke und Regeln definiert werden sollen.</p>
-</td>
-<td valign="top" headers="d25459e513" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">Klartext (im Editor hinzugefügt)</p></li>
-<li class="li"><p class="p wrapper">CSV-Datei im UTF-8-Format</p></li>
-<li class="li"><p class="p wrapper">Aus allen Dokumentgruppen kopiert</p></li>
-</ul>
-</td>
-<td valign="top" headers="d25459e515" class="stentry"><p class="p wrapper">Keine</p></td>
-<td valign="top" headers="d25459e517" class="stentry"><ul class="ul bullets">
-<li class="li"><p class="p wrapper">1 regelbasiertes Modell pro Arbeitsbereich</p></li>
-<li class="li"><p class="p wrapper">5.000 Zeichen pro Dokument</p></li>
-<li class="li"><p class="p wrapper">100 Dokumente pro Arbeitsbereich</p></li>
-<li class="li"><p class="p wrapper">Maximale Größe des Dokumenttitels: 256 Zeichen</p></li>
-<li class="li"><p class="p wrapper">200 Regeln pro Arbeitsbereich</p></li>
-<li class="li"><p class="p wrapper">400 Klassen pro Arbeitsbereich</p></li>
-<li class="li"><p class="p wrapper">100 Gruppen mit regulären Ausdrücken pro Arbeitsbereich</p></li>
-<li class="li"><p class="p wrapper">100 Einträge für reguläre Ausdrücke pro Gruppe mit regulären Ausdrücken </p></li>
-<li class="li"><p class="p wrapper">1.000 Zeichen pro Eintrag für regulären Ausdruck</p></li>
-<li class="li"><p class="p wrapper">5 regelbasierte Modellversionen pro Arbeitsbereich</p></li>
-</ul>
-</td>
-</tr>
-<tr class="strow"><td valign="top" headers="d25459e509" class="stentry"><p class="p wrapper">Veröffentlichung</p></td>
-<td valign="top" headers="d25459e511" class="stentry"><p class="p wrapper">Regelbasiertes Modell veröffentlichen, das für die
-Mustererkennung in anderen
-Watson-Anwendungen
-verwendet werden soll</p></td>
-<td valign="top" headers="d25459e513" class="stentry"><p class="p wrapper">Nicht zutreffend</p></td>
-<td valign="top" headers="d25459e515" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">Modell-ID (für die Verwendung in
-AlchemyLanguage-
-oder
-Watson Discovery-
-Services) </p></li>
-</ul>
-</td>
-<td valign="top" headers="d25459e517" class="stentry">
-  <p class="p">Für die Bereitstellung in AlchemyLanguage
-    ist eine gültige Schlüssel-ID des AlchemyLanguage
-    Advanced-Plans erforderlich.</p>
-  <p class="p">Für die Bereitstellung im Watson Discovery-Service
-    müssen der {{site.data.keyword.cloud_notm}}-Bereich und
-    die Instanznamen bekannt sein.</p>
-</td>
-</tr>
+<table summary="Diese Tabelle fasst die Eingaben, Ausgaben und die Beschränkungen für das regelbasierte Modell zusammen.">
+  <caption>Tabelle 3. Regelbasiertes Modell</caption>
+  <tr>
+    <th style="vertical-align:bottom; text-align:left" id="d25459e509">
+      Task
+    </th>
+    <th style="vertical-align:bottom; text-align:left" id="d25459e511">
+      Typische Verwendung
+    </th>
+    <th style="vertical-align:bottom; text-align:left" id="d25459e513">
+      Unterstützte Eingabeformate
+    </th>
+    <th style="vertical-align:bottom; text-align:left" id="d25459e515">
+      Unterstützte Ausgabeformate
+    </th>
+    <th style="vertical-align:bottom; text-align:left" id="d25459e517">
+      Einschränkungen und Anforderungen
+    </th>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d25459e509">
+      <p>Regeleditor</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e511">
+      <p>Dokumente im Regeleditor erstellen oder in den Regeleditor hochladen, aus denen Klassen, reguläre Ausdrücke und Regeln definiert werden sollen.</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e513">
+      <ul>
+        <li>
+          <p>Klartext (im Editor hinzugefügt)</p>
+        </li>
+        <li>
+          <p>CSV-Datei im UTF-8-Format</p>
+        </li>
+        <li>
+          <p>Aus allen Dokumentgruppen kopiert</p>
+        </li>
+      </ul>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e515">
+      <p>Keine</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e517">
+      <ul>
+        <li>
+          <p>1 regelbasiertes Modell pro Arbeitsbereich</p>
+        </li>
+        <li>
+          <p>5.000 Zeichen pro Dokument</p>
+        </li>
+        <li>
+          <p>100 Dokumente pro Arbeitsbereich</p>
+        </li>
+        <li>
+          <p>Maximale Größe des Dokumenttitels: 256 Zeichen</p>
+        </li>
+        <li>
+          <p>200 Regeln pro Arbeitsbereich</p>
+        </li>
+        <li>
+          <p>400 Klassen pro Arbeitsbereich</p>
+        </li>
+        <li>
+          <p>100 Gruppen mit regulären Ausdrücken pro Arbeitsbereich</p>
+        </li>
+        <li>
+          <p>100 Einträge für reguläre Ausdrücke pro Gruppe mit regulären Ausdrücken</p>
+        </li>
+        <li>
+          <p>1.000 Zeichen pro Eintrag für regulären Ausdruck</p>
+        </li>
+        <li>
+          <p>5 regelbasierte Modellversionen pro Arbeitsbereich</p>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:left" headers="d25459e509">
+      <p>Veröffentlichung</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e511">
+      <p>Veröffentlichen Sie ein regelbasiertes Modell, das für die Mustererkennung in anderen {{site.data.keyword.watson}}-Anwendungen verwendet werden soll. </p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e513">
+      <p>Nicht zutreffend</p>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e515">
+      <ul>
+        <li>
+          <p>Modell-ID (zur Verwendung in {{site.data.keyword.nlufull}} oder {{site.data.keyword.discoveryfull}})</p>
+        </li>
+      </ul>
+    </td>
+    <td style="vertical-align:top; text-align:left" headers="d25459e517">
+      <p>Für die Bereitstellung in den {{site.data.keyword.watson}}-Services müssen der {{site.data.keyword.cloud_notm}}-Servicebereich und die Instanznamen bekannt sein.</p>
+    </td>
+  </tr>
 </table>

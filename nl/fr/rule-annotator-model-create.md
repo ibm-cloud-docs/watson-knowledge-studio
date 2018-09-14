@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-26"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -27,12 +27,14 @@ Après avoir défini des règles, vous pouvez créer un modèle basé sur celles
 {: shortdesc}
 
 ## Procédure
+{: #wks_rule_train_procedure}
 
 Pour créer un à base de règles, effectuez les étapes suivantes :
 
 1. Connectez-vous en tant qu'administrateur ou chef de projet {{site.data.keyword.knowledgestudioshort}} et sélectionnez votre espace de travail.
-1. Sélectionnez l'onglet **Gestion des modèles** > **Versions** > **A base de règles**.
-1. Associez les types d'entités du système de types à une ou plusieurs des classes que vous avez utilisées pour définir les règles.
+1. Sélectionnez l'onglet **Modèle à base de règles** > **Versions** > **Modèle à base de règles**.
+2. Cliquez sur **Mapper les types d'entité et les classes**.
+3. Associez les types d'entités du système de types à une ou plusieurs des classes que vous avez utilisées pour définir les règles.
 
   Une fois les associations créées entre les types d'entités et les classes, vous pouvez [déployer le modèle à base de règles](/docs/services/watson-knowledge-studio/rule-annotator-model-use.html) ou l'utiliser pour [pré-annoter des documents](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannotrule) dans le processus de création d'un modèle d'apprentissage automatique.
 

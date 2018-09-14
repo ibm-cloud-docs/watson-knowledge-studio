@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -51,31 +51,38 @@ Die Scores für die Übereinstimmung der Annotatoren zeigen, wie unterschiedlich
 
 Damit Bereiche, die untersucht werden sollten, leichter zu erkennen sind, werden Scores, die unter dem von Ihnen angegebenen Schwellenwert für die Übereinstimmung der Annotatoren liegen, rot hervorgehoben. In der Anfangsphase Ihres Annotationsprojekts fallen die Scores für Beziehungen häufig schlechter aus als die Scores für Erwähnungen. Dies ist darauf zurückzuführen, dass zutreffende Beziehungsannotationen erst möglich sind, nachdem die der Beziehung zugrunde liegenden Erwähnungen in Übereinstimmung gebracht wurden.
 
-Der Score in der Spalte **Alle** ist ein *Fleiss' Kappa-Score*. Dieser Score gibt an, wie konsistent die gleiche Annotation von mehreren Annotatorbenutzern in allen Dokumenten mit Überschneidungen innerhalb der Task angewendet wurde. Der Wert kann bis 1 ansteigen und auf einen negativen Wert absinken. Er kann als Indikator für Schwachstellen in den Annotationsrichtlinien oder bei bestimmten Annotatorbenutzern dienen. Die folgenden Richtlinien (*Landis und Koch, 1977*) können als Ausgangspunkt zum Beurteilen der Gesamtleistung dienen.
+Der Score in der Spalte **Alle** ist ein *Fleiss' Kappa-Score*. Dieser Score gibt an, wie konsistent die gleiche Annotation von mehreren Annotatorbenutzern in allen Dokumenten mit Überschneidungen innerhalb der Task angewendet wurde. Der Wert kann bis 1 ansteigen und auf einen negativen Wert absinken. Er kann als Indikator für Schwachstellen in den Annotationsrichtlinien oder bei bestimmten Annotatorbenutzern dienen. Die folgenden Richtlinien (*Landis und Koch, 1977*) können als Ausgangspunkt zum Beurteilen der Gesamtleistung dienen. 
 
-<table cellpadding="4" cellspacing="0" summary="" id="wks_haiaa__table_p5s_dx1_f5" class="table" rules="rows" frame="void" border="0"><thead class="thead" align="left"><tr class="row"><th class="entry ncol thleft" align="left" valign="top" id="d12741e148">Score</th>
-<th class="entry ncol thleft" align="left" valign="top" id="d12741e150">Grad der Übereinstimmung</th>
-</tr>
-</thead>
-<tbody class="tbody"><tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">&lt; 0</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Schlecht</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">0,01 - 0,20</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Gering</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">0,21 - 0,40</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Akzeptabel</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">0,41 - 0,60</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Mittel</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">0,61 - 0,80</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Erheblich</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">0,81 - 1,0</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Optimal</p></td>
-</tr>
-</tbody>
+<table style="width:60%" summary="Diese Tabelle enthält allgemeine Richtlinien für die Übereinstimmung der Annotatoren, um die Gesamtleistung zu beurteilen.">
+  <caption>Tabelle 1. Richtlinien für die Übereinstimmung der Annotatoren</caption>
+  <tr>
+    <th style="vertical-align:bottom; text-align:center" id="d12741e148">Score</th>
+    <th style="vertical-align:bottom; text-align:center" id="d12741e150">Grad der Übereinstimmung</th>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">&lt; 0</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Schlecht</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">0,01 - 0,20</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Gering</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">0,21 - 0,40</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Akzeptabel</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">0,41 - 0,60</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Mittel</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">0,61 - 0,80</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Erheblich</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">0,81 - 1,0</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Optimal</td>
+  </tr>
 </table>
 
 Der Score in den übrigen Spalten ist eine *F1-Kennzahl*. Sie gibt den Konsistenzgrad der Annotationen von zwei Annotatorbenutzern an. Der Wert kann im Bereich von 0 bis 1 liegen, wobei der Score-Wert 1 eine absolute Übereinstimmung bezeichnet. Ab welchem Wert ein akzeptabler Grad der Übereinstimmung erreicht wird, hängt von den jeweiligen Daten des Fachgebiets und vom Typsystem ab. Als Beispiel werden hier die F1-Schwellenwerte angeführt, die Projektleiter als Mindestwerte für Projekte ansetzen, die auf dem Typsystem KLUE basieren:
@@ -94,17 +101,19 @@ Ein Typsystem mit zahlreichen Entitäts- und Beziehungstypen bietet im Allgemein
 Um festzulegen, welche Dokumente in die Ground Truth hochgestuft werden sollten, müssen Sie die Scores für die Übereinstimmung der Annotatoren überprüfen. Dokumente mit niedrigen Sores kommen in Betracht, abgelehnt und zur Optimierung an die Annotatorbenutzer zurückgegeben zu werden.
 
 ### Informationen zu diesem Vorgang
+{: #wks_haaccuracy_about}
 
-Beim Überprüfen der Übereinstimmung zwischen Annotatoren untersuchen Sie Dokumente, die von mehr als einem Annotatorbenutzer annotiert wurden. Wenn ein Dokument nicht von mehreren Annotationsgruppen und Annotatorbenutzern gemeinsam genutzt wird, kann kein Wert für die Übereinstimmung der Annotatoren berechnet werden. Stellen Sie beim Hinzufügen von Annotationsgruppen für eine Task sicher, dass die Gruppen, die verglichen werden sollen, dieselben Dokumente mit Überschneidungen enthalten. Um die Dokumente anzuzeigen, die in einer Annotationsgruppe enthalten sind, öffnen Sie die Seite **Assets & Tools** > **Dokumente**, klicken Sie auf die Registerkarte **Annotationsgruppen** und klicken Sie anschließend auf die Namen der Gruppen.
+Beim Überprüfen der Übereinstimmung zwischen Annotatoren untersuchen Sie Dokumente, die von mehr als einem Annotatorbenutzer annotiert wurden. Wenn ein Dokument nicht von mehreren Annotationsgruppen und Annotatorbenutzern gemeinsam genutzt wird, kann kein Wert für die Übereinstimmung der Annotatoren berechnet werden. Stellen Sie beim Hinzufügen von Annotationsgruppen für eine Task sicher, dass die Gruppen, die verglichen werden sollen, dieselben Dokumente mit Überschneidungen enthalten. Um die Dokumente anzuzeigen, die in einer Annotationsgruppe enthalten sind, öffnen Sie die Seite **Assets** > **Dokumente** klicken Sie auf die Registerkarte **Annotationsgruppen** und klicken Sie anschließend auf die Namen der Gruppen.
 
 Es kann vorkommen, dass keine Dokumente mit Überschneidungen gefunden werden. Dies kann zum Beispiel der Fall sein, wenn Sie in zwei Durchgängen Annotationsgruppen erstellen und diese zur selben Task hinzufügen. Obwohl die Annotationsgruppen fast zur gleichen Zeit erstellt wurden, enthalten sie keine gleichen Dokumente. Ein weiteres Beispiel: Wenn Sie Annotationsgruppen erstellen, die Dokumente mit Überschneidungen enthalten, aber für jede Annotationsgruppe eine eigene Task erstellen, anstatt alle Annotationsgruppen zu einer einzigen Tasks hinzuzufügen, werden keine Dokumente mit Überschneidungen gefunden und die Übereinstimmung der Annotatoren kann nicht berechnet werden.
 
 ### Vorgehensweise
+{: #wks_haaccuracy_procedure}
 
 So beurteilen Sie die Übereinstimmung der Annotationen von Annotatorbenutzern:
 
 1. Melden Sie sich als {{site.data.keyword.knowledgestudioshort}}-Administrator oder -Projektleiter an und wählen Sie Ihren Arbeitsbereich aus.
-1. Wählen Sie die Registerkarte **Assets & Tools** > **Dokumente** > **Tasks** aus und öffnen Sie die Task, die Sie auswerten möchten.
+1. Wählen Sie die Seite **Modell für maschinelles Lernen** > **Annotationstasks** aus und öffnen Sie die Task, die Sie auswerten möchten.
 1. Klicken Sie auf **Übereinstimmung der Annotatoren berechnen**. In der Standardansicht werden Übereinstimmungswerte für die annotierten Erwähnungen von je zwei Annotatorbenutzern angezeigt. In der oberen Zeile wird die Gesamtkonsistenz zwischen jeweils zwei Annotatoren angegeben. Die Tabelle darunter gibt den Konsistenzgrad der Annotationen für bestimmte Erwähnungen im Text an, die von den einzelnen Annotatorpaaren eingefügt wurden.
 1. Wenn Sie untersuchen möchten, wie konsistent Beziehungen und Koreferenzen von jeweils zwei Annotatorbenutzern annotiert wurden, wählen Sie im ersten Menü **Beziehung** oder **Koreferenz** aus.
 1. Wenn Sie untersuchen möchten, wie konsistent Entitäten, Beziehungen oder Koreferenzen in bestimmten Dokumenten mit Überschneidungen von je zwei Annotatorbenutzern annotiert wurden, wählen Sie im zweiten Menü **Dokument** aus und wählen Sie anschließend das Annotatorpaar aus, das Sie bewerten möchten.
@@ -151,10 +160,12 @@ Beispiele für abweichende Annotierungen durch Annotatorbenutzer:
 In der Beurteilungsphase können Sie Annotationskonflikte in Dokumenten mit Überschneidungen überprüfen, bevor die Annotationen in die Ground Truth hochgestuft werden. Sie können die Annotationen vergleichen, die von zwei Annotatorbenutzern hinzugefügt wurden. Außerdem können Sie die Annotationen von Annotatorbenutzern mit der aktuellen Ground Truth vergleichen.
 
 ### Vorbereitungen
+{: #wks_haadjudicate_prereq}
 
 Klicken Sie auf [diesen Link ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.youtube.com/watch?v=EbexfsuXxoQ&amp;feature=youtu.be){: new_window}, um ein dreiminütiges Video über das Beurteilen von Dokumenten abzuspielen.
 
 ### Informationen zu diesem Vorgang
+{: #wks_haadjudicate_about}
 
 Nachdem Annotatorbenutzer ihre Annotationstasks abgeschlossen haben, müssen sie die resultierenden Annotationsgruppen zum Überprüfen einreichen. Durch das Auswerten der Scores für die Übereinstimmung der Annotatoren können Sie erkennen, wie dasselbe Dokument von jeweils zwei Annotatoren annotiert wurde. Wenn der Score für die Übereinstimmung der Annotatoren akzeptabel ist, können Sie die Annotationsgruppe genehmigen. Wenn für ein Dokument in der Task keine Überschneidungen zwischen Annotationsgruppen bestehen, werden die Annotationen für das genehmigte Dokument in die Ground Truth hochgestuft. Falls für ein Dokument Überschneidungen zwischen Annotationsgruppen bestehen, sollten Sie das Dokument beurteilen und Konflikte zwischen den Annotationen beheben, bevor die Annotationen in die Ground Truth hochgestuft werden.
 
@@ -163,11 +174,12 @@ Beispiel: Beim Beurteilen eines Dokuments stellen Sie fest, dass ein Annotator d
 {{site.data.keyword.knowledgestudioshort}} unterstützt die gleichzeitige Beurteilung von zwei Annotationsgruppen oder die Beurteilung einer Annotationsgruppe und der aktuellen Ground Truth. Wenn ein Dokument Überschneidungen mit mehr als zwei Annotationsgruppen aufweist, führen Sie eine Beurteilung der beiden Annotationsgruppen durch, denen Sie die größte Konfidenz beimessen (z. B. weil Sie größeres Vertrauen in die Annotatorbenutzer haben), um die Ground Truth für das Dokument zu ermitteln. Beurteilen Sie anschließend die übrigen Annotationsgruppen mithilfe der Ergebnisse der vorherigen Beurteilung.
 
 ### Vorgehensweise
+{: #wks_haadjudicate_procedure}
 
 So können Sie Dokumente mit Überschneidungen anzeigen und Konflikte beheben:
 
 1. Melden Sie sich als {{site.data.keyword.knowledgestudioshort}}-Administrator oder -Projektleiter an und wählen Sie Ihren Arbeitsbereich aus.
-1. Wählen Sie die Registerkarte **Assets & Tools** > **Dokumente** > **Tasks** aus und öffnen Sie die Task, die Sie auswerten möchten.
+1. Wählen Sie die Seite **Modell für maschinelles Lernen** > **Annotationstasks** aus und öffnen Sie die Task, die Sie auswerten möchten.
 1. Vergewissern Sie sich, dass mindestens zwei Annotationsgruppen den Status **In Konflikt** aufweisen.
 1. Klicken Sie auf **Dokumente mit Überschneidungen auf Konflikte prüfen**. Die Dokumente, die Konflikte aufweisen, werden angezeigt.
 1. Wenn Sie die Konflikte in einem Dokument mit Überschneidungen ignorieren und die zugehörigen Annotationen ohne Beurteilung in die Ground Truth hochstufen möchten, klicken Sie auf **Akzeptieren**.
@@ -177,17 +189,19 @@ So können Sie Dokumente mit Überschneidungen anzeigen und Konflikte beheben:
     Im Beurteilungstool wird angezeigt, für wie viele Erwähnungen, Beziehungen und Koreferenzketten Konflikte bestehen. Konflikte zwischen Erwähnungen müssen behoben werden, bevor Sie mit dem Beheben der Konflikte zwischen Beziehungen oder zwischen Koreferenzketten fortfahren können.
 
 1. Klicken Sie auf einen Satz, der Konflikte enthält, um ihn hervorzuheben. Um sich ganz auf nicht behobene Konflikte zu konzentrieren, können Sie das Kontrollkästchen **Gelöst** abwählen und sicherstellen, dass das Kontrollkästchen **Nicht gelöst** ausgewählt ist.
-1. Klicken Sie auf einzelne Annotationen und anschließend auf **Akzeptieren** oder **Ablehnen**. Um eine Entscheidung zu widerrufen, die Sie gerade getroffen haben, drücken Sie die Tastenkombination `Strg+Z`.
+1. Klicken Sie auf einzelne Annotationen und anschließend auf **Akzeptieren** oder **Ablehnen**. Um eine Entscheidung zu widerrufen, die Sie gerade getroffen haben, drücken Sie die Tastenkombination Strg+Z.
 
     Sie können auch mehrere Annotationen auswählen und anschließend auf das entsprechende Kontrollkästchen klicken, um die ausgewählten Annotationen zu akzeptieren oder abzulehnen. Wenn Sie die Auswahl einer Annotation aufheben möchten, machen Sie Ihre Auswahlen rückgängig, indem Sie auf den Leerraum zwischen den Sätzen klicken oder die Taste **Esc** drücken.
 
-    Wenn zuvor bereits Annotationsrichtlinien mit dem Projekt verknüpft waren und Sie das Auswählen der richtigen Annotation unterstützen möchten, klicken Sie auf **Richtlinien anzeigen**. Wenn Sie über die entsprechenden Zugriffsberechtigungen für die Site verfügen, auf der die Richtlinien gehostet werden, können Sie die Richtlinien nach dem Öffnen aktualisieren (z. B. durch Hinzufügen von Erläuterungen und Beispielen).{: tip}
+    Wenn zuvor bereits Annotationsrichtlinien mit dem Projekt verknüpft waren und Sie das Auswählen der richtigen Annotation unterstützen möchten, klicken Sie auf **Richtlinien anzeigen**. Wenn Sie über die entsprechenden Zugriffsberechtigungen für die Site verfügen, auf der die Richtlinien gehostet werden, können Sie die Richtlinien nach dem Öffnen aktualisieren (z. B. durch Hinzufügen von Erläuterungen und Beispielen).
+    {: tip}
 
 1. Wenn Sie einen anderen Entitätstyp auf eine Erwähnung anwenden möchten, lehnen Sie die aktuelle Annotation ab, wählen Sie die Erwähnung (z. B. `Barack Obama`) aus und wählen Sie anschließend den richtigen Entitätstyp (z. B. `Person`) aus.
 1. Fahren Sie mit dem Akzeptieren, Ablehnen bzw. Überarbeiten von weiteren Konflikten in dem Satz fort. Klicken Sie nach dem Beheben aller Konflikte in einem Satz auf den Link **Alle Annotationen auswählen** und klicken Sie anschließend auf **Akzeptieren**.
 1. Klicken Sie auf das Pfeilsymbol, um mit dem nächsten Satz fortzufahren. Setzen Sie den Vorgang fort, bis alle Konflikte für Erwähnungen in dem Dokument behoben sind.
 
-    Um die bisherige Arbeit zu speichern oder die aktuelle Beurteilungssitzung vorübergehend zu unterbrechen, können Sie jederzeit auf **Speichern** klicken. Um alle von Ihnen vorgenommenen Änderungen zu verwerfen, klicken Sie auf **Verwerfen**. Wenn Sie die zuvor gespeicherte Beurteilungssitzung fortsetzen möchten, klicken Sie auf **Fortsetzen**, um die Beurteilung von Konflikten an der Stelle wiederaufzunehmen, an der sie zuletzt unterbrochen wurde. Wenn die vorherige Beurteilungssitzung beendet wurde, müssen Sie eine neue Beurteilungssitzung starten.{: tip}
+    Um die bisherige Arbeit zu speichern oder die aktuelle Beurteilungssitzung vorübergehend zu unterbrechen, können Sie jederzeit auf **Speichern** klicken. Um alle von Ihnen vorgenommenen Änderungen zu verwerfen, klicken Sie auf **Verwerfen**. Wenn Sie die zuvor gespeicherte Beurteilungssitzung fortsetzen möchten, klicken Sie auf **Fortsetzen**, um die Beurteilung von Konflikten an der Stelle wiederaufzunehmen, an der sie zuletzt unterbrochen wurde. Wenn die vorherige Beurteilungssitzung beendet wurde, müssen Sie eine neue Beurteilungssitzung starten.
+    {: tip}
 
 1. Wechseln Sie nach dem Beheben von Erwähnungskonflikten den Beurteilungsmodus, um Konflikte zwischen Annotationen für Beziehungen oder Koreferenzketten zu beheben.
 

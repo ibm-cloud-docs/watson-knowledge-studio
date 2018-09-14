@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-08-24"
 
 ---
 
@@ -27,6 +27,7 @@ Este tutorial ajuda a entender o processo para construir um modelo de aprendizad
 {: shortdesc}
 
 ## Aprendendo objetivos
+{: #objectives}
 
 Depois de concluir as lições neste tutorial, você saberá como executar as tarefas a seguir:
 
@@ -34,21 +35,23 @@ Depois de concluir as lições neste tutorial, você saberá como executar as ta
 - Pré-anotar documentos
 - Criar tarefas para anotadores humanos
 - Analisar a concordância entre anotadores e adjudicar conflitos em documentos anotados
-- Criar anotadores de aprendizado de máquina
+- Criar modelos de aprendizado de máquina
 
-A conclusão do tutorial deve levar aproximadamente 60 minutos. Se você explorar outros conceitos relacionados a este tutorial, ele poderá levar mais tempo para ser concluído.
+Este tutorial leva aproximadamente 60 minutos para ser concluído. Se você explorar outros conceitos relacionados a este tutorial, ele poderá levar mais tempo para ser concluído.
 
 ## Antes de Começar
+{: #prereqs}
 
-- Você está usando um navegador suportado. Para obter informações, veja [Requisitos do navegador](/docs/services/watson-knowledge-studio/system-requirements.html).
-- Você concluiu com êxito o [Tutorial: Criando uma área de trabalho](/docs/services/watson-knowledge-studio/tutorials-create-project.html).
-- Deve-se ter pelo menos um ID do usuário na função de Administrador ou de ProjectManager.
+- Você está usando um navegador suportado. Consulte  [ Requisitos do navegador ](/docs/services/watson-knowledge-studio/system-requirements.html).
+- Você concluiu com sucesso a [Introdução ao {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/tutorials-create-project.html), que abrange a criação de uma área de trabalho, a criação de um sistema de tipos e a inclusão de um dicionário.
+- Deve-se ter pelo menos um ID do usuário na função Administrador ou Gerente de projeto.
 
-    > **Nota:** se possível, use múltiplos IDs de usuário para as tarefas do modelo de aprendizado de máquina neste tutorial (um ID de usuário de Administrador ou ProjectManager e pelo menos dois IDs de usuário do HumanAnnotator). O uso de múltiplos IDs do usuário fornece a simulação mais realista de uma área de trabalho real do {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}}™ {{site.data.keyword.knowledgestudioshort}}, na qual um gerente de projeto deve coordenar e adjudicar a anotação executada por múltiplos anotadores humanos. No entanto, se você tem acesso a somente um único ID do usuário, ainda é possível simular a maioria das partes do processo.
+    > **Nota:** se possível, use múltiplos IDs de usuário para as tarefas do modelo de aprendizado de máquina neste tutorial (um ID de usuário de Administrador ou de Gerente de Projeto e, pelo menos, dois IDs de usuário de Anotador Humano). O uso de múltiplos IDs de usuário fornece a simulação mais realista de uma área de trabalho real do {{site.data.keyword.knowledgestudiofull}}, em que um gerente de projeto deve coordenar e adjudicar a anotação que é executada por múltiplos anotadores humanos. No entanto, se você tem acesso a somente um único ID do usuário, ainda é possível simular a maioria das partes do processo.
 
-    Para obter informações sobre funções de usuário, veja [Montando uma equipe](/docs/services/watson-knowledge-studio/team.html).
+    Para obter informações sobre funções de usuário, consulte [Funções de usuário no {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/roles.html).
 
 ## Resultados
+{: #results}
 
 Depois de concluir este tutorial, você terá um modelo de aprendizado de máquina customizado que pode ser usado com outros serviços do {{site.data.keyword.watson}}.
 
@@ -58,17 +61,20 @@ Depois de concluir este tutorial, você terá um modelo de aprendizado de máqui
 Nesta lição, você aprenderá como incluir documentos em uma área de trabalho no {{site.data.keyword.knowledgestudioshort}} que podem ser anotados por anotadores humanos.
 
 ### Sobre essa Tarefa
+{: #tut_lessml1_about}
 
 Para obter mais informações sobre como incluir documentos, veja [Incluindo documentos em uma área de trabalho](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_projadd).
 
 ### Procedimento
+{: #tut_lessml1_procedure}
 
-1. Faça download do arquivo <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/documents-new.csv" download>`documents-new.csv`<img src="../../icons/launch-glyph.svg" alt="Ícone de link externo" title="Ícone de link externo" class="style-scope doc-content"></a> para o seu computador. Esse arquivo contém documentos de exemplo adequados para upload.
-1. Dentro de sua área de trabalho, clique em **Documentos** na barra lateral.
+1. Faça download do arquivo <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/documents-new.csv" download>`documents-new.csv` <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo" title="Ícone de link externo" class="style-scope doc-content"></a> para o seu computador. Esse arquivo contém documentos de exemplo adequados para upload.
+1. Em sua área de trabalho, clique em  ** Ativos **  >  ** Documentos **.
 1. Na página Documentos, clique em **Fazer upload de conjuntos de documentos**.
-1. Selecione o arquivo `documentos-new.csv` de seu computador e clique em **Fazer upload**. O arquivo transferido por upload é exibido na tabela.
+1. Faça upload do arquivo `documents-new.csv` em seu computador. O arquivo transferido por upload é exibido na tabela.
 
 ### O que fazer em seguida
+{: #tut_lessml1_next}
 
 Agora é possível dividir o corpus em múltiplos conjuntos de documentos e designar os conjuntos de documentos a anotadores humanos.
 
@@ -78,38 +84,41 @@ Agora é possível dividir o corpus em múltiplos conjuntos de documentos e desi
 Nesta lição, você aprenderá como criar conjuntos de anotações no {{site.data.keyword.knowledgestudioshort}}.
 
 ### Sobre essa Tarefa
+{: #wks_tutless_ml2_about}
 
-Um conjunto de anotações é um subconjunto de documentos de um conjunto de documentos transferido por upload que você designa a um anotador humano. O anotador humano anota os documentos no conjunto de anotações. Para usar posteriormente as pontuações entre anotadores para comparar as anotações que são incluídas pelos anotadores humanos, deve-se designar pelo menos dois anotadores humanos a conjuntos de anotações diferentes. Deve-se também especificar que alguma porcentagem de documentos se sobrepõe entre os conjuntos.
+Um *conjunto de anotações* é um subconjunto de documentos de um conjunto de documentos transferido por upload que você designa a um anotador humano. O anotador humano anota os documentos no conjunto de anotações. Para usar posteriormente as pontuações entre anotadores para comparar as anotações que são incluídas pelos anotadores humanos, deve-se designar pelo menos dois anotadores humanos a conjuntos de anotações diferentes. Deve-se também especificar que alguma porcentagem de documentos se sobrepõe entre os conjuntos.
 
-> **Nota:** em uma área de trabalho real, você criaria quantos conjuntos de anotações fossem necessários, com base no número de anotadores humanos que trabalham na área de trabalho. Neste tutorial, você criará dois conjuntos de anotações; se você não tiver acesso a múltiplos IDs de usuário, será possível designar ambos os conjuntos de anotações ao mesmo usuário.
+> **Nota:** em um cenário realista, você criaria tantos conjuntos de anotações quantos fossem necessários, com base no número de anotadores humanos que estão trabalhando na área de trabalho. Neste tutorial, você criará dois conjuntos de anotações. Se você não tiver acesso a múltiplos IDs de usuário, será possível designar ambos os conjuntos de anotações ao mesmo usuário.
 
 Para obter mais informações sobre conjuntos de anotações, veja [Criando e designando conjuntos de anotações](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_projdocsets).
 
 ### Procedimento
+{: #wks_tutless_ml2_procedure}
 
-1. Dentro de sua área de trabalho, clique em **Documentos** na barra lateral.
-1. Clique em **Criar conjuntos de anotações**.
+1. Em sua área de trabalho, clique em  ** Ativos **  >  ** Documentos **.
+2. Clique em **Criar conjuntos de anotações**.
 
-    A janela Criar conjuntos de anotações é aberta. Por padrão, essa janela mostra o conjunto de base (contendo todos os documentos), bem como os campos nos quais é possível especificar as informações para um novo conjunto de anotações.
+    A janela Criar conjuntos de anotações é aberta. Por padrão, essa janela mostra o conjunto de base, que contém todos os documentos e campos nos quais é possível especificar as informações para um novo conjunto de anotações.
 
-1. Clique em **Incluir outro conjunto e anotador humano** para incluir campos para um conjunto de anotações adicional. É possível clicar para incluir quantos conjuntos de anotações você deseja criar; para este tutorial, somente dois são necessários.
+3. Clique em **Incluir outro conjunto e anotador humano** para incluir campos para um conjunto de anotações adicional. É possível clicar para incluir quantos conjuntos de anotações você desejar criar. Para este tutorial, você precisará somente de dois conjuntos de anotações.
 
-    ![Uma captura de tela da página Criar conjuntos de anotações.](images/wks_tutdocset2.jpg)
+    ![Uma captura de tela da página Criar conjuntos de anotações.](images/wks_tutdocset2.jpg "Uma captura de tela da página Criar conjuntos de anotações.")
 
-1. No campo **Sobreposição**, especifique `100`. Isso especifica que você deseja que 100 por cento dos documentos no conjunto de base sejam incluídos em todos os novos conjuntos de anotações para que eles possam ser anotados por todos os anotadores humanos.
-1. Para cada novo conjunto de anotações que você estiver criando, especifique as informações necessárias.
+4. No campo **Sobreposição**, especifique `100`. Esse valor especifica que você deseja que 100 por cento dos documentos no conjunto de base sejam incluídos em todos os novos conjuntos de anotações para que possam ser anotados por todos os anotadores humanos.
+5. Para cada novo conjunto de anotações, especifique as informações necessárias.
 
-    - No campo **Anotador**, selecione um ID do usuário de anotador humano para designar ao novo conjunto de anotações. Cada conjunto de anotações deve ser designado a um anotador humano diferente.
+    - No campo **Anotador**, selecione um ID do usuário de anotador humano para designar ao novo conjunto de anotações. Em um cenário realista, cada conjunto de anotações é designado a um anotador humano diferente.
 
-        > **Nota:** se você tiver somente um único ID de administrador para usar para o tutorial, designe esse usuário a todos os conjuntos de anotações. Em uma área de trabalho real, você teria múltiplos anotadores humanos para designar, mas para o tutorial, o administrador pode agir como anotador humano.
+        > **Nota:** se você tiver somente um único ID de administrador para usar para o tutorial, designe esse usuário a todos os conjuntos de anotações. Em um cenário realista, você teria múltiplos anotadores humanos, mas para o tutorial, o administrador pode agir como anotador humano.
 
-    - No campo **Nome do conjunto**, especifique um nome descritivo para o conjunto de anotações (como `Set 1` ou `DaveSet`).
+    - No campo **Nome do conjunto**, especifique um nome descritivo para o conjunto de anotações. Para este tutorial, é possível usar os nomes `Set 1` e `Set 2`.
 
-1. Clique em **Gerar**.
+6. Clique em **Gerar**.
 
 ### Resultados
+{: #wks_tutless_ml2_results}
 
-Os novos conjuntos de anotações são criados e agora aparecem na guia **Conjuntos de anotações** da página Documentos.
+Os novos conjuntos de anotações são criados.
 
 ## Lição 3: pré-anotando com um anotador baseado em dicionário
 {: #wks_tutless_ml3}
@@ -117,27 +126,33 @@ Os novos conjuntos de anotações são criados e agora aparecem na guia **Conjun
 Nesta lição, você aprenderá como usar um anotador baseado em dicionário para pré-anotar documentos no {{site.data.keyword.knowledgestudioshort}}.
 
 ### Sobre essa Tarefa
+{: #wks_tutless_ml3_about}
 
 A pré-anotação de documentos é uma etapa opcional. No entanto, é uma etapa importante porque facilita a tarefa de anotadores humanos posteriormente.
 
-Para obter mais informações sobre pré-anotação com anotadores baseados em dicionário, veja [Pré-anotando documentos com o pré-anotador Dicionário](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannot).
+Para obter mais informações sobre pré-anotação com dicionários, veja [Pré-anotando documentos com um dicionário](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannot).
 
 ### Procedimento
+{: #wks_tutless_ml3_procedure}
 
-1. Em sua área de trabalho, na barra lateral **Ativos e ferramentas** > **Pré-anotadores**, clique em **Gerenciar dicionários**.
+1. Em sua área de trabalho, clique em  ** Ativos **  >  ** Dicionários **.
 
-  O dicionário `Test dictionary` é aberto.
+  O dicionário `Test dictionary` é aberto. A lição [Incluindo um dicionário](/docs/services/watson-knowledge-studio/tutorials-create-project.html#wks_tutless4) do tutorial *Introdução ao {{site.data.keyword.knowledgestudioshort}}* mostra como criar esse dicionário.
 
-1. Na lista **Tipo de entidade**, selecione **ORGANIZATION** para mapear o tipo de entidade ORGANIZATION para o dicionário `Test dictionary` que você criou na lição [Incluindo um dicionário](/docs/services/watson-knowledge-studio/tutorials-create-project.html#wks_tutless4) do tutorial *Criando uma área de trabalho*.
-1. Clique na seta voltar no canto superior esquerdo para retornar à página Pré-anotadores e clique em **Aplicar este pré-anotador**
-1. Na página Executar anotador, clique nas caixas de seleção para selecionar ambos os conjuntos de anotações que você criou anteriormente no tutorial (não incluindo o conjunto de base).
-1. Clique em **Run**.
+1. Na lista **Tipo de entidade**, selecione o tipo de entidade `ORGANIZATION` para mapeá-lo para o dicionário `Test dictionary`.
 
-    ![Esta captura de tela mostra a página Executar anotador. O botão Executar é destacado.](images/wks_tutanno3.jpg)
+  A lição [Criando um sistema de tipos](/docs/services/watson-knowledge-studio/tutorials-create-project.html#wks_tutless3) do tutorial *Introdução ao {{site.data.keyword.knowledgestudioshort}}* mostra como criar o sistema de tipos que contém o tipo de entidade `ORGANIZATION`.
+
+1. Na guia **Modelo de aprendizado de máquina** > **Pré-anotação** > **Dicionários**, clique em **Aplicar este pré-anotador**.
+1. Selecione os conjuntos de anotações que você criou na [Lição 2](/docs/services/watson-knowledge-studio/tutorials-create-ml-model.html#wks_tutless_ml2), não incluindo o conjunto de documentos criado na [Lição 1](/docs/services/watson-knowledge-studio/tutorials-create-ml-model.html#tut_lessml1).
+1. Clique em **Executar**.
+
+    ![Esta captura de tela mostra a página Executar anotador. O botão Executar é destacado.](images/wks_tutanno3.jpg "Esta captura de tela mostra a página Executar anotador. O botão Executar é destacado.")
 
 ### Resultados
+{: #wks_tutless_ml3_results}
 
-Os documentos nos conjuntos selecionados são pré-anotados usando o anotador de dicionário que você criou. Posteriormente, será possível usar o mesmo anotador para pré-anotar conjuntos de documentos adicionais clicando em **Aplicar este pré-anotador**.
+Os documentos nos conjuntos selecionados são pré-anotados usando o dicionário que você criou. Se desejar, será possível usar o dicionário para pré-anotar conjuntos de documentos ou conjuntos de anotações que você incluir posteriormente.
 
 ## Lição 4: criando uma tarefa de anotação
 {: #wks_tutless_ml4}
@@ -145,68 +160,87 @@ Os documentos nos conjuntos selecionados são pré-anotados usando o anotador de
 Nesta lição, você aprenderá como usar tarefas de anotação para controlar o trabalho de anotadores humanos no {{site.data.keyword.knowledgestudioshort}}.
 
 ### Sobre essa Tarefa
+{: #wks_tutless_ml4_about}
 
 Para obter mais informações sobre as tarefas de anotação, veja [Criando uma tarefa de anotação](/docs/services/watson-knowledge-studio/annotate-documents.html#wks_hatask).
 
 ### Procedimento
+{: #wks_tutless_ml4_procedure}
 
-1. Em sua área de trabalho, na barra lateral **Ativos e ferramentas** > **Documentos**, selecione a guia **Tarefas**.
-1. Na página Tarefas, clique em **Incluir tarefa**.
-1. Especifique os detalhes para a tarefa:
+1. Em sua área de trabalho, clique em **Modelo de aprendizado de máquina** > **Tarefas de anotação**.
+2. Na página Tarefas, clique em **Incluir tarefa**.
+3. Especifique os detalhes para a tarefa:
 
     - No campo **Nome da tarefa**, insira `Test`.
     - No campo **Prazo final**, selecione uma data no futuro.
 
-1. Clique em **Criar**.
-1. Na janela Incluir conjuntos de anotações na tarefa, clique nas caixas de seleção para selecionar ambos os conjuntos de anotações que você criou na [Lição 3: pré-anotando com um anotador baseado em dicionário](/docs/services/watson-knowledge-studio/tutorials-create-ml-model.html#wks_tutless_ml3). Isso especifica que ambos os conjuntos de anotações devem ser anotados por seus anotadores humanos designados como parte desta tarefa.
-1. Clique em **Criar tarefa**.
-1. Para ver o progresso de trabalho de anotação humana no futuro, é possível clicar na tarefa para abri-la.
+4. Clique em **Criar**.
+5. Selecione os conjuntos de anotações que você criou na [Lição 2](/docs/services/watson-knowledge-studio/tutorials-create-ml-model.html#wks_tutless_ml2).
+
+ A seleção de ambos os conjuntos de anotações especifica que ambos os conjuntos devem ser anotados por seus anotadores humanos designados para concluir esta tarefa.
+
+7. Clique em **Criar tarefa**.
+8. À medida que os anotadores humanos começam a anotar documentos, é possível abrir tarefas para ver seu progresso.
 
 ## Lição 5: anotando documentos
 {: #wks_tutless_ml5}
 
-Nesta lição, você aprenderá como usar o editor de verdade absoluta para anotar documentos no {{site.data.keyword.knowledgestudioshort}}.
+Nesta lição, você aprenderá como usar o *editor de verdade absoluta* para anotar documentos no {{site.data.keyword.knowledgestudioshort}}.
 
 ### Sobre essa Tarefa
+{: #wks_tutless_ml5_about}
 
 Para obter mais informações sobre anotação humana, veja [Anotação com o editor de verdade absoluta](/docs/services/watson-knowledge-studio/user-guide.html#wks_hagte).
 
 ### Procedimento
+{: #wks_tutless_ml5_procedure}
 
-1. Efetue login no {{site.data.keyword.knowledgestudioshort}} como um anotador humano que está designado à tarefa de anotação criada por você na [Lição 4: criando uma tarefa de anotação](/docs/services/watson-knowledge-studio/tutorials-create-ml-model.html#wks_tutless_ml4).
+1. Efetue login no {{site.data.keyword.knowledgestudioshort}} como um usuário que está designado à tarefa de anotação que você criou na [Lição 4](/docs/services/watson-knowledge-studio/tutorials-create-ml-model.html#wks_tutless_ml4).
 
-    > **Nota:** se você tem acesso a somente um único ID de administrador para este tutorial, é possível usar esse ID para executar a anotação humana. No entanto, lembre-se que em uma área de trabalho real, a anotação humana é executada por múltiplos usuários diferentes com a função HumanAnnotator.
+    > **Nota:** se você tem acesso a somente um único ID de administrador para este tutorial, é possível usar esse ID para executar a anotação humana. No entanto, lembre-se de que em um cenário realista, a anotação humana é executada por diferentes usuários com a função Anotador humano.
 
-1. Abra a área de trabalho `Minha área de trabalho` .
-1. Na barra lateral, clique em **Anotação de documento** > **Relações**.
-1. Abra a tarefa de anotação `Test` que você criou na [Lição 4: criando uma tarefa de anotação](/docs/services/watson-knowledge-studio/tutorials-create-ml-model.html#wks_tutless_ml4).
-1. Role para o documento *Technology - gmanews.tv* e clique para abri-lo para anotação. Observe que o termo `IBM` já foi anotado com o tipo de entidade ORGANIZATION; essa anotação foi incluída pelo pré-anotador de dicionário na [Lição 2: criando conjuntos de anotações](/docs/services/watson-knowledge-studio/tutorials-create-ml-model.html#wks_tutless_ml2). Essa pré-anotação está correta, portanto não precisa ser modificada.
+1. Abra a área de trabalho `Minha área de trabalho` e clique em **Modelo de aprendizado de máquina** > **Tarefas de anotação**.
+1. Abra a tarefa de anotação `Test` que você criou na [Lição 4](/docs/services/watson-knowledge-studio/tutorials-create-ml-model.html#wks_tutless_ml4).
+1. Clique em **Anotar** para um dos conjuntos de anotações designados.
 
-    ![Esta captura de tela mostra um documento aberto com uma pré-anotação existente para a IBM.](images/wks_tut_preannotation.png)
+  Dependendo de como configura as tarefas de anotação, você pode ter uma ou mais tarefas de anotação designadas ao ID do usuário com o qual efetuou login.
+
+1. Na lista de documentos, localize o documento *Tecnologia - gmanews.tv* e abra-o.
+
+  Observe que o termo `IBM` já foi anotado com o tipo de entidade `ORGANIZATION`. Essa anotação foi incluída pelo pré-anotador de dicionário que foi aplicado na [Lição 3](/docs/services/watson-knowledge-studio/tutorials-create-ml-model.html#wks_tutless_ml3). Essa pré-anotação está correta, portanto, ela não precisa ser modificada.
+
+  ![Esta captura de tela mostra um documento aberto com uma pré-anotação existente para "IBM".](images/wks_tut_preannotation.png "Esta captura de tela mostra um documento aberto com uma pré-anotação existente para ")
 
 1. Anote uma menção:
 
-    1. Clique no ícone **Menções** para começar a anotar menções.
-    1. No corpo do documento, selecione o texto `Thomas Watson`.
-    1. Na lista de tipos de entidade, clique em **PERSON**. O tipo de entidade PERSON é aplicado à menção selecionada.
+    1. Clique na guia Entidade.
+    2. No corpo do documento, selecione o texto `Thomas Watson`.
+    3. Na lista de tipos de entidade, clique em `PERSON`. O tipo de entidade `PERSON` é aplicado à menção selecionada.
 
-        ![Esta captura de tela mostra o tipo de entidade PERSON aplicado à menção, Thomas Watson.](images/wks_tut_annotatemention3.png)
+        ![Esta captura de tela mostra o tipo de entidade "PERSON" aplicado à menção, "Thomas Watson".](images/wks_tut_annotatemention3.png "Esta captura de tela mostra o ")
 
-1. Clique em **Anotação de documento** > **Relações** da barra lateral para começar a anotar as relações.
-1. Selecione as menções `Thomas Watson` e `IBM` (nessa ordem). Para selecionar uma menção, clique no rótulo de tipo de entidade acima do texto.
-1. Na lista de tipos de relação, clique em **founderOf**. As duas menções são conectadas com um relacionamento founderOf.
+1. Anotar uma relação:
 
-    ![Esta captura de tela mostra duas menções conectadas pelo tipo de relação, founderOf.](images/wks_tut_annotaterelation.png)
+    1. Clique na guia Relação.
+    1. Selecione as menções `Thomas Watson` e `IBM` (nessa ordem). Para selecionar uma menção, clique no rótulo de tipo de entidade acima do texto.
+    1. Na lista de tipos de relação, clique em `founderOf`. As duas menções são conectadas a um relacionamento `founderOf`.
+
+        ![Esta captura de tela mostra duas menções conectadas pelo tipo de relação, "founderOf".](images/wks_tut_annotaterelation.png "Esta captura de tela mostra duas menções conectadas pelo tipo de relação, ")
 
 1. No menu de status, selecione **Concluído** e, em seguida, clique no botão **Salvar**.
-1. Retorne para a lista de documentos e clique em **Enviar todos os documentos** para enviar os documentos para aprovação.
+1. Clique em **Abrir lista de documentos** para retornar à lista de documentos para essa tarefa e clique em **Enviar todos os documentos** para enviar os documentos para aprovação.
 
-    > **Nota:** em uma situação real, você criaria muito mais anotações e concluiria todos os documentos no conjunto antes de enviar.
+    > **Nota:** em uma situação realista, você criaria muito mais anotações e concluiria todos os documentos no conjunto antes de enviar.
 
-1. Efetue login no {{site.data.keyword.knowledgestudioshort}} como o anotador humano que está designado a outro conjunto de documento na tarefa de anotação.
-1. Repita as mesmas anotações no documento *Technology - gmanews.tv*, exceto que desta vez, use a relação employedBy em vez da relação founderOf.
+1. Feche esse conjunto de anotações e, em seguida, abra o outro conjunto de anotações na tarefa `Test`.
 
-  Efetuar login como outro usuário ajudará a ilustrar a concordância entre anotadores na próxima lição. Conclua as anotações e clique em **Enviar todos os documentos**.
+   Dependendo de como você configurou as tarefas de anotação e para quais usuários você as designou, pode ser necessário efetuar login no {{site.data.keyword.knowledgestudioshort}} como o usuário que está designado ao outro conjunto de anotações na tarefa de anotação.
+
+1. Repita as mesmas anotações no documento *Technology - gmanews.tv*, exceto que, desta vez, use a relação `employedBy` em vez da relação `founderOf`.
+
+  Efetuar login como outro usuário ajudará a ilustrar o contrato entre anotadores na próxima lição. Mas se você tiver somente um usuário, ainda será possível concluir o tutorial para obter um entendimento de como o contrato entre anotadores funciona.
+
+1. Depois de concluir as anotações para o segundo conjunto de anotações, clique em **Enviar todos os documentos**.
 
 ## Lição 6: analisando a concordância entre anotadores
 {: #wks_tutless_ml6}
@@ -214,32 +248,37 @@ Para obter mais informações sobre anotação humana, veja [Anotação com o ed
 Nesta lição, você aprenderá como comparar o trabalho de múltiplos anotadores humanos no {{site.data.keyword.knowledgestudioshort}}.
 
 ### Sobre essa Tarefa
+{: #wks_tutless_ml6_about}
 
-Para determinar se diferentes anotadores humanos estão anotando documentos de sobreposição de forma consistente, revise as pontuações de concordância entre anotadores (`IAA`).
+Para determinar se diferentes anotadores humanos estão anotando documentos de sobreposição consistentemente, revise as pontuações do *contrato entre anotadores* (IAA).
 
 O {{site.data.keyword.knowledgestudioshort}} calcula pontuações IAA examinando todos os documentos de sobreposição em todos os conjuntos de documentos na tarefa, independentemente do status dos conjuntos de documentos. As pontuações do IAA mostram como diferentes anotadores humanos anotaram menções, relações e cadeias de correferência. É uma boa ideia verificar as pontuações do IAA periodicamente e verificar se os anotadores humanos são consistentes entre si.
 
 Neste tutorial, os anotadores humanos enviaram todos os conjuntos de documentos para aprovação. Se as pontuações de concordância entre anotadores são aceitáveis, é possível aprovar os conjuntos de documentos. Se você rejeita um conjunto de documentos, ele é retornado ao anotador humano para melhoria.
 
-### Procedimento
+Para obter mais informações sobre o contrato entre anotadores, veja [Construindo a verdade absoluta](/docs/services/watson-knowledge-studio/build-groundtruth.html).
 
-1. Efetue login no {{site.data.keyword.knowledgestudioshort}} como o administrador, selecione **Recursos e ferramentas** > **Documentos** e clique na tarefa `Testar`.
+### Procedimento
+{: #wks_tutless_ml6_procedure}
+
+1. Efetue login no {{site.data.keyword.knowledgestudioshort}} como o administrador, selecione **Modelo de aprendizado de máquina** > **Tarefas de anotação** e clique na tarefa `Testar`.
 
   Na coluna **Status**, é possível ver que os conjuntos de documentos são enviados.
 
 1. Clique em **Calcular contrato de interanotador**.
-1. Visualize as pontuações do IAA para menção, relações e cadeias de correferência clicando no primeiro menu. Também é possível visualizar a concordância por pares de anotadores humanos. Por exemplo, é possível comparar todas as anotações de Dave com todas as anotações de Phil. Também é possível visualizar a concordância por documentos específicos. Por exemplo, é possível visualizar anotações de Dave em um documento em comparação com as anotações de Phil no mesmo documento. Em geral, atinja uma pontuação de .8 de 1, em que 1 significa uma concordância perfeita. Como você anotou somente dois tipos de entidade neste tutorial, a maioria das pontuações de tipo de entidade são N/A (não aplicável), que significa que nenhuma informação está disponível para fornecer uma pontuação.
+1. Visualize as pontuações do IAA para menção, relações e cadeias de correferência clicando no primeiro menu. Também é possível visualizar a concordância por pares de anotadores humanos. Também é possível visualizar a concordância por documentos específicos. Em geral, atinja uma pontuação de .8 de 1, em que 1 significa uma concordância perfeita. Como você anotou somente dois tipos de entidade neste tutorial, a maioria das pontuações de tipo de entidade é `N/A` (não aplicável), o que significa que nenhuma informação está disponível para gerar uma pontuação.
 
-    *Figura 1. Revisando as pontuações entre anotadores com usuários denominados Dave e Phil*
+    *Figura 1. Revisando as pontuações entre anotadores com usuários denominados `dave` e `phil`*
 
-    ![Esta captura de tela mostra as pontuações entre anotadores para uma tarefa.](images/wks_tutiaa2.gif)
+    ![Esta captura de tela mostra as pontuações entre anotadores para uma tarefa.](images/wks_tutiaa2.gif "Esta captura de tela mostra as pontuações entre anotadores para uma tarefa.")
 
-1. Depois de revisar as pontuações, é possível decidir se você deseja aprovar ou rejeitar conjuntos de documentos que estão no status `Enviado`. Depois que um conjunto de documentos é enviado, uma caixa de seleção é exibida próximo ao seu nome. Tome uma destas ações:
+1. Depois de revisar as pontuações, é possível decidir se você deseja aprovar ou rejeitar conjuntos de documentos que estão no status `SUBMITTED`. Tome uma destas ações:
 
-    - Se as pontuações são aceitáveis para um conjunto de documentos, marque a caixa de seleção e clique em **Aceitar**. Documentos que não se sobrepõem com outros conjuntos de documentos são promovidos para verdade absoluta. Documentos que se sobreponham devem primeiro ser revisados por meio de adjudicação para que os conflitos possam ser resolvidos. Para este tutorial, aceite ambos os conjuntos de documentos.
-    - Se as pontuações não são aceitáveis para um conjunto de documentos, marque a caixa de seleção e clique em **Rejeitar**. O conjunto de documentos precisa ser revisitado pelo anotador humano para melhorar as anotações.
+    - Se as pontuações forem aceitáveis para um conjunto de anotações, marque a caixa de opção e clique em **Aceitar**. Documentos que não se sobrepõem com outros conjuntos de documentos são promovidos para verdade absoluta. Documentos que se sobreponham devem primeiro ser revisados por meio de adjudicação para que os conflitos possam ser resolvidos. Para este tutorial, aceite ambos os conjuntos de documentos.
+    - Se as pontuações não forem aceitáveis para um conjunto de anotações, marque a caixa de seleção e clique em **Rejeitar**. O conjunto de documentos precisa ser revisitado pelo anotador humano para melhorar as anotações.
 
 ### Resultados
+{: #wks_tutless_ml6_results}
 
 Ao avaliar as pontuações de concordância entre anotadores, você viu como diferentes pares de anotadores humanos anotaram o mesmo documento. Se a pontuação de concordância entre anotadores foi aceitável, você aceitou o conjunto de documentos.
 
@@ -249,24 +288,33 @@ Ao avaliar as pontuações de concordância entre anotadores, você viu como dif
 Nesta lição, você aprenderá como adjudicar os conflitos em documentos que se sobrepõem entre conjuntos de documentos no {{site.data.keyword.knowledgestudioshort}}.
 
 ### Sobre essa Tarefa
+{: #wks_tutless_ml7_about}
 
 Quando você aprova um conjunto de documentos, somente os documentos que não se sobrepõem com outros conjuntos de documentos são promovidos para verdade absoluta. Se um documento faz parte da sobreposição entre múltiplos conjuntos de documentos, deve-se adjudicar quaisquer conflitos de anotação antes que o documento possa ser promovido para verdade absoluta.
 
-### Procedimento
+Para obter mais informações sobre a adjudicação, veja [Construindo a verdade absoluta](/docs/services/watson-knowledge-studio/build-groundtruth.html).
 
-1. Efetue login no {{site.data.keyword.knowledgestudioshort}} como o administrador, selecione **Recursos e ferramentas** > **Documentos** e clique na tarefa `Testar`.
+### Procedimento
+{: #wks_tutless_ml7_procedure}
+
+1. Efetue login no {{site.data.keyword.knowledgestudioshort}} como o administrador, selecione **Modelo de aprendizado de máquina** > **Tarefas de anotação** e clique na tarefa `Testar`.
 1. Verifique se os dois conjuntos de documentos estão em um estado aprovado.
 1. Clique em **Verificar documentos de sobreposição para conflitos**.
 
     É possível ver os documentos de sobreposição que foram anotados por mais de um anotador humano.
 
-1. Para ver se existe algum conflito em como eles anotaram os documentos, clique em **Verificar conflitos**.
-1. No modo de adjudicação, você pode ver quantas anotações estão em conflito e remover ou substituir anotações antes de promover os documentos para verdade absoluta.
-1. Para este tutorial, suponha que você corrigiu todos os conflitos e aceitou as mudanças. Clique em **Promover para verdade absoluta**. Repita essas etapas para resolver conflitos no segundo conjunto de documentos.
+1. Como o tutorial instruiu você a criar uma relação conflitante para o documento *Technology - gmanews.tv*, localize esse documento na lista e clique em **Verificar conflitos**.
+1. Selecione os dois conjuntos de anotações conflitantes e clique em **Verificar conflitos**.
+
+    Modo de Adjudicação é aberto. No modo de adjudicação, é possível visualizar documentos de sobreposição, verificar conflitos e remover ou substituir anotações antes de promover os documentos para a verdade absoluta.
+
+1. Selecione **Conflitos de relação**, aceite a relação `founderOf` e rejeite a relação `employedBy`.
+1. Clique em **Promover para verdade absoluta**.
 
     Como alternativa, é possível promover um documento para verdade absoluta clicando em **Aceitar** na página Documentos.
 
 ### Resultados
+{: #wks_tutless_ml7_results}
 
 Depois de resolver os conflitos de anotação e promover os documentos para verdade absoluta, é possível usá-los para treinar o modelo de aprendizado de máquina.
 
@@ -276,45 +324,50 @@ Depois de resolver os conflitos de anotação e promover os documentos para verd
 Nesta lição, você aprenderá como criar um modelo de aprendizado de máquina no {{site.data.keyword.knowledgestudioshort}}.
 
 ### Sobre essa Tarefa
+{: #wks_tutless_ml8_about}
 
 Ao criar um modelo de aprendizado de máquina, você seleciona os conjuntos de documentos define que deseja usar para treiná-lo. Você também especifica a porcentagem de documentos que devem ser usados como dados de treinamento, dados de teste e dados ocultos. Somente documentos que se tornaram verdade absoluta por meio de aprovação ou adjudicação podem ser usados para treinar o modelo de aprendizado de máquina.
 
+Para obter mais informações sobre o modelo de aprendizado de máquina, veja [Treinando o modelo de aprendizado de máquina](/docs/services/watson-knowledge-studio/train-ml.html) e [Analisando o desempenho do modelo de aprendizado de máquina](/docs/services/watson-knowledge-studio/evaluate-ml.html).
+
 ### Procedimento
+{: #wks_tutless_ml8_procedure}
 
 1. Efetue login no {{site.data.keyword.knowledgestudioshort}} como o administrador.
-1. Na barra lateral **Gerenciamento de modelo** > **Desempenho**, clique em **Treinar e avaliar**.
-1. Selecione os conjuntos de documentos que você deseja usar para criar um modelo de aprendizado de máquina. Clique na marca de seleção próxima a cada nome do conjunto de documentos.
-1. Selecione os dois conjuntos de anotações para criar seus dados de teste, treinamento e ocultos. Em seguida, clique em **Treinar e avaliar**.
+1. Clique em **Modelo de aprendizado de máquina** > **Desempenho** > **Treinar e avaliar**.
+2. Selecione **Todos** e, em seguida, clique em **Treinar e avaliar**.
 
-    > **Nota:** o treinamento pode levar mais de dez minutos, ou mesmo horas, dependendo do número de anotações humanas e o número total de palavras em documentos.
+    > **Nota:** o treinamento pode levar mais de dez minutos, ou mesmo horas, dependendo do número de anotações humanas e do número de palavras em todos os documentos.
 
-1. Após o modelo de aprendizado de máquina ser treinado, é possível exportá-lo ou visualizar informações detalhadas sobre seu desempenho clicando nos links **Estatísticas detalhadas** que estão localizados acima de cada um dos gráficos.
-1. Para visualizar a página Conjuntos de treinamento/teste/cego, clique no botão **Treinar e avaliar**.
-1. Para ver os documentos nos quais os anotadores humanos trabalharam, clique em **Visualizar verdade absoluta**.
-1. Para ver as anotações que o modelo de aprendizado de máquina treinado criou no mesmo conjunto de documentos, clique em **Visualizar resultados de decodificação**.
-1. Para visualizar detalhes sobre a precisão, rechamada e pontuações F1 para o modelo de aprendizado a máquina, selecione a página Desempenho.
-1. Clique nos links **Estatísticas detalhadas** acima de cada um dos gráficos. Nessas páginas Estatísticas, é possível visualizar as pontuações para menções, relações e cadeias de correferência usando os botões de opções.
+3. Depois que o modelo de aprendizado de máquina é treinado, é possível exportá-lo da página Versão ou visualizar informações detalhadas sobre seu desempenho clicando nos links **Estatísticas detalhadas** que estão localizados acima de cada um dos gráficos na página Desempenho.
+4. Para visualizar a página Conjuntos de treinamento/teste/cego, clique no botão **Treinar e avaliar**.
+5. Para ver os documentos nos quais os anotadores humanos trabalharam, clique em **Visualizar verdade absoluta**.
+6. Para ver as anotações que o modelo de aprendizado de máquina treinado criou no mesmo conjunto de documentos, clique em **Visualizar resultados de decodificação**.
+7. Para visualizar detalhes sobre pontuações de precisão, rechamada e F1 para o modelo de aprendizado de máquina, clique na página Desempenho.
+8. Clique nos links **Estatísticas detalhadas** acima de cada um dos gráficos. Nessas páginas Estatísticas, é possível visualizar as pontuações para menções, relações e cadeias de correferência usando os botões de opções.
 
-    É possível analisar o desempenho visualizando um resumo de estatísticas para tipos de entidade, tipos de relação e cadeias de correferência. Também é possível analisar estatísticas que são apresentadas em uma matriz de confusão selecionando **Matriz de confusão** no menu que é padronizado para **Resumo**. A *matriz de confusão* ajuda a comparar as anotações que foram incluídas pelo modelo de aprendizado de máquina com as anotações na verdade absoluta.
+    É possível analisar o desempenho visualizando um resumo de estatísticas para tipos de entidade, tipos de relação e cadeias de correferência. É possível também analisar as estatísticas apresentadas em uma *matriz de confusão*. Para ver a matriz, mude **Resumo** para **Matriz de confusão**. A matriz de confusão ajuda a comparar as anotações que foram incluídas pelo modelo de aprendizado de máquina com as anotações na verdade absoluta.
 
     > **Nota:** neste tutorial, você anotou documentos com somente um único dicionário para organizações. Portanto, as pontuações que você vê são `0` ou `N/A` para a maioria dos tipos de entidade, exceto `ORGANIZATION`. Os números são baixos, mas isso é esperado, porque você não fez nenhuma anotação humana ou correção.
 
     *Figura 2. Opções na página Estatísticas para um modelo de aprendizado de máquina*
 
-    ![Esta captura de tela mostra a página Estatísticas.](images/wks_tutanno9.gif)
+    ![Esta captura de tela mostra a página Estatísticas.](images/wks_tutanno9.gif "Esta captura de tela mostra a página Estatísticas.")
 
-1. Na barra lateral, selecione **Gerenciamento de modelo** > **Versões**. Na página Versões, é possível tomar uma captura instantânea do modelo e dos recursos que foram usados para criá-lo (exceto para dicionários e tarefas de anotação). Por exemplo, você pode desejar tomar uma captura instantânea antes de treinar novamente o modelo. Se as estatísticas forem mais fracas na próxima vez que você o treinar, será possível promover a versão mais antiga e excluir a versão que retornou resultados mais fracos.
+9.  Clique em  ** Versões **. Na página Versões, é possível tomar uma captura instantânea do modelo e dos recursos que foram usados para criá-lo (exceto para dicionários e tarefas de anotação). Por exemplo, você pode desejar tomar uma captura instantânea antes de treinar novamente o modelo. Se as estatísticas forem mais fracas na próxima vez que você o treinar, será possível promover a versão mais antiga e excluir a versão que retornou resultados mais fracos.
 
 ### Resultados
+{: #wks_tutless_ml8_results}
 
 Você criou um modelo de aprendizado de máquina, treinou isso e avaliou o quão bem ele foi executado ao anotar dados de teste e dados ocultos. Ao explorar as métricas de desempenho, é possível identificar maneiras de melhorar a precisão do modelo de aprendizado de máquina.
 
 ## Resumo do tutorial
 {: #wks_tutml_sum}
 
-Ao aprender sobre o {{site.data.keyword.knowledgestudioshort}}, você criou um modelo de aprendizado de máquina.
+Você criou um modelo de aprendizado de máquina.
 
 ### Lições aprendidas
+{: #lessons_learned}
 
 Ao concluir este tutorial, você terá aprendido sobre os conceitos a seguir:
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -35,12 +35,14 @@ Los archivos descargados son independientes del sistema operativo. Las instancia
 ## Sistemas de tipos
 {: #wks_exportimport_expimp_type}
 
-Para descargar un sistema de tipos, abra la página **Activos y herramientas** > **Tipos de entidades** y pulse **Descargar tipos**. El sistema crea un archivo denominado `types-ID.json` y le solicita que descargue el archivo a su sistema local. Para utilizar este sistema de tipos en un nuevo espacio de trabajo, abra la página **Tipos de entidades** y cargue el archivo `JSON` que ha descargado.
+Para descargar un sistema de tipos, abra la página **Activos**> **Tipos de entidades** y pulse **Descargar tipos**. El sistema crea un archivo denominado `types-ID.json` y le solicita que descargue el archivo a su sistema local. Para utilizar este sistema de tipos en un nuevo espacio de trabajo, abra la página **Tipos de entidades** y cargue el archivo `JSON` que ha descargado.
 
 ## Diccionarios
 {: #wks_exportimport_expimp_dict}
 
-Para descargar uno o varios diccionarios, seleccione el separador **Activos y herramientas** > **Preanotadores** > **Diccionarios** y pulse **Descargar diccionarios**. Para cada diccionario que descargue, el sistema creará un archivo denominado `dictionary name_timestamp.csv`, combina los archivos en un archivo `ZIP` denominado `workspace name_dictionary_timestamp.zip`, y le solicitará que descargue el archivo a su sistema local. También puede descargar un diccionario individual abriendo el diccionario y pulsando **Descargar**. Los diccionarios de solo vista previa que ha cargado como un archivo CSV de diccionario no se pueden descargar.
+Para descargar todos los diccionarios, seleccione la página **Activos** > **Diccionarios**, pulse el icono **Menú** situado junto al botón **Crear diccionario** y seleccione **Descargar diccionarios**. Para cada diccionario que descargue, el sistema creará un archivo denominado `dictionary name_timestamp.csv`, combina los archivos en un archivo `ZIP` denominado `workspace name_dictionary_timestamp.zip`, y le solicitará que descargue el archivo a su sistema local.
+
+Puede descargar un diccionario individual abriendo el diccionario y pulsando **Descargar**. Los diccionarios de solo vista previa que ha cargado como un archivo CSV de diccionario no se pueden descargar.
 
 Antes de cargar un diccionario descargado a un nuevo espacio de trabajo, debe descargar el sistema de tipos desde el espacio de trabajo antiguo y cargarlo en el espacio de trabajo nuevo. El sistema de tipos y los diccionarios deben originarse desde el mismo espacio de trabajo de {{site.data.keyword.knowledgestudioshort}}, y el sistema de tipos debe existir en el espacio de trabajo nuevo antes de cargar los diccionarios.
 
@@ -49,7 +51,7 @@ Para cargar diccionarios, abra el separador **Diccionarios** y o bien añada un 
 ## Documentos
 {: #wks_exportimport_expimp_doc}
 
-Para descargar documentos que haya añadido al corpus, abra el separador **Activos y herramientas** > **Documentos** > **Conjuntos de documentos** y pulse **Descargar conjuntos de documentos**. El sistema crea un archivo denominado `corpus-ID.zip` y le solicita que descargue el archivo a su sistema local. El archivo `ZIP` contiene todos los documentos del corpus. Las anotaciones añadidas a los conjuntos de anotaciones están incluidas en el archivo ZIP, pero solo después de que los conjuntos de anotaciones se hayan aprobado y promocionado a datos de campo.
+Para descargar documentos que haya añadido al corpus, abra el separador **Activos**> **Documentos** > **Conjuntos de documentos** y pulse **Descargar conjuntos de documentos**. El sistema crea un archivo denominado `corpus-ID.zip` y le solicita que descargue el archivo a su sistema local. El archivo `ZIP` contiene todos los documentos del corpus. Las anotaciones añadidas a los conjuntos de anotaciones están incluidas en el archivo ZIP, pero solo después de que los conjuntos de anotaciones se hayan aprobado y promocionado a datos de campo.
 
 > **Restricción:** Los documentos que fueron preanotados serán ocultados en un formato no legible cuando se descarguen. Incluso las anotaciones en tales documentos que añadió la anotación humana son ilegibles.
 
@@ -59,10 +61,8 @@ Para cargar documentos, abra el separador **Conjuntos de documentos** en el nuev
 
 **Conceptos relacionados**:
 
-[Sistemas de tipos](/docs/services/watson-knowledge-studio/artifacts.html#wks_typesystem)
+[Tipos de artefactos](/docs/services/watson-knowledge-studio/artifacts.html)
 
-[Diccionarios](/docs/services/watson-knowledge-studio/artifacts.html#wks_dictionaries)
+[Añadir documentos para su anotación](/docs/services/watson-knowledge-studio/documents-for-annotation.html)
 
-[Documentos para anotadores de aprendizaje automático](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_t_docs_intro)
-
-[Documentos para anotadores basados en reglas](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html)
+[Añadir documentos para definir reglas](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html)

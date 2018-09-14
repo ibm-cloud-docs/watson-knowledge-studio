@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-16"
 
 ---
 
@@ -29,11 +29,11 @@ Descubra qué hacer si tiene preguntas o necesita ayuda. Dónde acudir para obte
 ## Problemas de acceso
 
 - Si no puede acceder a la instancia de {{site.data.keyword.knowledgestudioshort}}, trabaje con el propietario del espacio de trabajo para asegurarse de que le haya invitado a unirse al espacio de trabajo.
-- Si puede llegar a la instancia de {{site.data.keyword.knowledgestudioshort}}, pero no ve ningún espacio de trabajo listado, trabaje con el administrador o el gestor del espacio de trabajo para resolver el problema. El administrador, que es una persona con el rol Admin, o el gestor, que es una persona con el rol ProjectManager en {{site.data.keyword.knowledgestudioshort}}, debe: 1.) asociarle con un conjunto de anotaciones y 2.) crear una tarea que le asigne para anotar los documentos en el conjunto. No verá el espacio de trabajo listado en la página de inicio de {{site.data.keyword.knowledgestudioshort}} hasta que alguien haya realizado estas acciones.
+- Si puede llegar a la instancia de {{site.data.keyword.knowledgestudioshort}}, pero no ve ningún espacio de trabajo listado, trabaje con el administrador o el gestor del espacio de trabajo para resolver el problema. El administrador, que es una persona con el rol Admin, o el gestor, que es una persona con el rol Gestor de proyectos en {{site.data.keyword.knowledgestudioshort}}, debe: 1.) asociarle con un conjunto de anotaciones y 2.) crear una tarea que le asigne para anotar los documentos del conjunto. No verá el espacio de trabajo listado en la página de inicio de {{site.data.keyword.knowledgestudioshort}} hasta que alguien haya realizado estas acciones.
 
 ## Uso del editor de datos de campo
 
-En primer lugar, revise la información de esta guía del usuario. Si sigue teniendo preguntas sobre cómo utilizar el editor de datos de campo, puede consultar el foro de la comunidad para ver si alguien más ha formulado su pregunta y ha recibido una respuesta. O bien puede pedir ayuda a los miembros de la comunidad. Para acceder al foro de la comunidad de {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Developer, vaya a: [https://developer.ibm.com/answers/topics/wks/?smartspace=watson ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/answers/topics/wks/?smartspace=watson){: new_window}.
+En primer lugar, revise la información de [Anotación de documentos](/docs/services/watson-knowledge-studio/user-guide.html). Si sigue teniendo preguntas sobre cómo utilizar el editor de datos de campo, consulte una de las comunidades de desarrolladores, cuyos enlaces se encuentran en la parte inferior de la tabla de contenido. Si no encuentra la respuesta a su pregunta, publique la pregunta usted mismo.
 
 ## Anotación de decisiones
 

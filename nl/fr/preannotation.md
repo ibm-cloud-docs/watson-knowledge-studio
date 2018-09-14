@@ -1,8 +1,8 @@
-﻿---
+---
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -31,14 +31,15 @@ La pré-annotation facilite le travail des annotateurs humains parce qu'elle cou
 La méthode utilisée pour pré-annoter les documents ne restreint en aucune manière la façon dont vous pouvez utiliser le modèle résultant. Par exemple, ce n'est pas parce que vous utilisez le service {{site.data.keyword.nlushort}} pour pré-annoter les documents que vous devrez ensuite déployer sur ce même service le modèle d'apprentissage automatique que vous aurez construit à partir de ces documents. La pré-annotation ne sert qu'à mettre en route le processus d'annotation humaine.
 
 ## Remarques importantes
+{: #preannotation_notes}
 
 - Ne lancez jamais un pré-annotateur sur des documents que les annotateurs humains ont commencé à annoter, car tout ce qu'ils ont fait jusqu'ici serait supprimé.
 - Vous ne pouvez exécuter qu'un seul pré-annotateur sur les documents. Si vous en exécutez deux l'un derrière l'autre, le second supprimera les annotations ajoutées par le premier. Choisissez la méthode de pré-annotation qui convient le mieux à votre cas d'utilisation, et n'utilisez que cette méthode.
 
 ## Méthodes de pré-annotation
+{: #preannotation_methods}
 
 Les pré-annotateurs suivants sont disponibles :
->**Remarque **: Le service {{site.data.keyword.alchemylanguageshort}} a été déprécié. Pour plus d'informations, consultez [Retirement of {{site.data.keyword.alchemyapishort}} service ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/blogs/bluemix/2017/03/bye-bye-alchemyapi/){: new_window}.
 
 - **{{site.data.keyword.nlushort}}**
 
@@ -66,21 +67,24 @@ Vous pouvez également transférer des documents déjà annotés et les utiliser
 Vous pouvez utiliser le service {{site.data.keyword.nlushort}} pour pré-annoter les documents que vous ajoutez à votre corpus.
 
 ### Avant de commencer
+{: #wks_preannotnlu_prereqs}
 
 Déterminez si le pré-annotateur {{site.data.keyword.nlushort}} est susceptible d'ajouter de la valeur à votre cas d'utilisation. Passez en revue la liste des types et sous-types d'entités pris en charge par le service [{{site.data.keyword.nlushort}}![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/services/natural-language-understanding/entity-types.html){: new_window} afin de déterminer s'il existe un recoupement naturel entre eux et les types de votre système de types. Dans l'affirmative, continuez avec cette procédure. Sinon, choisissez un pré-annotateur différent.
 
 ### A propos de cette tâche
+{: #wks_preannotnlu_about}
 
 {{site.data.keyword.nlushort}} est un service d'analyse de texte utilisant le traitement automatique du langage naturel. Lorsque vous utilisez le pré-annotateur {{site.data.keyword.nlushort}}, celui-ci appelle le service {{site.data.keyword.nlushort}} pour trouver et annoter les entités dans vos documents.
 
 Vous devez spécifier quels types d'entités le service doit rechercher en associant des types d'entités {{site.data.keyword.nlushort}} aux types d'entités {{site.data.keyword.knowledgestudioshort}} correspondants que vous avez ajoutés au système de types {{site.data.keyword.knowledgestudioshort}}. Seules les mentions des types d'entités que vous associez de cette manière seront trouvées et annotées.
 
 ### Procédure
+{: #wks_preannotnlu_procedure}
 
 Pour pré-annoter des documents à l'aide du service {{site.data.keyword.nlushort}}, effectuez les étapes suivantes :
 
 1. Connectez-vous en tant qu'administrateur {{site.data.keyword.knowledgestudioshort}} et sélectionnez votre espace de travail.
-1. Sélectionnez l'onglet **Actifs & Outils** > **Pré-annotateurs** > **Natural Language Understanding**.
+1. Sélectionnez l'onglet **Modèle d'apprentissage automatique** > **Pré-annotation** > **Natural Language Understanding**.
 1. Cliquez sur **Editer** pour associer chaque type d'entité défini sur la page **Types d'entités** au type d'entité qui lui correspond dans {{site.data.keyword.nlushort}}.
 
     - La liste déroulante des types d'entités {{site.data.keyword.nlushort}} est préremplie avec les types d'entités reconnus par le service {{site.data.keyword.nlushort}}.
@@ -88,20 +92,28 @@ Pour pré-annoter des documents à l'aide du service {{site.data.keyword.nlushor
     - Un type d'entité {{site.data.keyword.nlushort}} ne peut être associé qu'à un ou plusieurs types d'entités {{site.data.keyword.knowledgestudioshort}}, et non à un rôle d'entité {{site.data.keyword.knowledgestudioshort}}.
     - Il est possible d'associer plusieurs types d'entités {{site.data.keyword.nlushort}} à un seul type d'entité {{site.data.keyword.knowledgestudioshort}}, ou l'inverse. Par exemple, les association suivantes sont possibles :
 
-    <table cellpadding="4" cellspacing="0" summary="Exemples d'associations de types d'entités" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d20428e292" class="stentry thleft thbot">Type d'entité Watson Knowledge Studio</th>
-        <th valign="bottom" align="left" id="d20428e298" class="stentry thleft thbot">Type d'entité {{site.data.keyword.nlushort}}</th>
+    <table summary="Exemple d'assocation des types d'entités">
+    <caption>Tableau 1. Exemple d'assocation des types d'entités</caption>
+      <tr>
+        <th style="vertical-align:bottom; text-align"left" id="d20428e292">Watson Knowledge Studio Entity Type</th>
+        <th style="vertical-align:bottom; text-align"left" id="d20428e298">Type d'entité {{site.data.keyword.nlushort}}</th>
       </tr>
-      <tr class="strow"><td valign="top" headers="d20428e292" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">ENGINEER</p></li>
-            <li class="li"><p class="p wrapper">SCIENTIST</p></li>
-          </ul>
+      <tr>
+        <td headers="d20428e292">
+          ENGINEER<br/>
+          SCIENTIST
         </td>
-        <td valign="top" headers="d20428e298" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">Person</p></li>
-          </ul></td>
+        <td headers="d20428e298">
+          Person
+        </td>
       </tr>
-      <tr class="strow"><td valign="top" headers="d20428e292" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">LOCATION</p></li></td>
-        <td valign="top" headers="d20428e298" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">CityTown</p></li>
-            <li class="li"><p class="p wrapper">Country</p></li>
-          </ul>
+      <tr>
+        <td headers="d20428e292">
+          LOCATION
+        </td>
+        <td headers="d20428e298">
+          CityTown<br/>
+          Country
         </td>
       </tr>
     </table>
@@ -135,7 +147,8 @@ Les données de référence produites par les documents qui ont été pré-annot
 
 **Informations associées** :
 
-[{{site.data.keyword.nlushort}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/watson/services/natural-language-understanding/){: new_window}
+[{{site.data.keyword.nlushort}}
+          ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/watson/services/natural-language-understanding/){: new_window}
 
 ## Pré-annoter des documents avec un dictionnaire
 {: #wks_preannot}
@@ -143,32 +156,35 @@ Les données de référence produites par les documents qui ont été pré-annot
 Pour aider les annotateurs humains à commencer les tâches d'annotation qui leur sont attribuées, vous pouvez créer un dictionnaire et l'utiliser pour pré-annoter les documents que vous ajoutez au corpus.
 
 ### A propos de cette tâche
+{: #wks_preannot_about}
 
 Lorsqu'un annotateur humain commence à travailler sur des documents qui ont été pré-annotés, un certain nombre de mentions sont probablement déjà annotées avec des types d'entités fondés sur les entrées du ou des dictionnaires utilisés. L'annotateur humain est libre de changer ou de supprimer les types d'entités affectés aux mentions et d'en affecter aux mentions qui n'ont pas été annotées. La pré-annotation au moyen d'un dictionnaire n'annote pas les relations ni les coréférences. C'est donc aux annotateurs humains de les annoter.
 
-**Remarque **: Cette tâche vous montre comment créer un dictionnaire qui puisse être édité. Si vous voulez transférer et pré-annoter vos documents avec un dictionnaire en lecture seule, cliquez sur le bouton **Transférer un dictionnaire**, sous l'onglet **Actifs & Outils** > **Pré-annotateurs** > **Dictionnaires**.
+**Remarque **: Cette tâche vous montre comment créer un dictionnaire qui puisse être édité. Si vous voulez transférer et pré-annoter vos documents avec un dictionnaire en lecture seule, cliquez sur l'icône **Menu** à côté du bouton **Créer un dictionnaire**. Sélectionnez **Transférer un dictionnaire**.
 
 ### Procédure
+{: #wks_preannot_procedure}
 
 Pour créer un dictionnaire éditable et pré-annoter des documents avec lui :
 
 1. Connectez-vous en tant qu'administrateur {{site.data.keyword.knowledgestudioshort}} et sélectionnez votre espace de travail.
-1. Sélectionnez l'onglet **Actifs & Outils** > **Pré-annotateurs** > **Dictionnaires**.
-1. Cliquez sur **Gérer les dictionnaires**, puis sur **Créer un dictionnaire**.
+1. Sélectionnez la page **Actifs** > **Dictionnaires**.
+1. Cliquez sur **Créer un dictionnaire**, entrez un nom, puis cliquez sur **Sauvegarder**.
 1. Dans la liste **Type d'entité**, sélectionnez un type d'entité à associer au dictionnaire.
-1. Ajoutez des entrées au dictionnaire ou transférez un fichier contenant les termes du dictionnaire.
-1. Retournez à la page **Pré-annotateurs** et, sous l'onglet **Dictionnaires**, cliquez sur **Appliquer ce pré-annotateur**.
-1. Cochez la case de chaque jeu de documents que vous voulez pré-annoter, puis cliquez sur **Exécuter**.
+3. Ajoutez des entrées au dictionnaire ou transférez un fichier contenant les termes du dictionnaire.
+4. Cliquez sur **Modèle d'apprentissage automatique** > **Pré-annotation**.
+5. Sous l'onglet **Dictionnaires**, cliquez sur **Appliquer ce pré-annotateur**.
+6. Cochez la case de chaque jeu de documents que vous voulez pré-annoter, puis cliquez sur **Exécuter**.
 
     La pré-annotation est appliquée individuellement à chaque document, sans qu'il soit tenu compte des jeux de documents auxquels il appartient. Un document constituant un chevauchement entre un jeu sélectionné et un jeu non sélectionné sera pré-annoté dans les deux jeux.
 
-1. Une fois le dictionnaire créé, après l'avoir exécuté comme pré-annotateur une première fois, vous pouvez cliquer à nouveau sur **Exécuter** chaque fois que vous voulez l'utiliser pour pré-annoter d'autres jeux de documents que vous ajoutez au corpus.
+7. Une fois le dictionnaire créé, après l'avoir exécuté comme pré-annotateur une première fois, vous pouvez cliquer à nouveau sur **Exécuter** chaque fois que vous voulez l'utiliser pour pré-annoter d'autres jeux de documents que vous ajoutez au corpus.
 
     > **Restriction :** Si vous modifiez le dictionnaire pour y ajouter ou en supprimer des entrées, vous devrez recréer toutes les tâches d'annotation qui incluaient des jeux de documents ayant été pré-annotés avec ce pré-annotateur. En effet, il n'est pas possible d'appliquer à des jeux d'annotations déjà affectés à une tâche d'annotation une pré-annotation fondée sur les changements que vous apportez à l'annotateur à base de dictionnaire.
 
 **Informations associées** :
 
-[Dictionnaires](/docs/services/watson-knowledge-studio/dictionaries.html#wks_dictionaries)
+[Créer des dictionnaires](/docs/services/watson-knowledge-studio/dictionaries.html)
 
 [Initiation > Ajouter un dictionnaire](/docs/services/watson-knowledge-studio/tutorials-create-project.html#wks_tutless4)
 
@@ -178,21 +194,23 @@ Pour créer un dictionnaire éditable et pré-annoter des documents avec lui :
 Vous pouvez utiliser un modèle d'apprentissage automatique existant pour pré-annoter les documents que vous ajoutez à votre corpus.
 
 ### A propos de cette tâche
+{: #wks_preannotsire_about}
 
-Lorsque de 10 à 30 documents ont été annotés, les données de référence correspondantes peuvent servir à entraîner un modèle d'apprentissage automatique. Un modèle si peu entraîné ne doit pas être utilisé en production, mais il est possible de l'exploiter comme modèle de pré-annotation pour accélérer l'annotation humaine des documents subséquents. Par exemple, si vous ajoutez des documents au corpus après avoir entraîné un modèle d'apprentissage automatique, vous pouvez utiliser celui-ci pour pré-annoter les nouveaux jeux de documents que vous ajoutez. N'exécutez jamais un pré-annotateur sur des documents qui ont été annotés par une personne. Les pré-annotateurs suppriment toutes les annotations humaines.
+Lorsque de 10 à 30 documents ont été annotés, les données de référence correspondantes peuvent servir à entraîner un modèle d'apprentissage automatique. Un modèle si peu entraîné ne doit pas être utilisé en production, mais il est possible de l'exploiter pour pré-annoter des documents afin d'accélérer l'annotation humaine des documents subséquents. Par exemple, si vous ajoutez des documents au corpus après avoir entraîné un modèle d'apprentissage automatique, vous pouvez utiliser celui-ci pour pré-annoter les nouveaux jeux de documents que vous ajoutez. N'exécutez jamais un pré-annotateur sur des documents qui ont été annotés par une personne. Les pré-annotateurs suppriment toutes les annotations humaines.
 
 ### Procédure
+{: #wks_preannotsire_procedure}
 
 Pour utiliser un modèle d'apprentissage automatique existant afin de pré-annoter des documents :
 
 1. Connectez-vous en tant qu'administrateur {{site.data.keyword.knowledgestudioshort}} et sélectionnez votre espace de travail.
-1. Sélectionnez l'onglet **Gestion des modèles** > **Versions** > **Apprentissage automatique**.
-1. Cliquez sur **Exécuter ce modèle**.
-1. Cochez la case de chaque jeu de documents que vous voulez pré-annoter, puis cliquez sur **Exécuter**.
+2. Sélectionnez **Modèle d'apprentissage automatique** > **Versions**.
+3. Pour pré-annoter de nouveaux documents, cliquez sur **Exécuter ce modèle**.
+4. Cochez la case de chaque jeu de documents que vous voulez pré-annoter, puis cliquez sur **Exécuter**.
 
     La pré-annotation est appliquée individuellement à chaque document, sans qu'il soit tenu compte des jeux de documents auxquels il appartient. Un document constituant un chevauchement entre un jeu sélectionné et un jeu non sélectionné sera pré-annoté dans les deux jeux.
 
-1. Après avoir exécuté le modèle une première fois pour pré-annoter les premiers jeux de documents, vous pouvez cliquer à nouveau sur **Exécuter ce modèle** chaque fois que vous voulez l'utiliser pour pré-annoter d'autres jeux de documents que vous ajoutez au corpus.
+5. Après avoir exécuté le modèle une première fois pour pré-annoter les premiers jeux de documents, vous pouvez cliquer à nouveau sur **Exécuter ce modèle** chaque fois que vous voulez l'utiliser pour pré-annoter d'autres jeux de documents que vous ajoutez au corpus.
 
 ## Pré-annoter des documents avec le modèle à base de règles
 {: #wks_preannotrule}
@@ -200,26 +218,28 @@ Pour utiliser un modèle d'apprentissage automatique existant afin de pré-annot
 Vous pouvez utiliser un modèle à base de règles existant pour pré-annoter les documents que vous ajoutez à votre corpus.
 
 ### Procédure
+{: #wks_preannotrule_procedure}
 
 Pour pré-annoter des documents à l'aide du modèle à base de règles, effectuez les étapes suivantes :
 
 1. Connectez-vous en tant qu'administrateur {{site.data.keyword.knowledgestudioshort}} et sélectionnez votre espace de travail.
-1. Sélectionnez l'onglet **Gestion des modèles** > **Versions** > **A base de règles**.
+1. Sélectionnez l'onglet **Modèle à base de règles** > **Versions** > **Modèle à base de règles**.
 1. Si ce n'est déjà fait, cliquez sur **Mapper les types d'entité et les classes** pour associer les types d'entités que vous avez définis dans votre système de types {{site.data.keyword.knowledgestudioshort}} à une ou plusieurs classes du modèle à base de règles.
+2. Cliquez sur **Editer** pour chaque type d'entité à associer.
 
     - La liste déroulante de la colonne **Nom de la classe** est préremplie avec les noms des classes associées au modèle à base de règles.
     - Vous devez associer au moins un type d'entité à une classe.
 
-1. Sous l'onglet **A base de règles**, cliquez sur **Exécuter ce modèle**, puis sélectionnez les jeux de documents ou jeux d'annotations que vous voulez pré-annoter. Assurez-vous que les jeux choisis ne contiennent pas de documents avec des annotations humaines. Les pré-annotateurs suppriment toutes les annotations humaines.
+3. Sous l'onglet **Modèle à base de règles**, cliquez sur **Exécuter ce modèle**.
 
     Le bouton **Exécuter ce modèle** n'est disponible qu'à compter du moment où vous associez au moins un type d'entité à une classe.
 
-1. Cochez la case de chaque jeu de documents que vous voulez pré-annoter.
-1. Cliquez sur **Exécuter**.
+4. Sélectionnez les jeux de documents ou d'annotations à pré-annoter. Assurez-vous que les jeux choisis ne contiennent pas de documents avec des annotations humaines. Les pré-annotateurs suppriment toutes les annotations humaines.
+5. Cliquez sur **Exécuter**.
 
     La pré-annotation est appliquée individuellement à chaque document, sans qu'il soit tenu compte des jeux de documents auxquels il appartient. Un document constituant un chevauchement entre un jeu sélectionné et un jeu non sélectionné apparaîtra pré-annoté dans les deux jeux.
 
-1. Après avoir exécuté le modèle une première fois pour pré-annoter les premiers jeux de documents, vous pouvez cliquer à nouveau sur **Exécuter ce modèle** chaque fois que vous voulez l'utiliser pour pré-annoter d'autres jeux de documents que vous ajoutez au corpus.
+6. Après avoir exécuté le modèle une première fois pour pré-annoter les premiers jeux de documents, vous pouvez cliquer à nouveau sur **Exécuter ce modèle** chaque fois que vous voulez l'utiliser pour pré-annoter d'autres jeux de documents que vous ajoutez au corpus.
 
     > **Restriction :** Si vous modifiez les associations entre types d'entités et classes du modèle à base de règles, vous devrez recréer toutes les tâches d'annotation qui incluaient des jeux de documents pré-annotés avec ce pré-annotateur. En effet, il n'est pas possible d'appliquer à des jeux de documents déjà affectés à une tâche d'annotation une pré-annotation fondée sur les changements que vous apportez à la définition des associations.
 
@@ -240,6 +260,7 @@ Si vous affectez les documents importés à des annotateurs humains, ils appara�
 Vous pouvez exporter des documents qui ont été explorés et analysés dans {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer Content Analytics et les transférer sous forme de fichiers XMI dans un espace de travail {{site.data.keyword.knowledgestudioshort}}.
 
 #### Procédure
+{: #wks_uima_procedure}
 
 Pour récupérer des documents analysés d'une collection {{site.data.keyword.watson}} Explorer Content Analytics :
 
@@ -271,6 +292,7 @@ Vous devez définir une association (mappage) entre les types UIMA et les types 
 Vous pouvez exporter une collection de documents analysés de {{site.data.keyword.watson}} Explorer Content Analytics Studio et transférer ces documents sous forme de fichiers XMI dans un projet {{site.data.keyword.knowledgestudioshort}}.
 
 #### Procédure
+{: #wks_uimawexstudio_procedure}
 
 Pour récupérer des documents analysés d'une collection Content Analytics Studio :
 
@@ -283,6 +305,7 @@ Pour récupérer des documents analysés d'une collection Content Analytics Stud
 1. Extrayez tous les fichiers du fichier ZIP. Le contenu extrait inclut les fichiers XMI (`*.xmi`), le fichier descripteur du système de types UIMA (`TypeSystem.xml`) et d'autres fichiers.
 
 #### Que faire ensuite
+{: #wks_uimawexstudio_next}
 
 Vous devez définir une association (mappage) entre les types UIMA et les types d'entités {{site.data.keyword.knowledgestudioshort}}. Vous devez aussi créer un fichier ZIP contenant tous les fichiers nécessaires au transfert des données analysées dans un espace de travail {{site.data.keyword.knowledgestudioshort}}.
 
@@ -292,10 +315,12 @@ Vous devez définir une association (mappage) entre les types UIMA et les types 
 Avant de transférer des fichiers XMI dans un espace de travail {{site.data.keyword.knowledgestudioshort}}, vous devez définir les associations (mappages) entre types UIMA types et types d'entités {{site.data.keyword.knowledgestudioshort}}.
 
 #### Avant de commencer
+{: #wks_uimawexmap_prereqs}
 
 Dans votre espace de travail {{site.data.keyword.knowledgestudioshort}}, le système de types doit inclure les types d'entités auxquels vous souhaitez associer les types UIMA.
 
 #### Procédure
+{: #wks_uimawexmap_procedure}
 
 Pour associer des types UIMA aux types d'entités {{site.data.keyword.knowledgestudioshort}} :
 
@@ -338,6 +363,7 @@ Pour associer des types UIMA aux types d'entités {{site.data.keyword.knowledges
         {: screen}
 
 #### Que faire ensuite
+{: #wks_uimawexmap_next}
 
 Vous devez créer un fichier ZIP contenant tous les fichiers nécessaires au transfert des données analysées dans un espace de travail {{site.data.keyword.knowledgestudioshort}}.
 
@@ -355,12 +381,14 @@ Vous devez créer un fichier ZIP contenant tous les fichiers nécessaires au tra
 Pour entraîner un modèle avec les documents pré-annotés que vous avez téléchargés, vous devez créer un fichier ZIP contenant tous les fichiers nécessaires au transfert des fichiers XMI, puis transférer ce fichier ZIP dans un espace de travail {{site.data.keyword.knowledgestudioshort}}.
 
 #### Avant de commencer
+{: #wks_uimaweximport_prereqs}
 
 Avant de transférer le fichier ZIP, assurez-vous que le système de types dans votre espace de travail {{site.data.keyword.knowledgestudioshort}} inclut bien les types d'entités auxquels vous avez associé les types UIMA.
 
 > **Avertissement :** Les moteurs d'analyse UIMA permettent aux annotations de s'étendre sur plusieurs phrases. Or, dans {{site.data.keyword.knowledgestudioshort}}, chaque annotation doit être confinée dans une même phrase. Si les fichiers XMI que vous transférez incluent des annotations qui franchissent les limites d'une phrase, celles-ci n'apparaîtront pas dans l'éditeur de données de référence.
 
 #### Procédure
+{: #wks_uimaweximport_procedure}
 
 Pour transférer des documents pré-annotés dans un espace de travail {{site.data.keyword.knowledgestudioshort}} :
 
@@ -373,7 +401,7 @@ Pour transférer des documents pré-annotés dans un espace de travail {{site.da
 
 1. Transférez le fichier ZIP dans un espace de travail {{site.data.keyword.knowledgestudioshort}}.
 
-    1. Connectez-vous en tant qu'administrateur ou chef de projet {{site.data.keyword.knowledgestudioshort}}, ouvrez l'espace de travail auquel vous souhaitez ajouter les documents, puis ouvrez la page **Actifs & Outils** > **Documents**.
+    1. Connectez-vous en tant qu'administrateur ou chef de projet {{site.data.keyword.knowledgestudioshort}}, ouvrez l'espace de travail auquel vous souhaitez ajouter les documents, puis ouvrez la page **Actifs** > **Documents**.
     1. Cliquez sur **Transférer des jeux de documents**.
     1. Faites glisser le fichier ZIP que vous avez créé ou cliquez pour le localiser et le sélectionner.
     1. Cochez la case pour indiquer que le fichier ZIP contient des fichiers au format UIMA CAS XMI.

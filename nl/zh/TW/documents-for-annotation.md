@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -27,6 +27,7 @@ lastupdated: "2018-04-04"
 {: shortdesc}
 
 ## 關於本作業
+{: #annotation_about}
 
 若要定義規則型模型的規則，您可以新增或上傳可從中繪製型樣以定義為規則的文件。如需相關資訊，請參閱[新增文件以定義規則](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html)。本節說明如何僅針對註釋新增文件。
 
@@ -55,7 +56,7 @@ lastupdated: "2018-04-04"
 ### CSV 檔
 {: #wks_sampledoc__wks_samplecsv}
 
-您可以從本端機器中，上傳包含範例文字的雙直欄 CSV 檔。一次上傳一個 CSV 檔。CSV 檔中的第一個直欄指定文件的檔名。檔案中的第二個直欄包含文件文字。如需必要格式的範例，請參閱指導教學範例檔中的 <a href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/documents-new.csv" download>`documents-new.csv`<img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示" class="style-scope doc-content"></a> 檔案。
+您可以從本端機器中，上傳包含範例文字的雙直欄 CSV 檔。一次上傳一個 CSV 檔。CSV 檔中的第一個直欄指定文件的檔名。檔案中的第二個直欄包含文件文字。如需必要格式的範例，請參閱指導教學範例檔中的 <a href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/documents-new.csv" download>`documents-new.csv` <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示" class="style-scope doc-content"></a> 檔案。
 
 ### 其他 Watson Knowledge Studio 工作區中的文件
 {: #wks_sampledoc__wks_samplecorpus}
@@ -72,6 +73,7 @@ lastupdated: "2018-04-04"
 註釋人員可以修訂、刪除及新增註釋到這些文件中，或者您可以略過人工註釋，並使用這些檔案來建立訓練、測試及盲目文件集，以評估與改善模型效能。如何建立這些檔案以及上傳它們的需求的詳細資料，請參閱[上傳預先註釋的文件](/docs/services/watson-knowledge-studio/preannotation.html#wks_uima)。
 
 ### 匿名資料
+{: #wks_anonymizing}
 
 如果您要建置針對資料最佳化的模型，但基於隱私權原因不要將資料以現狀上傳至 {{site.data.keyword.knowledgestudioshort}}，您可以先刪除文件中的任何個人識別資訊 (PII)，然後使用那些匿名文件來訓練模型。請不要編寫資訊，或以變數進行大規模取代。為得到最佳結果，請將實際資訊取代為相同類型的偽造資訊。
 
@@ -82,40 +84,55 @@ lastupdated: "2018-04-04"
 
 若要訓練模型，您必須將代表您領域內容的文件新增至工作區。
 
-### 關於本作業
+### 關於此作業
+{: #wks_projadd_about}
 
 作為最佳作法，請以相對較小的文件集合開始。使用這些文件來訓練註釋人員（如果您的工作區包括人工註釋），以及修正註釋準則。小型文件可協助註釋人員識別整個文件中的互相參照鏈結。隨著註釋正確性的改善，您可以將更多文件新增至語料庫，以提供更深入的訓練工作。
 
 ### 程序
+{: #wks_projadd_procedure}
 
 若要將文件新增至工作區，請執行下列動作：
 
 1. 以 {{site.data.keyword.knowledgestudioshort}} 管理者或專案經理身分登入，並選取您的工作區。
-1. 選取**資產及工具** > **文件** > **文件集**標籤。
+1. 選取**資產** > **文件** > **文件集**標籤。
 1. 按一下**上傳文件集**，將文件新增至語料庫。
 1. 使用下列其中一種格式來上傳文件。一次可以上傳一種類型的檔案。
 
-    <table border="1" frame="hsides" rules="rows" cellpadding="4" cellspacing="0" summary="此表格中的每一列說明一個選項。" class="simpletable choicetable choicetableborder">
-      <thead><tr><th id="d31095e284-option" valign="bottom" align="left" class="ncol thleft thbot">選項</th>
-          <th id="d31095e284-desc" valign="bottom" align="left" class="ncol thleft thbot">說明</th></tr></thead>
-      <tbody><tr class="strow chrow"><td valign="top" headers="d31095e284-option" id="d31095e286" class="stentry choption ncol"><p class="p wrapper"><strong>CSV 檔</strong></p></td>
-          <td valign="top" headers="d31095e284-desc d31095e286" class="stentry chdesc ncol"><p class="p wrapper">拖曳包含範例文件的單一 CSV 檔，或按一下以在
-              本端系統上尋找檔案，然後按一下<b>上傳</b>。CSV 檔中的第一個直欄
-              指定文件的檔名。檔案中的第二個直欄包含文件文字。
-              CSV 檔必須採用 UTF-8 格式。</p></td>
-        </tr>
-        <tr class="strow chrow"><td valign="top" headers="d31095e284-option" id="d31095e294" class="stentry choption ncol"><p class="p wrapper"><strong>文字檔</strong></p></td>
-          <td valign="top" headers="d31095e284-desc d31095e294" class="stentry chdesc ncol"><p class="p wrapper">從您的本端系統拖曳一個以上文字檔，或按一下來尋找並選取檔案，
-              然後按一下<b>上傳</b>。文字檔必須採用 UTF-8 格式。</p></td>
-        </tr>
-        <tr class="strow chrow"><td valign="top" headers="d31095e284-option" id="d31095e302" class="stentry choption ncol"><p class="p wrapper"><strong>DOCXML 檔</strong></p></td>
-          <td valign="top" headers="d31095e284-desc d31095e302" class="stentry chdesc ncol"><p class="p wrapper">從您的本端系統拖曳一個以上 <code>DOCXML</code> 檔案，或按一下來尋找
-              並選取檔案，然後按一下<b>上傳</b>。<code>DOCXML</code>
-              檔案必須是從其他機器學習模型下載的文件，且必須是
-              UTF-8 格式。上傳時不會將這些文件重新記號化。</p></td>
-        </tr>
-        <tr class="strow chrow"><td valign="top" headers="d31095e284-option" id="d31095e316" class="stentry choption ncol"><p class="p wrapper"><strong>ZIP 檔</strong></p></td>
-          <td valign="top" headers="d31095e284-desc d31095e316" class="stentry chdesc ncol"><p class="p wrapper">如果您先前已從
+    <table summary="此表格中的每一列說明一個選項。">
+      <caption>表 1. 上傳選項</caption>
+      <tr>
+        <th style="vertical-align:bottom; text-align:left" id="d31095e284-option">
+          選項
+        </th>
+        <th style="vertical-align:bottom; text-align:left" id="d31095e284-desc">
+          說明
+        </th>
+      </tr>
+      <tr>
+        <td headers="d31095e284-option" id="d31095e286">
+          <p><strong>CSV 檔</strong></p>
+        </td>
+        <td headers="d31095e284-desc d31095e286">
+          <p>拖曳包含範例文件的單一 CSV 檔，或按一下以在
+              本端系統上尋找檔案，然後按一下<b>上傳</b>。CSV 檔中的第一個直欄指定文件的檔名。檔案中的第二個直欄包含文件文字。CSV 檔必須採用 UTF-8 格式。</p>
+        </td>
+      </tr>
+      <tr>
+        <td headers="d31095e284-option" id="d31095e294">
+          <p><strong>文字檔</strong></p>
+        </td>
+        <td headers="d31095e284-desc d31095e294">
+          <p>從您的本端系統拖曳一個以上文字檔，或按一下來尋找並選取檔案，
+              然後按一下<b>上傳</b>。文字檔必須採用 UTF-8 格式。</p>
+        </td>
+      </tr>
+      <tr>
+        <td headers="d31095e284-option" id="d31095e316">
+          <p><strong>ZIP 檔</strong></p>
+        </td>
+        <td headers="d31095e284-desc d31095e316">
+          <p>如果您先前已從
               Watson Knowledge
               Studio
               工作區下載文件，請拖曳
@@ -123,7 +140,7 @@ lastupdated: "2018-04-04"
               檔案。如果您想要在下載文件之前併入已新增至文件的註釋，
               請確定已選取包括基準的選項，然後再按一下
               <b>上傳</b>。只會匯入在下載文件之前
-              已升級為基準的註釋。</p><p class="p wrapper"><b>限制：</b>匯入已註釋的文件
+              已升級為基準的註釋。</p><p><b>限制：</b>匯入已註釋的文件
               時，會將它們重新記號化。這個程序可改變
               Watson Knowledge
               Studio
@@ -131,16 +148,16 @@ lastupdated: "2018-04-04"
               所認為的句子界限。因為註釋是由句子所定義，所以在這個程序期間，
               部分註釋可能會失效。從另一個工作區上傳文件之後，請快速檢閱
               註釋，以解決所有不相符問題。</p>
-            <p class="p">您必須先將類型系統從原始工作區上傳至現行工作區，才能上傳基準註釋。如需詳細資料，請參閱[從其他工作區上傳資源 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](exportimport.html){: new_window}。</p>
-            <p class="p">如果您先前已下載格式為 UIMA CAS XMI 的已註釋文件，則可以上傳包含已分析內容的 <code>ZIP</code> 檔。先指定這是您要上傳的內容類型，然後再按一下<b>上傳</b>。如需如何建立這些檔案以及上傳它們的需求的詳細資料，請參閱[上傳預先註釋的文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](preannotation.html#wks_uima){: new_window}。</p>
-          </td>
-        </tr>
-      </tbody>
+          <p>您必須先將類型系統從原始工作區上傳至現行工作區，才能上傳基準註釋。如需詳細資料，請參閱[從其他工作區上傳資源 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](exportimport.html){: new_window}。</p>
+          <p>如果您先前已下載格式為 UIMA CAS XMI 的已註釋文件，則可以上傳包含已分析內容的 <code>ZIP</code> 檔。先指定這是您要上傳的內容類型，然後再按一下<b>上傳</b>。如需如何建立這些檔案以及上傳它們的需求的詳細資料，請參閱[上傳預先註釋的文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](preannotation.html#wks_uima){: new_window}。</p>
+        </td>
+      </tr>
     </table>
 
 1. 新增文件之後，按一下文件名稱以進行預覽，並驗證內容正常。例如，驗證文字檔是 UTF-8 格式，且文件中看不見任何讀音標記或字元正規化問題，並檢查不良的句子岔斷。如果發生問題，您可能需要先預先處理這些檔案，然後再將它們新增至語料庫。在字典或人工註釋開始之前，您會希望文件盡可能乾淨且完整格式化。
 
 ### 下一步
+{: #wks_projadd_next}
 
 在您啟動任何人工註釋作業之前，請將語料庫分成多個文件集，並將這些文件集指派給註釋人員。
 
@@ -150,22 +167,25 @@ lastupdated: "2018-04-04"
 新增文件之後，將文件分成數個文件集，以由多位註釋人員進行註釋。若要檢視註釋人員內部協議分數，您必須至少指派兩位註釋人員，並指定部分百分比的文件在這些集合之間重疊。
 
 ### 開始之前
+{: #wks_projdocsets_prereqs}
 
 - 您必須先上傳文件集，才能將它們分成註釋集。
 - 您必須針對將在此工作區使用文件的所有註釋人員，在 {{site.data.keyword.knowledgestudioshort}} 中建立使用者帳戶。
 
-### 關於本作業
+### 關於此作業
+{: #wks_projdocsets_about}
 
 > **注意：**如果您使用 Google Chrome 瀏覽器，則無法透過從資料夾選取大量檔案（例如超過 300 個）的方式來上傳檔案。暫行解決方法是使用 Firefox 瀏覽器，或者選取少量檔案並分次上傳檔案。
 
 每個工作區最多可以建立 1,000 個註釋集。
 
 ### 程序
+{: #wks_projdocsets_procedure}
 
 若要建立註釋集，請執行下列動作：
 
 1. 以 {{site.data.keyword.knowledgestudioshort}} 管理者或專案經理身分登入，並選取您的工作區。
-1. 選取**資產及工具** > **文件** > **註釋集**標籤。
+1. 選取**資產** > **文件** > **註釋集**標籤。
 1. 按一下**建立註釋集**。
 
     1. 對於基本集，選取您要劃分為註釋集的文件集合，這可以是語料庫中的所有文件，或是先前配置給文件集的文件。
@@ -176,7 +196,7 @@ lastupdated: "2018-04-04"
 
     1. 從註釋人員清單中選取使用者名稱。
 
-        > **附註：**如果您使用免費訂閱方案，請建立您自己與註釋集的關聯。您無法新增其他使用者，並將他們指派給註釋人員角色。但是，藉由新增自己，您可以填寫註釋人員的角色，並測試實際註釋人員如何與基準編輯器互動以註釋文件。
+        > **附註：**如果您有「精簡」訂閱方案，請建立您自己與註釋集的關聯。您無法新增其他使用者，並將他們指派給註釋人員角色。但是，藉由新增自己，您可以填寫註釋人員的角色，並測試實際註釋人員如何與基準編輯器互動以註釋文件。
 
     1. 命名註釋集。
 
@@ -185,26 +205,68 @@ lastupdated: "2018-04-04"
 1. 完成指派將使用此工作區的所有註釋人員之後，請按一下**產生**來建立註釋集。當註釋人員登入基準編輯器時，只會看到指派給他們的註釋集。
 
 **相關作業**：
+{: #wks_related_tasks}
 
 [組合團隊](/docs/services/watson-knowledge-studio/team.html)
 
 ## 刪除文件
-{: #wks_projdelete}
+{: #wks_deletedocs}
 
-如果您判定文件不代表會讓模型受益的標準產業文字，則可以移除該文件。
+如果您判定文件不代表會讓模型受益的標準產業文字，則可以刪除該文件。
 
-### 程序
+若要刪除文件，請選擇適用於您狀況的選項：
+- [刪除尚未與註釋作業相關聯的文件](#deletenotask)
+- [刪除與註釋作業相關聯且人工註釋*尚未開始* 的文件](#deletenoanno)
+- [刪除與註釋作業相關聯且人工註釋*已開始* 的文件](#deleteanno)
 
-若要刪除文件，請完成下列步驟：
+### 刪除尚未與註釋作業相關聯的文件
+{: #deletenotask}
+
+如果您要刪除的文件未與註釋作業相關聯，請完成下列步驟來刪除文件。
+
+#### 程序
+{: #deletenotaskp}
 
 1. 以 {{site.data.keyword.knowledgestudioshort}} 管理者身分登入，並選取您的工作區。
-1. 選取**資產及工具** > **文件** > **文件集**標籤。
-1. 尋找您要移除的文件，然後按一下**刪除**。
-1. 您無法刪除內含在註釋集（已與註釋作業相關聯）中的文件。如果文件是註釋集的一部分，但尚未與作業相關聯，您可以遵循先前的步驟來刪除文件。
+1. 選取**資產** > **文件** > **文件集**標籤。
+2. 選取包含您要刪除之文件的文件集。即會開啟文件集。
+3. 尋找您要移除的文件，然後按一下**刪除**。
 
-    如果文件與註釋作業相關聯，請執行下列其中一個作業：
-    - 如果註釋人員尚未開始註釋文件，請刪除註釋作業，然後刪除文件。若要刪除註釋作業，請開啟**資產及工具** > **文件** > **作業**標籤，尋找與文件相關聯的註釋作業，按一下作業的**顯示功能表**圖示，然後按一下**刪除**。之後，您可以重建註釋作業並關聯相同的註釋集，現在其中有一個較少的文件。
-    - 如果註釋人員已開始註釋文件，請不要刪除作業，否則您將會失去他們的工作。您可以告訴他們繼續工作，但忽略集合中不想要的文件。讓他們完成所有其他的註釋工作，然後完成將集合新增至基準的程序。新增之後，但在任何人執行機器學習模型之前，請刪除不要的文件。您不會想要使用未註釋的文件來訓練模型，因為不論您有沒有註釋，機器學習模型都會從中學習。現在，您可以從**資產及工具** > **文件** > **文件集**標籤中，刪除不想要但目前又是基準一部分的文件。
+### 刪除與註釋作業相關聯且人工註釋尚未開始的文件
+{: #deletenoanno}
+
+如果您要刪除的文件與註釋作業相關聯，且人工註釋*尚未開始*，請完成下列步驟來刪除文件。
+
+#### 程序
+{: #deletenoannop}
+
+1. 以 {{site.data.keyword.knowledgestudioshort}} 管理者身分登入，並選取您的工作區。
+1. 刪除註釋作業：
+
+  a. 開啟**機器學習模型** > **註釋作業**頁面。
+
+  b. 尋找與文件相關聯的註釋作業、按一下作業上的**顯示功能表**圖示，然後按一下**刪除**。
+
+1. 依[刪除尚未與註釋作業相關聯的文件](#deletenotask)所述刪除文件。
+1. 在刪除文件之後，重建註釋作業並建立與相同的註釋集的關聯，現在其中有一個較少的文件。
+
+### 刪除與註釋作業相關聯且人工註釋已開始的文件
+{: #deleteanno}
+
+如果您要刪除的文件與註釋作業相關聯，且人工註釋*已開始*，請完成下列步驟來刪除文件。
+
+**注意**：如果人工註釋進行中，請不要刪除作業。如果這樣做，將失去進行中的工作。
+
+#### 程序
+{: #deleteannop}
+
+1. 告訴註釋人員忽略註釋集中不需要的文件。
+1. 在其他文件上完成所有註釋工作，而且註釋人員提交所有文件，以將註釋集新增至基準之後，請[檢閱並接受提交的文件](/docs/services/watson-knowledge-studio/build-groundtruth.html#wks_haaccuracy)。
+1. [解決所有註釋衝突](/docs/services/watson-knowledge-studio/build-groundtruth.html#wks_haadjudicate)。
+1. 當所有文件是基準的一部分，且作業完成時，請依[刪除與註釋作業相關聯且人工註釋尚未開始的文件](#deletenoannop)所述刪除作業。
+1. 依[刪除尚未與註釋作業相關聯的文件](#deletenotask)所述刪除文件。
+
+  **附註**：您可以下載文件集，並檢閱 `gt` 資料夾中的文件，來確認其餘文件上的註釋並未遺失。
 
 ## 資料模型
 {: #wks_datamodel}

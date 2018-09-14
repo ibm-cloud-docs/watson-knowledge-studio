@@ -30,23 +30,23 @@ Il supporto per più lingue non significa che il prodotto stesso sia tradotto. L
 
 Puoi preparare un modello nelle seguenti lingue:
 
-- Inglese (la lingua predefinita) 
-- Arabo 
+- Inglese (la lingua predefinita)
+- Arabo
 - Portoghese brasiliano
-- Cinese (semplificato) 
-- Olandese 
+- Cinese (semplificato)
+- Olandese
 - Francese
 - Tedesco
 - Italiano
 - Giapponese
 - Coreano
-- Spagnolo 
+- Spagnolo
 
 Il supporto include la capacità di aggiungere i documenti in queste lingue a uno spazio di lavoro, aggiungere i dizionari, eseguire la pre-annotazione, utilizzare l'editor ground truth per annotare i documenti e preparare un modello di machine learning. Quando selezioni una lingua, il sistema applica i modelli specifici della lingua per gestire le voci del dizionario, la suddivisione in token del testo e la segmentazione della frase. Per le informazioni su come il sistema gestisce i dizionari in lingue differenti, consulta [Dizionari](/docs/services/watson-knowledge-studio/dictionaries.html#wks_dictionaries).
 
 > **Nota:** l'editor delle regole e il modello basato sulla regola non possono gestire il testo bidirezionale, per cui non possono essere utilizzati con i documenti in arabo.
 
-> **Limitazioni:** 
+> **Limitazioni:**
 >
 > A causa delle limitazioni nella tecnologia machine learning sottostante, le voci nel sistema tipo non possono contenere gli spazi e possono includere solo i seguenti caratteri ASCII:
 >

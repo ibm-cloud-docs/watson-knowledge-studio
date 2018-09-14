@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -28,7 +28,7 @@ Utilizza {{site.data.keyword.knowledgestudiofull}} per creare un modello di mach
 
 Per diventare un esperto in materia per un determinato dominio o un settore, {{site.data.keyword.watson}} deve essere preparato. Puoi facilitare l'attività di preparazione di {{site.data.keyword.watson}} con {{site.data.keyword.knowledgestudioshort}}.
 
-## Crea un modello di machine learning 
+## Crea un modello di machine learning
 
 {{site.data.keyword.knowledgestudioshort}} fornisce strumenti di facile utilizzo per l'annotazione della letteratura del dominio non strutturata e utilizza queste annotazioni per creare un modello di machine learning personalizzato che comprende la lingua del dominio. L'accuratezza del modello migliora attraverso la verifica iterativa, infine determinando un algoritmo che può imparare dai modelli e che li visualizza e riconosce in raccolte molto grandi di nuovi documenti. Puoi distribuire il modello di machine learning finito ad altre soluzioni cognitive e offerte basate sul cloud di {{site.data.keyword.watson}} e estrarre le citazioni di relazioni e entità, incluse le coreferenze dell'entità.
 

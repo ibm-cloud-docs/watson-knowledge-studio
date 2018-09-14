@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -51,31 +51,38 @@ Les scores de convergence entre annotateurs indiquent dans quelle mesure les ann
 
 Pour vous permettre d'identifier plus facilement les domaines qui nécessitent une investigation, les scores inférieurs à la valeur que vous avez spécifiée pour le seuil de convergence entre annotateurs sont surlignés en rouge. Au début d'un projet d'annotation, les scores des relations sont souvent moins bon que ceux des mentions, car pour être parfaite, une annotation de relation nécessite qu'il y ait convergence entre les mentions reliées par cette relation.
 
-Le score dans la colonne **Tous** est un *Kappa de Fleiss*. Il représente le degré de concordance avec lequel la même annotation a été appliquée par plusieurs annotateurs humains entre tous les documents qui se chevauchent dans la tâche. Sa valeur, qui peut aller jusqu'à 1 pour les meilleurs scores et être négative pour les plus mauvais, aide à identifier les points à améliorer dans les directives d'annotation, ainsi que les points faibles des annotateurs humains. La grille de lecture suivante (*Landis et Koch, 1977*) fournit un point de départ à l'évaluation des performances générales :
+Le score dans la colonne **Tous** est un *Kappa de Fleiss*. Il représente le degré de concordance avec lequel la même annotation a été appliquée par plusieurs annotateurs humains entre tous les documents qui se chevauchent dans la tâche. Sa valeur, qui peut aller jusqu'à 1 pour les meilleurs scores et être négative pour les plus mauvais, aide à identifier les points à améliorer dans les directives d'annotation, ainsi que les points faibles des annotateurs humains. La grille de lecture suivante (*Landis et Koch, 1977*) fournit un point de départ à l'évaluation des performances générales.
 
-<table cellpadding="4" cellspacing="0" summary="" id="wks_haiaa__table_p5s_dx1_f5" class="table" rules="rows" frame="void" border="0"><thead class="thead" align="left"><tr class="row"><th class="entry ncol thleft" align="left" valign="top" id="d12741e148">Score</th>
-<th class="entry ncol thleft" align="left" valign="top" id="d12741e150">Niveau de convergence</th>
-</tr>
-</thead>
-<tbody class="tbody"><tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">&lt; 0</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Mauvais</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">0,01 à 0,20</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Médiocre</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">0,21 à 0,40</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Moyen</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">0,41 à 0,60</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Intermédiaire</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">0,61 à 0,80</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Bon</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">0,81 à 1,0</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Excellent</p></td>
-</tr>
-</tbody>
+<table style="width:60%" summary="Tableau fournissant des consignes générales pour l'évaluation de la performance globale de la convergence entre annotateurs.">
+<caption>Tableau 1. Consignes pour l'évaluation de la convergence entre annotateurs</caption>
+  <tr>
+    <th style="vertical-align:bottom; text-align:center" id="d12741e148">Score</th>
+    <th style="vertical-align:bottom; text-align:center" id="d12741e150">Niveau de convergence</th>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">&lt; 0</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Mauvais</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">0,01 à 0,20</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Médiocre</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">0,21 à 0,40</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Moyen</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">0,41 à 0,60</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Intermédiaire</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">0,61 à 0,80</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Bon</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">0,81 à 1,0</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Excellent</td>
+  </tr>
 </table>
 
 Le score dans les autres colonnes est une *mesure F1*. Il représente le niveau de cohérence des annotations effectuées par une paire d'annotateurs humains. Sa valeur est comprise entre 0 et 1, la convergence parfaite étant indiquée par le score 1. Ce sont les données de votre domaine et votre système de types qui déterminent ce qui peut être considéré comme un niveau de convergence acceptable. Mais à titre d'exemple, voici les seuils F1 que les chefs de projet considèrent comme devant être atteints ou dépassés dans les projets basés sur le système de types KLUE :
@@ -94,17 +101,19 @@ Un système de types comprenant de nombreux types d'entités et de relations est
 Au moment de déterminer quels documents sont à promouvoir au rang de données de référence, vous devez étudier les scores de convergence entre annotateurs. Tout document ayant de faibles scores est vraisemblablement à rejeter et à retourner à l'annotateur humain pour qu'il l'améliore.
 
 ### A propos de cette tâche
+{: #wks_haaccuracy_about}
 
-Vous devez examiner les documents chevauchants, c'est-à-dire ceux dont plusieurs exemplaires ont été annotés par plusieurs annotateurs humains. Si un document n'est pas commun à plusieurs jeux d'annotations confiés à différents annotateurs humains, il n'y a pas de score de convergence à calculer. Lorsque vous ajoutez des jeux d'annotations à une tâche, assurez-vous que les jeux que vous prévoyez de comparer contiennent les mêmes documents chevauchants. Vous pouvez voir quels documents composent un jeu d'annotations en ouvrant la page **Actifs & Outils** > **Documents**, en cliquant sur l'onglet **Jeux d'annotations**, puis en cliquant sur le nom du jeu qui vous intéresse.
+Vous devez examiner les documents chevauchants, c'est-à-dire ceux dont plusieurs exemplaires ont été annotés par plusieurs annotateurs humains. Si un document n'est pas commun à plusieurs jeux d'annotations confiés à différents annotateurs humains, il n'y a pas de score de convergence à calculer. Lorsque vous ajoutez des jeux d'annotations à une tâche, assurez-vous que les jeux que vous prévoyez de comparer contiennent les mêmes documents chevauchants. Vous pouvez voir quels documents composent un jeu d'annotations en ouvrant la page **Actifs** > **Documents**, en cliquant sur l'onglet **Jeux d'annotations**, puis en cliquant sur le nom du jeu qui vous intéresse.
 
 Il peut arriver qu'aucun document chevauchant ne soit trouvé. Cela peut se produire, par exemple, si vous créez des jeux d'annotations en deux tours et que vous les ajoutez à la même tâche. Même si les jeux d'annotations ont été créés à peu près au même moment, ils n'ont aucun document en commun. Autre exemple, vous créez des jeux d'annotations avec des documents chevauchants, mais vous ajoutez un seul jeu par tâche au lieu de les ajouter tous à une même tâche. Là encore, aucun document chevauchant n'est trouvé et le score de convergence entre annotateurs ne peut être calculé.
 
 ### Procédure
+{: #wks_haaccuracy_procedure}
 
 Pour évaluer la convergence des annotations entre annotateurs humains :
 
 1. Connectez-vous en tant qu'administrateur ou chef de projet {{site.data.keyword.knowledgestudioshort}} et sélectionnez votre espace de travail.
-1. Sélectionnez l'onglet **Actifs & Outils** > **Documents** > **Tâches** et ouvrez la tâche que vous voulez évaluer.
+1. Sélectionnez la page **Modèle d'apprentissage automatique** > **Tâches d'annotation** et ouvrez la tâche que vous voulez évaluer.
 1. Cliquez sur **Calculer les scores de convergence entre annotateurs (IAA)**. La vue par défaut montre les scores de convergence, c'est-à-dire le niveau de cohérence avec lequel les différentes paires d'annotateurs humains ont annoté des mentions. La rangée du haut montre le niveau général de cohérence entre les différentes paires d'annotateurs. Le tableau en dessous montre le niveau de cohérence avec lequel les annotateurs d'une paire donnée ont étiqueté des mentions spécifiques dans le texte.
 1. Pour examiner le niveau de cohérence avec lequel les différentes paires d'annotateurs humains ont annoté les relations et les coréférences, sélectionnez **Relation** ou **Coréférence** dans le premier menu.
 1. Pour examiner le niveau de cohérence avec lequel les annotateurs humains d'une même paire ont annoté les entités, les relations ou les coréférences dans des documents chevauchants spécifiques, sélectionnez **Document** dans le second menu, puis choisissez la paire d'annotateurs à évaluer.
@@ -151,10 +160,12 @@ Voici quelques exemples des différents points de désaccord qui peuvent exister
 L'arbitrage est une étape visant à passer en revue les conflits d'annotations dans les documents chevauchants avant de promouvoir les annotations au rang de données de référence. Vous pouvez comparer les annotations ajoutées par une paire d'annotateurs humains ou comparer les annotations humaines aux données de référence du moment.
 
 ### Avant de commencer
+{: #wks_haadjudicate_prereq}
 
 Cliquez sur [ce lien ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.youtube.com/watch?v=EbexfsuXxoQ&amp;feature=youtu.be){: new_window} pour visionner une vidéo de 3 minutes illustrant comment arbitrer des documents.
 
 ### A propos de cette tâche
+{: #wks_haadjudicate_about}
 
 Lorsque les annotateurs humains ont terminé leurs tâches d'annotation, ils doivent soumettre les jeux d'annotations pour révision. En évaluant les scores de convergence entre annotateurs, vous pouvez voir comment différentes paires d'annotateurs humains peuvent annoter plus ou moins différemment un même document. Si le score est acceptable, vous approuvez le jeu d'annotations. Si un document est unique à un jeu d'annotations de la tâche (autrement dit, s'il ne se retrouve pas dans plusieurs jeux), les annotations qu'il contient sont promues au rang de données de référence. En revanche, si un document est commun à plusieurs jeux d'annotations, vous devez l'arbitrer ou, plus exactement, résoudre les éventuels conflits d'annotations avant de promouvoir les annotations qu'il contient au rang de données de référence.
 
@@ -163,11 +174,12 @@ Par exemple, en arbitrant un document, vous constatez qu'un annotateur a étique
 {{site.data.keyword.knowledgestudioshort}} prévoit la possibilité d'arbitrer les annotations d'un document entre deux jeux d'annotations à la fois ou entre un jeu d'annotations et les données de référence du moment. Si un document figure dans au moins trois jeux d'annotations, arbitrez-le entre les deux jeux dans lesquels vous avez le plus confiance (peut-être parce que vous avez plus confiance dans les annotateurs auxquels ces jeux ont été confiés) afin de déterminer les données de référence pour ce document. Arbitrez ensuite le document dans le reste des jeux d'annotations par rapport aux résultats de ce premier arbitrage.
 
 ### Procédure
+{: #wks_haadjudicate_procedure}
 
 Pour voir les documents qui se chevauchent et résoudre les conflits :
 
 1. Connectez-vous en tant qu'administrateur ou chef de projet {{site.data.keyword.knowledgestudioshort}} et sélectionnez votre espace de travail.
-1. Sélectionnez l'onglet **Actifs & Outils** > **Documents** > **Tâches** et ouvrez la tâche que vous voulez évaluer.
+1. Sélectionnez la page **Modèle d'apprentissage automatique** > **Tâches d'annotation** et ouvrez la tâche que vous voulez évaluer.
 1. Vérifiez qu'il y a au moins deux jeux d'annotations dont le statut est **EN CONFLIT**.
 1. Cliquez sur **Rechercher les conflits dans les documents qui se chevauchent**. Les documents contenant des conflits sont listés.
 1. Si vous voulez ignorer les conflits dans un document chevauchant et promouvoir ses annotations au rang de données de référence sans les arbitrer, cliquez sur **Accepter**.
@@ -177,7 +189,7 @@ Pour voir les documents qui se chevauchent et résoudre les conflits :
     L'outil d'arbitrage indique combien il y a de conflits de mentions, de relations et de chaînes de coréférences. Vous devez résoudre les conflits entre mentions avant de passer à la résolution des conflits entre relations et des conflits entre chaînes de coréférences.
 
 1. Cliquez pour mettre en évidence une phrase contenant des conflits. Pour mieux vous concentrer sur les conflits non résolus, vous pouvez décocher la case **Résolu** et ne cocher que la case **Non résolu**.
-1. Cliquez individuellement sur les annotations et, pour chacune, cliquez sur **Accepter** ou **Rejeter**. Pour annuler une décision que vous venez de prendre, appuyez sur `Ctrl+Z`.
+1. Cliquez individuellement sur les annotations et, pour chacune, cliquez sur **Accepter** ou **Rejeter**. Pour annuler une décision que vous venez de prendre, appuyez sur Ctrl+Z.
 
     Vous pouvez aussi sélectionner plusieurs annotations à la fois pour les accepter ou les rejeter en bloc. Si vous renoncez à sélectionner une annotation que vous venez d'inclure dans la sélection, annulez cette dernière en cliquant sur un espace entre deux phrases ou en appuyant sur la touche **Echap**.
 

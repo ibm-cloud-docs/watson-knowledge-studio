@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-08-03"
 
 ---
 
@@ -27,12 +27,13 @@ lastupdated: "2018-04-04"
 {: shortdesc}
 
 ## 關於本作業
+{: #evaluate-ml_about}
 
 您可以透過檢視實體類型、關係類型及互相參照提及項目的統計資料摘要，來分析效能。您也可以分析*混淆矩陣* 中呈現的統計資料。混淆矩陣可協助您比較機器學習模型所新增的註釋與基準中的註釋。
 
 模型統計資料提供下列度量值：
 
-- **F1 分數**
+- **F1 分數 (F1 score)**
 
     此測量同時考量查準率及查全率來計算分數。F1 分數可以解譯為查準率與查全率值的加權平均，其中，F1 分數的最佳值為 1，最差值為 0。請參閱[分析低 F1 分數](/docs/services/watson-knowledge-studio/evaluate-ml.html#evaluate-mllowf1)。
 
@@ -57,13 +58,14 @@ lastupdated: "2018-04-04"
     基準的測量，顯示包含給定實體類型或關係類型的文件數目。此統計資料不適用於互相參照的提及項目。此值可協助您評量集合中的文件是否足以代表領域。如果重要實體類型的百分比很低，則您可能想要新增更多文件，內含數量不足之類型的提及項目。
 
 ## 程序
+{: #evaluate-ml_procedure}
 
 若要檢視模型訓練成果的效能統計資料，請執行下列動作：
 
 1. 以 {{site.data.keyword.knowledgestudioshort}} 管理者或專案經理身分登入，並選取您的工作區。
-1. 選取**模型管理** > **效能**。
+1. 選取**機器學習模型** > **效能**。
 1. 針對提及項目、關係或互相參照，選取**詳細統計資料**鏈結。
-1. 在**摘要**視圖中，指定您要評估測試資料或訓練資料，然後指定您要查看其統計資料的註釋類型：實體類型、關係類型或互相參照的提及項目。請注意，盲目資料很少進行分析，且會分析到您對測試資料分數感到相對自信為止。當您捲動瀏覽資料時，會標示及強調顯示分數低的項目，以指出它們需要進行調查和改善。三角形警告圖示指出 F1 值小於固定值 0.5。
+1. 在**摘要**視圖中，指定您要評估測試資料或訓練資料，然後指定您要查看其統計資料的註釋類型：實體類型、關係類型或互相參照的提及項目。當您捲動瀏覽資料時，會標示及強調顯示分數低的項目，以指出它們需要進行調查和改善。三角形警告圖示指出 F1 值小於固定值 0.5。
 
     例如，部分實體類型的 F1 分數可能很高，因為文件是透過預先註釋以及由註釋人員進行註釋。但其他實體類型的 F1 分數可能很低，因為詞組中的差異，以及註釋人員解譯文字或註釋準則的方式差異，讓機器學習模型更難以辨識型樣及套用正確的註釋。
 
@@ -80,15 +82,19 @@ lastupdated: "2018-04-04"
 
     例如，下列混淆矩陣範例顯示機器學習模型在處理交通事故之文件上的執行結果。
 
-    <table cellpadding="4" cellspacing="0" summary="事故報告混淆矩陣範例" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d15356e164" class="stentry thleft thbot">實體類型</th>
-        <th valign="bottom" align="left" id="d15356e166" class="stentry thleft thbot">MANUFACTURER</th>
-        <th valign="bottom" align="left" id="d15356e168" class="stentry thleft thbot">MODEL</th>
-        <th valign="bottom" align="left" id="d15356e170" class="stentry thleft thbot">O</th>
+    <table summary="突發事件報告混淆矩陣範例">
+       <caption>表 1. 混淆矩陣範例</caption>
+       <tr>
+        <th style="vertical-align:bottom; text-align:left" id="d15356e164">實體類型</th>
+        <th style="vertical-align:bottom; text-align:center" id="d15356e166">MANUFACTURER</th>
+        <th style="vertical-align:bottom; text-align:center" id="d15356e168">MODEL</th>
+        <th style="vertical-align:bottom; text-align:center" id="d15356e170">O</th>
       </tr>
-      <tr class="strow"><td valign="top" headers="d15356e164" class="stentry"><p class="p wrapper">MANUFACTURER</p></td>
-        <td valign="top" headers="d15356e166" class="stentry"><p class="p wrapper">515</p></td>
-        <td valign="top" headers="d15356e168" class="stentry"><p class="p wrapper">5</p></td>
-        <td valign="top" headers="d15356e170" class="stentry"><p class="p wrapper">44</p></td>
+      <tr>
+        <td style="vertical-align:top; text-align:left" headers="d15356e164">MANUFACTURER</td>
+        <td style="vertical-align:top; text-align:center" headers="d15356e166">515</td>
+        <td style="vertical-align:top; text-align:center" headers="d15356e168">5</td>
+        <td style="vertical-align:top; text-align:center" headers="d15356e170">44</td>
       </tr>
     </table>
     {: #evaluate-ml__datasimpletable_yms_hff_cw}
@@ -109,121 +115,134 @@ lastupdated: "2018-04-04"
 
 下表針對最常見的機器學習模型效能問題來建議修正方式。
 
-<table cellpadding="4" cellspacing="0" summary="此表格在第一個直欄列出一般問題，並在第一列列出建議的修正方式。X 標示指出哪一個修正方式要套用至哪一個問題。" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d15356e221" class="stentry thleft thbot">問題</th>
-<th valign="bottom" align="left" id="d15356e223" class="stentry thleft thbot">新增字典</th>
-<th valign="bottom" align="left" id="d15356e225" class="stentry thleft thbot">編輯文件集</th>
-<th valign="bottom" align="left" id="d15356e227" class="stentry thleft thbot">新增特定類型專用文件</th>
-<th valign="bottom" align="left" id="d15356e229" class="stentry thleft thbot">對語料庫進行更多註釋</th>
-<th valign="bottom" align="left" id="d15356e231" class="stentry thleft thbot">修正人工註釋</th>
-<th valign="bottom" align="left" id="d15356e233" class="stentry thleft thbot">加強註釋人員準則</th>
-<th valign="bottom" align="left" id="d15356e235" class="stentry thleft thbot">更新類型系統</th>
-<th valign="bottom" align="left" id="d15356e237" class="stentry thleft thbot">進一步調查</th>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">低 F1</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper">X</p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">低查準率</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper">X</p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">低查全率</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">低註釋 %</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">低密度</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">類型的文件數太少</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">分類不正確</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">遺失註釋</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">測試與訓練結果有落差</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper"></p></td>
-</tr>
-<tr class="strow"><td valign="top" headers="d15356e221" class="stentry"><p class="p wrapper">測試訓練資料的低 F1</p></td>
-<td valign="top" headers="d15356e223" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e225" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e227" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e229" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e231" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e233" class="stentry"><p class="p wrapper">X</p></td>
-<td valign="top" headers="d15356e235" class="stentry"><p class="p wrapper"></p></td>
-<td valign="top" headers="d15356e237" class="stentry"><p class="p wrapper">X</p></td>
-</tr>
+<table summary="表格會在該第一欄下列出一般問題，並在第一列中列出建議的修正程式。X 標記指出哪個修正程式要套用至哪個問題。">
+    <caption>表 2. 一般效能問題的修正程式</caption>
+    <tr>
+      <th style="vertical-align:bottom; text-align:left" id="d15356e221">問題</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e223">新增字典</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e225">編輯文件集</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e227">新增特定類型專用文件</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e229">對語料庫進行更多註釋</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e231">修正人工註釋</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e233">加強註釋人員準則</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e235">更新類型系統</th>
+      <th style="vertical-align:bottom; text-align:center" id="d15356e237">進一步調查</th>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">低 F1</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237">X</td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">低查準率</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237">X</td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">低查全率</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">低註釋 %</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">低密度</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">類型的文件數太少</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">分類不正確</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">遺失註釋</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">測試與訓練結果有落差</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top; text-align:left" headers="d15356e221">測試訓練資料的低 F1</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e225"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e227"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e229"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e231">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e233">X</td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
+      <td style="vertical-align:top; text-align:center" headers="d15356e237">X</td>
+    </tr>
 </table>
-
- {: #evaluate-ml_cheat__datasimpletable_nhm_5ym_cw}
+{: #evaluate-ml_cheat__datasimpletable_nhm_5ym_cw}
 
 ### 修正方式說明
+{: #evaluate-ml_fixes}
 
 - **新增字典**
 
@@ -277,14 +296,17 @@ lastupdated: "2018-04-04"
 調整機器學習模型的效能，以解決 F1 分數過低。
 
 ### 症狀
+{: #evaluate-mllowf1_symptoms}
 
 F1 分數的最佳值為 1，最差值為 0。低 F1 分數指出查準率及查全率兩者都很差。機器學習模型產生錯誤註釋，且找不到應該找到的註釋。
 
 ### 原因
+{: #evaluate-mllowf1_causes}
 
 有很多不同的原因會造成低 F1 分數，視領域、類型系統複雜性、訓練文件適用性、註釋人員技能以及其他因素而定。
 
 ### 解決問題
+{: #evaluate-mllowf1_resolving}
 
 執行下列一個以上步驟，來調整機器學習模型的效能，然後重新訓練您的模型：
 
@@ -310,14 +332,17 @@ F1 分數的最佳值為 1，最差值為 0。低 F1 分數指出查準率及查
 調整機器學習模型的效能，以解決低查準率分數。在高層次，低查準率指出需要改善註釋一致性。
 
 ### 症狀
+{: #evaluate-mllowp_symptoms}
 
 查準率分數的最佳值為 1，最差值為 0。低查準率分數指出機器學習模型產生不正確的註釋。
 
 ### 原因
+{: #evaluate-mllowp_causes}
 
 有很多不同的原因會造成低查準率分數，視領域、類型系統複雜性、訓練文件適用性、註釋人員技能以及其他因素而定。
 
 ### 解決問題
+{: #evaluate-mllowp_resolving}
 
 執行下列一個以上步驟，來調整機器學習模型的效能，然後重新訓練您的模型：
 
@@ -337,14 +362,17 @@ F1 分數的最佳值為 1，最差值為 0。低 F1 分數指出查準率及查
 調整機器學習模型的效能，以解決低查全率分數。在高層次，低查全率指出需要新增其他訓練資料。
 
 ### 症狀
+{: #evaluate-mllowr_symptoms}
 
 查全率分數的最佳值為 1，最差值為 0。低查全率分數指出機器學習模型無法建立其應該要建立的註釋。
 
 ### 原因
+{: #evaluate-mllowr_causes}
 
 有很多不同的原因會造成低查全率分數，視領域、類型系統複雜性、訓練文件適用性、註釋人員技能以及其他因素而定。
 
 ### 解決問題
+{: #evaluate-mllowr_resolving}
 
 執行下列一個以上步驟，來調整機器學習模型的效能，然後重新訓練您的模型：
 

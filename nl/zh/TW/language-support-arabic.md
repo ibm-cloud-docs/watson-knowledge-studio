@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -52,4 +52,4 @@ lastupdated: "2018-04-04"
 
 ### 相關參考資訊
 
-[多重語言支援](/docs/services/watson-knowledge-studio/language-support.html)
+[語言支援](/docs/services/watson-knowledge-studio/language-support.html)

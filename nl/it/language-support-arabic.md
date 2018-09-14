@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-04-04"
 Questa documentazione è per {{site.data.keyword.knowledgestudiofull}} su {{site.data.keyword.cloud}}. Per visualizzare la documentazione della versione precedente di {{site.data.keyword.knowledgestudioshort}} nel {{site.data.keyword.IBM_notm}} Marketplace, [fai clic su questo link ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/services/knowledge-studio/language-support-arabic.html){: new_window}.
 {: tip}
 
-# Configurazione del supporto per l'arabo 
+# Configurazione del supporto per l'arabo
 {: #wks_langsupp_ar}
 
 Leggi queste linee guida per comprendere come {{site.data.keyword.knowledgestudioshort}} gestisce la forma dei caratteri e dei numeri arabi nei documenti in arabo.
@@ -52,4 +52,4 @@ Per configurare la forma numerica nel browser Firefox:
 
 ### Riferimenti correlati
 
-[Supporto di più lingue](/docs/services/watson-knowledge-studio/language-support.html)
+[Supporto per la lingua](/docs/services/watson-knowledge-studio/language-support.html)

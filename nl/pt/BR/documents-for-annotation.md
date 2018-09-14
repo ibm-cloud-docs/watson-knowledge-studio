@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -27,6 +27,7 @@ Para treinar um modelo de aprendizado de máquina, deve-se incluir documentos qu
 {: shortdesc}
 
 ## Sobre essa Tarefa
+{: #annotation_about}
 
 Para definir regras para o modelo baseado em regra, você inclui ou faz upload de documentos dos quais é possível desenhar padrões para definir como regras. Veja [Incluindo documentos para definir regras](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html) para obter mais informações. Esta seção descreve como incluir documentos somente para anotação.
 
@@ -55,7 +56,7 @@ Quando você estiver pronto para criar e treinar o modelo, os documentos que voc
 ### Arquivos CSV
 {: #wks_sampledoc__wks_samplecsv}
 
-É possível fazer upload de um arquivo CSV de duas colunas que contém texto de amostra da sua máquina local. Faça upload de um arquivo CSV por vez. A primeira coluna no arquivo CSV especifica o nome do arquivo do documento. A segunda coluna no arquivo contém o texto do documento. Para obter um exemplo do formato necessário, veja o arquivo <a href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/documents-new.csv" download>`documentos-new.csv`<img src="../../icons/launch-glyph.svg" alt="Ícone de link externo" title="Ícone de link externo" class="style-scope doc-content"></a> nos arquivos de amostra do tutorial.
+É possível fazer upload de um arquivo CSV de duas colunas que contém texto de amostra da sua máquina local. Faça upload de um arquivo CSV por vez. A primeira coluna no arquivo CSV especifica o nome do arquivo do documento. A segunda coluna no arquivo contém o texto do documento. Para obter um exemplo do formato necessário, veja o arquivo <a href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/documents-new.csv" download>`documentos-new.csv` <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo" title="Ícone de link externo" class="style-scope doc-content"></a> nos arquivos de amostra do tutorial.
 
 ### Documentos de outra área de trabalho do Watson Knowledge Studio
 {: #wks_sampledoc__wks_samplecorpus}
@@ -72,6 +73,7 @@ Para ajudar a treinar um modelo, é possível fazer upload de documentos que for
 Um anotador humano pode revisar, excluir e incluir anotações nesses documentos ou é possível ignorar a anotação humana e usar esses arquivos para criar treinamento, teste e conjuntos de documentos cegos para avaliar e melhorar o desempenho do modelo. Para obter detalhes sobre como criar esses arquivos e os requisitos para fazer upload deles, veja [Fazendo upload de documentos pré-anotados](/docs/services/watson-knowledge-studio/preannotation.html#wks_uima).
 
 ### Anonimando dados
+{: #wks_anonymizing}
 
 Se você deseja construir um modelo que é otimizado para seus dados, mas não deseja fazer upload dos dados no estado em que se encontram para o {{site.data.keyword.knowledgestudioshort}} por razões de privacidade, é possível remover os documentos de quaisquer informações pessoalmente identificáveis (PII) primeiro e, em seguida, usar esses documentos anonimados para treinar o modelo. Não edite as informações ou substitua-as em massa por variáveis. Para obter melhores resultados, substitua as informações reais por informações falsas do mesmo tipo.
 
@@ -83,39 +85,54 @@ Por exemplo, se o PII que você deseja proteger são nomes de clientes, em vez d
 Para treinar um modelo, deve-se incluir documentos que são representantes de seu conteúdo de domínio em sua área de trabalho.
 
 ### Sobre essa Tarefa
+{: #wks_projadd_about}
 
 Como uma melhor prática, inicie com uma coleção relativamente pequena de documentos. Use esses documentos para treinar anotadores humanos (se sua área de trabalho envolve anotação humana) e para refinar as diretrizes de anotação. Os documentos pequenos podem ajudar os anotadores humanos a identificarem cadeias de correferência em todo o documento. À medida que a precisão de anotação melhora, é possível incluir mais documentos no corpus para fornecer maior profundidade para o esforço de treinamento.
 
 ### Procedimento
+{: #wks_projadd_procedure}
 
 Para incluir documentos em uma área de trabalho:
 
 1. Efetue login como um administrador ou gerente de projeto do {{site.data.keyword.knowledgestudioshort}} e selecione a sua área de trabalho.
-1. Selecione a guia **Ativos e ferramentas** > **Documentos** > **Conjuntos de documentação**.
+1. Selecione a guia **Ativos**> **Documentos** > **Conjuntos de documentação**.
 1. Clique em **Fazer upload de conjuntos de documentos** para incluir documentos no corpus.
 1. Faça upload de documentos em um dos formatos a seguir. É possível fazer upload de um tipo de arquivo por vez.
 
-    <table border="1" frame="hsides" rules="rows" cellpadding="4" cellspacing="0" summary="Cada linha nessa tabela descreve uma opção para uma escolha." class="simpletable choicetable choicetableborder">
-      <thead><tr><th id="d31095e284-option" valign="bottom" align="left" class="ncol thleft thbot">Opção</th>
-          <th id="d31095e284-desc" valign="bottom" align="left" class="ncol thleft thbot">Descrição</th></tr></thead>
-      <tbody><tr class="strow chrow"><td valign="top" headers="d31095e284-option" id="d31095e286" class="stentry choption ncol"><p class="p wrapper"><strong>Arquivo CSV</strong></p></td>
-          <td valign="top" headers="d31095e284-desc d31095e286" class="stentry chdesc ncol"><p class="p wrapper">Arraste um único arquivo CSV que contenha seus documentos de amostra ou clique para localizar o arquivo em
-              seu sistema local e, em seguida, clique em <b>Fazer upload</b>. A primeira coluna no arquivo CSV especifica o
-              nome do arquivo do documento. A segunda coluna no arquivo contém o texto do documento.
-              O arquivo CSV deve estar no formato UTF-8.</p></td>
-        </tr>
-        <tr class="strow chrow"><td valign="top" headers="d31095e284-option" id="d31095e294" class="stentry choption ncol"><p class="p wrapper"><strong>Arquivos de texto</strong></p></td>
-          <td valign="top" headers="d31095e284-desc d31095e294" class="stentry chdesc ncol"><p class="p wrapper">Arraste um ou mais arquivos de texto de seu sistema local ou clique para localizar e selecionar os arquivos
-              e, em seguida, clique em <b>Fazer upload</b>. Os arquivos de texto devem estar no formato UTF-8.</p></td>
-        </tr>
-        <tr class="strow chrow"><td valign="top" headers="d31095e284-option" id="d31095e302" class="stentry choption ncol"><p class="p wrapper"><strong>Arquivos DOCXML</strong></p></td>
-          <td valign="top" headers="d31095e284-desc d31095e302" class="stentry chdesc ncol"><p class="p wrapper">Arraste um ou mais arquivos <code>DOCXML</code> de seu sistema local ou clique para localizar
-              e selecionar os arquivos e, em seguida, clique em <b>Fazer upload</b>. Os arquivos <code>DOCXML</code>
-              devem ser documentos que foram transferidos por download de outro modelo de aprendizado de máquina e eles devem estar
-              no formato UTF-8. Esses documentos não são reconvertidos em token no upload.</p></td>
-        </tr>
-        <tr class="strow chrow"><td valign="top" headers="d31095e284-option" id="d31095e316" class="stentry choption ncol"><p class="p wrapper"><strong>Arquivo ZIP</strong></p></td>
-          <td valign="top" headers="d31095e284-desc d31095e316" class="stentry chdesc ncol"><p class="p wrapper">Se você tiver transferido por download anteriormente os documentos de uma
+    <table summary="Cada linha nessa tabela descreve uma opção para uma escolha.">
+      <caption>Tabela 1. Upload de opções</caption>
+      <tr>
+        <th style="vertical-align:bottom; text-align:left" id="d31095e284-option">
+          Opção
+        </th>
+        <th style="vertical-align:bottom; text-align:left" id="d31095e284-desc">
+          Descrição
+        </th>
+      </tr>
+      <tr>
+        <td headers="d31095e284-option" id="d31095e286">
+          <p><strong>Arquivo CSV</strong></p>
+        </td>
+        <td headers="d31095e284-desc d31095e286">
+          <p>Arraste um único arquivo CSV que contenha seus documentos de amostra ou clique para localizar o arquivo em
+              seu sistema local e, em seguida, clique em <b>Fazer upload</b>. A primeira coluna no arquivo CSV especifica o nome do arquivo do documento. A segunda coluna no arquivo contém o texto do documento. O arquivo CSV deve estar no formato UTF-8.</p>
+        </td>
+      </tr>
+      <tr>
+        <td headers="d31095e284-option" id="d31095e294">
+          <p><strong>Arquivos de texto</strong></p>
+        </td>
+        <td headers="d31095e284-desc d31095e294">
+          <p>Arraste um ou mais arquivos de texto de seu sistema local ou clique para localizar e selecionar os arquivos
+              e, em seguida, clique em <b>Fazer upload</b>. Os arquivos de texto devem estar no formato UTF-8.</p>
+        </td>
+      </tr>
+      <tr>
+        <td headers="d31095e284-option" id="d31095e316">
+          <p><strong>Arquivo ZIP</strong></p>
+        </td>
+        <td headers="d31095e284-desc d31095e316">
+          <p>Se você tiver transferido por download anteriormente os documentos de uma
               área de trabalho do Watson
               Knowledge
               Studio, arraste o arquivo
@@ -123,32 +140,32 @@ Para incluir documentos em uma área de trabalho:
               arquivo. Se você deseja incluir anotações que foram incluídas nos documentos antes que eles fossem transferidos por download,
               assegure-se de que a opção para incluir a verdade absoluta esteja selecionada antes de clicar
               em <b>Fazer upload</b>. Somente as anotações que foram promovidas para verdade absoluta antes
-              que os documentos fossem transferidos por download serão importadas. </p><p class="p wrapper"><b>Restrição:</b> quando os documentos anotados são
+              que os documentos fossem transferidos por download serão importadas. </p><p><b>Restrição:</b> quando os documentos anotados são
               importados, eles são reconvertidos em token. Esse processo pode mudar o que o
               Watson Knowledge
               Studio
               considera ser os limites de
               sentença neles. Como as anotações são definidas por sentença, algumas anotações podem ser
               invalidadas durante esse processo. Depois de fazer upload de documentos de outra área de trabalho, faça uma revisão rápida
-              das anotações para direcionar quaisquer discrepâncias. </p>
-            <p class="p">Deve-se fazer upload do sistema de tipos da
+              das anotações para direcionar quaisquer discrepâncias.</p>
+          <p>Deve-se fazer upload do sistema de tipos da
               área de trabalho original para a área de trabalho atual antes de fazer upload de anotações de verdade absoluta. Para obter detalhes,
               veja [Fazendo upload de recursos de outra área de trabalho ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](exportimport.html){: new_window}.</p>
-            <p class="p">Se você fez download anteriormente de documentos anotados que
+          <p>Se você fez download anteriormente de documentos anotados que
               estão no
               formato UIMA
               CAS XMI, é possível
               fazer upload do arquivo <code>ZIP</code> que contém o conteúdo analisado. Especifique que esse é
               o tipo de conteúdo do qual você deseja fazer upload antes de clicar em <b>Fazer upload</b>. Para obter detalhes
               sobre como criar esses arquivos e os requisitos para fazer upload deles, veja [Fazendo upload de documentos pré-anotados ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](preannotation.html#wks_uima){: new_window}.</p>
-          </td>
-        </tr>
-      </tbody>
+        </td>
+      </tr>
     </table>
 
 1. Após os documentos terem sido incluídos, clique nos nomes dos documentos para visualizá-los e verificar se o conteúdo está OK. Por exemplo, verifique se os arquivos de texto estão no formato UTF-8 e se nenhum sinal diacrítico ou problema de normalização de caractere está visível nos documentos e verifique se há quebras de sentença inadequadas. Se existirem problemas, você pode precisar pré-processar os arquivos antes de incluí-los no corpus. Você deseja que os documentos fiquem o mais limpo e bem formatado possível antes de o dicionário ou a anotação humana ser iniciada.
 
 ### O que fazer em seguida
+{: #wks_projadd_next}
 
 Antes de iniciar quaisquer tarefas de anotação humana, divida o corpus em múltiplos conjuntos de documentos e designe os conjuntos de documento a anotadores humanos.
 
@@ -158,22 +175,25 @@ Antes de iniciar quaisquer tarefas de anotação humana, divida o corpus em múl
 Depois de incluir documentos, divida os documentos em conjuntos para que eles possam ser anotados por múltiplos anotadores humanos. Para visualizar as pontuações de concordância entre anotadores, deve-se designar pelo menos dois anotadores humanos e especificar se alguma porcentagem de documentos se sobrepõe entre os conjuntos.
 
 ### Antes de Começar
+{: #wks_projdocsets_prereqs}
 
 - Deve-se fazer upload dos conjuntos de documentos para poder dividi-los em conjuntos de anotações.
 - Deve-se criar contas de usuário no {{site.data.keyword.knowledgestudioshort}} para todos os anotadores humanos que trabalharão em documentos nessa área de trabalho.
 
 ### Sobre essa Tarefa
+{: #wks_projdocsets_about}
 
 > **Atenção:** Se você usar o navegador Google Chrome, não será possível fazer upload de um número grande de arquivos (como mais de 300) selecionando-os de uma pasta. A solução alternativa é usar o navegador Firefox ou selecionar um número menor de arquivos e fazer upload de arquivos várias vezes.
 
 É possível criar um máximo de 1.000 conjuntos de anotações por área de trabalho.
 
 ### Procedimento
+{: #wks_projdocsets_procedure}
 
 Para criar um conjunto de anotações:
 
 1. Efetue login como um administrador ou gerente de projeto do {{site.data.keyword.knowledgestudioshort}} e selecione a sua área de trabalho.
-1. Selecione a guia **Ativos e ferramentas** > **Documentos** > **Conjuntos de anotações**.
+1. Selecione a guia **Ativos**> **Documentos** > **Conjuntos de anotações**.
 1. Clique em **Criar conjuntos de anotações**.
 
     1. Para o conjunto de base, selecione a coleção de documentos que você deseja dividir em conjuntos de anotações, todos os documentos no corpus ou documentos que foram alocados anteriormente para um conjunto de documentos.
@@ -184,7 +204,7 @@ Para criar um conjunto de anotações:
 
     1. Selecione um nome de usuário na lista de anotadores humanos.
 
-        > **Nota:** se você tiver uma assinatura de plano grátis, associe-se com o conjunto de anotações. Não é possível incluir outros usuários e designá-los à função de anotador humano. Mas, incluindo a si mesmo, é possível preencher o papel de um anotador humano e testar como um anotador humano real interagiria com o editor de verdade absoluta para anotar documentos.
+        > **Nota:** se você tiver uma assinatura do plano Lite, associe-se ao conjunto de anotações. Não é possível incluir outros usuários e designá-los à função de anotador humano. Mas, incluindo a si mesmo, é possível preencher o papel de um anotador humano e testar como um anotador humano real interagiria com o editor de verdade absoluta para anotar documentos.
 
     1. Nomeie o conjunto de anotações.
 
@@ -193,26 +213,68 @@ Para criar um conjunto de anotações:
 1. Depois de concluir a designação de todos os anotadores humanos que trabalharão nessa área de trabalho, clique em **Gerar** para criar os conjuntos de anotações. Quando os anotadores humanos efetuam login no editor de verdade absoluta, eles veem somente os conjuntos de anotações designados a eles.
 
 **Tarefas relacionadas**:
+{: #wks_related_tasks}
 
 [Montando uma equipe](/docs/services/watson-knowledge-studio/team.html)
 
 ## Excluindo documentos
-{: #wks_projdelete}
+{: #wks_deletedocs}
 
-É possível remover um documento se você determina que ele não representa o texto da indústria padrão que beneficiará o modelo.
+Será possível excluir um documento se você determinar que ele não representa o texto do segmento de mercado padrão que beneficiará o modelo.
 
-### Procedimento
+Para excluir um documento, escolha a opção que se aplica à sua situação:
+- [Excluindo um documento que não foi associado a uma tarefa de anotação](#deletenotask)
+- [Excluindo um documento que está associado a uma tarefa de anotação e a anotação humana *não foi iniciada*](#deletenoanno)
+- [Excluindo um documento que está associado a uma tarefa de anotação e a anotação humana *foi iniciada*](#deleteanno)
 
-Para excluir um documento, conclua as etapas a seguir:
+### Excluindo um documento que não foi associado a uma tarefa de anotação
+{: #deletenotask}
+
+Se o documento que você deseja excluir não estiver associado a uma tarefa de anotação, conclua estas etapas para excluir o documento.
+
+#### Procedimento
+{: #deletenotaskp}
 
 1. Efetue login como um administrador do {{site.data.keyword.knowledgestudioshort}} e selecione a sua área de trabalho.
-1. Selecione a guia **Ativos e ferramentas** > **Documentos** > **Conjuntos de documentos**.
-1. Localize o documento que você deseja remover e, em seguida, clique em **Excluir**.
-1. Não é possível excluir um documento que está incluído em um conjunto de anotações que foi associado a uma tarefa de anotação. Se o documento faz parte de um conjunto de anotações, mas não foi associado a uma tarefa ainda, é possível excluir o documento seguindo as etapas anteriores.
+1. Selecione a guia **Ativos**> **Documentos** > **Conjuntos de documentos**.
+2. Selecione o conjunto de documentos que contém o documento que você deseja excluir. O conjunto de documentos é aberto.
+3. Localize o documento que você deseja remover e, em seguida, clique em **Excluir**.
 
-    Execute uma das tarefas a seguir se o documento está associado a uma tarefa de anotação:
-    - Se os anotadores humanos não começaram a anotar os documentos, exclua a tarefa anotação e, em seguida, exclua o documento. Para excluir uma tarefa de anotação, abra a guia **Ativos e ferramentas** > **Documentos** > **Tarefas**, localize a tarefa de anotação com a qual o documento está associado, clique no ícone **Mostrar menu** na tarefa e, em seguida, clique em **Excluir**. Depois, é possível recriar a tarefa de anotação e associar o mesmo conjunto de anotações, que agora tem um documento a menos.
-    - Se os anotadores humanos começaram a anotar os documentos, não exclua a tarefa ou você perderá o seu trabalho. É possível dizer a eles para continuar trabalhando, mas para ignorar o documento indesejado no conjunto. Permita que eles concluam todos os outros trabalhos de anotação e passem pelo processo de obtenção do conjunto incluído na verdade absoluta. Depois de ser incluído, mas antes que alguém execute o modelo de aprendizado de máquina, exclua o documento indesejado. Você não deseja usar o documento não anotado para treinar um modelo porque o modelo de aprendizado de máquina aprende tanto do que você não anota quanto do que anota. Agora é possível excluir o documento indesejado, que é atualmente parte da verdade absoluta, na guia **Ativos e ferramentas** > **Documentos** > **Conjuntos de documentos**.
+### Excluindo um documento que está associado a uma tarefa de anotação e a anotação humana não foi iniciada
+{: #deletenoanno}
+
+Se o documento que você deseja excluir estiver associado a uma tarefa de anotação e a anotação humana *ainda não foi iniciada*, conclua estas etapas para excluir o documento.
+
+#### Procedimento
+{: #deletenoannop}
+
+1. Efetue login como um administrador do {{site.data.keyword.knowledgestudioshort}} e selecione a sua área de trabalho.
+1. Exclua a tarefa de anotação:
+
+  a. Abra a página **Modelo de aprendizado de máquina** > **Tarefas de anotação**.
+
+  b. Localize a tarefa de anotação à qual o documento está associado, clique no ícone **Mostrar menu** na tarefa e, em seguida, clique em **Excluir**.
+
+1. Exclua o documento, de acordo com o descrito em [Excluindo um documento que não foi associado a uma tarefa de anotação](#deletenotask).
+1. Depois de excluir o documento, recrie a tarefa de anotação e associe o mesmo conjunto de anotações, que agora tem um documento a menos nele.
+
+### Excluindo um documento que está associado a uma tarefa de anotação e a anotação humana foi iniciada
+{: #deleteanno}
+
+Se o documento que você deseja excluir estiver associado a uma tarefa de anotação e a anotação humana *foi iniciada*, conclua estas etapas para excluir o documento.
+
+**Atenção**: não exclua uma tarefa se a anotação humana estiver em andamento. Se fizer isso, você perderá o trabalho que está em andamento.
+
+#### Procedimento
+{: #deleteannop}
+
+1. Informe aos anotadores humanos para ignorar o documento não desejado no conjunto.
+1. Após todo o trabalho de anotação estar concluído nos outros documentos e os anotadores humanos enviarem todos os documentos para incluir o conjunto na verdade absoluta, [revise e aceite os documentos enviados](/docs/services/watson-knowledge-studio/build-groundtruth.html#wks_haaccuracy).
+1. [ Resolva quaisquer conflitos de anotação ](/docs/services/watson-knowledge-studio/build-groundtruth.html#wks_haadjudicate).
+1. Quando todos os documentos fizerem parte da verdade absoluta e a tarefa estiver concluída, exclua a tarefa conforme descrito em [Excluindo um documento que está associado a uma tarefa de anotação e a anotação humana não foi iniciada](#deletenoannop).
+1. Exclua o documento, de acordo com o descrito em [Excluindo um documento que não foi associado a uma tarefa de anotação](#deletenotask).
+
+  **Nota**: é possível confirmar se as anotações nos documentos restantes não foram perdidas fazendo download dos conjuntos de documentos e revisando os documentos na pasta `gt`.
 
 ## Modelo de dados
 {: #wks_datamodel}

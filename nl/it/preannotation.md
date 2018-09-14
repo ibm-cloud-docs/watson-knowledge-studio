@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-04-04"
 Questa documentazione è per {{site.data.keyword.knowledgestudiofull}} su {{site.data.keyword.cloud}}. Per visualizzare la documentazione della versione precedente di {{site.data.keyword.knowledgestudioshort}} nel {{site.data.keyword.IBM_notm}} Marketplace, [fai clic su questo link ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/services/knowledge-studio/preannotation.html){: new_window}.
 {: tip}
 
-# Inizio dell'annotazione 
+# Inizio dell'annotazione
 {: #preannotation}
 
 Semplifica il lavoro dell'annotatore umano pre-annotando i documenti in uno spazio di lavoro. Un pre-annotatore è un dizionario {{site.data.keyword.knowledgestudioshort}}, un modello basato sulla regola o un modello di machine learning che esegui per trovare e annotare le citazioni automaticamente.
@@ -31,14 +31,15 @@ La pre-annotazione rende il lavoro degli annotatori umani più semplice perché 
 Il metodo che utilizzi per pre-annotare i documenti non limita in alcun modo i modi in cui puoi utilizzare il modello risultante. Ad esempio, solo perché utilizzi il servizio {{site.data.keyword.nlushort}} per pre-annotare i documenti non significa che devi distribuire il modello di machine learning finale che crei per il servizio {{site.data.keyword.nlushort}}. La pre-annotazione è pensata solo per iniziare il processo di annotazione umana.
 
 ## Note importanti
+{: #preannotation_notes}
 
 - Non eseguire mai un pre-annotatore sui documenti che gli annotatori umani hanno annotato perché le annotazioni da loro aggiunte saranno rimosse.
 - Puoi eseguire solo un pre-annotatore sui documenti. Se esegui un pre-annotatore e poi un altro, il secondo rimuoverà le annotazioni che sono state aggiunte dal primo. Scegli il metodo di pre-annotazione che si adatta meglio al tuo caso e utilizza solo un pre-annotatore.
 
 ## Metodi di pre-annotazione
+{: #preannotation_methods}
 
 Sono disponibili i seguenti pre-annotatori:
->**Nota**: il servizio {{site.data.keyword.alchemylanguageshort}} è obsoleto. Per ulteriori informazioni, consulta [Retirement of {{site.data.keyword.alchemyapishort}} service ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/blogs/bluemix/2017/03/bye-bye-alchemyapi/){: new_window}.
 
 - **{{site.data.keyword.nlushort}}**
 
@@ -66,21 +67,24 @@ In alternativa, puoi caricare documenti già annotati e utilizzarli per iniziare
 Puoi utilizzare il servizio {{site.data.keyword.nlushort}} per pre-annotare i documenti che aggiungi al tuo corpus.
 
 ### Prima di cominciare
+{: #wks_preannotnlu_prereqs}
 
 Determina se il pre-annotatore {{site.data.keyword.nlushort}} è presumibile che aggiunga valore al tuo caso di utilizzo. Controlla l'elenco di sottotipi e tipi di entità [{{site.data.keyword.nlushort}} supportati ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/services/natural-language-understanding/entity-types.html){: new_window} per determinare se è presente una sovrapposizione naturale tra loro e i tipi nel tuo sistema tipo. Se è così, continua con questa procedura. Se non lo è, scegli un pre-annotatore diverso da utilizzare.
 
 ### Informazioni su quest'attività
+{: #wks_preannotnlu_about}
 
 {{site.data.keyword.nlushort}} è un servizio che offre l'analisi del testo tramite l'elaborazione del linguaggio naturale. Quando utilizzi il pre-annotatore {{site.data.keyword.nlushort}}, richiama il servizio {{site.data.keyword.nlushort}} per trovare e annotare automaticamente le entità nei tuoi documenti.
 
 Devi specificare i tipi di entità che desideri il servizio ricerchi associando i tipi di entità {{site.data.keyword.nlushort}} ai corrispondenti tipi di entità {{site.data.keyword.knowledgestudioshort}} che hai aggiunto al sistema tipo {{site.data.keyword.knowledgestudioshort}}. Solo le citazioni dei tipi di entità che associ saranno trovate e annotate.
 
 ### Procedura
+{: #wks_preannotnlu_procedure}
 
 Per utilizzare il servizio {{site.data.keyword.nlushort}} per pre-annotare i documenti, completa la seguente procedura:
 
 1. Accedi come amministratore {{site.data.keyword.knowledgestudioshort}} e seleziona il tuo spazio di lavoro.
-1. Seleziona la scheda **Assets & Tools** > **Pre-annotators** > **Natural Language Understanding**.
+1. Seleziona la scheda **Machine Learning Model** > **Pre-annotation** > **Natural Language Understanding**.
 1. Fai clic su **Edit** per associare ogni tipo di entità che viene definito nella pagina **Entity Types** ai tipi di entità corrispondenti {{site.data.keyword.nlushort}}.
 
     - L'elenco a discesa dei tipi di entità {{site.data.keyword.nlushort}} è pre-popolato con i tipi di entità che sono stati riconosciuti dal servizio {{site.data.keyword.nlushort}}.
@@ -88,20 +92,28 @@ Per utilizzare il servizio {{site.data.keyword.nlushort}} per pre-annotare i doc
     - Non puoi associare un tipo di entità {{site.data.keyword.nlushort}} a un ruolo entità {{site.data.keyword.knowledgestudioshort}}, solo ai tipi di entità {{site.data.keyword.knowledgestudioshort}}.
     - Puoi associare più di un tipo di entità {{site.data.keyword.nlushort}} a un solo tipo di entità {{site.data.keyword.knowledgestudioshort}} o il contrario. Ad esempio, le seguenti associazioni sono consentite:
 
-    <table cellpadding="4" cellspacing="0" summary="Associazione di esempio dei tipi di entità" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d20428e292" class="stentry thleft thbot">Tipo di entità Watson Knowledge Studio</th>
-        <th valign="bottom" align="left" id="d20428e298" class="stentry thleft thbot">Tipo di entità {{site.data.keyword.nlushort}} </th>
+    <table summary="Associazione di esempio dei tipi di entità">
+    <caption>Tabella 1. Associazione di esempio dei tipi di entità</caption>
+      <tr>
+        <th style="vertical-align:bottom; text-align"left" id="d20428e292">Watson Knowledge Studio Entity Type</th>
+        <th style="vertical-align:bottom; text-align"left" id="d20428e298">Tipo di entità {{site.data.keyword.nlushort}}</th>
       </tr>
-      <tr class="strow"><td valign="top" headers="d20428e292" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">ENGINEER</p></li>
-            <li class="li"><p class="p wrapper">SCIENTIST</p></li>
-          </ul>
+      <tr>
+        <td headers="d20428e292">
+          ENGINEER<br/>
+          SCIENTIST
         </td>
-        <td valign="top" headers="d20428e298" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">Person</p></li>
-          </ul></td>
+        <td headers="d20428e298">
+          Person
+        </td>
       </tr>
-      <tr class="strow"><td valign="top" headers="d20428e292" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">LOCATION</p></li></td>
-        <td valign="top" headers="d20428e298" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">CityTown</p></li>
-            <li class="li"><p class="p wrapper">Country</p></li>
-          </ul>
+      <tr>
+        <td headers="d20428e292">
+          LOCATION
+        </td>
+        <td headers="d20428e298">
+          CityTown<br/>
+          Country
         </td>
       </tr>
     </table>
@@ -143,32 +155,35 @@ Il ground truth che viene prodotto dai documenti che sono stati pre-annotati dal
 Per aiutare gli annotatori umani ad iniziare le loro attività di annotazione, puoi creare un dizionario e utilizzarlo per pre-annotare i documenti che aggiungi al corpus.
 
 ### Informazioni su quest'attività
+{: #wks_preannot_about}
 
 Quando un annotatore umano inizia a lavorare sui documenti che sono stati pre-annotati, è probabile che molte citazioni siano state già contrassegnate dai tipi di entità in base alle voci del dizionario. L'annotatore umano può modificare o rimuovere i tipi di entità pre-annotati e assegnarne alle citazioni non annotate. La pre-annotazione di un dizionario non annota le relazioni e le coreferenze. Le relazioni e le coreferenze devono essere annotate dagli annotatori umani.
 
-**Nota**: questa attività mostra come creare un dizionario modificabile. Se vuoi caricare e pre-annotare i tuoi documenti con un dizionario in sola lettura, fai clic sul pulsante **Upload Dictionary** disponibile nella scheda **Assets & Tools** > **Pre-annotators** > **Dictionaries**.
+**Nota**: questa attività mostra come creare un dizionario modificabile. Se vuoi caricare e pre-annotare i tuoi documenti con un dizionario in sola lettura, fai clic sull'icona **Menu** accanto al pulsante **Create Dictionary**. Seleziona **Upload Dictionary**.
 
 ### Procedura
+{: #wks_preannot_procedure}
 
 Per creare un dizionario modificabile e pre-annotare i documenti:
 
 1. Accedi come amministratore {{site.data.keyword.knowledgestudioshort}} e seleziona il tuo spazio di lavoro.
-1. Seleziona la scheda **Assets & Tools** > **Pre-annotators** > **Dictionaries**.
-1. Fai clic su **Manage Dictionaries** e poi su **Create Dictionary**.
+1. Seleziona la pagina **Assets** > **Dictionaries**.
+1. Fai clic su **Create Dictionary**, immetti un nome e poi fai clic su **Save**.
 1. Dall'elenco **Entity type**, seleziona un tipo di entità da associare al dizionario.
-1. Aggiungi le voci al dizionario o carica un file che contiene i termini del dizionario.
-1. Ritorna alla pagina **Pre-annotators** e nella scheda **Dictionaries**, fai clic su **Apply This Pre-annotator**.
-1. Seleziona la casella di spunta di ogni serie di documenti che vuoi pre-annotare e fai clic su **Run**.
+3. Aggiungi le voci al dizionario o carica un file che contiene i termini del dizionario.
+4. Fai clic su **Machine Learning Model** > **Pre-annotation**.
+5. Nella scheda **Dictionaries**, fai clic su **Apply This Pre-annotator**.
+6. Seleziona la casella di spunta di ogni serie di documenti che vuoi pre-annotare e fai clic su **Run**.
 
     La pre-annotazione viene applicata ai singoli documenti senza tenere conto delle varie serie di documenti o annotazioni a cui potrebbe appartenere un documento. Un documento che si sovrappone tra una serie di documenti selezionata e una non selezionata sarà pre-annotato in entrambe.
 
-1. Dopo avere creato il dizionario, fai clic su **Run** ogni volta che vuoi utilizzarlo per pre-annotare ulteriori serie di documenti che aggiungi al corpus.
+7. Dopo avere creato il dizionario, fai clic su **Run** ogni volta che vuoi utilizzarlo per pre-annotare ulteriori serie di documenti che aggiungi al corpus.
 
     > **Limitazione:** se modifichi il dizionario per aggiungere o rimuovere le voci, devi ricreare le attività di annotazione che includono le serie di documenti pre-annotati. La pre-annotazione basata sulle modifiche che effettui all'annotatore del dizionario non possono essere applicate alle serie di annotazioni che sono già state assegnate a un'attività di annotazione.
 
 **Informazioni correlate**:
 
-[Dizionari](/docs/services/watson-knowledge-studio/dictionaries.html#wks_dictionaries)
+[Creazione dei dizionari](/docs/services/watson-knowledge-studio/dictionaries.html)
 
 [Introduzione > Aggiunta di un dizionario](/docs/services/watson-knowledge-studio/tutorials-create-project.html#wks_tutless4)
 
@@ -178,48 +193,52 @@ Per creare un dizionario modificabile e pre-annotare i documenti:
 Puoi utilizzare un modello di machine learning esistente per pre-annotare i documenti che aggiungi al tuo corpus.
 
 ### Informazioni su quest'attività
+{: #wks_preannotsire_about}
 
-Dopo aver annotato tra i 10 e i 30 documenti, un modello di machine learning può essere preparato con i dati. Un modello poco preparato non dovrebbe essere utilizzato nella produzione, ma può essere utilizzato come un modello di pre-annotazione che può velocizzare l'annotazione umana dei successivi documenti. Ad esempio, se aggiungi i documenti al corpus dopo aver preparato un modello di machine learning, puoi utilizzarlo per pre-annotare le nuove serie di documenti. Non eseguire mai un pre-annotatore sugli stessi documenti che sono stati annotati da una persona. I pre-annotatori rimuovono l'annotazione umana.
+Dopo aver annotato tra i 10 e i 30 documenti, un modello di machine learning può essere preparato con i dati. Un modello poco preparato non dovrebbe essere utilizzato nella produzione, ma può essere utilizzato per pre-annotare i documenti per velocizzare l'annotazione umana dei successivi documenti. Ad esempio, se aggiungi i documenti al corpus dopo aver preparato un modello di machine learning, puoi utilizzarlo per pre-annotare le nuove serie di documenti. Non eseguire mai un pre-annotatore sugli stessi documenti che sono stati annotati da una persona. I pre-annotatori rimuovono l'annotazione umana.
 
 ### Procedura
+{: #wks_preannotsire_procedure}
 
-Per utilizzare un modello di machine learning esistente per pre-annotare i documenti: 
+Per utilizzare un modello di machine learning esistente per pre-annotare i documenti:
 
 1. Accedi come amministratore {{site.data.keyword.knowledgestudioshort}} e seleziona il tuo spazio di lavoro.
-1. Seleziona la scheda **Model Management** > **Versions** > **Machine Learning**.
-1. Fai clic su **Run this model**.
-1. Seleziona la casella di spunta di ogni serie di documenti che vuoi pre-annotare e fai clic su **Run**.
+2. Seleziona **Machine Learning Model** > **Versions**.
+3. Per pre-annotare nuovi documenti, fai clic su **Run this model**.
+4. Seleziona la casella di spunta di ogni serie di documenti che vuoi pre-annotare e fai clic su **Run**.
 
     La pre-annotazione viene applicata ai singoli documenti senza tenere conto delle varie serie di documenti o annotazioni a cui potrebbe appartenere un documento. Un documento che si sovrappone tra una serie di documenti selezionata e una non selezionata sarà pre-annotato in entrambe.
 
-1. Puoi fare clic su **Run this model** ogni volta che vuoi utilizzare il modello di machine learning per pre-annotare le ulteriori serie di documenti che aggiungi al corpus.
+5. Puoi fare clic su **Run this model** ogni volta che vuoi utilizzare il modello di machine learning per pre-annotare le ulteriori serie di documenti che aggiungi al corpus.
 
-## Pre-annotazione dei documenti con il modello basato sulla regola 
+## Pre-annotazione dei documenti con il modello basato sulla regola
 {: #wks_preannotrule}
 
-Puoi utilizzare un modello basato sulla regola esistente per pre-annotare i documenti che aggiungi al tuo corpus. 
+Puoi utilizzare un modello basato sulla regola esistente per pre-annotare i documenti che aggiungi al tuo corpus.
 
 ### Procedura
+{: #wks_preannotrule_procedure}
 
-Per utilizzare il modello basato sulla regola per pre-annotare i documenti, completa la seguente procedura: 
+Per utilizzare il modello basato sulla regola per pre-annotare i documenti, completa la seguente procedura:
 
 1. Accedi come amministratore {{site.data.keyword.knowledgestudioshort}} e seleziona il tuo spazio di lavoro.
-1. Seleziona la scheda **Model Management** > **Versions** > **Rule-based**.
+1. Seleziona la scheda **Rule-based Model** > **Versions** > **Rule-based Model**.
 1. Se non ancora completato, fai clic su **Map entity types and classes** per associare i tipi di entità che hai definito nel sistema tipo {{site.data.keyword.knowledgestudioshort}} a una o più classi del modello basato sulla regola.
+2. Fai clic su **Edit** per ogni tipo di entità che vuoi associare.
 
     - L'elenco a discesa della colonna **Class Name** viene pre-popolato con le classi associate al modello basato sulla regola.
-    - Devi associare almeno un tipo di entità a una classe. 
+    - Devi associare almeno un tipo di entità a una classe.
 
-1. Nella scheda **Rule-based**, fai clic su **Run this model** e poi seleziona le serie di documenti o di annotazioni che vuoi pre-annotare. Assicurati che le serie che selezioni non contengano documenti che hanno annotazioni umane. I pre-annotatori rimuovono l'annotazione umana.
+3. Nella scheda **Rule-based Model**, fa clic su **Run this model**.
 
     Il pulsante **Run this model** non è disponibile finché non associ almeno un tipo di entità a una classe.
 
-1. Seleziona la casella di spunta di ogni serie di documenti che vuoi pre-annotare.
-1. Fai clic su **Run**.
+4. Seleziona le serie di documenti o di annotazioni che vuoi pre-annotare. Assicurati che le serie che selezioni non contengano documenti che hanno annotazioni umane. I pre-annotatori rimuovono l'annotazione umana.
+5. Fai clic su **Run**.
 
-    La pre-annotazione viene applicata ai singoli documenti senza tenere conto delle varie serie di documenti a cui potrebbe appartenere un documento. Un documento che si sovrappone tra una serie di documenti selezionata e una non selezionata sarà pre-annotato in entrambe 
+    La pre-annotazione viene applicata ai singoli documenti senza tenere conto delle varie serie di documenti a cui potrebbe appartenere un documento. Un documento che si sovrappone tra una serie di documenti selezionata e una non selezionata sarà pre-annotato in entrambe
 
-1. Puoi fare clic su **Run this model** ogni volta che vuoi utilizzare il modello basato sulla regola per pre-annotare le ulteriori serie di documenti che aggiungi al corpus. 
+6. Puoi fare clic su **Run this model** ogni volta che vuoi utilizzare il modello basato sulla regola per pre-annotare le ulteriori serie di documenti che aggiungi al corpus.
 
     > **Limitazione:** se modifichi l'associazione tipo di entità a classe del modello basato sulla regola, devi ricreare le attività di annotazione che includono le serie di documenti pre-annotati. La pre-annotazione basata sulle modifiche che effettui alla definizione di associazione del pre-annotatore non può essere applicata alle serie di documenti che sono già assegnate a un'attività di annotazione.
 
@@ -240,6 +259,7 @@ Se assegni i documenti importati agli annotatori umani, i documenti vengono visu
 Puoi esportare i documenti che sono stati creati e analizzati in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer Content Analytics e caricare i documenti analizzati come file XMI in uno spazio di lavoro {{site.data.keyword.knowledgestudioshort}}.
 
 #### Procedura
+{: #wks_uima_procedure}
 
 Per prendere i documenti analizzati da una raccolta {{site.data.keyword.watson}} Explorer Content Analytics:
 
@@ -249,7 +269,7 @@ Per prendere i documenti analizzati da una raccolta {{site.data.keyword.watson}}
 1. Arresta e riavvia il servizio di analisi e indicizzazione della raccolta e poi esegui uno dei seguenti passi:
 
     - Se una raccolta già contiene i documenti indicizzati che vuoi utilizzare per la preparazione del modello di machine learning nella cache del documento, riavvia una creazione dell'indice completa.
-    - Se una raccolta non contiene i documenti indicizzati che vuoi utilizzare per la preparazione del modello di machine learning, carica i documenti, configura almeno un crawler per creare i documenti e avvialo. 
+    - Se una raccolta non contiene i documenti indicizzati che vuoi utilizzare per la preparazione del modello di machine learning, carica i documenti, configura almeno un crawler per creare i documenti e avvialo.
 
 1. Nell'area **Export**, controlla lo stato della richiesta di esportazione. L'avanzamento indica quanti documenti sono stati esportati.
 1. Vai alla cartella dell'output che hai specificato quando hai configurato le opzioni di esportazione. Una volta che i documenti sono stati esportati come file XML, il nome della cartella di output si basa sulla data/ora di quando si è verificata l'esportazione. La cartella di output contiene i file XMI (`*.xmi`) e il file descrittore UIMA TypeSystem (`exported_typesystem.xml`).
@@ -271,6 +291,7 @@ Devi definire un'associazione tra i tipi UIMA  e i tipi di entità {{site.data.k
 Puoi esportare una raccolta di documenti analizzati da {{site.data.keyword.watson}} Explorer Content Analytics Studio e caricare i documenti analizzati come file XMI in un progetto {{site.data.keyword.knowledgestudioshort}}.
 
 #### Procedura
+{: #wks_uimawexstudio_procedure}
 
 Per prendere i documenti analizzati da una raccolta Content Analytics Studio:
 
@@ -283,8 +304,9 @@ Per prendere i documenti analizzati da una raccolta Content Analytics Studio:
 1. Estrai tutti i file dal file ZIP. I contenuti estratti includono i file XMI (`*.xmi`), il file descrittore UIMA TypeSystem (`TypeSystem.xml`) e altri file.
 
 #### Operazioni successive
+{: #wks_uimawexstudio_next}
 
-Devi definire un'associazione tra i tipi UIMA  e i tipi di entità {{site.data.keyword.knowledgestudioshort}}. Devi anche creare un file ZIP che contiene tutti i file che sono necessari per caricare i dati analizzati nello spazio di lavoro {{site.data.keyword.knowledgestudioshort}}. 
+Devi definire un'associazione tra i tipi UIMA  e i tipi di entità {{site.data.keyword.knowledgestudioshort}}. Devi anche creare un file ZIP che contiene tutti i file che sono necessari per caricare i dati analizzati nello spazio di lavoro {{site.data.keyword.knowledgestudioshort}}.
 
 ### Associazione dei tipi UIMA ai tipi di entità
 {: #wks_uimawexmap}
@@ -292,10 +314,12 @@ Devi definire un'associazione tra i tipi UIMA  e i tipi di entità {{site.data.k
 Prima di caricare i file XMI in uno spazio di lavoro {{site.data.keyword.knowledgestudioshort}}, devi definire l'associazione tra i tipi UIMA  i tipi di entità {{site.data.keyword.knowledgestudioshort}}.
 
 #### Prima di cominciare
+{: #wks_uimawexmap_prereqs}
 
 Il sistema tipo nel tuo spazio di lavoro {{site.data.keyword.knowledgestudioshort}} deve includere i tipi di entità a cui vuoi associare i tipi UIMA.
 
 #### Procedura
+{: #wks_uimawexmap_procedure}
 
 Per associare i tipi UIMA ai tipi di entità {{site.data.keyword.knowledgestudioshort}}:
 
@@ -338,6 +362,7 @@ Per associare i tipi UIMA ai tipi di entità {{site.data.keyword.knowledgestudio
         {: screen}
 
 #### Operazioni successive
+{: #wks_uimawexmap_next}
 
 Devi creare un file ZIP che contiene tutti i file che sono necessari per caricare i dati analizzati nello spazio di lavoro {{site.data.keyword.knowledgestudioshort}}.
 
@@ -355,12 +380,14 @@ Devi creare un file ZIP che contiene tutti i file che sono necessari per caricar
 Per utilizzare i documenti pre-annotati che hai scaricato per preparare il modello, dvi creare un file ZIP che contiene tutti i file necessari per caricare i file XMI e poi caricare il file ZIP in uno spazio di lavoro {{site.data.keyword.knowledgestudioshort}}.
 
 #### Prima di cominciare
+{: #wks_uimaweximport_prereqs}
 
 Prima di caricare il file ZIP, assicurati che il sistema tipo nel tuo spazio di lavoro {{site.data.keyword.knowledgestudioshort}} includa i tipi di entità a cui hai associato i tipi UIMA.
 
 > **Avvertenza:** i motori di analisi UIMA consentono alle annotazioni di suddividere le frasi. In {{site.data.keyword.knowledgestudioshort}}, le annotazioni devono esistere nei limiti di una singola frase. Se i file XMI che carichi includono annotazioni che suddividono le frasi, tali annotazioni non vengono visualizzate nell'editor ground truth.
 
 #### Procedura
+{: #wks_uimaweximport_procedure}
 
 Per caricare i documenti pre-annotati in uno spazio di lavoro {{site.data.keyword.knowledgestudioshort}}:
 
@@ -373,7 +400,7 @@ Per caricare i documenti pre-annotati in uno spazio di lavoro {{site.data.keywor
 
 1. Carica il file ZIP in uno spazio di lavoro {{site.data.keyword.knowledgestudioshort}}.
 
-    1. Accedi come amministratore o gestore del progetto {{site.data.keyword.knowledgestudioshort}}, apri lo spazio di lavoro a cui vuoi aggiungere i documenti e apri la pagina **Assets & Tools** > **Documents**.
+    1. Accedi come amministratore o gestore del progetto {{site.data.keyword.knowledgestudioshort}}, apri lo spazio di lavoro a cui vuoi aggiungere i documenti e apri la pagina **Assets**> **Documents**.
     1. Fai clic su **Upload Document Sets**.
     1. Trascina il file ZIP che hai creato o fai clic per individuare e selezionare il file.
     1. Seleziona la casella di spunta per indicare che il file ZIP contiene i file UIMA CAS XMI.

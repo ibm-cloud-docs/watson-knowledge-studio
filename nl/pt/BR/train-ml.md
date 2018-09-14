@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-08-29"
 
 ---
 
@@ -32,17 +32,19 @@ No {{site.data.keyword.knowledgestudiofull}}, a criação do modelo de aprendiza
 Ao criar um modelo de aprendizado de máquina, você seleciona os conjuntos de documentos que deseja usar para treinar o modelo e especifica a porcentagem de documentos que devem ser usados como dados de treinamento, dados de teste e dados ocultos.
 
 ### Sobre essa Tarefa
+{: #wks_madocsets_about}
 
 Ao explorar as métricas de desempenho, é possível identificar maneiras de melhorar a precisão do modelo.
 
-> **Restrição:** somente três anotadores de aprendizado de máquina podem ser treinados por vez por instância do {{site.data.keyword.knowledgestudioshort}}. Se sua instância contiver múltiplas áreas de trabalho e o número total de anotadores de aprendizado de máquina que estão sendo treinados em outras áreas de trabalho já for 3, sua solicitação para treinar o modelo de aprendizado de máquina em sua área de trabalho será enfileirada até que os outros processos de treinamento sejam concluídos.
+> **Restrição:** somente três modelos de aprendizado de máquina podem ser treinados de cada vez por instância do {{site.data.keyword.knowledgestudioshort}}. Se a sua instância contiver múltiplas áreas de trabalho e o número de modelos de aprendizado de máquina que estão sendo treinados em outras áreas de trabalho já totalizar 3, então sua solicitação para treinar o modelo de aprendizado de máquina em sua área de trabalho será enfileirada até que os outros processos de treinamento estejam prontos.
 
 ### Procedimento
+{: #wks_madocsets_procedure}
 
 Para criar um modelo de aprendizado de máquina:
 
 1. Efetue login como um administrador do {{site.data.keyword.knowledgestudioshort}} e selecione a sua área de trabalho.
-1. Selecione **Gerenciamento de modelo** > **Desempenho**.
+1. Selecione  ** Modelo de Aprendizado de Máquina **  >  ** Desempenho **.
 1. Verifique se todos os conjuntos de documentos foram aprovados e se todos os conflitos de anotação foram resolvidos por meio de adjudicação. Somente documentos que se tornaram verdade absoluta por meio de adjudicação ou aprovação podem ser usados para treinar o modelo.
 1. Clique em **Treinar e avaliar**.
 1. Opcional: para especificar como você deseja alocar documentos de seus conjuntos de documentos para serem usados pelo treinamento de nível do sistema, teste ou conjuntos cegos, clique em **Editar configurações**.
@@ -65,22 +67,38 @@ Para criar um modelo de aprendizado de máquina:
 
 1. Depois que o modelo é criado, selecione uma das ações a seguir:
 
-    <table border="1" frame="hsides" rules="rows" cellpadding="4" cellspacing="0" summary="Cada linha nessa tabela descreve uma opção para uma escolha." class="simpletable choicetable choicetableborder">
-      <thead><tr><th id="d33883e137-option" valign="bottom" align="left" class="ncol thleft thbot">Opção</th>
-          <th id="d33883e137-desc" valign="bottom" align="left" class="ncol thleft thbot">Descrição</th></tr></thead>
-      <tbody><tr class="strow chrow"><td valign="top" headers="d33883e137-option" id="d33883e139" class="stentry choption ncol"><p class="p wrapper"><strong>Log</strong></p></td>
-          <td valign="top" headers="d33883e137-desc d33883e139" class="stentry chdesc ncol"><p class="p wrapper">Visualize o arquivo de log para ver se algum problema ocorreu.</p></td>
-        </tr>
-        <tr class="strow chrow"><td valign="top" headers="d33883e137-option" id="d33883e144" class="stentry choption ncol"><p class="p wrapper"><strong>Detalhes</strong></p></td>
-          <td valign="top" headers="d33883e137-desc d33883e144" class="stentry chdesc ncol"><p class="p wrapper">Visualize as estatísticas de desempenho de anotação, mude os conjuntos de documentos que você deseja usar
+    <table summary="Cada linha nessa tabela descreve uma opção para uma escolha.">
+      <caption>Tabela 1. Opções de documento</caption>
+      <tr>
+        <th style="vertical-align:bottom; text-align"left" id="d33883e137-option">Option</th>
+        <th style="vertical-align:bottom; text-align"left" id="d33883e137-desc">Descrição</th>
+      </tr>
+      <tr>
+        <td style="vertical-align:top; text-align"left" headers="d33883e137-option" id="d33883e139">
+          <p><strong>Log</strong></p>
+        </td>
+        <td style="vertical-align:top; text-align"left" headers="d33883e137-desc d33883e139">
+          <p>Visualize o arquivo de log para ver se algum problema ocorreu.</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="vertical-align:top; text-align"left" headers="d33883e137-option" id="d33883e144">
+          <p><strong>Details</strong></p>
+        </td>
+        <td style="vertical-align:top; text-align"left" headers="d33883e137-desc d33883e144">
+          <p>Visualize as estatísticas de desempenho de anotação, mude os conjuntos de documentos que você deseja usar
               para treinar e testar o modelo e crie versões de captura instantânea dos artefatos de
-              modelo.</p></td>
-        </tr>
-        <tr class="strow chrow"><td valign="top" headers="d33883e137-option" id="d33883e149" class="stentry choption ncol"><p class="p wrapper"><strong>Exportar</strong></p></td>
-          <td valign="top" headers="d33883e137-desc d33883e149" class="stentry chdesc ncol"><p class="p wrapper">Exporte um arquivo <code>ZIP</code> para seu sistema local que contenha os componentes
-              requeridos para a execução do modelo em um ambiente de tempo de execução de aprendizado de máquina.</p></td>
-        </tr>
-      </tbody>
+              modelo.</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="vertical-align:top; text-align"left" headers="d33883e137-option" id="d33883e149">
+          <p><strong>Export</strong></p>
+        </td>
+        <td style="vertical-align:top; text-align"left" headers="d33883e137-desc d33883e149">
+          <p>Se você tiver um plano Padrão ou um plano Premium, será possível exportar um arquivo <code>ZIP</code> para seu sistema local que contém os componentes que são necessários para que o modelo seja executado em um ambiente de tempo de execução de aprendizado de máquina, como {{site.data.keyword.watson}} Explorer.</p>
+        </td>
+      </tr>
     </table>
 
 ## Avaliando anotações incluídas pelo modelo
@@ -89,10 +107,11 @@ Para criar um modelo de aprendizado de máquina:
 É possível comparar a visualização de verdade absoluta para anotações incluídas por anotadores humanos com as anotações incluídas pelo modelo.
 
 ### Procedimento
+{: #wks_matest_procedure}
 
 Para avaliar as anotações incluídas pelo modelo:
 
-1. Selecione **Gerenciamento de modelo** > **Desempenho** > **Treinar e avaliar**. A página Conjuntos de treinamento/teste/cego é exibida.
+1. Selecione **Modelo de aprendizado de máquina** > **Desempenho** > **Treinar e avaliar**. A página Conjuntos de treinamento/teste/cego é exibida.
 1. Clique em **Visualizar verdade absoluta** para o conjunto de treinamento ou conjunto de testes para ver as anotações que foram incluídas por meio de pré-anotação e por anotadores humanos. O editor de verdade absoluta é aberto. Clique para abrir documentos individuais e ver como as menções, relações e menções correferenciadas foram anotadas.
 1. Na página **Desempenho**, clique em **Visualizar resultados de decodificação** para ver as anotações que o modelo de aprendizado de máquina incluiu em documentos no conjunto de testes. Esse botão estará disponível somente depois que você avaliar o modelo. Ao visualizar os resultados, é possível ver o quão bem o modelo de aprendizado de máquina rotulou as menções, relações e menções correferenciadas nos dados de teste.
 1. Se você deseja mudar como os documentos são divididos entre conjuntos de treinamento, de teste e de dados ocultos, clique em **Desempenho** > **Treinar e avaliar** > **Editar configurações**. Por exemplo, se os resultados iniciais parecem aceitáveis, você pode desejar aumentar o número de documentos no conjunto de testes para testar melhor os resultados do modelo de aprendizado de máquina. É possível mudar a razão sobre como os documentos são divididos automaticamente para propósitos diferentes ou é possível selecionar conjuntos de documentos específicos para usar como dados de treinamento, dados de teste e dados ocultos.

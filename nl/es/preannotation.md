@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -31,14 +31,15 @@ La preanotación hace que el trabajo de los anotadores humanos sea más fácil p
 El método que se utiliza para preanotar documentos no restringe de ninguna forma las maneras en que se puede utilizar el modelo de resultado. Por ejemplo, solo porque utiliza el servicio de {{site.data.keyword.nlushort}} para preanotar documentos no significa que deba desplegar el modelo de aprendizaje automático final que haya creado en el servicio de {{site.data.keyword.nlushort}}. La preanotación solo está pensada para arrancar el proceso de anotación humano.
 
 ## Notas importantes
+{: #preannotation_notes}
 
 - No ejecute nunca un preanotador en documentos que los anotadores humanos hayan anotado porque las anotaciones añadidas por los anotadores humanos se eliminarán.
 - Solo puede ejecutar un preanotador en documentos. Si ejecuta un preanotador, y luego ejecuta un segundo preanotador, el segundo preanotador eliminará las anotaciones añadidas por el primer preanotador. Elija el método de preanotación que se ajuste mejor a su caso de uso, y utilice solo ese preanotador.
 
 ## Métodos de preanotación
+{: #preannotation_methods}
 
 Están disponibles los siguientes preanotadores:
->**Nota**: El servicio de {{site.data.keyword.alchemylanguageshort}} ha estado en desuso. Para obtener más información, consulte [Retirada de servicio de {{site.data.keyword.alchemyapishort}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/blogs/bluemix/2017/03/bye-bye-alchemyapi/){: new_window}.
 
 - **{{site.data.keyword.nlushort}}**
 
@@ -66,21 +67,24 @@ Como alternativa, puede cargar documentos ya anotados, y utilizarlos para empeza
 Puede utilizar el servicio de {{site.data.keyword.nlushort}} para preanotar documentos añadidos al corpus.
 
 ### Antes de empezar
+{: #wks_preannotnlu_prereqs}
 
 Determine si es probable que el preanotador de {{site.data.keyword.nlushort}} añada un valor para el caso de uso. Revise la lista de [tipos y subtipos de entidades de servicio de {{site.data.keyword.nlushort}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/docs/services/natural-language-understanding/entity-types.html){: new_window} soportados para determinar si hay un solapamiento natural entre ellos y los tipos del sistema de tipos. Si es así, continúe con este procedimiento. Si no lo es, elija un preanotador distinto para utilizar.
 
 ### Acerca de esta tarea
+{: #wks_preannotnlu_about}
 
 {{site.data.keyword.nlushort}} es un servicio que ofrece análisis de texto mediante procesamiento del lenguaje natural. Cuando utilice el preanotador de {{site.data.keyword.nlushort}}, se llama al servicio de {{site.data.keyword.nlushort}} para buscar y anotar entidades en los documentos.
 
 Debe especificar los tipos de entidades que desea que busque el servicio correlacionando los tipos de entidades de {{site.data.keyword.nlushort}} con los tipos de entidades de {{site.data.keyword.knowledgestudioshort}} correspondientes que haya añadido al sistema de tipos de {{site.data.keyword.knowledgestudioshort}}. Solo se buscarán y anotarán las menciones de los tipos de entidades que se correlacionen.
 
 ### Procedimiento
+{: #wks_preannotnlu_procedure}
 
 Para utilizar el servicio de {{site.data.keyword.nlushort}} para preanotar documentos, siga estos pasos:
 
 1. Inicie sesión como administrador de {{site.data.keyword.knowledgestudioshort}} y seleccione el espacio de trabajo.
-1. Seleccione separador **Activos y herramientas** > **Preanotadores** > **Comprensión de lenguaje natural**.
+1. Seleccione el separador **Activos** > **Preanotación** > **Comprensión de lenguaje natural**.
 1. Pulse **Editar** para correlacionar cada tipo de entidad definido en la página **Tipos de entidades** con los tipos de entidades de {{site.data.keyword.nlushort}} correspondientes.
 
     - La lista desplegable de los tipos de entidades de {{site.data.keyword.nlushort}} se prerrellena con tipos de entidades reconocidos por el servicio de {{site.data.keyword.nlushort}}.
@@ -88,20 +92,28 @@ Para utilizar el servicio de {{site.data.keyword.nlushort}} para preanotar docum
     - No puede correlacionar un tipo de entidad de {{site.data.keyword.nlushort}} con un rol de entidad de {{site.data.keyword.knowledgestudioshort}}, solo con tipos de entidades de {{site.data.keyword.knowledgestudioshort}}.
     - Puede correlacionar más de un tipo de entidad de {{site.data.keyword.nlushort}} con un tipo de entidad de {{site.data.keyword.knowledgestudioshort}} único, o al revés. Por ejemplo, se permiten las siguientes correlaciones:
 
-    <table cellpadding="4" cellspacing="0" summary="Correlación de ejemplo de tipos de entidades" border="1" class="simpletable"><tr class="sthead"><th valign="bottom" align="left" id="d20428e292" class="stentry thleft thbot">Tipo de entidad de Watson Knowledge Studio</th>
-        <th valign="bottom" align="left" id="d20428e298" class="stentry thleft thbot">Tipo de entidad de {{site.data.keyword.nlushort}}</th>
+    <table summary="Correlación de ejemplo de tipos de entidades">
+    <caption>Tabla 1. Correlación de ejemplo de tipos de entidades</caption>
+      <tr>
+        <th style="vertical-align:bottom; text-align"left" id="d20428e292">Watson Knowledge Studio Entity Type</th>
+        <th style="vertical-align:bottom; text-align"left" id="d20428e298">Tipo de entidad de {{site.data.keyword.nlushort}}</th>
       </tr>
-      <tr class="strow"><td valign="top" headers="d20428e292" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">ENGINEER</p></li>
-            <li class="li"><p class="p wrapper">SCIENTIST</p></li>
-          </ul>
+      <tr>
+        <td headers="d20428e292">
+          ENGINEER<br/>
+          SCIENTIST
         </td>
-        <td valign="top" headers="d20428e298" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">Persona</p></li>
-          </ul></td>
+        <td headers="d20428e298">
+          Persona
+        </td>
       </tr>
-      <tr class="strow"><td valign="top" headers="d20428e292" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">LOCATION</p></li></td>
-        <td valign="top" headers="d20428e298" class="stentry"><ul class="ul bullets"><li class="li"><p class="p wrapper">CityTown</p></li>
-            <li class="li"><p class="p wrapper">País</p></li>
-          </ul>
+      <tr>
+        <td headers="d20428e292">
+          LOCATION
+        </td>
+        <td headers="d20428e298">
+          CityTown<br/>
+          País
         </td>
       </tr>
     </table>
@@ -143,32 +155,35 @@ Los datos de campo producidos por documentos preanotados por el servicio de {{si
 Para ayudar a los anotadores humanos a empezar con sus tareas de anotación, puede crear un diccionario y utilizarlo para preanotar documentos que añada al corpus.
 
 ### Acerca de esta tarea
+{: #wks_preannot_about}
 
 Cuando un anotador humano empiece a trabajar en documentos que fueron preanotados, es probable que un número de menciones ya estén marcadas por tipos de entidades basados en las entradas del diccionario. El anotador humano puede cambiar o eliminar los tipos de entidades preanotados y asignar tipos de entidades a menciones no anotadas. La preanotación que realice un diccionario no anota relaciones ni correferencias. Las relaciones y las correferencias deben anotarlas los anotadores humanos.
 
-**Nota**: Esta tarea muestra cómo crear un diccionario que es editable. Si desea cargar y preanotar los documentos con un diccionario de solo lectura, pulse el botón **Cargar diccionario** que está disponible en el separador **Activos y herramientas** > **Preanotadores** > **Diccionarios**.
+**Nota**: Esta tarea muestra cómo crear un diccionario que es editable. Si desea cargar y preanotar los documentos con un diccionario de solo lectura, pulse el icono **Menú** situado junto al botón **Crear diccionario**. Seleccione **Cargar diccionario**.
 
 ### Procedimiento
+{: #wks_preannot_procedure}
 
 Para crear un diccionario editable y preanotar documentos:
 
 1. Inicie sesión como administrador de {{site.data.keyword.knowledgestudioshort}} y seleccione el espacio de trabajo.
-1. Seleccione el separador **Activos y herramientas** > **Preanotadores** > **Diccionarios**.
-1. Pulse **Gestionar diccionarios** y luego pulse **Crear diccionario**.
+1. Seleccione la página **Activos** > **Diccionarios**.
+1. Pulse **Crear diccionario**, especifique un nombre y, a continuación, pulse **Guardar**.
 1. Desde la lista **Tipo de entidad**, seleccione un tipo de entidad para asociar con el diccionario.
-1. Añada entradas para el diccionario o cargue un archivo que contenga términos del diccionario.
-1. Vuelva a la página **Preanotadores** y, en el separador **Diccionarios**, pulse **Aplicar este preanotador**.
-1. Marque el recuadro de selección para cada conjunto de documentos que desee preanotar y pulse **Ejecutar**.
+3. Añada entradas para el diccionario o cargue un archivo que contenga términos del diccionario.
+4. Pulse **Modelo de aprendizaje automático** > **Preanotación**.
+5. En el separador **Diccionarios**, pulse **Aplicar este preanotador**.
+6. Marque el recuadro de selección para cada conjunto de documentos que desee preanotar y pulse **Ejecutar**.
 
     La preanotación se aplica a documentos individuales sin importar los distintos conjuntos de documentos o conjuntos de anotaciones a los que puede pertenecer un documento. Un documento que se solape entre un conjunto de documentos seleccionado y un conjunto de documentos no seleccionado se preanotará en ambos conjuntos de documentos.
 
-1. Después de crear el diccionario, pulse **Ejecutar** en cualquier momento que desee utilizar el diccionario para preanotar conjuntos de documentos adicionales que añada al corpus.
+7. Después de crear el diccionario, pulse **Ejecutar** en cualquier momento que desee utilizar el diccionario para preanotar conjuntos de documentos adicionales que añada al corpus.
 
     > **Restricción:** Si edita el diccionario para añadir o eliminar entradas, debe volver a crear las tareas de anotación que incluyan los conjuntos de documentos preanotados. La preanotación basada en los cambios que realice en el anotador del diccionario no se puede aplicar a conjuntos de anotaciones ya asignadas a una tarea de anotación.
 
 **Información relacionada**:
 
-[Diccionarios](/docs/services/watson-knowledge-studio/dictionaries.html#wks_dictionaries)
+[Creación de diccionarios](/docs/services/watson-knowledge-studio/dictionaries.html)
 
 [Iniciación > Añadir un diccionario](/docs/services/watson-knowledge-studio/tutorials-create-project.html#wks_tutless4)
 
@@ -178,21 +193,23 @@ Para crear un diccionario editable y preanotar documentos:
 Puede utilizar un modelo de aprendizaje automático existente para preanotar documentos que añada al corpus.
 
 ### Acerca de esta tarea
+{: #wks_preannotsire_about}
 
-Una vez que se anoten de 10 a 30 documentos, se puede entrenar un modelo de aprendizaje automático en los datos. Tal modelo mínimamente entrenado no debería utilizarse en una producción, pero puede utilizarse como un modelo de preanotación que puede ayudar a acelerar la anotación humana de documentos posteriores. Por ejemplo, si añade documentos al corpus después de entrenar un modelo de aprendizaje automático, puede utilizar el modelo para preanotar los nuevos conjuntos de documentos. No ejecute nunca un preanotador en los mismos documentos que haya anotado una persona. Los preanotadores eliminan la anotación humana.
+Una vez que se anoten de 10 a 30 documentos, se puede entrenar un modelo de aprendizaje automático en los datos. Tal modelo mínimamente entrenado no debería utilizarse en una producción, pero puede utilizarse para preanotar documentos para ayudar a acelerar la anotación humana de documentos posteriores. Por ejemplo, si añade documentos al corpus después de entrenar un modelo de aprendizaje automático, puede utilizar el modelo para preanotar los nuevos conjuntos de documentos. No ejecute nunca un preanotador en los mismos documentos que haya anotado una persona. Los preanotadores eliminan la anotación humana.
 
 ### Procedimiento
+{: #wks_preannotsire_procedure}
 
 Para utilizar un modelo de aprendizaje automático existente para preanotar documentos:
 
 1. Inicie sesión como administrador de {{site.data.keyword.knowledgestudioshort}} y seleccione el espacio de trabajo.
-1. Seleccione el separador **Gestión de modelos** > **Versiones** > **Aprendizaje automático**.
-1. Pulse **Ejecutar este modelo**.
-1. Marque el recuadro de selección para cada conjunto de documentos que desee preanotar y pulse **Ejecutar**.
+2. Seleccione **Modelo de aprendizaje automático** > **Versiones**.
+3. Para preanotar documentos nuevos, pulse **Ejecutar este modelo**.
+4. Marque el recuadro de selección para cada conjunto de documentos que desee preanotar y pulse **Ejecutar**.
 
     La preanotación se aplica a documentos individuales sin importar los distintos conjuntos de documentos o conjuntos de anotaciones a los que puede pertenecer un documento. Un documento que se solape entre un conjunto de documentos seleccionado y un conjunto de documentos no seleccionado se preanotará en ambos conjuntos de documentos.
 
-1. Puede pulsar **Ejecutar este modelo** en cualquier momento que desee utilizar el modelo de aprendizaje automático para preanotar conjuntos de documentos adicionales que añada al corpus.
+5. Puede pulsar **Ejecutar este modelo** en cualquier momento que desee utilizar el modelo de aprendizaje automático para preanotar conjuntos de documentos adicionales que añada al corpus.
 
 ## Preanotación de documentos con el modelo basado en reglas
 {: #wks_preannotrule}
@@ -200,26 +217,28 @@ Para utilizar un modelo de aprendizaje automático existente para preanotar docu
 Puede utilizar un modelo basado en reglas existente para preanotar documentos que añada al corpus.
 
 ### Procedimiento
+{: #wks_preannotrule_procedure}
 
 Para utilizar el modelo basado en reglas para preanotar documentos, siga estos pasos:
 
 1. Inicie sesión como administrador de {{site.data.keyword.knowledgestudioshort}} y seleccione el espacio de trabajo.
-1. Seleccione el separador **Gestión de modelos** > **Versiones** > **Basado en reglas**.
+1. Seleccione el separador **Modelo basado en reglas** > **Versiones** > **Modelo basado en reglas**.
 1. Si aún no se ha completado, pulse **Correlacionar tipos y clases de entidades** para correlacionar tipos de entidades definidos en el sistema de tipos de {{site.data.keyword.knowledgestudioshort}} con una o varias clases de modelos basados en reglas.
+2. Pulse **Editar** para cada tipo de entidad que desee correlacionar.
 
     - La lista desplegable de la columna **Nombre de clase** se prerrellena con clases asociadas con el modelo basado en reglas.
     - Debe correlacionar al menos un tipo de entidad con una clase.
 
-1. En el separador **Basado en reglas**, pulse **Ejecutar este modelo** y luego seleccione los conjuntos de documentos o de anotaciones que desee preanotar. Asegúrese de que los conjuntos que seleccione no contengan documentos que tengan anotaciones humanas. Los preanotadores eliminan la anotación humana.
+3. En el separador **Modelo basado en reglas**, pulse **Ejecutar este modelo**.
 
     El botón **Ejecutar este modelo** no estará disponible hasta que correlacione al menos un tipo de entidad con una clase.
 
-1. Marque el recuadro de selección para cada conjunto de documentos que desee preanotar.
-1. Pulse **Ejecutar**.
+4. Seleccione los conjuntos de documentos o conjuntos de anotaciones que desee preanotar. Asegúrese de que los conjuntos que seleccione no contengan documentos que tengan anotaciones humanas. Los preanotadores eliminan la anotación humana.
+5. Pulse **Ejecutar**.
 
     La preanotación se aplica a documentos individuales sin importar los distintos conjuntos de documentos a los que puede pertenecer un documento. Un documento que se solape entre un conjunto de documentos seleccionado y un documento no seleccionado aparecerá preanotado en ambos conjuntos de documentos.
 
-1. Puede pulsar **Ejecutar este modelo** en cualquier momento en que desee utilizar el modelo basado en reglas para preanotar conjuntos de documentos adicionales que añada al corpus.
+6. Puede pulsar **Ejecutar este modelo** en cualquier momento en que desee utilizar el modelo basado en reglas para preanotar conjuntos de documentos adicionales que añada al corpus.
 
     > **Restricción:** Si edita la correlación de tipo de entidad a clase del modelo basado en reglas, debe volver a crear tareas de anotación que incluyan los conjuntos de documentos preanotados. La preanotación basada en los cambios que realice en la definición de correlación del preanotador no se puede aplicar a conjuntos de documentos ya asignados a una tarea de anotación.
 
@@ -240,6 +259,7 @@ Si asigna los documentos importados a los anotadores humanos, los documentos apa
 Puede exportar documentos que fueron rastreados y analizados en {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer Content Analytics, y cargar los documentos analizados como archivos XMI en un espacio de trabajo de {{site.data.keyword.knowledgestudioshort}}.
 
 #### Procedimiento
+{: #wks_uima_procedure}
 
 Para obtener documentos analizados desde una recopilación de {{site.data.keyword.watson}} Explorer Content Analytics:
 
@@ -271,6 +291,7 @@ Debe definir una correlación entre los tipos de UIMA y los tipos de entidades d
 Puede exportar una recopilación de documentos analizados desde {{site.data.keyword.watson}} Explorer Content Analytics Studio, y cargar los documentos analizados como archivos XMI en un proyecto de {{site.data.keyword.knowledgestudioshort}}.
 
 #### Procedimiento
+{: #wks_uimawexstudio_procedure}
 
 Para obtener documentos analizados desde una recopilación de Content Analytics Studio:
 
@@ -283,6 +304,7 @@ Para obtener documentos analizados desde una recopilación de Content Analytics 
 1. Extraiga todos los archivos del archivo ZIP. Entre los contenidos extraídos se incluyen archivos XMI (`*.xmi`), el archivo de descriptor de UIMA TypeSystem (`TypeSystem.xml`), y otros archivos.
 
 #### Qué hacer a continuación
+{: #wks_uimawexstudio_next}
 
 Debe definir una correlación entre los tipos de UIMA y los tipos de entidades de {{site.data.keyword.knowledgestudioshort}}. También debe crear un archivo ZIP que contenga todos los archivos necesarios para cargar los datos analizados en un espacio de trabajo de {{site.data.keyword.knowledgestudioshort}}.
 
@@ -292,10 +314,12 @@ Debe definir una correlación entre los tipos de UIMA y los tipos de entidades d
 Antes de cargar archivos XMI en un espacio de trabajo de {{site.data.keyword.knowledgestudioshort}}, debe definir correlaciones entre los tipos de UIMA y los tipos de entidades de {{site.data.keyword.knowledgestudioshort}}.
 
 #### Antes de empezar
+{: #wks_uimawexmap_prereqs}
 
 El sistema de tipos del espacio de trabajo de {{site.data.keyword.knowledgestudioshort}} debe incluir los tipos de entidades con los que desee correlacionar los tipos de UIMA.
 
 #### Procedimiento
+{: #wks_uimawexmap_procedure}
 
 Para correlacionar los tipos de UIMA con tipos de entidades de {{site.data.keyword.knowledgestudioshort}}:
 
@@ -338,6 +362,7 @@ Para correlacionar los tipos de UIMA con tipos de entidades de {{site.data.keywo
         {: screen}
 
 #### Qué hacer a continuación
+{: #wks_uimawexmap_next}
 
 Debe crear un archivo ZIP que contenga todos los archivos necesarios para cargar los datos analizados en un espacio de trabajo de {{site.data.keyword.knowledgestudioshort}}.
 
@@ -355,12 +380,14 @@ Debe crear un archivo ZIP que contenga todos los archivos necesarios para cargar
 Para utilizar los documentos preanotados que haya descargado para entrenar un modelo, debe crear un archivo ZIP que contenga todos los archivos necesarios para cargar los archivos XMI, y luego cargar el archivo ZIP en un espacio de trabajo de {{site.data.keyword.knowledgestudioshort}}.
 
 #### Antes de empezar
+{: #wks_uimaweximport_prereqs}
 
 Antes de cargar el archivo ZIP, asegúrese de que el sistema de tipos de su espacio de trabajo de {{site.data.keyword.knowledgestudioshort}} incluya los tipos de entidades con los que se correlacionan los tipos de UIMA.
 
 > **Aviso:** Los motores de análisis de UIMA permiten anotaciones para distribuir frases. En {{site.data.keyword.knowledgestudioshort}}, deben existir anotaciones dentro de los límites de una sola frase. Si los archivos XMI que cargue incluyen anotaciones que distribuyan frases, dichas anotaciones no aparecerán en el editor de datos de campo.
 
 #### Procedimiento
+{: #wks_uimaweximport_procedure}
 
 Para cargar documentos preanotados en un espacio de trabajo de {{site.data.keyword.knowledgestudioshort}}:
 
@@ -373,7 +400,7 @@ Para cargar documentos preanotados en un espacio de trabajo de {{site.data.keywo
 
 1. Cargue el archivo ZIP en un espacio de trabajo de {{site.data.keyword.knowledgestudioshort}}.
 
-    1. Inicie sesión como administrador o gestor de proyectos de {{site.data.keyword.knowledgestudioshort}}, abra el espacio de trabajo al que desee añadir los documentos, y abra la página **Activos y herramientas** > **Documentos**.
+    1. Inicie sesión como administrador o gestor de proyectos de {{site.data.keyword.knowledgestudioshort}}, abra el espacio de trabajo al que desee añadir los documentos y abra la página **Activos**> **Documentos**.
     1. Pulse **Cargar conjuntos de documentos**.
     1. Arrastre el archivo ZIP que haya creado o pulse para ubicar y seleccionar el archivo.
     1. Marque el recuadro de selección para indicar que el archivo ZIP contiene archivos UIMA CAS XMI.

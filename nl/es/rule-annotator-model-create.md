@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-26"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -27,12 +27,14 @@ Después de definir reglas, puede crear un modelo basado en reglas.
 {: shortdesc}
 
 ## Procedimiento
+{: #wks_rule_train_procedure}
 
 Para crear un modelo basado en reglas, siga estos pasos:
 
 1. Inicie sesión como un administrador o gestor de proyectos de {{site.data.keyword.knowledgestudioshort}}, y seleccione su espacio de trabajo.
-1. Seleccione el separador **Gestión de modelos** > **Versiones** > **Basado en reglas**.
-1. Correlacione los tipos de entidades desde su sistema de tipos con una o varias clases que haya utilizado para definir reglas.
+1. Seleccione el separador **Modelo basado en reglas** > **Versiones** > **Modelo basado en reglas**.
+2. Pulse **Correlacionar tipos de entidad y clases**.
+3. Correlacione los tipos de entidades desde su sistema de tipos con una o varias clases que haya utilizado para definir reglas.
 
   Después de que los tipos de entidades estén correlacionados, puede [desplegar el modelo basado en reglas](/docs/services/watson-knowledge-studio/rule-annotator-model-use.html) o utilizarlo para [preanotar documentos](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannotrule) en el proceso de creación de un modelo de aprendizaje automático.
 

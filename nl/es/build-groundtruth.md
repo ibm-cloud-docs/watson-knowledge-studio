@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -51,31 +51,38 @@ Las puntuaciones del acuerdo entre anotadores muestra cómo han anotado mencione
 
 Para ayudarle a identificar áreas que necesitan investigación, las puntuaciones que están por debajo del valor que ha especificado para el umbral de acuerdo entre anotadores se resaltan en rojo. En las etapas iniciales de su proyecto de anotación, puede que encuentre que las puntuaciones de relación son con frecuencia peores que las puntuaciones de mención debido a que una anotación de relación perfecta requiere que las menciones que definen las relaciones estén en acuerdo en primer lugar.
 
-La puntuación de la columna **Todos** es una *puntuación Fleiss Kappa*. Representa la coherencia con que varios anotadores humanos han aplicado la misma anotación en todos los documentos que se solapan en la tarea. El valor, que puede llegar hasta 1 e incluso ser negativo, puede ayudarle a identificar los puntos débiles de las directrices de anotación o de anotadores humanos particulares. Las directrices siguientes (*Landis and Koch, 1977*) proporcionan un punto de partida para evaluar el rendimiento general:
+La puntuación de la columna **Todos** es una *puntuación Fleiss Kappa*. Representa la coherencia con que varios anotadores humanos han aplicado la misma anotación en todos los documentos que se solapan en la tarea. El valor, que puede llegar hasta 1 e incluso ser negativo, puede ayudarle a identificar los puntos débiles de las directrices de anotación o de anotadores humanos particulares. Las directrices siguientes (*Landis and Koch, 1977*) proporcionan un punto de partida para evaluar el rendimiento general.
 
-<table cellpadding="4" cellspacing="0" summary="" id="wks_haiaa__table_p5s_dx1_f5" class="table" rules="rows" frame="void" border="0"><thead class="thead" align="left"><tr class="row"><th class="entry ncol thleft" align="left" valign="top" id="d12741e148">Puntuación</th>
-<th class="entry ncol thleft" align="left" valign="top" id="d12741e150">Nivel de acuerdo</th>
-</tr>
-</thead>
-<tbody class="tbody"><tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">&lt; 0</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Deficiente</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">0,01 - 0,20</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Ligero</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">0,21 - 0,40</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Normal</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">0,41 - 0,60</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Moderado</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">0,61 - 0,80</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Sustancial</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">0,81 - 1,0</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Perfecto</p></td>
-</tr>
-</tbody>
+<table style="width:60%" summary="Esta tabla proporciona directrices generales entre anotadores para evaluar el rendimiento general.">
+  <caption>Tabla 1. Directrices entre anotadores</caption>
+  <tr>
+    <th style="vertical-align:bottom; text-align:center" id="d12741e148">Puntuación</th>
+    <th style="vertical-align:bottom; text-align:center" id="d12741e150">Nivel de acuerdo</th>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">&lt; 0</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Deficiente</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">0,01 - 0,20</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Ligero</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">0,21 - 0,40</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Normal</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">0,41 - 0,60</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Moderado</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">0,61 - 0,80</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Sustancial</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">0,81 - 1,0</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Perfecto</td>
+  </tr>
 </table>
 
 La puntuación en el resto de las columnas es una *medida F1*. Representa el nivel de coherencia de anotación entre un par de anotadores humanos. El valor puede oscilar entre 0 y 1, donde el acuerdo perfecto está indicado por la puntuación 1. Lo que constituye un nivel aceptable de acuerdo depende de los datos de dominio y del sistema de tipos. Pero para proporcionar un ejemplo, aquí están los umbrales de F1 que los gestores de proyectos esperan cumplir o superar en proyectos basados en el sistema de tipos KLUE:
@@ -94,17 +101,19 @@ Generalmente, un sistema de tipos que incluya muchos tipos de entidades y tipos 
 Al determinar qué documentos se promocionarán a datos de campo, debe revisar las puntuaciones de acuerdo entre anotadores. Los documentos con puntuaciones bajas son candidatos a ser rechazados y devueltos al anotador humano para su mejora.
 
 ### Acerca de esta tarea
+{: #wks_haaccuracy_about}
 
-Cuando examine el acuerdo entre anotadores, examine los documentos anotados por más de un anotador humano. Si un documento no se comparte entre varios conjuntos de anotaciones y los anotadores humanos, no habrá acuerdo entre anotadores para calcular. Al añadir conjuntos de anotaciones a una tarea, asegúrese de que los conjuntos que desea comparar contengan los mismos documentos que se solapan. Puede ver qué documentos se encuentran en un conjunto de anotaciones abriendo la página **Activos y herramientas** > **Documentos**, pulsando el separador **Conjuntos de anotaciones** y, a continuación, pulsando los nombres de los conjuntos.
+Cuando examine el acuerdo entre anotadores, examine los documentos anotados por más de un anotador humano. Si un documento no se comparte entre varios conjuntos de anotaciones y los anotadores humanos, no habrá acuerdo entre anotadores para calcular. Al añadir conjuntos de anotaciones a una tarea, asegúrese de que los conjuntos que desea comparar contengan los mismos documentos que se solapan. Puede ver qué documentos se encuentran en un conjunto de anotaciones abriendo la página **Activos**> **Documentos**, pulsando el separador **Conjuntos de anotaciones** y, a continuación, pulsando los nombres de los conjuntos.
 
 Puede experimentar situaciones en las que no se solapan los documentos. Esto puede ocurrir, por ejemplo, si crea conjuntos de anotaciones en dos fases y los añade a la misma tarea. Aunque los conjuntos de anotaciones se crearan alrededor del mismo momento, no tienen ningún documento en común. Para otro ejemplo, si crea conjuntos de anotaciones con documentos que se solapan, pero añade un conjunto de anotaciones por tarea en lugar de añadir todos los conjuntos de anotaciones a una única tarea, no se encontrarán documentos que se solapen y no se podrá calcular el acuerdo entre anotadores.
 
 ### Procedimiento
+{: #wks_haaccuracy_procedure}
 
 Para evaluar el acuerdo de anotación entre los anotadores humanos:
 
 1. Inicie sesión como un administrador o gestor de proyectos de {{site.data.keyword.knowledgestudioshort}}, y seleccione su espacio de trabajo.
-1. Seleccione el separador **Activos y herramientas** > **Documentos** > **Tareas**, y abra la tarea que desee evaluar.
+1. Seleccione la página **Modelo de aprendizaje automático** > **Tareas de anotación** y abra la tarea que desee evaluar.
 1. Pulse **Calcular acuerdo entre anotadores**. La vista predeterminada muestra las puntuaciones de acuerdo para ver con cuánta coherencia han anotado menciones los pares de anotadores humanos. La fila de la parte superior muestra la coherencia global entre cada par de anotadores, y la tabla siguiente muestra con cuánta coherencia ha etiquetado un par de anotadores menciones específicas en el texto.
 1. Para explorar la coherencia con que los pares de anotadores humanos han anotado relaciones y correferencias, seleccione **Relación** o **Correferencia** desde el primer menú.
 1. Para explorar la coherencia con que un par de anotadores humanos han anotado entidades, relaciones o correferencias en documentos solapados específicos, seleccione **Documento** en el segundo menú y, a continuación, seleccione el par de anotadores que desea evaluar.
@@ -151,10 +160,12 @@ Estos son algunos ejemplos de diversas formas en que los anotadores humanos disc
 La adjudicación es un paso que permite revisar los conflictos de anotación en documentos que se solapan antes de promocionar las anotaciones a datos de campo. Puede comparar las anotaciones añadidas por un par de anotadores humanos, o comparar las anotaciones humanas con los datos de campo actuales.
 
 ### Antes de empezar
+{: #wks_haadjudicate_prereq}
 
 Pulse [este enlace ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.youtube.com/watch?v=EbexfsuXxoQ&amp;feature=youtu.be){: new_window} para ver un vídeo de 3 minutos que ilustra cómo adjudicar los documentos.
 
 ### Acerca de esta tarea
+{: #wks_haadjudicate_about}
 
 Una vez que los anotadores humanos completen sus tareas de anotación, deben enviar sus conjuntos de anotaciones completados para su revisión. Cuando se evalúan las puntuaciones del acuerdo entre anotadores, puede ver cómo han anotado distintos pares de anotadores el mismo documento. Si la puntuación del acuerdo entre anotadores es aceptable, se aprobará el conjunto de anotaciones. Si un documento no se solapa entre conjuntos de anotaciones de la tarea, las anotaciones del documento aprobado se promocionarán a datos de campo. Si un documento se solapa en conjuntos de anotaciones, debe adjudicar el documento y resolver cualquier conflicto de anotación que exista antes de promocionar las anotaciones a datos de campo.
 
@@ -163,21 +174,22 @@ Por ejemplo, al adjudicar un documento, puede ver que un anotador ha anotado la 
 {{site.data.keyword.knowledgestudioshort}} da soporte a la capacidad de adjudicar entre dos conjuntos de anotaciones a la vez, o entre un conjunto de anotaciones y los datos de campo actuales. Si un documento se solapa entre más de dos conjuntos de anotaciones, adjudique los dos conjuntos de anotaciones en los que tiene más confianza (quizá porque confía más en los anotadores humanos) para determinar los datos de campo para el documento. Y, a continuación, adjudique el resto de los conjuntos de anotaciones en función de los resultados de la adjudicación inicial.
 
 ### Procedimiento
+{: #wks_haadjudicate_procedure}
 
 Para ver los documentos que se solapan y resolver conflictos:
 
 1. Inicie sesión como un administrador o gestor de proyectos de {{site.data.keyword.knowledgestudioshort}}, y seleccione su espacio de trabajo.
-1. Seleccione el separador **Activos y herramientas** > **Documentos** > **Tareas**, y abra la tarea que desee evaluar.
+1. Seleccione la página **Modelo de aprendizaje automático** > **Tareas de anotación** y abra la tarea que desee evaluar.
 1. Confirme que al menos haya dos conjuntos de anotaciones en el estado **En conflicto**.
 1. Pulse **Comprobar solapamiento de documentos en busca de conflictos**. Los documentos que están en conflicto están listados.
 1. Si desea ignorar los conflictos en un documento que se solapa y promocionar las anotaciones a datos de campo sin adjudicarlos, pulse **Aceptar**.
-1. Para empezar a resolver conflictos en un documento que se solapa, pulse **Comprobar en busca de conflictos**.
-1. Si hay tres o más candidatos para la adjudicación, incluidos los conjuntos de anotaciones que fueron anotados mediante anotación humana y los datos de campo actuales, seleccione los dos candidatos que desee adjudicar y pulse **Comprobar en busca de conflictos**. Si solo existen dos candidatos, la herramienta de adjudicación se iniciará automáticamente.
+1. Para empezar a resolver conflictos en un documento que se solapa, pulse **Comprobar conflictos**.
+1. Si hay tres o más candidatos para la adjudicación, incluidos los conjuntos de anotaciones que fueron anotados mediante anotación humana y los datos de campo actuales, seleccione los dos candidatos que desee adjudicar y pulse **Comprobar conflictos**. Si solo existen dos candidatos, la herramienta de adjudicación se iniciará automáticamente.
 
     La herramienta de adjudicación muestra cuántos conflictos de menciones, relaciones y de cadena de correferencia existen. Debe resolver los conflictos de menciones antes de pasar a resolver conflictos entre relaciones y cadenas de correferencia.
 
 1. Pulse para resaltar una frase que contenga conflictos. Para facilitar centrarse en conflictos no resueltos, es posible que desee desmarcar el recuadro de selección **Resuelto** y asegurarse de que el recuadro de selección **No resuelto** esté seleccionado.
-1. Pulse anotaciones individuales y, a continuación, pulse **Aceptar** o **Rechazar**. Para deshacer una decisión que acaba de tomar, pulse `Ctrl+Z`.
+1. Pulse anotaciones individuales y, a continuación, pulse **Aceptar** o **Rechazar**. Para deshacer una decisión que acaba de tomar, pulse Ctrl+Z.
 
     También puede pulsar más de una anotación y, a continuación, pulsar para aceptar o rechazar todas las anotaciones seleccionadas. Si decide que desea deseleccionar una anotación que ha seleccionado, desmarque sus selecciones pulsando el espacio en blanco entre frases o pulsando la tecla **Esc**.
 

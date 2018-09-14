@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="watson-knowledge-studio" audience="service" href="/docs/services/watson-knowledge-studio/tutorials-create-project.html"}
+{: .toc subcollection="watson-knowledge-studio" audience="service" arm="3218249" href="/docs/services/watson-knowledge-studio/tutorials-create-project.html"}
 Watson Knowledge Studio
 
     {: .navgroup id="learn"}
@@ -14,12 +14,15 @@ Watson Knowledge Studio
 
     index.md
     system-requirements.md
+    roles.md
+    additional-resources.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    accessibility.md
+    [Accessibilità](https://console.bluemix.net/docs/overview/accessibility/accessibility_features.html)
     glossary.md
     language-support.md
+    information-security.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -63,8 +66,8 @@ Watson Knowledge Studio
 
     {: .navgroup id="help"}
     release-notes.md
-    user-guide-help.md
     troubleshooting.md
+    user-guide-help.md
 
     {: .topicgroup}
     Community degli sviluppatori

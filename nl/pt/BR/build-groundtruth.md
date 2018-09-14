@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -51,31 +51,38 @@ As pontuações de concordância entre anotadores mostram como os diferentes ano
 
 Para ajudá-lo a identificar as áreas que requerem investigação, as pontuações que caem abaixo do valor que você especificou para o limite de concordância entre anotadores são destacadas em vermelho. Em estágios iniciais de seu projeto de anotação, você pode achar que as pontuações de relação são frequentemente piores do que as pontuações de menção porque uma anotação de relação perfeita requer que as menções que definem o relacionamento estejam em concordância primeiro.
 
-A pontuação na coluna **Todos** é uma *pontuação Fleiss Kappa*. Ela representa o nível de consistência com que a mesma anotação foi aplicada por múltiplos anotadores humanos entre todos os documentos de sobreposição na tarefa. O valor, que pode variar até 1 e até ser negativo, pode ajudá-lo a identificar as fraquezas nas diretrizes de anotação ou anotadores humanos específicos. As diretrizes a seguir (*Landis e Koch, 1977*) fornecem um ponto de início para avaliar o desempenho geral:
+A pontuação na coluna **Todos** é uma *pontuação Fleiss Kappa*. Ela representa o nível de consistência com que a mesma anotação foi aplicada por múltiplos anotadores humanos entre todos os documentos de sobreposição na tarefa. O valor, que pode variar até 1 e até ser negativo, pode ajudá-lo a identificar as fraquezas nas diretrizes de anotação ou anotadores humanos específicos. As diretrizes a seguir (*Landis and Koch, 1977*) fornecem um ponto de início para avaliar o desempenho geral.
 
-<table cellpadding="4" cellspacing="0" summary="" id="wks_haiaa__table_p5s_dx1_f5" class="table" rules="rows" frame="void" border="0"><thead class="thead" align="left"><tr class="row"><th class="entry ncol thleft" align="left" valign="top" id="d12741e148">Pontuação</th>
-<th class="entry ncol thleft" align="left" valign="top" id="d12741e150">Nível de concordância</th>
-</tr>
-</thead>
-<tbody class="tbody"><tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">&lt; 0</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Fraco</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">.01 - .20</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Pequeno</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">.21 - .40</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Justo</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">.41 - .60</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Moderado</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">.61 - .80</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Substancial</p></td>
-</tr>
-<tr class="row"><td class="entry ncol tdleft" align="left" valign="top" headers="d12741e148 "><p class="p wrapper">.81 - 1.0</p></td>
-<td class="entry ncol tdleft" align="left" valign="top" headers="d12741e150 "><p class="p wrapper">Perfeito</p></td>
-</tr>
-</tbody>
+<table style="width:60%" summary="Esta tabela fornece diretrizes entre anotadores para avaliar o desempenho geral.">
+  <caption>Tabela 1. Diretrizes entre anotadores</caption>
+  <tr>
+    <th style="vertical-align:bottom; text-align:center" id="d12741e148">Pontuação</th>
+    <th style="vertical-align:bottom; text-align:center" id="d12741e150">Nível de concordância</th>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">&lt; 0</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Fraco</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">.01 - .20</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Pequeno</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">.21 - .40</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Justo</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">.41 - .60</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Moderado</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">.61 - .80</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Substancial</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:top; text-align:center" headers="d12741e148">.81 - 1.0</td>
+    <td style="vertical-align:top; text-align:center" headers="d12741e150">Perfeito</td>
+  </tr>
 </table>
 
 A pontuação nas outras colunas é uma *medida F1*. Ela representa o nível de consistência da anotação entre um par de anotadores humanos. O valor pode variar de 0 a 1, em que a concordância perfeita é indicada pela pontuação 1. O que constitui um nível aceitável de concordância depende de seus dados de domínio e sistema de tipo. Mas, para fornecer um exemplo, aqui estão os limites F1 que os gerentes de projeto esperam que sejam atendidos ou excedidos em projetos baseados no sistema de tipos KLUE:
@@ -94,17 +101,19 @@ Geralmente, um sistema de tipos que inclui muitos tipos de entidade e tipos de r
 Ao determinar quais documentos devem ser promovidos para verdade absoluta, deve-se revisar as pontuações de concordância entre anotadores. Documentos com pontuações baixas são candidatos a serem rejeitados e retornados ao anotador humano para melhoria.
 
 ### Sobre essa Tarefa
+{: #wks_haaccuracy_about}
 
-Ao examinar a concordância entre anotadores, você examina documentos que foram anotados por mais de um anotador humano. Se um documento não é compartilhado entre múltiplos conjuntos de anotações e anotadores humanos, não há nenhuma concordância entre anotadores para calcular. Quando você incluir conjuntos de anotações em uma tarefa, assegure-se de que os conjuntos que você deseja comparar contenham os mesmos documentos de sobreposição. É possível ver quais documentos estão em um conjunto de anotações abrindo a página **Ativos e ferramentas** > **Documentos**, clicando na guia **Conjuntos de anotações**, em seguida, clicando nos nomes dos conjuntos.
+Ao examinar a concordância entre anotadores, você examina documentos que foram anotados por mais de um anotador humano. Se um documento não é compartilhado entre múltiplos conjuntos de anotações e anotadores humanos, não há nenhuma concordância entre anotadores para calcular. Quando você incluir conjuntos de anotações em uma tarefa, assegure-se de que os conjuntos que você deseja comparar contenham os mesmos documentos de sobreposição. É possível ver quais documentos estão em um conjunto de anotações abrindo a página **Ativos** > **Documentos**, clicando na guia **Conjuntos de anotações** e, em seguida, clicando nos nomes dos conjuntos.
 
 Você pode ter situações nas quais nenhum documento de sobreposição é localizado. Isso pode acontecer, por exemplo, se você cria os conjuntos de anotações em duas rodadas e os inclui na mesma tarefa. Embora os conjuntos de anotações tenham sido criados quase ao mesmo tempo, eles não têm nenhum documento em comum. Para outro exemplo, se você criar conjuntos de anotações com documentos de sobreposição, mas incluir um conjunto de anotações por tarefa em vez de incluir todos os conjuntos de anotações em uma única tarefa, nenhum documento de sobreposição será localizado e a concordância entre anotadores não poderá ser calculada.
 
 ### Procedimento
+{: #wks_haaccuracy_procedure}
 
 Para avaliar a concordância de anotação entre anotadores humanos:
 
 1. Efetue login como um administrador ou gerente de projeto do {{site.data.keyword.knowledgestudioshort}} e selecione a sua área de trabalho.
-1. Selecione a guia **Ativos e ferramentas** > **Documentos** > **Tarefas** e abra a tarefa que você deseja avaliar.
+1. Selecione a página **Modelo de aprendizado de máquina** > **Tarefas de anotação** e abra a tarefa que deseja avaliar.
 1. Clique em **Calcular contrato de interanotador**. A visualização padrão mostra as pontuações de concordância do nível de consistência com que os pares de anotadores humanos anotaram as menções. A linha superior mostra a consistência geral entre cada par de anotadores e a tabela abaixo mostra o nível de consistência com que um par de anotadores rotulou menções específicas no texto.
 1. Para explorar o nível de consistência com que os pares de anotadores humanos anotaram relações e correferências, selecione **Relação** ou **Correferência** no primeiro menu.
 1. Para explorar o nível de consistência com que um par de anotadores humanos anotaram entidades, relações ou correferências em documentos específicos de sobreposição, selecione **Documento** no segundo menu e, em seguida, selecione o par de anotadores que você deseja avaliar.
@@ -151,10 +160,12 @@ Aqui estão alguns exemplos de várias maneiras que os anotadores humanos discor
 A adjudicação é uma etapa que permite revisar conflitos de anotação em documentos de sobreposição antes de promover as anotações para a verdade absoluta. É possível comparar as anotações incluídas por um par de anotadores humanos ou comparar as anotações humanas com a verdade absoluta atual.
 
 ### Antes de Começar
+{: #wks_haadjudicate_prereq}
 
 Clique [neste link ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.youtube.com/watch?v=EbexfsuXxoQ&amp;feature=youtu.be){: new_window} para assistir a um vídeo de 3 minutos que ilustra como adjudicar documentos.
 
 ### Sobre essa Tarefa
+{: #wks_haadjudicate_about}
 
 Após os anotadores humanos concluírem suas tarefas de anotação, eles devem enviar seus conjuntos de anotações concluídos para revisão. Ao avaliar as pontuações de concordância entre anotadores, é possível ver como pares diferentes de anotadores anotaram o mesmo documento. Se a pontuação de concordância entre anotadores é aceitável, você aprova o conjunto de anotações. Se um documento não se sobrepõe em conjuntos de anotações na tarefa, as anotações no documento aprovado são promovidas para verdade absoluta. Se um documento se sobrepõe em conjuntos de anotações, é necessário adjudicar o documento e resolver quaisquer conflitos de anotação que existem antes de promover as anotações para verdade absoluta.
 
@@ -163,11 +174,12 @@ Por exemplo, ao adjudicar um documento, você pode ver que um anotador anotou a 
 O {{site.data.keyword.knowledgestudioshort}} suporta a capacidade de adjudicar entre dois conjuntos de anotações de cada vez ou entre um conjunto de anotações e a verdade absoluta atual. Se um documento se sobrepõe em mais de dois conjuntos de anotações, adjudique os dois conjuntos de anotações em que você tem a maior confiança (talvez porque tem maior confiança nos anotadores humanos) para determinar a verdade absoluta para o documento. E, em seguida, adjudique o resto dos conjuntos de anotações com base nos resultados da adjudicação inicial.
 
 ### Procedimento
+{: #wks_haadjudicate_procedure}
 
 Para visualizar documentos de sobreposição e resolver conflitos:
 
 1. Efetue login como um administrador ou gerente de projeto do {{site.data.keyword.knowledgestudioshort}} e selecione a sua área de trabalho.
-1. Selecione a guia **Ativos e ferramentas** > **Documentos** > **Tarefas** e abra a tarefa que você deseja avaliar.
+1. Selecione a página **Modelo de aprendizado de máquina** > **Tarefas de anotação** e abra a tarefa que deseja avaliar.
 1. Confirme que pelo menos dois conjuntos de anotações estão no status **Em conflito**.
 1. Clique em **Verificar documentos de sobreposição para conflitos**. Os documentos que estão em conflito são listados.
 1. Se você deseja ignorar os conflitos em um documento de sobreposição e promover as anotações para verdade absoluta sem adjudicá-las, clique em **Aceitar**.
@@ -177,7 +189,7 @@ Para visualizar documentos de sobreposição e resolver conflitos:
     A ferramenta de adjudicação mostra quantos conflitos de menção, relação e cadeia de correferência existem. Deve-se resolver conflitos de menção antes de mover-se para resolver conflitos entre relações e cadeias de correferência.
 
 1. Clique para destacar uma sentença que contém conflitos. Para facilitar a manter o foco em conflitos não resolvidos, você pode desejar limpar a caixa de seleção **Resolvido** e assegurar-se de que a caixa de seleção **Não resolvido** esteja selecionada.
-1. Clique em anotações individuais e, em seguida, clique em **Aceitar** ou **Rejeitar**. Para desfazer uma decisão que você acabou de tomar, pressione `Ctrl+Z`.
+1. Clique em anotações individuais e, em seguida, clique em **Aceitar** ou **Rejeitar**. Para desfazer uma decisão que você acabou de fazer, pressione Ctrl+Z.
 
     Também é possível clicar em mais de uma anotação e, em seguida, clicar para aceitar ou rejeitar todas as anotações selecionadas. Se você decidir que deseja cancelar a seleção de uma anotação selecionada, limpe suas seleções clicando no espaço em branco entre as sentenças ou pressionando a tecla **Esc**.
 

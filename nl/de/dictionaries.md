@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -23,8 +23,7 @@ Diese Dokumentation bezieht sich auf {{site.data.keyword.knowledgestudiofull}} o
 # Wörterverzeichnisse erstellen
 {: #dictionaries}
 
-Wörterverzeichnisse geben den Annotatoren für maschinelles Lernen in {{site.data.keyword.knowledgestudioshort}}
-Einblick in den Sprachgebrauch des Fachgebiets.
+Wörterverzeichnisse geben den Modellen für maschinelles Lernen in {{site.data.keyword.knowledgestudioshort}} Einblick in den Sprachgebrauch des Fachgebiets.
 {: shortdesc}
 
 ## Wörterverzeichnisse
@@ -36,9 +35,9 @@ die gleiche Bedeutung, aber sie werden von einem Modell für maschinelles Lernen
 
 In einem Wörterverzeichnis werden Wörter und Ausdrücke aufgelistet, die mit Bezug auf die Informationsextraktion äquivalent sind, d. h. sie sind im Hinblick auf das Identifizieren von Entitäts- und Beziehungserwähnungen austauschbar.
 
-Angenommen, ein Wörterverzeichniseintrag enthält die sieben Tage der Woche. Zum Annotieren eines Dokuments ordnet der Annotatorbenutzer den Entitätstyp WOCHENTAG für Erwähnungen der Wörter 'Montag' und 'Freitag' im Text zu. Da das Wörterverzeichnis die sieben Wochentage als austauschbar einstuft, kann leichter sichergestellt werden, dass ein Modell für maschinelles Lernen das Vorkommen der Wörter 'Dienstag' und 'Mittwoch' sowie der übrigen Wochentage in neuen Dokumenten während der Laufzeit korrekt annotiert. Außerdem unterstützt die Gleichsetzung dieser Wörter auch das Extrahieren von Informationen aus dem umgebenden Text. Die Erkenntnisse, die das Modell für maschinelles Lernen aus Trainingsbeispielen des Texts gewinnt, der die Erwähnungen 'Montag' und 'Freitag' umgibt, wird auf Texte angewendet, in deren Umgebung andere Wochentage erwähnt werden, da diese Begriffe laut Wörterverzeichnis bei der Informationsextraktion als äquivalent eingestuft werden.
+Angenommen, ein Wörterverzeichniseintrag enthält die sieben Tage der Woche. Zum Annotieren eines Dokuments ordnet der Annotatorbenutzer den Entitätstyp `WOCHENTAG` für Erwähnungen der Wörter *Montag* und *Freitag* im Text zu. Da das Wörterverzeichnis die sieben Wochentage als austauschbar einstuft, kann leichter sichergestellt werden, dass ein Modell für maschinelles Lernen das Vorkommen der Wörter *Dienstag* und *Mittwoch* sowie der übrigen Wochentage in neuen Dokumenten während der Laufzeit korrekt annotiert. Außerdem unterstützt die Gleichsetzung dieser Wörter auch das Extrahieren von Informationen aus dem umgebenden Text. Die Erkenntnisse, die das Modell für maschinelles Lernen aus Trainingsbeispielen des Texts gewinnt, der die Erwähnungen *Montag* und *Freitag* umgibt, wird auf Texte angewendet, in deren Umgebung andere Wochentage erwähnt werden, da diese Begriffe laut Wörterverzeichnis bei der Informationsextraktion als äquivalent eingestuft werden.
 
-> **Hinweis:** Sie müssen kein Wörterverzeichnis erstellen, das Informationen zu Wochentagen enthält. Mehrere solche, vielseitig einsetzbare Wörterverzeichnisse sind in die Anwendung integriert. Andere Wörterverzeichnisse enthalten Länder- und Ortsnamen, Zahlwörter, Tiere, Pflanzen, Krankheiten, Maßeinheiten (z. B. Unze und Meter) sowie Anreden wie Herr und Frau. Integrierte Wörterverzeichnisse können weder inaktiviert noch bearbeitet werden.
+> **Hinweis:** Sie müssen kein Wörterverzeichnis erstellen, das Informationen zu Wochentagen enthält. Mehrere solche, vielseitig einsetzbare Wörterverzeichnisse sind in die Anwendung integriert. Andere integrierte Wörterverzeichnisse enthalten Länder- und Ortsnamen, Zahlwörter, Tiere, Pflanzen, Krankheiten, Maßeinheiten (z. B. *Unze* und *Meter*) sowie Anreden wie *Herr* und *Frau*. Integrierte Wörterverzeichnisse können weder inaktiviert noch bearbeitet werden.
 
 Vermeiden Sie das Hinzufügen von Einträgen mit mehreren Bedeutungen. In einem Fachgebiet für Autorennen sollte der Begriff *Pilot* für den Fahrer am Steuer des Rennwagens nur eingetragen werden, wenn der Textkorpus in der Regel keine Hinweise auf die Luftfahrt enthält. Wenn beide Wortbedeutungen in den Quellendokumenten häufig vorkommen, sollte der Begriff in beide Wörterverzeichnistypen (für Autorennen und für Luftfahrt) nicht aufgenommen werden.
 
@@ -55,6 +54,7 @@ Wörterverzeichnisse können (optional) auf zwei verschiedene Arten verwendet we
 - **Verwendung der Vorannotation**
 
     Wörterverzeichnisse sind wichtig für die folgenden Prozesse der Vorannotation.
+
     - Wörterverzeichnisbasierter Vorannotator: Beim Ausführen des wörterverzeichnisbasierten Vorannotators ordnen Sie einem Wörterverzeichnis einen Entitätstyp aus dem Typsystem zu.
     - Regelbasiertes Modell: Sie können optional ein Wörterverzeichnis einer Regelklasse zuordnen. Beim Ausführen des regelbasierten Modells zum Vorannotieren von Dokumenten werden dann Klassen den Entitätstypen aus dem Typsystem zugeordnet. Dies führt dazu, dass Begriffe aus dem Wörterverzeichnis im Umlaufverfahren auch Entitätstypen für das regelbasierte Modell zugeordnet werden.
 
@@ -62,9 +62,9 @@ Wörterverzeichnisse können (optional) auf zwei verschiedene Arten verwendet we
 
 ### Sprachaspekte
 
-- Für Portugiesisch (Brasilien), Englisch, Deutsch, Italienisch und Spanisch stellt {{site.data.keyword.knowledgestudioshort}} derzeit keine Option zum Aktivieren eines von Groß-/Kleinschreibung unabhängigen Wörterverzeichnisabgleichs bereit. Die Wörterverzeichniseinträge finden jedoch Textübereinstimmungen mit Großschreibung. Beispiel: Für den Eintrag 'fahrzeug' im Wörterverzeichnis werden 'fahrzeug', 'Fahrzeug' und 'FAHRZEUG' im Text als Übereinstimmungen erkannt. Für den Wörterverzeichniseintrag 'Sat' werden im Text zwar 'Sat' und 'SAT' als Übereinstimmungen erkannt, jedoch nicht 'sat'.
+- Für Portugiesisch (Brasilien), Englisch, Deutsch, Italienisch und Spanisch stellt {{site.data.keyword.knowledgestudioshort}} derzeit keine Option zum Aktivieren eines von Groß-/Kleinschreibung unabhängigen Wörterverzeichnisabgleichs bereit. Die Wörterverzeichniseinträge finden jedoch Textübereinstimmungen mit Großschreibung. Beispiel: Für den Eintrag *fahrzeug* im Wörterverzeichnis werden *fahrzeug*, *Fahrzeug* oder *FAHRZEUG* im Text als Übereinstimmungen erkannt. Für den Wörterverzeichniseintrag *Sat* werden im Text zwar *Sat* oder *SAT* als Übereinstimmungen erkannt, jedoch nicht *sat*.
 - Für Japanisch und Koreanisch wird beim Wörterverzeichnisabgleich während der Vorannotation die Groß-/Kleinschreibung beachtet.
-- Für Arabisch setzt {{site.data.keyword.knowledgestudioshort}} voraus, dass der arabische Text ungeformt gespeichert ist. Zahlenformen werden als Eigenschaft auf der Speicherebene behandelt. Weitere Informationen zur Verarbeitung arabischer Zeichen- und Zahlenformen in {{site.data.keyword.knowledgestudioshort}}, finden Sie unter [Unterstützung für Arabisch konfigurieren](/docs/services/watson-knowledge-studio/language-support.html#wks_langsupp_ar).
+- Für Arabisch setzt {{site.data.keyword.knowledgestudioshort}} voraus, dass der arabische Text ungeformt gespeichert ist. Zahlenformen werden als Eigenschaft auf der Speicherebene behandelt. Weitere Informationen zur Verarbeitung arabischer Zeichen- und Zahlenformen in {{site.data.keyword.knowledgestudioshort}}, finden Sie unter [Unterstützung für Arabisch konfigurieren](/docs/services/watson-knowledge-studio/language-support-arabic.html).
 
 ### Wörterverzeichnis als CSV-Datei
 {: #wks_dictionaries__cvsdict}
@@ -80,61 +80,70 @@ lemma,poscode,surface
 
 In den restlichen Zeilen der Datei werden die Wörterverzeichniseinträge angegeben. Dabei gilt Folgendes:
 
-- **`Lemma`**
+- **Lemma**
 
     Gibt die repräsentativste Wortform (Grundform) für den Eintrag an.
 
-- **`poscode (Arabisch, Portugiesisch (Brasilien), Englisch, Französisch, Deutsch, Italienisch und Spanisch)`**
+- **poscode** (Arabisch, Portugiesisch (Brasilien), Englisch, Französisch, Deutsch, Italienisch und Spanisch)
 
-    Gibt einen Code an, der die Wortart identifiziert. Diese Wortartinformationen werden vom wörterverzeichnisbasierten Anotator verwendet, um Sätze in Tokens zu zerlegen.
-    - 0 - Unbekannt
+    Gibt einen Code an, der die Wortart identifiziert. Diese Wortartinformationen werden vom wörterverzeichnisbasierten Annotator verwendet, um Sätze in Tokens zu zerlegen.
+    - `0` - Unbekannt
 
-        > **Hinweis:** Dieser Code bietet Unterstützung zum Hochladen eines umfangreichen, maschinengenerierten Wörterverzeichnisses, das nicht in jedem Eintrag Wortartinformationen enthält. Der Code 'Unbekannt' kann standardmäßig allen Einträgen zugeordnet werden. Vermeiden Sie nach Möglichkeit die Verwendung dieses Codes.
+        > **Hinweis:** Dieser Code bietet Unterstützung zum Hochladen eines umfangreichen, maschinengenerierten Wörterverzeichnisses, das nicht in jedem Eintrag Wortartinformationen enthält. Der Code *Unbekannt* kann standardmäßig allen Einträgen zugeordnet werden. Vermeiden Sie nach Möglichkeit die Verwendung dieses Codes.
 
-    - 1 - Pronomen
-    - 2 - Verb
-    - 3 - Nomen
-    - 4 - Adjektiv
-    - 5 - Adverb
-    - 6 - Adposition
-    - 7 - Interjektion
-    - 8 - Konjunktion
-    - 9 - Determinator
-    - 10 - Quantifizierer
+    - `1` - Pronomen
+    - `2` - Verb
+    - `3` - Substantiv
+    - `4` - Adjektiv
+    - `5` - Adverb
+    - `6` - Adposition
+    - `7` - Interjektion
+    - `8` - Konjunktion
+    - `9` - Determinator
+    - `10` - Quantifizierer
 
-    In der englischen Sprache sind Nomen (3), Verb (2) und Adjektiv (4) die häufigsten Wortarten in Wörterverzeichniseinträgen.
+    In der englischen Sprache sind Substantive (`3`), Verb (`2`) und Adjektiv (`4`) die häufigsten Wortarten in Wörterverzeichniseinträgen.
 
-    > **Hinweis:** Durch die Wortart wird nicht automatisch der Typ der Erwähnung festgelegt. Gehen Sie nicht generell davon aus, dass alle Nomen Erwähnungen von Entitätstypen sind und alle Verben Erwähnungen von Beziehungstypen. Beispiel: *amerikanisch* ist ein Adjektiv, das jedoch als Entitätstyp  GPE (geopolitische Entität) oder PERSON annotiert werden sollte. Das Verb *traf* sollte mit EREIGNIS_TREFFEN annotiert werden.
+    > **Hinweis:** Durch die Wortart wird nicht automatisch der Typ der Erwähnung festgelegt. Gehen Sie nicht generell davon aus, dass alle Nomen Erwähnungen von Entitätstypen sind und alle Verben Erwähnungen von Beziehungstypen. Beispiel: *amerikanisch* ist ein Adjektiv, das jedoch als Entitätstyp **GPE** (geopolitische Entität) oder `PERSON` annotiert werden sollte. Das Verb *traf* sollte mit `EREIGNIS_TREFFEN` annotiert werden.
 
     In anderen Sprachen (z. B. Deutsch), die Komposita (zusammengesetzte Wörter) verwenden, sind exakte Wortartinformationen noch wichtiger, um Wortgrenzen zu erkennen.
 
-- **`poscode (Japanisch)`**
+- **poscode** (Chinesisch)
+
+    Gibt einen Code an, der die Wortart identifiziert. Der Wert für die Wortart ist für die Zerlegung von Text in Tokens und für die Vorannotierung in Sprachen wie Chinesisch (vereinfacht oder traditionell) wichtig, die Wortgrenzen nicht durch Leerzeichen kenntlich machen.
+    - `32` - Substantiv
+    - `31` - Substantiv (Familienname)
+    - `35` - Substantiv (Organisation)
+    - `34` - Substantiv (Andere)
+    - `33` - Substantiv (Personenname)
+
+- **poscode** (Japanisch)
 
     Gibt einen Code an, der die Wortart identifiziert. Der Wert für die Wortart ist für die Zerlegung von Text in Tokens und für die Vorannotierung in Sprachen wie Japanisch wichtig, die Wortgrenzen nicht durch Leerzeichen kenntlich machen.
-    - 19 - Nomen
-    - 23 - allgemeines Präfix
-    - 24 - allgemeines Suffix
-    - 140 - Eigenname (Nachname)
-    - 141 - Eigenname (Vorname)
-    - 146 - Eigenname (Personenname)
-    - 142 - Eigenname (Organisation)
-    - 144 - Eigenname (Ortsname)
-    - 143 - Eigenname (Region)
-    - 145 - Eigenname (Andere)
+    - `19` - Substantiv
+    - `23` - Allgemeines Präfix
+    - `24` - Allgemeines Suffix
+    - `140` - Eigenname (Nachname)
+    - `141` - Eigenname (Vorname)
+    - `146` - Eigenname (Personenname)
+    - `142` - Eigenname (Organisation)
+    - `144` - Eigenname (Ortsname)
+    - `143` - Eigenname (Region)
+    - `145` - Eigenname (Andere)
 
-- **`poscode (Koreanisch)`**
+- **poscode** (Koreanisch)
 
     Gibt einen Code an, der die Wortart identifiziert. Der Wert für die Wortart ist für die Zerlegung von Text in Tokens und für die Vorannotierung in Sprachen wie Koreanisch wichtig, die Wortgrenzen nicht durch Leerzeichen kenntlich machen.
-    - 10010 - Nomen
-    - 10300 - Eigenname (Nachname)
-    - 10310 - Eigenname (Vorname)
-    - 110360 - Eigenname (Personenname)
-    - 10320 - Eigenname (Organisation)
-    - 10340 - Eigenname (Ortsname)
-    - 10330 - Eigenname (Region)
-    - 10350 - Eigenname (Andere)
+    - `10010` - Substantiv
+    - `10300` - Eigenname (Nachname)
+    - `10310` - Eigenname (Vorname)
+    - `110360` - Eigenname (Personenname)
+    - `10320` - Eigenname (Organisation)
+    - `10340` - Eigenname (Ortsname)
+    - `10330` - Eigenname (Region)
+    - `10350` - Eigenname (Andere)
 
-- **`surface`**
+- **surface**
 
     Gibt äquivalente Begriffe an (auch als Oberflächenformen bezeichnet). Wiederholen Sie das Lemma als Oberflächenform und trennen Sie mehrere Oberflächenformen jeweils durch ein Komma. Wenn eine Oberflächenform ein Komma enthält, setzen Sie die Oberflächenform in Anführungszeichen.
 
@@ -154,7 +163,7 @@ premium,4,premium,premium-grade
 
 **Zugehörige Tasks**:
 
-[Dokumente mit dem wörterverzeichnisbasierten Annotator vorannotieren](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannot)
+[Dokumente mit einem Wörterverzeichnis vorannotieren](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannot)
 
 ## Wörterverzeichnisse zu einem Arbeitsbereich hinzufügen
 {: #wks_projdictionaries}
@@ -169,7 +178,7 @@ Für Wörterverzeichnisse gelten die folgenden Einschränkungen:
 
 - Maximal 15.000 Einträge pro Wörterverzeichnis
 
-    > **Hinweis:** Diese Begrenzung gilt nicht für Wörterverzeichnisse, die als CSV-Datei hochgeladen werden. Schreibgeschützte Wörterverzeichnisse können mehr Einträge enthalten.
+    > **Hinweis:** Diese Begrenzung gilt nicht für Wörterverzeichnisse, die als `CSV`-Datei hochgeladen werden. Schreibgeschützte Wörterverzeichnisse können mehr Einträge enthalten.
 
 - Maximal 64 Wörterverzeichnisse pro Arbeitsbereich
 
@@ -177,35 +186,31 @@ Für Wörterverzeichnisse gelten die folgenden Einschränkungen:
 
 So fügen Sie in Ihrem Arbeitsbereich ein Wörterverzeichnis hinzu:
 
-1. Melden Sie sich als {{site.data.keyword.knowledgestudioshort}}-Administrator oder -Projektleiter an und öffnen Sie die Registerkarte **Assets & Tools** > **Vorannotatoren** > **Wörterverzeichnisse**.
+1. Melden Sie sich als {{site.data.keyword.knowledgestudioshort}}-Administrator oder -Projektleiter an und öffnen Sie die Seite **Assets** > **Wörterverzeichnisse**.
 1. Führen Sie eine der folgenden Tasks aus:
 
-    - Klicken Sie auf die Schaltfläche **Wörterverzeichnis hochladen**, wählen Sie ein Wörterverzeichnis aus und klicken Sie anschließend auf **Hochladen**. Klicken Sie nach dem Hochladen eines Wörterverzeichnisses auf **Wörterverzeichnisse verwalten**, um das Wörterverzeichnis anzuzeigen und einem Entitätstyp zuzuordnen.
+    - Klicken Sie neben der Schaltfläche **Wörterverzeichnis erstellen** auf das **Menüsymbol** und wählen Sie dann **Wörterverzeichnis hochladen** aus. Wählen Sie ein Wörterverzeichnis aus und klicken Sie auf **Hochladen**. Nachdem Sie ein Wörterverzeichnis hochgeladen haben, wählen Sie es aus, um das Wörterverzeichnis anzuzeigen und ordnen es einem Entitätstyp zuzuordnen.
 
-        - Sie können eine komprimierte Datei hochladen, die ein Wörterverzeichnis enthält und aus einem anderen {{site.data.keyword.knowledgestudioshort}}-Arbeitsbereich heruntergeladen wurde. Vor dem Hochladen der Wörterverzeichnisdatei müssen Sie das aus dem anderen Arbeitsbereich heruntergeladene Typsystem im JSON-Format hochladen. In einem Wörterverzeichnis aus einem anderen {{site.data.keyword.knowledgestudioshort}}-Arbeitsbereich, das Sie wiederverwenden, können Sie Einträge bearbeiten und hinzufügen. Details hierzu finden Sie unter [Ressourcen aus einem anderen Arbeitsbereich hochladen](/docs/services/watson-knowledge-studio/exportimport.html).
+    Sie können eine komprimierte Datei hochladen, die ein Wörterverzeichnis enthält und aus einem anderen {{site.data.keyword.knowledgestudioshort}}-Arbeitsbereich heruntergeladen wurde. Vor dem Hochladen der Wörterverzeichnisdatei müssen Sie das aus dem anderen Arbeitsbereich heruntergeladene Typsystem im JSON-Format hochladen. In einem Wörterverzeichnis aus einem anderen {{site.data.keyword.knowledgestudioshort}}-Arbeitsbereich, das Sie wiederverwenden, können Sie Einträge bearbeiten und hinzufügen. Details hierzu finden Sie unter [Ressourcen aus einem anderen Arbeitsbereich hochladen](/docs/services/watson-knowledge-studio/exportimport.html).
 
-        Das Hochladen einer CSV-Datei wird ebenfalls unterstützt. Wenn Sie die Datei jedoch direkt als Wörterverzeichnis hochladen, wird eine schreibgeschützte Vorschau des Wörterverzeichnisses erstellt, die Sie weder bearbeiten noch zum Vorannotieren von Dokumenten verwenden können. Um eine bearbeitbare CSV-Datei hochzuladen, die auch zum Vorannotieren verwendet werden kann, klicken Sie auf **Wörterverzeichnisse verwalten** und danach auf **Wörterverzeichnis erstellen**, damit zuerst ein Wörterverzeichnis erstellt wird, in das anschließend der Inhalt der CSV-Datei als Einträge geladen werden kann.
+    Das Hochladen einer CSV-Datei wird ebenfalls unterstützt. Wenn Sie die Datei jedoch direkt als Wörterverzeichnis hochladen, wird eine schreibgeschützte Vorschau des Wörterverzeichnisses erstellt, die Sie weder bearbeiten noch zum Vorannotieren von Dokumenten verwenden können. Um eine bearbeitbare CSV-Datei hochzuladen, die auch zum Vorannotieren verwendet werden kann, klicken Sie auf **Wörterverzeichnis erstellen**, um zunächst ein leeres Wörterverzeichnis zu erstellen. Laden Sie dann in das neu erstellte Wörterverzeichnis den Inhalt der CSV-Datei als Einträge hoch.
 
-    - Klicken Sie auf die Schaltfläche **Wörterverzeichnisse verwalten**, um ein neues Wörterverzeichnis zu erstellen, in dem Sie anschließend Einträge hinzufügen können.
+    - Klicken Sie auf die Schaltfläche **Wörterverzeichnis erstellen**, um ein leeres Wörterverzeichnis zu erstellen, in das Sie anschließend Wörterverzeichniseinträge hinzufügen können. Geben Sie einen beschreibenden Namen für das Wörterverzeichnis an und klicken Sie anschließend auf **Speichern**.
 
-        Klicken Sie auf die Schaltfläche **Wörterverzeichnis erstellen** und geben Sie einen beschreibenden Namen für das Wörterverzeichnis an. Wählen Sie den Entitätstyp aus, der den Zweck des Wörterverzeichnisses am besten beschreibt, und klicken Sie anschließend auf **Speichern**.
+2. Führen Sie eine der folgenden Tasks aus, um Einträge zum Wörterverzeichnis hinzuzufügen:
 
-1. Führen Sie eine der folgenden Tasks aus, um Einträge zum Wörterverzeichnis hinzuzufügen:
+    - Klicken Sie auf **Eintrag hinzufügen**, um einen Wörterverzeichniseintrag hinzuzufügen. Geben Sie das *Lemma* (die Grundform des Begriffs) an.
+    - Klicken Sie auf **Hochladen**, um eine `CSV`-Datei mit Wörterverzeichniseinträgen hochzuladen. Navigieren Sie anschließend zu der Datei und wählen Sie sie aus. Die `CSV`-Datei muss kleiner als 1 MB sein.
 
-    - Klicken Sie auf **Eintrag hinzufügen**, um einen Wörterverzeichniseintrag hinzuzufügen. Geben Sie das Lemma (die Grundform des Begriffs) an.
-    - Klicken Sie auf **Hochladen**, um eine `CSV`-Datei mit Wörterverzeichniseinträgen hochzuladen. Navigieren Sie anschließend zu der Datei und wählen Sie sie aus. Die CSV-Datei muss kleiner als 1 MB sein.
+3. Nachdem Sie Einträge hochgeladen oder hinzugefügt haben, können Sie die Einträge bearbeiten.
 
-1. Nachdem Sie Einträge hochgeladen oder hinzugefügt haben, können Sie die Einträge bearbeiten.
+    Öffnen Sie einen Eintrag, um äquivalente Begriffe (auch als *Oberflächenformen* bezeichnet) anzugeben. Jede Oberflächenform darf maximal 258 Zeichen lang sein. Sie können angeben, welche Oberflächenform als Lemma verwendet werden soll. Beispiel: Für das Lemma *{{site.data.keyword.IBM_notm}}* können Oberflächenformen wie *{{site.data.keyword.IBM_notm}} Corp.* und *International Business Machines, Inc.* vorkommen.
 
-    Öffnen Sie einen Eintrag, um äquivalente Begriffe (auch als Oberflächenformen bezeichnet) anzugeben. Jede Oberflächenform darf maximal 258 Zeichen lang sein. Sie können angeben, welche Oberflächenform als Lemma verwendet werden soll.
+4. Wählen Sie die entsprechende Wortart für jedes Lemma und jede Oberflächenform im Wörterverzeichnis aus.
 
-    Beispiel: Für das Lemma *{{site.data.keyword.IBM_notm}}* können Oberflächenformen wie *{{site.data.keyword.IBM_notm}} Corp.* und *International Business Machines, Inc.* vorkommen.
+    Die Wortartinformationen werden vom Tokenizer und beim Vorannotieren verwendet.
 
-1. Wählen Sie die entsprechende Wortart für jedes Lemma und jede Oberflächenform im Wörterverzeichnis aus.
-
-    Die Wortartinformationen werden vom Tokenizer und beim Vorannotieren verwendet. 
-
-1. Klicken Sie auf **Speichern**, um Ihre Änderungen zu speichern.
+5. Klicken Sie auf **Speichern**, um Ihre Änderungen zu speichern.
 
 ### Nächste Schritte
 
@@ -213,8 +218,8 @@ Führen Sie den Vorannotator aus, der die von Ihnen erstellen Wörterverzeichnis
 
 **Zugehörige Tasks**:
 
-[Dokumente mit dem wörterverzeichnisbasierten Vorannotator vorannotieren](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannot)
+[Dokumente mit einem Wörterverzeichnis vorannotieren](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannot)
 
 **Zugehörige Referenzinformationen**:
 
-[Unterstützung verschiedener Landessprachen](/docs/services/watson-knowledge-studio/language-support.html)
+[Sprachunterstützung](/docs/services/watson-knowledge-studio/language-support.html)

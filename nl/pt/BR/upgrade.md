@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-30"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -26,7 +26,7 @@ Essa documentação destina-se ao {{site.data.keyword.knowledgestudiofull}} no {
 Para fazer upgrade do nível de seu serviço, veja a página [{{site.data.keyword.knowledgestudioshort}} do catálogo do {{site.data.keyword.cloud_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/catalog/services/knowledge-studio){: new_window}.
 {: shortdesc}
 
-Se fizer upgrade do plano Grátis do {{site.data.keyword.knowledgestudioshort}}, você precisará migrar manualmente suas áreas de trabalho após o processo de [backup e restauração](/docs/services/watson-knowledge-studio/backup-restore.html).
+Se você fizer upgrade de um plano Lite do {{site.data.keyword.knowledgestudioshort}} para um plano Padrão, o {{site.data.keyword.knowledgestudioshort}} usará a migração in-place. Você não precisa fazer nenhuma migração manual.
 
 **Nota**: neste momento, o downgrade de seu plano no {{site.data.keyword.cloud_notm}} não é suportado. No entanto, é possível gerenciar usuários, armazenamento, faturamento e uso.
   - Para obter informações sobre como desativar contas de usuário no {{site.data.keyword.knowledgestudioshort}}, veja [Montando uma equipe](/docs/services/watson-knowledge-studio/team.html#deactivating-user-accounts).

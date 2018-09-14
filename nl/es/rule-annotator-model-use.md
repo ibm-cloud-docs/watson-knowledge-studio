@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-08-14"
 
 ---
 
@@ -34,55 +34,6 @@ Para algunos de los servicios, debe conocer los detalles sobre la instancia de s
 
 También puede preanotar documentos nuevos con el modelo basado en reglas. Consulte [Preanotación de documentos con el modelo basado en reglas](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannotrule) para obtener detalles.
 
-## Despliegue de un modelo basado en reglas en AlchemyLanguage
-{: #wks_rule_bluemix}
-
-Esta característica permite que las aplicaciones utilicen el modelo basado en reglas desplegado para buscar y extraer entidades de documentos en su dominio.
-
-**Atención**: Esta es en este momento una característica [experimental](/docs/services/watson-knowledge-studio/troubleshooting.html#experimental) del servicio.
-
-### Antes de empezar
-
-Debe tener el plan Avanzado del servicio de {{site.data.keyword.alchemylanguageshort}} para utilizar este modelo personalizado.
-
-### Acerca de esta tarea
-
-Para desplegar en este servicio, debe tener una clave de acceso de {{site.data.keyword.IBM_notm}} {{site.data.keyword.alchemylanguageshort}}.
-
-La clave debe pertenecer a una cuenta autorizada a publicar modelos personalizados o el modelo se desplegará correctamente, pero no podrá utilizarlo.
-
-Al desplegar el modelo basado en reglas, seleccione la versión del mismo que desee desplegar. Debe especificar la clave la primera vez que despliegue un modelo en {{site.data.keyword.alchemylanguageshort}}. A continuación, puede reutilizar la clave con varias versiones del modelo que se despliega. Cada clave tiene un número máximo de modelos que se pueden desplegar al mismo tiempo.
-
-### Procedimiento
-
-Para desplegar un modelo basado en reglas en {{site.data.keyword.alchemylanguageshort}}:
-
-1. Inicie sesión como un administrador o gestor de proyectos de {{site.data.keyword.knowledgestudioshort}}, y seleccione su espacio de trabajo.
-1. Seleccione el separador **Gestión de modelos** > **Versiones** > **Basado en reglas**.
-1. Seleccione la versión del modelo que desea desplegar.
-
-    Si solo hay una versión que funciona del modelo, guarde el modelo actual para su despliegue pulsando **Guardar para despliegue**. Al pulsar **Guardar para despliegue** se creará una versión del modelo, lo que permite desplegar una versión mientras sigue mejorando la versión actual. Guardar la versión puede tardar unos minutos. La opción para desplegar no aparecerá hasta que se cree la versión.
-
-1. Pulse **Desplegar**, elija desplegarla en {{site.data.keyword.alchemylanguageshort}} y, a continuación, pulse **Siguiente**.
-1. Especifique la clave que ha obtenido desde {{site.data.keyword.alchemylanguageshort}} o seleccione una versión previamente desplegada del modelo que tiene una clave que desee reutilizar, y pulse **Desplegar**. Si la clave es válida, se mostrará una confirmación que contiene el ID del modelo. Esta confirmación no significa que el modelo esté listo para que lo utilicen sus aplicaciones.
-1. El proceso de despliegue puede tardar unos minutos. Para comprobar el estado del despliegue, pulse **Estado** junto a la versión que ha desplegado. Si el modelo se está desplegando todavía, el estado indica "publicando". Cuando finalice el despliegue, el estado cambiará a "disponible" si el despliegue fue correcto, o "error" si se producen problemas.
-
-    La información de estado incluye el ID de modelo, los últimos cuatro dígitos de la clave de {{site.data.keyword.alchemyapishort}} y un registro del proceso de despliegue. El ID de modelo (model_id) es cómo llaman sus aplicaciones al modelo de aprendizaje automático. Tome nota de este ID de modelo porque no hay forma programática para acceder más adelante. Utilice la clave de {{site.data.keyword.alchemyapishort}} para realizar el seguimiento del número de despliegues por clave.
-
-### Qué hacer a continuación
-
-Para utilizar el modelo desplegado, debe copiar y pegar el ID de modelo a la llamada de la API de su aplicación.
-
-> **Atención:** No puede utilizar la llamada de API `GET /info/models` {{site.data.keyword.alchemylanguageshort}} para obtener el ID de modelo de modelos basados en reglas mediante programación. Puede acceder al ID de modelo de modelos de aprendizaje automático con esta llamada, pero no al ID de modelo basado en reglas.
-
-La llamada también debe especificar el servicio de {{site.data.keyword.alchemylanguageshort}} que desea utilizar con el modelo y la clave de acceso de {{site.data.keyword.alchemyapishort}}.
-
-Se admite el siguiente punto final:
-
-- **&lt;*input-type*&gt;GetRankedNamedEntities**
-
-    Utiliza el modelo personalizado que especifique en el parámetro del modelo para extraer una lista de menciones de todos los tipos de entidades conocidos que encuentre en la entrada que proporcione. Los tipos de entrada soportados incluyen texto, HTML o un URL público. Consulte [{{site.data.keyword.alchemylanguageshort}}&gt;Entities ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/alchemy-language/api/v1/#entities){: new_window} para obtener más información sobre la API y la sintaxis a utilizar.
-
 ## Despliegue de un modelo basado en reglas en IBM Watson Discovery
 {: #wks_rule_discovery}
 
@@ -91,18 +42,22 @@ Despliegue el modelo para habilitar una aplicación que utiliza el servicio de {
 **Atención**: Esta es en este momento una característica [experimental](/docs/services/watson-knowledge-studio/troubleshooting.html#experimental) del servicio.
 
 ### Antes de empezar
+{: #wks_rule_discovery_prereqs}
 
 Debe tener acceso administrativo a una instancia de servicio de {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}}, y conocer los nombres de los espacios y de las instancias de {{site.data.keyword.Bluemix_notm}} asociados con ella.
 
 ### Procedimiento
+{: #wks_rule_discovery_procedure}
 
 Para desplegar un modelo basado en reglas en {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}}, siga estos pasos:
 
 1. Inicie sesión como un administrador o gestor de proyectos de {{site.data.keyword.knowledgestudioshort}}, y seleccione su espacio de trabajo.
-1. Seleccione el separador **Gestión de modelos** > **Versiones** > **Basado en reglas**.
+1. Seleccione el separador **Modelo basado en reglas** > **Versiones** > **Modelo basado en reglas**.
 1. Seleccione la versión del modelo que desea desplegar.
 
     Si solo hay una versión que funciona del modelo, guarde el modelo actual para su despliegue pulsando **Guardar para despliegue**. Esto versiona el modelo, lo que permite desplegar una versión, mientras sigue mejorando la versión actual. Guardar la versión puede tardar unos minutos. La opción para desplegar no aparecerá hasta que se cree la versión.
+
+    **Nota**: Cada versión se puede desplegar en una sola instancia de servicio. Si desea desplegar el mismo modelo en más de una instancia, cree una versión para cada instancia.
 
 1. Pulse **Desplegar**, elija desplegarla en {{site.data.keyword.discoveryshort}} y, a continuación, pulse **Siguiente**.
 1. Proporcione el espacio y la instancia de {{site.data.keyword.Bluemix_notm}}. Si es necesario, seleccione una región distinta.
@@ -114,6 +69,7 @@ Para desplegar un modelo basado en reglas en {{site.data.keyword.watson}} {{site
     Una vez disponible, tome nota del ID de modelo (model_id). Proporcionará este ID al servicio de {{site.data.keyword.discoveryshort}} para permitir al servicio que utilice su modelo personalizado.
 
 ### Qué hacer a continuación
+{: #wks_rule_discovery_next}
 
 Para utilizar el modelo desplegado, debe proporcionar el ID de modelo cuando se solicite durante el proceso de configuración de enriquecimiento del servicio de {{site.data.keyword.discoveryshort}}.
 
@@ -125,18 +81,22 @@ Despliegue el modelo basado en reglas para habilitar una aplicación que utiliza
 **Atención**: Esta es en este momento una característica [experimental](/docs/services/watson-knowledge-studio/troubleshooting.html#experimental) del servicio.
 
 ### Antes de empezar
+{: #wks_rule_prereqs}
 
 Debe tener acceso administrativo a una instancia de servicio de {{site.data.keyword.nlushort}}, y conocer los nombres de los espacios y de las instancias de {{site.data.keyword.Bluemix_notm}} asociados con ella.
 
 ### Procedimiento
+{: #wks_rule_procedure}
 
 Para desplegar un modelo basado en reglas en {{site.data.keyword.nlushort}}, siga estos pasos:
 
 1. Inicie sesión como un administrador o gestor de proyectos de {{site.data.keyword.knowledgestudioshort}}, y seleccione su espacio de trabajo.
-1. Seleccione el separador **Gestión de modelos** > **Versiones** > **Basado en reglas**.
+1. Seleccione el separador **Modelo basado en reglas** > **Versiones** > **Modelo basado en reglas**.
 1. Seleccione la versión del modelo que desea desplegar.
 
     Si solo hay una versión que funciona del modelo, guarde el modelo actual para su despliegue pulsando **Guardar para despliegue**. Esto versiona el modelo, lo que permite desplegar una versión, mientras sigue mejorando la versión actual. Guardar la versión puede tardar unos minutos. La opción para desplegar no aparecerá hasta que se cree la versión.
+
+    **Nota**: Cada versión se puede desplegar en una sola instancia de servicio. Si desea desplegar el mismo modelo en más de una instancia, cree una versión para cada instancia.
 
 1. Pulse **Desplegar**, elija desplegarla en {{site.data.keyword.nlushort}} y, a continuación, pulse **Siguiente**.
 1. Proporcione el espacio y la instancia de {{site.data.keyword.Bluemix_notm}}. Si es necesario, seleccione una región distinta.
@@ -148,25 +108,38 @@ Para desplegar un modelo basado en reglas en {{site.data.keyword.nlushort}}, sig
     Una vez disponible, tome nota del ID de modelo (model_id). Proporcionará este ID al servicio de {{site.data.keyword.nlushort}} para permitir al servicio que utilice su modelo personalizado.
 
 ### Qué hacer a continuación
+{: #wks_rule_next}
 
 Para utilizar el modelo desplegado, debe especificar el ID de modelo del modelo personalizado en el parámetro `entities.model`.
 
 Puede utilizar el modelo con la solicitud {{site.data.keyword.nlushort}} `GET /analyze` para extraer entidades.
 
-Consulte la [documentación de {{site.data.keyword.nlushort}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/watson/developercloud/doc/natural-language-understanding/index.html){: new_window} para obtener más detalles.
+Consulte la [documentación de {{site.data.keyword.nlushort}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/docs/services/natural-language-understanding/index.html){: new_window} para obtener más detalles.
 
 ## Retirada de modelos
 {: #undeploy-view-model}
 
-Si desea retirar un modelo o buscar un ID de modelo, vea la página **Modelos desplegados**. La página **Modelos desplegados** muestra todos los modelos de {{site.data.keyword.knowledgestudioshort}} desplegados en servicios de los espacios a los que tiene acceso.
+Si desea retirar un modelo o buscar un ID de modelo, vea la página **Modelos desplegados**.
+
+### Acerca de esta tarea
+{: #wks_undeploy_about}
+
+Lo que ve en la página Modelos desplegados depende de la [región ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/docs/resources/services_region.html){: new_window} que aloja la instancia de {{site.data.keyword.knowledgestudioshort}}. Si la región da soporte a instancias gestionadas por los métodos de gestión de acceso [IAM ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/docs/iam/users_roles.html){: new_window} y [Cloud Foundry ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window}, verá un separador para cada método. Los modelos de las instancias gestionadas por IAM se listan en el separador **Grupos de recursos**. Los modelos de las instancias gestionadas por Cloud Foundry se listan en el separador **Organizaciones**.
+
+Si la región da soporte a instancias gestionadas por sólo uno de los métodos de gestión de acceso, sólo verá una lista de modelos, porque sólo será aplicable un método de gestión de acceso.
+
+### Procedimiento
+{: #wks_deploy_procedure}
 
 Para retirar modelos o buscar los ID de modelo:
 
-1. Inicie sesión como un administrador o gestor de proyectos de {{site.data.keyword.knowledgestudioshort}}, y seleccione su espacio de trabajo.
+1. Inicie {{site.data.keyword.knowledgestudioshort}}.
 1. Desde el menú **Configuración** en la barra de menús de la parte superior derecha, seleccione **Gestionar modelos desplegados**.
 1. En la lista de modelos desplegados, busque el modelo que desee ver o retirar.
 1. Para retirar el modelo, desde la última columna de la fila, pulse **Retirar modelo**.
 1. Para encontrar el ID de modelo, consulte la columna **ID de modelo**.
+
+De forma alternativa, puede retirar el despliegue de modelos de las páginas Versiones para modelos basados en reglas y modelos de aprendizaje automático.
 
 ## Aprovechar un modelo basado en reglas en IBM Watson Explorer
 {: #wks_rule_export}
@@ -174,14 +147,15 @@ Para retirar modelos o buscar los ID de modelo:
 Exporte el archivo PEAR que se produce cuando el modelo basado en reglas se crea para que pueda utilizarse en {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
 
 ### Procedimiento
+{: #wks_rule_export_procedure}
 
 Para aprovechar un modelo basado en reglas en {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer, siga estos pasos.
 
 1. Inicie sesión como un administrador o gestor de proyectos de {{site.data.keyword.knowledgestudioshort}}, y seleccione su espacio de trabajo.
-1. Seleccione el separador **Gestión de modelos** > **Versiones** > **Basado en reglas**.
+1. Seleccione el separador **Modelo basado en reglas** > **Versiones** > **Modelo basado en reglas**.
 1. Pulse **Exportar modelo actual**.
 
-    Si tiene una suscripción a un plan gratuito, no habrá disponible ninguna opción de exportación.
+    Si tiene una suscripción a un plan Lite, no habrá disponible ninguna opción de exportación.
 
     El modelo se guarda como un archivo PEAR, y se le solicitará que descargue el archivo. Un archivo PEAR (Processing Engine ARchive) es el formato de empaquetado estándar de UIMA para los componentes UIMA. El modelo se guarda en formato PEAR para que se pueda distribuir y reutilizar dentro de aplicaciones UIMA.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-07-19"
 
 ---
 
@@ -52,4 +52,4 @@ So konfigurieren Sie die angepasste numerische Umsetzung im Firefox-Browser:
 
 ### Zugehörige Referenzinformationen
 
-[Unterstützung verschiedener Landessprachen](/docs/services/watson-knowledge-studio/language-support.html)
+[Sprachunterstützung](/docs/services/watson-knowledge-studio/language-support.html)
