@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-13"
+lastupdated: "2018-09-17"
 
 ---
 
@@ -120,7 +120,7 @@ Create an account that is not included in the organization.
 
 If you need to use your current account for a {{site.data.keyword.knowledgestudioshort}} instance on a Lite plan and your user account is associated with a paid account, you can create a case. For more information, see [Contacting {{site.data.keyword.IBM_notm}} Support](/docs/services/watson-knowledge-studio/troubleshooting.html#ts_contactingibmsupport).
 
-If you need to use your current account for a {{site.data.keyword.knowledgestudioshort}} instance on a Lite plan and your user account isn't associated with a paid account, post your issue to [{{site.data.keyword.IBM_notm}} developerWorks Answers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/watson-knowledge-studio/){: new_window}. Tag the question, **WATSON-KNOWLEDGE-STUDIO**.
+If you need to use your current account for a {{site.data.keyword.knowledgestudioshort}} instance on a Lite plan and your user account isn't associated with a paid account, post your issue to [{{site.data.keyword.IBM_notm}} Developer Answers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/watson-knowledge-studio/){: new_window}. Tag the question, **WATSON-KNOWLEDGE-STUDIO**.
 
 ## Cannot access the application
 {: #wks_ts_access}
