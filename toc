@@ -72,6 +72,6 @@ Watson Knowledge Studio
     {: .topicgroup}
     Developer community
         [StackOverflow](https://stackoverflow.com/search?q=watson-knowledge-studio)
-        [developerWorks Answers](https://developer.ibm.com/answers/topics/watson-knowledge-studio/)
+        [IBM Developer Answers](https://developer.ibm.com/answers/topics/watson-knowledge-studio/)
         [WDC Slack channel](http://wdc-slack-inviter.mybluemix.net/)
     {: .navgroup-end}
