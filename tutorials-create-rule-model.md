@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-17"
+lastupdated: "2018-09-18"
 
 ---
 
@@ -290,6 +290,8 @@ For more information about creating a rule-based model, see [Creating the rule-b
         ![Shows the user choosing the "RuleDate" class from the list.](images/rule-anno3.jpg "Shows the user choosing the "RuleDate" class from the list.")
 
 1. To pre-annotate document sets or annotation sets with the rule-based model, select the **Rule-based Model** tab and click **Run this model**.
+
+   **Attention**: Run the rule-based model as a pre-annotator only on documents that were not already annotated by humans.
 
 ## Tutorial summary
 {: #wks_tutrule_sum}
