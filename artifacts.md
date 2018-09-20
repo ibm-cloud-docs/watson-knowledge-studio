@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -39,7 +39,7 @@ The models learn about the following types of artifacts that you add to the work
 - **Documents**
 
     Documents serve a different purpose depending on whether you are creating a machine learning model or a rule-based model. See the following topics for more information:
-    - Machine learning model documents: [Adding documents for annotation](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_t_docs_intro)
+    - Machine learning model documents: [Adding documents for annotation](/docs/services/watson-knowledge-studio/documents-for-annotation.html)
     - Rule-based model documents: [Adding documents for defining rules](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html)
 
 You can upload many of these artifacts from external resources, including artifacts that you downloaded from other {{site.data.keyword.knowledgestudioshort}} workspaces. See [Uploading resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html) for information about uploading artifacts from other workspaces.
