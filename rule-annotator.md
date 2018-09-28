@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-20"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -27,6 +27,7 @@ Create a rule-based model that can recognize patterns in your documents. Use rul
 {: shortdesc}
 
 ## Class overview
+{: #rule-class}
 
 When you construct a rule, you use classes to represent types of information. These classes are similar to entity types. So, why don't we just use entity types when defining rules? Because as you build rules, you can define intermediate classes that are used only to build other more complex classes. These intermediate classes are solely utilitarian. They are not useful on their own. Intermediate classes work with other intermediate classes to define a more useful and complete class. An intermediate class is necessary, but not something you expose as part of a type system. To enable the rule-based model to do useful things like pre-annotate documents with entity mentions, you must map the complex classes that you use during rule creation to their equivalent entity types from the type system.
 
@@ -35,6 +36,7 @@ For example, you want a model that can recognize people's names. To train a mach
 Another reason to avoid mapping intermediate classes to entities in your type system is that if you pre-annotate documents with the rule-based model, and then add them to your ground truth for training a machine learning model, you do not want to define rules in such a way that they will produce overlapping entity mentions. For example, if you were to map both the intermediate class `FirstName` and the complex class `FullName` to the `PERSON` entity, then an occurrence of `John Doe, Jr.` would result in an overlapping mention.
 
 ## Rule editor tools
+{: #rule-tools}
 
 The rule editor provides some tools that help you to define rules.
 
@@ -44,8 +46,7 @@ The rule editor provides some tools that help you to define rules.
 
 - Regular expression
 
-    A regular expression (regex) is a sequence of characters that define a search pattern. The regex tool that is included in the rule editor recognizes expressions that follow the `java.util.regex.Pattern` syntax. Here's a basic example:
-    `[A-Z][a-z]*`: Finds capitalized words.
+    A regular expression (regex) is a sequence of characters that define a search pattern. A basic example is `[A-Z][a-z]*` which finds capitalized words.
 
     `[A-Z]` matches any capital alphabetical letter (A through Z) and `[a-z]*` matches any lower-case alphabetical letter (a through z) zero or more times. The asterisk (*) is the character that defines the repeating setting (zero or more times).
 
@@ -60,3 +61,14 @@ The rule editor provides some tools that help you to define rules.
     {: screen}
 
     The syntax `n-year-old x` is a pattern that typically represents a person. You can define a regular expression rule to find phrases that match the `n-year-old x` pattern, and annotate them as `PERSON` entity mentions.
+
+### Regular expression best practices
+{: #rule-regex}
+
+Although the regex tool that is included in the rule editor recognizes expressions that follow the `java.util.regex.Pattern` syntax, the entire syntax is not supported. When using the regex tool, consider the following best practices:
+
+- Rules match only on token boundaries. You can't write rules that match a subsequence of a token. For more information, see [Tokenizers](/docs/services/watson-knowledge-studio/create-project.html#wks_tokenizer).
+- Keep your regular expressions simple and clean.
+- Consider using dictionaries instead of regular expressions. Although you might think of a clever rule that can capture several expressions, in general, dictionary matching is faster than rules matching. Also, dictionaries are easier to maintain.
+- Instead of relying completely on regular expressions to match tokens, it's best to use a combination of dictionaries, regular expressions, and rules. For example, consider the scenario of matching a phone number in a sentence such as `My mobile is 123-456`. You might be able to write a rule that uses a regular expression to match that sentence. But in this case, the recommended method is to add a dictionary to find words such as _mobile_ and _phone_, write a simple regular expression that captures possible phone number sequences, and then create a rule to scan for a sequence of patterns, such as `dictionary term`+`text`+`regex` as shown in the example sentence, `My mobile is 123-456`.
+- Avoid unnecessary use of _lookahead_ and _lookbehind_ (`(?=ABC)`). In many cases, you can achieve the same result by using a combination of regular expressions and rules.
