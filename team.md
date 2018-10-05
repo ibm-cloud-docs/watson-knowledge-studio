@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-18"
+lastupdated: "2018-10-04"
 
 ---
 
@@ -29,14 +29,14 @@ The creation of a model requires input from subject matter experts, project mana
 **Note**: Only Standard plans and Premium plans can have more than one user. Lite plans are limited to one user. As the only user, that person is assigned the role with the highest permission, the admin role.
 
 ## Before you begin
+{: #team-byb}
 
 - Make sure you're using a supported browser. For information, see [Browser requirements](/docs/services/watson-knowledge-studio/system-requirements.html).
 - [Create an instance of {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/tutorials-create-project.html#instance).
-- If you signed up for a Standard or Premium plan, from the {{site.data.keyword.cloud_notm}} **Manage** tab, invite other users to your organization that you want to add as users in {{site.data.keyword.knowledgestudioshort}}. For more information about inviting users, see [Inviting users and assigning access ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/iam/iamuserinv.html){: new_window}.
-
-  **Important**: Ensure that invited users have the Cloud Foundry developer role. For more information, see [Cloud Foundry access ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window}.
+- If you signed up for a Standard or Premium plan, [invite users and assign access ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/iam/iamuserinv.html){: new_window} to {{site.data.keyword.cloud_notm}} for those users you want to add in {{site.data.keyword.knowledgestudioshort}}. Ensure that the users have the necessary access management roles, as described in [{{site.data.keyword.cloud_notm}} access management roles](/docs/services/watson-knowledge-studio/roles.html#roles-cloud).
 
 ## About this task
+{: team-about}
 
 Typically, you add users to fill the roles of human annotators and project managers. For descriptions, see [User roles in {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/roles.html).
 
@@ -46,21 +46,23 @@ Typically, you add users to fill the roles of human annotators and project manag
 - The first user to launch {{site.data.keyword.knowledgestudioshort}} is granted the admin role for the {{site.data.keyword.knowledgestudioshort}} instance. This task assumes you are the first person to launch {{site.data.keyword.knowledgestudioshort}} after you sign up for a plan, which means that you have the admin role.
 
 ## Adding users in {{site.data.keyword.knowledgestudioshort}}
+{: #team-add}
 
 Add users from your {{site.data.keyword.cloud_notm}} organization to {{site.data.keyword.knowledgestudioshort}}.
 
 To add users to a {{site.data.keyword.knowledgestudioshort}} instance:
 
 1. Log in to the [{{site.data.keyword.cloud_notm}} Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net){: new_window} with your {{site.data.keyword.ibmid}} and launch {{site.data.keyword.knowledgestudioshort}}.
-1. Click the **Settings** icon, and then click **Manage service details**.
-1. In the **Manager users** section, enter the {{site.data.keyword.ibmid}} for the user you want to add.
-1. Select the role you want to give the user. For descriptions of the roles that are available, see [User roles in {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/roles.html).
+2. Click the **Settings** icon, and then click **Manage service details**.
+3. In the **Manager users** section, enter the {{site.data.keyword.ibmid}} for the user you want to add.
+4. Select the role you want to give the user. For descriptions of the roles that are available, see [User roles in {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/roles.html).
 
   **Note**: You can't downgrade user roles after assigning them, so be sure that you understand the tasks each role can perform when assigning the admin role and project manager role.
 
 1. Click **Add**.
 
 ## Upgrading user roles
+{: #team-upgrade}
 
 After you add users to {{site.data.keyword.knowledgestudioshort}}, you can upgrade lower roles to higher roles. Users must be assigned the roles described below to be able to perform the respective tasks.
 
@@ -80,11 +82,13 @@ To upgrade roles for {{site.data.keyword.knowledgestudioshort}} users:
 1. Optional: When you finish administering users in {{site.data.keyword.knowledgestudioshort}}, exit the session by closing the web browser. The {{site.data.keyword.knowledgestudioshort}} user interface does not provide an action for explicitly logging out.
 
 ## Deactivating user accounts
+{: #team-deact}
 
 Later, if you want to remove users, follow the previous steps to open the Service Details page. From the list of user IDs, find the user you want to remove and click **Deactivate**.
 
 > **Attention**: If users are assigned documents to annotate and you deactivate their accounts, their annotations are affected. If annotations made by deactivated users were not promoted to ground truth, those annotations are deleted.
 
 ### Related tasks
+{: #team-rel}
 
 [Creating and assigning annotation sets](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_projdocsets)
