@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-29"
+lastupdated: "2018-11-09"
 
 ---
 
@@ -50,12 +50,6 @@ To create a machine learning model:
 1. Optional: To specify how you want to allocate documents from your document sets to be used by the system-level training, test, or blind sets, click **Edit settings**.
 
     See [Document set management](/docs/services/watson-knowledge-studio/improve-ml.html#wks_mamanagedata) for help determining which ratios to apply.
-
-1. Optional: Associate any dictionaries that you want the machine learning model to use during training with the entity type of the dictionary entries.
-
-    If you created a dictionary pre-annotator, then you already performed this step. Click **Reuse mapping that is defined for dictionary pre-annotator** to reuse it or define a new mapping.
-
-    The model uses the type information of dictionary terms as one feature among many linguistic analysis features that it considers during training.
 
 1. Click **Train** to train the model, or click **Train & Evaluate** to train the model, evaluate annotations added by the machine learning model, and analyze the performance statistics.
 
