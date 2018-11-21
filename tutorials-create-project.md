@@ -84,7 +84,7 @@ A workspace defines all the resources that are required to create a machine lear
 {: #wks_tutless2_procedure}
 
 1. As a {{site.data.keyword.knowledgestudioshort}} administrator, from your {{site.data.keyword.cloud_notm}} [dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net){:new_window}, launch the {{site.data.keyword.knowledgestudioshort}} service.
-1. Click **Create Worskpace**.
+1. Click **Create Workspace**.
 1. Specify the details for the new workspace:
 
     - In the **Workspace name** field, type `My workspace`.
