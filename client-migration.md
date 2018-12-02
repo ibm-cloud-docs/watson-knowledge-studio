@@ -39,7 +39,7 @@ The migration process for your {{site.data.keyword.knowledgestudioshort}} projec
 |------|-------------------|--------------------|
 | Standard plan with a self-service subscription | Customer migrates instance and data | Migrate as soon as possible to gain access to the most up-to-date version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.cloud_notm}}.
 | Standard plan with a subscription contract | {{site.data.keyword.IBM_notm}} migrates the subscription contract. Customer migrates the instance and data. | Contact your {{site.data.keyword.IBM_notm}} designated account representative or contact [{{site.data.keyword.cloud_notm}} Sales ![External link icon](../../icons/launch-glyph.svg "External link icon")](mailto:watplat@us.ibm.com?subject=WKS Customer Migration). |
-| Premium plan with subscription contract | {{site.data.keyword.IBM_notm}} migrates the subscription contract. {{site.data.keyword.IBM_notm}} migrates the instance and data. | Contact your {{site.data.keyword.IBM_notm}} designated account representative or contact [{{site.data.keyword.cloud_notm}} Sales ![External link icon](../../icons/launch-glyph.svg "External link icon")](mailto:watplat@us.ibm.com?subject=WKS Customer Migration). |
+| Premium plan with subscription contract | {{site.data.keyword.IBM_notm}} migrates the subscription contract. {{site.data.keyword.IBM_notm}} migrates the instance and data, for users moving to the Premium plan on {{site.data.keyword.cloud_notm}}. | Contact your {{site.data.keyword.IBM_notm}} designated account representative or contact [{{site.data.keyword.cloud_notm}} Sales ![External link icon](../../icons/launch-glyph.svg "External link icon")](mailto:watplat@us.ibm.com?subject=WKS Customer Migration). |
 {: caption="Table 1. Process and schedule to migrate {{site.data.keyword.knowledgestudioshort}} from {{site.data.keyword.IBM_notm}} Marketplace to {{site.data.keyword.cloud_notm}}" caption-side="top"}
 
 ## Self-migration of Standard plan instances
@@ -57,7 +57,7 @@ If you have a Standard plan, complete the following steps to migrate your instan
 5. Follow the instructions on the screen, indicating that you want to migrate an instance from {{site.data.keyword.IBM_notm}} Marketplace to {{site.data.keyword.cloud_notm}}.
 6. If you have more than one instance to migrate, repeat the process.
 
-## Migration of Premium plan instances
+## Migration to Premium plan instances
 {: migratesubscription}
 
-If you have a {{site.data.keyword.knowledgestudioshort}} Premium plan, contact your {{site.data.keyword.IBM_notm}} designated account representative or contact [{{site.data.keyword.cloud_notm}} Sales ![External link icon](../../icons/launch-glyph.svg "External link icon")](mailto:watplat@us.ibm.com?subject=WKS Customer Migration). Once the subscription is migrated to {{site.data.keyword.cloud_notm}}, your data will be migrated by IBM on a schedule that is negotiated between you and {{site.data.keyword.IBM_notm}}.
+If you are migrating to a {{site.data.keyword.knowledgestudioshort}} Premium plan, contact your {{site.data.keyword.IBM_notm}} designated account representative or contact [{{site.data.keyword.cloud_notm}} Sales ![External link icon](../../icons/launch-glyph.svg "External link icon")](mailto:watplat@us.ibm.com?subject=WKS Customer Migration). Once the subscription is migrated to {{site.data.keyword.cloud_notm}}, your data will be migrated by IBM on a schedule that is negotiated between you and {{site.data.keyword.IBM_notm}}. Migrations from Premium to Standard or Lite plans are to be handled by the user.
