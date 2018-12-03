@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="watson-knowledge-studio" audience="service" arm="3218249" href="/docs/services/watson-knowledge-studio/tutorials-create-project.html"}
+{: .toc subcollection="watson-knowledge-studio" audience="service" arm="3218249" href="/docs/services/watson-knowledge-studio/tutorials-create-project.html" path="services/watson-knowledge-studio"}
 Watson Knowledge Studio
 
     {: .navgroup id="learn"}
