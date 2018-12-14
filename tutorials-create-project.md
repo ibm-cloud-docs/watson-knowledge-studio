@@ -35,9 +35,27 @@ This {{site.data.keyword.knowledgestudiofull}} tutorial helps you perform prereq
 ## Creating a service instance
 {: #instance}
 
-1. If you haven't already, [sign up for an {{site.data.keyword.ibmid}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net){: new_window} and log in to {{site.data.keyword.cloud_notm}}.
-1. From the {{site.data.keyword.cloud_notm}} {{site.data.keyword.watson}} [services page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/watson/services){: new_window}, click the {{site.data.keyword.knowledgestudioshort}} tile, and sign up for a plan.
-1. After you sign up for a plan, from the list of existing services, launch {{site.data.keyword.knowledgestudioshort}}.
+1. If you haven't already, [sign up for an {{site.data.keyword.ibmid}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com){: new_window} and log in to {{site.data.keyword.cloud_notm}}.
+2. Go to the [{{site.data.keyword.knowledgestudioshort}}](https://cloud.ibm.com/catalog/services/knowledge-studio) page in the {{site.data.keyword.cloud_notm}} catalog.
+3. Select a pricing plan, and click **Create**.
+
+## Launching the {{site.data.keyword.knowledgestudioshort}} application
+
+After creating a service instance, the user who created the service instance and any users with [{{site.data.keyword.cloud_notm}} roles](roles.html#notes) that allow access to the service instance will be able to launch the {{site.data.keyword.knowledgestudioshort}} application with the following steps.
+
+1. Go to the [{{site.data.keyword.cloud_notm}} resources ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/resources){: new_window} page. Log in with your {{site.data.keyword.ibmid}}.
+2. Select **Services** and click on your {{site.data.keyword.knowledgestudioshort}} service instance to open the {{site.data.keyword.knowledgestudioshort}} service dashboard.
+3. Click **Launch tool** from the **Manage** tab.
+
+After you launch {{site.data.keyword.knowledgestudioshort}}, you can copy the URL and use it to launch the application directly. 
+
+Example URL:
+```
+https://gateway.watsonplatform.net/knowledge-studio/tools/app/zefz11/enf01h9le5c63p50/ui/#/`
+```
+
+If you want to [add users to {{site.data.keyword.knowledgestudioshort}}](team.html#team-add) but don't want to grant them an {{site.data.keyword.cloud_notm}} role that allows access to your service instance, share the application URL to provide access to the application.
+{: tip}
 
 ## Lesson 1: Assigning user roles
 {: #wks_tutless1}
@@ -52,8 +70,8 @@ The creation of a machine learning model requires input from subject matter expe
 ### Procedure
 {: #wks_tutless1_procedure}
 
-1. Log in to {{site.data.keyword.knowledgestudioshort}} with your administrator ID. If you have an existing {{site.data.keyword.knowledgestudioshort}} instance, you can find it from the {{site.data.keyword.cloud_notm}} {{site.data.keyword.watson}} [services page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/watson/services){: new_window}.
-1. Click the Settings icon to open the Service Details page. The page lists all the user IDs that are registered as {{site.data.keyword.knowledgestudioshort}} users. Each user ID has one of the following roles (in decreasing order of included permissions):
+1. Log in to {{site.data.keyword.knowledgestudioshort}} with your administrator ID. If you have an existing {{site.data.keyword.knowledgestudioshort}} instance, you can find it on the {{site.data.keyword.cloud_notm}} [resources page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/resources){: new_window} under **Services**.
+2. Click the Settings icon to open the Service Details page. The page lists all the user IDs that are registered as {{site.data.keyword.knowledgestudioshort}} users. Each user ID has one of the following roles (in decreasing order of included permissions):
 
     - Admin
     - Project Manager
@@ -61,12 +79,12 @@ The creation of a machine learning model requires input from subject matter expe
 
     For information about user roles, see [User roles in {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/roles.html).
 
-1. Verify that there is at least one user with the Admin role. A user ID with this role can create workspaces, and act as a project manager or human annotator.
-1. If you have access to additional user IDs, verify that there are at least two users with the Human Annotator role.
+3. Verify that there is at least one user with the Admin role. A user ID with this role can create workspaces, and act as a project manager or human annotator.
+4. If you have access to additional user IDs, verify that there are at least two users with the Human Annotator role.
 
     > **Note:** Creating a real-life model typically involves multiple human annotators in addition to an administrator or project manager. However, for purposes of the tutorial, you can continue with a single user ID.
 
-1. Optional: Change the role that is assigned to a user ID. From the **Action** column of the table, click the **Edit** link, an then change the assigned user role.
+5. Optional: Change the role that is assigned to a user ID. From the **Action** column of the table, click the **Edit** link, an then change the assigned user role.
 
     > **Note:** You can upgrade a user ID to a role with greater permissions, but you cannot downgrade a user with an Admin or Project Manager role to the Human Annotator role.
 
@@ -83,15 +101,16 @@ A workspace defines all the resources that are required to create a machine lear
 ### Procedure
 {: #wks_tutless2_procedure}
 
-1. As a {{site.data.keyword.knowledgestudioshort}} administrator, from your {{site.data.keyword.cloud_notm}} [dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net){:new_window}, launch the {{site.data.keyword.knowledgestudioshort}} service.
-1. Click **Create Workspace**.
-1. Specify the details for the new workspace:
+1. As a {{site.data.keyword.knowledgestudioshort}} administrator, from your {{site.data.keyword.cloud_notm}} [resources ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/resources){:new_window} page, click the {{site.data.keyword.knowledgestudioshort}} service instance under **Services**.
+2. Click **Launch tool**.
+3. Click **Create Worskpace**.
+4. Specify the details for the new workspace:
 
     - In the **Workspace name** field, type `My workspace`.
     - In the **Workspace description** field, type `Watson Knowledge Studio tutorial workspace`.
     - In the **Language of documents** field, use the default value, **English**. The sample files you will be using for this tutorial are in English.
 
-1. Click **Create**.
+5. Click **Create**.
 
 ### Results
 {: #wks_tutless2_results}

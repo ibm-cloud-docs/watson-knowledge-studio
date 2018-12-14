@@ -26,6 +26,14 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 The following new features and changes to {{site.data.keyword.knowledgestudiofull}} are available.
 {: shortdesc}
 
+## December 2018
+{: #dec2018}
+
+### New features and changes
+{: #new-dec2018}
+
+-  Introduced support to deploy the same machine learning model version to multiple service instances and general improvements to the **Version History and Deployment** page. For information about deploying multiple instances of the same model version see [Deploying the same model version to multiple services](/docs/services/watson-knowledge-studio/publish-ml.html#machine-learning-model)
+
 ## September 2018
 {: #sept2018}
 

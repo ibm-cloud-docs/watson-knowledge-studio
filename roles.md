@@ -26,27 +26,13 @@ lastupdated: "2018-10-04"
 ## Notes about roles in {{site.data.keyword.knowledgestudioshort}}
 {: #notes}
 
-- User roles in {{site.data.keyword.knowledgestudioshort}} are managed at the following levels:
-  - {{site.data.keyword.cloud}} roles control access to {{site.data.keyword.cloud_notm}} services. For more information, see the section, [{{site.data.keyword.cloud_notm}} access management roles](#roles-cloud).
-  - {{site.data.keyword.knowledgestudioshort}} roles control access to {{site.data.keyword.knowledgestudioshort}} functionality, as described on this page.
-- A {{site.data.keyword.knowledgestudioshort}} role isn't required to create an instance of {{site.data.keyword.knowledgestudioshort}}. However, when a person creates an instance of {{site.data.keyword.knowledgestudioshort}}, the first user to launch {{site.data.keyword.knowledgestudioshort}} is assigned the {{site.data.keyword.knowledgestudioshort}} admin role.
+- **{{site.data.keyword.cloud}} roles** are different from **{{site.data.keyword.knowledgestudioshort}} roles**.
+  - **{{site.data.keyword.cloud}} roles** control permissions for managing {{site.data.keyword.cloud_notm}} services. New service instances of {{site.data.keyword.knowledgestudioshort}} are managed with [{{site.data.keyword.cloud_notm}} Identity and Access Management (IAM)](https://cloud.ibm.com/docs/iam/index.html#iamoverview) in all public regions. Some older service instances are managed with [Cloud Foundry](https://cloud.ibm.com/docs/iam/cfaccess.html#cfaccess).
+  - **{{site.data.keyword.knowledgestudioshort}} roles** control access to {{site.data.keyword.knowledgestudioshort}} functionality and are managed in the {{site.data.keyword.knowledgestudioshort}} application.
+- The first user to launch the {{site.data.keyword.knowledgestudioshort}} application is assigned the **Admin** role.
+- Once assigned, user roles can't be downgraded from higher to lower levels of permissions. Admins can't be downgraded to project managers or human annotators, and project managers can't be downgraded to human annotators. For information about adding users, upgrading roles, and deactivating user accounts, see [Assembling a team](/docs/services/watson-knowledge-studio/team.html).
 - To manage a workspace, project managers need to be assigned to the workspace by an admin.
 - Admins and project managers can perform the role of human annotators, but they must be assigned to annotation sets in the same way that human annotators must be assigned to annotation sets.
-- Once assigned, user roles can't be downgraded from higher to lower levels of permissions. Admins can't be downgraded to project managers or human annotators, and project managers can't be downgraded to human annotators. For information about adding users, upgrading roles, and deactivating user accounts, see [Assembling a team](/docs/services/watson-knowledge-studio/team.html).
-
-## {{site.data.keyword.cloud_notm}} access management roles
-{: #roles-cloud}
-
-You need to assign {{site.data.keyword.cloud_notm}} roles to users before you can assemble a team and assign roles to users within {{site.data.keyword.knowledgestudioshort}}. The necessary {{site.data.keyword.cloud_notm}} roles are determined by the method of {{site.data.keyword.cloud_notm}} access management.
-
-New instances of {{site.data.keyword.knowledgestudioshort}} are managed by [{{site.data.keyword.iamlong}} (IAM) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/iam/users_roles.html){: new_window} in all public [regions ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/resources/services_region.html){: new_window}. Some older instances of {{site.data.keyword.knowledgestudioshort}} are managed by [Cloud Foundry ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window}.
-
-When you [invite users and assign access ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/iam/iamuserinv.html){: new_window}, assign whichever set of roles is available:
-
-  - If your {{site.data.keyword.knowledgestudioshort}} instance is managed by [(IAM) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/iam/users_roles.html){: new_window}, ensure that invited users have the following roles, at a minimum, or roles that grant more permissions:
-    - Platform management role: viewer
-    - Service access role: reader
-  - If your {{site.data.keyword.knowledgestudioshort}} instance is managed by [Cloud Foundry ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window}, ensure that invited users have the Cloud Foundry developer role.
 
 ## {{site.data.keyword.knowledgestudioshort}} role descriptions
 {: #descriptions}
