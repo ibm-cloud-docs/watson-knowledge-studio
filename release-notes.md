@@ -34,6 +34,9 @@ The following new features and changes to {{site.data.keyword.knowledgestudioful
 
 -  Introduced support to deploy the same machine learning model version to multiple service instances and general improvements to the **Version History and Deployment** page. For information about deploying multiple instances of the same model version see [Deploying the same model version to multiple services](/docs/services/watson-knowledge-studio/publish-ml.html#machine-learning-model)
 
+-  Added the `models` method to the {{site.data.keyword.nlushort}} service allowing users to list deployed {{site.data.keyword.knowledgestudioshort}} models.
+
+
 ## September 2018
 {: #sept2018}
 
