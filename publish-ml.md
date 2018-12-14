@@ -60,7 +60,7 @@ To deploy a machine learning model to {{site.data.keyword.watson}} {{site.data.k
 
     If there is only one working version of the model, create a snapshot of the current model. This versions the model, which enables you to deploy one version, while you continue to improve the current version. The option to deploy does not appear until you create at least one version.
 
-    **Note**: Each version can be deployed any to any number of service instances. Each deployed instance of a model version is given a unique **Model ID**, but is identical in all other ways.
+    **Note**: Each version can be deployed to any number of service instances. Each deployed instance of a model version is given a unique **Model ID**, but is identical in all other ways.
 
 1. Click **Deploy**, choose to deploy it to {{site.data.keyword.discoveryshort}}, and then click **Next**.
 1. Select the {{site.data.keyword.Bluemix_notm}} space and instance. If necessary, select a different region.
@@ -102,7 +102,7 @@ To deploy a machine learning model to the {{site.data.keyword.nlushort}} service
 
     If there is only one working version of the model, create a snapshot of the current model. This versions the model, which enables you to deploy a version, while you continue to improve the current version. The option to deploy does not appear until you create at least one version.
 
-    **Note**: Each version can be deployed any to any number of service instances. Each deployed instance of a model version is given a unique **Model ID**, but is identical in all other ways.
+    **Note**: Each version can be deployed to any number of service instances. Each deployed instance of a model version is given a unique **Model ID**, but is identical in all other ways.
 
 1. Click **Deploy**, choose to deploy it to {{site.data.keyword.nlushort}}, and then click **Next**.
 1. Select the {{site.data.keyword.Bluemix_notm}} space and instance. If necessary, select a different region.
