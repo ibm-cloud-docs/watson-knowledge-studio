@@ -60,7 +60,7 @@ To deploy a machine learning model to {{site.data.keyword.watson}} {{site.data.k
 
     If there is only one working version of the model, create a snapshot of the current model. This versions the model, which enables you to deploy one version, while you continue to improve the current version. The option to deploy does not appear until you create at least one version.
 
-    **Note**: Each version can be deployed to only one service instance. If you want to deploy the same model to more than one instance, create a version for each instance.
+    **Note**: Each version can be deployed any to any number of service instances. Each deployed instance of a model version is given a unique **Model ID**, but is identical in all other ways.
 
 1. Click **Deploy**, choose to deploy it to {{site.data.keyword.discoveryshort}}, and then click **Next**.
 1. Select the {{site.data.keyword.Bluemix_notm}} space and instance. If necessary, select a different region.
@@ -100,9 +100,9 @@ To deploy a machine learning model to the {{site.data.keyword.nlushort}} service
 1. Select **Machine Learning Model** > **Versions**.
 1. Choose the version of the model that you want to deploy.
 
-    If there is only one working version of the model, create a snapshot of the current model. This versions the model, which enables you to deploy one version, while you continue to improve the current version. The option to deploy does not appear until you create at least one version.
+    If there is only one working version of the model, create a snapshot of the current model. This versions the model, which enables you to deploy a version, while you continue to improve the current version. The option to deploy does not appear until you create at least one version.
 
-    **Note**: Each version can be deployed to only one service instance. If you want to deploy the same model to more than one instance, create a version for each instance.
+    **Note**: Each version can be deployed any to any number of service instances. Each deployed instance of a model version is given a unique **Model ID**, but is identical in all other ways.
 
 1. Click **Deploy**, choose to deploy it to {{site.data.keyword.nlushort}}, and then click **Next**.
 1. Select the {{site.data.keyword.Bluemix_notm}} space and instance. If necessary, select a different region.
@@ -114,7 +114,37 @@ To deploy a machine learning model to the {{site.data.keyword.nlushort}} service
 ### What to do next
 {: #wks_manlu_next}
 
-To use the deployed model, you must specify the model ID of your custom model in the `entities.model` parameter.
+You can list deployed model in the {{site.data.keyword.nlushort}} service instance by calling the following API method.
+
+```bash
+curl --user "apikey:{apikey}" "{url}/v1/models?version=2018-11-16"
+```
+{: pre}
+
+Any deployed models will be returned in an array similar to the following one:
+
+```javascript
+{
+  "models": [
+    {
+      "workspace_id": "{workspace_id}",
+      "version_description": "{version_description}",
+      "version": "{version}",
+      "status": "available",
+      "name": null,
+      "model_id": "10:7abc4c2f-5846-3334-b8f7-af5a6fad3398",
+      "language": "en",
+      "description": null,
+      "created": "2018-11-28T17:08:00.000000Z"
+    }
+  ]
+}
+```
+{: codeblock}
+
+The `{workspace_id}`, `{version_description}`, and `{version}` will all match the information listed on the **Versions** page of your {{site.data.keyword.knowledgestudioshort}} service instance.
+
+To use the deployed model, you must specify the model ID of your custom model in the `entities.model` parameter of an **analyze** call.
 
 You can use the model with the {{site.data.keyword.nlushort}} `GET /analyze` request to extract the following features:
 
@@ -123,14 +153,17 @@ You can use the model with the {{site.data.keyword.nlushort}} `GET /analyze` req
     The following command finds the entities that are present in the sentence that is passed by using the text parameter:
 
     ```bash
-    curl -G -u "3330af09-4b22-4f2d-a54c-1cb099df1fa8":"338rTJSvPVqeG"
-    -d "version=2016-05-17"
-    -d "text=Vehicle%201%2C%20a%201995%20Honda%20Civic%20was%20traveling%20north
-    %20on%20a%20two%20lane%20undivided%20roadway%2C%20negotiating%20a%20curve%20to
-    %20the%20left%20on%20an%20upgrade."
-    -d "features=entities"
-    -d "entities.model=10:7abc4c2f-5846-3334-b8f7-af5a6fad3398"
-    "https://gateway.watsonplatform.net/natural-language-understanding/api/v1/analyze" -k
+    curl --user "apikey":"{apikey}" "{url}/v1/analyze?version=2018-09-21"
+    --request POST
+    --header "Content-Type: application/json"
+    -d '{"text": "Vehicle 1, a 1995 Honda Civic was traveling north on a two lane
+           undivided roadway, negotiating a curve to the left on an upgrade.",
+            "features": {
+              "entities": {
+                "model": "your-model-id-here"
+              }
+            }
+         }'
     ```
     {: pre}
 
@@ -186,14 +219,17 @@ You can use the model with the {{site.data.keyword.nlushort}} `GET /analyze` req
     The following command finds the relationships that are present in the sentence that is passed by using the text parameter:
 
     ```bash
-    curl -G -u "3330af09-4b22-4f2d-a54c-1cb099df1fa8":"338rTJSvPVqeG"
-    -d "version=2016-05-17"
-    -d "text=Vehicle%201%2C%20a%201995%20Honda%20Civic%20was%20traveling%20north
-    %20on%20a%20two%20lane%20undivided%20roadway%2C%20negotiating%20a%20curve%20to
-    %20the%20left%20on%20an%20upgrade."
-    -d "features=relations"
-    -d "entities.model=10:7abc4c2f-5846-3334-b8f7-af5a6fad3398"
-    "https://gateway.watsonplatform.net/natural-language-understanding/api/v1/analyze" -k
+    curl --user "apikey":"{apikey}" "{url}/v1/analyze?version=2018-09-21"
+    --request POST
+    --header "Content-Type: application/json"
+    -d '{"text": "Vehicle 1, a 1995 Honda Civic was traveling north on a two lane
+           undivided roadway, negotiating a curve to the left on an upgrade.",
+            "features": {
+              "relations": {
+                "model": "your-model-id-here"
+              }
+            }
+         }'
     ```
     {: pre}
 
@@ -264,6 +300,11 @@ You can use the model with the {{site.data.keyword.nlushort}} `GET /analyze` req
 
 See the [{{site.data.keyword.nlushort}} documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/natural-language-understanding/index.html){: new_window} for more details.
 
+## Deploying the same model version to multiple services
+{: #wks_secdep}
+
+If you wish to deploy a specific version of the same machine learning model to multiple {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} service instances, navigate to the **Versions** page and click the **Deploy** link on the row of the version that you want to deploy to an additional service.
+
 ## Undeploying models
 {: #undeploy-view-model}
 
@@ -288,6 +329,12 @@ To undeploy models or find model IDs:
 1. To find the model ID, see the **Model ID** column.
 
 Alternatively, you can undeploy models from the Versions pages for rule-based models and machine learning models.
+
+## Deleting a version
+{: #wks_delete_model_version}
+
+If you wish to delete a specific version a same machine learning model, navigate to the **Versions** page and click the **Delete** link on the row of the version that you want to delete.
+**Note:** The **Delete** model version link is only active if there are no deployed models associated with it. **Undeploy** all associated models before deleting the a version.
 
 ## Leveraging a machine learning model in IBM Watson Explorer
 {: #wks_maexport}
