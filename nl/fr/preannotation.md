@@ -17,7 +17,7 @@ lastupdated: "2018-08-13"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-Cette documentation concerne {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. Pour consulter la documentation de la version précédente de {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [cliquez sur ce lien ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/services/knowledge-studio/preannotation.html){: new_window}.
+Cette documentation concerne {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. Pour consulter la documentation de la version précédente de {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [cliquez sur ce lien ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/docs/services/knowledge-studio/preannotation.html){: new_window}.
 {: tip}
 
 # Amorcer le processus d'annotation
@@ -69,7 +69,7 @@ Vous pouvez utiliser le service {{site.data.keyword.nlushort}} pour pré-annoter
 ### Avant de commencer
 {: #wks_preannotnlu_prereqs}
 
-Déterminez si le pré-annotateur {{site.data.keyword.nlushort}} est susceptible d'ajouter de la valeur à votre cas d'utilisation. Passez en revue la liste des types et sous-types d'entités pris en charge par le service [{{site.data.keyword.nlushort}}![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/services/natural-language-understanding/entity-types.html){: new_window} afin de déterminer s'il existe un recoupement naturel entre eux et les types de votre système de types. Dans l'affirmative, continuez avec cette procédure. Sinon, choisissez un pré-annotateur différent.
+Déterminez si le pré-annotateur {{site.data.keyword.nlushort}} est susceptible d'ajouter de la valeur à votre cas d'utilisation. Passez en revue la liste des types et sous-types d'entités pris en charge par le service [{{site.data.keyword.nlushort}}![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/docs/services/natural-language-understanding/entity-types.html){: new_window} afin de déterminer s'il existe un recoupement naturel entre eux et les types de votre système de types. Dans l'affirmative, continuez avec cette procédure. Sinon, choisissez un pré-annotateur différent.
 
 ### A propos de cette tâche
 {: #wks_preannotnlu_about}

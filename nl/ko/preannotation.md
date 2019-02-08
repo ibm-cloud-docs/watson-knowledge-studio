@@ -17,7 +17,7 @@ lastupdated: "2018-08-13"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-이 문서는 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}에 대한 문서입니다. 이전 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 버전에 대한 문서를 보려면 [이 링크를 클릭 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/docs/services/knowledge-studio/preannotation.html){: new_window}하십시오.
+이 문서는 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}에 대한 문서입니다. 이전 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 버전에 대한 문서를 보려면 [이 링크를 클릭 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/docs/services/knowledge-studio/preannotation.html){: new_window}하십시오.
 {: tip}
 
 # 어노테이션 작성 부트스트래핑
@@ -69,7 +69,7 @@ lastupdated: "2018-08-13"
 ### 시작하기 전에
 {: #wks_preannotnlu_prereqs}
 
-{{site.data.keyword.nlushort}} 프리어노테이터가 사용자의 유스 케이스에 대한 값을 추가할지 판별하십시오. 지원되는 [{{site.data.keyword.nlushort}} 서비스 엔티티 유형 및 하위 유형 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/docs/services/natural-language-understanding/entity-types.html){: new_window}을 검토하여 이들이 유형 시스템의 유형과 자연스럽게 겹치는지 판별하십시오. 겹치는 경우에는 이 프로시저를 계속하십시오. 그렇지 않은 경우에는 사용할 다른 프리어노테이터를 선택하십시오.
+{{site.data.keyword.nlushort}} 프리어노테이터가 사용자의 유스 케이스에 대한 값을 추가할지 판별하십시오. 지원되는 [{{site.data.keyword.nlushort}} 서비스 엔티티 유형 및 하위 유형 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/docs/services/natural-language-understanding/entity-types.html){: new_window}을 검토하여 이들이 유형 시스템의 유형과 자연스럽게 겹치는지 판별하십시오. 겹치는 경우에는 이 프로시저를 계속하십시오. 그렇지 않은 경우에는 사용할 다른 프리어노테이터를 선택하십시오.
 
 ### 이 태스크에 대한 정보
 {: #wks_preannotnlu_about}

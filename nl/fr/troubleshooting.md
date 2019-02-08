@@ -17,7 +17,7 @@ lastupdated: "2018-08-13"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-Cette documentation concerne {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. Pour consulter la documentation de la version précédente de {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [cliquez sur ce lien ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/services/knowledge-studio/troubleshooting.html){: new_window}.
+Cette documentation concerne {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. Pour consulter la documentation de la version précédente de {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [cliquez sur ce lien ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/docs/services/knowledge-studio/troubleshooting.html){: new_window}.
 {: tip}
 
 # Dépannage, assistance et FAQ
@@ -159,7 +159,7 @@ Pour plus d'informations, consultez la [description du service {{site.data.keywo
 
 {{site.data.keyword.IBM_notm}} met à votre disposition des fonctionnalités et des services expérimentaux que vous pouvez essayer. Ces services sont susceptibles d'être instables, de changer fréquemment au point de ne plus être compatibles avec les versions précédentes et d'être arrêtés à court préavis. L'utilisation de ces services et fonctionnalités n'est pas recommandée en environnement de production.
 
-Pour plus d'informations sur les services expérimentaux, consultez la [documentation d'{{site.data.keyword.cloud_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/get-support/servicessupport.html#s-services-exporcont){: new_window}. Pour des détails complets sur les services expérimentaux, consultez la dernière version de la [description des services {{site.data.keyword.cloud_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/software/sla/sladb.nsf/sla/bm?OpenDocument){: new_window}.
+Pour plus d'informations sur les services expérimentaux, consultez la [documentation d'{{site.data.keyword.cloud_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/docs/get-support/servicessupport.html#s-services-exporcont){: new_window}. Pour des détails complets sur les services expérimentaux, consultez la dernière version de la [description des services {{site.data.keyword.cloud_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/software/sla/sladb.nsf/sla/bm?OpenDocument){: new_window}.
 
 ## Problèmes d'espace de stockage
 {: #storage}

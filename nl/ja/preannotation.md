@@ -17,7 +17,7 @@ lastupdated: "2018-08-13"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-この文書は、{{site.data.keyword.cloud}} 上の {{site.data.keyword.knowledgestudiofull}} に関するものです。 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} マーケットプレイスの以前のバージョン用の資料を参照するには、[このリンクをクリックしてください![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/docs/services/knowledge-studio/preannotation.html){: new_window}。
+この文書は、{{site.data.keyword.cloud}} 上の {{site.data.keyword.knowledgestudiofull}} に関するものです。 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} マーケットプレイスの以前のバージョン用の資料を参照するには、[このリンクをクリックしてください![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/docs/services/knowledge-studio/preannotation.html){: new_window}。
 {: tip}
 
 # アノテーションのブートストラッピング
@@ -69,7 +69,7 @@ lastupdated: "2018-08-13"
 ### 始めに
 {: #wks_preannotnlu_prereqs}
 
-{{site.data.keyword.nlushort}} 事前アノテーターが、ユース・ケース用の値を追加する可能性があるかどうかを判別します。 サポートされる [{{site.data.keyword.nlushort}} サービスのエンティティー・タイプおよびサブタイプ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン ")](https://console.bluemix.net/docs/services/natural-language-understanding/entity-types.html){: new_window} のリストを確認して、それらと、タイプ・システム内のタイプの間に自然な重複があるかどうかを判別します。 ある場合は、この手順を続行します。 ない場合は、別の事前アノテーターを選択して使用してください。
+{{site.data.keyword.nlushort}} 事前アノテーターが、ユース・ケース用の値を追加する可能性があるかどうかを判別します。 サポートされる [{{site.data.keyword.nlushort}} サービスのエンティティー・タイプおよびサブタイプ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン ")](https://{DomainName}/docs/services/natural-language-understanding/entity-types.html){: new_window} のリストを確認して、それらと、タイプ・システム内のタイプの間に自然な重複があるかどうかを判別します。 ある場合は、この手順を続行します。 ない場合は、別の事前アノテーターを選択して使用してください。
 
 ### この作業について
 {: #wks_preannotnlu_about}

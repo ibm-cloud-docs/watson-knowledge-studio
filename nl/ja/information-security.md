@@ -30,8 +30,8 @@ IBM は、お客様やパートナーに、データ・プライバシー、セ�
 
 以下の場所で作成された {{site.data.keyword.cloud}} {{site.data.keyword.watson}} リソースの GDPR サポートを要請する必要がある場合の手順
 
-- EU 内の場合、[Requesting support for IBM Cloud Watson resources created in the European Union ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/docs/services/watson/getting-started-gdpr-sar.html#request-EU){: new_window} を参照してください。
-- EU 外の場合、[Requesting support for resources outside the European Union ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/docs/services/watson/getting-started-gdpr-sar.html#request-non-EU){: new_window} を参照してください。
+- EU 内の場合、[Requesting support for IBM Cloud Watson resources created in the European Union ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/docs/services/watson/getting-started-gdpr-sar.html#request-EU){: new_window} を参照してください。
+- EU 外の場合、[Requesting support for resources outside the European Union ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/docs/services/watson/getting-started-gdpr-sar.html#request-non-EU){: new_window} を参照してください。
 
 ## EU 一般データ保護規則 (GDPR)
 {: #gdpr}

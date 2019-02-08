@@ -27,7 +27,7 @@ lastupdated: "2018-07-02"
 {: #notes}
 
 - {{site.data.keyword.knowledgestudioshort}} のユーザー役割は、以下のレベルで管理されます。
-  - {{site.data.keyword.cloud}} の役割は、{{site.data.keyword.cloud_notm}} サービスへのアクセスを制御します。{{site.data.keyword.knowledgestudioshort}} では、アクセス制御に Cloud Foundry を使用しますが、この場合、{{site.data.keyword.knowledgestudioshort}} ユーザーが開発者の役割を持っている必要があります。詳しくは、[Cloud Foundry アクセス権限 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window} を参照してください。
+  - {{site.data.keyword.cloud}} の役割は、{{site.data.keyword.cloud_notm}} サービスへのアクセスを制御します。{{site.data.keyword.knowledgestudioshort}} では、アクセス制御に Cloud Foundry を使用しますが、この場合、{{site.data.keyword.knowledgestudioshort}} ユーザーが開発者の役割を持っている必要があります。詳しくは、[Cloud Foundry アクセス権限 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/docs/iam/cfaccess.html){: new_window} を参照してください。
   - {{site.data.keyword.knowledgestudioshort}} の役割は、このページで説明されているように、{{site.data.keyword.knowledgestudioshort}} 機能へのアクセスを制御します。
 - {{site.data.keyword.knowledgestudioshort}} のインスタンスを作成する場合、{{site.data.keyword.knowledgestudioshort}} 役割は必要ありません。ただし、個人が {{site.data.keyword.knowledgestudioshort}} のインスタンスを作成する場合は、{{site.data.keyword.knowledgestudioshort}} を起動する最初のユーザーに {{site.data.keyword.knowledgestudioshort}} の管理者の役割が割り当てられます。
 - ワークスペースを管理するには、管理者がそのワークスペースにプロジェクト管理者を割り当てる必要があります。

@@ -17,7 +17,7 @@ lastupdated: "2018-07-18"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-此文件適用於 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}。若要查看舊版 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 的文件，[請按一下此鏈結 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/docs/services/knowledge-studio/team.html){: new_window}。
+此文件適用於 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}。若要查看舊版 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 的文件，[請按一下此鏈結 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/docs/services/knowledge-studio/team.html){: new_window}。
 {: tip}
 
 # 組合團隊
@@ -32,9 +32,9 @@ lastupdated: "2018-07-18"
 
 - 確定您使用支援的瀏覽器。如需相關資訊，請參閱[瀏覽器需求](/docs/services/watson-knowledge-studio/system-requirements.html)。
 - [建立 {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/tutorials-create-project.html#instance) 的實例。
-- 如果您已註冊「標準」或「超值」方案，請從 {{site.data.keyword.cloud_notm}} **管理**標籤中，邀請其他使用者加入您的組織，您想要將他們新增為 {{site.data.keyword.knowledgestudioshort}} 中的使用者。如需邀請使用者的相關資訊，請參閱[邀請使用者及指派存取權 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/docs/iam/iamuserinv.html){: new_window}。
+- 如果您已註冊「標準」或「超值」方案，請從 {{site.data.keyword.cloud_notm}} **管理**標籤中，邀請其他使用者加入您的組織，您想要將他們新增為 {{site.data.keyword.knowledgestudioshort}} 中的使用者。如需邀請使用者的相關資訊，請參閱[邀請使用者及指派存取權 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/docs/iam/iamuserinv.html){: new_window}。
 
-  **重要事項**：確保受邀使用者具有 Cloud Foundry 開發人員角色。如需相關資訊，請參閱 [Cloud Foundry 存取權 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window}。
+  **重要事項**：確保受邀使用者具有 Cloud Foundry 開發人員角色。如需相關資訊，請參閱 [Cloud Foundry 存取權 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/docs/iam/cfaccess.html){: new_window}。
 
 ## 關於本作業
 
@@ -51,7 +51,7 @@ lastupdated: "2018-07-18"
 
 若要將使用者新增至 {{site.data.keyword.knowledgestudioshort}} 實例，請執行下列動作：
 
-1. 使用您的 {{site.data.keyword.ibmid}} 登入「[{{site.data.keyword.cloud_notm}} 儀表板」![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net){: new_window}，然後啟動 {{site.data.keyword.knowledgestudioshort}}。
+1. 使用您的 {{site.data.keyword.ibmid}} 登入「[{{site.data.keyword.cloud_notm}} 儀表板」![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}){: new_window}，然後啟動 {{site.data.keyword.knowledgestudioshort}}。
 1. 按一下**設定**圖示，然後按一下**管理服務詳細資料**。
 1. 在**管理員使用者**區段中，輸入您要新增之使用者的 {{site.data.keyword.ibmid}}。
 1. 選取您要提供給使用者的角色。如需可用角色的說明，請參閱 [{{site.data.keyword.knowledgestudioshort}} 中的使用者角色](/docs/services/watson-knowledge-studio/roles.html)。
@@ -70,7 +70,7 @@ lastupdated: "2018-07-18"
 
 若要升級 {{site.data.keyword.knowledgestudioshort}} 使用者的角色，請執行下列動作：
 
-1. 使用您的 {{site.data.keyword.ibmid}} 登入「[{{site.data.keyword.cloud_notm}} 儀表板」![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net){: new_window}，然後啟動 {{site.data.keyword.knowledgestudioshort}}。
+1. 使用您的 {{site.data.keyword.ibmid}} 登入「[{{site.data.keyword.cloud_notm}} 儀表板」![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}){: new_window}，然後啟動 {{site.data.keyword.knowledgestudioshort}}。
 1. 從右上角導覽功能表中，按一下**設定** 圖示 ![「設定」圖示](images/settings.png)，然後按一下**管理服務詳細資料**。「服務詳細資料」頁面的**管理使用者**區段，會列出屬於這個 {{site.data.keyword.knowledgestudioshort}} 實例之使用者的所有使用者 ID。
 1. 尋找您要變更的使用者名稱，然後按一下**編輯**鏈結。
 1. 按一下使用者的角色，選擇您要將該使用者升級為哪個角色。如需可用角色的說明，請參閱 [{{site.data.keyword.knowledgestudioshort}} 中的使用者角色](/docs/services/watson-knowledge-studio/roles.html)。

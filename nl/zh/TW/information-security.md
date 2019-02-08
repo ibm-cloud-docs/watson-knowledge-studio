@@ -29,8 +29,8 @@ IBM 致力於為我們的客戶及夥伴提供創新的資料隱私權、安全�
 
 如果您需要針對建立的 {{site.data.keyword.cloud}} {{site.data.keyword.watson}} 資源要求 GDPR 支援
 
-- 在歐盟，請參閱[要求支援歐盟中建立的 IBM Cloud Watson 資源 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/docs/services/watson/getting-started-gdpr-sar.html#request-EU){: new_window}。
-- 在歐盟外，請參閱[要求支援歐盟外的資源 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/docs/services/watson/getting-started-gdpr-sar.html#request-non-EU){: new_window}。
+- 在歐盟，請參閱[要求支援歐盟中建立的 IBM Cloud Watson 資源 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/docs/services/watson/getting-started-gdpr-sar.html#request-EU){: new_window}。
+- 在歐盟外，請參閱[要求支援歐盟外的資源 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/docs/services/watson/getting-started-gdpr-sar.html#request-non-EU){: new_window}。
 
 ## 歐盟一般資料保護規範 (GDPR)
 {: #gdpr}

@@ -17,7 +17,7 @@ lastupdated: "2018-08-13"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-Questa documentazione è per {{site.data.keyword.knowledgestudiofull}} su {{site.data.keyword.cloud}}. Per visualizzare la documentazione della versione precedente di {{site.data.keyword.knowledgestudioshort}} nel {{site.data.keyword.IBM_notm}} Marketplace, [fai clic su questo link ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/services/knowledge-studio/preannotation.html){: new_window}.
+Questa documentazione è per {{site.data.keyword.knowledgestudiofull}} su {{site.data.keyword.cloud}}. Per visualizzare la documentazione della versione precedente di {{site.data.keyword.knowledgestudioshort}} nel {{site.data.keyword.IBM_notm}} Marketplace, [fai clic su questo link ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/docs/services/knowledge-studio/preannotation.html){: new_window}.
 {: tip}
 
 # Inizio dell'annotazione
@@ -69,7 +69,7 @@ Puoi utilizzare il servizio {{site.data.keyword.nlushort}} per pre-annotare i do
 ### Prima di cominciare
 {: #wks_preannotnlu_prereqs}
 
-Determina se il pre-annotatore {{site.data.keyword.nlushort}} è presumibile che aggiunga valore al tuo caso di utilizzo. Controlla l'elenco di sottotipi e tipi di entità [{{site.data.keyword.nlushort}} supportati ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/services/natural-language-understanding/entity-types.html){: new_window} per determinare se è presente una sovrapposizione naturale tra loro e i tipi nel tuo sistema tipo. Se è così, continua con questa procedura. Se non lo è, scegli un pre-annotatore diverso da utilizzare.
+Determina se il pre-annotatore {{site.data.keyword.nlushort}} è presumibile che aggiunga valore al tuo caso di utilizzo. Controlla l'elenco di sottotipi e tipi di entità [{{site.data.keyword.nlushort}} supportati ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/docs/services/natural-language-understanding/entity-types.html){: new_window} per determinare se è presente una sovrapposizione naturale tra loro e i tipi nel tuo sistema tipo. Se è così, continua con questa procedura. Se non lo è, scegli un pre-annotatore diverso da utilizzare.
 
 ### Informazioni su quest'attività
 {: #wks_preannotnlu_about}

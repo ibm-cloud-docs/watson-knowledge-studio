@@ -17,7 +17,7 @@ lastupdated: "2018-08-13"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-이 문서는 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}에 대한 문서입니다. 이전 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 버전에 대한 문서를 보려면 [이 링크를 클릭 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/docs/services/knowledge-studio/troubleshooting.html){: new_window}하십시오.
+이 문서는 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}에 대한 문서입니다. 이전 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 버전에 대한 문서를 보려면 [이 링크를 클릭 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/docs/services/knowledge-studio/troubleshooting.html){: new_window}하십시오.
 {: tip}
 
 # 문제점 해결, 지원 및 FAQ
@@ -159,7 +159,7 @@ Admin 역할이 있는 경우에는 서비스 세부사항 페이지에서 데�
 
 {{site.data.keyword.IBM_notm}}에서는 사용자가 사용해 볼 수 있도록 시범 서비스와 기능을 릴리스합니다. 이러한 서비스는 불안정하고 이전 버전과 호환되지 않는 방식으로 자주 변경될 수 있으며 간단한 공지만으로 연결이 끊길 수 있습니다. 이러한 서비스와 기능은 프로덕션 환경에서 사용하지 않도록 권장합니다. 
 
-시범 서비스에 대한 자세한 정보는 [{{site.data.keyword.cloud_notm}} 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/docs/get-support/servicessupport.html#s-services-exporcont){: new_window}를 참조하십시오. 시범 서비스의 전체 세부사항은 [{{site.data.keyword.cloud_notm}} 서비스 설명 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/software/sla/sladb.nsf/sla/bm?OpenDocument){: new_window}의 최신 버전을 참조하십시오.
+시범 서비스에 대한 자세한 정보는 [{{site.data.keyword.cloud_notm}} 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/docs/get-support/servicessupport.html#s-services-exporcont){: new_window}를 참조하십시오. 시범 서비스의 전체 세부사항은 [{{site.data.keyword.cloud_notm}} 서비스 설명 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/software/sla/sladb.nsf/sla/bm?OpenDocument){: new_window}의 최신 버전을 참조하십시오.
 
 ## 스토리지 공간 문제
 {: #storage}

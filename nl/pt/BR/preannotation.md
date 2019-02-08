@@ -17,7 +17,7 @@ lastupdated: "2018-08-13"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-Essa documentação destina-se ao {{site.data.keyword.knowledgestudiofull}} no {{site.data.keyword.cloud}}. Para ver a documentação para a versão anterior do {{site.data.keyword.knowledgestudioshort}} no {{site.data.keyword.IBM_notm}} Marketplace, [clique neste link ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/docs/services/knowledge-studio/preannotation.html){: new_window}.
+Essa documentação destina-se ao {{site.data.keyword.knowledgestudiofull}} no {{site.data.keyword.cloud}}. Para ver a documentação para a versão anterior do {{site.data.keyword.knowledgestudioshort}} no {{site.data.keyword.IBM_notm}} Marketplace, [clique neste link ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/docs/services/knowledge-studio/preannotation.html){: new_window}.
 {: tip}
 
 # Anotação de autoinicialização
@@ -69,7 +69,7 @@ Como alternativa, é possível fazer upload de documentos já anotados e usá-lo
 ### Antes de Começar
 {: #wks_preannotnlu_prereqs}
 
-Determine se o pré-anotador do {{site.data.keyword.nlushort}} deve incluir valor para seu caso de uso. Revise a lista de tipos e subtipos de entidade do serviço [{{site.data.keyword.nlushort}} suportados ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/docs/services/natural-language-understanding/entity-types.html){: new_window} para determinar se há uma sobreposição natural entre eles e os tipos em seu sistema de tipos. Se sim, continue com este procedimento. Se não, escolha um pré-anotador diferente para usar.
+Determine se o pré-anotador do {{site.data.keyword.nlushort}} deve incluir valor para seu caso de uso. Revise a lista de tipos e subtipos de entidade do serviço [{{site.data.keyword.nlushort}} suportados ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/docs/services/natural-language-understanding/entity-types.html){: new_window} para determinar se há uma sobreposição natural entre eles e os tipos em seu sistema de tipos. Se sim, continue com este procedimento. Se não, escolha um pré-anotador diferente para usar.
 
 ### Sobre essa Tarefa
 {: #wks_preannotnlu_about}

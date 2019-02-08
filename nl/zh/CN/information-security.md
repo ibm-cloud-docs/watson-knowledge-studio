@@ -30,8 +30,8 @@ IBM 致力于为客户和合作伙伴提供创新的数据隐私、安全和监�
 
 如果需要为已创建的 {{site.data.keyword.cloud}} {{site.data.keyword.watson}} 资源请求 GDPR 支持
 
-- 在欧盟，请参阅[请求对在欧盟创建的 IBM Cloud Watson 资源的支持 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/docs/services/watson/getting-started-gdpr-sar.html#request-EU){: new_window}。
-- 在欧盟以外的地区，请参阅[请求对欧盟以外的资源的支持 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/docs/services/watson/getting-started-gdpr-sar.html#request-non-EU){: new_window}。
+- 在欧盟，请参阅[请求对在欧盟创建的 IBM Cloud Watson 资源的支持 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/docs/services/watson/getting-started-gdpr-sar.html#request-EU){: new_window}。
+- 在欧盟以外的地区，请参阅[请求对欧盟以外的资源的支持 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/docs/services/watson/getting-started-gdpr-sar.html#request-non-EU){: new_window}。
 
 ## 欧盟一般数据保护条例 (GDPR)
 {: #gdpr}

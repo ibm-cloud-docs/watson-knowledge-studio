@@ -17,7 +17,7 @@ lastupdated: "2018-08-14"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-この文書は、{{site.data.keyword.cloud}} 上の {{site.data.keyword.knowledgestudiofull}} に関するものです。 以前のバージョンの {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 向けの資料を参照するには、[このリンクをクリック ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/docs/services/knowledge-studio/rule-annotator-model-use.html){: new_window} してください。
+この文書は、{{site.data.keyword.cloud}} 上の {{site.data.keyword.knowledgestudiofull}} に関するものです。 以前のバージョンの {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 向けの資料を参照するには、[このリンクをクリック ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/docs/services/knowledge-studio/rule-annotator-model-use.html){: new_window} してください。
 {: tip}
 
 # ルール・ベース・モデルの使用
@@ -114,7 +114,7 @@ lastupdated: "2018-08-14"
 
 {{site.data.keyword.nlushort}} `GET /analyze` 要求でモデルを使用して、エンティティーを抽出できます。
 
-詳細については、[{{site.data.keyword.nlushort}} の資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/docs/services/natural-language-understanding/index.html){: new_window} を参照してください。
+詳細については、[{{site.data.keyword.nlushort}} の資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/docs/services/natural-language-understanding/index.html){: new_window} を参照してください。
 
 ## モデルのアンデプロイ
 {: #undeploy-view-model}
@@ -124,7 +124,7 @@ lastupdated: "2018-08-14"
 ### この作業について
 {: #wks_undeploy_about}
 
-「デプロイ済みモデル (Deployed Models)」ページに表示される内容は、{{site.data.keyword.knowledgestudioshort}} インスタンスをホストする [地域 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/docs/resources/services_region.html){: new_window} によって異なります。その地域が [IAM ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/docs/iam/users_roles.html){: new_window} および [Cloud Foundry ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window} アクセス管理方式によって管理されるインスタンスをサポートする場合は、その方式ごとに 1 つのタブが表示されます。IAM によって管理されるインスタンスに属するモデルは、**「リソース・グループ (Resource Groups)」**タブにリストされます。Cloud Foundry によって管理されるインスタンスに属するモデルは、**「組織 (Organizations)」**タブにリストされます。
+「デプロイ済みモデル (Deployed Models)」ページに表示される内容は、{{site.data.keyword.knowledgestudioshort}} インスタンスをホストする [地域 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/docs/resources/services_region.html){: new_window} によって異なります。その地域が [IAM ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/docs/iam/users_roles.html){: new_window} および [Cloud Foundry ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/docs/iam/cfaccess.html){: new_window} アクセス管理方式によって管理されるインスタンスをサポートする場合は、その方式ごとに 1 つのタブが表示されます。IAM によって管理されるインスタンスに属するモデルは、**「リソース・グループ (Resource Groups)」**タブにリストされます。Cloud Foundry によって管理されるインスタンスに属するモデルは、**「組織 (Organizations)」**タブにリストされます。
 
 その地域が 1 つのアクセス管理方式によってのみ管理されるインスタンスをサポートしている場合は、1 つのアクセス管理方式だけが適用可能なので、モデルのリストが 1 つだけ表示されます。
 

@@ -17,7 +17,7 @@ lastupdated: "2018-08-09"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-此文件適用於 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}。如果要在 {{site.data.keyword.IBM_notm}} Marketplace 上查看舊版 {{site.data.keyword.knowledgestudioshort}} 的文件，[請按一下這個鏈結 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/docs/services/knowledge-studio/client-migration.html){: new_window}。
+此文件適用於 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}。如果要在 {{site.data.keyword.IBM_notm}} Marketplace 上查看舊版 {{site.data.keyword.knowledgestudioshort}} 的文件，[請按一下這個鏈結 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/docs/services/knowledge-studio/client-migration.html){: new_window}。
 {: tip}
 
 # 移轉至 IBM Cloud
@@ -47,13 +47,13 @@ lastupdated: "2018-08-09"
 
 如果您有「標準」方案，請完成下列步驟，將實例從 {{site.data.keyword.IBM_notm}} Marketplace 移轉至 {{site.data.keyword.cloud_notm}}：
 
-1. 如果您沒有 {{site.data.keyword.cloud_notm}} 帳戶，請在 [{{site.data.keyword.cloud_notm}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/registration/){: new_window} 使用來自 {{site.data.keyword.IBM_notm}} Marketplace 的 {{site.data.keyword.ibmid}} 註冊。
+1. 如果您沒有 {{site.data.keyword.cloud_notm}} 帳戶，請在 [{{site.data.keyword.cloud_notm}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/registration/){: new_window} 使用來自 {{site.data.keyword.IBM_notm}} Marketplace 的 {{site.data.keyword.ibmid}} 註冊。
 
    您的 {{site.data.keyword.ibmid}} 是您用來在 {{site.data.keyword.IBM_notm}} Marketplace 上登入 {{site.data.keyword.knowledgestudioshort}} 的 ID。
 
-2. 登入 [{{site.data.keyword.cloud_notm}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net){: new_window}。
-3. 如果您的 {{site.data.keyword.cloud_notm}} 帳戶為「精簡」帳戶，請升級至付費帳戶。如需付費帳戶類型的相關資訊，請參閱[帳戶類型 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/docs/account/index.html){: new_window}。
-4. 從 [{{site.data.keyword.cloud_notm}} 主控台 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/catalog/services/knowledge-studio){: new_window} 中，建立 {{site.data.keyword.knowledgestudioshort}} 標準方案。
+2. 登入 [{{site.data.keyword.cloud_notm}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}){: new_window}。
+3. 如果您的 {{site.data.keyword.cloud_notm}} 帳戶為「精簡」帳戶，請升級至付費帳戶。如需付費帳戶類型的相關資訊，請參閱[帳戶類型 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/docs/account/index.html){: new_window}。
+4. 從 [{{site.data.keyword.cloud_notm}} 主控台 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/catalog/services/knowledge-studio){: new_window} 中，建立 {{site.data.keyword.knowledgestudioshort}} 標準方案。
 5. 遵循畫面上的指示，指出您想要將實例從 {{site.data.keyword.IBM_notm}} Marketplace 移轉至 {{site.data.keyword.cloud_notm}}。
 6. 如果您有多個實例要進行移轉，請重複該程序。
 

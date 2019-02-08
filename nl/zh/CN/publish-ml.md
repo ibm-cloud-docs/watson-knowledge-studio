@@ -17,7 +17,7 @@ lastupdated: "2018-08-13"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-本文档适用于 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}。要查看 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 先前版本的文档，请[单击此链接 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/docs/services/knowledge-studio/publish-ml.html){: new_window}。
+本文档适用于 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}。要查看 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 先前版本的文档，请[单击此链接 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/docs/services/knowledge-studio/publish-ml.html){: new_window}。
 {: tip}
 
 # 使用机器学习模型
@@ -74,7 +74,7 @@ lastupdated: "2018-08-13"
 ### 后续步骤
 {: #wks_madiscovery_next}
 
-要使用部署的模型，必须在 {{site.data.keyword.discoveryshort}} 服务扩充配置过程中请求模型标识时提供该模型标识。有关更多详细信息，请参阅 [{{site.data.keyword.discoveryshort}} 服务文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/docs/services/discovery/integrate-wks.html){: new_window}。
+要使用部署的模型，必须在 {{site.data.keyword.discoveryshort}} 服务扩充配置过程中请求模型标识时提供该模型标识。有关更多详细信息，请参阅 [{{site.data.keyword.discoveryshort}} 服务文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/docs/services/discovery/integrate-wks.html){: new_window}。
 
 ## 将机器学习模型部署到 IBM Watson Natural Language Understanding
 {: #wks_manlu}
@@ -262,7 +262,7 @@ lastupdated: "2018-08-13"
     ```
     {: codeblock}
 
-有关更多详细信息，请参阅 [{{site.data.keyword.nlushort}} 文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/docs/services/natural-language-understanding/index.html){: new_window}。
+有关更多详细信息，请参阅 [{{site.data.keyword.nlushort}} 文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/docs/services/natural-language-understanding/index.html){: new_window}。
 
 ## 取消部署模型
 {: #undeploy-view-model}
@@ -272,7 +272,7 @@ lastupdated: "2018-08-13"
 ### 关于本任务
 {: #wks_undeploy_about}
 
-在“已部署的模型”页面上看到的内容取决于托管 {{site.data.keyword.knowledgestudioshort}} 实例的[区域 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/docs/resources/services_region.html){: new_window}。如果该区域支持由 [ IAM ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/docs/iam/users_roles.html){: new_window} 和 [Cloud Foundry ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window} 访问管理方法所管理的实例，那么您将看到每个方法的选项卡。由 IAM 管理的实例中的模型在**资源组**选项卡上列出。由 Cloud Foundry 管理的实例中的模型在**组织**选项卡上列出。
+在“已部署的模型”页面上看到的内容取决于托管 {{site.data.keyword.knowledgestudioshort}} 实例的[区域 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/docs/resources/services_region.html){: new_window}。如果该区域支持由 [ IAM ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/docs/iam/users_roles.html){: new_window} 和 [Cloud Foundry ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/docs/iam/cfaccess.html){: new_window} 访问管理方法所管理的实例，那么您将看到每个方法的选项卡。由 IAM 管理的实例中的模型在**资源组**选项卡上列出。由 Cloud Foundry 管理的实例中的模型在**组织**选项卡上列出。
 
 如果该区域仅支持由其中一个访问管理方法管理的实例，那么您只能看到一个模型列表，因为只有一种访问管理方法适用。
 

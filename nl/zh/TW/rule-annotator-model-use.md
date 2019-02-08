@@ -17,7 +17,7 @@ lastupdated: "2018-08-14"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-此文件適用於 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}。若要查看舊版 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 的文件，[請按一下此鏈結 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/docs/services/knowledge-studio/rule-annotator-model-use.html){: new_window}。
+此文件適用於 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}。若要查看舊版 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 的文件，[請按一下此鏈結 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/docs/services/knowledge-studio/rule-annotator-model-use.html){: new_window}。
 {: tip}
 
 # 使用規則型模型
@@ -116,7 +116,7 @@ lastupdated: "2018-08-14"
 
 您可以使用此模型與 {{site.data.keyword.nlushort}} `GET /analyze` 要求搭配，來擷取實體。
 
-如需詳細資料，請參閱 [{{site.data.keyword.nlushort}} 文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/docs/services/natural-language-understanding/index.html){: new_window}。
+如需詳細資料，請參閱 [{{site.data.keyword.nlushort}} 文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/docs/services/natural-language-understanding/index.html){: new_window}。
 
 ## 取消部署模型
 {: #undeploy-view-model}
@@ -126,7 +126,7 @@ lastupdated: "2018-08-14"
 ### 關於本作業
 {: #wks_undeploy_about}
 
-您在「已部署的模型」頁面上看到的內容，取決於管理 {{site.data.keyword.knowledgestudioshort}} 實例的[地區 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/docs/resources/services_region.html){: new_window}。如果地區支援 [IAM ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/docs/iam/users_roles.html){: new_window} 及 [Cloud Foundry ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window} 存取管理方法所管理的實例，您會看到每個方法的標籤。來自 IAM 所管理之實例的模型會列示在**資源群組**標籤上。來自 Cloud Foundry 所管理之實例的模型則會列示在**組織**標籤上。
+您在「已部署的模型」頁面上看到的內容，取決於管理 {{site.data.keyword.knowledgestudioshort}} 實例的[地區 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/docs/resources/services_region.html){: new_window}。如果地區支援 [IAM ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/docs/iam/users_roles.html){: new_window} 及 [Cloud Foundry ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/docs/iam/cfaccess.html){: new_window} 存取管理方法所管理的實例，您會看到每個方法的標籤。來自 IAM 所管理之實例的模型會列示在**資源群組**標籤上。來自 Cloud Foundry 所管理之實例的模型則會列示在**組織**標籤上。
 
 如果地區支援僅由其中一種存取管理方法管理的實例，則您只會看到一個模型清單，因為只有一個存取管理方法適用。
 

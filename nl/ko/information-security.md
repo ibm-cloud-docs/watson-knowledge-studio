@@ -33,8 +33,8 @@ IBM은 당사 고객과 파트너에게 혁신적인 데이터 개인정보처�
 
 작성된 {{site.data.keyword.cloud}} {{site.data.keyword.watson}} 리소스에 대한 GDPR 지원을 요청해야 하는 경우
 
-- 유럽 연합에서는 [유럽 연합에서 작성된 IBM Cloud Watson 리소스에 대한 지원 요청 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/docs/services/watson/getting-started-gdpr-sar.html#request-EU){: new_window}을 참조하십시오. 
-- 유럽 연합 외부에서는 [유럽 연합 외부의 리소스에 대한 지원 요청 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/docs/services/watson/getting-started-gdpr-sar.html#request-non-EU){: new_window}을 참조하십시오. 
+- 유럽 연합에서는 [유럽 연합에서 작성된 IBM Cloud Watson 리소스에 대한 지원 요청 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/docs/services/watson/getting-started-gdpr-sar.html#request-EU){: new_window}을 참조하십시오. 
+- 유럽 연합 외부에서는 [유럽 연합 외부의 리소스에 대한 지원 요청 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/docs/services/watson/getting-started-gdpr-sar.html#request-non-EU){: new_window}을 참조하십시오. 
 
 ## 유럽 연합 일반 개인정보 보호법률(General Data Protection Regulation)
 {: #gdpr}

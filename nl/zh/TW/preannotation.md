@@ -17,7 +17,7 @@ lastupdated: "2018-08-13"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-此文件適用於 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}。若要查看舊版 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 的文件，[請按一下此鏈結 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/docs/services/knowledge-studio/preannotation.html){: new_window}。
+此文件適用於 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}。若要查看舊版 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 的文件，[請按一下此鏈結 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/docs/services/knowledge-studio/preannotation.html){: new_window}。
 {: tip}
 
 # 引導註釋
@@ -69,7 +69,7 @@ lastupdated: "2018-08-13"
 ### 開始之前
 {: #wks_preannotnlu_prereqs}
 
-判斷 {{site.data.keyword.nlushort}} 預先註釋程式是否可能為您的使用案例新增值。請檢閱支援的 [{{site.data.keyword.nlushort}} 服務實體類型及子類型 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/docs/services/natural-language-understanding/entity-types.html){: new_window} 的清單，以判斷它們與類型系統中的類型之間是否有自然重疊。若有的話，請繼續執行此程序。若沒有，請選擇不同的預先註釋程式來使用。
+判斷 {{site.data.keyword.nlushort}} 預先註釋程式是否可能為您的使用案例新增值。請檢閱支援的 [{{site.data.keyword.nlushort}} 服務實體類型及子類型 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/docs/services/natural-language-understanding/entity-types.html){: new_window} 的清單，以判斷它們與類型系統中的類型之間是否有自然重疊。若有的話，請繼續執行此程序。若沒有，請選擇不同的預先註釋程式來使用。
 
 ### 關於本作業
 {: #wks_preannotnlu_about}

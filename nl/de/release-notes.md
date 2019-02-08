@@ -17,7 +17,7 @@ lastupdated: "2018-08-09"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-Diese Dokumentation bezieht sich auf {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. Die Dokumentation für die Vorgängerversion {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace kann über [diesen Link ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/docs/services/knowledge-studio/release-notes.html){: new_window} aufgerufen werden.
+Diese Dokumentation bezieht sich auf {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. Die Dokumentation für die Vorgängerversion {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace kann über [diesen Link ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/docs/services/knowledge-studio/release-notes.html){: new_window} aufgerufen werden.
 {: tip}
 
 # Releaseinformationen
@@ -40,9 +40,9 @@ Die folgenden neuen Features und Änderungen für {{site.data.keyword.knowledges
 ### Neue Features und Änderungen
 {: #new-july2018}
 
-- Die Seite **Bereitgestellte Modelle** wurde aktualisiert, damit Modelle von {{site.data.keyword.knowledgestudioshort}}-Instanzen eingeschlossen werden, die von [IAM*-Ressourcengruppen* verwaltet werden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/docs/iam/users_roles.html){: new_window}, zusätzlich zu Modellen, die von [Cloud Foundry*-Organisationen* ![External link icon](../../icons/launch-glyph.svg "Symbol für externen Link") verwaltet werden](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window}.
+- Die Seite **Bereitgestellte Modelle** wurde aktualisiert, damit Modelle von {{site.data.keyword.knowledgestudioshort}}-Instanzen eingeschlossen werden, die von [IAM*-Ressourcengruppen* verwaltet werden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/docs/iam/users_roles.html){: new_window}, zusätzlich zu Modellen, die von [Cloud Foundry*-Organisationen* ![External link icon](../../icons/launch-glyph.svg "Symbol für externen Link") verwaltet werden](https://{DomainName}/docs/iam/cfaccess.html){: new_window}.
 
-   Was Sie auf der Seite 'Bereitgestellte Modelle' sehen, hängt von der [-Region ![External link icon](../../icons/launch-glyph.svg "Symbol für externen Link") ](https://console.bluemix.net/docs/resources/services_region.html){: new_window} ab, in der Ihre {{site.data.keyword.knowledgestudioshort}}-Instanz gehostet wird. Wenn die Region Instanzen unterstützt, die von beiden Zugriffsmanagementmethoden verwaltet wird, wird eine Registerkarte für jede Methode angezeigt. Modelle aus Instanzen, die von IAM verwaltet werden, werden auf der Registerkarte **Ressourcengruppen** aufgelistet. Modelle aus Instanzen, die von Cloud verwaltet werden, werden auf der Registerkarte **Organisationen** aufgelistet. 
+   Was Sie auf der Seite 'Bereitgestellte Modelle' sehen, hängt von der [-Region ![External link icon](../../icons/launch-glyph.svg "Symbol für externen Link") ](https://{DomainName}/docs/resources/services_region.html){: new_window} ab, in der Ihre {{site.data.keyword.knowledgestudioshort}}-Instanz gehostet wird. Wenn die Region Instanzen unterstützt, die von beiden Zugriffsmanagementmethoden verwaltet wird, wird eine Registerkarte für jede Methode angezeigt. Modelle aus Instanzen, die von IAM verwaltet werden, werden auf der Registerkarte **Ressourcengruppen** aufgelistet. Modelle aus Instanzen, die von Cloud verwaltet werden, werden auf der Registerkarte **Organisationen** aufgelistet. 
 
   Wenn die Region Instanzen unterstützt, die nur von einer der beiden Zugriffsmanagementmethoden verwaltet wird, wird nur eine Liste mit Modellen angezeigt, da nur eine einzige Zugriffsverwaltungsmethode anwendbar ist.
 

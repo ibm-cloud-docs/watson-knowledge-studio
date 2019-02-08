@@ -19,7 +19,7 @@ Watson Knowledge Studio
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [Acessibilidade](https://console.bluemix.net/docs/overview/accessibility/accessibility_features.html)
+    [Acessibilidade](/docs/overview/accessibility/accessibility_features.html)
     glossary.md
     language-support.md
     information-security.md

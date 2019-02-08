@@ -17,7 +17,7 @@ lastupdated: "2018-08-09"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-이 문서는 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}에 대한 문서입니다. 이전 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 버전에 대한 문서를 보려면 [이 링크를 클릭 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/docs/services/knowledge-studio/client-migration.html){: new_window}하십시오.
+이 문서는 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}에 대한 문서입니다. 이전 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 버전에 대한 문서를 보려면 [이 링크를 클릭 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/docs/services/knowledge-studio/client-migration.html){: new_window}하십시오.
 {: tip}
 
 # IBM Cloud로 마이그레이션
@@ -47,13 +47,13 @@ lastupdated: "2018-08-09"
 
 표준 플랜을 보유 중인 경우에는 다음 단계를 완료하여 {{site.data.keyword.IBM_notm}} Marketplace의 인스턴스를 {{site.data.keyword.cloud_notm}}로 마이그레이션하십시오. 
 
-1. {{site.data.keyword.cloud_notm}} 계정이 없는 경우에는 {{site.data.keyword.IBM_notm}} Marketplace의 {{site.data.keyword.ibmid}}를 사용하여 [{{site.data.keyword.cloud_notm}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/registration/){: new_window}에 가입하십시오.
+1. {{site.data.keyword.cloud_notm}} 계정이 없는 경우에는 {{site.data.keyword.IBM_notm}} Marketplace의 {{site.data.keyword.ibmid}}를 사용하여 [{{site.data.keyword.cloud_notm}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/registration/){: new_window}에 가입하십시오.
 
    {{site.data.keyword.ibmid}}는 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace에 로그인하는 데 사용하는 ID입니다.
 
-2. [{{site.data.keyword.cloud_notm}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net){: new_window}에 로그인하십시오.
-3. {{site.data.keyword.cloud_notm}} 계정이 라이트 계정이면 유료 계정으로 업그레이드하십시오. 유료 계정의 유형에 대한 자세한 정보는 [계정 유형 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/docs/account/index.html){: new_window}을 참조하십시오. 
-4. [{{site.data.keyword.cloud_notm}} 콘솔 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/catalog/services/knowledge-studio){: new_window}에서 {{site.data.keyword.knowledgestudioshort}} 표준 플랜을 작성하십시오. 
+2. [{{site.data.keyword.cloud_notm}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}){: new_window}에 로그인하십시오.
+3. {{site.data.keyword.cloud_notm}} 계정이 라이트 계정이면 유료 계정으로 업그레이드하십시오. 유료 계정의 유형에 대한 자세한 정보는 [계정 유형 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/docs/account/index.html){: new_window}을 참조하십시오. 
+4. [{{site.data.keyword.cloud_notm}} 콘솔 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/catalog/services/knowledge-studio){: new_window}에서 {{site.data.keyword.knowledgestudioshort}} 표준 플랜을 작성하십시오. 
 5. {{site.data.keyword.IBM_notm}} Marketplace의 인스턴스를 {{site.data.keyword.cloud_notm}}로 마이그레이션하고자 함을 표시하여 화면의 지시사항을 따르십시오. 
 6. 마이그레이션할 프로세스가 2개 이상이면 해당 프로세스를 반복하십시오.
 

@@ -17,7 +17,7 @@ lastupdated: "2018-08-13"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-この文書は、{{site.data.keyword.cloud}} 上の {{site.data.keyword.knowledgestudiofull}} に関するものです。 以前のバージョンの {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 向けの資料を参照するには、[このリンクをクリック ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/docs/services/knowledge-studio/troubleshooting.html){: new_window} してください。
+この文書は、{{site.data.keyword.cloud}} 上の {{site.data.keyword.knowledgestudiofull}} に関するものです。 以前のバージョンの {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 向けの資料を参照するには、[このリンクをクリック ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/docs/services/knowledge-studio/troubleshooting.html){: new_window} してください。
 {: tip}
 
 # トラブルシューティング、サポート、および FAQ
@@ -159,7 +159,7 @@ lastupdated: "2018-08-13"
 
 {{site.data.keyword.IBM_notm}} は試験サービスとフィーチャーをリリースしているのでお試しいただけます。これらのサービスは、不安定だったり、前のバージョンと非互換であるような変更が頻繁に行われたり、十分な通知期間を設けずに中断されたりすることがあります。これらのサービスとフィーチャーを実稼働環境で使用することは推奨されません。
 
-試験サービスについて詳しくは、[{{site.data.keyword.cloud_notm}} 資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/docs/get-support/servicessupport.html#s-services-exporcont){: new_window} を参照してください。試験的サービスの完全な詳細については、最新バージョンの [{{site.data.keyword.cloud_notm}} サービス記述書 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/software/sla/sladb.nsf/sla/bm?OpenDocument){: new_window} を参照してください。
+試験サービスについて詳しくは、[{{site.data.keyword.cloud_notm}} 資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/docs/get-support/servicessupport.html#s-services-exporcont){: new_window} を参照してください。試験的サービスの完全な詳細については、最新バージョンの [{{site.data.keyword.cloud_notm}} サービス記述書 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/software/sla/sladb.nsf/sla/bm?OpenDocument){: new_window} を参照してください。
 
 ## ストレージ・スペースの問題
 {: #storage}
