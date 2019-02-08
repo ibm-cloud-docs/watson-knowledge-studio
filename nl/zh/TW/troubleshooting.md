@@ -17,7 +17,7 @@ lastupdated: "2018-08-13"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-此文件適用於 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}。若要查看舊版 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 的文件，[請按一下此鏈結 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/docs/services/knowledge-studio/troubleshooting.html){: new_window}。
+此文件適用於 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}。若要查看舊版 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 的文件，[請按一下此鏈結 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/docs/services/knowledge-studio/troubleshooting.html){: new_window}。
 {: tip}
 
 # 疑難排解、支援與常見問題
@@ -159,7 +159,7 @@ lastupdated: "2018-08-13"
 
 {{site.data.keyword.IBM_notm}} 會釋出實驗性服務及功能，供您試用。這些服務可能不穩定、經常使用與舊版不相容的方式變更，並且可能會在短時間內停止使用。不建議在正式作業環境中使用這些服務及功能。
 
-如需實驗性服務的相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} 文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/docs/get-support/servicessupport.html#s-services-exporcont){: new_window}。如需實驗性服務的完整資料，請參閱最新版本的 [{{site.data.keyword.cloud_notm}} 服務說明 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/software/sla/sladb.nsf/sla/bm?OpenDocument){: new_window}。
+如需實驗性服務的相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} 文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/docs/get-support/servicessupport.html#s-services-exporcont){: new_window}。如需實驗性服務的完整資料，請參閱最新版本的 [{{site.data.keyword.cloud_notm}} 服務說明 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/software/sla/sladb.nsf/sla/bm?OpenDocument){: new_window}。
 
 ## 儲存空間問題
 {: #storage}

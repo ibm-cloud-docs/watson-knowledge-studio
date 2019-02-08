@@ -17,7 +17,7 @@ lastupdated: "2018-08-13"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-本文档适用于 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}。要查看 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 先前版本的文档，请[单击此链接 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/docs/services/knowledge-studio/troubleshooting.html){: new_window}。
+本文档适用于 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}。要查看 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 先前版本的文档，请[单击此链接 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/docs/services/knowledge-studio/troubleshooting.html){: new_window}。
 {: tip}
 
 # 故障诊断、支持和常见问题及解答
@@ -161,7 +161,7 @@ lastupdated: "2018-08-13"
 
 {{site.data.keyword.IBM_notm}} 发布试验性服务和功能部件，供您试用。这些服务可能不稳定，以与早期版本不兼容的方式频繁更改，并且随时可能会中断。建议不要将这些服务和功能部件用于生产环境。
 
-有关试验性服务的更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/docs/get-support/servicessupport.html#s-services-exporcont){: new_window}。有关试验性服务的完整详细信息，请参阅最新版本的 [{{site.data.keyword.cloud_notm}} 服务描述 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/software/sla/sladb.nsf/sla/bm?OpenDocument){: new_window}。
+有关试验性服务的更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/docs/get-support/servicessupport.html#s-services-exporcont){: new_window}。有关试验性服务的完整详细信息，请参阅最新版本的 [{{site.data.keyword.cloud_notm}} 服务描述 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/software/sla/sladb.nsf/sla/bm?OpenDocument){: new_window}。
 
 ## 存储空间问题
 {: #storage}

@@ -17,7 +17,7 @@ lastupdated: "2018-07-16"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-Questa documentazione è per {{site.data.keyword.knowledgestudiofull}} su {{site.data.keyword.cloud}}. Per visualizzare la documentazione della versione precedente di {{site.data.keyword.knowledgestudioshort}} nel {{site.data.keyword.IBM_notm}} Marketplace, [fai clic su questo link ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/services/knowledge-studio/tutorials-create-project.html){: new_window}.
+Questa documentazione è per {{site.data.keyword.knowledgestudiofull}} su {{site.data.keyword.cloud}}. Per visualizzare la documentazione della versione precedente di {{site.data.keyword.knowledgestudioshort}} nel {{site.data.keyword.IBM_notm}} Marketplace, [fai clic su questo link ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/docs/services/knowledge-studio/tutorials-create-project.html){: new_window}.
 {: tip}
 
 # Introduzione a {{site.data.keyword.knowledgestudioshort}}
@@ -35,8 +35,8 @@ Questa esercitazione di {{site.data.keyword.knowledgestudiofull}} ti aiuta ad es
 ## Creazione di un'istanza del servizio
 {: #instance}
 
-1. Se non lo sei già, [registrati in {{site.data.keyword.ibmid}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net){: new_window} e accedi a {{site.data.keyword.cloud_notm}}.
-1. Dalla pagina dei servizi {{site.data.keyword.cloud_notm}} {{site.data.keyword.watson}} [ ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/developer/watson/services){: new_window} fai clic sul tile {{site.data.keyword.knowledgestudioshort}} e registrati per un piano.
+1. Se non lo sei già, [registrati in {{site.data.keyword.ibmid}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}){: new_window} e accedi a {{site.data.keyword.cloud_notm}}.
+1. Dalla pagina dei servizi {{site.data.keyword.cloud_notm}} {{site.data.keyword.watson}} [ ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/developer/watson/services){: new_window} fai clic sul tile {{site.data.keyword.knowledgestudioshort}} e registrati per un piano.
 1. Dopo che ti sei registrato a un piano, dall'elenco dei servizi esistenti, avvia {{site.data.keyword.knowledgestudioshort}}.
 
 ## Lezione 1: Assegnazione dei ruoli utente
@@ -52,7 +52,7 @@ La creazione di un modello di machine learning richiede l'input dagli esperti in
 ### Procedura
 {: #wks_tutless1_procedure}
 
-1. Accedi a {{site.data.keyword.knowledgestudioshort}} con il tuo ID amministratore. Se già hai un'istanza di {{site.data.keyword.knowledgestudioshort}} esistente, puoi trovarla nella pagina dei servizi {{site.data.keyword.cloud_notm}} {{site.data.keyword.watson}} [ ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/developer/watson/services){: new_window}.
+1. Accedi a {{site.data.keyword.knowledgestudioshort}} con il tuo ID amministratore. Se già hai un'istanza di {{site.data.keyword.knowledgestudioshort}} esistente, puoi trovarla nella pagina dei servizi {{site.data.keyword.cloud_notm}} {{site.data.keyword.watson}} [ ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/developer/watson/services){: new_window}.
 1. Fai clic sull'icona delle impostazioni per aprire la pagina Service Details. La pagina elenca tutti gli ID utente che sono registrati come utenti {{site.data.keyword.knowledgestudioshort}}. Ogni ID utente ha uno dei seguenti ruoli (in ordine decrescente di autorizzazioni incluse):
 
     - Amministratore
@@ -83,7 +83,7 @@ Uno spazio di lavoro definisce tutte le risorse necessarie per creare un modello
 ### Procedura
 {: #wks_tutless2_procedure}
 
-1. Come amministratore di {{site.data.keyword.knowledgestudioshort}}, dal tuo {{site.data.keyword.cloud_notm}}dashboard [ ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net){:new_window}, avvia il servizio {{site.data.keyword.knowledgestudioshort}}.
+1. Come amministratore di {{site.data.keyword.knowledgestudioshort}}, dal tuo {{site.data.keyword.cloud_notm}}dashboard [ ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}){:new_window}, avvia il servizio {{site.data.keyword.knowledgestudioshort}}.
 1. Fai clic su **Create Worskpace**.
 1. Specifica i dettagli del nuovo spazio di lavoro:
 

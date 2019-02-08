@@ -17,7 +17,7 @@ lastupdated: "2018-07-16"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-이 문서는 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}에 대한 문서입니다. 이전 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 버전에 대한 문서를 보려면 [이 링크를 클릭 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/docs/services/knowledge-studio/tutorials-create-project.html){: new_window}하십시오.
+이 문서는 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}에 대한 문서입니다. 이전 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 버전에 대한 문서를 보려면 [이 링크를 클릭 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/docs/services/knowledge-studio/tutorials-create-project.html){: new_window}하십시오.
 {: tip}
 
 # {{site.data.keyword.knowledgestudioshort}} 시작하기
@@ -35,8 +35,8 @@ lastupdated: "2018-07-16"
 ## 서비스 인스턴스 작성
 {: #instance}
 
-1. 아직 가입하지 않은 경우에는 [{{site.data.keyword.ibmid}}에 가입 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net){: new_window}하고 {{site.data.keyword.cloud_notm}}에 로그인하십시오.
-1. {{site.data.keyword.cloud_notm}} {{site.data.keyword.watson}} [ 서비스 페이지 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/developer/watson/services){: new_window}에서 {{site.data.keyword.knowledgestudioshort}} 타일을 클릭하고 플랜에 가입하십시오. 
+1. 아직 가입하지 않은 경우에는 [{{site.data.keyword.ibmid}}에 가입 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}){: new_window}하고 {{site.data.keyword.cloud_notm}}에 로그인하십시오.
+1. {{site.data.keyword.cloud_notm}} {{site.data.keyword.watson}} [ 서비스 페이지 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/developer/watson/services){: new_window}에서 {{site.data.keyword.knowledgestudioshort}} 타일을 클릭하고 플랜에 가입하십시오. 
 1. 플랜에 가입한 후에는 기존 서비스의 목록에서 {{site.data.keyword.knowledgestudioshort}}를 실행하십시오. 
 
 ## 학습 1: 사용자 역할 지정
@@ -52,7 +52,7 @@ lastupdated: "2018-07-16"
 ### 프로시저
 {: #wks_tutless1_procedure}
 
-1. 관리자 ID를 사용하여 {{site.data.keyword.knowledgestudioshort}}에 로그인하십시오. 기존 {{site.data.keyword.knowledgestudioshort}} 인스턴스가 있는 경우에는 {{site.data.keyword.cloud_notm}} {{site.data.keyword.watson}} [ 서비스 페이지 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/developer/watson/services){: new_window}에서 이를 찾을 수 있습니다. 
+1. 관리자 ID를 사용하여 {{site.data.keyword.knowledgestudioshort}}에 로그인하십시오. 기존 {{site.data.keyword.knowledgestudioshort}} 인스턴스가 있는 경우에는 {{site.data.keyword.cloud_notm}} {{site.data.keyword.watson}} [ 서비스 페이지 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/developer/watson/services){: new_window}에서 이를 찾을 수 있습니다. 
 1. 설정 아이콘을 클릭하여 Service Details 페이지를 여십시오. 이 페이지에는 {{site.data.keyword.knowledgestudioshort}} 사용자로 등록된 모든 사용자 ID가 나열됩니다. 각 사용자 ID에는 다음 역할 중 하나가 있습니다(권한이 큰 역할에서 작은 역할 순서대로 나열됨).
 
     - Admin
@@ -83,7 +83,7 @@ lastupdated: "2018-07-16"
 ### 프로시저
 {: #wks_tutless2_procedure}
 
-1. {{site.data.keyword.knowledgestudioshort}} 관리자로서 {{site.data.keyword.cloud_notm}} [대시보드 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net){:new_window}에서 {{site.data.keyword.knowledgestudioshort}} 서비스를 실행하십시오.
+1. {{site.data.keyword.knowledgestudioshort}} 관리자로서 {{site.data.keyword.cloud_notm}} [대시보드 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}){:new_window}에서 {{site.data.keyword.knowledgestudioshort}} 서비스를 실행하십시오.
 1. **Create Worskpace**를 클릭하십시오.
 1. 새 작업공간의 세부사항을 지정하십시오.
 

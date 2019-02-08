@@ -17,7 +17,7 @@ lastupdated: "2018-07-18"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-Cette documentation concerne {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. Pour consulter la documentation de la version précédente de {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [cliquez sur ce lien ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/services/knowledge-studio/team.html){: new_window}.
+Cette documentation concerne {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. Pour consulter la documentation de la version précédente de {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [cliquez sur ce lien ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/docs/services/knowledge-studio/team.html){: new_window}.
 {: tip}
 
 # Constituer une équipe
@@ -32,9 +32,9 @@ La création d'un modèle nécessite le concours d'experts du domaine, de chefs 
 
 - Assurez-vous d'utiliser un navigateur pris en charge. Consultez à cet effet [Navigateur nécessaire](/docs/services/watson-knowledge-studio/system-requirements.html).
 - [Créez une instance de {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/tutorials-create-project.html#instance).
-- Si vous vous êtes inscrit à un plan Standard ou Premium, sous l'onglet **Gérer** d'{{site.data.keyword.cloud_notm}}, invitez dans votre organisation les autres personnes que vous souhaitez ajouter comme utilisateurs dans {{site.data.keyword.knowledgestudioshort}}. Pour plus d'informations sur l'invitation d'utilisateurs, consultez [Invitation d'utilisateurs et affectation d'accès ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/iam/iamuserinv.html){: new_window}.
+- Si vous vous êtes inscrit à un plan Standard ou Premium, sous l'onglet **Gérer** d'{{site.data.keyword.cloud_notm}}, invitez dans votre organisation les autres personnes que vous souhaitez ajouter comme utilisateurs dans {{site.data.keyword.knowledgestudioshort}}. Pour plus d'informations sur l'invitation d'utilisateurs, consultez [Invitation d'utilisateurs et affectation d'accès ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/docs/iam/iamuserinv.html){: new_window}.
 
-  **Important** : Assurez-vous que les utilisateurs invités ont le rôle de développeur Cloud Foundry. Pour plus d'informations, consultez [Accès Cloud Foundry ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window}.
+  **Important** : Assurez-vous que les utilisateurs invités ont le rôle de développeur Cloud Foundry. Pour plus d'informations, consultez [Accès Cloud Foundry ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/docs/iam/cfaccess.html){: new_window}.
 
 ## A propos de cette tâche
 
@@ -51,7 +51,7 @@ Ajoutez des utilisateurs de votre organisation {{site.data.keyword.cloud_notm}} 
 
 Pour ajouter des utilisateurs à une instance de {{site.data.keyword.knowledgestudioshort}} :
 
-1. Connectez-vous au [Tableau de bord {{site.data.keyword.cloud_notm}}![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net){: new_window} avec votre {{site.data.keyword.ibmid}} et lancez {{site.data.keyword.knowledgestudioshort}}.
+1. Connectez-vous au [Tableau de bord {{site.data.keyword.cloud_notm}}![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}){: new_window} avec votre {{site.data.keyword.ibmid}} et lancez {{site.data.keyword.knowledgestudioshort}}.
 1. Cliquez sur l'icône **Paramètres**, puis sur **Gérer les détails du service**.
 1. Dans la section **Gérer les utilisateurs**, entrez l'{{site.data.keyword.ibmid}} de l'utilisateur que vous voulez ajouter.
 1. Sélectionnez le rôle que vous souhaitez donner à l'utilisateur. Pour une description des rôles disponibles, consultez [Rôles d'utilisateur dans {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/roles.html).
@@ -70,7 +70,7 @@ Après avoir ajouté des utilisateurs à {{site.data.keyword.knowledgestudioshor
 
 Pour passer un utilisateur {{site.data.keyword.knowledgestudioshort}} à un rôle supérieur :
 
-1. Connectez-vous au [Tableau de bord {{site.data.keyword.cloud_notm}}![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net){: new_window} avec votre {{site.data.keyword.ibmid}} et lancez {{site.data.keyword.knowledgestudioshort}}.
+1. Connectez-vous au [Tableau de bord {{site.data.keyword.cloud_notm}}![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}){: new_window} avec votre {{site.data.keyword.ibmid}} et lancez {{site.data.keyword.knowledgestudioshort}}.
 1. Dans le menu de navigation en haut à droite, cliquez sur l'icône **Paramètres**![icône Paramètres](images/settings.png), puis sur **Gérer les détails du service**. La section **Gérer les utilisateurs** de la page Détails du service contient la liste de tous les ID utilisateur membres de cette instance de {{site.data.keyword.knowledgestudioshort}}.
 1. Localisez le nom de l'utilisateur dont vous souhaitez changer le rôle, puis cliquez sur le lien **Editer**.
 1. Cliquez sur le rôle actuel de l'utilisateur et choisissez le rôle supérieur auquel vous souhaitez le nommer. Pour une description des rôles disponibles, consultez [Rôles d'utilisateur dans {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/roles.html).

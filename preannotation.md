@@ -17,7 +17,7 @@ lastupdated: "2018-08-13"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/knowledge-studio/preannotation.html){: new_window}.
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio/preannotation.html){: new_window}.
 {: tip}
 
 # Bootstrapping annotation
@@ -69,7 +69,7 @@ You can use the {{site.data.keyword.nlushort}} service to pre-annotate documents
 ### Before you begin
 {: #wks_preannotnlu_prereqs}
 
-Determine whether the {{site.data.keyword.nlushort}} pre-annotator is likely to add value for your use case. Review the list of supported [{{site.data.keyword.nlushort}} service entity types and subtypes ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/natural-language-understanding/entity-types.html){: new_window} to determine if there is a natural overlap between them and the types in your type system. If so, continue with this procedure. If not, choose a different pre-annotator to use.
+Determine whether the {{site.data.keyword.nlushort}} pre-annotator is likely to add value for your use case. Review the list of supported [{{site.data.keyword.nlushort}} service entity types and subtypes ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/natural-language-understanding/entity-types.html){: new_window} to determine if there is a natural overlap between them and the types in your type system. If so, continue with this procedure. If not, choose a different pre-annotator to use.
 
 ### About this task
 {: #wks_preannotnlu_about}

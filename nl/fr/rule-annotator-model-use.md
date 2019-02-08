@@ -17,7 +17,7 @@ lastupdated: "2018-08-14"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-Cette documentation concerne {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. Pour consulter la documentation de la version précédente de {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [cliquez sur ce lien ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/services/knowledge-studio/rule-annotator-model-use.html){: new_window}.
+Cette documentation concerne {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. Pour consulter la documentation de la version précédente de {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [cliquez sur ce lien ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/docs/services/knowledge-studio/rule-annotator-model-use.html){: new_window}.
 {: tip}
 
 # Utiliser le modèle à base de règles
@@ -114,7 +114,7 @@ Pour utiliser la version déployée de votre modèle personnalisé, vous devez f
 
 Pour extraire des entités, vous pouvez utiliser le modèle avec la demande `GET /analyze` de {{site.data.keyword.nlushort}}.
 
-Pour plus de détails, consultez la [documentation de {{site.data.keyword.nlushort}}![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/services/natural-language-understanding/index.html){: new_window}.
+Pour plus de détails, consultez la [documentation de {{site.data.keyword.nlushort}}![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/docs/services/natural-language-understanding/index.html){: new_window}.
 
 ## Retirer des modèles du déploiement
 {: #undeploy-view-model}
@@ -124,7 +124,7 @@ Si vous voulez retirer un modèle du déploiement ou simplement trouver son ID, 
 ### A propos de cette tâche
 {: #wks_undeploy_about}
 
-Ce que vous voyez sur la page Modèles déployés dépend de la [région ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/resources/services_region.html){: new_window} qui héberge votre instance {{site.data.keyword.knowledgestudioshort}}. Si la région prend en charge les instances gérées par les méthodes de gestion des accès [IAM ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/iam/users_roles.html){: new_window} et [Cloud Foundry ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window}, un onglet est visible pour chaque méthode. Les modèles des instances gérées par IAM sont listés sous l'onglet **Groupes de ressources**. Les modèles des instances gérées par Cloud Foundry sont listés sous l'onglet **Organisations**. 
+Ce que vous voyez sur la page Modèles déployés dépend de la [région ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/docs/resources/services_region.html){: new_window} qui héberge votre instance {{site.data.keyword.knowledgestudioshort}}. Si la région prend en charge les instances gérées par les méthodes de gestion des accès [IAM ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/docs/iam/users_roles.html){: new_window} et [Cloud Foundry ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/docs/iam/cfaccess.html){: new_window}, un onglet est visible pour chaque méthode. Les modèles des instances gérées par IAM sont listés sous l'onglet **Groupes de ressources**. Les modèles des instances gérées par Cloud Foundry sont listés sous l'onglet **Organisations**. 
 
 Si la région prend en charge les instances gérées par seulement une des deux méthodes de gestion des accès, vous ne voyez qu'une seule liste de modèles, car une seule méthode de gestion des accès est applicable.
 

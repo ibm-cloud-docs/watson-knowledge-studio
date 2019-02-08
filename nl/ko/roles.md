@@ -27,7 +27,7 @@ lastupdated: "2018-07-02"
 {: #notes}
 
 - {{site.data.keyword.knowledgestudioshort}}에서 사용자 역할은 다음 레벨에서 관리됩니다. 
-  - {{site.data.keyword.cloud}} 역할은 {{site.data.keyword.cloud_notm}} 서비스에 대한 액세스를 제어합니다. {{site.data.keyword.knowledgestudioshort}}에서는 액세스 제어에 Cloud Foundry를 사용하며, 이를 위해 {{site.data.keyword.knowledgestudioshort}} 사용자에게는 개발자 역할이 있어야 합니다. 자세한 정보는 [Cloud Foundry 액세스 권한 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window}을 참조하십시오.
+  - {{site.data.keyword.cloud}} 역할은 {{site.data.keyword.cloud_notm}} 서비스에 대한 액세스를 제어합니다. {{site.data.keyword.knowledgestudioshort}}에서는 액세스 제어에 Cloud Foundry를 사용하며, 이를 위해 {{site.data.keyword.knowledgestudioshort}} 사용자에게는 개발자 역할이 있어야 합니다. 자세한 정보는 [Cloud Foundry 액세스 권한 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/docs/iam/cfaccess.html){: new_window}을 참조하십시오.
   - {{site.data.keyword.knowledgestudioshort}} 역할은 이 페이지에서 설명하는 대로 {{site.data.keyword.knowledgestudioshort}} 기능에 대한 액세스를 제어합니다. 
 - {{site.data.keyword.knowledgestudioshort}} 역할은 {{site.data.keyword.knowledgestudioshort}}의 인스턴스를 작성할 필요가 없습니다. 그러나 사용자가 {{site.data.keyword.knowledgestudioshort}}의 인스턴스를 작성할 때 {{site.data.keyword.knowledgestudioshort}}를 실행하는 첫 번째 사용자에게는 {{site.data.keyword.knowledgestudioshort}} admin 역할이 지정됩니다. 
 - 작업공간을 관리하려면 프로젝트 관리자가 Admin에 의해 작업공간에 지정되어야 합니다. 

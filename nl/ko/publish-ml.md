@@ -17,7 +17,7 @@ lastupdated: "2018-08-13"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-이 문서는 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}에 대한 문서입니다. 이전 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 버전에 대한 문서를 보려면 [이 링크를 클릭 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/docs/services/knowledge-studio/publish-ml.html){: new_window}하십시오.
+이 문서는 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}에 대한 문서입니다. 이전 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 버전에 대한 문서를 보려면 [이 링크를 클릭 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/docs/services/knowledge-studio/publish-ml.html){: new_window}하십시오.
 {: tip}
 
 # 기계 학습 모델 사용
@@ -74,7 +74,7 @@ lastupdated: "2018-08-13"
 ### 다음에 수행할 작업
 {: #wks_madiscovery_next}
 
-배치된 모델을 사용하려면 {{site.data.keyword.discoveryshort}} 서비스 인리치먼트 구성 프로세스 중에 요청되는 모델 ID를 제공해야 합니다. 세부사항은 [{{site.data.keyword.discoveryshort}} 서비스 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/docs/services/discovery/integrate-wks.html){: new_window}를 참조하십시오.
+배치된 모델을 사용하려면 {{site.data.keyword.discoveryshort}} 서비스 인리치먼트 구성 프로세스 중에 요청되는 모델 ID를 제공해야 합니다. 세부사항은 [{{site.data.keyword.discoveryshort}} 서비스 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/docs/services/discovery/integrate-wks.html){: new_window}를 참조하십시오.
 
 ## 기계 학습 모델을 IBM Watson Natural Language Understanding에 배치
 {: #wks_manlu}
@@ -262,7 +262,7 @@ lastupdated: "2018-08-13"
     ```
     {: codeblock}
 
-[{{site.data.keyword.nlushort}} 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/docs/services/natural-language-understanding/index.html){: new_window}를 참조하십시오.
+[{{site.data.keyword.nlushort}} 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/docs/services/natural-language-understanding/index.html){: new_window}를 참조하십시오.
 
 ## 모델 배치 취소
 {: #undeploy-view-model}
@@ -272,7 +272,7 @@ lastupdated: "2018-08-13"
 ### 이 태스크에 대한 정보
 {: #wks_undeploy_about}
 
-배치된 모델 페이지에서 보는 내용은 {{site.data.keyword.knowledgestudioshort}} 인스턴스를 호스팅하는 [지역 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/docs/resources/services_region.html){: new_window}에 따라 다릅니다. 해당 지역에서 [IAM ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/docs/iam/users_roles.html){: new_window} 및 [Cloud Foundry ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window} 액세스 관리 방법으로 관리되는 인스턴스를 지원하는 경우에는 각 방법마다 탭이 표시됩니다. IAM에 의해 관리되는 인스턴스의 모델은 **Resource Groups** 탭에 나열되어 있습니다. Cloud Foundry에 의해 관리되는 인스턴스의 모델은 **Organizations** 탭에 나열되어 있습니다. 
+배치된 모델 페이지에서 보는 내용은 {{site.data.keyword.knowledgestudioshort}} 인스턴스를 호스팅하는 [지역 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/docs/resources/services_region.html){: new_window}에 따라 다릅니다. 해당 지역에서 [IAM ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/docs/iam/users_roles.html){: new_window} 및 [Cloud Foundry ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/docs/iam/cfaccess.html){: new_window} 액세스 관리 방법으로 관리되는 인스턴스를 지원하는 경우에는 각 방법마다 탭이 표시됩니다. IAM에 의해 관리되는 인스턴스의 모델은 **Resource Groups** 탭에 나열되어 있습니다. Cloud Foundry에 의해 관리되는 인스턴스의 모델은 **Organizations** 탭에 나열되어 있습니다. 
 
 해당 지역에서 액세스 관리 방법 중 하나로만 관리되는 인스턴스를 지원하면 하나의 액세스 관리 방법만 적용되므로 하나의 모델 목록만 표시됩니다. 
 

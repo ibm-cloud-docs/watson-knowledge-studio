@@ -17,7 +17,7 @@ lastupdated: "2018-07-16"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-Cette documentation concerne {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. Pour consulter la documentation de la version précédente de {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [cliquez sur ce lien ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/services/knowledge-studio/tutorials-create-project.html){: new_window}.
+Cette documentation concerne {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. Pour consulter la documentation de la version précédente de {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [cliquez sur ce lien ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/docs/services/knowledge-studio/tutorials-create-project.html){: new_window}.
 {: tip}
 
 # Initiation à {{site.data.keyword.knowledgestudioshort}}
@@ -35,8 +35,8 @@ Ce tutoriel {{site.data.keyword.knowledgestudiofull}} vous aide à accomplir cer
 ## Créer une instance de service
 {: #instance}
 
-1. Si ce n'est déjà fait, [inscrivez-vous pour obtenir un {{site.data.keyword.ibmid}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net){: new_window} et connectez-vous à {{site.data.keyword.cloud_notm}}.
-1. A partir de la [page des services {{site.data.keyword.cloud_notm}} {{site.data.keyword.watson}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/developer/watson/services){: new_window}, cliquez sur la vignette {{site.data.keyword.knowledgestudioshort}} et inscrivez-vous à un plan.
+1. Si ce n'est déjà fait, [inscrivez-vous pour obtenir un {{site.data.keyword.ibmid}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}){: new_window} et connectez-vous à {{site.data.keyword.cloud_notm}}.
+1. A partir de la [page des services {{site.data.keyword.cloud_notm}} {{site.data.keyword.watson}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/developer/watson/services){: new_window}, cliquez sur la vignette {{site.data.keyword.knowledgestudioshort}} et inscrivez-vous à un plan.
 1. Après vous être inscrit à un plan, à partir de la liste des services existants, lancez {{site.data.keyword.knowledgestudioshort}}.
 
 ## Leçon 1 : attribuer des rôles aux utilisateurs
@@ -52,7 +52,7 @@ La création d'un modèle d'apprentissage automatique nécessite le concours d'e
 ### Procédure
 {: #wks_tutless1_procedure}
 
-1. Connectez-vous à {{site.data.keyword.knowledgestudioshort}} avec votre ID d'administrateur. Si vous avez une instance existante de {{site.data.keyword.knowledgestudioshort}}, vous pouvez la localiser à partir de la [page des services {{site.data.keyword.cloud_notm}} {{site.data.keyword.watson}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/developer/watson/services){: new_window}.
+1. Connectez-vous à {{site.data.keyword.knowledgestudioshort}} avec votre ID d'administrateur. Si vous avez une instance existante de {{site.data.keyword.knowledgestudioshort}}, vous pouvez la localiser à partir de la [page des services {{site.data.keyword.cloud_notm}} {{site.data.keyword.watson}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/developer/watson/services){: new_window}.
 1. Cliquez sur l'icône Paramètres pour ouvrir la page Détails du service. Celle-ci contient la liste de tous les ID utilisateur enregistrés comme utilisateurs de {{site.data.keyword.knowledgestudioshort}}. Chaque ID utilisateur a l'un des rôles suivants (par ordre décroissant de pouvoirs) :
 
     - Admin
@@ -83,7 +83,7 @@ Un espace de travail définit toutes les ressources nécessaires à la création
 ### Procédure
 {: #wks_tutless2_procedure}
 
-1. En tant qu'administrateur {{site.data.keyword.knowledgestudioshort}}, à partir de votre [tableau de bord ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net){:new_window} {{site.data.keyword.cloud_notm}}, lancez le service {{site.data.keyword.knowledgestudioshort}}.
+1. En tant qu'administrateur {{site.data.keyword.knowledgestudioshort}}, à partir de votre [tableau de bord ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}){:new_window} {{site.data.keyword.cloud_notm}}, lancez le service {{site.data.keyword.knowledgestudioshort}}.
 1. Cliquez sur **Créer un espace de travail**.
 1. Spécifiez les détails du nouvel espace de travail :
 

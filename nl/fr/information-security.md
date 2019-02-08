@@ -30,8 +30,8 @@ Les produits, services et autres fonctionnalités décrits ici ne sont pas adapt
 
 Si vous avez besoin d'une assistance RGPD pour les ressources {{site.data.keyword.cloud}} {{site.data.keyword.watson}} qui sont créées
 
-- Dans l'Union Européenne, consultez [Requesting support for IBM Cloud Watson resources created in the European Union ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/services/watson/getting-started-gdpr-sar.html#request-EU){: new_window}.
-- En dehors de l'Union Européenne, consultez [Requesting support for resources outside the European Union ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/services/watson/getting-started-gdpr-sar.html#request-non-EU){: new_window}.
+- Dans l'Union Européenne, consultez [Requesting support for IBM Cloud Watson resources created in the European Union ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/docs/services/watson/getting-started-gdpr-sar.html#request-EU){: new_window}.
+- En dehors de l'Union Européenne, consultez [Requesting support for resources outside the European Union ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/docs/services/watson/getting-started-gdpr-sar.html#request-non-EU){: new_window}.
 
 ## Règlement général sur la protection des données (RGPD) de l'Union Européenne
 {: #gdpr}

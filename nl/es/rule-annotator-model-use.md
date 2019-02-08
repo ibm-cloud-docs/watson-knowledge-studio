@@ -17,7 +17,7 @@ lastupdated: "2018-08-14"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-Esta documentación es para {{site.data.keyword.knowledgestudiofull}} en {{site.data.keyword.cloud}}. Para ver la documentación para la versión anterior de {{site.data.keyword.knowledgestudioshort}} en {{site.data.keyword.IBM_notm}} Marketplace, [pulse este enlace ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/docs/services/knowledge-studio/rule-annotator-model-use.html){: new_window}.
+Esta documentación es para {{site.data.keyword.knowledgestudiofull}} en {{site.data.keyword.cloud}}. Para ver la documentación para la versión anterior de {{site.data.keyword.knowledgestudioshort}} en {{site.data.keyword.IBM_notm}} Marketplace, [pulse este enlace ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/docs/services/knowledge-studio/rule-annotator-model-use.html){: new_window}.
 {: tip}
 
 # Uso del modelo basado en reglas
@@ -114,7 +114,7 @@ Para utilizar el modelo desplegado, debe especificar el ID de modelo del modelo 
 
 Puede utilizar el modelo con la solicitud {{site.data.keyword.nlushort}} `GET /analyze` para extraer entidades.
 
-Consulte la [documentación de {{site.data.keyword.nlushort}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/docs/services/natural-language-understanding/index.html){: new_window} para obtener más detalles.
+Consulte la [documentación de {{site.data.keyword.nlushort}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/docs/services/natural-language-understanding/index.html){: new_window} para obtener más detalles.
 
 ## Retirada de modelos
 {: #undeploy-view-model}
@@ -124,7 +124,7 @@ Si desea retirar un modelo o buscar un ID de modelo, vea la página **Modelos de
 ### Acerca de esta tarea
 {: #wks_undeploy_about}
 
-Lo que ve en la página Modelos desplegados depende de la [región ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/docs/resources/services_region.html){: new_window} que aloja la instancia de {{site.data.keyword.knowledgestudioshort}}. Si la región da soporte a instancias gestionadas por los métodos de gestión de acceso [IAM ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/docs/iam/users_roles.html){: new_window} y [Cloud Foundry ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window}, verá un separador para cada método. Los modelos de las instancias gestionadas por IAM se listan en el separador **Grupos de recursos**. Los modelos de las instancias gestionadas por Cloud Foundry se listan en el separador **Organizaciones**.
+Lo que ve en la página Modelos desplegados depende de la [región ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/docs/resources/services_region.html){: new_window} que aloja la instancia de {{site.data.keyword.knowledgestudioshort}}. Si la región da soporte a instancias gestionadas por los métodos de gestión de acceso [IAM ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/docs/iam/users_roles.html){: new_window} y [Cloud Foundry ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/docs/iam/cfaccess.html){: new_window}, verá un separador para cada método. Los modelos de las instancias gestionadas por IAM se listan en el separador **Grupos de recursos**. Los modelos de las instancias gestionadas por Cloud Foundry se listan en el separador **Organizaciones**.
 
 Si la región da soporte a instancias gestionadas por sólo uno de los métodos de gestión de acceso, sólo verá una lista de modelos, porque sólo será aplicable un método de gestión de acceso.
 

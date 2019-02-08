@@ -27,7 +27,7 @@ lastupdated: "2018-07-02"
 {: #notes}
 
 - {{site.data.keyword.knowledgestudioshort}} 中的使用者角色是在下列層次管理：
-  - {{site.data.keyword.cloud}} 角色控制對 {{site.data.keyword.cloud_notm}} 服務的存取。{{site.data.keyword.knowledgestudioshort}} 使用 Cloud Foundry 來進行存取控制，這需要 {{site.data.keyword.knowledgestudioshort}} 使用者具備開發人員角色。如需相關資訊，請參閱 [Cloud Foundry 存取權 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window}。
+  - {{site.data.keyword.cloud}} 角色控制對 {{site.data.keyword.cloud_notm}} 服務的存取。{{site.data.keyword.knowledgestudioshort}} 使用 Cloud Foundry 來進行存取控制，這需要 {{site.data.keyword.knowledgestudioshort}} 使用者具備開發人員角色。如需相關資訊，請參閱 [Cloud Foundry 存取權 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/docs/iam/cfaccess.html){: new_window}。
   - {{site.data.keyword.knowledgestudioshort}} 角色控制對 {{site.data.keyword.knowledgestudioshort}} 功能的存取，如這個頁面所述。
 - 不需要 {{site.data.keyword.knowledgestudioshort}} 角色，即可建立 {{site.data.keyword.knowledgestudioshort}} 的實例。不過，當人員建立 {{site.data.keyword.knowledgestudioshort}} 的實例時，第一個啟動 {{site.data.keyword.knowledgestudioshort}} 的使用者獲派 {{site.data.keyword.knowledgestudioshort}} admin 角色。
 - 若要管理工作區，管理者必須將專案經理指派給工作區。

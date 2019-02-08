@@ -17,7 +17,7 @@ lastupdated: "2018-07-16"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-Diese Dokumentation bezieht sich auf {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. Die Dokumentation für die Vorgängerversion {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace kann über [diesen Link ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/docs/services/knowledge-studio/tutorials-create-project.html){: new_window} aufgerufen werden.
+Diese Dokumentation bezieht sich auf {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. Die Dokumentation für die Vorgängerversion {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace kann über [diesen Link ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/docs/services/knowledge-studio/tutorials-create-project.html){: new_window} aufgerufen werden.
 {: tip}
 
 # Einführung in {{site.data.keyword.knowledgestudioshort}}
@@ -35,8 +35,8 @@ In diesem Lernprogramm für {{site.data.keyword.knowledgestudiofull}} erfahren S
 ## Serviceinstanz erstellen
 {: #instance}
 
-1. Falls noch nicht geschehen, [registrieren Sie sich für eine {{site.data.keyword.ibmid}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net){: new_window} und melden Sie sich bei {{site.data.keyword.cloud_notm}} an.
-1. Klicken Sie auf der {{site.data.keyword.cloud_notm}} {{site.data.keyword.watson}} [-Serviceseite ![External link icon](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/developer/watson/services){: new_window} auf die {{site.data.keyword.knowledgestudioshort}}-Kachel und melden Sie sich für einen Plan an.
+1. Falls noch nicht geschehen, [registrieren Sie sich für eine {{site.data.keyword.ibmid}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}){: new_window} und melden Sie sich bei {{site.data.keyword.cloud_notm}} an.
+1. Klicken Sie auf der {{site.data.keyword.cloud_notm}} {{site.data.keyword.watson}} [-Serviceseite ![External link icon](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/developer/watson/services){: new_window} auf die {{site.data.keyword.knowledgestudioshort}}-Kachel und melden Sie sich für einen Plan an.
 1. Nachdem Sie sich für einen Plan angemeldet haben, starten Sie von der Liste der Services {{site.data.keyword.knowledgestudioshort}}.
 
 ## Lerneinheit 1: Benutzerrollen zuordnen
@@ -52,7 +52,7 @@ Für die Erstellung eines Modells für maschinelles Lernen sind Eingaben von Fac
 ### Vorgehensweise
 {: #wks_tutless1_procedure}
 
-1. Melden Sie sich bei {{site.data.keyword.knowledgestudioshort}} mit Ihrer Administrator-ID an. Wenn Sie über eine vorhandene {{site.data.keyword.knowledgestudioshort}}-Instanz verfügen, finden Sie sie auf der {{site.data.keyword.cloud_notm}}{{site.data.keyword.watson}}[-Serviceseite ![External link icon](../../icons/launch-glyph.svg "Symbol für externen Link") ](https://console.bluemix.net/developer/watson/services){: new_window}.
+1. Melden Sie sich bei {{site.data.keyword.knowledgestudioshort}} mit Ihrer Administrator-ID an. Wenn Sie über eine vorhandene {{site.data.keyword.knowledgestudioshort}}-Instanz verfügen, finden Sie sie auf der {{site.data.keyword.cloud_notm}}{{site.data.keyword.watson}}[-Serviceseite ![External link icon](../../icons/launch-glyph.svg "Symbol für externen Link") ](https://{DomainName}/developer/watson/services){: new_window}.
 1. Klicken Sie auf das Symbol 'Einstellungen', um die Seite 'Servicedetails' zu öffnen. Auf dieser Seite werden alle Benutzer-IDs aufgelistet, die als {{site.data.keyword.knowledgestudioshort}}-Benutzer registriert sind. Jede Benutzer-ID verfügt über eine der folgenden Rollen (mit abnehmendem Umfang der Berechtigungen aufgelistet):
 
     - Admin (Administrator)
@@ -83,7 +83,7 @@ In einem Arbeitsbereich werden alle Ressourcen definiert, die zum Erstellen eine
 ### Vorgehensweise
 {: #wks_tutless2_procedure}
 
-1. Starten Sie als {{site.data.keyword.knowledgestudioshort}}-Administrator über Ihr {{site.data.keyword.cloud_notm}}-[Dashboard ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net){:new_window} den {{site.data.keyword.knowledgestudioshort}}-Service.
+1. Starten Sie als {{site.data.keyword.knowledgestudioshort}}-Administrator über Ihr {{site.data.keyword.cloud_notm}}-[Dashboard ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}){:new_window} den {{site.data.keyword.knowledgestudioshort}}-Service.
 1. Klicken Sie auf **Arbeitsbereich erstellen**.
 1. Geben Sie die Details für den neuen Arbeitsbereich an:
 

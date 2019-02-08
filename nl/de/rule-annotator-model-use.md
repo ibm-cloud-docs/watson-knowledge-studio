@@ -17,7 +17,7 @@ lastupdated: "2018-08-14"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-Diese Dokumentation bezieht sich auf {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. Die Dokumentation für die Vorgängerversion {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace kann über [diesen Link ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/docs/services/knowledge-studio/rule-annotator-model-use.html){: new_window} aufgerufen werden.
+Diese Dokumentation bezieht sich auf {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. Die Dokumentation für die Vorgängerversion {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace kann über [diesen Link ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/docs/services/knowledge-studio/rule-annotator-model-use.html){: new_window} aufgerufen werden.
 {: tip}
 
 # Regelbasiertes Modell verwenden
@@ -114,7 +114,7 @@ Damit das bereitgestellte Modell verwendet wird, müssen Sie die Modell-ID Ihres
 
 Sie können das Modell mit der Anforderung {{site.data.keyword.nlushort}} `GET /analyze` verwenden, um Entitäten zu extrahieren.
 
-Details hierzu finden Sie in der [Dokumentation für {{site.data.keyword.nlushort}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/docs/services/natural-language-understanding/index.html){: new_window}.
+Details hierzu finden Sie in der [Dokumentation für {{site.data.keyword.nlushort}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/docs/services/natural-language-understanding/index.html){: new_window}.
 
 ## Bereitstellung von Modellen aufheben
 {: #undeploy-view-model}
@@ -124,7 +124,7 @@ Wenn Sie die Bereitstellung eines Modells aufheben oder ein Modell-ID abrufen m�
 ### Informationen zu diesem Vorgang
 {: #wks_undeploy_about}
 
-Was Sie auf der Seite 'Bereitgestellte Modelle' sehen, hängt von der [-Region ![External link icon](../../icons/launch-glyph.svg "Symbol für externen Link") ](https://console.bluemix.net/docs/resources/services_region.html){: new_window} ab, in der Ihre {{site.data.keyword.knowledgestudioshort}}-Instanz gehostet wird. Wenn die Region Instanzen unterstützt, die von [IAM ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/docs/iam/users_roles.html){: new_window}- und [Cloud Foundry ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window}-Zugriffsmanagementmethoden unterstützt werden, werden für jede Methode eine Registerkarte angezeigt. Modelle aus Instanzen, die von IAM verwaltet werden, werden auf der Registerkarte **Ressourcengruppen** aufgelistet. Modelle aus Instanzen, die von Cloud verwaltet werden, werden auf der Registerkarte **Organisationen** aufgelistet. 
+Was Sie auf der Seite 'Bereitgestellte Modelle' sehen, hängt von der [-Region ![External link icon](../../icons/launch-glyph.svg "Symbol für externen Link") ](https://{DomainName}/docs/resources/services_region.html){: new_window} ab, in der Ihre {{site.data.keyword.knowledgestudioshort}}-Instanz gehostet wird. Wenn die Region Instanzen unterstützt, die von [IAM ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/docs/iam/users_roles.html){: new_window}- und [Cloud Foundry ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/docs/iam/cfaccess.html){: new_window}-Zugriffsmanagementmethoden unterstützt werden, werden für jede Methode eine Registerkarte angezeigt. Modelle aus Instanzen, die von IAM verwaltet werden, werden auf der Registerkarte **Ressourcengruppen** aufgelistet. Modelle aus Instanzen, die von Cloud verwaltet werden, werden auf der Registerkarte **Organisationen** aufgelistet. 
 
 Wenn die Region Instanzen unterstützt, die nur von einer der beiden Zugriffsmanagementmethoden verwaltet wird, wird nur eine Liste mit Modellen angezeigt, da nur eine einzige Zugriffsverwaltungsmethode anwendbar ist.
 

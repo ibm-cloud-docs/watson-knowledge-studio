@@ -29,8 +29,8 @@ Die in diesem Dokument beschriebenen Produkte, Services und sonstigen Funktionen
 
 Wenn Sie eine DSGVO-Unterstützung für {{site.data.keyword.cloud}} benötigen, werden {{site.data.keyword.watson}}-Ressourcen erstellt.
 
-- Wenn Sie sich in der Europäischen Union befinden, finden Sie weitere Informationen unter [Support für in der EU erstellte IBM Cloud Watson-Ressourcen anfordern ![External link icon](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/docs/services/watson/getting-started-gdpr-sar.html#request-EU){: new_window}.
-- Wenn Sie sich außerhalb der Europäischen Union befinden, finden Sie weitere Informationen unter[Support für Ressourcen außerhalb der EU anfordern ![External link icon](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/docs/services/watson/getting-started-gdpr-sar.html#request-non-EU){: new_window}.
+- Wenn Sie sich in der Europäischen Union befinden, finden Sie weitere Informationen unter [Support für in der EU erstellte IBM Cloud Watson-Ressourcen anfordern ![External link icon](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/docs/services/watson/getting-started-gdpr-sar.html#request-EU){: new_window}.
+- Wenn Sie sich außerhalb der Europäischen Union befinden, finden Sie weitere Informationen unter[Support für Ressourcen außerhalb der EU anfordern ![External link icon](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/docs/services/watson/getting-started-gdpr-sar.html#request-non-EU){: new_window}.
 
 ## Datenschutz-Grundverordnung der Europäischen Union (DSGVO)
 {: #gdpr}

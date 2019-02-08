@@ -17,7 +17,7 @@ lastupdated: "2018-08-09"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-本文档适用于 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}。要查看 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 先前版本的文档，请[单击此链接 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/docs/services/knowledge-studio/release-notes.html){: new_window}。
+本文档适用于 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}。要查看 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 先前版本的文档，请[单击此链接 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/docs/services/knowledge-studio/release-notes.html){: new_window}。
 {: tip}
 
 # 发行说明
@@ -40,9 +40,9 @@ lastupdated: "2018-08-09"
 ### 新增功能和更改
 {: #new-july2018}
 
-- **已部署的模型**页面已更新，包含 {{site.data.keyword.knowledgestudioshort}} 实例中的模型，这些实例由 [IAM *资源组*管理 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/docs/iam/users_roles.html){: new_window}，此外还包含由 [Cloud Foundry *组织*管理的模型 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window}。
+- **已部署的模型**页面已更新，包含 {{site.data.keyword.knowledgestudioshort}} 实例中的模型，这些实例由 [IAM *资源组*管理 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/docs/iam/users_roles.html){: new_window}，此外还包含由 [Cloud Foundry *组织*管理的模型 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/docs/iam/cfaccess.html){: new_window}。
 
-   在“已部署的模型”页面上看到的内容取决于托管 {{site.data.keyword.knowledgestudioshort}} 实例的[区域 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/docs/resources/services_region.html){: new_window}。如果该区域支持由两种访问管理方法管理的实例，那么您将看到每个方法的选项卡。由 IAM 管理的实例中的模型在**资源组**选项卡上列出。由 Cloud Foundry 管理的实例中的模型在**组织**选项卡上列出。
+   在“已部署的模型”页面上看到的内容取决于托管 {{site.data.keyword.knowledgestudioshort}} 实例的[区域 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/docs/resources/services_region.html){: new_window}。如果该区域支持由两种访问管理方法管理的实例，那么您将看到每个方法的选项卡。由 IAM 管理的实例中的模型在**资源组**选项卡上列出。由 Cloud Foundry 管理的实例中的模型在**组织**选项卡上列出。
 
   如果该区域仅支持由其中一个访问管理方法管理的实例，那么您只能看到一个模型列表，因为只有一种访问管理方法适用。
 

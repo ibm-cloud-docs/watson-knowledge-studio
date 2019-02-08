@@ -17,7 +17,7 @@ lastupdated: "2018-08-13"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-Esta documentación es para {{site.data.keyword.knowledgestudiofull}} en {{site.data.keyword.cloud}}. Para ver la documentación para la versión anterior de {{site.data.keyword.knowledgestudioshort}} en {{site.data.keyword.IBM_notm}} Marketplace, [pulse este enlace ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/docs/services/knowledge-studio/preannotation.html){: new_window}.
+Esta documentación es para {{site.data.keyword.knowledgestudiofull}} en {{site.data.keyword.cloud}}. Para ver la documentación para la versión anterior de {{site.data.keyword.knowledgestudioshort}} en {{site.data.keyword.IBM_notm}} Marketplace, [pulse este enlace ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/docs/services/knowledge-studio/preannotation.html){: new_window}.
 {: tip}
 
 # Anotación de arranque
@@ -69,7 +69,7 @@ Puede utilizar el servicio de {{site.data.keyword.nlushort}} para preanotar docu
 ### Antes de empezar
 {: #wks_preannotnlu_prereqs}
 
-Determine si es probable que el preanotador de {{site.data.keyword.nlushort}} añada un valor para el caso de uso. Revise la lista de [tipos y subtipos de entidades de servicio de {{site.data.keyword.nlushort}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/docs/services/natural-language-understanding/entity-types.html){: new_window} soportados para determinar si hay un solapamiento natural entre ellos y los tipos del sistema de tipos. Si es así, continúe con este procedimiento. Si no lo es, elija un preanotador distinto para utilizar.
+Determine si es probable que el preanotador de {{site.data.keyword.nlushort}} añada un valor para el caso de uso. Revise la lista de [tipos y subtipos de entidades de servicio de {{site.data.keyword.nlushort}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/docs/services/natural-language-understanding/entity-types.html){: new_window} soportados para determinar si hay un solapamiento natural entre ellos y los tipos del sistema de tipos. Si es así, continúe con este procedimiento. Si no lo es, elija un preanotador distinto para utilizar.
 
 ### Acerca de esta tarea
 {: #wks_preannotnlu_about}

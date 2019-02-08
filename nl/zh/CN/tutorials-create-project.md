@@ -17,7 +17,7 @@ lastupdated: "2018-07-16"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-本文档适用于 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}。要查看 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 先前版本的文档，请[单击此链接 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/docs/services/knowledge-studio/tutorials-create-project.html){: new_window}。
+本文档适用于 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}。要查看 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 先前版本的文档，请[单击此链接 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/docs/services/knowledge-studio/tutorials-create-project.html){: new_window}。
 {: tip}
 
 # {{site.data.keyword.knowledgestudioshort}} 入门
@@ -35,8 +35,8 @@ lastupdated: "2018-07-16"
 ## 创建服务实例
 {: #instance}
 
-1. 如果尚未登录，[请注册 {{site.data.keyword.ibmid}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net){: new_window}，并登录到 {{site.data.keyword.cloud_notm}}。
-1. 从 {{site.data.keyword.cloud_notm}} {{site.data.keyword.watson}} [服务页面 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/developer/watson/services){: new_window}，单击 {{site.data.keyword.knowledgestudioshort}} 磁贴，然后注册套餐。
+1. 如果尚未登录，[请注册 {{site.data.keyword.ibmid}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}){: new_window}，并登录到 {{site.data.keyword.cloud_notm}}。
+1. 从 {{site.data.keyword.cloud_notm}} {{site.data.keyword.watson}} [服务页面 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/developer/watson/services){: new_window}，单击 {{site.data.keyword.knowledgestudioshort}} 磁贴，然后注册套餐。
 1. 在注册套餐后，从现有服务列表中启动 {{site.data.keyword.knowledgestudioshort}}。
 
 ## 第 1 课：分配用户角色
@@ -52,7 +52,7 @@ lastupdated: "2018-07-16"
 ### 过程
 {: #wks_tutless1_procedure}
 
-1. 使用管理员标识登录到 {{site.data.keyword.knowledgestudioshort}}。如果有现有 {{site.data.keyword.knowledgestudioshort}} 实例，那么可以从 {{site.data.keyword.cloud_notm}} {{site.data.keyword.watson}} [服务页面 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/developer/watson/services){: new_window} 找到该实例。
+1. 使用管理员标识登录到 {{site.data.keyword.knowledgestudioshort}}。如果有现有 {{site.data.keyword.knowledgestudioshort}} 实例，那么可以从 {{site.data.keyword.cloud_notm}} {{site.data.keyword.watson}} [服务页面 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/developer/watson/services){: new_window} 找到该实例。
 1. 单击“设置”图标以打开“服务详细信息”页面。该页面列出注册为 {{site.data.keyword.knowledgestudioshort}} 用户的所有用户标识。每个用户标识都具有以下角色之一（按所包含许可权的递减顺序）：
 
     - 管理员
@@ -83,7 +83,7 @@ lastupdated: "2018-07-16"
 ### 过程
 {: #wks_tutless2_procedure}
 
-1. 以 {{site.data.keyword.knowledgestudioshort}} 管理员身份从 {{site.data.keyword.cloud_notm}} [仪表板 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net){:new_window}，启动 {{site.data.keyword.knowledgestudioshort}} 服务。
+1. 以 {{site.data.keyword.knowledgestudioshort}} 管理员身份从 {{site.data.keyword.cloud_notm}} [仪表板 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}){:new_window}，启动 {{site.data.keyword.knowledgestudioshort}} 服务。
 1. 单击**创建工作空间**。
 1. 指定新工作空间的详细信息：
 

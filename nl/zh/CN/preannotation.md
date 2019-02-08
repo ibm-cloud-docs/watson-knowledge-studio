@@ -17,7 +17,7 @@ lastupdated: "2018-08-13"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-本文档适用于 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}。要查看 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 先前版本的文档，请[单击此链接 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/docs/services/knowledge-studio/preannotation.html){: new_window}。
+本文档适用于 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}。要查看 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 先前版本的文档，请[单击此链接 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/docs/services/knowledge-studio/preannotation.html){: new_window}。
 {: tip}
 
 # 引导注释
@@ -69,7 +69,7 @@ lastupdated: "2018-08-13"
 ### 开始之前
 {: #wks_preannotnlu_prereqs}
 
-确定 {{site.data.keyword.nlushort}} 预注释器是否有可能为您的用例增加价值。查看支持的 [{{site.data.keyword.nlushort}} 服务实体类型和子类型 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/docs/services/natural-language-understanding/entity-types.html){: new_window} 的列表，以确定它们与类型系统中的类型之间是否存在自然重叠。如果是，请继续执行此过程。否则，请选择其他预注释器来使用。
+确定 {{site.data.keyword.nlushort}} 预注释器是否有可能为您的用例增加价值。查看支持的 [{{site.data.keyword.nlushort}} 服务实体类型和子类型 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/docs/services/natural-language-understanding/entity-types.html){: new_window} 的列表，以确定它们与类型系统中的类型之间是否存在自然重叠。如果是，请继续执行此过程。否则，请选择其他预注释器来使用。
 
 ### 关于本任务
 {: #wks_preannotnlu_about}

@@ -17,7 +17,7 @@ lastupdated: "2018-07-16"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-この文書は、{{site.data.keyword.cloud}} 上の {{site.data.keyword.knowledgestudiofull}} に関するものです。 以前のバージョンの {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 向けの資料を参照するには、[このリンクをクリック ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/docs/services/knowledge-studio/tutorials-create-project.html){: new_window} してください。
+この文書は、{{site.data.keyword.cloud}} 上の {{site.data.keyword.knowledgestudiofull}} に関するものです。 以前のバージョンの {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 向けの資料を参照するには、[このリンクをクリック ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/docs/services/knowledge-studio/tutorials-create-project.html){: new_window} してください。
 {: tip}
 
 # {{site.data.keyword.knowledgestudioshort}} の開始
@@ -35,8 +35,8 @@ lastupdated: "2018-07-16"
 ## サービス・インスタンスの作成
 {: #instance}
 
-1. まだ登録が済んでいなければ、[{{site.data.keyword.ibmid}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net){: new_window} に登録し、{{site.data.keyword.cloud_notm}} にログインします。
-1. {{site.data.keyword.cloud_notm}} {{site.data.keyword.watson}} [サービスのページ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/developer/watson/services){: new_window} から、{{site.data.keyword.knowledgestudioshort}} のタイルをクリックして、プランに登録します。
+1. まだ登録が済んでいなければ、[{{site.data.keyword.ibmid}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}){: new_window} に登録し、{{site.data.keyword.cloud_notm}} にログインします。
+1. {{site.data.keyword.cloud_notm}} {{site.data.keyword.watson}} [サービスのページ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/developer/watson/services){: new_window} から、{{site.data.keyword.knowledgestudioshort}} のタイルをクリックして、プランに登録します。
 1. プランに登録したら、既存のサービスのリストから {{site.data.keyword.knowledgestudioshort}} を起動します。
 
 ## 演習 1: ユーザー役割の割り当て
@@ -52,7 +52,7 @@ lastupdated: "2018-07-16"
 ### 手順
 {: #wks_tutless1_procedure}
 
-1. 管理者 ID を使用して、{{site.data.keyword.knowledgestudioshort}}  にログインします。 既存の {{site.data.keyword.knowledgestudioshort}} インスタンスがある場合は、{{site.data.keyword.cloud_notm}} {{site.data.keyword.watson}} [サービスのページ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/developer/watson/services){: new_window} から見つけることができます。
+1. 管理者 ID を使用して、{{site.data.keyword.knowledgestudioshort}}  にログインします。 既存の {{site.data.keyword.knowledgestudioshort}} インスタンスがある場合は、{{site.data.keyword.cloud_notm}} {{site.data.keyword.watson}} [サービスのページ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/developer/watson/services){: new_window} から見つけることができます。
 1. 設定アイコンをクリックして、「サービスの詳細」ページを開きます。 このページには、{{site.data.keyword.knowledgestudioshort}} ユーザーとして登録されているすべてのユーザー ID がリストされます。 各ユーザー ID には、以下のいずれかの役割があります (有する権限が大きい順)。
 
     - Admin
@@ -83,7 +83,7 @@ lastupdated: "2018-07-16"
 ### 手順
 {: #wks_tutless2_procedure}
 
-1. {{site.data.keyword.knowledgestudioshort}} 管理者として、{{site.data.keyword.cloud_notm}} [ダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net){:new_window} から、{{site.data.keyword.knowledgestudioshort}} サービスを起動します。
+1. {{site.data.keyword.knowledgestudioshort}} 管理者として、{{site.data.keyword.cloud_notm}} [ダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}){:new_window} から、{{site.data.keyword.knowledgestudioshort}} サービスを起動します。
 1. **「ワークスペースの作成」**をクリックします。
 1. 新規ワークスペースの詳細を指定します。
 

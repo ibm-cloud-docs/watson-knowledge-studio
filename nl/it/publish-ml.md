@@ -17,7 +17,7 @@ lastupdated: "2018-08-13"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-Questa documentazione è per {{site.data.keyword.knowledgestudiofull}} su {{site.data.keyword.cloud}}. Per visualizzare la documentazione della versione precedente di {{site.data.keyword.knowledgestudioshort}} nel {{site.data.keyword.IBM_notm}} Marketplace, [fai clic su questo link ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/services/knowledge-studio/publish-ml.html){: new_window}.
+Questa documentazione è per {{site.data.keyword.knowledgestudiofull}} su {{site.data.keyword.cloud}}. Per visualizzare la documentazione della versione precedente di {{site.data.keyword.knowledgestudioshort}} nel {{site.data.keyword.IBM_notm}} Marketplace, [fai clic su questo link ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/docs/services/knowledge-studio/publish-ml.html){: new_window}.
 {: tip}
 
 # Utilizzo del modello di machine learning
@@ -74,7 +74,7 @@ Per distribuire un modello di machine learning a {{site.data.keyword.watson}} {{
 ### Operazioni successive
 {: #wks_madiscovery_next}
 
-Per utilizzare il modello distribuito, devi fornire l'ID del modello quando viene richiesto durante il processo di configurazione del miglioramento del servizio {{site.data.keyword.discoveryshort}}. Per ulteriori dettagli, consulta la [documentazione del servizio {{site.data.keyword.discoveryshort}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/services/discovery/integrate-wks.html){: new_window}.
+Per utilizzare il modello distribuito, devi fornire l'ID del modello quando viene richiesto durante il processo di configurazione del miglioramento del servizio {{site.data.keyword.discoveryshort}}. Per ulteriori dettagli, consulta la [documentazione del servizio {{site.data.keyword.discoveryshort}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/docs/services/discovery/integrate-wks.html){: new_window}.
 
 ## Distribuzione di un modello di machine learning a IBM Watson Natural Language Understanding
 {: #wks_manlu}
@@ -262,7 +262,7 @@ Puoi utilizzare il modello con la richiesta {{site.data.keyword.nlushort}} `GET 
     ```
     {: codeblock}
 
-Consulta la [documentazione {{site.data.keyword.nlushort}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/services/natural-language-understanding/index.html){: new_window} per ulteriori dettagli.
+Consulta la [documentazione {{site.data.keyword.nlushort}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/docs/services/natural-language-understanding/index.html){: new_window} per ulteriori dettagli.
 
 ## Annullamento della distribuzione dei modelli
 {: #undeploy-view-model}
@@ -272,7 +272,7 @@ Se vuoi annullare la distribuzione di un modello o trovare un ID del modello, co
 ### Informazioni su quest'attività
 {: #wks_undeploy_about}
 
-Ciò che viene visualizzato nella pagina Deployed Models dipende dalla [regione ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/resources/services_region.html){: new_window} che ospita la tua istanza {{site.data.keyword.knowledgestudioshort}}. Se la regione supporta le istanze gestite dai metodi di gestione dell'accesso [IAM ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/iam/users_roles.html){: new_window} e [Cloud Foundry ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window}, visualizzi una scheda per ogni metodo. I modelli dalle istanze gestite da IAM sono elencate nella scheda **Resource Groups**. I modelli dalle istanze gestite da Cloud Foundry sono elencate nella scheda **Organizations**.
+Ciò che viene visualizzato nella pagina Deployed Models dipende dalla [regione ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/docs/resources/services_region.html){: new_window} che ospita la tua istanza {{site.data.keyword.knowledgestudioshort}}. Se la regione supporta le istanze gestite dai metodi di gestione dell'accesso [IAM ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/docs/iam/users_roles.html){: new_window} e [Cloud Foundry ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/docs/iam/cfaccess.html){: new_window}, visualizzi una scheda per ogni metodo. I modelli dalle istanze gestite da IAM sono elencate nella scheda **Resource Groups**. I modelli dalle istanze gestite da Cloud Foundry sono elencate nella scheda **Organizations**.
 
 Se la regione supporta le istanze gestite da solo uno dei metodi di gestione dell'accesso, visualizzi solo un elenco di modelli, perché viene applicato solo un metodo di gestione dell'accesso.
 

@@ -17,7 +17,7 @@ lastupdated: "2018-08-09"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-Diese Dokumentation bezieht sich auf {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. Die Dokumentation für die Vorgängerversion {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace kann über [diesen Link ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/docs/services/knowledge-studio/client-migration.html){: new_window} aufgerufen werden.
+Diese Dokumentation bezieht sich auf {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. Die Dokumentation für die Vorgängerversion {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace kann über [diesen Link ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/docs/services/knowledge-studio/client-migration.html){: new_window} aufgerufen werden.
 {: tip}
 
 # Migration auf IBM Cloud
@@ -46,13 +46,13 @@ Der Migrationsprozess für Ihre {{site.data.keyword.knowledgestudioshort}}-Proje
 
 Wenn Sie über einen Standardplan verfügen, führen Sie die folgenden Schritte aus, um Ihre Instanz von {{site.data.keyword.IBM_notm}} Marketplace auf {{site.data.keyword.cloud_notm}} zu migrieren:
 
-1. Wenn Sie noch nicht über ein {{site.data.keyword.cloud_notm}}-Konto verfügen, registrieren Sie sich unter [{{site.data.keyword.cloud_notm}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/registration/){: new_window} mithilfe Ihrer {{site.data.keyword.ibmid}} in {{site.data.keyword.IBM_notm}} Marketplace.
+1. Wenn Sie noch nicht über ein {{site.data.keyword.cloud_notm}}-Konto verfügen, registrieren Sie sich unter [{{site.data.keyword.cloud_notm}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/registration/){: new_window} mithilfe Ihrer {{site.data.keyword.ibmid}} in {{site.data.keyword.IBM_notm}} Marketplace.
 
    Ihre {{site.data.keyword.ibmid}} ist die ID, die Sie für die Anmeldung bei {{site.data.keyword.knowledgestudioshort}} in {{site.data.keyword.IBM_notm}} Marketplace verwenden.
 
-2. Melden Sie sich bei [{{site.data.keyword.cloud_notm}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net){: new_window} an.
-3. Wenn Ihr {{site.data.keyword.cloud_notm}}-Konto ein Lite-Konto ist, führen Sie ein Upgrade auf ein gebührenpflichtiges Konto durch. Weitere Informationen zu den Typen von gebührenpflichtigen Konten finden Sie unter [Kontotypen ![External link icon](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/docs/account/index.html){: new_window}.
-4. Erstellen Sie in der [{{site.data.keyword.cloud_notm}}-Konsole ![External link icon](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/catalog/services/knowledge-studio){: new_window} einen {{site.data.keyword.knowledgestudioshort}}-Standardplan.
+2. Melden Sie sich bei [{{site.data.keyword.cloud_notm}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}){: new_window} an.
+3. Wenn Ihr {{site.data.keyword.cloud_notm}}-Konto ein Lite-Konto ist, führen Sie ein Upgrade auf ein gebührenpflichtiges Konto durch. Weitere Informationen zu den Typen von gebührenpflichtigen Konten finden Sie unter [Kontotypen ![External link icon](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/docs/account/index.html){: new_window}.
+4. Erstellen Sie in der [{{site.data.keyword.cloud_notm}}-Konsole ![External link icon](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/catalog/services/knowledge-studio){: new_window} einen {{site.data.keyword.knowledgestudioshort}}-Standardplan.
 5. Folgen Sie den Anweisungen in der Anzeige, um anzugeben, dass Sie eine Instanz von {{site.data.keyword.IBM_notm}} Marketplace auf {{site.data.keyword.cloud_notm}} migrieren möchten.
 6. Wenn Sie mehr als eine Instanz migrieren möchten, wiederholen Sie den Prozess.
 

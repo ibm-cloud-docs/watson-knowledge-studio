@@ -17,7 +17,7 @@ lastupdated: "2018-08-09"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-Questa documentazione è per {{site.data.keyword.knowledgestudiofull}} su {{site.data.keyword.cloud}}. Per visualizzare la documentazione della versione precedente di {{site.data.keyword.knowledgestudioshort}} nel {{site.data.keyword.IBM_notm}} Marketplace, [fai clic su questo link ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/services/knowledge-studio/release-notes.html){: new_window}.
+Questa documentazione è per {{site.data.keyword.knowledgestudiofull}} su {{site.data.keyword.cloud}}. Per visualizzare la documentazione della versione precedente di {{site.data.keyword.knowledgestudioshort}} nel {{site.data.keyword.IBM_notm}} Marketplace, [fai clic su questo link ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/docs/services/knowledge-studio/release-notes.html){: new_window}.
 {: tip}
 
 # Note sulla release
@@ -40,9 +40,9 @@ Sono disponibili le seguenti nuove funzioni e modifiche a {{site.data.keyword.kn
 ### Nuove funzioni e modifiche
 {: #new-july2018}
 
-- La pagina **Deployed Models** è stata aggiornata per includere i modelli dalle istanze {{site.data.keyword.knowledgestudioshort}} gestiti dai *gruppi di risorse* [IAM ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/iam/users_roles.html){: new_window}, in aggiunta ai modelli gestiti dalle *organizzazioni* [Cloud Foundry ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window}.
+- La pagina **Deployed Models** è stata aggiornata per includere i modelli dalle istanze {{site.data.keyword.knowledgestudioshort}} gestiti dai *gruppi di risorse* [IAM ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/docs/iam/users_roles.html){: new_window}, in aggiunta ai modelli gestiti dalle *organizzazioni* [Cloud Foundry ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/docs/iam/cfaccess.html){: new_window}.
 
-   Ciò che viene visualizzato nella pagina Deployed Models dipende dalla [regione ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/resources/services_region.html){: new_window} che ospita la tua istanza {{site.data.keyword.knowledgestudioshort}}. Se la regione supporta le istanze gestite da solo uno dei metodi di gestione dell'accesso, visualizzi una scheda per ogni metodo. I modelli dalle istanze gestite da IAM sono elencate nella scheda **Resource Groups**. I modelli dalle istanze gestite da Cloud Foundry sono elencate nella scheda **Organizations**.
+   Ciò che viene visualizzato nella pagina Deployed Models dipende dalla [regione ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/docs/resources/services_region.html){: new_window} che ospita la tua istanza {{site.data.keyword.knowledgestudioshort}}. Se la regione supporta le istanze gestite da solo uno dei metodi di gestione dell'accesso, visualizzi una scheda per ogni metodo. I modelli dalle istanze gestite da IAM sono elencate nella scheda **Resource Groups**. I modelli dalle istanze gestite da Cloud Foundry sono elencate nella scheda **Organizations**.
 
   Se la regione supporta le istanze gestite da solo uno dei metodi di gestione dell'accesso, visualizzi solo un elenco di modelli, perché viene applicato solo un metodo di gestione dell'accesso.
 

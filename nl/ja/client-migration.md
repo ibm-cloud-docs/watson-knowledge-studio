@@ -17,7 +17,7 @@ lastupdated: "2018-08-09"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-この文書は、{{site.data.keyword.cloud}} 上の {{site.data.keyword.knowledgestudiofull}} に関するものです。 前のバージョンの {{site.data.keyword.IBM_notm}} マーケットプレイス上の {{site.data.keyword.knowledgestudioshort}} に関する文書を参照するには、[このリンクをクリックしてください ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/docs/services/knowledge-studio/client-migration.html){: new_window}。
+この文書は、{{site.data.keyword.cloud}} 上の {{site.data.keyword.knowledgestudiofull}} に関するものです。 前のバージョンの {{site.data.keyword.IBM_notm}} マーケットプレイス上の {{site.data.keyword.knowledgestudioshort}} に関する文書を参照するには、[このリンクをクリックしてください ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/docs/services/knowledge-studio/client-migration.html){: new_window}。
 {: tip}
 
 # IBM Cloud へのマイグレーション
@@ -47,13 +47,13 @@ IBM は、2017 年 12 月 18 日に {{site.data.keyword.cloud_notm}} 上の {{si
 
 標準プランをご使用の場合、以下のステップを実行して、{{site.data.keyword.IBM_notm}} マーケットプレイスから {{site.data.keyword.cloud_notm}} へインスタンスをマイグレーションします。
 
-1. {{site.data.keyword.cloud_notm}} アカウントをお持ちでない場合は、{{site.data.keyword.IBM_notm}} マーケットプレイスから {{site.data.keyword.ibmid}} を使用して [{{site.data.keyword.cloud_notm}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/registration/){: new_window} に登録します。
+1. {{site.data.keyword.cloud_notm}} アカウントをお持ちでない場合は、{{site.data.keyword.IBM_notm}} マーケットプレイスから {{site.data.keyword.ibmid}} を使用して [{{site.data.keyword.cloud_notm}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/registration/){: new_window} に登録します。
 
    {{site.data.keyword.ibmid}} は、{{site.data.keyword.IBM_notm}} マーケットプレイス上の {{site.data.keyword.knowledgestudioshort}} へのログインに使用する ID です。
 
-2. [{{site.data.keyword.cloud_notm}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net){: new_window} にログインします。
-3. ご使用の {{site.data.keyword.cloud_notm}} アカウントがライト・アカウントである場合、有料アカウントにアップグレードします。有料アカウントのタイプについて詳しくは、[アカウント・タイプ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/docs/account/index.html){: new_window} を参照してください。
-4. [{{site.data.keyword.cloud_notm}} コンソール ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/catalog/services/knowledge-studio){: new_window} から、{{site.data.keyword.knowledgestudioshort}} 標準プランを作成します。
+2. [{{site.data.keyword.cloud_notm}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}){: new_window} にログインします。
+3. ご使用の {{site.data.keyword.cloud_notm}} アカウントがライト・アカウントである場合、有料アカウントにアップグレードします。有料アカウントのタイプについて詳しくは、[アカウント・タイプ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/docs/account/index.html){: new_window} を参照してください。
+4. [{{site.data.keyword.cloud_notm}} コンソール ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/catalog/services/knowledge-studio){: new_window} から、{{site.data.keyword.knowledgestudioshort}} 標準プランを作成します。
 5. 画面上の指示に従って、インスタンスを {{site.data.keyword.IBM_notm}} マーケットプレイスから {{site.data.keyword.cloud_notm}} にマイグレーションすることを指定します。
 6. 複数のインスタンスをマイグレーションする場合は、処理を繰り返してください。
 

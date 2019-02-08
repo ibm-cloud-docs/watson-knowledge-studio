@@ -17,7 +17,7 @@ lastupdated: "2018-08-14"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/knowledge-studio/rule-annotator-model-use.html){: new_window}.
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio/rule-annotator-model-use.html){: new_window}.
 {: tip}
 
 # Using the rule-based model
@@ -28,7 +28,7 @@ Leverage a rule-based model that you created with {{site.data.keyword.knowledges
 
 **Attention**: You can deploy a rule-based model to make it available for use in these services as an [experimental](/docs/services/watson-knowledge-studio/troubleshooting.html#experimental) feature.
 
-Before a model can be deployed for use by a service, you must have a subscription to the service. {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} services are hosted on {{site.data.keyword.Bluemix_notm}}, which is the cloud platform for {{site.data.keyword.IBM_notm}}. See [What is {{site.data.keyword.Bluemix_notm}}? ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/docs/overview/whatisbluemix.html){: new_window} for more information about the platform. To subscribe to one of the {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} services, create an account from the [{{site.data.keyword.Bluemix_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/){: new_window} website.
+Before a model can be deployed for use by a service, you must have a subscription to the service. {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} services are hosted on {{site.data.keyword.Bluemix_notm}}, which is the cloud platform for {{site.data.keyword.IBM_notm}}. See [What is {{site.data.keyword.Bluemix_notm}}? ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/overview/whatisbluemix.html){: new_window} for more information about the platform. To subscribe to one of the {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} services, create an account from the [{{site.data.keyword.Bluemix_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/){: new_window} website.
 
 For some of the services, you must know details about the service instance that you plan to deploy to, such as the {{site.data.keyword.Bluemix_notm}} space name and service instance name. The space and instance name information is available from the {{site.data.keyword.Bluemix_notm}} services page.
 
@@ -114,7 +114,7 @@ To use the deployed model, you must specify the model ID of your custom model in
 
 You can use the model with the {{site.data.keyword.nlushort}} `GET /analyze` request to extract entities.
 
-See the [{{site.data.keyword.nlushort}} documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/natural-language-understanding/index.html){: new_window} for more details.
+See the [{{site.data.keyword.nlushort}} documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/natural-language-understanding/index.html){: new_window} for more details.
 
 ## Undeploying models
 {: #undeploy-view-model}
@@ -124,7 +124,7 @@ If you want to undeploy a model or find a model ID, view the **Deployed Models**
 ### About this task
 {: #wks_undeploy_about}
 
-What you see on the Deployed Models page depends on the [region ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/resources/services_region.html){: new_window} that hosts your {{site.data.keyword.knowledgestudioshort}} instance. If the region supports instances managed by [IAM ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/iam/users_roles.html){: new_window} and [Cloud Foundry ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window} access management methods, you see a tab for each method. Models from instances that are managed by IAM are listed on the **Resource Groups** tab. Models from instances that are managed by Cloud Foundry are listed on the **Organizations** tab.
+What you see on the Deployed Models page depends on the [region ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/resources/services_region.html){: new_window} that hosts your {{site.data.keyword.knowledgestudioshort}} instance. If the region supports instances managed by [IAM ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/iam/users_roles.html){: new_window} and [Cloud Foundry ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/iam/cfaccess.html){: new_window} access management methods, you see a tab for each method. Models from instances that are managed by IAM are listed on the **Resource Groups** tab. Models from instances that are managed by Cloud Foundry are listed on the **Organizations** tab.
 
 If the region supports instances managed by only one of the access management methods, you see only one list of models, because only one access management method is applicable.
 

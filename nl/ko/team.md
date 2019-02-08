@@ -17,7 +17,7 @@ lastupdated: "2018-07-18"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-이 문서는 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}에 대한 문서입니다. 이전 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 버전에 대한 문서를 보려면 [이 링크를 클릭 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/docs/services/knowledge-studio/team.html){: new_window}하십시오.
+이 문서는 {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}에 대한 문서입니다. 이전 {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 버전에 대한 문서를 보려면 [이 링크를 클릭 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/docs/services/knowledge-studio/team.html){: new_window}하십시오.
 {: tip}
 
 # 팀 구성
@@ -32,9 +32,9 @@ lastupdated: "2018-07-18"
 
 - 지원되는 브라우저를 사용하고 있는지 확인하십시오. 자세한 정보는 [브라우저 요구사항](/docs/services/watson-knowledge-studio/system-requirements.html)을 참조하십시오.
 - [{{site.data.keyword.knowledgestudioshort}}의 인스턴스를 작성하십시오](/docs/services/watson-knowledge-studio/tutorials-create-project.html#instance).
-- 표준 또는 프리미엄 플랜에 가입한 경우에는 {{site.data.keyword.cloud_notm}} **관리** 탭에서 {{site.data.keyword.knowledgestudioshort}}의 사용자로서 추가할 다른 사용자를 조직으로 초대하십시오. 사용자 초대에 대한 자세한 정보는 [사용자 초대 및 액세스 권한 지정 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/docs/iam/iamuserinv.html){: new_window}을 참조하십시오.
+- 표준 또는 프리미엄 플랜에 가입한 경우에는 {{site.data.keyword.cloud_notm}} **관리** 탭에서 {{site.data.keyword.knowledgestudioshort}}의 사용자로서 추가할 다른 사용자를 조직으로 초대하십시오. 사용자 초대에 대한 자세한 정보는 [사용자 초대 및 액세스 권한 지정 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/docs/iam/iamuserinv.html){: new_window}을 참조하십시오.
 
-  **중요**: 초대된 사용자에게 Cloud Foundry 개발자 역할이 있는지 확인하십시오. 자세한 정보는 [Cloud Foundry 액세스 권한 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window}을 참조하십시오.
+  **중요**: 초대된 사용자에게 Cloud Foundry 개발자 역할이 있는지 확인하십시오. 자세한 정보는 [Cloud Foundry 액세스 권한 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/docs/iam/cfaccess.html){: new_window}을 참조하십시오.
 
 ## 이 태스크에 대한 정보
 
@@ -51,7 +51,7 @@ lastupdated: "2018-07-18"
 
 {{site.data.keyword.knowledgestudioshort}} 인스턴스에 사용자를 추가하려면 다음 작업을 수행하십시오.
 
-1. {{site.data.keyword.ibmid}}를 사용하여 [{{site.data.keyword.cloud_notm}} 대시보드 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net){: new_window}에 로그인하고 {{site.data.keyword.knowledgestudioshort}}를 실행하십시오.
+1. {{site.data.keyword.ibmid}}를 사용하여 [{{site.data.keyword.cloud_notm}} 대시보드 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}){: new_window}에 로그인하고 {{site.data.keyword.knowledgestudioshort}}를 실행하십시오.
 1. **설정** 아이콘을 클릭한 후에 **Manage service details**를 클릭하십시오. 
 1. **Manager users** 섹션에서 추가할 사용자의 {{site.data.keyword.ibmid}}를 입력하십시오.
 1. 해당 사용자에게 부여할 역할을 선택하십시오. 사용 가능한 역할에 대한 설명은 [{{site.data.keyword.knowledgestudioshort}}의 사용자 역할](/docs/services/watson-knowledge-studio/roles.html)을 참조하십시오. 
@@ -70,7 +70,7 @@ lastupdated: "2018-07-18"
 
 {{site.data.keyword.knowledgestudioshort}} 사용자의 권한을 업그레이드하려면 다음 작업을 수행하십시오.
 
-1. {{site.data.keyword.ibmid}}를 사용하여 [{{site.data.keyword.cloud_notm}} 대시보드 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net){: new_window}에 로그인하고 {{site.data.keyword.knowledgestudioshort}}를 실행하십시오.
+1. {{site.data.keyword.ibmid}}를 사용하여 [{{site.data.keyword.cloud_notm}} 대시보드 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}){: new_window}에 로그인하고 {{site.data.keyword.knowledgestudioshort}}를 실행하십시오.
 1. 오른쪽 맨 위의 탐색 메뉴에서 **설정** 아이콘 ![설정 아이콘](images/settings.png)을 클릭한 후에 **Manage service details**를 클릭하십시오. Service Details 페이지의 **Manage users** 섹션에는 이 {{site.data.keyword.knowledgestudioshort}} 인스턴스 사용자의 모든 사용자 ID가 나열됩니다.
 1. 변경할 사용자의 이름을 찾아 **Edit** 링크를 클릭하십시오.
 1. 사용자의 역할을 클릭하고 해당 사용자에 대해 업그레이드할 역할을 선택하십시오. 사용 가능한 역할에 대한 설명은 [{{site.data.keyword.knowledgestudioshort}}의 사용자 역할](/docs/services/watson-knowledge-studio/roles.html)을 참조하십시오. 

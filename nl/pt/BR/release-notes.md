@@ -17,7 +17,7 @@ lastupdated: "2018-08-09"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-Essa documentação destina-se ao {{site.data.keyword.knowledgestudiofull}} no {{site.data.keyword.cloud}}. Para ver a documentação para a versão anterior do {{site.data.keyword.knowledgestudioshort}} no {{site.data.keyword.IBM_notm}} Marketplace, [clique neste link ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/docs/services/knowledge-studio/release-notes.html){: new_window}.
+Essa documentação destina-se ao {{site.data.keyword.knowledgestudiofull}} no {{site.data.keyword.cloud}}. Para ver a documentação para a versão anterior do {{site.data.keyword.knowledgestudioshort}} no {{site.data.keyword.IBM_notm}} Marketplace, [clique neste link ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/docs/services/knowledge-studio/release-notes.html){: new_window}.
 {: tip}
 
 # Notas sobre a liberação
@@ -40,9 +40,9 @@ Os novos recursos e mudanças a seguir no {{site.data.keyword.knowledgestudioful
 ### Novos recursos e mudanças
 {: #new-july2018}
 
-- A página **Modelos implementados** foi atualizada para incluir modelos de instâncias do {{site.data.keyword.knowledgestudioshort}} que são gerenciadas por [*grupos de recursos* do IAM ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/docs/iam/users_roles.html){: new_window}, além de modelos que são gerenciados por [*organizações* Cloud Foundry ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window}.
+- A página **Modelos implementados** foi atualizada para incluir modelos de instâncias do {{site.data.keyword.knowledgestudioshort}} que são gerenciadas por [*grupos de recursos* do IAM ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/docs/iam/users_roles.html){: new_window}, além de modelos que são gerenciados por [*organizações* Cloud Foundry ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/docs/iam/cfaccess.html){: new_window}.
 
-   O que você vê na página Modelos implementados depende da [região ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/docs/resources/services_region.html){: new_window} que hospeda sua instância do {{site.data.keyword.knowledgestudioshort}}. Se a região suportar instâncias gerenciadas por ambos os métodos de gerenciamento de acesso, você verá uma guia para cada método. Os modelos de instâncias gerenciadas pelo IAM estão listados na guia **Grupos de recursos**. Os modelos de instâncias gerenciadas pelo Cloud Foundry estão listados na guia **Organizações**.
+   O que você vê na página Modelos implementados depende da [região ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/docs/resources/services_region.html){: new_window} que hospeda sua instância do {{site.data.keyword.knowledgestudioshort}}. Se a região suportar instâncias gerenciadas por ambos os métodos de gerenciamento de acesso, você verá uma guia para cada método. Os modelos de instâncias gerenciadas pelo IAM estão listados na guia **Grupos de recursos**. Os modelos de instâncias gerenciadas pelo Cloud Foundry estão listados na guia **Organizações**.
 
   Se a região suportar instâncias gerenciadas somente por um dos métodos de gerenciamento de acesso, você verá apenas uma lista de modelos, pois apenas um método de gerenciamento de acesso será aplicável.
 

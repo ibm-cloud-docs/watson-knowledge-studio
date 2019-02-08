@@ -17,7 +17,7 @@ lastupdated: "2018-07-18"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-この文書は、{{site.data.keyword.cloud}} 上の {{site.data.keyword.knowledgestudiofull}} に関するものです。 以前のバージョンの {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 向けの資料を参照するには、[このリンクをクリック ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/docs/services/knowledge-studio/team.html){: new_window} してください。
+この文書は、{{site.data.keyword.cloud}} 上の {{site.data.keyword.knowledgestudiofull}} に関するものです。 以前のバージョンの {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace 向けの資料を参照するには、[このリンクをクリック ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/docs/services/knowledge-studio/team.html){: new_window} してください。
 {: tip}
 
 # チームのアセンブル
@@ -32,9 +32,9 @@ lastupdated: "2018-07-18"
 
 - サポートされるブラウザーを使用していることを確認してください。 詳しくは、[ブラウザーの要件](/docs/services/watson-knowledge-studio/system-requirements.html)を参照してください。
 - [{{site.data.keyword.knowledgestudioshort}} のインスタンスを作成します](/docs/services/watson-knowledge-studio/tutorials-create-project.html#instance)。
-- 標準プランまたはプレミアム・プランに登録している場合、{{site.data.keyword.cloud_notm}} **「管理」**タブから、{{site.data.keyword.knowledgestudioshort}} にユーザーとして追加する必要があるその他のユーザーを組織に招待します。 ユーザーの招待について詳しくは、[ユーザーの招待とアクセス権限の割り当て ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/docs/iam/iamuserinv.html){: new_window} を参照してください。
+- 標準プランまたはプレミアム・プランに登録している場合、{{site.data.keyword.cloud_notm}} **「管理」**タブから、{{site.data.keyword.knowledgestudioshort}} にユーザーとして追加する必要があるその他のユーザーを組織に招待します。 ユーザーの招待について詳しくは、[ユーザーの招待とアクセス権限の割り当て ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/docs/iam/iamuserinv.html){: new_window} を参照してください。
 
-  **重要**: 招待されるユーザーに Cloud Foundry の開発者の役割が割り当てられていることを確認してください。詳しくは、[Cloud Foundry アクセス権限 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window} を参照してください。
+  **重要**: 招待されるユーザーに Cloud Foundry の開発者の役割が割り当てられていることを確認してください。詳しくは、[Cloud Foundry アクセス権限 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/docs/iam/cfaccess.html){: new_window} を参照してください。
 
 ## この作業について
 
@@ -51,7 +51,7 @@ lastupdated: "2018-07-18"
 
 {{site.data.keyword.knowledgestudioshort}} インスタンスにユーザーを追加するには、以下のようにします。
 
-1. {{site.data.keyword.ibmid}} を使用して [{{site.data.keyword.cloud_notm}} ダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net){: new_window} にログインし、{{site.data.keyword.knowledgestudioshort}} を起動します。
+1. {{site.data.keyword.ibmid}} を使用して [{{site.data.keyword.cloud_notm}} ダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}){: new_window} にログインし、{{site.data.keyword.knowledgestudioshort}} を起動します。
 1. **「設定」**アイコンをクリックし、**「サービスの詳細の管理 (Manage service details)」**をクリックします。
 1. **「マネージャー・ユーザー (Manager users)」**セクションで、追加するユーザーの {{site.data.keyword.ibmid}} を入力します。
 1. ユーザーに付与する役割を選択します。 使用可能な役割については、[{{site.data.keyword.knowledgestudioshort}} のユーザー役割](/docs/services/watson-knowledge-studio/roles.html)を参照してください。
@@ -70,7 +70,7 @@ lastupdated: "2018-07-18"
 
 {{site.data.keyword.knowledgestudioshort}} ユーザーの役割をアップグレードするには、以下のようにします。
 
-1. {{site.data.keyword.ibmid}} を使用して [{{site.data.keyword.cloud_notm}} ダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net){: new_window} にログインし、{{site.data.keyword.knowledgestudioshort}} を起動します。
+1. {{site.data.keyword.ibmid}} を使用して [{{site.data.keyword.cloud_notm}} ダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}){: new_window} にログインし、{{site.data.keyword.knowledgestudioshort}} を起動します。
 1. 右上のナビゲーション・メニューから**「設定」**アイコン ![「設定」アイコン](images/settings.png) をクリックし、**「サービスの詳細の管理 (Manage service details)」**をクリックします。「サービスの詳細 (Service Details)」ページの**「ユーザーの管理」**セクションには、この {{site.data.keyword.knowledgestudioshort}} のインスタンスのユーザーであるすべてのユーザー ID がリストされます。
 1. 変更するユーザーの名前を見つけて、**「編集」**リンクをクリックします。
 1. ユーザーの役割をクリックし、そのユーザーをアップグレードする役割を選択します。 使用可能な役割については、[{{site.data.keyword.knowledgestudioshort}} のユーザー役割](/docs/services/watson-knowledge-studio/roles.html)を参照してください。

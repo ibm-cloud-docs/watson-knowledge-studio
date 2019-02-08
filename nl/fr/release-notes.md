@@ -17,7 +17,7 @@ lastupdated: "2018-08-09"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-Cette documentation concerne {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. Pour consulter la documentation de la version précédente de {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [cliquez sur ce lien ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/services/knowledge-studio/release-notes.html){: new_window}.
+Cette documentation concerne {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. Pour consulter la documentation de la version précédente de {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [cliquez sur ce lien ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/docs/services/knowledge-studio/release-notes.html){: new_window}.
 {: tip}
 
 # Notes sur l'édition
@@ -40,9 +40,9 @@ Les nouvelles fonctionnalités et modifications suivantes sont disponibles dans 
 ### Nouvelles fonctionnalités et changements
 {: #new-july2018}
 
-- La page **Modèles déployés** a été mise à jour pour inclure les modèles des instances de {{site.data.keyword.knowledgestudioshort}} gérés par les [*groupes de ressources* IAM ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/iam/users_roles.html){: new_window}, en complément des modèles gérés par les [*organisations* Cloud Foundry ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window}.
+- La page **Modèles déployés** a été mise à jour pour inclure les modèles des instances de {{site.data.keyword.knowledgestudioshort}} gérés par les [*groupes de ressources* IAM ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/docs/iam/users_roles.html){: new_window}, en complément des modèles gérés par les [*organisations* Cloud Foundry ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/docs/iam/cfaccess.html){: new_window}.
 
-   Ce que vous voyez sur la page Modèles déployés dépend de la [région ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/resources/services_region.html){: new_window} qui héberge votre instance {{site.data.keyword.knowledgestudioshort}}. Si la région prend en charge les instances gérées par les deux méthodes de gestion des accès, un onglet est visible pour chaque méthode. Les modèles des instances gérées par IAM sont listés sous l'onglet **Groupes de ressources**. Les modèles des instances gérées par Cloud Foundry sont listés sous l'onglet **Organisations**. 
+   Ce que vous voyez sur la page Modèles déployés dépend de la [région ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/docs/resources/services_region.html){: new_window} qui héberge votre instance {{site.data.keyword.knowledgestudioshort}}. Si la région prend en charge les instances gérées par les deux méthodes de gestion des accès, un onglet est visible pour chaque méthode. Les modèles des instances gérées par IAM sont listés sous l'onglet **Groupes de ressources**. Les modèles des instances gérées par Cloud Foundry sont listés sous l'onglet **Organisations**. 
 
   Si la région prend en charge les instances gérées par seulement une des deux méthodes de gestion des accès, vous ne voyez qu'une seule liste de modèles, car une seule méthode de gestion des accès est applicable.
 

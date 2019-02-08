@@ -17,7 +17,7 @@ lastupdated: "2018-08-13"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-Diese Dokumentation bezieht sich auf {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. Die Dokumentation für die Vorgängerversion {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace kann über [diesen Link ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/docs/services/knowledge-studio/preannotation.html){: new_window} aufgerufen werden.
+Diese Dokumentation bezieht sich auf {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. Die Dokumentation für die Vorgängerversion {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace kann über [diesen Link ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/docs/services/knowledge-studio/preannotation.html){: new_window} aufgerufen werden.
 {: tip}
 
 # Annotationsprozess beschleunigen
@@ -69,7 +69,7 @@ Sie können mit dem Service {{site.data.keyword.nlushort}} Dokumente vorannotier
 ### Vorbereitungen
 {: #wks_preannotnlu_prereqs}
 
-Stellen Sie fest, ob der Vorannotator für {{site.data.keyword.nlushort}} in Ihrem Anwendungsfall von Nutzen sein kann. Prüfen Sie die [Liste der vom Service {{site.data.keyword.nlushort}} unterstützten Entitätstypen und Subtypen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/docs/services/natural-language-understanding/entity-types.html){: new_window}, um festzustellen, ob sich diese Typen mit den Typen in Ihrem Typsystem überschneiden. Wenn dies zutrifft, fahren Sie mit der hier beschriebenen Prozedur fort. Ist dies nicht der Fall, verwenden Sie einen anderen Vorannotator.
+Stellen Sie fest, ob der Vorannotator für {{site.data.keyword.nlushort}} in Ihrem Anwendungsfall von Nutzen sein kann. Prüfen Sie die [Liste der vom Service {{site.data.keyword.nlushort}} unterstützten Entitätstypen und Subtypen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/docs/services/natural-language-understanding/entity-types.html){: new_window}, um festzustellen, ob sich diese Typen mit den Typen in Ihrem Typsystem überschneiden. Wenn dies zutrifft, fahren Sie mit der hier beschriebenen Prozedur fort. Ist dies nicht der Fall, verwenden Sie einen anderen Vorannotator.
 
 ### Informationen zu diesem Vorgang
 {: #wks_preannotnlu_about}

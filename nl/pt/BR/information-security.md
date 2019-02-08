@@ -30,8 +30,8 @@ Os produtos, serviços e outros recursos descritos aqui não são adequados para
 
 Se você precisar solicitar suporte do GDPR para os recursos do {{site.data.keyword.cloud}} {{site.data.keyword.watson}} que forem criados
 
-- Na União Europeia, veja [Solicitando suporte para recursos do IBM Cloud Watson criados na União Europeia ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/docs/services/watson/getting-started-gdpr-sar.html#request-EU){: new_window}.
-- Fora da União Europeia, veja [Solicitando suporte para recursos fora da União Europeia ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/docs/services/watson/getting-started-gdpr-sar.html#request-non-EU){: new_window}.
+- Na União Europeia, veja [Solicitando suporte para recursos do IBM Cloud Watson criados na União Europeia ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/docs/services/watson/getting-started-gdpr-sar.html#request-EU){: new_window}.
+- Fora da União Europeia, veja [Solicitando suporte para recursos fora da União Europeia ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/docs/services/watson/getting-started-gdpr-sar.html#request-non-EU){: new_window}.
 
 ## Regulamento Geral sobre a Proteção de Dados (GDPR) da União Europeia
 {: #gdpr}

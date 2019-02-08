@@ -27,7 +27,7 @@ lastupdated: "2018-07-02"
 {: #notes}
 
 - {{site.data.keyword.knowledgestudioshort}} 中的用户角色在以下级别进行管理：
-  - {{site.data.keyword.cloud}} 角色控制对 {{site.data.keyword.cloud_notm}} 服务的访问。{{site.data.keyword.knowledgestudioshort}} 将 Cloud Foundry 用于访问控制，这就需要 {{site.data.keyword.knowledgestudioshort}} 用户具有开发者角色。有关更多信息，请参阅 [Cloud Foundry 访问权 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/docs/iam/cfaccess.html){: new_window}。
+  - {{site.data.keyword.cloud}} 角色控制对 {{site.data.keyword.cloud_notm}} 服务的访问。{{site.data.keyword.knowledgestudioshort}} 将 Cloud Foundry 用于访问控制，这就需要 {{site.data.keyword.knowledgestudioshort}} 用户具有开发者角色。有关更多信息，请参阅 [Cloud Foundry 访问权 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/docs/iam/cfaccess.html){: new_window}。
   - {{site.data.keyword.knowledgestudioshort}} 角色控制对 {{site.data.keyword.knowledgestudioshort}} 功能的访问，如本页面中所述。
 - 创建 {{site.data.keyword.knowledgestudioshort}} 的实例时不需要 {{site.data.keyword.knowledgestudioshort}} 角色。但是，当某个人员创建 {{site.data.keyword.knowledgestudioshort}} 的实例时，会向第一个要启动 {{site.data.keyword.knowledgestudioshort}} 的用户分配 {{site.data.keyword.knowledgestudioshort}} 管理员角色。
 - 要管理工作空间，需要由管理员将项目经理分配到该工作空间。
