@@ -4,6 +4,8 @@ copyright:
   years: 2015, 2018
 lastupdated: "2018-09-11"
 
+subcollection: watson-knowledge-studio
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -36,6 +38,7 @@ Before creating a workspace, answer these questions:
 
     - Machine learning model: Uses statistical approach to finding entities and relationships in documents. This type of model can adapt as the amount of data grows.
     - Rule-based model: Uses a declarative approach to finding entities in documents. This type of model is more predictable, and is easier to comprehend and maintain. However, it does not learn from new data. It can only find patterns it has been taught to look for.
+    - If you want to create a custom categories model, see [Creating a custom categories model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-create-categories-model).
 
     > **Note:** You can also create one workspace that contains both one rule-based model and one machine learning model.
 

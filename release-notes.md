@@ -1,8 +1,10 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-09-11"
+  years: 2015, 2019
+lastupdated: "2019-03-05"
+
+subcollection: watson-knowledge-studio
 
 ---
 
@@ -25,6 +27,23 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 
 The following new features and changes to {{site.data.keyword.knowledgestudiofull}} are available.
 {: shortdesc}
+
+
+## March 2019
+{: #mar2019}
+
+### New features and changes
+{: #new-mar2019}
+
+- Introduced an experimental custom categories workspace for {{site.data.keyword.knowledgestudioshort}} service instances on **Lite** and **Standard** plans that are hosted in the **Dallas** location. With the new workspace, you can deploy your own custom text categorization model to {{site.data.keyword.nlushort}} or {{site.data.keyword.discoveryshort}}. To get started, see [Creating a custom categories model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-create-categories-model).
+
+## January 2019
+{: #jan2019}
+
+### Migrating Cloud Foundry service instances
+{: #migrating-cloud-foundry-instances}
+
+You can now migrate {{site.data.keyword.knowledgestudioshort}} Cloud Foundry service instances to a resource group. To learn more about the benefits of resource groups and how to migrate, see [Migrating Cloud Foundry service instances and apps to a resource group](https://{DomainName}/docs/resources?topic=resources-migrate#migrate).
 
 ## December 2018
 {: #dec2018}
