@@ -85,8 +85,3 @@ Use {{site.data.keyword.knowledgestudioshort}} to perform the following tasks:
 - Deploy a [machine learning](/docs/services/watson-knowledge-studio/publish-ml.html#wks_manlu) or [rule-based](/docs/services/watson-knowledge-studio/rule-annotator-model-use.html#wks_rule_nlu) model to use with the {{site.data.keyword.nlushort}} service.
 - [Export a machine learning model](/docs/services/watson-knowledge-studio/publish-ml.html#wks_maexport) to use in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
 - [Export a rule-based model PEAR file](/docs/services/watson-knowledge-studio/rule-annotator-model-use.html#wks_rule_export) to use in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
-
-## HIPAA support
-{: #ihi}
-
-US Health Insurance Portability and Accountability Act (HIPAA) support is available for Premium plans. See [Enabling EU and HIPAA supported settings](/docs/account?topic=account-eu-hipaa-supported) for more information.
