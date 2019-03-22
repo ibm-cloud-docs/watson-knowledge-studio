@@ -4,6 +4,8 @@ copyright:
   years: 2015, 2018
 lastupdated: "2018-07-20"
 
+subcollection: watson-knowledge-studio
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -33,11 +35,17 @@ _Manual data migration_ is the process of backing up your data from one instance
 To back up and restore your data complete the following steps:
 
 1. [Understand which data can be backed up](#data)
+
 1. [Prepare for backup](#prepare)
+
 1. [Download artifacts from the current instance](#export)
+
 1. [Recreate workspaces on the new instance](#recreateproj)
+
 1. [Restore the workspace data](#restoredata)
+
 1. [Restore the models](#restoremodels)
+
 1. [Restore any incomplete annotation tasks](#restoretasks)
 
 ## Data that can be backed up
