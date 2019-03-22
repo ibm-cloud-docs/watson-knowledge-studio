@@ -64,6 +64,7 @@ Watson Knowledge Studio
     backup-restore.md
     client-migration.md
     upgrade.md
+    ha-dr.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
