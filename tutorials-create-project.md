@@ -4,6 +4,8 @@ copyright:
   years: 2015, 2018
 lastupdated: "2018-07-16"
 
+subcollection: watson-knowledge-studio
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -40,6 +42,7 @@ This {{site.data.keyword.knowledgestudiofull}} tutorial helps you perform prereq
 3. Select a pricing plan, and click **Create**.
 
 ## Launching the {{site.data.keyword.knowledgestudioshort}} application
+{: #launching-the-knowledge-studio-application}
 
 After creating a service instance, the user who created the service instance and any users with [{{site.data.keyword.cloud_notm}} roles](roles.html#notes) that allow access to the service instance will be able to launch the {{site.data.keyword.knowledgestudioshort}} application with the following steps.
 

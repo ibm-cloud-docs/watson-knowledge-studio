@@ -4,6 +4,8 @@ copyright:
   years: 2015, 2018
 lastupdated: "2018-07-18"
 
+subcollection: watson-knowledge-studio
+
 ---
 
 {:shortdesc: .shortdesc}

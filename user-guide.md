@@ -4,6 +4,8 @@ copyright:
   years: 2015, 2018
 lastupdated: "2018-07-19"
 
+subcollection: watson-knowledge-studio
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -359,7 +361,6 @@ To annotate relation mentions between entity mentions in a document:
         {: tip}
 
 1. To remove a relation mention that you just added, press Ctrl+Z to undo the action. To remove a relation mention later, you can left-click the relation type and then press the **Delete** key or click **X** next to the relation type.
-1. Depending on the type system, you might be able to configure attributes for a relation, such as assigning a relation tense, modality, or class. If so, select a relation label and click **Attribute View**.
 1. Click **Save** at any time to save your work.
 
 ### What to do next

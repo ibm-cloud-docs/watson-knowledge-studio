@@ -4,6 +4,8 @@ copyright:
   years: 2015, 2018
 lastupdated: "2018-07-20"
 
+subcollection: watson-knowledge-studio
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -17,7 +19,7 @@ lastupdated: "2018-07-20"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio/backup-restore.html){: new_window}.
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/knowledge-studio/backup-restore.html){: new_window}.
 {: tip}
 
 # Backing up and restoring data
@@ -33,11 +35,17 @@ _Manual data migration_ is the process of backing up your data from one instance
 To back up and restore your data complete the following steps:
 
 1. [Understand which data can be backed up](#data)
+
 1. [Prepare for backup](#prepare)
+
 1. [Download artifacts from the current instance](#export)
+
 1. [Recreate workspaces on the new instance](#recreateproj)
+
 1. [Restore the workspace data](#restoredata)
+
 1. [Restore the models](#restoremodels)
+
 1. [Restore any incomplete annotation tasks](#restoretasks)
 
 ## Data that can be backed up
