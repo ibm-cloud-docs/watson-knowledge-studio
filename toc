@@ -11,6 +11,7 @@ Watson Knowledge Studio
         tutorials-create-ml-model.md
         tutorials-create-rule-model.md
         tutorials-bootstrap-annotation.md
+        create-categories-model.md
 
     index.md
     system-requirements.md
@@ -57,7 +58,8 @@ Watson Knowledge Studio
         evaluate-ml.md
         improve-ml.md
         publish-ml.md
-
+        
+    deploy-categories-model.md
     user-guide.md
     backup-restore.md
     client-migration.md
