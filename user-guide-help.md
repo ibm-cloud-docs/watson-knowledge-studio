@@ -29,15 +29,18 @@ Find out what to do if you have questions or need help. Where to go for help dep
 {: shortdesc}
 
 ## Access issues
+{: #uh-ac}
 
 - If you cannot access the {{site.data.keyword.knowledgestudioshort}} instance, then work with the workspace owner to ensure that he has invited you to join the workspace.
 - If you can get to the {{site.data.keyword.knowledgestudioshort}} instance, but do not see any workspaces listed, then work with the administrator or manager of the workspace to resolve the issue. The administrator, which is a person with the Admin role, or manager, which is a person with the Project Manager role in {{site.data.keyword.knowledgestudioshort}}, must 1.) associate you with an annotation set and 2.) create a task that assigns you to annotate the documents in the set. You will not see the workspace listed on the {{site.data.keyword.knowledgestudioshort}} home page until someone has performed these actions.
 
 ## Using the ground truth editor
+{: #uh-ue}
 
 First, review the information in [Annotating documents](/docs/services/watson-knowledge-studio/user-guide.html). If you still have questions about how to use the ground truth editor, check one of the developer communities, which are linked to from the bottom of the table of contents. If you can't find the answer to your question, post the question yourself.
 
 ## Annotation decisions
+{: #uh-ad}
 
 Can't decide which entity type to assign to an ambiguous term?
 
@@ -45,6 +48,7 @@ Can't decide which entity type to assign to an ambiguous term?
 - Discuss the question with other human annotators involved in the workspace, and try to decide together on the optimal solution. This type of discussion is expected and beneficial to the workspace overall. It will encourage you to all follow the same methodology as you annotate the documents.
 
 ## Related information
+{: #uh-ri}
 
 [Annotating documents](/docs/services/watson-knowledge-studio/user-guide.html)
 

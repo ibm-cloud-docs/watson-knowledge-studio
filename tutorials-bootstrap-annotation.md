@@ -29,14 +29,14 @@ This tutorial helps you understand how to pre-annotate documents, which bootstra
 {: shortdesc}
 
 ## Learning objectives
-{: #objectives}
+{: #tba-obj}
 
 After you complete this tutorial, you will know how to pre-annotate documents with a machine learning model.
 
 This tutorial should take approximately 5 minutes to finish. If you explore other concepts related to this tutorial, it could take longer to complete.
 
 ## Before you begin
-{: #prereqs}
+{: #tba-pr}
 
 - You're using a supported browser. For information, see [Browser requirements](/docs/services/watson-knowledge-studio/system-requirements.html).
 - You successfully completed [Getting started with {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/tutorials-create-project.html), which covers creating a workspace, creating a type system, and adding a dictionary.

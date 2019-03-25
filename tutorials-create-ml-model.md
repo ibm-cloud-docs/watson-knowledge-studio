@@ -29,7 +29,7 @@ This tutorial helps you understand the process for building a machine learning m
 {: shortdesc}
 
 ## Learning objectives
-{: #objectives}
+{: #tcmm-obj}
 
 After you complete the lessons in this tutorial, you will know how to perform the following tasks:
 
@@ -42,7 +42,7 @@ After you complete the lessons in this tutorial, you will know how to perform th
 This tutorial takes approximately 60 minutes to finish. If you explore other concepts that are related to this tutorial, it might take longer to complete.
 
 ## Before you begin
-{: #prereqs}
+{: #tcmm-pr}
 
 - You're using a supported browser. See [Browser requirements](/docs/services/watson-knowledge-studio/system-requirements.html).
 - You successfully completed [Getting started with {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/tutorials-create-project.html), which covers creating a workspace, creating a type system, and adding a dictionary.
@@ -53,7 +53,7 @@ This tutorial takes approximately 60 minutes to finish. If you explore other con
     For information about user roles, see [User roles in {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/roles.html).
 
 ## Results
-{: #results}
+{: #tcmm-results}
 
 After completing this tutorial, you will have a custom machine learning model that you can use with other {{site.data.keyword.watson}} services.
 
@@ -369,7 +369,7 @@ You created a machine learning model, trained it, and evaluated how well it perf
 You created a machine learning model.
 
 ### Lessons learned
-{: #lessons_learned}
+{: #tcm-ll}
 
 By completing this tutorial, you learned about the following concepts:
 

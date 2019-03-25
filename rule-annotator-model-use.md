@@ -119,19 +119,19 @@ You can use the model with the {{site.data.keyword.nlushort}} `GET /analyze` req
 See the [{{site.data.keyword.nlushort}} documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/natural-language-understanding/index.html){: new_window} for more details.
 
 ## Undeploying models
-{: #undeploy-view-model}
+{: #ramu-um}
 
 If you want to undeploy a model or find a model ID, view the **Deployed Models** page.
 
 ### About this task
-{: #wks_undeploy_about}
+{: #ramu-att}
 
 What you see on the Deployed Models page depends on the [region ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/resources/services_region.html){: new_window} that hosts your {{site.data.keyword.knowledgestudioshort}} instance. If the region supports instances managed by [IAM ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/iam/users_roles.html){: new_window} and [Cloud Foundry ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/iam/cfaccess.html){: new_window} access management methods, you see a tab for each method. Models from instances that are managed by IAM are listed on the **Resource Groups** tab. Models from instances that are managed by Cloud Foundry are listed on the **Organizations** tab.
 
 If the region supports instances managed by only one of the access management methods, you see only one list of models, because only one access management method is applicable.
 
 ### Procedure
-{: #wks_deploy_procedure}
+{: #ramu-pr}
 
 To undeploy models or find model IDs:
 

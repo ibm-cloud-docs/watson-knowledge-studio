@@ -44,6 +44,7 @@ Avoid adding entries that have multiple meanings. For example, in a domain about
 You can create dictionaries in {{site.data.keyword.knowledgestudioshort}} by manually adding individual entries. {{site.data.keyword.knowledgestudioshort}} also supports the ability to upload several types of dictionary files.
 
 ### How are dictionaries used?
+{: #di-du}
 
 Dictionaries are used in a couple ways, all optional. They are used by the machine learning model to provide words or phrases that are equivalent for information-extraction purposes and during pre-annotation to bootstrap the annotation effort.
 
@@ -61,6 +62,7 @@ Dictionaries are used in a couple ways, all optional. They are used by the machi
     In both cases, the dictionaries provide terms that the system can find and annotate as mentions. It assigns to each mention the entity type that is associated with the dictionary that contains the term. When a human annotator begins work on new documents that were pre-annotated, many mentions are already annotated based on the dictionary entries. The human annotator thus has more time to focus on assigning entity types to mentions that require deeper analysis.
 
 ### Language considerations
+{: #di-lc}
 
 - For Brazilian Portuguese, English, French, German, Italian, and Spanish, {{site.data.keyword.knowledgestudioshort}} does not currently provide an option to specify case-insensitive dictionary-matching, but dictionary entries match text that has a higher case. For example, *vehicle* in the dictionary matches *vehicle*, *Vehicle* or *VEHICLE* in text, while *Sat* in the dictionary matches *Sat* or *SAT* in text, but not *sat*.
 - For Japanese and Korean, dictionary matching during pre-annotation is case-sensitive.
@@ -171,6 +173,7 @@ premium,4,premium,premium-grade
 Adding dictionaries is an optional step in creating a model. Dictionaries are helpful because they enable you to jump start the annotation process.
 
 ### About this task
+{: #di-att}
 
 If you provide a dictionary, you can run the dictionary pre-annotator on the documents. The pre-annotator finds terms that are represented in your dictionary and automatically annotates them. This initial pass on the documents simplifies the human annotator's job because she can review the annotations that were added by the pre-annotator and correct them or add to them. She does not have to start entirely from scratch.
 
@@ -183,11 +186,12 @@ The following restriction apply to dictionaries:
 - Maximum 64 dictionaries per workspace
 
 ### Procedure
+{: #di-pr}
 
 To add a dictionary to your workspace:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager and open the **Assets** > **Dictionaries** page.
-1. Perform one of the following tasks:
+2. Perform one of the following tasks:
 
     - Next to the **Create Dictionary** button, click the **Menu** icon, and then select **Upload Dictionary**. Select a dictionary, and then click **Upload**. After you upload a dictionary, select it to view the dictionary and associate it with an entity type.
 
@@ -197,22 +201,23 @@ To add a dictionary to your workspace:
 
     - Click the **Create Dictionary** button to create an empty dictionary to which you can subsequently add dictionary entries. Specify a descriptive name for the dictionary, and then click **Save**.
 
-2. To add entries to the dictionary, perform one of the following tasks:
+3. To add entries to the dictionary, perform one of the following tasks:
 
     - Click **Add Entry** to add a dictionary entry. Specify the *lemma* (the most representative word form for the term).
     - Click **Upload** to upload a `CSV` file that contains dictionary entries, and then browse to select the file. The `CSV` file must be smaller than 1MB.
 
-3. After uploading or adding entries, you can edit the entries.
+4. After uploading or adding entries, you can edit the entries.
 
     Open an entry to specify equivalent terms, called *surface forms*. Each surface form must be 256 or fewer characters in length. You can change which of the surface forms is used as the lemma. For example, the lemma *{{site.data.keyword.IBM_notm}}* might have surface forms like *{{site.data.keyword.IBM_notm}} Corp.* and *International Business Machines, Inc.*.
 
-4. Select the appropriate part of speech for each lemma and surface form in the dictionary.
+5. Select the appropriate part of speech for each lemma and surface form in the dictionary.
 
     The part of speech information is used by the tokenizer, and during pre-annotation.
 
-5. Click **Save** to store your changes.
+6. Click **Save** to store your changes.
 
 ### What to do next
+{: #di-ne}
 
 Run the pre-annotator, which uses the dictionaries that you created to do a preliminary pass of the source documents, and adds annotations to them.
 

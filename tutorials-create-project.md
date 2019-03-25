@@ -201,7 +201,7 @@ After you create a dictionary, you can use it to speed up human annotation tasks
 While learning about {{site.data.keyword.knowledgestudioshort}}, you created a workspace and added artifacts to it.
 
 ### Lessons learned
-{: #lessons_learned}
+{: #tcp-ll}
 
 By completing this tutorial, you learned about the following concepts:
 

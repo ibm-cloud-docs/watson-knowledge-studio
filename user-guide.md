@@ -319,10 +319,12 @@ After you finish annotating all documents and mark them **Completed**, the statu
 To annotate relation mentions, a human annotator finds textual evidence of a relation between two entity mentions in a sentence, and then applies a label that most appropriately describes the relation type. The labels that can be applied are relation types defined in the workspace's type system.
 
 ### Before you begin
+{: #ar-byb}
 
 You must annotate entity mentions in the document before you can define relation types between them.
 
 ### About this task
+{: #ar-att}
 
 The relation mention can only be defined if the text explicitly describes the relationship between the two entity mentions. Explicit textual evidence might include possessives, subject-verb-object structures, or appositives. For example, in the following sentence, it is not valid to add the `ownedBy` relation mention between `dog` and `owner`.
 
@@ -343,6 +345,7 @@ The requirement that both entity mentions and the text that defines the relation
 where the subscript [<i>#1</i>] indicates that `Mary` and `She` are both members of the first coreference chain in the document.
 
 ### Procedure
+{: #ar-pr}
 
 To annotate relation mentions between entity mentions in a document:
 
@@ -364,12 +367,14 @@ To annotate relation mentions between entity mentions in a document:
 1. Click **Save** at any time to save your work.
 
 ### What to do next
+{: #ar-wtd}
 
 After you finish annotating all entity mentions, relation mentions, and coreferences in the document, as applicable, change the document status from **In Progress** to **Completed**, click **Save**, and then close the document.
 
 After you finish annotating all documents and mark them **Completed**, the status of the annotation set changes to **Submitted**. That is how project managers know that they can start to evaluate the documents for inter-annotator agreement, and reject them or accept them and promote them to ground truth.
 
 ## Related information
+{: #ar-ri}
 
 [Creating dictionaries](/docs/services/watson-knowledge-studio/dictionaries.html)
 
