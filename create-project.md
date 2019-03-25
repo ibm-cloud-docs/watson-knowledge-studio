@@ -29,6 +29,7 @@ The first step in building a custom model is to create a workspace.
 {: shortdesc}
 
 ## About this task
+{: #cp-att}
 
 For each model that you want to build and use, you create a single workspace that contains the artifacts and resources needed to build the model. You then train the model to produce a custom model that can be deployed to an external service for use.
 
@@ -47,6 +48,7 @@ Before creating a workspace, answer these questions:
     See [{{site.data.keyword.watson}} services integration](/docs/services/watson-knowledge-studio/index.html#wks_watsoninteg) for information about the other {{site.data.keyword.watson}} services that custom models can be used with.
 
 ## Procedure
+{: #cp-pr}
 
 To create a workspace, complete the following steps:
 
@@ -69,6 +71,7 @@ To create a workspace, complete the following steps:
 1. Click **Create**.
 
 ## What to do next
+{: #cp-ne}
 
 After the workspace is created, you can start configuring the workspace resources.
 
@@ -92,6 +95,7 @@ The actions that a tokenizer must take to identify a document's tokens differ de
 The tokenization process is important because it determines the groups of characters that users can highlight for annotation in the ground truth editor. Annotations of entity and relation mentions are generally aligned with token boundaries, and must be labeled within a sentence; they cannot span sentence boundaries.
 
 ### Supported types
+{: #cp-st}
 
 {{site.data.keyword.knowledgestudioshort}} supports the following tokenizers:
 
@@ -113,6 +117,7 @@ Different stages of model development require different inputs and produce diffe
 For each stage of the model development process, this table summarizes the typical activities that you perform, the supported input file formats, the outputs that can be produced, and any sizing limits or other requirements.
 
 ### All model types
+{: #cp-amt}
 
 <table summary="This table provides a summary of input, output, and limitations for all model types.">
   <caption>Table 1. All model types</caption>
@@ -222,6 +227,7 @@ For each stage of the model development process, this table summarizes the typic
  {: #wks_formats__datasimpletable_xxj_qr5_2y}
 
 ### Machine learning model
+{: #cp-mlm}
 
 <table summary="This table provides a summary of input, output, and limitations for the machine learning model.">
   <caption>Table 2. Machine learning model</caption>
@@ -389,6 +395,7 @@ For each stage of the model development process, this table summarizes the typic
 </table>
 
 ### Rule-based model
+{: #cp-rbm}
 
 <table summary="This table provides a summary of input, output, and limitations for the rule-based model.">
   <caption>Table 3. Rule-based model</caption>

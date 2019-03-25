@@ -31,7 +31,7 @@ This tutorial helps you understand how to create a rule-based model that you can
 You will build a model that can find text in documents that matches the pattern `month day, year`. For example, the model would find the date reference *May 1, 2010*. Before you define the rule pattern itself, you will create artifacts that will help you build the pattern, including a dictionary class that recognizes month mentions and a regular expression class that recognizes year mentions in text.
 
 ## Learning objectives
-{: #objectives}
+{: #tcrm-obj}
 
 After you complete this tutorial, you will know how to perform the following tasks:
 
@@ -44,14 +44,14 @@ After you complete this tutorial, you will know how to perform the following tas
 This tutorial should take approximately 30 minutes to finish. If you explore other concepts related to this tutorial, it could take longer to complete.
 
 ## Before you begin
-{: #prereqs}
+{: #tcrm-pr}
 
 - You're using a supported browser. For information, see [Browser requirements](/docs/services/watson-knowledge-studio/system-requirements.html).
 - You successfully completed [Getting started with {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/tutorials-create-project.html), which covers creating a workspace, creating a type system, and adding a dictionary.
 - You must have at least one user ID in either the Admin or Project Manager role. For information about user roles, see [User roles in {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/roles.html).
 
 ## Results
-{: #results}
+{: #tcrm-results}
 
 After you create the rule-based model, you can use it in one of the following ways to find text patterns in documents:
 
@@ -301,7 +301,7 @@ For more information about creating a rule-based model, see [Creating the rule-b
 While learning about {{site.data.keyword.knowledgestudioshort}}, you created a rule-based model.
 
 ### Lessons learned
-{: #lessons_learned}
+{: #tcrm-ll}
 
 By completing this tutorial, you learned about the following concepts:
 

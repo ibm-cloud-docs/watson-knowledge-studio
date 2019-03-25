@@ -93,6 +93,7 @@ For some relation types, the order of entity mentions matters. For example, the 
 You must create or upload a type system before you begin any annotation tasks.
 
 ### About this task
+{: #ts-att}
 
 The following naming rules apply to type system entries:
 
@@ -105,6 +106,7 @@ The following naming rules apply to type system entries:
 By convention, entity type names are specified in uppercase characters (`ORGANIZATION`) and relation type names are specified in camel case (`employedBy`). But, this convention is optional.
 
 ### Procedure
+{: #ts-pr}
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager and open the **Assets**> **Entity Types** page.
 1. Choose one of the following methods to create a type system:
@@ -209,10 +211,12 @@ Roles can also provide you with a way to capture relation information without re
 A similar example is when the phrase `2008 Ford F-150` is used as shorthand for `2008 Ford F-150 truck`. Here, `2008` is annotated as a `MODEL_YEAR` entity type, `Ford` is annotated as a `MANUFACTURER` entity type and `F-150` is given a `MODEL` entity type. But with the word `truck` missing, `F-150` also represents a vehicle. Saying `the F-150` is like saying `the truck`. You can capture that usage by adding a `VEHICLE` role to the mention in addition to its `MODEL` entity type. You can then define `hasAttribute` relations between the `VEHICLE` role and the `MANUFACTURER` and `MODEL_YEAR` entity mentions.
 
 ### How are roles different from subtypes?
+{: #ts-rds}
 
 Entity subtypes are for stratifying an inventory of entity types into a hierarchy. For example, if you care to distinguish 40 things, but they logically group into 10 sets of 4 (`VITALSIGN_BLOODPRESSURE`, `VITALSIGN_HEARTRATE`, `MEDICATION_DOSAGE`, `MEDICATION_FREQUENCY`), you could structure them into types and subtypes, which yields more compact menus, but adds a level of depth and nuisance to the labeling process. For the purposes of information extraction, a combination of types and subtypes is interchangeable with lots and lots of types with no subtypes. By contrast, the word or phrase to which you apply a role is an example of one entity type, but it plays the role of another entity type, and one that is not a subtype of the other.
 
 ### How are roles treated?
+{: #ts-hrt}
 
 The {{site.data.keyword.knowledgestudioshort}} machine learning model defines classifier labels for each mention of an entity that it finds in the source documents by concatenating the entity type and role values. When you provide role values, you create more precise labels. Each group of instances of one label type that are found in the training data forms a more uniform set of mentions. The challenge is that by choosing to be more precise, you must also accede to providing more training data to ensure that the model performs well. But, the more training data you provide, the better the model becomes. So, if you don't mind doing additional annotation, using roles gets you better results.
 
