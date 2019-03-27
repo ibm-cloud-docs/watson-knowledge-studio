@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-07-27"
+  years: 2018, 2019
+lastupdated: "2019-03-27"
 
 subcollection: watson-knowledge-studio
 
@@ -59,5 +59,5 @@ Videos and articles to help you get started faster with {{site.data.keyword.know
 ## Other resources
 {: #other}
 
-- [{{site.data.keyword.watson}} Academy Course ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.watson-academy.info/course/view.php?id=209)
+- Search for *Watson Knowledge Studio Foundations & Methodology* on [{{site.data.keyword.watson}} Academy ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/training/watsonacademy)
 - [Discovery Reference Architecture ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ibm.biz/wds_architecture)
