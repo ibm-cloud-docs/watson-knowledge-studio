@@ -41,7 +41,7 @@ The creation of a model requires input from subject matter experts, project mana
 
 To add users to a {{site.data.keyword.knowledgestudioshort}} service instance:
 
-1. [Launch the {{site.data.keyword.knowledgestudioshort}} application.](tutorials-create-project.html#launch-application)
+1. [Launch the {{site.data.keyword.knowledgestudioshort}} application.](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutintro#launching-the-knowledge-studio-application)
 2. Click the **Settings** icon ![the Settings icon](images/settings.png), then click **Manage service details**.
 3. In the **Manage users** section, enter the {{site.data.keyword.ibmid}} for the user you want to add.
 4. Select the role you want to give the user. For descriptions of the roles that are available, see [User roles in {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/roles.html).
@@ -61,7 +61,7 @@ After you add users to {{site.data.keyword.knowledgestudioshort}}, you can upgra
 
 To upgrade roles for {{site.data.keyword.knowledgestudioshort}} users:
 
-1. [Launch the {{site.data.keyword.knowledgestudioshort}} application.](tutorials-create-project.html#launch-application)
+1. [Launch the {{site.data.keyword.knowledgestudioshort}} application.](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutintro#launching-the-knowledge-studio-application)
 1. From the top right navigation menu, click the **Settings** icon ![the Settings icon](images/settings.png) and then click **Manage service details**.
 2. In the **Manage users** section of the Service Details page, click the **Edit** link next to a user.
 3. Click the role of the user and choose the role you want to upgrade that user to. For descriptions of the roles that are available, see [User roles in {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/roles.html).
