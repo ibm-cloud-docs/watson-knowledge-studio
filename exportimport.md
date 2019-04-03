@@ -63,8 +63,8 @@ To upload documents, open the **Document Sets** tab in the new workspace, click 
 
 **Related concepts**:
 
-[Types of artifacts](/docs/services/watson-knowledge-studio/artifacts.html)
+[Types of artifacts](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-artifacts)
 
-[Adding documents for annotation](/docs/services/watson-knowledge-studio/documents-for-annotation.html)
+[Adding documents for annotation](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-documents-for-annotation)
 
-[Adding documents for defining rules](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html)
+[Adding documents for defining rules](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_rule_anno_add)

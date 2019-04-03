@@ -41,7 +41,7 @@ To define a rule, complete the following steps:
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager and click **Rule-based Model** > **Rules**.
 2. Click the plus sign (+) next to the Documents heading to add a document.
 
-    For more information, see [Adding documents for defining rules](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html).
+    For more information, see [Adding documents for defining rules](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_rule_anno_add).
 
     For example, you might add a document named `My Document` that contains this single line of text:
 
@@ -69,7 +69,7 @@ To define a rule, complete the following steps:
 
         Any dictionaries that you created are displayed.
 
-        If you have not added a dictionary, open the **Assets** > **Dictionaries** page from the main navigation bar to add one. See [Creating dictionaries](/docs/services/watson-knowledge-studio/dictionaries.html) for more information.
+        If you have not added a dictionary, open the **Assets** > **Dictionaries** page from the main navigation bar to add one. See [Creating dictionaries](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-dictionaries) for more information.
 
     2. Click a dictionary, associate a class with the dictionary, and then click **Save**.
 

@@ -34,7 +34,7 @@ Before a model can be deployed for use by a service, you must have a subscriptio
 
 For some of the services, you must know details about the service instance that you plan to deploy to, such as the {{site.data.keyword.Bluemix_notm}} space name and service instance name. The space and instance name information is available from the {{site.data.keyword.Bluemix_notm}} Services page.
 
-You can also pre-annotate new documents with the machine learning model. See [Pre-annotating documents with the machine learning model](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannotsire) for details.
+You can also pre-annotate new documents with the machine learning model. See [Pre-annotating documents with the machine learning model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-preannotation#wks_preannotsire) for details.
 
 ## Deploying a machine learning model to IBM Watson Discovery
 {: #wks_madiscovery}
@@ -376,4 +376,4 @@ To leverage a machine learning model in {{site.data.keyword.IBM_notm}} {{site.da
 #### Related tasks
 {: #wks_maexport_related}
 
-[Exporting analyzed documents from {{site.data.keyword.watson}} Explorer Content Analytics](/docs/services/watson-knowledge-studio/preannotation.html#wks_uimawexca)
+[Exporting analyzed documents from {{site.data.keyword.watson}} Explorer Content Analytics](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-preannotation#wks_uimawexca)

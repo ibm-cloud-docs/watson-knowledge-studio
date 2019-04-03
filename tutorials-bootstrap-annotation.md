@@ -38,10 +38,10 @@ This tutorial should take approximately 5 minutes to finish. If you explore othe
 ## Before you begin
 {: #tba-pr}
 
-- You're using a supported browser. For information, see [Browser requirements](/docs/services/watson-knowledge-studio/system-requirements.html).
-- You successfully completed [Getting started with {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/tutorials-create-project.html), which covers creating a workspace, creating a type system, and adding a dictionary.
-- You successfully completed [Creating a machine learning model](/docs/services/watson-knowledge-studio/tutorials-create-ml-model.html).
-- You must have at least one user ID in either the Admin or Project Manager role. For information about user roles, see [User roles in {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/roles.html).
+- You're using a supported browser. For information, see [Browser requirements](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-system-requirements).
+- You successfully completed [Getting started with {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutintro), which covers creating a workspace, creating a type system, and adding a dictionary.
+- You successfully completed [Creating a machine learning model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutml_intro).
+- You must have at least one user ID in either the Admin or Project Manager role. For information about user roles, see [User roles in {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-roles).
 
 ## Results
 {: #results}
@@ -65,7 +65,7 @@ In this tutorial, you can add a second set of documents by using the `documents-
 - If annotations on each document do not match, they lower the quality of the machine learning model.
 - If annotations on each document match, they over-train the machine learning model on the duplicated files.
 
-For more information about pre-annotating documents, see [Bootstrapping annotation](/docs/services/watson-knowledge-studio/preannotation.html), which covers additional methods of pre-annotation.
+For more information about pre-annotating documents, see [Bootstrapping annotation](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-preannotation), which covers additional methods of pre-annotation.
 
 ### Procedure
 {: #wks_tutboot_ml_procedure}
@@ -73,21 +73,21 @@ For more information about pre-annotating documents, see [Bootstrapping annotati
 1. Log in to {{site.data.keyword.knowledgestudioshort}} as the administrator.
 1. Upload more documents to the workspace. You can use the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/documents-ml.csv" download>`documents-ml.csv` <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> file.
 
-    For more information about adding documents to a workspace, see [Adding documents for annotation](/docs/services/watson-knowledge-studio/documents-for-annotation.html).
+    For more information about adding documents to a workspace, see [Adding documents for annotation](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-documents-for-annotation).
 
 1. Create an annotation set that uses the `documents-ml.csv` file as the base set, and assign it to yourself, the administrator.
 
-    After you complete the following steps to pre-annotate the new documents, you can view the annotation set to see how the machine learning model annotated the documents. Typically, you assign annotation sets to one or more human annotators. For more information about creating and assigning annotation sets, see [Adding documents for annotation](/docs/services/watson-knowledge-studio/documents-for-annotation.html).
+    After you complete the following steps to pre-annotate the new documents, you can view the annotation set to see how the machine learning model annotated the documents. Typically, you assign annotation sets to one or more human annotators. For more information about creating and assigning annotation sets, see [Adding documents for annotation](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-documents-for-annotation).
 
 1. To pre-annotate the new documents, click **Machine Learning Model** > **Versions**, and then click **Run this model**.
 1. Select the document set that you added to the corpus, `documents-ml.csv`, and click **Run**.
 1. After the pre-annotation is complete, create a human annotation task that includes the annotation set you created.
 
-    For more information about creating an annotation task, see [Annotation setup](/docs/services/watson-knowledge-studio/annotate-documents.html).
+    For more information about creating an annotation task, see [Annotation setup](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-annotate-documents).
 
 1. To view the annotations that were applied by the machine learning model to the new documents, open the annotation task.
 
-    Because the new documents were pre-annotated with the machine learning model, human annotation requires less time. For more information about adding annotations by human annotators, see [Annotating documents](/docs/services/watson-knowledge-studio/user-guide.html).
+    Because the new documents were pre-annotated with the machine learning model, human annotation requires less time. For more information about adding annotations by human annotators, see [Annotating documents](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-user-guide).
 
 ### Results
 {: #wks_tutboot_ml_results}

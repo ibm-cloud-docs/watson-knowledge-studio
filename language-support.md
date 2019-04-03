@@ -45,7 +45,7 @@ You can train a model in the following languages:
 - Korean
 - Spanish
 
-Support includes the ability to add documents in these languages to a workspace, add dictionaries, run pre-annotation, use the ground truth editor to annotate documents, and train a machine learning model. When you select a language, the system applies language-specific templates to handle dictionary entries, text tokenization, and sentence segmentation. For information about how the system handles dictionaries in different languages, see [Dictionaries](/docs/services/watson-knowledge-studio/dictionaries.html#wks_dictionaries).
+Support includes the ability to add documents in these languages to a workspace, add dictionaries, run pre-annotation, use the ground truth editor to annotate documents, and train a machine learning model. When you select a language, the system applies language-specific templates to handle dictionary entries, text tokenization, and sentence segmentation. For information about how the system handles dictionaries in different languages, see [Dictionaries](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-dictionaries#wks_dictionaries).
 
 > **Note:** The rule editor and rule-based model cannot handle bidirectional text, so cannot be used with Arabic documents.
 
@@ -67,4 +67,4 @@ Support includes the ability to add documents in these languages to a workspace,
 
 ### Related tasks
 
-[Configuring support for Arabic](/docs/services/watson-knowledge-studio/language-support-arabic.html)
+[Configuring support for Arabic](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_langsupp_ar)

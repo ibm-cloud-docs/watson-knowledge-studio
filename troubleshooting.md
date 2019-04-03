@@ -120,7 +120,7 @@ You try to create a {{site.data.keyword.knowledgestudioshort}} instance on the L
 
 Create an account that is not included in the organization.
 
-If you need to use your current account for a {{site.data.keyword.knowledgestudioshort}} instance on a Lite plan and your user account is associated with a paid account, you can create a case. For more information, see [Contacting {{site.data.keyword.IBM_notm}} Support](/docs/services/watson-knowledge-studio/troubleshooting.html#ts_contactingibmsupport).
+If you need to use your current account for a {{site.data.keyword.knowledgestudioshort}} instance on a Lite plan and your user account is associated with a paid account, you can create a case. For more information, see [Contacting {{site.data.keyword.IBM_notm}} Support](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-troubleshooting#ts_contactingibmsupport).
 
 If you need to use your current account for a {{site.data.keyword.knowledgestudioshort}} instance on a Lite plan and your user account isn't associated with a paid account, post your issue to [{{site.data.keyword.IBM_notm}} Developer Answers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/watson-knowledge-studio/){: new_window}. Tag the question, **WATSON-KNOWLEDGE-STUDIO**.
 
@@ -136,14 +136,14 @@ You must have {{site.data.keyword.IBM_notm}} user registration credentials to re
 
 Each {{site.data.keyword.knowledgestudioshort}} instance has an administrator role associated with it. The person who originally signs up to use the application is given the administrator role automatically. The administrator can invite other people.
 
-For information about how to invite people to use your instance of the application, see [Assembling the team](/docs/services/watson-knowledge-studio/team.html).
+For information about how to invite people to use your instance of the application, see [Assembling the team](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-team).
 
 ### Human annotator
 {: #wks_ts_access_annotator}
 
 If you have been invited to someone's instance of {{site.data.keyword.knowledgestudioshort}} to serve as a human annotator, you likely received an email invitation. First, you must register with {{site.data.keyword.IBM_notm}} if you do not have {{site.data.keyword.IBM_notm}} registration credentials already. Once you register with {{site.data.keyword.IBM_notm}} and accept the invitation, you are given access to the instance. However, after you are given access and before you can start to annotate documents, the administrator or a project manager of the instance must add you to a workspace and assign an annotation task to you. It is not until after you have been assigned a task that you can perform any actions in the {{site.data.keyword.knowledgestudioshort}} instance. To annotate documents, use the ground truth editor. Use a Google Chrome browser for the best performance.
 
-For help using the ground truth editor, see [Annotating documents](/docs/services/watson-knowledge-studio/user-guide.html).
+For help using the ground truth editor, see [Annotating documents](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-user-guide).
 
 ## Data collection
 {: #content}

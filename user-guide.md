@@ -376,8 +376,8 @@ After you finish annotating all documents and mark them **Completed**, the statu
 ## Related information
 {: #ar-ri}
 
-[Creating dictionaries](/docs/services/watson-knowledge-studio/dictionaries.html)
+[Creating dictionaries](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-dictionaries)
 
-[Troubleshooting the ground truth editor](/docs/services/watson-knowledge-studio/user-guide-help.html)
+[Troubleshooting the ground truth editor](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-ts_user_contactingsupport)
 
-[Establishing a type system](/docs/services/watson-knowledge-studio/typesystem.html)
+[Establishing a type system](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-typesystem)

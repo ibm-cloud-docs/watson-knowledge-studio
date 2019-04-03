@@ -66,7 +66,7 @@ Dictionaries are used in a couple ways, all optional. They are used by the machi
 
 - For Brazilian Portuguese, English, French, German, Italian, and Spanish, {{site.data.keyword.knowledgestudioshort}} does not currently provide an option to specify case-insensitive dictionary-matching, but dictionary entries match text that has a higher case. For example, *vehicle* in the dictionary matches *vehicle*, *Vehicle* or *VEHICLE* in text, while *Sat* in the dictionary matches *Sat* or *SAT* in text, but not *sat*.
 - For Japanese and Korean, dictionary matching during pre-annotation is case-sensitive.
-- For Arabic, {{site.data.keyword.knowledgestudioshort}} assumes that Arabic text is stored unshaped and treats numeric shaping as a storage-level property. For details about how {{site.data.keyword.knowledgestudioshort}} handles Arabic character shaping and numeric shaping, see [Configuring support for Arabic](/docs/services/watson-knowledge-studio/language-support-arabic.html).
+- For Arabic, {{site.data.keyword.knowledgestudioshort}} assumes that Arabic text is stored unshaped and treats numeric shaping as a storage-level property. For details about how {{site.data.keyword.knowledgestudioshort}} handles Arabic character shaping and numeric shaping, see [Configuring support for Arabic](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_langsupp_ar).
 
 ### CSV file dictionary
 {: #wks_dictionaries__cvsdict}
@@ -161,11 +161,11 @@ premium,4,premium,premium-grade
 
 **Related concepts**:
 
-[Uploading resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html)
+[Uploading resources from another workspace](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-exportimport)
 
 **Related tasks**:
 
-[Pre-annotating documents with a dictionary](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannot)
+[Pre-annotating documents with a dictionary](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-preannotation#wks_preannot)
 
 ## Adding dictionaries to a workspace
 {: #wks_projdictionaries}
@@ -195,7 +195,7 @@ To add a dictionary to your workspace:
 
     - Next to the **Create Dictionary** button, click the **Menu** icon, and then select **Upload Dictionary**. Select a dictionary, and then click **Upload**. After you upload a dictionary, select it to view the dictionary and associate it with an entity type.
 
-    You can upload a ZIP file that contains a dictionary that you downloaded from another {{site.data.keyword.knowledgestudioshort}} workspace. You must upload the type system that was downloaded from the other workspace in JSON format before you can upload the corresponding dictionary file. You can edit and add entries to a dictionary that you reuse from another {{site.data.keyword.knowledgestudioshort}} workspace. See [Uploading resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html) for more details.
+    You can upload a ZIP file that contains a dictionary that you downloaded from another {{site.data.keyword.knowledgestudioshort}} workspace. You must upload the type system that was downloaded from the other workspace in JSON format before you can upload the corresponding dictionary file. You can edit and add entries to a dictionary that you reuse from another {{site.data.keyword.knowledgestudioshort}} workspace. See [Uploading resources from another workspace](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-exportimport) for more details.
 
     Uploading a CSV file is also supported, but uploading it directly as a dictionary creates a preview-only dictionary that you cannot edit or use to pre-annotate documents. To upload a CSV file that you can edit and use for pre-annotation, click **Create Dictionary** to first create an empty dictionary, and then upload the CSV content as entries to that newly created dictionary.
 
@@ -223,8 +223,8 @@ Run the pre-annotator, which uses the dictionaries that you created to do a prel
 
 **Related tasks**:
 
-[Pre-annotating documents with a dictionary](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannot)
+[Pre-annotating documents with a dictionary](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-preannotation#wks_preannot)
 
 **Related reference**:
 
-[Language support](/docs/services/watson-knowledge-studio/language-support.html)
+[Language support](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-language-support)

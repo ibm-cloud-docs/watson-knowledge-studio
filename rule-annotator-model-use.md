@@ -28,20 +28,20 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 Leverage a rule-based model that you created with {{site.data.keyword.knowledgestudioshort}} by making it available to other {{site.data.keyword.watson}} applications.
 {: shortdesc}
 
-**Attention**: You can deploy a rule-based model to make it available for use in these services as an [experimental](/docs/services/watson-knowledge-studio/troubleshooting.html#experimental) feature.
+**Attention**: You can deploy a rule-based model to make it available for use in these services as an [experimental](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-troubleshooting#experimental) feature.
 
 Before a model can be deployed for use by a service, you must have a subscription to the service. {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} services are hosted on {{site.data.keyword.Bluemix_notm}}, which is the cloud platform for {{site.data.keyword.IBM_notm}}. See [What is {{site.data.keyword.Bluemix_notm}}? ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/overview/whatisbluemix.html){: new_window} for more information about the platform. To subscribe to one of the {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} services, create an account from the [{{site.data.keyword.Bluemix_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/){: new_window} website.
 
 For some of the services, you must know details about the service instance that you plan to deploy to, such as the {{site.data.keyword.Bluemix_notm}} space name and service instance name. The space and instance name information is available from the {{site.data.keyword.Bluemix_notm}} services page.
 
-You can also pre-annotate new documents with the rule-based model. See [Pre-annotating documents with the rule-based model](/docs/services/watson-knowledge-studio/preannotation.html#wks_preannotrule) for details.
+You can also pre-annotate new documents with the rule-based model. See [Pre-annotating documents with the rule-based model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-preannotation#wks_preannotrule) for details.
 
 ## Deploying a rule-based model to IBM Watson Discovery
 {: #wks_rule_discovery}
 
 Deploy the model to enable an application that uses the {{site.data.keyword.discoveryshort}} service to use the rule-based model to find and extract entities during document enrichment.
 
-**Attention**: This is currently an [experimental](/docs/services/watson-knowledge-studio/troubleshooting.html#experimental) feature of the service.
+**Attention**: This is currently an [experimental](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-troubleshooting#experimental) feature of the service.
 
 ### Before you begin
 {: #wks_rule_discovery_prereqs}
@@ -80,7 +80,7 @@ To use the deployed model, you must provide the model ID when it is requested du
 
 Deploy the rule-based model to enable an application that uses the {{site.data.keyword.nlushort}} service to use the model to find and extract entities that are relevant to your domain.
 
-**Attention**: This is currently an [experimental](/docs/services/watson-knowledge-studio/troubleshooting.html#experimental) feature of the service.
+**Attention**: This is currently an [experimental](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-troubleshooting#experimental) feature of the service.
 
 ### Before you begin
 {: #wks_rule_prereqs}

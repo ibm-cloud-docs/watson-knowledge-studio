@@ -77,13 +77,13 @@ To prepare for backing up and restoring your data, complete the following steps:
 
 1. Understand tokenizer use.
 
-    For machine learning models, workspaces use the machine learning-based tokenizer by default. If you are using a dictionary-based tokenizer and have a specific need to continue doing so, you can configure the workspace to use the dictionary-based tokenizer when you restore it. For more information, see [Tokenizers](/docs/services/watson-knowledge-studio/create-project.html#wks_tokenizer).
+    For machine learning models, workspaces use the machine learning-based tokenizer by default. If you are using a dictionary-based tokenizer and have a specific need to continue doing so, you can configure the workspace to use the dictionary-based tokenizer when you restore it. For more information, see [Tokenizers](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-create-project#wks_tokenizer).
 
 1. Manage model resources.
 
     Your model, its versions, and snapshot data cannot be migrated. The resources (except read-only dictionaries) that you used to train those artifacts can be migrated. Therefore, after the migration, you can recreate the model. The model that will be produced will perform the same as the models you generated prior to the migration because the resources that are used for training will be the same.
 
-    **ATTENTION**: If you have a model that is already deployed and you plan to delete the workspace after you back it up, withdraw the model from deployment. You can rebuild and redeploy the model after you restore the workspace from the backup. For information about undeploying models, see [Undeploying machine learning models](/docs/services/watson-knowledge-studio/publish-ml.html#undeploy-view-model) and [Undeploying rule-based models](/docs/services/watson-knowledge-studio/rule-annotator-model-use.html#undeploy-view-model).
+    **ATTENTION**: If you have a model that is already deployed and you plan to delete the workspace after you back it up, withdraw the model from deployment. You can rebuild and redeploy the model after you restore the workspace from the backup. For information about undeploying models, see [Undeploying machine learning models](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-publish-ml#pm-um) and [Undeploying rule-based models](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_rule_publish#ramu-um).
 
     **Be aware that if you fail to withdraw the model from deployment, the result is an _orphaned_ deployed model. Orphaned deployed models will continue to generate charges on your monthly bills.**
 
@@ -97,7 +97,7 @@ To prepare for backing up and restoring your data, complete the following steps:
 
     If you are migrating workspaces across different instances, consider making a list of users and their roles for the instance that you are backing up. Someone with the Admin role can print the list from the User Account Management page. After the workspaces are recreated on the new instance, someone with the Admin role must add the users and assign their roles.
 
-    For more information about roles, see [User roles in {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/roles.html).
+    For more information about roles, see [User roles in {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-roles).
 
 1. Make note of workspace information.
 
@@ -122,7 +122,7 @@ For each workspace that you want to migrate, download the following artifacts. S
 
 - Documents
 
-  See [Uploading resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html) for information about how to download these artifacts so that they can be imported into a new workspace.
+  See [Uploading resources from another workspace](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-exportimport) for information about how to download these artifacts so that they can be imported into a new workspace.
 
 ## Recreating workspaces
 {: #recreateproj}
@@ -134,7 +134,7 @@ Recreate each workspace by copying the following information from the previous i
 - Workspace name
 - Workspace description
 - Language of documents (this setting must match the setting in the original workspace)
-- If you previously used a dictionary-based tokenizer in the workspace, and have a valid need to continue using it, you must specify that you want to use the dictionary-based tokenizer instead of the default tokenizer at the time that you create the workspace. For more information about the options, see [Tokenizers](/docs/services/watson-knowledge-studio/create-project.html#wks_tokenizer).
+- If you previously used a dictionary-based tokenizer in the workspace, and have a valid need to continue using it, you must specify that you want to use the dictionary-based tokenizer instead of the default tokenizer at the time that you create the workspace. For more information about the options, see [Tokenizers](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-create-project#wks_tokenizer).
 
   To use a dictionary-based tokenizer, expand the Advanced Options section of the Create Workspace window (in {{site.data.keyword.IBM_notm}} Marketplace, the Create Workspace window) and change the tokenizer setting.
 
@@ -144,19 +144,19 @@ Recreate each workspace by copying the following information from the previous i
 After recreating the workspaces, upload the previously downloaded artifacts:
 
 1. Upload the type system from the previously created type system backup.
-   For details, see [Uploading resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html).
+   For details, see [Uploading resources from another workspace](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-exportimport).
 
   **Note**: You must upload the type system before you can upload any other artifacts that you are moving from the backed up workspace.
 
 1. Upload the dictionaries from the previously created dictionary backup.
-   For details, see [Uploading resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html).
+   For details, see [Uploading resources from another workspace](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-exportimport).
 
   If you used any read-only dictionaries in the previous version of the workspace, reupload them into this workspace from their original source.
 
 1. For dictionary pre-annotators, associate the dictionaries with an entity type. Dictionaries that don't have mappings for entity types will not apply annotations when you pre-annotate documents.
 
 1. Upload the documents that you downloaded from the previous version of the workspace into this version of the workspace.
-   For details, see [Uploading resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html).
+   For details, see [Uploading resources from another workspace](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-exportimport).
 
 ## Restoring models
 {: #restoremodels}
@@ -165,22 +165,22 @@ At this point, all the artifacts that were used to train the model in the previo
 
 To redeploy a machine learning model that you deployed in the previous instance, complete the following steps:
 
-1. [Train the machine learning model](/docs/services/watson-knowledge-studio/train-ml.html).
+1. [Train the machine learning model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-train-ml).
 
   **Note**: Do not run pre-annotators on annotated documents that you migrated to this workspace because they will lose annotations in them that were added by human annotators.
 
-1. After creating the model, deploy it again. For details, see [Using the machine learning model](/docs/services/watson-knowledge-studio/publish-ml.html).
+1. After creating the model, deploy it again. For details, see [Using the machine learning model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-publish-ml).
 
 To redeploy a rule-based model that you deployed in the previous instance, complete the following steps:
 
-1. [Create the rule-based model](/docs/services/watson-knowledge-studio/rule-annotator-model-create.html).
-1. [Deploy the rule-based model](/docs/services/watson-knowledge-studio/rule-annotator-model-use.html).
+1. [Create the rule-based model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_rule_train).
+1. [Deploy the rule-based model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_rule_publish).
 
 ## Restoring incomplete annotation tasks
 {: #restoretasks}
 
 If you had any annotation tasks that were created, but not completed in the previous workspace, complete the following steps to recreate the incomplete annotation tasks:
 
-1. [Upload any documents](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_projadd) that have not been annotated yet, but that you want to add to the ground truth to continue to improve the model.
-1. From the newly imported and unannotated documents, [create annotation sets](/docs/services/watson-knowledge-studio/documents-for-annotation.html#wks_projdocsets).
-1. [Recreate the annotation tasks](/docs/services/watson-knowledge-studio/annotate-documents.html#wks_hatask). Give the task the same name, an appropriate due date, and assign annotation sets to the appropriate human annotators.
+1. [Upload any documents](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-documents-for-annotation#wks_projadd) that have not been annotated yet, but that you want to add to the ground truth to continue to improve the model.
+1. From the newly imported and unannotated documents, [create annotation sets](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-documents-for-annotation#wks_projdocsets).
+1. [Recreate the annotation tasks](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-annotate-documents#wks_hatask). Give the task the same name, an appropriate due date, and assign annotation sets to the appropriate human annotators.
