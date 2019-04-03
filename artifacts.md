@@ -32,19 +32,19 @@ The models learn about the following types of artifacts that you add to the work
 
 - **Type system**
 
-    A type system defines the entities and relationships between entities that matter to you. See [Establishing a type system](/docs/services/watson-knowledge-studio/typesystem.html).
+    A type system defines the entities and relationships between entities that matter to you. See [Establishing a type system](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-typesystem).
 
 - **Dictionaries**
 
-    A dictionary groups together words and phrases that should be treated equivalently by a model. See [Creating dictionaries](/docs/services/watson-knowledge-studio/dictionaries.html).
+    A dictionary groups together words and phrases that should be treated equivalently by a model. See [Creating dictionaries](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-dictionaries).
 
 - **Documents**
 
     Documents serve a different purpose depending on whether you are creating a machine learning model or a rule-based model. See the following topics for more information:
-    - Machine learning model documents: [Adding documents for annotation](/docs/services/watson-knowledge-studio/documents-for-annotation.html)
-    - Rule-based model documents: [Adding documents for defining rules](/docs/services/watson-knowledge-studio/rule-annotator-add-doc.html)
+    - Machine learning model documents: [Adding documents for annotation](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-documents-for-annotation)
+    - Rule-based model documents: [Adding documents for defining rules](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_rule_anno_add)
 
-You can upload many of these artifacts from external resources, including artifacts that you downloaded from other {{site.data.keyword.knowledgestudioshort}} workspaces. See [Uploading resources from another workspace](/docs/services/watson-knowledge-studio/exportimport.html) for information about uploading artifacts from other workspaces.
+You can upload many of these artifacts from external resources, including artifacts that you downloaded from other {{site.data.keyword.knowledgestudioshort}} workspaces. See [Uploading resources from another workspace](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-exportimport) for information about uploading artifacts from other workspaces.
 
-See [Summary of inputs, outputs, and limitations](/docs/services/watson-knowledge-studio/create-project.html#wks_formats) for key facts about artifacts, such as size limits and supported file types for imported artifacts.
+See [Summary of inputs, outputs, and limitations](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-create-project#wks_formats) for key facts about artifacts, such as size limits and supported file types for imported artifacts.
 

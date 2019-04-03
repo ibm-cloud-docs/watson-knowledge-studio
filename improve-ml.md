@@ -99,7 +99,7 @@ To modify the type system without losing the work that was done by human annotat
 **Related concepts**:
 {: #wks_projtypesysmod_related}
 
-[Type systems](/docs/services/watson-knowledge-studio/typesystem.html#wks_typesystem)
+[Type systems](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-typesystem#wks_typesystem)
 
 ## Document set management
 {: #wks_mamanagedata}

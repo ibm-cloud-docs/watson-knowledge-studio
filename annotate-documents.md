@@ -36,7 +36,7 @@ Perform the following tasks to enable human annotators to access the workspace:
 
     > **Attention:** It is not until you explicitly assign tasks to human annotators that they can see your workspace when they log in to {{site.data.keyword.knowledgestudioshort}}.
 
-Your users (the human annotators) will need to become familiar with [Annotating documents](/docs/services/watson-knowledge-studio/user-guide.html), which contains detailed information about how to annotate documents.
+Your users (the human annotators) will need to become familiar with [Annotating documents](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-user-guide), which contains detailed information about how to annotate documents.
 
 ## Model life cycle
 {: #wks_lifecycle}
@@ -169,7 +169,7 @@ To specify visual preferences for working with the ground truth editor :
 #### Related tasks
 {: #wks_hapref_related}
 
-[Modifying a type system without losing human annotations](/docs/services/watson-knowledge-studio/improve-ml.html#wks_projtypesysmod)
+[Modifying a type system without losing human annotations](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-improve-ml#wks_projtypesysmod)
 
 ## Setting the IAA threshold
 {: #wks_haiaathresh}

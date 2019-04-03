@@ -33,14 +33,14 @@ The following cross-references are used in this glossary:
 - *See* refers you from a term to a preferred synonym, or from an acronym or abbreviation to the defined full form.
 - *See also* refers you to a related or contrasting term.
 
-[A](/docs/services/watson-knowledge-studio/glossary.html#gloss_A) [B](/docs/services/watson-knowledge-studio/glossary.html#gloss_B) [C](/docs/services/watson-knowledge-studio/glossary.html#gloss_C) [D](/docs/services/watson-knowledge-studio/glossary.html#gloss_D) [E](/docs/services/watson-knowledge-studio/glossary.html#gloss_E) [F](/docs/services/watson-knowledge-studio/glossary.html#gloss_F) [G](/docs/services/watson-knowledge-studio/glossary.html#gloss_G) [H](/docs/services/watson-knowledge-studio/glossary.html#gloss_H) [I](/docs/services/watson-knowledge-studio/glossary.html#gloss_I) [K](/docs/services/watson-knowledge-studio/glossary.html#gloss_K) [L](/docs/services/watson-knowledge-studio/glossary.html#gloss_L) [M](/docs/services/watson-knowledge-studio/glossary.html#gloss_M) [N](/docs/services/watson-knowledge-studio/glossary.html#gloss_N) [O](/docs/services/watson-knowledge-studio/glossary.html#gloss_O) [P](/docs/services/watson-knowledge-studio/glossary.html#gloss_P) [R](/docs/services/watson-knowledge-studio/glossary.html#gloss_R) [S](/docs/services/watson-knowledge-studio/glossary.html#gloss_S) [T](/docs/services/watson-knowledge-studio/glossary.html#gloss_T)
+[A](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_A) [B](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_B) [C](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_C) [D](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_D) [E](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_E) [F](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_F) [G](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_G) [H](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_H) [I](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_I) [K](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_K) [L](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_L) [M](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_M) [N](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_N) [O](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_O) [P](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_P) [R](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_R) [S](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_S) [T](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_T)
 
 ## A
 {: #gloss_A}
 
 - **accuracy**
 
-    A measure of the correctness of annotations that are produced by a machine learning model. See also [precision](/docs/services/watson-knowledge-studio/glossary.html#gloss_P) and [recall](/docs/services/watson-knowledge-studio/glossary.html#gloss_R).
+    A measure of the correctness of annotations that are produced by a machine learning model. See also [precision](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_P) and [recall](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_R).
 
 - **accuracy analysis**
 
@@ -68,7 +68,7 @@ The following cross-references are used in this glossary:
 
 - **annotator**
 
-    See [human annotator](/docs/services/watson-knowledge-studio/glossary.html#gloss_H) and [machine learning annotator](/docs/services/watson-knowledge-studio/glossary.html#gloss_M).
+    See [human annotator](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_H) and [machine learning annotator](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_M).
 
 - **attribute**
 
@@ -79,7 +79,7 @@ The following cross-references are used in this glossary:
 
 - **blind data**
 
-    A set of documents annotated with the ground truth, such as question and answer pairs, semantic annotation, and passage judgment. Blind data is never released or seen by developers and is used to test the system periodically to evaluate performance on unseen data. Testing on blind data prevents accuracy from being tainted by over-fitting to known question sets or annotations. Reported results should only come from tests that are run on blind data. See also [testing data](/docs/services/watson-knowledge-studio/glossary.html#gloss_T) and [training data](/docs/services/watson-knowledge-studio/glossary.html#gloss_T).
+    A set of documents annotated with the ground truth, such as question and answer pairs, semantic annotation, and passage judgment. Blind data is never released or seen by developers and is used to test the system periodically to evaluate performance on unseen data. Testing on blind data prevents accuracy from being tainted by over-fitting to known question sets or annotations. Reported results should only come from tests that are run on blind data. See also [testing data](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_T) and [training data](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_T).
 
 ## C
 {: #gloss_C}
@@ -90,7 +90,7 @@ The following cross-references are used in this glossary:
 
 - **confusion matrix**
 
-    A table that provides a detailed numeric breakdown of annotated document sets. The table is used to compare the annotations that were added by a machine learning model to the annotations in the ground truth. The table reports the number of [false positives](/docs/services/watson-knowledge-studio/glossary.html#gloss_F), [false negatives](/docs/services/watson-knowledge-studio/glossary.html#gloss_F), [true positives](/docs/services/watson-knowledge-studio/glossary.html#gloss_T), and [true negatives](/docs/services/watson-knowledge-studio/glossary.html#gloss_T).
+    A table that provides a detailed numeric breakdown of annotated document sets. The table is used to compare the annotations that were added by a machine learning model to the annotations in the ground truth. The table reports the number of [false positives](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_F), [false negatives](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_F), [true positives](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_T), and [true negatives](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_T).
 
 - **coreference**
 
@@ -113,7 +113,7 @@ The following cross-references are used in this glossary:
 
 - **dictionary**
 
-    A collection of words that can be used to pre-annotate documents. A new annotation is created for each word in the document text that matches a term in the dictionary. A machine learning model can be configured with one or more independent dictionaries, which are typically domain-specific, such a dictionary for pharmaceuticals and a dictionary for wealth management. See also [lemma](/docs/services/watson-knowledge-studio/glossary.html#gloss_L) and [surface form](/docs/services/watson-knowledge-studio/glossary.html#gloss_S).
+    A collection of words that can be used to pre-annotate documents. A new annotation is created for each word in the document text that matches a term in the dictionary. A machine learning model can be configured with one or more independent dictionaries, which are typically domain-specific, such a dictionary for pharmaceuticals and a dictionary for wealth management. See also [lemma](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_L) and [surface form](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_S).
 
 - **dictionary pre-annotator**
 
@@ -198,7 +198,7 @@ The following cross-references are used in this glossary:
 
 - **lemma**
 
-    The normalized or canonical form of a word. Typically, the lemma is the underived and uninflected form of a noun or a verb. For example, the lemma of the terms 'organizing' and 'organized' is 'organize'. See also [dictionary](/docs/services/watson-knowledge-studio/glossary.html#gloss_D) and [surface form](/docs/services/watson-knowledge-studio/glossary.html#gloss_S).
+    The normalized or canonical form of a word. Typically, the lemma is the underived and uninflected form of a noun or a verb. For example, the lemma of the terms 'organizing' and 'organized' is 'organize'. See also [dictionary](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_D) and [surface form](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_S).
 
 ## M
 {: #gloss_M}
@@ -209,7 +209,7 @@ The following cross-references are used in this glossary:
 
 - **machine learning annotator**
 
-    See [machine learning model](/docs/services/watson-knowledge-studio/glossary.html#gloss_M).
+    See [machine learning model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_M).
 
 - **machine learning model**
 
@@ -254,7 +254,7 @@ The following cross-references are used in this glossary:
 
 - **precision**
 
-    A measurement that specifies the proportion of results that are relevant. Precision, which is a positive predictive value, is determined by the number of correct positive results divided by the number of all positive results. Accuracy is best measured by using both precision and recall. See also [accuracy](/docs/services/watson-knowledge-studio/glossary.html#gloss_A) and [recall](/docs/services/watson-knowledge-studio/glossary.html#gloss_R).
+    A measurement that specifies the proportion of results that are relevant. Precision, which is a positive predictive value, is determined by the number of correct positive results divided by the number of all positive results. Accuracy is best measured by using both precision and recall. See also [accuracy](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_A) and [recall](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_R).
 
 - **processing engine archive (PEAR)**
 
@@ -265,7 +265,7 @@ The following cross-references are used in this glossary:
 
 - **recall**
 
-    A measurement that specifies the percentage of relevant results returned, out of all available relevant results. Recall, which is a measure of sensitivity, is determined by the number of correct positive results divided by the number of positive results that should have been returned. Accuracy is best measured by using both precision and recall. See also [accuracy](/docs/services/watson-knowledge-studio/glossary.html#gloss_A) and [precision](/docs/services/watson-knowledge-studio/glossary.html#gloss_P).
+    A measurement that specifies the percentage of relevant results returned, out of all available relevant results. Recall, which is a measure of sensitivity, is determined by the number of correct positive results divided by the number of positive results that should have been returned. Accuracy is best measured by using both precision and recall. See also [accuracy](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_A) and [precision](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_P).
 
 - **relation**
 
@@ -292,14 +292,14 @@ The following cross-references are used in this glossary:
 
 - **surface form**
 
-    The form of a word or multiword unit as it is found in the corpus. For example, some surface forms of the lemma 'organize' are the terms 'organizing' and 'organized'. See also [dictionary](/docs/services/watson-knowledge-studio/glossary.html#gloss_D) and [lemma](/docs/services/watson-knowledge-studio/glossary.html#gloss_L).
+    The form of a word or multiword unit as it is found in the corpus. For example, some surface forms of the lemma 'organize' are the terms 'organizing' and 'organized'. See also [dictionary](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_D) and [lemma](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_L).
 
 ## T
 {: #gloss_T}
 
 - **testing data**
 
-    A set of annotated documents that can be used to evaluate system metrics after ingestion and training. See also [blind data](/docs/services/watson-knowledge-studio/glossary.html#gloss_B) and [training data](/docs/services/watson-knowledge-studio/glossary.html#gloss_T).
+    A set of annotated documents that can be used to evaluate system metrics after ingestion and training. See also [blind data](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_B) and [training data](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_T).
 
 - **train**
 
@@ -307,7 +307,7 @@ The following cross-references are used in this glossary:
 
 - **training data**
 
-    A set of annotated documents that can be used to train machine learning models. See also [blind data](/docs/services/watson-knowledge-studio/glossary.html#gloss_B) and [testing data](/docs/services/watson-knowledge-studio/glossary.html#gloss_T).
+    A set of annotated documents that can be used to train machine learning models. See also [blind data](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_B) and [testing data](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-glossary#gloss_T).
 
 - **true negative**
 

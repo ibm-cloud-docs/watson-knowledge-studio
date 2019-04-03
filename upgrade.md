@@ -31,7 +31,7 @@ To upgrade the level of your service, see the [{{site.data.keyword.cloud_notm}} 
 If you upgrade from a {{site.data.keyword.knowledgestudioshort}} Lite plan to a Standard plan, {{site.data.keyword.knowledgestudioshort}} uses in-place migration. You don't need to do any manual migration.
 
 **Note**: At this time, downgrading your plan on {{site.data.keyword.cloud_notm}} is not supported. You can, however, manage users, storage, billing, and usage.
-  - For information about deactivating user accounts in {{site.data.keyword.knowledgestudioshort}}, see [Assembling a team](/docs/services/watson-knowledge-studio/team.html#deactivating-user-accounts).
+  - For information about deactivating user accounts in {{site.data.keyword.knowledgestudioshort}}, see [Assembling a team](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-team#deactivating-user-accounts).
   - For information about managing users and access in {{site.data.keyword.cloud_notm}}, see [Working with users ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/iam/iamusermanage.html){: new_window}.
-  - For information about setting storage limits, see [Storage space issues](/docs/services/watson-knowledge-studio/troubleshooting.html#storage).
+  - For information about setting storage limits, see [Storage space issues](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-troubleshooting#storage).
   - For information about managing billing and usage, see [How you are charged ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/billing-usage/how_charged.html){: new_window}.

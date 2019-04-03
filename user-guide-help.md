@@ -37,7 +37,7 @@ Find out what to do if you have questions or need help. Where to go for help dep
 ## Using the ground truth editor
 {: #uh-ue}
 
-First, review the information in [Annotating documents](/docs/services/watson-knowledge-studio/user-guide.html). If you still have questions about how to use the ground truth editor, check one of the developer communities, which are linked to from the bottom of the table of contents. If you can't find the answer to your question, post the question yourself.
+First, review the information in [Annotating documents](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-user-guide). If you still have questions about how to use the ground truth editor, check one of the developer communities, which are linked to from the bottom of the table of contents. If you can't find the answer to your question, post the question yourself.
 
 ## Annotation decisions
 {: #uh-ad}
@@ -50,8 +50,8 @@ Can't decide which entity type to assign to an ambiguous term?
 ## Related information
 {: #uh-ri}
 
-[Annotating documents](/docs/services/watson-knowledge-studio/user-guide.html)
+[Annotating documents](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-user-guide)
 
-[Dictionaries](/docs/services/watson-knowledge-studio/dictionaries.html)
+[Dictionaries](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-dictionaries)
 
-[Type systems](/docs/services/watson-knowledge-studio/typesystem.html)
+[Type systems](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-typesystem)

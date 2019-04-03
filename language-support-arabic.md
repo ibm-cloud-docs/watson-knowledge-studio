@@ -57,4 +57,4 @@ To configure numeric shaping in the Firefox browser:
 ### Related reference
 {: #lsa-rr}
 
-[Language support](/docs/services/watson-knowledge-studio/language-support.html)
+[Language support](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-language-support)

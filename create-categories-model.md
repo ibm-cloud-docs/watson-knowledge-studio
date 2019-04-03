@@ -37,7 +37,7 @@ The custom categories feature is experimental. The feature might be unstable, ch
 The custom categories feature is available only in {{site.data.keyword.knowledgestudioshort}} instances hosted in the **Dallas** location that are on a **Lite** or **Standard** plan. Custom categories models can be deployed only to [{{site.data.keyword.nlushort}}](https://{DomainName}/catalog/services/natural-language-understanding) or [{{site.data.keyword.discoveryshort}}](https://{DomainName}/catalog/services/discovery) service instances that are hosted in the **Dallas** location.
 {: note}
 
-1. [Create an instance of {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio/tutorials-create-project.html#instance) in the **Dallas** location. Select the **Lite** or **Standard** plan.
+1. [Create an instance of {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutintro#instance) in the **Dallas** location. Select the **Lite** or **Standard** plan.
 1. From the **Manage** page of your {{site.data.keyword.knowledgestudioshort}} service instance, click **Launch tool**.
 
 ## Procedure

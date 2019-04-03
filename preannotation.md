@@ -185,9 +185,9 @@ To create an editable dictionary and pre-annotate documents:
 
 **Related information**:
 
-[Creating dictionaries](/docs/services/watson-knowledge-studio/dictionaries.html)
+[Creating dictionaries](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-dictionaries)
 
-[Getting Started > Adding a dictionary](/docs/services/watson-knowledge-studio/tutorials-create-project.html#wks_tutless4)
+[Getting Started > Adding a dictionary](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutintro#wks_tutless4)
 
 ## Pre-annotating documents with the machine learning model
 {: #wks_preannotsire}

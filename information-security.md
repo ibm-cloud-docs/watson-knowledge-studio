@@ -51,6 +51,6 @@ Learn more about IBM's own GDPR readiness journey and our GDPR capabilities and 
 - Documents
 
 If you receive a request to delete data, complete the following steps:
-1. [Delete the applicable artifact](/docs/services/watson-knowledge-studio/artifacts.html).
-2. [Retrain and redeploy the model](/docs/services/watson-knowledge-studio/train-ml.html).
-3. [Delete previous versions of the model that used the deleted data](/docs/services/watson-knowledge-studio/improve-ml.html#wks_maversions).
+1. [Delete the applicable artifact](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-artifacts).
+2. [Retrain and redeploy the model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-train-ml).
+3. [Delete previous versions of the model that used the deleted data](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-improve-ml#wks_maversions).
