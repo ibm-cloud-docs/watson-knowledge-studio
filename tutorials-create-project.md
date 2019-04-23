@@ -197,8 +197,13 @@ For more information about dictionaries, see [Adding dictionaries to a workspace
 
     ![A screen capture of the Dictionaries page. The "IBM" dictionary entry is selected and its surface forms and part of speech are highlighted.](images/wks_tutdict4.jpg "A screen capture of the Dictionaries page. The "IBM" dictionary entry is selected and its surface forms and part of speech are highlighted.")
 
-### Next steps
+### What to do next
 {: #wks_tutless4_next}
+
+After you create a dictionary, you can use it to speed up human annotation tasks by pre-annotating the documents.
+
+## Next steps
+{: #wks_tutless_next}
 
 Learn how to [create a machine learning model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutml_intro).
 
