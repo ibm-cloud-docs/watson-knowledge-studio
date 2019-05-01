@@ -69,7 +69,7 @@ To deploy a machine learning model to {{site.data.keyword.watson}} {{site.data.k
 1. Click **Deploy**.
 1. The deployment process might take a few minutes. To check the status of the deployment, click **Status** on the **Versions** tab next to the version that you deployed.
 
-    If the model is still being deployed, the status indicates "publishing". After deployment completes, the status changes to "available" if the deployment was successful, or "error" if problems occurred.
+    If the model is still being deployed, the status indicates "deploying". After deployment completes, the status changes to "available" or "deployed" if the deployment was successful, or "error" if problems occurred.
 
     Once available, make a note of the model ID (model_id). You will provide this ID to the {{site.data.keyword.discoveryshort}} service to enable the service to use your custom model.
 
