@@ -65,6 +65,7 @@ Watson Knowledge Studio
     client-migration.md
     upgrade.md
     ha-dr.md
+    /watson/watson-migrate
     {: .navgroup-end}
 
     {: .navgroup id="help"}
