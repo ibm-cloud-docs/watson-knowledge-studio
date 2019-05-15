@@ -153,7 +153,7 @@ For Standard plans (Lite, Standard, Pro), by default, {{site.data.keyword.knowle
 To prevent {{site.data.keyword.knowledgestudioshort}} from using client data, you must opt out in at least one of two ways.
 
 - Deselect the **Data collection** checkbox on the Service Details page in the {{site.data.keyword.knowledgestudioshort}} application.
-- As the owner of the {{site.data.keyword.knowledgestudioshort}} service instance, opt out of all data collection for Watson services at https://cloud.ibm.com/watson/settings.
+- As the owner of the {{site.data.keyword.knowledgestudioshort}} service instance, opt out of all data collection for Watson services at https://{DomainName}/watson/settings.
 
 For Premium plans and Dedicated accounts, {{site.data.keyword.knowledgestudioshort}} does not use client data to improve the service.
 
