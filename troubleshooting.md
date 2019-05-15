@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-09-17"
+  years: 2015, 2019
+lastupdated: "2019-05-15"
 
 subcollection: watson-knowledge-studio
 
@@ -150,7 +150,10 @@ For help using the ground truth editor, see [Annotating documents](/docs/service
 
 For Standard plans (Lite, Standard, Pro), by default, {{site.data.keyword.knowledgestudioshort}} uses client data to improve the service. This data is used only in aggregate. Client data is not shared or made public.
 
-If you have the Admin role, you can change this default behavior by selecting the data collection setting on the Service Details page.
+To prevent {{site.data.keyword.knowledgestudioshort}} from using client data, you must opt out in at least one of two ways.
+
+- Deselect the **Data collection** checkbox on the Service Details page in the {{site.data.keyword.knowledgestudioshort}} application.
+- As the owner of the {{site.data.keyword.knowledgestudioshort}} service instance, opt out of all data collection for Watson services at https://{DomainName}/watson/settings.
 
 For Premium plans and Dedicated accounts, {{site.data.keyword.knowledgestudioshort}} does not use client data to improve the service.
 
