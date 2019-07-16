@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-19"
+lastupdated: "2019-07-16"
 
 subcollection: watson-knowledge-studio
 
@@ -115,7 +115,7 @@ You might experience situations in which no overlapping documents are found. Thi
 To assess annotation agreement between human annotators:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager, and select your workspace.
-1. Select the **Machine Learning Model** > **Annotation Tasks** page, and open the task that you want to evaluate.
+1. Select the **Machine Learning Model** > **Annotations** page, then click the **Annotation Tasks** tab. Open the task that you want to evaluate.
 1. Click **Calculate Inter-Annotator Agreement**. The default view shows agreement scores for how consistently pairs of human annotators annotated mentions. The top row shows the overall consistency between each pair of annotators, and the table below shows how consistently a pair of annotators labeled specific mentions in the text.
 1. To explore how consistently pairs of human annotators annotated relations and coreferences, select **Relation** or **Coreference** from the first menu.
 1. To explore how consistently a pair of human annotators annotated entities, relations, or coreferences in specific overlapping documents, select **Document** in the second menu and then select the pair of annotators that you want to evaluate.
@@ -181,7 +181,7 @@ For example, when you adjudicate a document, you might see that one annotator an
 To view overlapping documents and resolve conflicts:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager, and select your workspace.
-1. Select the **Machine Learning Model** > **Annotation Tasks** page, and open the task that you want to evaluate.
+1. Select the **Machine Learning Model** > **Annotations** page. Click the **Annotation Tasks** tab and open the task that you want to evaluate.
 1. Confirm that at least two annotation sets are in **In conflict** status.
 1. Click **Check Overlapping Documents for Conflicts**. The documents that are in conflict are listed.
 1. If you want to ignore the conflicts in an overlapping document and promote the annotations to ground truth without adjudicating them, click **Accept**.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-05"
+lastupdated: "2019-07-16"
 
 subcollection: watson-knowledge-studio
 
@@ -27,6 +27,17 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 
 The following new features and changes to {{site.data.keyword.knowledgestudiofull}} are available.
 {: shortdesc}
+
+## July 2019
+{: #july-2019}
+
+### New features and changes
+{: #new-july-2019}
+
+**Annotation tasks are no longer required to create ground truth**
+- Admins and Project Managers can annotate document sets directly from the **Ground Truth** tab on the **Annotations** page.
+- Annotation tasks are still available. You can manage them from the **Annotation Tasks** tab on the **Annotations** page.
+- Annotations applied directly to ground truth are not applied to related active annotation tasks. It is recommended that you annotate document sets directly only when they are not associated with any active annotation tasks.
 
 
 ## March 2019

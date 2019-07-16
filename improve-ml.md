@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-07-19"
+  years: 2015, 2019
+lastupdated: "2019-07-16"
 
 subcollection: watson-knowledge-studio
 
@@ -68,7 +68,7 @@ To create and restore machine learning model versions:
     1. Open the **Assets** > **Dictionaries** page and download any dictionaries that you want to re-use in the restored model.
     1. Click **Machine Learning Model** > **Versions** and click **Promote** for the version that you want to restore. The version that you promote becomes the current version, and the version number changes to 2.0. When you promote a version, the major version number is incremented and the minor version number becomes 0, for example, 1.1 becomes 2.0.
     1. Open the **Dictionaries** page and upload the dictionaries that you downloaded.
-    1. If testing of the new version requires changes to ground truth, open the **Machine Learning Model** > **Annotation Tasks** page and create a new annotation task.
+    1. If testing of the new version requires changes to ground truth, open the **Machine Learning Model** > **Annotations** page. Click the **Annotation Tasks** tab and create a new annotation task.
 
 ## Modifying a type system without losing human annotations
 {: #wks_projtypesysmod}
@@ -87,7 +87,7 @@ To modify the type system without losing the work that was done by human annotat
 
 1. Change the type system. For example, you can add or remove entity types or relation types.
 1. Decide whether you want to propagate the changes to existing human annotation tasks.
-1. On the **Machine Learning Model** > **Annotation Tasks** page, open each task that you want to update and click **Apply Type System Updates**.
+1. Open the **Machine Learning Model** > **Annotations** page and click the **Annotation Tasks** tab. Open each task that you want to update and click **Apply Type System Updates**.
 
     If you removed entity types or relation types from the type system, all occurrences of those types are highlighted in gray in the documents. These invalid types are ignored by the machine learning model. They do not prevent you from submitting and approving document sets.
 
