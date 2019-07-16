@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-07-19"
+  years: 2015, 2019
+lastupdated: "2019-07-16"
 
 subcollection: watson-knowledge-studio
 
@@ -77,7 +77,10 @@ All the steps are performed by the project manager, except for the *Annotate doc
     <td style="vertical-align:top; text-align:left" headers="d14771e72">
       <ol>
         <li>
-          <p>The project manager assigns annotation tasks to human annotators, configures the inter-annotator agreement threshold, and provides annotation guidelines for the human annotators to follow. See [Creating an annotation task](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-annotate-documents#wks_hatask).</p>
+          <p>Admins and project managers can annotate documents directly, without needing to create annotation tasks or go through the adjudication process. See [Annotating document sets directly](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-annotating-document-sets-directly).</p>
+        </li>
+        <li>
+          <p>The project manager generally assigns annotation tasks to human annotators, configures the inter-annotator agreement threshold, and provides annotation guidelines for the human annotators to follow. See [Creating an annotation task](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-annotate-documents#wks_hatask).</p>
         </li>
         <li>
           <p>Human annotators use the ground truth editor to manually annotate documents. A human annotator identifies mentions of interest in your domain content and labels them with entity types. The human annotator also identifies relationships between mentions (for example, Mary is an employee of IBM) and how the mentions co-reference the same entity (such as an occurrence of "she" that refers to Mary). Refer to [Annotating documents](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-user-guide).</p>

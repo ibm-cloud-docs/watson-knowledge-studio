@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-09-11"
+  years: 2015, 2019
+lastupdated: "2019-07-16"
 
 subcollection: watson-knowledge-studio
 
@@ -129,6 +129,9 @@ To add documents to a workspace:
 
 Before you start any human annotation tasks, divide the corpus into multiple document sets and assign the document sets to human annotators.
 
+Admins and project managers can [annotate document sets directly](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-annotating-document-sets-directly) without creating annotation tasks.
+{: note}
+
 ## Creating and assigning annotation sets
 {: #wks_projdocsets}
 
@@ -211,7 +214,7 @@ If the document you want to delete is associated with an annotation task and hum
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator and select your workspace.
 1. Delete the annotation task:
 
-  a. Open the **Machine Learning Model** > **Annotation Tasks** page.
+  a. Open the **Machine Learning Model** > **Annotations** page. Click the **Annotation Tasks** tab.
 
   b. Find the annotation task that the document is associated with, click the **Show menu** icon on the task, and then click **Delete**.
 

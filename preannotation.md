@@ -51,6 +51,8 @@ The following pre-annotators are available:
 
     Uses a dictionary of terms that you provide and associate with an entity type to find mentions of that entity type in the documents. This choice is best for fields with unique or specialized terminology because this pre-annotator does not analyze the context in which the term is used in the way a machine learning pre-annotator does; it instead relies on the term being distinct enough to have a decipherable meaning regardless of the context in which it is used. For example, it is easier to recognize *asbestos* as a mineral entity type than to determine the entity type of *squash*, which can refer to a vegetable, a sport, or a verb meaning to crush something.
 
+  Dictionary pre-annotators do not recognize entity subtypes. Human annotators can specify entity subtypes for each pre-annotated mention by working on an [annotation task](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-annotate-documents#wks_hatask) with the pre-annotated document.
+
 - **Machine learning**
 
     Uses a machine learning model to automatically annotate documents. This option is only available to you if you have created a machine learning model with {{site.data.keyword.knowledgestudioshort}} already. If you add a new document set, you can run the machine learning annotator that you created previously to pre-annotate the new documents. If the new set of documents are similar to the documents that were used to train the machine learning annotator originally, then this is probably your best choice for pre-annotation.
@@ -159,7 +161,7 @@ To help human annotators get started with their annotation tasks, you can create
 ### About this task
 {: #wks_preannot_about}
 
-When a human annotator begins work on documents that were pre-annotated, it is likely that a number of mentions will already be marked by entity types based on the dictionary entries. The human annotator can change or remove the pre-annotated entity types and assign entity types to unannotated mentions. Pre-annotation by a dictionary does not annotate relations and coreferences. Relations and coreferences must be annotated by human annotators.
+When a human annotator begins work on documents that were pre-annotated, it is likely that a number of mentions will already be marked by entity types based on the dictionary entries. The human annotator can change or remove the pre-annotated entity types and assign entity types to unannotated mentions. Pre-annotation by a dictionary does not annotate relations, coreferences. Relations and coreferences must be annotated by human annotators.
 
 **Note**: This task shows how to create a dictionary that is editable. If you want to upload and pre-annotate your documents with a read-only dictionary, click the **Menu** icon next to the **Create Dictionary** button. Select **Upload Dictionary**.
 

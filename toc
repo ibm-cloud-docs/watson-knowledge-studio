@@ -53,6 +53,7 @@ Watson Knowledge Studio
         documents-for-annotation.md
         preannotation.md
         annotate-documents.md
+        annotating-document-sets-directly.md
         build-groundtruth.md
         train-ml.md
         evaluate-ml.md
@@ -65,7 +66,6 @@ Watson Knowledge Studio
     client-migration.md
     upgrade.md
     ha-dr.md
-    /watson/watson-migrate
     {: .navgroup-end}
 
     {: .navgroup id="help"}

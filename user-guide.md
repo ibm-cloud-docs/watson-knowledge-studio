@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-07-19"
+  years: 2015, 2019
+lastupdated: "2019-07-16"
 
 subcollection: watson-knowledge-studio
 
@@ -182,7 +182,7 @@ When you open a document to annotate it, you might want to use the concordance t
 To annotate entity mentions in a document:
 
 1. Log in as a human annotator (or as an administrator who was assigned documents to annotate). Workspaces that contain tasks that are assigned to you are displayed.
-1. Open a workspace, and then click **Machine Learning Model** > **Annotation Tasks**. The annotation tasks that are assigned to you are displayed.
+1. Open a workspace, and then click **Machine Learning Model** > **Annotations**, then click the **Annotation Tasks** tab. The annotation tasks that are assigned to you are displayed.
 1. Open the annotation task that you want to work on. The annotation sets that are assigned to you are displayed.
 1. Click **Annotate** to open the annotation set you want to work on. The documents in the annotation set are displayed.
 1. Open the document that you want to annotate. By default, the document opens in **Mention** mode, which is the mode you use to annotate entity mentions.
@@ -231,7 +231,7 @@ Although the concordance tool is optional, a good practice is to use the concord
 To annotate repeating mentions:
 
 1. Log in as a human annotator (or as an administrator or project manager who was assigned documents to annotate). Workspaces that contain tasks that are assigned to you are displayed.
-1. Open a workspace, and then click **Machine Learning Model** > **Annotation Tasks**. The annotation tasks that are assigned to you are displayed.
+1. Open a workspace, and then click **Machine Learning Model** > **Annotations**. Click the **Annotation Tasks** tab. The annotation tasks that are assigned to you are displayed.
 1. Open the annotation task that you want to work on. The annotation sets that are assigned to you are displayed.
 1. Click **Annotate** to open the annotation set you want to work on. The documents in the annotation set are displayed.
 1. Open the document that you want to annotate. By default, the document opens in **Mention** mode, which is the mode you use to annotate entity mentions.
@@ -279,7 +279,7 @@ What's most important is consistency. Decide how you want annotate coreference a
 To annotate mentions as coreferences:
 
 1. Log in as a human annotator (or as an administrator or project manager who was assigned documents to annotate). Workspaces that contain tasks that are assigned to you are displayed.
-1. Open a workspace, and then click **Machine Learning Model** > **Annotation Tasks**. The annotation tasks that are assigned to you are displayed.
+1. Open a workspace, and then click **Machine Learning Model** > **Annotations**. Click the **Annotation Tasks** tab. The annotation tasks that are assigned to you are displayed.
 1. Open the annotation task that you want to work on. The annotation sets that are assigned to you are displayed.
 1. Click **Annotate** to open the annotation set you want to work on. The documents in the annotation set are displayed.
 1. Open the document that you want to annotate. By default, the document opens in **Mention** mode, which is the mode you use to annotate entity mentions.
@@ -350,7 +350,7 @@ where the subscript [<i>#1</i>] indicates that `Mary` and `She` are both members
 To annotate relation mentions between entity mentions in a document:
 
 1. Log in as a human annotator (or as an administrator or project manager who was assigned documents to annotate). Workspaces that contain tasks that are assigned to you are displayed.
-1. Open a workspace, and then click **Machine Learning Model** > **Annotation Tasks**. The annotation tasks that are assigned to you are displayed.
+1. Open a workspace, and then click **Machine Learning Model** > **Annotations**. Click the **Annotation Tasks** tab. The annotation tasks that are assigned to you are displayed.
 1. Open the annotation task that you want to work on. The annotation sets that are assigned to you are displayed.
 1. Click **Annotate** to open the annotation set you want to work on. The documents in the annotation set are displayed.
 1. Open the document that you want to annotate. By default, the document opens in **Mention** mode, which is the mode you use to annotate entity mentions.

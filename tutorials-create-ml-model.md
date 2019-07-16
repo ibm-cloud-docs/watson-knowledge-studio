@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-08-24"
+  years: 2015, 2019
+lastupdated: "2019-07-16"
 
 subcollection: watson-knowledge-studio
 
@@ -169,20 +169,20 @@ For more information about annotation tasks, see [Creating an annotation task](/
 ### Procedure
 {: #wks_tutless_ml4_procedure}
 
-1. Within your workspace, click **Machine Learning Model** > **Annotation Tasks**.
-2. On the Tasks page, click **Add Task**.
-3. Specify the details for the task:
+1. Within your workspace, click **Machine Learning Model** > **Annotations**.
+1. Click the **Annotation Tasks** tab, then click **Add Task**.
+1. Specify the details for the task:
 
     - In the **Task name** field, enter `Test`.
     - In the **Deadline** field, select a date in the future.
 
-4. Click **Create**.
-5. Select the annotation sets that you created in [Lesson 2](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutml_intro#wks_tutless_ml2).
+1. Click **Create**.
+1. Select the annotation sets that you created in [Lesson 2](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutml_intro#wks_tutless_ml2).
 
  Selecting both annotation sets specifies that both sets must be annotated by their assigned human annotators to complete this task.
 
-7. Click **Create Task**.
-8. As human annotators begin annotating documents, you can open tasks to see their progress.
+1. Click **Create Task**.
+1. As human annotators begin annotating documents, you can open tasks to see their progress.
 
 ## Lesson 5: Annotating documents
 {: #wks_tutless_ml5}
@@ -201,8 +201,8 @@ For more information about human annotation, see [Annotation with the ground tru
 
     > **Note:** If you have access only to a single administrator ID for this tutorial, you can use that ID to perform human annotation. However, remember that in a realistic scenario, human annotation is performed by different users with the Human Annotator role.
 
-1. Open the `My workspace` workspace and click **Machine Learning Model** > **Annotation Tasks**.
-1. Open the `Test` annotation task you created in [Lesson 4](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutml_intro#wks_tutless_ml4).
+1. Open the `My workspace` workspace and click **Machine Learning Model** > **Annotations**.
+1. Click the **Annotation Tasks** tab, then open the `Test` annotation task you created in [Lesson 4](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutml_intro#wks_tutless_ml4).
 1. Click **Annotate** for one of the assigned annotation sets.
 
   Depending on how you set up the annotation tasks, you could have one or more annotation tasks assigned to the user ID you logged in with.
@@ -263,7 +263,7 @@ For more information about inter-annotator agreement, see [Building the ground t
 ### Procedure
 {: #wks_tutless_ml6_procedure}
 
-1. Log in to {{site.data.keyword.knowledgestudioshort}} as the administrator, select **Machine Learning Model** > **Annotation Tasks**, and click the `Test` task.
+1. Log in to {{site.data.keyword.knowledgestudioshort}} as the administrator and select **Machine Learning Model** > **Annotations**. Click the **Annotation Tasks** tab, then click the `Test` task.
 
   In the **Status** column, you can see that the document sets are submitted.
 
@@ -299,7 +299,7 @@ For more information about adjudication, see [Building the ground truth](/docs/s
 ### Procedure
 {: #wks_tutless_ml7_procedure}
 
-1. Log in to {{site.data.keyword.knowledgestudioshort}} as the administrator, select **Machine Learning Model** > **Annotation Tasks**, and click the `Test` task.
+1. Log in to {{site.data.keyword.knowledgestudioshort}} as the administrator and select **Machine Learning Model** > **Annotations**. Click the **Annotation Tasks** tab, then click the `Test` task.
 1. Verify that the two document sets are in an approved state.
 1. Click **Check Overlapping Documents for Conflicts**.
 

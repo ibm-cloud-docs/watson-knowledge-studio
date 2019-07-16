@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-07-19"
+  years: 2015, 2019
+lastupdated: "2019-07-16"
 
 subcollection: watson-knowledge-studio
 
@@ -97,6 +97,9 @@ This stage refers to exporting components that enable the model to run in machin
 
 Before human annotators can begin adding annotations to documents, the annotation process manager must create an annotation task.
 
+Admins and project managers can annotate ground truth document sets directly. See [Annotating document sets directly](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-annotating-document-sets-directly).
+{: note}
+
 ### About this task
 {: #wks_hatask_about}
 
@@ -118,7 +121,7 @@ The annotation task specifies which documents are to be annotated. To compare ho
 To create an annotation task:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator, and select your workspace.
-1. Select the **Machine Learning Model** > **Annotation Tasks** page.
+1. Select the **Machine Learning Model** > **Annotations** page, then click the **Annotation Tasks** tab.
 1. Click **Add Task**. Specify a descriptive name for the task and select the date that the task must be completed.
 1. Click **Create**. A list of available annotation sets is displayed, along with the names of the human annotators assigned to them.
 1. Select each annotation set that you want to include in the task and click **Create Task**.
@@ -129,7 +132,7 @@ To create an annotation task:
 ### What to do next
 {: #wks_hatask_next}
 
-After the task is created, you can return to the **Machine Learning Model** > **Annotation Tasks** page to view the progress of each human annotator. Also, you can complete the following tasks:
+After the task is created, you can return to the **Annotation Tasks** tab on the **Machine Learning Model** > **Annotations** page to view the progress of each human annotator. Also, you can complete the following tasks:
 
 - Check approved documents that overlap between annotation sets to resolve annotation conflicts.
 - Open a task to add annotation sets to it. Ensure that the annotation sets that you add include documents that overlap with documents in the original annotation sets.

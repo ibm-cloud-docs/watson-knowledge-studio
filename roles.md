@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-10-04"
+  years: 2018, 2019
+lastupdated: "2019-07-16"
 
 subcollection: watson-knowledge-studio
 
@@ -34,7 +34,7 @@ subcollection: watson-knowledge-studio
 - The first user to launch the {{site.data.keyword.knowledgestudioshort}} application is assigned the **Admin** role.
 - Once assigned, user roles can't be downgraded from higher to lower levels of permissions. Admins can't be downgraded to project managers or human annotators, and project managers can't be downgraded to human annotators. For information about adding users, upgrading roles, and deactivating user accounts, see [Assembling a team](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-team).
 - To manage a workspace, project managers need to be assigned to the workspace by an admin.
-- Admins and project managers can perform the role of human annotators, but they must be assigned to annotation sets in the same way that human annotators must be assigned to annotation sets.
+- Admins and project managers can perform the role of human annotators. They can also [directly annotate document sets](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-annotating-document-sets-directly) without creating annotation tasks.
 
 ## {{site.data.keyword.knowledgestudioshort}} role descriptions
 {: #descriptions}
@@ -64,5 +64,6 @@ To compare the permissions of each role, see the following table. One permission
 | Resolve annotation conflicts with human annotation (*adjudication*) | &checkmark; | &checkmark; |  |
 | Train and evaluate machine learning models | &checkmark; | &checkmark; |  |
 | Deploy and undeploy models to runtime services | &checkmark; | &checkmark; |  |
-| Perform document annotation | &checkmark; | &checkmark; | &checkmark; |
+| Annotate document sets directly | &checkmark; | &checkmark; | |
+| Perform document annotation in annotation tasks | &checkmark; | &checkmark; | &checkmark; |
 {:caption="Table 2. Role permissions" caption-side="top"}
