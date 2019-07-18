@@ -32,12 +32,12 @@ Annotations that you apply directly to document sets are not applied to active a
 {: note}
 
 1. [Launch the {{site.data.keyword.knowledgestudioshort}} application](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutintro#launching-the-knowledge-studio-application).
-2. [Add documents to your workspace.](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-documents-for-annotation#wks_projadd)
-3. From your workspace menu, click **Machine Learning Model**, then click **Annotations.**
-4. Click the **Ground Truth** tab.
-5. Click **Annotate** next to the document set that you want to use.
-6. Annotate your documents. See [Annotating documents](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-user-guide) for more details.
-7. Click **Save** to update the document set with your annotations.
+1. [Add documents to your workspace.](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-documents-for-annotation#wks_projadd)
+1. From your workspace menu, click **Machine Learning Model**, then click **Annotations.**
+1. Click the **Ground Truth** tab.
+1. Click **Annotate** next to the document set that you want to use.
+1. Annotate your documents. See [Annotating documents](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-user-guide) for more details.
+1. Click **Save** to update the document set with your annotations.
 
 ## What to do next
 {: #annotating-document-sets-next}

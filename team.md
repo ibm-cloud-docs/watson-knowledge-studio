@@ -19,7 +19,7 @@ subcollection: watson-knowledge-studio
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio/team.html){: new_window}.
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio?topic=knowledge-studio-team){: new_window}.
 {: tip}
 
 # Assembling a team
@@ -34,7 +34,7 @@ The creation of a model requires input from subject matter experts, project mana
 - Make sure you're using a supported browser. For information, see [Browser requirements](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-system-requirements).
 - [Create an instance of {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutintro#instance). Make sure you select a **Standard** or **Premium** plan. Lite plans are limited to one user.
 - Make sure that you are assigned an **Admin** role for your {{site.data.keyword.knowledgestudioshort}} instance. The first user to launch {{site.data.keyword.knowledgestudioshort}} is automatically assigned an **Admin** role.
-- Understand the [{{site.data.keyword.knowledgestudioshort}} roles](roles.html#descriptions) that you can assign.
+- Understand the [{{site.data.keyword.knowledgestudioshort}} roles](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-roles#descriptions) that you can assign.
 
 ## Adding users in {{site.data.keyword.knowledgestudioshort}}
 {: #team-add}
@@ -42,9 +42,9 @@ The creation of a model requires input from subject matter experts, project mana
 To add users to a {{site.data.keyword.knowledgestudioshort}} service instance:
 
 1. [Launch the {{site.data.keyword.knowledgestudioshort}} application.](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutintro#launching-the-knowledge-studio-application)
-2. Click the **Settings** icon ![the Settings icon](images/settings.png), then click **Manage service details**.
-3. In the **Manage users** section, enter the {{site.data.keyword.ibmid}} for the user you want to add.
-4. Select the role you want to give the user. For descriptions of the roles that are available, see [User roles in {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-roles).
+1. Click the **Settings** icon ![the Settings icon](images/settings.png), then click **Manage service details**.
+1. In the **Manage users** section, enter the {{site.data.keyword.ibmid}} for the user you want to add.
+1. Select the role you want to give the user. For descriptions of the roles that are available, see [User roles in {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-roles).
 
   **Note**: You can't downgrade user roles after assigning them, so be sure that you understand the tasks each role can perform when assigning the admin role and project manager role.
 
@@ -63,8 +63,8 @@ To upgrade roles for {{site.data.keyword.knowledgestudioshort}} users:
 
 1. [Launch the {{site.data.keyword.knowledgestudioshort}} application.](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutintro#launching-the-knowledge-studio-application)
 1. From the top right navigation menu, click the **Settings** icon ![the Settings icon](images/settings.png) and then click **Manage service details**.
-2. In the **Manage users** section of the Service Details page, click the **Edit** link next to a user.
-3. Click the role of the user and choose the role you want to upgrade that user to. For descriptions of the roles that are available, see [User roles in {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-roles).
+1. In the **Manage users** section of the Service Details page, click the **Edit** link next to a user.
+1. Click the role of the user and choose the role you want to upgrade that user to. For descriptions of the roles that are available, see [User roles in {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-roles).
 
   **Important:** You must create a workspace, associate a user with a document set, and assign an annotation task to a user before a user with the human annotator role can see any workspaces listed in the {{site.data.keyword.knowledgestudioshort}} application. Set up the workspace as soon as possible after users register so they see your workspace when they first access the application. You might want to notify users after you set up the workspace to let them know that they can start annotating documents.
 

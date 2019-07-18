@@ -19,7 +19,7 @@ subcollection: watson-knowledge-studio
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio/tutorials-create-rule-model.html){: new_window}.
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio?topic=knowledge-studio-wks_tutrule_intro){: new_window}.
 {: tip}
 
 # Creating a rule-based model
@@ -72,11 +72,11 @@ In a later lesson, you will define a class based on this dictionary. When you cr
 {: #wks_tutless_rule1_procedure}
 
 1. Download the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/dictionary-items-month.csv" download>`dictionary-items-month.csv` <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a> file to your computer. This file contains dictionary terms in CSV format, suitable for uploading into a {{site.data.keyword.knowledgestudioshort}} dictionary.
-2. Click **Assets** > **Dictionaries**.
-3. Click the **Create Dictionary** button to add a dictionary.
-4. In the **Name** field, type `Month dictionary` and click **Save** to create the dictionary. The new dictionary is created and automatically opened for editing.
-5. In the dictionary pane, click **Upload**.
-6. Select the `dictionary-items-month.csv` file from your computer and click **Upload**.
+1. Click **Assets** > **Dictionaries**.
+1. Click the **Create Dictionary** button to add a dictionary.
+1. In the **Name** field, type `Month dictionary` and click **Save** to create the dictionary. The new dictionary is created and automatically opened for editing.
+1. In the dictionary pane, click **Upload**.
+1. Select the `dictionary-items-month.csv` file from your computer and click **Upload**.
 
     The terms from the file are imported into the dictionary.
 
@@ -130,8 +130,8 @@ In this lesson, you will learn how to use a dictionary in the rule editor.
 {: #wks_tutless_rule4_procedure}
 
 1. Click **Rule-based Model** > **Rules**, and then click the **Dictionaries** tab.
-2. Select **Month dictionary** that you created previously.
-3. From the **Class** list, select `DictMonth` and then click **Save**.
+1. Select **Month dictionary** that you created previously.
+1. From the **Class** list, select `DictMonth` and then click **Save**.
 
     The class is associated with the dictionary.
 
@@ -151,11 +151,11 @@ In this lesson, you will learn how to find class annotations in rule editor docu
 {: #wks_tutless_rule5_procedure}
 
 1. Select **Rule-based Model** > **Rules**.
-2. From the Class panel, find the `DictMonth` class that you defined earlier, and click the **Search annotations in documents** icon that's next to it.
+1. From the Class panel, find the `DictMonth` class that you defined earlier, and click the **Search annotations in documents** icon that's next to it.
 
     The Find Annotations page is displayed and shows all the documents that contain text references to months.
 
-3. Click the `Technology - computerworld.com` document to view the full document. Notice that the text `February` is highlighted, which means it was annotated as a mention of the `DictMonth` class.
+1. Click the `Technology - computerworld.com` document to view the full document. Notice that the text `February` is highlighted, which means it was annotated as a mention of the `DictMonth` class.
 
 ## Lesson 6: Defining a regular expression
 {: #wks_tutless_rule6}
@@ -218,7 +218,7 @@ For more information about defining rules, see [Defining a rule](/docs/services/
 
     ![Shows the text "February 3, 2009" selected in the document.](images/rule-add1.jpg "Shows the text "February 3, 2009" selected in the document.")
 
-2. Click the **Add a rule** icon.
+1. Click the **Add a rule** icon.
 
     The rule editor shows a depiction of the rule pattern that you identified.
 
@@ -228,13 +228,13 @@ For more information about defining rules, see [Defining a rule](/docs/services/
 
     The number 3 and the comma (,) after it are shown as the second and third tokens in the pattern. As the pattern is currently specified, the model will find only occurrences of dates that specify the 3rd day of a month. We want the model to find dates that specify any day of the month, so next we will change the feature settings for the day token.
 
-3. Above the day `3` cell, click the **Text** icon to open the feature settings for the token.
+1. Above the day `3` cell, click the **Text** icon to open the feature settings for the token.
 
     ![Shows the user clicking the Text Feature Settings icon.](images/rule-add4.jpg)
 
     Currently, the rule is set to match the exact text, `3`. Instead, we want it to match any number.
 
-4. Change the feature setting to be numeric by selecting **Character Type : Numeric**, and then clearing the selection, **Text : 3**.
+1. Change the feature setting to be numeric by selecting **Character Type : Numeric**, and then clearing the selection, **Text : 3**.
 
     ![Shows the user clicking the "Character Type : Number" option as the feature setting for the "3" token.](images/rule-add5.jpg "Shows the user clicking the "Character Type : Number" option as the feature setting for the "3" token.")
 
@@ -244,19 +244,19 @@ For more information about defining rules, see [Defining a rule](/docs/services/
 
     The **Character Type** icon indicates that instead of requiring the number to be equal to 3 exactly, it can be any number.
 
-5. Do not change any settings for the comma token.
+1. Do not change any settings for the comma token.
 
     We want the third token in the pattern to be a comma, so the current feature setting of **text : ,** is appropriate. In addition to a feature setting, each token has a repeat setting. The repeat setting specifies how many times the token can be repeated in the text for it to match the pattern. The current repeat setting of **Required (Exactly 1)** is appropriate.
 
     ![Shows the repeat setting for the comma token which is set to "Exactly 1".](images/rule-add7.jpg "Shows the repeat setting for the comma token which is set to "Exactly 1".")
 
-6. Assign a class to represent the pattern `DictMonth + numeric token + comma + RegExpYear`.
+1. Assign a class to represent the pattern `DictMonth + numeric token + comma + RegExpYear`.
 
     Notice the four empty cells that represent the four tokens that you selected from the document. To select all the cells, select the first cell, and then press Shift + click each additional cell. Enter `RuleDate` as the class name, and then click it to create the new class.
 
     ![Shows that all four cells in the top row have been selected and the span is being defined as the "RuleDate" class.](images/rule-add8.jpg "Shows that all four cells in the top row have been selected and the span is being defined as the "RuleDate" class.")
 
-7. In the **Rule name** field, enter `MyDateRule` and click **Save**.
+1. In the **Rule name** field, enter `MyDateRule` and click **Save**.
 
     After you save the rule, it is automatically applied to the sample documents. If the `Technology - computerworld.com` document is still open in the rule editor, you will see that the `February 3, 2009` text in the document is now annotated as a mention of the RuleDate class.
 

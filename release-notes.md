@@ -19,7 +19,7 @@ subcollection: watson-knowledge-studio
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio/release-notes.html){: new_window}.
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio?topic=knowledge-studio-release-notes){: new_window}.
 {: tip}
 
 # Release notes
@@ -38,7 +38,10 @@ The following new features and changes to {{site.data.keyword.knowledgestudioful
 - Admins and Project Managers can annotate document sets directly from the **Ground Truth** tab on the **Annotations** page.
 - Annotation tasks are still available. You can manage them from the **Annotation Tasks** tab on the **Annotations** page.
 - Annotations applied directly to ground truth are not applied to related active annotation tasks. It is recommended that you annotate document sets directly only when they are not associated with any active annotation tasks.
-
+- The **Annotation Sets** tab has been removed from the **Documents** page. You can manage annotation sets from the **Annotation Tasks** tab of the **Annotations** page.
+  - To create new annotation sets, click **Add task**. Then, click **Create Annotation Sets**.
+  - To manage existing annotation sets, click an existing annotation task, then click **Edit**.
+  
 
 ## March 2019
 {: #mar2019}
@@ -89,9 +92,9 @@ You can now migrate {{site.data.keyword.knowledgestudioshort}} Cloud Foundry ser
 ### New features and changes
 {: #new-july2018}
 
-- The **Deployed Models** page was updated to include models from {{site.data.keyword.knowledgestudioshort}} instances that are managed by [IAM *resource groups* ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/iam/users_roles.html){: new_window}, in addition to models that are managed by [Cloud Foundry *organizations* ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/iam/cfaccess.html){: new_window}.
+- The **Deployed Models** page was updated to include models from {{site.data.keyword.knowledgestudioshort}} instances that are managed by [IAM *resource groups* ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/iam?topic=iam-userroles){: new_window}, in addition to models that are managed by [Cloud Foundry *organizations* ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/iam?topic=iam-cfaccess){: new_window}.
 
-   What you see on the Deployed Models page depends on the [region ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/resources/services_region.html){: new_window} that hosts your {{site.data.keyword.knowledgestudioshort}} instance. If the region supports instances managed by both access management methods, you see a tab for each method. Models from instances that are managed by IAM are listed on the **Resource Groups** tab. Models from instances that are managed by Cloud Foundry are listed on the **Organizations** tab.
+   What you see on the Deployed Models page depends on the [region ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/resources?topic=resources-services_region){: new_window} that hosts your {{site.data.keyword.knowledgestudioshort}} instance. If the region supports instances managed by both access management methods, you see a tab for each method. Models from instances that are managed by IAM are listed on the **Resource Groups** tab. Models from instances that are managed by Cloud Foundry are listed on the **Organizations** tab.
 
   If the region supports instances managed by only one of the access management methods, you see only one list of models, because only one access management method is applicable.
 

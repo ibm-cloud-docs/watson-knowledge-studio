@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-05-15"
+  years: 2015, 2018
+lastupdated: "2018-09-17"
 
 subcollection: watson-knowledge-studio
 
@@ -19,7 +19,7 @@ subcollection: watson-knowledge-studio
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio/troubleshooting.html){: new_window}.
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio?topic=knowledge-studio-troubleshooting){: new_window}.
 {: tip}
 
 # Troubleshooting, support, and FAQs
@@ -153,7 +153,7 @@ For Standard plans (Lite, Standard, Pro), by default, {{site.data.keyword.knowle
 To prevent {{site.data.keyword.knowledgestudioshort}} from using client data, you must opt out in at least one of two ways.
 
 - Deselect the **Data collection** checkbox on the Service Details page in the {{site.data.keyword.knowledgestudioshort}} application.
-- As the owner of the {{site.data.keyword.knowledgestudioshort}} service instance, opt out of all data collection for Watson services at https://{DomainName}/watson/settings.
+- As the owner of the {{site.data.keyword.knowledgestudioshort}} service instance, opt out of all data collection for Watson services at https://cloud.ibm.com/watson/settings.
 
 For Premium plans and Dedicated accounts, {{site.data.keyword.knowledgestudioshort}} does not use client data to improve the service.
 
@@ -164,7 +164,7 @@ For more information, see the latest [{{site.data.keyword.knowledgestudioshort}}
 
 {{site.data.keyword.IBM_notm}} releases experimental services and features for you to try out. These services might be unstable, change frequently in ways that are not compatible with earlier versions, and might be discontinued with short notice. These services and features are not recommended for use in production environments.
 
-For more information about experimental services, see the [{{site.data.keyword.cloud_notm}} documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/get-support/servicessupport.html#s-services-exporcont){: new_window}. For the full details of experimental services, see the latest version of the [{{site.data.keyword.cloud_notm}} Service Description ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/software/sla/sladb.nsf/sla/bm?OpenDocument){: new_window}.
+For more information about experimental services, see the [{{site.data.keyword.cloud_notm}} documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/get-support?topic=get-support-support-different-services#s-services-exporcont){: new_window}. For the full details of experimental services, see the latest version of the [{{site.data.keyword.cloud_notm}} Service Description ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/software/sla/sladb.nsf/sla/bm?OpenDocument){: new_window}.
 
 ## Storage space issues
 {: #storage}

@@ -19,7 +19,7 @@ subcollection: watson-knowledge-studio
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio/publish-ml.html){: new_window}.
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio?topic=knowledge-studio-publish-ml){: new_window}.
 {: tip}
 
 # Using the machine learning model
@@ -30,7 +30,7 @@ Leverage a machine learning model that you trained with {{site.data.keyword.know
 
 You can deploy or export a machine learning model. A dictionary or {{site.data.keyword.nlushort}} pre-annotator can only be used to pre-annotate documents within {{site.data.keyword.knowledgestudioshort}}.
 
-Before a model can be deployed for use by a service, you must have a subscription to the service. {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} services are hosted on {{site.data.keyword.Bluemix_short}}, which is the cloud platform for {{site.data.keyword.IBM_notm}}. See [What is {{site.data.keyword.Bluemix_notm}}? ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/overview/whatisbluemix.html){: new_window} for more information about the platform. To subscribe to one of the {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} services, create an account from the [{{site.data.keyword.Bluemix_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/){: new_window} website.
+Before a model can be deployed for use by a service, you must have a subscription to the service. {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} services are hosted on {{site.data.keyword.Bluemix_short}}, which is the cloud platform for {{site.data.keyword.IBM_notm}}. See [What is {{site.data.keyword.Bluemix_notm}}? ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/overview){: new_window} for more information about the platform. To subscribe to one of the {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} services, create an account from the [{{site.data.keyword.Bluemix_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/){: new_window} website.
 
 For some of the services, you must know details about the service instance that you plan to deploy to, such as the {{site.data.keyword.Bluemix_notm}} space name and service instance name. The space and instance name information is available from the {{site.data.keyword.Bluemix_notm}} Services page.
 
@@ -76,7 +76,7 @@ To deploy a machine learning model to {{site.data.keyword.watson}} {{site.data.k
 ### What to do next
 {: #wks_madiscovery_next}
 
-To use the deployed model, you must provide the model ID when it is requested during the {{site.data.keyword.discoveryshort}} service enrichment configuration process. For more details, see the [{{site.data.keyword.discoveryshort}} service documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/discovery/integrate-wks.html){: new_window}.
+To use the deployed model, you must provide the model ID when it is requested during the {{site.data.keyword.discoveryshort}} service enrichment configuration process. For more details, see the [{{site.data.keyword.discoveryshort}} service documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/discovery?topic=discovery-integrate-wks){: new_window}.
 
 ## Deploying a machine learning model to IBM Watson Natural Language Understanding
 {: #wks_manlu}
@@ -300,7 +300,7 @@ You can use the model with the {{site.data.keyword.nlushort}} `GET /analyze` req
     ```
     {: codeblock}
 
-See the [{{site.data.keyword.nlushort}} documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/natural-language-understanding/index.html){: new_window} for more details.
+See the [{{site.data.keyword.nlushort}} documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/natural-language-understanding){: new_window} for more details.
 
 ## Deploying the same model version to multiple services
 {: #wks_secdep}
@@ -315,7 +315,7 @@ If you want to undeploy a model or find a model ID, view the **Deployed Models**
 ### About this task
 {: #pm-att}
 
-What you see on the Deployed Models page depends on the [region ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/resources/services_region.html){: new_window} that hosts your {{site.data.keyword.knowledgestudioshort}} instance. If the region supports instances managed by [IAM ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/iam/users_roles.html){: new_window} and [Cloud Foundry ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/iam/cfaccess.html){: new_window} access management methods, you see a tab for each method. Models from instances that are managed by IAM are listed on the **Resource Groups** tab. Models from instances that are managed by Cloud Foundry are listed on the **Organizations** tab.
+What you see on the Deployed Models page depends on the [region ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/resources?topic=resources-services_region){: new_window} that hosts your {{site.data.keyword.knowledgestudioshort}} instance. If the region supports instances managed by [IAM ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/iam?topic=iam-userroles){: new_window} and [Cloud Foundry ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/iam?topic=iam-cfaccess){: new_window} access management methods, you see a tab for each method. Models from instances that are managed by IAM are listed on the **Resource Groups** tab. Models from instances that are managed by Cloud Foundry are listed on the **Organizations** tab.
 
 If the region supports instances managed by only one of the access management methods, you see only one list of models, because only one access management method is applicable.
 

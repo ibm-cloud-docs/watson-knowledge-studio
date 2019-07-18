@@ -32,8 +32,8 @@ The products, services, and other capabilities described herein are not suitable
 
 If you need to request GDPR support for {{site.data.keyword.cloud}} {{site.data.keyword.watson}} resources that are created
 
-- In the European Union, see [Requesting support for IBM Cloud Watson resources created in the European Union ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/watson/getting-started-gdpr-sar.html#request-EU){: new_window}.
-- Outside the European Union, see [Requesting support for resources outside the European Union ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/watson/getting-started-gdpr-sar.html#request-non-EU){: new_window}.
+- In the European Union, see [Requesting support for IBM Cloud Watson resources created in the European Union ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/watson?topic=watson-gdpr-sar#request-EU){: new_window}.
+- Outside the European Union, see [Requesting support for resources outside the European Union ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/watson?topic=watson-gdpr-sar#request-non-EU){: new_window}.
 
 ## European Union General Data Protection Regulation (GDPR)
 {: #gdpr}
@@ -52,5 +52,5 @@ Learn more about IBM's own GDPR readiness journey and our GDPR capabilities and 
 
 If you receive a request to delete data, complete the following steps:
 1. [Delete the applicable artifact](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-artifacts).
-2. [Retrain and redeploy the model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-train-ml).
-3. [Delete previous versions of the model that used the deleted data](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-improve-ml#wks_maversions).
+1. [Retrain and redeploy the model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-train-ml).
+1. [Delete previous versions of the model that used the deleted data](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-improve-ml#wks_maversions).
