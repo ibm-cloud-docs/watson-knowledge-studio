@@ -107,7 +107,7 @@ For more information about pre-annotation with dictionaries, see [Pre-annotating
 
 The documents in the selected sets are pre-annotated by using the dictionary that you created. If you like, you can use the dictionary to pre-annotate document sets or annotation sets that you add later.
 
-## Lesson 2: Creating an annotation task
+## Lesson 3: Creating an annotation task
 {: #wks_tutless_ml2}
 
 In this lesson, you will learn how to create annotation sets and use annotation tasks to track the work of human annotators in {{site.data.keyword.knowledgestudioshort}}.
