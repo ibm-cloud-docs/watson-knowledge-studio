@@ -128,15 +128,15 @@ To create an annotation task:
    
     1. For the base set, select the document set or annotation set that you want to divide into annotation sets.
 
-    2. For the overlap value, specify the percentage of documents that you want to include in each annotation set. Inter-annotator agreement scores cannot be calculated unless two or more human annotators annotate the same documents. For example, if you specify a 20% overlap value for a corpus that contains 30 documents, and you divide the corpus into 3 document sets, 6 documents (20%) will be annotated by all human annotators. The remaining 24 documents will be divided among the 3 human annotators (8 each). Thus, each annotator receives 14 documents to annotate (6+8).
+    1. For the overlap value, specify the percentage of documents that you want to include in each annotation set. Inter-annotator agreement scores cannot be calculated unless two or more human annotators annotate the same documents. For example, if you specify a 20% overlap value for a corpus that contains 30 documents, and you divide the corpus into 3 document sets, 6 documents (20%) will be annotated by all human annotators. The remaining 24 documents will be divided among the 3 human annotators (8 each). Thus, each annotator receives 14 documents to annotate (6+8).
 
     > **Note:** An annotation set that you plan to use to train a machine learning model must contain at least 10 annotated documents.
 
     1. Select a user name from the list of human annotators.
-    2. Name the annotation set.
+    1. Name the annotation set.
 
         As a good practice for evaluating a human annotator's work as the workspace progresses, you might want to create annotation set names that identify the human annotator assigned to the set. You cannot change the annotation set name after the set is created.
-    3. Click **Generate**.
+    1. Click **Generate**.
 
 1. A list of available annotation sets is displayed under **Available Sets**, along with the names of the human annotators assigned to them. To add available sets to your annotation task, click **Add to task**.
 1. Make sure that all of the annotation sets that you want to include in the task appear under **Selected Sets**, then click **Save** to create the task.
