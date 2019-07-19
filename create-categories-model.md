@@ -46,8 +46,8 @@ The custom categories feature is available only in {{site.data.keyword.knowledge
 1. Create a categories workspace.
 
     1. [Launch the {{site.data.keyword.knowledgestudioshort}} application](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutintro#launching-the-knowledge-studio-application).
-    2. If you already have other workspaces, click **Create workspace**.
-    3. Click **Create categories workspace**. Enter a name for your workspace, then click **Create**.
+    1. If you already have other workspaces, click **Create workspace**.
+    1. Click **Create categories workspace**. Enter a name for your workspace, then click **Create**.
 
 1. Create a training file.
 
@@ -62,15 +62,15 @@ The custom categories feature is available only in {{site.data.keyword.knowledge
 1. Tune your model for each category.
 
      1. Find a text sample that pertains to a category label from your CSV file and paste it into the **Enter input text** area. 
-     2. Click **Run Test** to evaluate the performance of your model against your text sample. A score closer to 1.0 indicates a very high level of certainty that the text passage corresponds to the respective category.
-     3. If the model does not perform well for the tested category, adjust the key phrases for the category in your CSV file, then click **Retrain model** to upload the updated file.
-     4. Repeat steps 4.a through 4.c until you are satisfied with the model performance.
+     1. Click **Run Test** to evaluate the performance of your model against your text sample. A score closer to 1.0 indicates a very high level of certainty that the text passage corresponds to the respective category.
+     1. If the model does not perform well for the tested category, adjust the key phrases for the category in your CSV file, then click **Retrain model** to upload the updated file.
+     1. Repeat steps 4.a through 4.c until you are satisfied with the model performance.
 
 1. Deploy your custom model to {{site.data.keyword.nlufull}} or {{site.data.keyword.discoveryfull}}
 
     1. Click **Deploy model**.
-    2. In the **Create a version** dialog, enter a description for the model, and click **OK** to save a version of the model.
-    3. Follow the instructions to select a target service instance, and click **Deploy** to execute the model deployment. You will get a model ID which is required to use the custom model with {{site.data.keyword.nlushort}} or {{site.data.keyword.discoveryshort}}.
+    1. In the **Create a version** dialog, enter a description for the model, and click **OK** to save a version of the model.
+    1. Follow the instructions to select a target service instance, and click **Deploy** to execute the model deployment. You will get a model ID which is required to use the custom model with {{site.data.keyword.nlushort}} or {{site.data.keyword.discoveryshort}}.
 
     You can manage model versions and deployment from the **Versions** page in the left navigation menu.
 

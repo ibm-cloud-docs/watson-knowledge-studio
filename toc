@@ -20,7 +20,7 @@ Watson Knowledge Studio
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [Accessibility](/docs/overview/accessibility?topic=accessibility-accessibility_features)
+    [Accessibility](/docs/overview?topic=overview-accessibility-platform#features-platform)
     glossary.md
     language-support.md
     information-security.md

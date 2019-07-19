@@ -53,7 +53,7 @@ To define a rule, complete the following steps:
 1. If you plan to define a regular expression or add a dictionary, create a class to associate with it.
 
     1. From the **Class** panel, click the plus sign (+) next to Class.
-    2. Add a class name.
+    1. Add a class name.
 
         If you will associate the class with a regular expression or dictionary, consider naming the class such that you can identify its origin. For example, if you plan to use a regular expression to define a pattern for the age in the example sentence, you can create a class named `AGE_REGEX`. If you plan to use a dictionary to annotate the car manufacturer in the sentence, you can add a class named `MANUFACTURER_DICT`.
 
@@ -71,7 +71,7 @@ To define a rule, complete the following steps:
 
         If you have not added a dictionary, open the **Assets** > **Dictionaries** page from the main navigation bar to add one. See [Creating dictionaries](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-dictionaries) for more information.
 
-    2. Click a dictionary, associate a class with the dictionary, and then click **Save**.
+    1. Click a dictionary, associate a class with the dictionary, and then click **Save**.
 
         For example, if you have a dictionary that contains organization names, you can create a rule class called `ORGANIZATION`, and associate the class with the dictionary. Any organization names that occur in your sample documents will be annotated as instances of the `ORGANIZATION` class.
 
@@ -80,13 +80,13 @@ To define a rule, complete the following steps:
 1. Optional: To define a regular expression to help you construct a rule, click the **Regex** tab.
 
     1. Click the plus sign (+) next to the Regular Expressions heading.
-    2. Name the regular expression. For example, `MyAgeRegex`.
+    1. Name the regular expression. For example, `MyAgeRegex`.
 
         The name cannot be longer than 64 characters.
 
-    3. Associate the expression with a class. For example, `AGE_REGEX`.
-    4. Click **Add Entry**.
-    5. Add the expression.
+    1. Associate the expression with a class. For example, `AGE_REGEX`.
+    1. Click **Add Entry**.
+    1. Add the expression.
 
         For example, to capture a number that represents an age (up to age 99), you can specify `[0-9]{1,2}`. To capture expressions of time, like *12:30 AM*, you might specify this regular expression:
 
@@ -99,8 +99,8 @@ To define a rule, complete the following steps:
 
         Click **Add**.
 
-    6. Repeat the previous two steps if you want to add more expressions.
-    7. Click **Save**.
+    1. Repeat the previous two steps if you want to add more expressions.
+    1. Click **Save**.
 
     The regex editor closes, and the document is displayed. You should see the class that you defined for the regular expression applied to the text that you intended it to match against. If you do not see the annotation, check your expression. It might need to be revised so it matches the text that you intended for it to find.
 
