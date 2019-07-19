@@ -58,9 +58,9 @@ Some data can be backed up, and some must be re-created:
 
 1. [Understand which data can be backed up](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-backup-restore#data)
 
-2. [Prepare for backup](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-backup-restore#prepare)
+1. [Prepare for backup](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-backup-restore#prepare)
 
-3. [Download artifacts from the current instance](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-backup-restore#export)
+1. [Download artifacts from the current instance](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-backup-restore#export)
 
 
 #### Restoring data, models, and tasks

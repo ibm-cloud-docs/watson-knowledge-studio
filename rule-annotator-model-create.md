@@ -19,7 +19,7 @@ subcollection: watson-knowledge-studio
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio/rule-annotator-model-create.html){: new_window}.
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio?topic=knowledge-studio-wks_rule_train){: new_window}.
 {: tip}
 
 # Creating the rule-based model
@@ -35,8 +35,8 @@ To create a rule-based model. complete the following steps:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager, and select your workspace.
 1. Select the **Rule-based Model** > **Versions** > **Rule-based Model** tab.
-2. Click **Map entity types and classes**.
-3. Map the entity types from your type system to one or more classes that you used to define rules.
+1. Click **Map entity types and classes**.
+1. Map the entity types from your type system to one or more classes that you used to define rules.
 
   After the entity types are mapped, you can [deploy the rule-based model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_rule_publish) or use it to [pre-annotate documents](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-preannotation#wks_preannotrule) in the process of creating a machine learning model.
 

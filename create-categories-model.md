@@ -49,24 +49,24 @@ The custom categories feature is available only in {{site.data.keyword.knowledge
     2. If you already have other workspaces, click **Create workspace**.
     3. Click **Create categories workspace**. Enter a name for your workspace, then click **Create**.
 
-2. Create a training file.
+1. Create a training file.
 
     Create a CSV file that defines your custom categories with associated key phrases according to the format outlined in [Creating a training file](#creating-a-csv-file).
 
-3. Import the training file.
+1. Import the training file.
 
     On the **Train your categories model** screen, upload your CSV file by dragging and dropping the file to the **Drag and drop file here** area or by clicking the **or browse file** link on the  screen. This automatically initiates training of the model.
 
     If the model training succeeds, you will see the **Test Your Model** screen. If training fails and the error message suggests that you can fix the issue, edit your CSV file to correct any errors and upload it again.
 
-4. Tune your model for each category.
+1. Tune your model for each category.
 
      1. Find a text sample that pertains to a category label from your CSV file and paste it into the **Enter input text** area. 
      2. Click **Run Test** to evaluate the performance of your model against your text sample. A score closer to 1.0 indicates a very high level of certainty that the text passage corresponds to the respective category.
      3. If the model does not perform well for the tested category, adjust the key phrases for the category in your CSV file, then click **Retrain model** to upload the updated file.
      4. Repeat steps 4.a through 4.c until you are satisfied with the model performance.
 
-5. Deploy your custom model to {{site.data.keyword.nlufull}} or {{site.data.keyword.discoveryfull}}
+1. Deploy your custom model to {{site.data.keyword.nlufull}} or {{site.data.keyword.discoveryfull}}
 
     1. Click **Deploy model**.
     2. In the **Create a version** dialog, enter a description for the model, and click **OK** to save a version of the model.
@@ -74,7 +74,7 @@ The custom categories feature is available only in {{site.data.keyword.knowledge
 
     You can manage model versions and deployment from the **Versions** page in the left navigation menu.
 
-6. Test your custom model with {{site.data.keyword.nlushort}} or {{site.data.keyword.discoveryshort}}
+1. Test your custom model with {{site.data.keyword.nlushort}} or {{site.data.keyword.discoveryshort}}
 
     Use the model ID that you received in step 5.c as the value for the categories **model** option. For details, see the following pages.
       - {{site.data.keyword.nlushort}}: [Customizing](/docs/services/natural-language-understanding?topic=natural-language-understanding-customizing)

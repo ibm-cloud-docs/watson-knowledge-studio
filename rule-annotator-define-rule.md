@@ -19,7 +19,7 @@ subcollection: watson-knowledge-studio
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio/rule-annotator-define-rule.html){: new_window}.
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio?topic=knowledge-studio-wks_rule_creation){: new_window}.
 {: tip}
 
 # Defining a rule
@@ -39,7 +39,7 @@ Avoid simultaneous editing of rules, classes, and regular expressions by multipl
 To define a rule, complete the following steps:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager and click **Rule-based Model** > **Rules**.
-2. Click the plus sign (+) next to the Documents heading to add a document.
+1. Click the plus sign (+) next to the Documents heading to add a document.
 
     For more information, see [Adding documents for defining rules](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_rule_anno_add).
 
@@ -50,7 +50,7 @@ To define a rule, complete the following steps:
     ```
     {: screen}
 
-3. If you plan to define a regular expression or add a dictionary, create a class to associate with it.
+1. If you plan to define a regular expression or add a dictionary, create a class to associate with it.
 
     1. From the **Class** panel, click the plus sign (+) next to Class.
     2. Add a class name.
@@ -63,7 +63,7 @@ To define a rule, complete the following steps:
         - Names cannot contain spaces.
         - Names cannot be longer than 64 characters.
 
-4. Optional: To quickly annotate classes in a document, you can associate a dictionary with the rule editor. Terms in a document that match entries in the dictionary are automatically annotated with the class that you select for the dictionary.
+1. Optional: To quickly annotate classes in a document, you can associate a dictionary with the rule editor. Terms in a document that match entries in the dictionary are automatically annotated with the class that you select for the dictionary.
 
     1. Click the **Dictionaries** tab.
 
@@ -77,7 +77,7 @@ To define a rule, complete the following steps:
 
     If you want to remove the dictionary association from the rule editor later, then you can remove the class mapping. To do so, choose the empty option from the top of the drop-down list.
 
-5. Optional: To define a regular expression to help you construct a rule, click the **Regex** tab.
+1. Optional: To define a regular expression to help you construct a rule, click the **Regex** tab.
 
     1. Click the plus sign (+) next to the Regular Expressions heading.
     2. Name the regular expression. For example, `MyAgeRegex`.
@@ -106,9 +106,9 @@ To define a rule, complete the following steps:
 
     ![The rule editor showing the "Regex" tab selected, a regular expression called "Age" that's associated with the class "AGE_REGEX", and a document that shows the text "50" highlighted in yellow. The highlighted text matches the regular expression that was created.](images/rule_step3.jpg "The rule editor showing the "Regex" tab selected, a regular expression called "Age" that's associated with the class "AGE_REGEX", and a document that shows the text "50" highlighted in yellow. The highlighted text matches the regular expression that was created.")
 
-6. To define a rule, click **Rules** from the navigation.
-7. Open the document with the pattern that you want to capture as a rule. For example, if you created a document titled, `My Document` with the sample text that contains the phrase `50-year-old`, open that document.
-8. From the text in the document, select the characters that illustrate the pattern that you want to capture. For example, you can select the following words and hyphens (-):
+1. To define a rule, click **Rules** from the navigation.
+1. Open the document with the pattern that you want to capture as a rule. For example, if you created a document titled, `My Document` with the sample text that contains the phrase `50-year-old`, open that document.
+1. From the text in the document, select the characters that illustrate the pattern that you want to capture. For example, you can select the following words and hyphens (-):
 
     ```
     50-year-old
@@ -117,7 +117,7 @@ To define a rule, complete the following steps:
 
     After you select characters, then you can add a rule.
 
-9. Click the plus sign (+) in the **Rules** panel.
+1. Click the plus sign (+) in the **Rules** panel.
 
     The rule editor represents the text that you selected as two layers of cells. The cells in the top layer are where you annotate the classes of the underlying tokens. The lower layer is where you define the conditions by which the tokens participate in the pattern.
 

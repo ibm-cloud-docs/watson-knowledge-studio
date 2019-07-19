@@ -19,7 +19,7 @@ subcollection: watson-knowledge-studio
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio/dictionaries.html){: new_window}.
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio?topic=knowledge-studio-dictionaries){: new_window}.
 {: tip}
 
 # Creating dictionaries
@@ -191,7 +191,7 @@ The following restriction apply to dictionaries:
 To add a dictionary to your workspace:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager and open the **Assets** > **Dictionaries** page.
-2. Perform one of the following tasks:
+1. Perform one of the following tasks:
 
     - Next to the **Create Dictionary** button, click the **Menu** icon, and then select **Upload Dictionary**. Select a dictionary, and then click **Upload**. After you upload a dictionary, select it to view the dictionary and associate it with an entity type.
 
@@ -201,20 +201,20 @@ To add a dictionary to your workspace:
 
     - Click the **Create Dictionary** button to create an empty dictionary to which you can subsequently add dictionary entries. Specify a descriptive name for the dictionary, and then click **Save**.
 
-3. To add entries to the dictionary, perform one of the following tasks:
+1. To add entries to the dictionary, perform one of the following tasks:
 
     - Click **Add Entry** to add a dictionary entry. Specify the *lemma* (the most representative word form for the term).
     - Click **Upload** to upload a `CSV` file that contains dictionary entries, and then browse to select the file. The `CSV` file must be smaller than 1MB.
 
-4. After uploading or adding entries, you can edit the entries.
+1. After uploading or adding entries, you can edit the entries.
 
     Open an entry to specify equivalent terms, called *surface forms*. Each surface form must be 256 or fewer characters in length. You can change which of the surface forms is used as the lemma. For example, the lemma *{{site.data.keyword.IBM_notm}}* might have surface forms like *{{site.data.keyword.IBM_notm}} Corp.* and *International Business Machines, Inc.*.
 
-5. Select the appropriate part of speech for each lemma and surface form in the dictionary.
+1. Select the appropriate part of speech for each lemma and surface form in the dictionary.
 
     The part of speech information is used by the tokenizer, and during pre-annotation.
 
-6. Click **Save** to store your changes.
+1. Click **Save** to store your changes.
 
 ### What to do next
 {: #di-ne}

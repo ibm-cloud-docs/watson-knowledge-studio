@@ -19,7 +19,7 @@ subcollection: watson-knowledge-studio
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio/preannotation.html){: new_window}.
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio?topic=knowledge-studio-preannotation){: new_window}.
 {: tip}
 
 # Bootstrapping annotation
@@ -51,6 +51,8 @@ The following pre-annotators are available:
 
     Uses a dictionary of terms that you provide and associate with an entity type to find mentions of that entity type in the documents. This choice is best for fields with unique or specialized terminology because this pre-annotator does not analyze the context in which the term is used in the way a machine learning pre-annotator does; it instead relies on the term being distinct enough to have a decipherable meaning regardless of the context in which it is used. For example, it is easier to recognize *asbestos* as a mineral entity type than to determine the entity type of *squash*, which can refer to a vegetable, a sport, or a verb meaning to crush something.
 
+  Dictionary pre-annotators do not recognize entity subtypes. Human annotators can specify entity subtypes for each pre-annotated mention by working on an [annotation task](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-annotate-documents#wks_hatask) with the pre-annotated document.
+
 - **Machine learning**
 
     Uses a machine learning model to automatically annotate documents. This option is only available to you if you have created a machine learning model with {{site.data.keyword.knowledgestudioshort}} already. If you add a new document set, you can run the machine learning annotator that you created previously to pre-annotate the new documents. If the new set of documents are similar to the documents that were used to train the machine learning annotator originally, then this is probably your best choice for pre-annotation.
@@ -71,7 +73,7 @@ You can use the {{site.data.keyword.nlushort}} service to pre-annotate documents
 ### Before you begin
 {: #wks_preannotnlu_prereqs}
 
-Determine whether the {{site.data.keyword.nlushort}} pre-annotator is likely to add value for your use case. Review the list of supported [{{site.data.keyword.nlushort}} service entity types and subtypes ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/natural-language-understanding/entity-types.html){: new_window} to determine if there is a natural overlap between them and the types in your type system. If so, continue with this procedure. If not, choose a different pre-annotator to use.
+Determine whether the {{site.data.keyword.nlushort}} pre-annotator is likely to add value for your use case. Review the list of supported [{{site.data.keyword.nlushort}} service entity types and subtypes ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/natural-language-understanding?topic=natural-language-understanding-entity-types){: new_window} to determine if there is a natural overlap between them and the types in your type system. If so, continue with this procedure. If not, choose a different pre-annotator to use.
 
 ### About this task
 {: #wks_preannotnlu_about}
@@ -159,7 +161,7 @@ To help human annotators get started with their annotation tasks, you can create
 ### About this task
 {: #wks_preannot_about}
 
-When a human annotator begins work on documents that were pre-annotated, it is likely that a number of mentions will already be marked by entity types based on the dictionary entries. The human annotator can change or remove the pre-annotated entity types and assign entity types to unannotated mentions. Pre-annotation by a dictionary does not annotate relations and coreferences. Relations and coreferences must be annotated by human annotators.
+When a human annotator begins work on documents that were pre-annotated, it is likely that a number of mentions will already be marked by entity types based on the dictionary entries. The human annotator can change or remove the pre-annotated entity types and assign entity types to unannotated mentions. Pre-annotation by a dictionary does not annotate relations, coreferences. Relations and coreferences must be annotated by human annotators.
 
 **Note**: This task shows how to create a dictionary that is editable. If you want to upload and pre-annotate your documents with a read-only dictionary, click the **Menu** icon next to the **Create Dictionary** button. Select **Upload Dictionary**.
 
@@ -172,14 +174,14 @@ To create an editable dictionary and pre-annotate documents:
 1. Select the **Assets** > **Dictionaries** page.
 1. Click **Create Dictionary**, enter a name, and then click **Save**.
 1. From the **Entity type** list, select an entity type to associate with the dictionary.
-3. Add entries for the dictionary or upload a file that contains dictionary terms.
-4. Click **Machine Learning Model** > **Pre-annotation**.
-5. On the **Dictionaries** tab, click **Apply This Pre-annotator**.
-6. Select the check box for each document set that you want to pre-annotate and click **Run**.
+1. Add entries for the dictionary or upload a file that contains dictionary terms.
+1. Click **Machine Learning Model** > **Pre-annotation**.
+1. On the **Dictionaries** tab, click **Apply This Pre-annotator**.
+1. Select the check box for each document set that you want to pre-annotate and click **Run**.
 
     Pre-annotation is applied to individual documents without regard for the various document sets or annotation sets that a document might belong to. A document that overlaps between a selected document set and an unselected document set will be pre-annotated in both document sets.
 
-7. After the dictionary is created, click **Run** any time that you want to use the dictionary to pre-annotate additional document sets that you add to the corpus.
+1. After the dictionary is created, click **Run** any time that you want to use the dictionary to pre-annotate additional document sets that you add to the corpus.
 
     > **Restriction:** If you edit the dictionary to add or remove entries, you must re-create annotation tasks that include the pre-annotated document sets. Pre-annotation based on the changes that you make to the dictionary annotator cannot be applied to annotation sets that are already assigned to an annotation task.
 
@@ -205,13 +207,13 @@ After 10 to 30 documents are annotated, a machine learning model can be trained 
 To use an existing machine learning model to pre-annotate documents:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator and select your workspace.
-2. Select **Machine Learning Model** > **Versions**.
-3. To pre-annotate new documents, click **Run this model**.
-4. Select the check box for each document set that you want to pre-annotate and click **Run**.
+1. Select **Machine Learning Model** > **Versions**.
+1. To pre-annotate new documents, click **Run this model**.
+1. Select the check box for each document set that you want to pre-annotate and click **Run**.
 
     Pre-annotation is applied to individual documents without regard for the various document sets or annotation sets that a document might belong to. A document that overlaps between a selected document set and an unselected document set will be pre-annotated in both document sets.
 
-5. You can click **Run this model** any time that you want to use the machine learning model to pre-annotate additional document sets that you add to the corpus.
+1. You can click **Run this model** any time that you want to use the machine learning model to pre-annotate additional document sets that you add to the corpus.
 
 ## Pre-annotating documents with the rule-based model
 {: #wks_preannotrule}
@@ -226,21 +228,21 @@ To use the rule-based model to pre-annotate documents, complete the following st
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator and select your workspace.
 1. Select the **Rule-based Model** > **Versions** > **Rule-based Model** tab.
 1. If not already completed, click **Map entity types and classes** to map entity types that you defined in the {{site.data.keyword.knowledgestudioshort}} type system to one or more rule-based model classes.
-2. Click **Edit** for each entity type you want to map.
+1. Click **Edit** for each entity type you want to map.
 
     - The drop-down list of the **Class Name** column is pre-populated with classes that are associated with the rule-based model.
     - You must map at least one entity type to a class.
 
-3. On the **Rule-based Model** tab, click **Run this model**.
+1. On the **Rule-based Model** tab, click **Run this model**.
 
     The **Run this model** button is not available until you map at least one entity type to a class.
 
-4. Select the document sets or annotation sets that you want to pre-annotate. Ensure that the sets you select do not contain documents that have human annotations. Pre-annotators remove human annotation.
-5. Click **Run**.
+1. Select the document sets or annotation sets that you want to pre-annotate. Ensure that the sets you select do not contain documents that have human annotations. Pre-annotators remove human annotation.
+1. Click **Run**.
 
     Pre-annotation is applied to individual documents without regard for the various document sets that a document might belong to. A document that overlaps between a selected document set and an unselected document will appear pre-annotated in both document sets.
 
-6. You can click **Run this model** any time that you want to use the rule-based model to pre-annotate additional document sets that you add to the corpus.
+1. You can click **Run this model** any time that you want to use the rule-based model to pre-annotate additional document sets that you add to the corpus.
 
     > **Restriction:** If you edit the entity type-to-class mapping of the rule-based model, then you must re-create annotation tasks that include the pre-annotated document sets. Pre-annotation based on the changes that you make to the pre-annotator mapping definition cannot be applied to document sets that are already assigned to an annotation task.
 

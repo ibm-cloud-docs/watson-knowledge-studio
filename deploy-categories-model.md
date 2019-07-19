@@ -34,21 +34,21 @@ The custom categories feature is experimental. The feature might be unstable, ch
 {: deploy-categories-model-before-you-begin}
 
 1. Make sure you have a version of a custom categories model to deploy. For instructions, see [Creating a custom categories model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-create-categories-model).
-2. Custom categories models can be deployed only to services hosted in the **Dallas** location. If you don't already have one, create a [{{site.data.keyword.nlushort}}](https://{DomainName}/catalog/services/natural-language-understanding) or [{{site.data.keyword.discoveryshort}}](https://{DomainName}/catalog/services/discovery) service instance in the **Dallas** location.
+1. Custom categories models can be deployed only to services hosted in the **Dallas** location. If you don't already have one, create a [{{site.data.keyword.nlushort}}](https://{DomainName}/catalog/services/natural-language-understanding) or [{{site.data.keyword.discoveryshort}}](https://{DomainName}/catalog/services/discovery) service instance in the **Dallas** location.
 
 ## Procedure
 {: #deploy-categories-model-procedure}
 
 1. [Launch the {{site.data.keyword.knowledgestudioshort}} application](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutintro#launching-the-knowledge-studio-application).
-2. Click on the categories workspace that contains the model that you want to deploy.
-3. Click **Versions** in the left navigation menu.
-4. Click **Deploy** next to the version that you want to deploy.
-5. Follow the instructions to deploy the model to your service instance.
+1. Click on the categories workspace that contains the model that you want to deploy.
+1. Click **Versions** in the left navigation menu.
+1. Click **Deploy** next to the version that you want to deploy.
+1. Follow the instructions to deploy the model to your service instance.
   1. Select the service that you want to deploy to and click **Next**.
   2. If you are deploying to a Cloud Foundry service instance, select **Spaces**. Otherwise, select **Resource groups**.
   3. Select the space or resource group that contains your service instance. If you don't know which to choose, you can browse your services from the [{{site.data.keyword.cloud_notm}} resources page](https://{DomainName}/resources).
   4. Select your service instance and click **Deploy**.
-6. After the deploy is complete, copy the model ID that you receive. You will need to provide the model ID to use the custom model in {{site.data.keyword.nlushort}} and {{site.data.keyword.discoveryshort}}.
+1. After the deploy is complete, copy the model ID that you receive. You will need to provide the model ID to use the custom model in {{site.data.keyword.nlushort}} and {{site.data.keyword.discoveryshort}}.
 
 
 ### Using the custom categories model

@@ -19,7 +19,7 @@ subcollection: watson-knowledge-studio
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio/documents-for-annotation.html){: new_window}.
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio?topic=knowledge-studio-documents-for-annotation){: new_window}.
 {: tip}
 
 # Adding documents for annotation
@@ -110,9 +110,9 @@ As a best practice, start with a relatively small collection of documents. Use t
 To add documents to a workspace:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager, and select your workspace.
-2. Select the **Assets**> **Documents** > **Documentation sets** tab.
-3. Click **Upload Document Sets** to add documents to the corpus.
-4. Upload documents in one of the supported formats. For information about the supported document types, size limits, and other information, see  [Creating a workspace > Summary of inputs, outputs, and limitations](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-create-project#wks_formats).
+1. Select the **Assets**> **Documents** > **Documentation sets** tab.
+1. Click **Upload Document Sets** to add documents to the corpus.
+1. Upload documents in one of the supported formats. For information about the supported document types, size limits, and other information, see  [Creating a workspace > Summary of inputs, outputs, and limitations](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-create-project#wks_formats).
 
   **Notes about `ZIP` files of documents downloaded from another workspace**
    - If you previously downloaded documents from a {{site.data.keyword.knowledgestudioshort}} workspace, drag the `ZIP` file that contains the downloaded documents or click to locate and select the file. If you want to include annotations that were added to the documents before they were downloaded, ensure that the option to include ground truth is selected before you click **Upload**. Only annotations that were promoted to ground truth before the documents were downloaded will be imported.
@@ -122,7 +122,7 @@ To add documents to a workspace:
   **Notes about `ZIP` files of documents in UIMA CAS XMI format**
    - If you previously downloaded annotated documents that are in UIMA CAS XMI format, you can upload the `ZIP` file that contains the analyzed content. Specify that this is the type of content you want to upload before you click **Upload**. For details about how to create these files and requirements for uploading them, see [Uploading pre-annotated documents](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-preannotation#wks_uima).</p>
 
-5. After the documents have been added, click the document names to preview them and verify that the content looks OK. For example, verify that text files are in UTF-8 format and that no diacritical marks or character normalization issues are visible in the documents, and check for poor sentence breaks. If problems exist, you might need to pre-process the files before you add them to the corpus. You want the documents to be as clean and well-formatted as possible before dictionary or human annotation begins.
+1. After the documents have been added, click the document names to preview them and verify that the content looks OK. For example, verify that text files are in UTF-8 format and that no diacritical marks or character normalization issues are visible in the documents, and check for poor sentence breaks. If problems exist, you might need to pre-process the files before you add them to the corpus. You want the documents to be as clean and well-formatted as possible before dictionary or human annotation begins.
 
 ### What to do next
 {: #wks_projadd_next}
@@ -132,53 +132,6 @@ Before you start any human annotation tasks, divide the corpus into multiple doc
 Admins and project managers can [annotate document sets directly](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-annotating-document-sets-directly) without creating annotation tasks.
 {: note}
 
-## Creating and assigning annotation sets
-{: #wks_projdocsets}
-
-After you add documents, divide the documents into sets so that they can be annotated by multiple human annotators. To view inter-annotator agreement scores, you must assign at least two human annotators and specify that some percentage of documents overlap between the sets.
-
-### Before you begin
-{: #wks_projdocsets_prereqs}
-
-- You must upload document sets before you can divide them into annotation sets.
-- You must create user accounts in {{site.data.keyword.knowledgestudioshort}} for all human annotators who will work on documents in this workspace.
-
-### About this task
-{: #wks_projdocsets_about}
-
-> **Attention:** If you use the Google Chrome browser, you cannot upload a large number of files (such as more than 300) by selecting them from a folder. The workaround is to either use the Firefox browser or select a smaller number of files and upload files several times.
-
-You can create a maximum of 1,000 annotation sets per workspace.
-
-### Procedure
-{: #wks_projdocsets_procedure}
-
-To create an annotation set:
-
-1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager, and select your workspace.
-1. Select the **Assets**> **Documents** > **Annotation sets** tab.
-1. Click **Create Annotation Sets**.
-
-    1. For the base set, select the collection of documents that you want to divide into annotation sets, either all documents in the corpus or documents that were previously allocated to a document set.
-
-    1. For the overlap value, specify the percentage of documents that you want to include in each annotation set. Inter-annotator agreement scores cannot be calculated unless two or more human annotators annotate the same documents. For example, if you specify a 20% overlap value for a corpus that contains 30 documents, and you divide the corpus into 3 document sets, 6 documents (20%) will be annotated by all human annotators. The remaining 24 documents will be divided among the 3 human annotators (8 each). Thus, each annotator receives 14 documents to annotate (6+8).
-
-    > **Note:** An annotation set that you plan to use to train a machine learning model must contain at least 10 annotated documents.
-
-    1. Select a user name from the list of human annotators.
-
-        > **Note:** If you have a Lite plan subscription, associate yourself with the annotation set. You cannot add other users and assign them to the human annotator role. But by adding yourself, you can fill the role of a human annotator and test out how a real human annotator would interact with the ground truth editor to annotate documents.
-
-    1. Name the annotation set.
-
-        As a good practice for evaluating a human annotator's work as the workspace progresses, you might want to create annotation set names that identify the human annotator assigned to the set. You cannot change the annotation set name after the set is created.
-
-1. After you finish assigning all the human annotators who will work on this workspace, click **Generate** to create the annotation sets. When human annotators log in to the ground truth editor, they see only the annotation sets that are assigned to them.
-
-**Related tasks**:
-{: #wks_related_tasks}
-
-[Assembling a team](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-team)
 
 ## Deleting documents
 {: #wks_deletedocs}
@@ -200,8 +153,8 @@ If the document you want to delete is not associated with an annotation task, co
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator and select your workspace.
 1. Select the **Assets**> **Documents** > **Document sets** tab.
-2. Select the document set that contains the document you want to delete. The document set opens.
-3. Find the document that you want to remove, and then click **Delete**.
+1. Select the document set that contains the document you want to delete. The document set opens.
+1. Find the document that you want to remove, and then click **Delete**.
 
 ### Deleting a document that is associated with an annotation task and human annotation has not begun
 {: #deletenoanno}

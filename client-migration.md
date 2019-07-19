@@ -19,7 +19,7 @@ subcollection: watson-knowledge-studio
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio/client-migration.html){: new_window}.
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio?topic=knowledge-studio-client-migration){: new_window}.
 {: tip}
 
 # Migrating to IBM Cloud
@@ -53,11 +53,11 @@ If you have a Standard plan, complete the following steps to migrate your instan
 
    Your {{site.data.keyword.ibmid}} is the ID that you use to log in to {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace.
 
-2. Log in to [{{site.data.keyword.cloud_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}){: new_window}.
-3. If your {{site.data.keyword.cloud_notm}} account is a Lite account, upgrade to a paid account. For more information about types of paid accounts, see [Account types ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/account/index.html){: new_window}.
-4. From the [{{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/knowledge-studio){: new_window}, create a {{site.data.keyword.knowledgestudioshort}} Standard plan.
-5. Follow the instructions on the screen, indicating that you want to migrate an instance from {{site.data.keyword.IBM_notm}} Marketplace to {{site.data.keyword.cloud_notm}}.
-6. If you have more than one instance to migrate, repeat the process.
+1. Log in to [{{site.data.keyword.cloud_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}){: new_window}.
+1. If your {{site.data.keyword.cloud_notm}} account is a Lite account, upgrade to a paid account. For more information about types of paid accounts, see [Account types ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/account){: new_window}.
+1. From the [{{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/knowledge-studio){: new_window}, create a {{site.data.keyword.knowledgestudioshort}} Standard plan.
+1. Follow the instructions on the screen, indicating that you want to migrate an instance from {{site.data.keyword.IBM_notm}} Marketplace to {{site.data.keyword.cloud_notm}}.
+1. If you have more than one instance to migrate, repeat the process.
 
 ## Migration to Premium plan instances
 {: migratesubscription}

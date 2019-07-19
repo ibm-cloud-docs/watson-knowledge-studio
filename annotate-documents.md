@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-07-16"
+lastupdated: "2019-07-17"
 
 subcollection: watson-knowledge-studio
 
@@ -122,12 +122,24 @@ To create an annotation task:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator, and select your workspace.
 1. Select the **Machine Learning Model** > **Annotations** page, then click the **Annotation Tasks** tab.
-1. Click **Add Task**. Specify a descriptive name for the task and select the date that the task must be completed.
-1. Click **Create**. A list of available annotation sets is displayed, along with the names of the human annotators assigned to them.
-1. Select each annotation set that you want to include in the task and click **Create Task**.
+1. Click **Add Task**. 
+1. Specify a descriptive task name and select the date that the task must be completed.
+1. If no annotation sets are available, click **Create Annotation Sets**.
+   
+    1. For the base set, select the document set or annotation set that you want to divide into annotation sets.
 
-    The check marks by the annotation set names make it seem like all annotation sets are selected by default, but they are not. You must explicitly select the annotation sets that you want to include.
-    {: tip}
+    1. For the overlap value, specify the percentage of documents that you want to include in each annotation set. Inter-annotator agreement scores cannot be calculated unless two or more human annotators annotate the same documents. For example, if you specify a 20% overlap value for a corpus that contains 30 documents, and you divide the corpus into 3 document sets, 6 documents (20%) will be annotated by all human annotators. The remaining 24 documents will be divided among the 3 human annotators (8 each). Thus, each annotator receives 14 documents to annotate (6+8).
+
+    > **Note:** An annotation set that you plan to use to train a machine learning model must contain at least 10 annotated documents.
+
+    1. Select a user name from the list of human annotators.
+    1. Name the annotation set.
+
+        As a good practice for evaluating a human annotator's work as the workspace progresses, you might want to create annotation set names that identify the human annotator assigned to the set. You cannot change the annotation set name after the set is created.
+    1. Click **Generate**.
+
+1. A list of available annotation sets is displayed under **Available Sets**, along with the names of the human annotators assigned to them. To add available sets to your annotation task, click **Add to task**.
+1. Make sure that all of the annotation sets that you want to include in the task appear under **Selected Sets**, then click **Save** to create the task.
 
 ### What to do next
 {: #wks_hatask_next}
@@ -154,9 +166,9 @@ An project manager can specify preferences for using colors and keyboard shortcu
 To specify visual preferences for working with the ground truth editor :
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator, and select your workspace.
-2. From the navigation on the left, select the **Settings** > **Document Annotation Settings**.
-3. Select the **Entity Types** or **Relation Types** tab.
-4. Select the entity type or relation type that you want to change and then click **Edit keyboard shortcuts and colors**. For each type, you can define a:
+1. From the navigation on the left, select the **Settings** > **Document Annotation Settings**.
+1. Select the **Entity Types** or **Relation Types** tab.
+1. Select the entity type or relation type that you want to change and then click **Edit keyboard shortcuts and colors**. For each type, you can define a:
 
     - Keyboard shortcut, which means a user can enter `<key>` to apply the type label to highlighted text. For example, if you define `o` as the keyboard shortcut for `ORGANIZATION`, then a user can select text, and then press the `o` key to apply the `ORGANIZATION` entity type to the highlighted text. If you assign an upper case letter, then the user must press `Shift+<key>`.
     - Text color. Ensure that the text color contrasts with the background color so the text will be visible after it is labeled.
@@ -167,7 +179,7 @@ To specify visual preferences for working with the ground truth editor :
 
     As you assign new shortcuts and colors, you can preview the changes.
 
-5. You can also change the default selection highlight color. The highlight color is the color of the border that is displayed around text after human annotators select it. The default color is a light blue, but you can change the color on the **Selection Highlight** tab to make it easier to identify the boundaries of the text that is selected.
+1. You can also change the default selection highlight color. The highlight color is the color of the border that is displayed around text after human annotators select it. The default color is a light blue, but you can change the color on the **Selection Highlight** tab to make it easier to identify the boundaries of the text that is selected.
 
 #### Related tasks
 {: #wks_hapref_related}
@@ -191,7 +203,7 @@ To set the inter-annotator agreement threshold:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator, and select your workspace.
 1. Select the **Settings** > **IAA Settings** tab.
-2. Specify a value between 0 and 1, such as `.5` or `.8`, and then click **Save**.
+1. Specify a value between 0 and 1, such as `.5` or `.8`, and then click **Save**.
 
 ## Connecting to annotation guidelines
 {: #wks_haguidelines}

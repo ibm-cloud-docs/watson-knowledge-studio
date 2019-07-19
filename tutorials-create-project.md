@@ -42,8 +42,8 @@ This {{site.data.keyword.knowledgestudiofull}} tutorial helps you perform prereq
 {: hide-dashboard}
 
 1. If you haven't already, [sign up for an {{site.data.keyword.ibmid}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}){: new_window} and log in to {{site.data.keyword.cloud_notm}}.
-2. Go to the [{{site.data.keyword.knowledgestudioshort}}](https://{DomainName}/catalog/services/knowledge-studio) page in the {{site.data.keyword.cloud_notm}} catalog.
-3. Select a pricing plan, and click **Create**.
+1. Go to the [{{site.data.keyword.knowledgestudioshort}}](https://{DomainName}/catalog/services/knowledge-studio) page in the {{site.data.keyword.cloud_notm}} catalog.
+1. Select a pricing plan, and click **Create**.
 {: hide-dashboard}
 
 ## Launching the {{site.data.keyword.knowledgestudioshort}} application
@@ -52,8 +52,8 @@ This {{site.data.keyword.knowledgestudiofull}} tutorial helps you perform prereq
 After creating a service instance, the user who created the service instance and any users with [{{site.data.keyword.cloud_notm}} roles](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-roles) that allow access to the service instance will be able to launch the {{site.data.keyword.knowledgestudioshort}} application with the following steps.
 
 1. {: hide-dashboard} Go to the [{{site.data.keyword.cloud_notm}} resources ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/resources){: new_window} page. Log in with your {{site.data.keyword.ibmid}}.
-2. {: hide-dashboard} Select **Services** and click on your {{site.data.keyword.knowledgestudioshort}} service instance to open the {{site.data.keyword.knowledgestudioshort}} service dashboard.
-3. Click **Launch tool** from the Manage page.
+1. {: hide-dashboard} Select **Services** and click on your {{site.data.keyword.knowledgestudioshort}} service instance to open the {{site.data.keyword.knowledgestudioshort}} service dashboard.
+1. Click **Launch tool** from the Manage page.
 
 After you launch {{site.data.keyword.knowledgestudioshort}}, you can copy the URL and use it to launch the application directly.
 
@@ -79,7 +79,7 @@ The creation of a machine learning model requires input from subject matter expe
 {: #wks_tutless1_procedure}
 
 1. Log in to {{site.data.keyword.knowledgestudioshort}} with your administrator ID. If you have an existing {{site.data.keyword.knowledgestudioshort}} instance, you can find it on the {{site.data.keyword.cloud_notm}} [resources page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/resources){: new_window} under **Services**.
-2. Click the **Settings** icon to open the Service Details page. The page lists all the user IDs that are registered as {{site.data.keyword.knowledgestudioshort}} users. Each user ID has one of the following roles (in decreasing order of included permissions):
+1. Click the **Settings** icon to open the Service Details page. The page lists all the user IDs that are registered as {{site.data.keyword.knowledgestudioshort}} users. Each user ID has one of the following roles (in decreasing order of included permissions):
 
     - Admin
     - Project Manager
@@ -87,13 +87,13 @@ The creation of a machine learning model requires input from subject matter expe
 
     For information about user roles, see [User roles in {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-roles).
 
-3. Verify that there is at least one user with the Admin role. A user ID with this role can create workspaces, and act as a project manager or human annotator.
-4. If you have access to additional user IDs, verify that there are at least two users with the Human Annotator role.
+1. Verify that there is at least one user with the Admin role. A user ID with this role can create workspaces, and act as a project manager or human annotator.
+1. If you have access to additional user IDs, verify that there are at least two users with the Human Annotator role.
 
     Creating a real-life model typically involves multiple human annotators in addition to an administrator or project manager. However, for purposes of the tutorial, you can continue with a single user ID.
     {: tip}
 
-5. Optional: Change the role that is assigned to a user ID. From the **Action** column of the table, click the **Edit** link, an then change the assigned user role.
+1. Optional: Change the role that is assigned to a user ID. From the **Action** column of the table, click the **Edit** link, an then change the assigned user role.
 
     You can upgrade a user ID to a role with greater permissions, but you cannot downgrade a user with an Admin or Project Manager role to the Human Annotator role.
     {: note}
@@ -112,14 +112,14 @@ A workspace defines all the resources that are required to create a machine lear
 {: #wks_tutless2_procedure}
 
 1. {: hide-dashboard} As a {{site.data.keyword.knowledgestudioshort}} administrator, from your {{site.data.keyword.cloud_notm}} [resources ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/resources){:new_window} page, click the {{site.data.keyword.knowledgestudioshort}} service instance under **Services**.
-2. Click **Launch tool** from the Manage page.
-3. Click **Create Workspace**.
-4. Specify the details for the new workspace:
+1. Click **Launch tool** from the Manage page.
+1. Click **Create Workspace**.
+1. Specify the details for the new workspace:
 
     - In the **Workspace name** field, type `My workspace`.
     - In the **Workspace description** field, type `Watson Knowledge Studio tutorial workspace`.
     - In the **Language of documents** field, use the default value, **English**. The sample files you will be using for this tutorial are in English.
-5. Click **Create**.
+1. Click **Create**.
 
 ### Results
 {: #wks_tutless2_results}
