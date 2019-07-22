@@ -184,8 +184,8 @@ For more information about human annotation, see [Annotation with the ground tru
 1. Annotate a mention:
 
     1. Click the Entity tab.
-    2. In the document body, select the text `Thomas Watson`.
-    3. In the list of entity types, click `PERSON`. The entity type `PERSON` is applied to the selected mention.
+    1. In the document body, select the text `Thomas Watson`.
+    1. In the list of entity types, click `PERSON`. The entity type `PERSON` is applied to the selected mention.
 
         ![This screen capture shows the "PERSON" entity type applied to the mention, "Thomas Watson".](images/wks_tut_annotatemention3.png "This screen capture shows the "PERSON" entity type applied to the mention, "Thomas Watson".")
 

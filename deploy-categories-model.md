@@ -45,9 +45,9 @@ The custom categories feature is experimental. The feature might be unstable, ch
 1. Click **Deploy** next to the version that you want to deploy.
 1. Follow the instructions to deploy the model to your service instance.
   1. Select the service that you want to deploy to and click **Next**.
-  2. If you are deploying to a Cloud Foundry service instance, select **Spaces**. Otherwise, select **Resource groups**.
-  3. Select the space or resource group that contains your service instance. If you don't know which to choose, you can browse your services from the [{{site.data.keyword.cloud_notm}} resources page](https://{DomainName}/resources).
-  4. Select your service instance and click **Deploy**.
+  1. If you are deploying to a Cloud Foundry service instance, select **Spaces**. Otherwise, select **Resource groups**.
+  1. Select the space or resource group that contains your service instance. If you don't know which to choose, you can browse your services from the [{{site.data.keyword.cloud_notm}} resources page](https://{DomainName}/resources).
+  1. Select your service instance and click **Deploy**.
 1. After the deploy is complete, copy the model ID that you receive. You will need to provide the model ID to use the custom model in {{site.data.keyword.nlushort}} and {{site.data.keyword.discoveryshort}}.
 
 
