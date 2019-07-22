@@ -20,7 +20,8 @@ Watson Knowledge Studio
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [Accessibility](/docs/overview?topic=overview-accessibility-platform#features-platform)
+    [Accessibility](/overview/overview-accessibility-platform#features-platform)
+    activity-tracker-events.md
     glossary.md
     language-support.md
     information-security.md
