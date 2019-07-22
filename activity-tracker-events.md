@@ -23,10 +23,10 @@ subcollection: watson-knowledge-studio
 # {{site.data.keyword.cloudaccesstrailshort}} events
 {: #activity-tracker-events}
 
-Use the {{site.data.keyword.cloudaccesstrailfull}} service to track how users and applications interact with {{site.data.keyword.knowledgestudioshort}} in {{site.data.keyword.cloud}}. 
+Use the {{site.data.keyword.at_full}} service to track how users and applications interact with {{site.data.keyword.knowledgestudioshort}} in {{site.data.keyword.cloud}}. 
 {: shortdesc}
 
-The {{site.data.keyword.cloudaccesstrailfull_notm}} service records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. For more information, see the [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started) documentation.
+The {{site.data.keyword.at_full_notm}} service records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. For more information, see the [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started) documentation.
 
 <!-- You can create different sections to group events by area. -->
 
