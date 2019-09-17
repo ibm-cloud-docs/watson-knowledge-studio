@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-07-16"
+lastupdated: "2019-09-17"
 
 subcollection: watson-knowledge-studio
 
@@ -27,6 +27,14 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 
 The following new features and changes to {{site.data.keyword.knowledgestudiofull}} are available.
 {: shortdesc}
+
+## September 2019
+{: #september-2019}
+
+### New features and changes
+{: #new-september-2019}
+
+- Updated the visual style of the {{site.data.keyword.knowledgestudioshort}} application.
 
 ## July 2019
 {: #july-2019}

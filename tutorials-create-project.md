@@ -155,7 +155,7 @@ For more information about type systems, see [Type systems](/docs/services/watso
     1. Double-click anywhere in the table row to edit the entity type.
     1. In the **Roles** column, click the **Delete a role** icon ![The "Delete a role" icon.](images/wks_delete.jpg "The "Delete a role" icon.") next to the AWARD role.
 
-        ![A screen capture of deleting a role from an entity type.](images/wks_tut_delete_role.jpg "A screen capture that shows the cursor hovering over the "Delete a role" icon.")
+        ![A screen capture of deleting a role from an entity type.](images/wks_tut_delete_role.png "A screen capture that shows the cursor hovering over the "Delete a role" icon.")
 
     1. Click **Save**.
 
@@ -195,7 +195,7 @@ For more information about dictionaries, see [Adding dictionaries to a workspace
 1. In the **Part of Speech** column, select **Noun**.
 1. Click **Save**.
 
-    ![A screen capture of the Dictionaries page. The "IBM" dictionary entry is selected and its surface forms and part of speech are highlighted.](images/wks_tutdict4.jpg "A screen capture of the Dictionaries page. The "IBM" dictionary entry is selected and its surface forms and part of speech are highlighted.")
+    ![A screen capture of the Dictionaries page. The "IBM" dictionary entry is selected and its surface forms and part of speech are highlighted.](images/wks_tutdict4.png "A screen capture of the Dictionaries page. The "IBM" dictionary entry is selected and its surface forms and part of speech are highlighted.")
 
 ### What to do next
 {: #wks_tutless4_next}
