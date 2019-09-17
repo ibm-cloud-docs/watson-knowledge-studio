@@ -104,7 +104,7 @@ To define a rule, complete the following steps:
 
     The regex editor closes, and the document is displayed. You should see the class that you defined for the regular expression applied to the text that you intended it to match against. If you do not see the annotation, check your expression. It might need to be revised so it matches the text that you intended for it to find.
 
-    ![The rule editor showing the "Regex" tab selected, a regular expression called "Age" that's associated with the class "AGE_REGEX", and a document that shows the text "50" highlighted in yellow. The highlighted text matches the regular expression that was created.](images/rule_step3.jpg "The rule editor showing the "Regex" tab selected, a regular expression called "Age" that's associated with the class "AGE_REGEX", and a document that shows the text "50" highlighted in yellow. The highlighted text matches the regular expression that was created.")
+    ![The rule editor showing the "Regex" tab selected, a regular expression called "Age" that's associated with the class "AGE_REGEX", and a document that shows the text "50" highlighted in yellow. The highlighted text matches the regular expression that was created.](images/rule_step3.png "The rule editor showing the "Regex" tab selected, a regular expression called "Age" that's associated with the class "AGE_REGEX", and a document that shows the text "50" highlighted in yellow. The highlighted text matches the regular expression that was created.")
 
 1. To define a rule, click **Rules** from the navigation.
 1. Open the document with the pattern that you want to capture as a rule. For example, if you created a document titled, `My Document` with the sample text that contains the phrase `50-year-old`, open that document.
@@ -121,7 +121,7 @@ To define a rule, complete the following steps:
 
     The rule editor represents the text that you selected as two layers of cells. The cells in the top layer are where you annotate the classes of the underlying tokens. The lower layer is where you define the conditions by which the tokens participate in the pattern.
 
-    ![The rule editor that shows the "Create a rule" panel.](images/rule_step4.jpg "The rule editor that shows what the "Create a rule" panel looks like after you select text from your document and click the plus sign in the "Rules" panel. The following graphical elements are shown: the "Rule name" field with the term "AGE" entered, the "Create a rule" panel, and the "Class" panel. In the "Create a rule" panel, cells with dotted lines are shown across the top. One cell is shown for each token of the text that was selected. In these cells, you annotate the classes of the tokens. Across the bottom of the "Create a rule" panel, cells with solid lines are shown. Each cell contains a token of the selected text, "50-year-old". The tokens are "50", "-" (hyphen), "year", "-", and "old". Each solid-line cell has two icons next to it that you can use to adjust the condition of the word or annotation.")
+    ![The rule editor that shows the "Create a rule" panel.](images/rule_step4.png "The rule editor that shows what the "Create a rule" panel looks like after you select text from your document and click the plus sign in the "Rules" panel. The following graphical elements are shown: the "Rule name" field with the term "AGE" entered, the "Create a rule" panel, and the "Class" panel. In the "Create a rule" panel, cells with dotted lines are shown across the top. One cell is shown for each token of the text that was selected. In these cells, you annotate the classes of the tokens. Across the bottom of the "Create a rule" panel, cells with solid lines are shown. Each cell contains a token of the selected text, "50-year-old". The tokens are "50", "-" (hyphen), "year", "-", and "old". Each solid-line cell has two icons next to it that you can use to adjust the condition of the word or annotation.")
 
 10. Define the conditions by which each token participates in the pattern.
 
@@ -363,7 +363,7 @@ To define a rule, complete the following steps:
 
     For example, you could choose to have the pattern use 50 instead of having it match the age regular expression.
 
-    ![The "Create a rule" panel that shows an edit of the token, "50", that uses the annotation, "AGE_REGEX", in the rule. By default, the "AGE_REGEX" annotation is used, but you can edit the pattern so that the underlying word, "50", is used instead.](images/rule_step5.jpg)
+    ![The "Create a rule" panel that shows an edit of the token, "50", that uses the annotation, "AGE_REGEX", in the rule. By default, the "AGE_REGEX" annotation is used, but you can edit the pattern so that the underlying word, "50", is used instead.](images/rule_step5.png)
 
 12. After you set the pattern order, you can annotate tokens in the text.
 
@@ -373,7 +373,7 @@ To define a rule, complete the following steps:
 
     > **Note:** You cannot add more than 10 classes for the rule.
 
-    ![The "Create a rule" section showing the "Assign class" window that opens when you click a token. The window shows a field where you can enter the name of a new class, or select an existing class from the list.](images/rule_step6.jpg)
+    ![The "Create a rule" section showing the "Assign class" window that opens when you click a token. The window shows a field where you can enter the name of a new class, or select an existing class from the list.](images/rule_step6.png)
 
 13. Name the rule.
 

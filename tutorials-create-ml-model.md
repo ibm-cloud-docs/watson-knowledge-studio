@@ -137,7 +137,7 @@ For more information about annotation sets and annotation tasks, see [Creating a
 
 1. Click **Add another set and human annotator** to add fields for an additional annotation set. You can click to add as many annotation sets as you want to create. For this tutorial, you need only two annotation sets.
 
-    ![A screen capture of the Create Annotation Sets page.](images/wks_tutdocset2.jpg "A screen capture of the Create Annotation Sets page.")
+    ![A screen capture of the Create Annotation Sets page.](images/wks_tutdocset2.png "A screen capture of the Create Annotation Sets page.")
 
 1. In the **Overlap** field, specify `100`. This value specifies that you want 100 percent of the documents in the base set to be included in all the new annotation sets so they can be annotated by all human annotators.
 1. For each new annotation set, specify the required information.
@@ -240,7 +240,7 @@ For more information about inter-annotator agreement, see [Building the ground t
 
     *Figure 1. Reviewing inter-annotator scores with users named `dave` and `phil`*
 
-    ![This screen capture shows the inter-annotator scores for a task.](images/wks_tutiaa2.gif "This screen capture shows the inter-annotator scores for a task.")
+    ![This screen capture shows the inter-annotator scores for a task.](images/wks_tutiaa2.png "This screen capture shows the inter-annotator scores for a task.")
 
 1. After you review the scores, you can decide whether you want to approve or reject document sets that are in the `SUBMITTED` status. Take one of these actions:
 
@@ -322,7 +322,7 @@ For more information about the machine learning model, see [Training the machine
 
     *Figure 2. Options on the Statistics page for a machine learning model*
 
-    ![This screen capture shows the Statistics page.](images/wks_tutanno9.gif "This screen capture shows the Statistics page.")
+    ![This screen capture shows the Statistics page.](images/wks_tutanno9.png "This screen capture shows the Statistics page.")
 
 1.  Click **Versions**. On the Versions page, you can take a snapshot of the model and the resources that were used to create it (except for dictionaries and annotation tasks). For example, you might want to take a snapshot before you retrain the model. If the statistics are poorer the next time you train it, you can promote the older version and delete the version that returned poorer results.
 

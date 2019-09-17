@@ -101,7 +101,7 @@ For more information about adding documents, see [Adding documents for defining 
 
     A set of documents is displayed in the main Documents page.
 
-    ![Shows three of the fourteen documents that were added to the rule editor. Shows the document title and an excerpt from the beginning of each document. There is also a delete icon next to each document that you can use to delete the document.](images/rule-doc-add3.jpg "Shows three of the fourteen documents that were added to the rule editor. Shows the document title and an excerpt from the beginning of each document. There is also a delete icon next to each document that you can use to delete the document.")
+    ![Shows three of the fourteen documents that were added to the rule editor. Shows the document title and an excerpt from the beginning of each document. There is also a delete icon next to each document that you can use to delete the document.](images/rule-doc-add3.png "Shows three of the fourteen documents that were added to the rule editor. Shows the document title and an excerpt from the beginning of each document. There is also a delete icon next to each document that you can use to delete the document.")
 
 ## Lesson 3: Creating classes
 {: #wks_tutless_rule3}
@@ -135,7 +135,7 @@ In this lesson, you will learn how to use a dictionary in the rule editor.
 
     The class is associated with the dictionary.
 
-    ![Shows that the DictMonth class is associated with the Month dictionary in the Dictionaries panel of the Rules page.](images/rule-dict-map2.jpg "Shows that the DictMonth class is associated with the Month dictionary in the Dictionaries panel of the Rules page.")
+    ![Shows that the DictMonth class is associated with the Month dictionary in the Dictionaries panel of the Rules page.](images/rule-dict-map2.png "Shows that the DictMonth class is associated with the Month dictionary in the Dictionaries panel of the Rules page.")
 
 ### Results
 {: #wks_tutless_rule4_results}
@@ -192,11 +192,11 @@ For more information about defining regular expressions, see [Defining a rule](/
 
 1. To check whether the expression you defined is capturing time occurrences correctly, you can search for mentions. Click the **Search annotations in documents** icon next to the `RegExpYear` class in the Class panel.
 
-    ![Shows the hovering over the magnifying glass icon next to the "RegExpYear" class in the Class panel of the Rules page.](images/rule-regex-add5.jpg "Shows the cursor hovering over the magnifying glass icon next to the "RegExpYear" class in the Class panel of the Rules page.")
+    ![Shows the hovering over the magnifying glass icon next to the "RegExpYear" class in the Class panel of the Rules page.](images/rule-regex-add5.png "Shows the cursor hovering over the magnifying glass icon next to the "RegExpYear" class in the Class panel of the Rules page.")
 
     The Find Annotations page is displayed. Occurrences of year mentions are highlighted in the sample documents in which they occur.
 
-    ![Shows eight annotations of years highlighted in excerpts from the sample documents.](images/rule-regex-add6.jpg "Shows eight annotations of years highlighted in excerpts from the sample documents.")
+    ![Shows eight annotations of years highlighted in excerpts from the sample documents.](images/rule-regex-add6.png "Shows eight annotations of years highlighted in excerpts from the sample documents.")
 
 ## Lesson 7: Defining a rule
 {: #unique_1166829415}
@@ -216,7 +216,7 @@ For more information about defining rules, see [Defining a rule](/docs/services/
 1. Select **Rule-based Model** > **Rules**, and open the `Technology - computerworld.com` document.
 1. Select the text `February 3, 2009` in the document. Make sure you select the comma, too.
 
-    ![Shows the text "February 3, 2009" selected in the document.](images/rule-add1.jpg "Shows the text "February 3, 2009" selected in the document.")
+    ![Shows the text "February 3, 2009" selected in the document.](images/rule-add1.png "Shows the text "February 3, 2009" selected in the document.")
 
 1. Click the **Add a rule** icon.
 
@@ -230,17 +230,17 @@ For more information about defining rules, see [Defining a rule](/docs/services/
 
 1. Above the day `3` cell, click the **Text** icon to open the feature settings for the token.
 
-    ![Shows the user clicking the Text Feature Settings icon.](images/rule-add4.jpg)
+    ![Shows the user clicking the Text Feature Settings icon.](images/rule-add4.png)
 
     Currently, the rule is set to match the exact text, `3`. Instead, we want it to match any number.
 
 1. Change the feature setting to be numeric by selecting **Character Type : Numeric**, and then clearing the selection, **Text : 3**.
 
-    ![Shows the user clicking the "Character Type : Number" option as the feature setting for the "3" token.](images/rule-add5.jpg "Shows the user clicking the "Character Type : Number" option as the feature setting for the "3" token.")
+    ![Shows the user clicking the "Character Type : Number" option as the feature setting for the "3" token.](images/rule-add5.png "Shows the user clicking the "Character Type : Number" option as the feature setting for the "3" token.")
 
     You changed the definition for the number `3` cell.
 
-    ![Shows the cell that represents the "3" token now has a "Character Type" icon above it to indicate that any numeric value can match that token in the pattern.](images/rule-add6.jpg "Shows the cell that represents the "3" token now has an "Character Type" icon above it to indicate that any numeric value can match that token in the pattern.")
+    ![Shows the cell that represents the "3" token now has a "Character Type" icon above it to indicate that any numeric value can match that token in the pattern.](images/rule-add6.png "Shows the cell that represents the "3" token now has an "Character Type" icon above it to indicate that any numeric value can match that token in the pattern.")
 
     The **Character Type** icon indicates that instead of requiring the number to be equal to 3 exactly, it can be any number.
 
@@ -248,23 +248,23 @@ For more information about defining rules, see [Defining a rule](/docs/services/
 
     We want the third token in the pattern to be a comma, so the current feature setting of **text : ,** is appropriate. In addition to a feature setting, each token has a repeat setting. The repeat setting specifies how many times the token can be repeated in the text for it to match the pattern. The current repeat setting of **Required (Exactly 1)** is appropriate.
 
-    ![Shows the repeat setting for the comma token which is set to "Exactly 1".](images/rule-add7.jpg "Shows the repeat setting for the comma token which is set to "Exactly 1".")
+    ![Shows the repeat setting for the comma token which is set to "Exactly 1".](images/rule-add7.png "Shows the repeat setting for the comma token which is set to "Exactly 1".")
 
 1. Assign a class to represent the pattern `DictMonth + numeric token + comma + RegExpYear`.
 
     Notice the four empty cells that represent the four tokens that you selected from the document. To select all the cells, select the first cell, and then press Shift + click each additional cell. Enter `RuleDate` as the class name, and then click it to create the new class.
 
-    ![Shows that all four cells in the top row have been selected and the span is being defined as the "RuleDate" class.](images/rule-add8.jpg "Shows that all four cells in the top row have been selected and the span is being defined as the "RuleDate" class.")
+    ![Shows that all four cells in the top row have been selected and the span is being defined as the "RuleDate" class.](images/rule-add8.png "Shows that all four cells in the top row have been selected and the span is being defined as the "RuleDate" class.")
 
 1. In the **Rule name** field, enter `MyDateRule` and click **Save**.
 
     After you save the rule, it is automatically applied to the sample documents. If the `Technology - computerworld.com` document is still open in the rule editor, you will see that the `February 3, 2009` text in the document is now annotated as a mention of the RuleDate class.
 
-    ![Shows text from the "Technology - computerworld.com" document with only the text "February 3, 2009" annotated as a mention of the "RuleDate" class.](images/rule-add10.jpg "Shows text from the "Technology - computerworld.com" document with only the text "February 3, 2009" annotated as a mention of the "RuleDate" class.")
+    ![Shows text from the "Technology - computerworld.com" document with only the text "February 3, 2009" annotated as a mention of the "RuleDate" class.](images/rule-add10.png "Shows text from the "Technology - computerworld.com" document with only the text "February 3, 2009" annotated as a mention of the "RuleDate" class.")
 
     You can search for all occurrences of `RuleDate` class mentions in the sample documents by clicking the **Search annotation in documents** icon ![A magnifying glass to represent a search](images/filter_gray.png "A magnifying glass to represent a search") next to the `RuleDate` class from the Class panel. It is a good practice to check that all dates are captured properly to confirm that you defined the pattern correctly.
 
-    ![Shows the "Find Annotations" page with two documents that contain dates that match the rule pattern you just defined.](images/rule-add11.jpg "Shows the "Find Annotations" page with two documents that contain dates that match the rule pattern you just defined.")
+    ![Shows the "Find Annotations" page with two documents that contain dates that match the rule pattern you just defined.](images/rule-add11.png "Shows the "Find Annotations" page with two documents that contain dates that match the rule pattern you just defined.")
 
 ## Lesson 8: Creating a rule-based model
 {: #wks_tutless_rule8}
@@ -285,11 +285,11 @@ For more information about creating a rule-based model, see [Creating the rule-b
 
     1. Find the `DATE` entity, and click **Edit**.
 
-        ![Shows the user clicking Edit for the "DATE" entity type in the "Rule-based model type mapping" tab.](images/rule-anno2.jpg "Shows the user clicking Edit for the "DATE" entity type in the "Rule-based model type mapping" tab.")
+        ![Shows the user clicking Edit for the "DATE" entity type in the "Rule-based model type mapping" tab.](images/rule-anno2.png "Shows the user clicking Edit for the "DATE" entity type in the "Rule-based model type mapping" tab.")
 
     1. Choose the `RuleDate` class from the list and click **Save**.
 
-        ![Shows the user choosing the "RuleDate" class from the list.](images/rule-anno3.jpg "Shows the user choosing the "RuleDate" class from the list.")
+        ![Shows the user choosing the "RuleDate" class from the list.](images/rule-anno3.png "Shows the user choosing the "RuleDate" class from the list.")
 
 1. To pre-annotate document sets or annotation sets with the rule-based model, select the **Rule-based Model** tab and click **Run this model**.
 
