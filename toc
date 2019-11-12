@@ -12,6 +12,7 @@ Watson Knowledge Studio
         tutorials-create-rule-model.md
         tutorials-bootstrap-annotation.md
         create-categories-model.md
+        create-advanced-rules-model.md
 
     index.md
     system-requirements.md
@@ -22,6 +23,11 @@ Watson Knowledge Studio
     {: .navgroup id="reference"}
     [Accessibility](/overview/overview-accessibility-platform#features-platform)
     activity-tracker-events.md
+
+    {: topicgroup}
+    Advanced rules reference
+        managing-projects-and-extractors.md
+        aql-reference.md
     glossary.md
     language-support.md
     information-security.md

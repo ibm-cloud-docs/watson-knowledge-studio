@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-09-17"
+lastupdated: "2019-09-19"
 
 subcollection: watson-knowledge-studio
 
@@ -27,6 +27,14 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 
 The following new features and changes to {{site.data.keyword.knowledgestudiofull}} are available.
 {: shortdesc}
+
+## October 2019
+{: #october-2019}
+
+### New features and changes
+{: #new-october-2019}
+
+- Advanced rules workspaces (Beta) are now available for service instances in **Dallas** and **Frankfurt**. Create advanced rules extractors and run them to extract text from documents that you upload to the workspace. To get started, see [Creating an advanced rules model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-create-advanced-rules-model).
 
 ## September 2019
 {: #september-2019}
