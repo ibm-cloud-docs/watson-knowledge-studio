@@ -28,6 +28,14 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 The following new features and changes to {{site.data.keyword.knowledgestudiofull}} are available.
 {: shortdesc}
 
+## November 2019
+{: #november-2019
+
+### New features and changes
+{: #new-november-2019}
+
+- **New South Korea location**: You can now create {{site.data.keyword.knowledgestudioshort}} instances in the Seoul location. As with other locations, the {{site.data.keyword.cloud_notm}} Seoul location uses token-based Identity and Access Management (IAM) authentication.
+
 ## October 2019
 {: #october-2019}
 
