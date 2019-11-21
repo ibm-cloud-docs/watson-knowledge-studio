@@ -517,6 +517,7 @@ module <module-name\>;
 -   AQL files within subfolders of the top-level module folder are ignored.
 
 ### Examples
+{: #aql-reference-examples-1}
 
 **Example 1: Sample module**
 
@@ -565,6 +566,7 @@ export view|dictionary|table|function <object-name\>;
 -   The `export view` and `output view` statements that are shown in the examples are orthogonal to each other. That is, an output view is not automatically an exported view, but it must be explicitly exported by using an `export` statement. An exported view is not automatically an output view, but it must be explicitly output by using the `output view` statement. In the examples, the `export` statement attempts to export the view PersonName.FirstName, which is an imported view. This attempt causes an error, which means that the developer must copy the imported view into a new view and then export that instead.
 
 ### Examples
+{: #aql-reference-examples-2}
 
 **Example 1: Creating views and dictionaries and then exporting them for use in other modules**
 
@@ -677,6 +679,7 @@ import view|dictionary|table|function <object-name\>
 -   When two AQL files inside a module import the same view X from another module under two different aliases, for example, A and B, then the two aliases are treated synonymously. This rule applies also to tables, dictionaries, and functions.
 
 ### Examples
+{: #aql-reference-examples-3}
 
 **Example 1: Create views that you export to be imported into other modules.**
 
@@ -761,6 +764,7 @@ You can use the `import module` statement to import and reuse existing AQL modul
 -   If two AQL files inside a module import the same view X from another module under two different aliases, for example, A and B, then the two aliases are treated synonymously. This rule applies also to tables, dictionaries, and functions.
 
 ### Examples
+{: #aql-reference-examples-4}
 
 In this example, the `import` statement imports the qualified name of both the exported views, `personName.FirstName` and `personName.NotFirstName`. Any view that is not exported by the module `personName` is not imported as a part of the import statement
 
@@ -807,6 +811,7 @@ The `set default dictionary language` statement allows an extractor developer to
 -   The `set default dictionary language` statement can be updated to improve the extent of languages that are covered by the extractor. This ability to add languages promotes ease of customization and the reuse of existing extractors.
 
 ### Examples
+{: #aql-reference-examples-5}
 
 **Example 1: Specifying languages to be used to match dictionary entries**
 
@@ -890,12 +895,13 @@ In earlier versions of AQL, the schema of the special view `Document` was predef
 ### Usage notes
 
 -   For modular AQL code, the scope of any `require document with columns` statement is the module in which it is defined.
--   Only one `require document with columns` statement is allowed per AQL file. Within a single module, or a generic module, there can be zero, one, or multiple AQL files that have a `require document with columns` statement. All AQL files within a module merge their `require document with columns` statements at the level of the entire module to form a module-wide `require document with columns`. This statement defines the schema of the `Document` view for that module. If none of the AQL files of a module or a generic module contain a require statement, the module has a default schema for the view `Document`. This schema consists of two columns: \(text Text, label Text\). No default columns are established for the special view `Document` if at least one AQL file in the module has one `require document with columns` statement.
+-   Only one `require document with columns` statement is allowed per AQL file. Within a single module, or a generic module, there can be zero, one, or multiple AQL files that have a `require document with columns` statement. All AQL files within a module merge their `require document with columns` statements at the level of the entire module to form a module-wide `require document with columns`. This statement defines the schema of the `Document` view for that module. If none of the AQL files of a module or a generic module contain a require statement, the module has a default schema for the view `Document`. This schema consists of two columns: \(text Text, label Text\). No default columns are established for the special view `Document` if at least one AQL file in the module has one `require document with columns` statement.
 -   When multiple modules are combined to form an extractor, the schema of the `Document` view of the entire extractor is defined by the duplicate-free union of Document schemas for each module. An exception is raised when any column found across the multiple `require document with columns` statements is found to be conflicting in its type requirements across modules. For example, a module requires a column X with type Y when another module that is being loaded with it requires a column X with type Z.
 -   An exception is raised when you run an extractor if the provided input document tuple does not contain all of the required columns. An exception is also raised if a column does not conform to its corresponding required type.
 -   When the `require document with columns` statement is present inside a module, every column of the special view `Document` that is referenced must be declared in at least one of the `require document with columns` statements. The statement can be found in different AQL files within the same module. However, all such `require document with columns` statements would be merged at the level of the module to form a module-wide `require document with columns` statement.
 
 ### Examples
+{: #aql-reference-examples-6}
 
 **Example 1: Require document statement with similar column types**
 
@@ -998,6 +1004,7 @@ create view <viewname\> as  (<select or extract statement\>) minus (<select or e
     -   Two `ScalarLists` are `union` or `minus` compatible regardless of the underlying scalar type.
 
 ### Examples
+{: #aql-reference-examples-7}
 
 **Example 1: Creating a view with a select or extract statement**
 
@@ -1176,6 +1183,7 @@ output view Person as 'PersonAlias';
 
 
 ### Examples
+{: #aql-reference-examples-8}
 
 The following examples contain two modules, personModuleFrench and personModuleEnglish. Each module outputs a view, named PersonNameFrench and PersonNameEnglish. Suppose that there are similar modules, each of which outputs views that are semantic variants of an extractor for person names. These modules are customized for different languages with the variance in the customization of this view for a specified input language. Eventually, a user might want a program to use modules where the sought output view is name PersonName, irrespective of the modules that are processed. This expectation is normal, since each module that is customized for a language, domain, or another purpose is expected to produce various results. The consumer of these modules does not need to alter the algorithm of their program to accommodate for varying output view names when the underlying semantics are similar.
 
@@ -1285,6 +1293,7 @@ The semantics of the `from` clause of an `extract pattern` statement are differe
 In the special case of `extract pattern` statements, the `from` clause is a placeholder that declares the names of relations that are involved in the pattern specification. The semantics of the statement are driven only by the pattern specification. In particular, the output of the statement can be non-empty even when some of the input views are empty.
 
 ### Examples
+{: #aql-reference-examples-9}
 
 **Example 1: Extracting phone numbers from a pre-defined view**
 
@@ -1475,6 +1484,7 @@ on <token spec>] <name>.<column>
     -   Use token constraints in your regular expression extraction specifications when possible.
 
 ### Examples
+{: #aql-reference-examples-10}
 
 **Example 1: Using canonical Unicode equivalence to determine matches**
 
@@ -1536,6 +1546,7 @@ from Document D;
 ```
 
 ## Dictionaries
+{: #aql-reference-dictionaries}
 
 Use the dictionary extraction specification to extract strings from input text that are contained in a dictionary of strings.
 
@@ -1583,6 +1594,7 @@ If no flag is specified, the dictionary will match based on any flag that was sp
 
 
 ### Examples
+{: #aql-reference-examples-11}
 
 **Example 1: Extracting terms from dictionary files**
 
@@ -1694,6 +1706,7 @@ The splitting algorithm works in two passes over the input view. The first pass 
 
 
 ### Examples
+{: #aql-reference-examples-12}
 
 **Example 1: Split points and the `retain` clause**
 
@@ -1790,6 +1803,7 @@ blocks
 -   An `extract` statement with block extraction specification yields blocks that each consist of an aggregation of values of a certain field from across multiple input tuples. Therefore, its select list cannot include fields from its input view.
 
 ### Examples
+{: #aql-reference-examples-13}
 
 **Example 1: Extract blocks of words within a character range**
 
@@ -2241,6 +2255,7 @@ For Turkish, the Multilingual tokenizer uses the part-of-speech tags that are li
 |`UKW`|Unknown|
 
 ### Examples
+{: #aql-reference-examples-14}
 
 **Example 1: Using a part of speech tag directly in an extract statement**
 
@@ -2457,7 +2472,7 @@ Specifically, an Atom can have six formats:
 ### Usage notes
 
 -   The semantics of an `extract pattern` statement is driven by the pattern specification. Each match constructs an output result according to the return clause of the pattern specification and the select list at the top of the `extract` statement. The results are filtered and consolidated according to the `having`, `consolidate`, and `limit` clauses of the extract statement. If there are multiple overlapping matches for the pattern specification, a pattern extraction outputs all possible matches. Use consolidation to filter redundant outputs.
--   The semantics of the `from` clause of an `extract pattern` statement are different from other forms of `extract` statements that do not have a pattern specification. The general semantics of an `extract` statement require that the extraction specification is evaluated over each combination of the views that are defined in the `<from list\>`. If at least one of the views in the `<from list\>` does not contain any results on a particular document, then the output of the extract statement is empty because the set of all combinations of results in the input views is empty. In the special case of extract pattern statements, the from clause is a placeholder that declares the names of relations that are involved in the pattern specification. The semantics of the statement are driven only by the pattern specification. In particular, the output of the statement can be non-empty even when some of the input views are empty.
+-   The semantics of the `from` clause of an `extract pattern` statement are different from other forms of `extract` statements that do not have a pattern specification. The general semantics of an `extract` statement require that the extraction specification is evaluated over each combination of the views that are defined in the `<from list\>`. If at least one of the views in the `<from list\>` does not contain any results on a particular document, then the output of the extract statement is empty because the set of all combinations of results in the input views is empty. In the special case of extract pattern statements, the from clause is a placeholder that declares the names of relations that are involved in the pattern specification. The semantics of the statement are driven only by the pattern specification. In particular, the output of the statement can be non-empty even when some of the input views are empty.
 -   An `extract` statement that uses sequence pattern extraction can carry forward the columns of any view in the `from` list, but only if the view name does not appear in a repeat element of the pattern specification. For example, the statement `CapsWordOneToThree` results in a compilation error. The error occurs because the carried forward column `CW.type` at the top of the `extract` statement belongs to the view name `CW`, which is in the repeat element `<CW.word>{1,3}` of the pattern specification.
 
     ```
@@ -2490,6 +2505,7 @@ Specifically, an Atom can have six formats:
 
 
 ### Examples
+{: #aql-reference-examples-15}
 
 **Example 1: Sequence pattern with capturing groups**
 
@@ -2635,6 +2651,7 @@ The semantics of the `select` statement are as follows:
 -   If the optional `limit` clause is present, limit the number of output tuples to the specified number of tuples for each document.
 
 ### Examples
+{: #aql-reference-examples-16}
 
 An example of how to use the `select` statement is to extract phone numbers that match a pattern. Assume that the `PhoneNumbers` view that extracts phone numbers of the pattern XXX-XXX-XXXX for United States is already defined. This `select` statement evaluates the regular expression for the pattern 444-888-XXXX across the input text. The view has the output columns `documentText` and `phoneNumber`. In addition, the output is limited to the first occurrence of this phone number pattern that is identified per document.
 
@@ -2773,6 +2790,7 @@ select
 
 
 ### Examples
+{: #aql-reference-examples-17}
 
 The following examples illustrate various forms of the select list.
 
@@ -2880,6 +2898,7 @@ from <from list item> <name>  [, <from list item> <name>]
 
 
 ### Examples
+{: #aql-reference-examples-18}
 
 **Example 1: A from list with a view and a nested statement**
 
@@ -2948,6 +2967,7 @@ select <select list>
 
 
 ### Examples
+{: #aql-reference-examples-19}
 
 **Example 1: Filter out joined tuples by using a predicate in the WHERE clause**
 
@@ -3063,6 +3083,7 @@ consolidate on <target>
 -   Consolidate treats nulls as identical. All inputs with a null `<consolidate target\>` result in a single output tuple, which is chosen randomly among those inputs. This behavior is similar to how tuples are consolidated with an identical span in the target column. The exception to resulting in a single output tuple is if the policy is ContainsButNotEqual. In that case, the null `<consolidate target\>` outputs all inputs with null consolidate target.
 
 ### Examples
+{: #aql-reference-examples-20}
 
 **Example 1: Consolidate on single column**
 
@@ -3140,6 +3161,7 @@ from <from list>
 
 
 ### Examples
+{: #aql-reference-examples-21}
 
 **Example 1: Computing aggregate values**
 
@@ -3220,6 +3242,7 @@ select ...
 
 
 ### Examples
+{: #aql-reference-examples-22}
 
 **Example 1: Order by multiple expressions**
 
@@ -3250,6 +3273,7 @@ select <select list>
 
 
 ### Examples
+{: #aql-reference-examples-23}
 
 **Example 1: Limiting the number of returns**
 
@@ -3291,6 +3315,7 @@ from <from list>
 
 
 ### Examples
+{: #aql-reference-examples-24}
 
 **Example 1: Defining a view**
 
@@ -3380,6 +3405,7 @@ detag <input view name>.<text column>
 
 
 ### Examples
+{: #aql-reference-examples-25}
 
 **Example 1: Specifying the detag output view and an auxiliary view**
 
@@ -3629,6 +3655,7 @@ The internal create dictionary statement has three syntactical forms, `from file
 
 
 ### Examples
+{: #aql-reference-examples-26}
 
 **Example 1: Creating an external dictionary**
 
@@ -3715,6 +3742,7 @@ create table <table name> (
 
 
 ### Examples
+{: #aql-reference-examples-27}
 
 **Example 1: Creating a table of company names**
 
@@ -3836,6 +3864,7 @@ The following table shows the differences between the `create external table` st
 |<ul><li>Defines a placeholder for a table whose content is supplied at initialization time.</li></ul>|<ul><li>Requires that the content of the table is available at compile time.</li><li>Serialized in the compiled representation \(.tam\) of a module.</li></ul>|
 
 ### Examples
+{: #aql-reference-examples-28}
 
 **Example 1: Creating an external table that is populated at load time**
 
@@ -3919,6 +3948,7 @@ external_name '<view_external_name>';
 
 
 ### Examples
+{: #aql-reference-examples-29}
 
 To illustrate external views, consider an example application that requires that you identify the names of persons in email messages.
 
@@ -4052,7 +4082,7 @@ The `argument` can be:
 |Aggregate function|Argument type|Return type|Return value|
 |------------------|-------------|-----------|------------|
 |Avg\(expression\)|Integer, Float|Float|The average of all input values or null if no rows are selected|
-|Count\(\*\)| |Integer|The number of all input rows|
+|Count\(\*\)| |Integer|The number of all input rows|
 |Count\(expression\)|Any|Integer|The number of all non-null input values|
 |List\(expression\)|Integer, Float, Text, Span|List of scalar values of the same type as the input argument|An unordered list of non-null input values: a bag, not a set, hence might contain duplicates. An empty list if only null values are selected|
 |Max\(expression\)|Integer, Float, Text, Span|Same as the argument type|The maximum element across all input values or null if no rows are selected|
@@ -4064,6 +4094,7 @@ The `argument` can be:
 The current version of AQL supports the creation of scalar values through the `aggregate` function List.
 
 ### Examples
+{: #aql-reference-examples-30}
 
 The following example illustrates how aggregate functions can count the number of person name annotations, or compute sets of first names that are associated with each distinct last name identified in a document:
 
@@ -4923,6 +4954,7 @@ The compiled representation of a module \(the .tam file\) contains the serialize
 4.  Export them all with `export function` statements so that they can be imported and used in other modules.
 
 ### Examples
+{: #aql-reference-examples-31}
 
 **Example 1: Implementing a scalar UDF**
 
@@ -5197,6 +5229,7 @@ This schema information is necessary because the PMML and AQL type systems do no
 The AQL compiler will check the input schema against the input schema of the PMML file to ensure that the two schemas are compatible. If the two schemas contain fields with the same name but incompatible types, compilation will fail with an appropriate error message. If the function’s input or output schemas contain extra or missing columns, the `resulting` function will ignore these columns and will not generate an error. The order of column names can be different between the AQL definition and the PMML file. If a column name appears in both input and output schemas but not in the PMML schema, then the values of that column will be passed through to the output of the function.
 
 ### Examples
+{: #aql-reference-examples-32}
 
 **Example 1: Declaring scalar UDFs with scalar values as input using Java**
 
@@ -5422,6 +5455,7 @@ User-defined scalar functions work in conjunction with AQL statements and clause
 User-defined table functions \(table UDFs\) can be used within the `from` clause of a `select` statement or an `extract` statement.
 
 ### Examples
+{: #aql-reference-examples-33}
 
 **Example 1: Using scalar UDFs implemented in Java with scalar values as input**
 
