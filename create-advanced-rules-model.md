@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-10-31"
+lastupdated: "2019-11-26"
 
 subcollection: watson-knowledge-studio
 
@@ -92,3 +92,10 @@ Advanced rules models are comprised of text extractors that you design in the ad
     1. In the **Extractors** pane, right-click an extractor category, or right-click a single view under an extractor category. Click **Export**.
     1. If you want the model to be able to analyze HTML content and output spans over the HTML tags in {{site.data.keyword.nlushort}}, select **Enable Detagging**.
     1. Enter the **Name of file**, then click **OK**.
+    
+### Uploading an advanced rules model to other services
+{: #uploading-to-other-services}
+
+After you export an advanced rules model, you can upload it to {{site.data.keyword.nlushort}}. See the following page for more details.
+
+- {{site.data.keyword.nlushort}}: [Customizing > Analyzing text with advanced rules (Beta)](https://cloud.ibm.com/docs/services/natural-language-understanding?topic=natural-language-understanding-customizing#advanced-rules)
