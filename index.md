@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-11-26"
 
 subcollection: watson-knowledge-studio
 
@@ -62,6 +62,16 @@ See [Creating a machine learning model](/docs/services/watson-knowledge-studio?t
 
 See [Creating a rule-based model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-rule-annotator) for more details.
 
+## Analyze text with advanced rules
+{: #advanced-rules}
+
+The advanced rules feature is Beta. The feature is in a trial stage of development and is not recommended for use in production environments.
+{: note}
+
+The visual advanced rules editor allows you to create text extractors with deeper customization potential than what is available in the entities and relations rules editor. A number of sample extractors are provided such as *Finance Actions* extractors and *Parts of Speech* extractors that can be edited and combined to create your own advanced rules model. You can analyze documents directly in the editor, or you can export your model to use with other services such as [{{site.data.keyword.nlushort}}](/docs/services/natural-language-understanding).
+
+To get started, see [Creating an advanced rules model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-create-advanced-rules-model).
+
 ## Identify custom categories
 {: #categories}
 
@@ -70,7 +80,7 @@ The custom categories feature is experimental. The feature is subject to change 
 
 With a categories workspace, you can define a hierarchy of custom content categories and provide relevant key phrases that the service will use to categorize text content. You can deploy a custom categories model to use instead of the [standard categories](/docs/services/natural-language-understanding?topic=natural-language-understanding-categories-hierarchy) offered by {{site.data.keyword.nlushort}} and {{site.data.keyword.discoveryshort}}.
 
-To learn how to use custom categories, see [Creating a custom categories model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-create-categories-model)
+To learn how to use custom categories, see [Creating a custom categories model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-create-categories-model).
 
 ## Watson services integration
 {: #wks_watsoninteg}
