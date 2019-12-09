@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-09-19"
+lastupdated: "2019-12-09"
 
 subcollection: watson-knowledge-studio
 
@@ -27,6 +27,26 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 
 The following new features and changes to {{site.data.keyword.knowledgestudiofull}} are available.
 {: shortdesc}
+
+## December 2019
+{: #december-2019}
+
+### New features and changes
+{: #new-december-2019}
+
+- **New {{site.data.keyword.knowledgestudioshort}} URLs**: On 12 December 2019, {{site.data.keyword.knowledgestudioshort}} URLs will begin automatically redirecting to the following new URLs. These URLs do not introduce a breaking change. The new URLs work both for your existing service instances and for new instances. The original URLs continue to work on your existing service instances for at least one year (until December 2020).
+
+| Region | Old | New |
+|--|--|--|
+| Dallas | `gateway.watsonplatform.net` | `us-south.knowledge-studio.watson.cloud.ibm.com` |
+| Frankfurt | `gateway-fra.watsonplatform.net` | `eu-de.knowledge-studio.watson.cloud.ibm.com` |
+| Sydney | `gateway-syd.watsonplatform.net` | `au-syd.knowledge-studio.watson.cloud.ibm.com` |
+| Washington, D.C. | `gateway-wdc.watsonplatform.net` | `us-east.knowledge-studio.watson.cloud.ibm.com` |
+| Tokyo | `gateway-tok.watsonplatform.net` | `jp-tok.knowledge-studio.watson.cloud.ibm.com` |
+| London | `gateway-lon.watsonplatform.net` | `eu-gb.knowledge-studio.watson.cloud.ibm.com` |
+| Seoul | `gateway-seo.watsonplatform.net` | `kr-seo.knowledge-studio.watson.cloud.ibm.com` |
+
+- **Custom categories deprecation**: The experimental custom categories feature is deprecated and will be retired on 17 December 2019. Access to custom categories models will not be available after that date.
 
 ## November 2019
 {: #november-2019
