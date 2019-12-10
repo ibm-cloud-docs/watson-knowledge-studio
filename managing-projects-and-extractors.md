@@ -22,14 +22,14 @@ subcollection: watson-knowledge-studio
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Managing projects and extractors
+# Managing advanced rules projects and extractors
 {: #managing-projects-and-extractors}
 
 In the advanced rules editor, use projects to organize your extractors and sample documents.
 {: shortdesc}
 
 ## Before you begin
-{: #managinge-projects-and-extractors-before-you-begin}
+{: #managing-projects-and-extractors-before-you-begin}
 
 Advanced rules workspaces are available only in {{site.data.keyword.knowledgestudioshort}} instances hosted in the **Dallas** or **Frankfurt** locations.
 {: note}
