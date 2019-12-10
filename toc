@@ -26,7 +26,6 @@ Watson Knowledge Studio
 
     {: topicgroup}
     Advanced rules reference
-        managing-projects-and-extractors.md
         aql-reference.md
     glossary.md
     language-support.md
@@ -67,6 +66,7 @@ Watson Knowledge Studio
         improve-ml.md
         publish-ml.md
         
+    managing-projects-and-extractors.md
     deploy-categories-model.md
     user-guide.md
     backup-restore.md
