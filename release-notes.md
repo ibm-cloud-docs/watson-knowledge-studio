@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-12-09"
+lastupdated: "2019-12-12"
 
 subcollection: watson-knowledge-studio
 
@@ -34,19 +34,32 @@ The following new features and changes to {{site.data.keyword.knowledgestudioful
 ### New features and changes
 {: #new-december-2019}
 
-- **New {{site.data.keyword.knowledgestudioshort}} URLs**: On 12 December 2019, {{site.data.keyword.knowledgestudioshort}} URLs will begin automatically redirecting to the following new URLs. These URLs do not introduce a breaking change. The new URLs work both for your existing service instances and for new instances. The original URLs continue to work on your existing service instances for at least one year (until December 2020).
+- **Full support for IBM Cloud IAM**
 
-| Region | Old | New |
-|--|--|--|
-| Dallas | `gateway.watsonplatform.net` | `us-south.knowledge-studio.watson.cloud.ibm.com` |
-| Frankfurt | `gateway-fra.watsonplatform.net` | `eu-de.knowledge-studio.watson.cloud.ibm.com` |
-| Sydney | `gateway-syd.watsonplatform.net` | `au-syd.knowledge-studio.watson.cloud.ibm.com` |
-| Washington, D.C. | `gateway-wdc.watsonplatform.net` | `us-east.knowledge-studio.watson.cloud.ibm.com` |
-| Tokyo | `gateway-tok.watsonplatform.net` | `jp-tok.knowledge-studio.watson.cloud.ibm.com` |
-| London | `gateway-lon.watsonplatform.net` | `eu-gb.knowledge-studio.watson.cloud.ibm.com` |
-| Seoul | `gateway-seo.watsonplatform.net` | `kr-seo.knowledge-studio.watson.cloud.ibm.com` |
+    - {{site.data.keyword.knowledgestudioshort}} now supports the full implementation of {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM). API keys for Watson services are no longer limited to a single service instance. You can create access policies and API keys that apply to more than one service, and you can grant access between services.
+    - To support this change, the API service endpoints use a different domain and include the service instance ID. The pattern is `api.{location}.{offering}.watson.cloud.ibm.com/instances/{instance_id}`.
 
+        | Region | Old | New |
+        |--|--|--|
+        | Dallas | `gateway.watsonplatform.net` | `us-south.knowledge-studio.watson.cloud.ibm.com` |
+        | Frankfurt | `gateway-fra.watsonplatform.net` | `eu-de.knowledge-studio.watson.cloud.ibm.com` |
+        | Sydney | `gateway-syd.watsonplatform.net` | `au-syd.knowledge-studio.watson.cloud.ibm.com` |
+        | Washington, D.C. | `gateway-wdc.watsonplatform.net` | `us-east.knowledge-studio.watson.cloud.ibm.com` |
+        | Tokyo | `gateway-tok.watsonplatform.net` | `jp-tok.knowledge-studio.watson.cloud.ibm.com` |
+        | London | `gateway-lon.watsonplatform.net` | `eu-gb.knowledge-studio.watson.cloud.ibm.com` |
+        | Seoul | `gateway-seo.watsonplatform.net` | `kr-seo.knowledge-studio.watson.cloud.ibm.com` |
+
+        The previous public endpoint domain was `watsonplatform.net`.
+
+        These URLs do not introduce a breaking change. The new URLs work both for your existing service instances and for new instances. The original URLs continue to work on your existing service instances for at least one year (until December 2020).
+    - For more information about IAM, see [Authenticating to Watson services](/docs/services/watson?topic=watson-iam).
+- **New network and data security features**
+    - **Support for data encryption with customer-managed keys**
+        - Users of new premium and dedicated instances can integrate {{site.data.keyword.keymanagementservicefull}} with {{site.data.keyword.knowledgestudioshort}} to encrypt their data and manage encryption keys. For more information, see [Protecting sensitive information in your Watson service](/docs/watson?topic=watson-keyservice).
+    - **Support for private network endpoints**
+        - Users of Premium plans can create private network endpoints to connect to {{site.data.keyword.knowledgestudioshort}} over a private network. Connections to private network endpoints do not require public internet access. For more information, see [Public and private network endpoints](/docs/watson?topic=watson-public-private-endpoints).
 - **Custom categories deprecation**: The experimental custom categories feature is deprecated and will be retired on 17 December 2019. Access to custom categories models will not be available after that date.
+
 
 ## November 2019
 {: #november-2019
