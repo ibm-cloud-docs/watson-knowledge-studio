@@ -56,12 +56,12 @@ The following new features and changes to {{site.data.keyword.knowledgestudioful
 
 - **New network and data security features**
     - **Support for data encryption with customer-managed keys**
-        - Users of new premium and dedicated instances can integrate {{site.data.keyword.keymanagementservicefull}} with {{site.data.keyword.knowledgestudioshort}} to encrypt their data and manage encryption keys. For more information, see [Protecting sensitive information in your Watson service](/docs/watson?topic=watson-keyservice).
+      
+      Users of new premium and dedicated instances can integrate {{site.data.keyword.keymanagementservicefull}} with {{site.data.keyword.knowledgestudioshort}} to encrypt their data and manage encryption keys. For more information, see [Protecting sensitive information in your Watson service](/docs/watson-knowledge-studio?topic=watson-keyservice).
     - **Support for private network endpoints**
-        - Users of Premium plans can create private network endpoints to connect to {{site.data.keyword.knowledgestudioshort}} over a private network. Connections to private network endpoints do not require public internet access. For more information, see [Public and private network endpoints](/docs/watson?topic=watson-public-private-endpoints).
+      
+      Users of Premium plans can create private network endpoints to connect to {{site.data.keyword.knowledgestudioshort}} over a private network. Connections to private network endpoints do not require public internet access. For more information, see [Public and private network endpoints](/docs/watson-knowledge-studio?topic=watson-public-private-endpoints).
 - **Custom categories deprecation**: The experimental custom categories feature is deprecated and will be retired on 17 December 2019. Access to custom categories models will not be available after that date.
-
-
 
 ## November 2019
 {: #november-2019
