@@ -65,7 +65,8 @@ Watson Knowledge Studio
         evaluate-ml.md
         improve-ml.md
         publish-ml.md
-        
+    
+    enabling-cross-sentence-relations.md
     managing-projects-and-extractors.md
     deploy-categories-model.md
     user-guide.md
