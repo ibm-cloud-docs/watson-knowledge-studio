@@ -34,6 +34,8 @@ The following new features and changes to {{site.data.keyword.knowledgestudioful
 ### New features and changes
 {: #new-december-2019}
 
+- **Cross-sentence relations (Experimental)**: English entities and relations workspaces can now support annotating relations between entities within spans of six sentences. To get started, see [Enabling cross-sentence relations](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-enabling-cross-sentence-relations).
+
 - **Full support for IBM Cloud IAM**
 
     - {{site.data.keyword.knowledgestudioshort}} now supports the full implementation of {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM). API keys for Watson services are no longer limited to a single service instance. You can create access policies and API keys that apply to more than one service, and you can grant access between services.
