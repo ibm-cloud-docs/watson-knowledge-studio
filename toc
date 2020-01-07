@@ -11,7 +11,6 @@ Watson Knowledge Studio
         tutorials-create-ml-model.md
         tutorials-create-rule-model.md
         tutorials-bootstrap-annotation.md
-        create-categories-model.md
         create-advanced-rules-model.md
 
     index.md
@@ -68,7 +67,6 @@ Watson Knowledge Studio
     
     enabling-cross-sentence-relations.md
     managing-projects-and-extractors.md
-    deploy-categories-model.md
     user-guide.md
     backup-restore.md
     client-migration.md
