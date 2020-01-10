@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-09-11"
+  years: 2015, 2020
+lastupdated: "2020-01-09"
 
 subcollection: watson-knowledge-studio
 
@@ -469,7 +469,7 @@ For each stage of the model development process, this table summarizes the typic
           <p>1,000 characters per regular expression entry</p>
         </li>
         <li>
-          <p>5 rule-based model versions per workspace</p>
+          <p>10 rule-based model versions per workspace</p>
         </li>
       </ul>
     </td>
