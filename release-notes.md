@@ -38,7 +38,7 @@ The following new features and changes to {{site.data.keyword.knowledgestudioful
 
 - **Service URL changes**
 
-    - To support {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM), the API service endpoints use a different domain and include the service instance ID. The pattern is `api.{location}.{offering}.watson.cloud.ibm.com/instances/{instance_id}`.
+    - The service endpoints have changed to use a different domain and include the service instance ID. The pattern is `api.{location}.{offering}.watson.cloud.ibm.com/instances/{instance_id}`.
 
         The previous public endpoint domain was `watsonplatform.net`.
 
