@@ -82,6 +82,7 @@ The following new features and changes to {{site.data.keyword.knowledgestudioful
 ### New features and changes
 {: #new-september-2019}
 
+- Increased the maximum number of rule-based model versions per workspace from 5 to 10.
 - Updated the visual style of the {{site.data.keyword.knowledgestudioshort}} application.
 
 ## July 2019
