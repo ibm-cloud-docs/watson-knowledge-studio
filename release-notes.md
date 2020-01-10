@@ -36,11 +36,9 @@ The following new features and changes to {{site.data.keyword.knowledgestudioful
 
 - **Cross-sentence relations (Experimental)**: English entities and relations workspaces can now support annotating relations between entities within spans of six sentences. To get started, see [Enabling cross-sentence relations](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-enabling-cross-sentence-relations).
 
-- **Full support for IBM Cloud IAM**
+- **Service URL changes**
 
-    - {{site.data.keyword.knowledgestudioshort}} now supports the full implementation of {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM). API keys for Watson services are no longer limited to a single service instance. You can create access policies and API keys that apply to more than one service, and you can grant access between services.
-    - For more information about IAM, see [Authenticating to Watson services](/docs/services/watson?topic=watson-iam).
-    - To support this change, the API service endpoints use a different domain and include the service instance ID. The pattern is `api.{location}.{offering}.watson.cloud.ibm.com/instances/{instance_id}`.
+    - To support {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM), the API service endpoints use a different domain and include the service instance ID. The pattern is `api.{location}.{offering}.watson.cloud.ibm.com/instances/{instance_id}`.
 
         The previous public endpoint domain was `watsonplatform.net`.
 
@@ -57,9 +55,6 @@ The following new features and changes to {{site.data.keyword.knowledgestudioful
 | Seoul | `gateway-seo.watsonplatform.net` | `kr-seo.knowledge-studio.watson.cloud.ibm.com` |
 
 - **New network and data security features**
-    - **Support for data encryption with customer-managed keys**
-      
-      Users of new premium and dedicated instances can integrate {{site.data.keyword.keymanagementservicefull}} with {{site.data.keyword.knowledgestudioshort}} to encrypt their data and manage encryption keys. For more information, see [Protecting sensitive information in your Watson service](/docs/watson-knowledge-studio?topic=watson-keyservice).
     - **Support for private network endpoints**
       
       Users of Premium plans can create private network endpoints to connect to {{site.data.keyword.knowledgestudioshort}} over a private network. Connections to private network endpoints do not require public internet access. For more information, see [Public and private network endpoints](/docs/watson-knowledge-studio?topic=watson-public-private-endpoints).
