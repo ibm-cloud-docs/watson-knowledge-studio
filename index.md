@@ -72,16 +72,6 @@ The visual advanced rules editor allows you to create text extractors with deepe
 
 To get started, see [Creating an advanced rules model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-create-advanced-rules-model).
 
-## Identify custom categories
-{: #categories}
-
-The custom categories feature is experimental. The feature is subject to change or be discontinued with short notice. It is not recommended to use custom categories in production environments.
-{: note}
-
-With a categories workspace, you can define a hierarchy of custom content categories and provide relevant key phrases that the service will use to categorize text content. You can deploy a custom categories model to use instead of the [standard categories](/docs/services/natural-language-understanding?topic=natural-language-understanding-categories-hierarchy) offered by {{site.data.keyword.nlushort}} and {{site.data.keyword.discoveryshort}}.
-
-To learn how to use custom categories, see [Creating a custom categories model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-create-categories-model).
-
 ## Watson services integration
 {: #wks_watsoninteg}
 
