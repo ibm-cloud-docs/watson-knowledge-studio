@@ -34,6 +34,18 @@ The following new features and changes to {{site.data.keyword.knowledgestudioful
 ### New features and changes
 {: #new-december-2019}
 
+- **New advanced rules tokenizer** Advanced rules has introduced a new tokenizer which is not compatible with the previous one. The following extractor categories are affected:
+  - **Parts of Speech** extractor names are renamed automatically
+    - **Cardinal** is renamed to **Numeral**
+    - **Preposition** is renamed to **Adposition**
+  - **Machine Data Analytics** Splitter extractors have been removed and will disappear from the canvas. There is no substitute for these extractors that is provided by the new tokenizer.
+    - Generic Splitters:
+      - **Date Time Splitter**
+      - **Day First Splitter**
+      - **Month First Splitter**
+      - **Year First Splitter**
+    - Syslog Splitter:
+      - **Date Time Splitter**  
 - **Cross-sentence relations (Experimental)**: English entities and relations workspaces can now support annotating relations between entities within spans of six sentences. To get started, see [Enabling cross-sentence relations](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-enabling-cross-sentence-relations).
 
 - **Service URL changes**
