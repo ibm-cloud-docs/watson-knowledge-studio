@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-07-17"
+lastupdated: "2019-12-10"
 
 subcollection: watson-knowledge-studio
 
@@ -23,10 +23,10 @@ subcollection: watson-knowledge-studio
 # {{site.data.keyword.cloudaccesstrailshort}} events
 {: #activity-tracker-events}
 
-Use the {{site.data.keyword.at_full}} service to track how users and applications interact with {{site.data.keyword.knowledgestudioshort}} in {{site.data.keyword.cloud}}. 
+Use the {{site.data.keyword.cloudaccesstrailfull}} service to track how users and applications interact with {{site.data.keyword.knowledgestudioshort}} in {{site.data.keyword.cloud}}. 
 {: shortdesc}
 
-The {{site.data.keyword.at_full_notm}} service records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. For more information, see the [{{site.data.keyword.at_full_notm}}](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started) documentation.
+The {{site.data.keyword.cloudaccesstrailfull_notm}} service records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. For more information, see the [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started-with-cla) documentation.
 
 <!-- You can create different sections to group events by area. -->
 
@@ -40,8 +40,9 @@ The {{site.data.keyword.at_full_notm}} service records user-initiated activities
 | `knowledge-studio.user.create` | Add or activate a user from the **Service Details** page | 
 | `knowledge-studio.user.update` | Edit a user and click **Apply** from the **Service Details** page (This includes both changing role and description)| 
 | `knowledge-studio.user.delete` | Deactivate a user from the **Service Details** page | 
-| `knowledge-studio.document.create` | Import documents from the **Documents** page | 
-| `knowledge-studio.document.delete` | Delete a single document or document set from the **Documents** page | 
+| `knowledge-studio.document-set.create` | Import documents from the **Documents** page | 
+| `knowledge-studio.document.delete` | Delete a single document from the **Documents** page | 
+| `knowledge-studio.document-set.delete` | Delete documents by document set from the **Documents** page | 
 | `knowledge-studio.rule-document.create` | Create a rule document (Mutliple IDs are created if a *.csv* file is imported)| 
 | `knowledge-studio.rule-document.update` | Update a rule document | 
 | `knowledge-studio.rule-document.delete` | Delete a rule document | 
@@ -60,7 +61,6 @@ The {{site.data.keyword.at_full_notm}} service records user-initiated activities
 {: #where-to-view-events}
 
 {{site.data.keyword.cloudaccesstrailshort}} events are available in the {{site.data.keyword.cloudaccesstrailshort}} **account domain** that is available in the {{site.data.keyword.cloud_notm}} region where the events are generated.
-
 
 
 
