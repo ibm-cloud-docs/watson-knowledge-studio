@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-09-17"
+  years: 2015, 2020
+lastupdated: "2020-01-30"
 
 subcollection: watson-knowledge-studio
 
@@ -158,6 +158,13 @@ To prevent {{site.data.keyword.knowledgestudioshort}} from using client data, yo
 For Premium plans and Dedicated accounts, {{site.data.keyword.knowledgestudioshort}} does not use client data to improve the service.
 
 For more information, see the latest [{{site.data.keyword.knowledgestudioshort}} service description ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/software/sla/sladb.nsf/searchsaas/?searchview&searchorder=4&searchmax=0&query=Knowledge+Studio){: new_window}.
+
+## Beta services and features: What does *Beta* mean?
+{: #beta}
+
+IBM releases Beta services and features for you to try out. These services are in a trial stage of development. These services and features are not recommended for use in production environments.
+
+For more information about Beta services, see the [{{site.data.keyword.cloud_notm}} documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/docs/get-support?topic=get-support-support-different-services#s-services-betaorcont){: new_window}. For the full details of Beta services, see the latest version of the [{{site.data.keyword.cloud_notm}} Service Description ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/software/sla/sladb.nsf/sla/bm?OpenDocument){: new_window}.
 
 ## Experimental services and features: What does *experimental* mean?
 {: #experimental}
