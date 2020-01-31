@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-07-19"
+  years: 2015, 2020
+lastupdated: "2020-01-31"
 
 subcollection: watson-knowledge-studio
 
@@ -197,7 +197,7 @@ To add a dictionary to your workspace:
 
     You can upload a ZIP file that contains a dictionary that you downloaded from another {{site.data.keyword.knowledgestudioshort}} workspace. You must upload the type system that was downloaded from the other workspace in JSON format before you can upload the corresponding dictionary file. You can edit and add entries to a dictionary that you reuse from another {{site.data.keyword.knowledgestudioshort}} workspace. See [Uploading resources from another workspace](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-exportimport) for more details.
 
-    Uploading a CSV file is also supported, but uploading it directly as a dictionary creates a preview-only dictionary that you cannot edit or use to pre-annotate documents. To upload a CSV file that you can edit and use for pre-annotation, click **Create Dictionary** to first create an empty dictionary, and then upload the CSV content as entries to that newly created dictionary.
+    Uploading a CSV file is also supported, but uploading it directly as a dictionary creates a preview-only dictionary that you cannot edit or download. To upload a CSV file that you can edit and download, click **Create Dictionary** to first create an empty dictionary, and then upload the CSV content as entries to that newly created dictionary.
 
     - Click the **Create Dictionary** button to create an empty dictionary to which you can subsequently add dictionary entries. Specify a descriptive name for the dictionary, and then click **Save**.
 
