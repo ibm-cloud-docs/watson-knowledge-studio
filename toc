@@ -22,10 +22,7 @@ Watson Knowledge Studio
     {: .navgroup id="reference"}
     [Accessibility](/overview/overview-accessibility-platform#features-platform)
     activity-tracker-events.md
-
-    {: topicgroup}
-    Advanced rules reference
-        aql-reference.md
+    aql-reference.md
     glossary.md
     language-support.md
     information-security.md
