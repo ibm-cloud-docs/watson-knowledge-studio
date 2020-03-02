@@ -164,7 +164,7 @@ For best performance, use long or complex mapping tables in a second step, after
 
 For exact matches to a single term or phrase such as `white-tailed deer` or `Congress` use a literal.
 
-1. Click the **New Literal** ![New Literal]("New Literal icon") icon on the canvas toolbar. This adds a new literal to the canvas.
+1. Click the **New Literal** ![New Literal](images/new_literal.png "New Literal icon") icon on the canvas toolbar. This adds a new literal to the canvas.
 2. In the new literal on the canvas, enter the string of text that you want to match. For example, `white-tailed deer`.
 
 ### Creating a regular expression
@@ -266,7 +266,7 @@ You might want to locate references to red brick houses, knowing that phrases su
 **Example 1:**
 
 1. Create a dictionary called `Clerical title` that includes terms such as `Rabbi`, `Father`, and `Archbishop`.
-2. Drag the **Person** extractor to right side of the **Clerical title** dictionary so that the new sequence will find titles followed by names. When you release the mouse button, a sequence object is displayed on the canvas.
+2. Drag the **Person** extractor to right side of the **Clerical title** dictionary so that the new sequence will find titles followed by names. When you release the mouse button, a sequence object is displayed on the canvas.
 3. Right-click **Clerical title** and click **Add After > Proximity Rule**. To capture terms such as `Archbishop of Canterbury`, `Robert Runcie`, specify the minimum and maximum number of tokens between words, in this case `0-5`.
 4. Click the sequence on the canvas and then under **Extractor Properties**, open the **General** tab if it doesn't open automatically. Rename the sequence Clerics.
 
