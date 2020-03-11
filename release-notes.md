@@ -87,6 +87,7 @@ The following new features and changes to {{site.data.keyword.knowledgestudioful
 {: #new-october-2019}
 
 - Advanced rules workspaces (Beta) are now available for service instances in **Dallas** and **Frankfurt**. Create advanced rules extractors and run them to extract text from documents that you upload to the workspace. To get started, see [Creating an advanced rules model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-create-advanced-rules-model).
+- **Dictionary suggestions:** As you add entries to a dictionary, {{site.data.keyword.knowledgestudioshort}} will search the documents in your workspace to recommend additional entries that are likely to be in the same domain.
 
 ## September 2019
 {: #september-2019}

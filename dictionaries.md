@@ -205,6 +205,7 @@ To add a dictionary to your workspace:
 
     - Click **Add Entry** to add a dictionary entry. Specify the *lemma* (the most representative word form for the term).
     - Click **Upload** to upload a `CSV` file that contains dictionary entries, and then browse to select the file. The `CSV` file must be smaller than 1MB.
+    - [Add suggested entries](#adding-dictionary-suggestions) from the list provided in the **Entry Suggestions** pane. Knowledge Studio uses the documents in your workspace and the existing entries in your dictionary to suggest new entries.
 
 1. After uploading or adding entries, you can edit the entries.
 
@@ -220,6 +221,23 @@ To add a dictionary to your workspace:
 {: #di-ne}
 
 Run the pre-annotator, which uses the dictionaries that you created to do a preliminary pass of the source documents, and adds annotations to them.
+
+## Adding dictionary suggestions
+{: #adding-dictionary-suggestions}
+
+As you add entries to your dictionary, {{site.data.keyword.knowledgestudioshort}} searches the documents in your workspace for similar dictionary entries that might be useful to you. The suggested entries are provided in the **Entry Suggestions** pane.
+
+![Entry Suggestions pane](images/entry-suggestions-pane.png)
+
+The following options available to you from the Entry Suggestions pane.
+
+- Clicking the name of a suggested entry opens a window that displays the occurrences of the term in your documents. This can help you decide whether to add or exclude a suggested entry.
+- **Add this entry** (`+`) adds the entry suggestion to your dictionary.
+- **Exclude this entry** (`-`) removes the entry from the list of suggested entries and adds it to **Excluded Terms**.
+- **Add all** adds the entire list of suggested entries to the dictionary (this does not add entries listed under **Excluded Terms**).
+- **Exclude all** moves all current entry suggestions to **Excluded Terms**.
+
+
 
 **Related tasks**:
 
