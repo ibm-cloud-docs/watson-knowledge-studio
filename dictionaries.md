@@ -225,7 +225,7 @@ Run the pre-annotator, which uses the dictionaries that you created to do a prel
 ## Adding dictionary suggestions
 {: #adding-dictionary-suggestions}
 
-As you add entries to your dictionary, Knowledge Studio searches the documents in your workspace for similar dictionary entries that might be useful to you. The suggested entries are provided in the **Entry Suggestions** pane.
+As you add entries to your dictionary, {{site.data.keyword.knowledgestudioshort}} searches the documents in your workspace for similar dictionary entries that might be useful to you. The suggested entries are provided in the **Entry Suggestions** pane.
 
 ![Entry Suggestions pane](images/entry-suggestions-pane.png)
 
