@@ -223,7 +223,7 @@ To add a dictionary to your workspace:
 Run the pre-annotator, which uses the dictionaries that you created to do a preliminary pass of the source documents, and adds annotations to them.
 
 ## Adding dictionary suggestions
-{: #adding-suggested-dictionary-entries}
+{: #adding-dictionary-suggestions}
 
 As you add entries to your dictionary, Knowledge Studio searches the documents in your workspace for similar dictionary entries that might be useful to you. The suggested entries are provided in the **Entry Suggestions** pane.
 
