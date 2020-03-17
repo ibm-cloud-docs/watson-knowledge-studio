@@ -11,6 +11,7 @@ subcollection: watson-knowledge-studio
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -22,11 +23,14 @@ subcollection: watson-knowledge-studio
 This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio?topic=knowledge-studio-wks_tutrule_intro){: new_window}.
 {: tip}
 
-# Creating a rule-based model
+# Creating a rule-based model (Experimental)
 {: #wks_tutrule_intro}
 
 This tutorial helps you understand how to create a rule-based model that you can use to find text patterns that you define in documents.
 {: shortdesc}
+
+Rule-based models are experimental. They are not recommended for use in production deployments, and support for them might be discontinued without notice.
+{: note}
 
 You will build a model that can find text in documents that matches the pattern `month day, year`. For example, the model would find the date reference *May 1, 2010*. Before you define the rule pattern itself, you will create artifacts that will help you build the pattern, including a dictionary class that recognizes month mentions and a regular expression class that recognizes year mentions in text.
 
