@@ -29,7 +29,7 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 This tutorial helps you understand how to create a rule-based model that you can use to find text patterns that you define in documents.
 {: shortdesc}
 
-Rule-based models are experimental. They are not recommended for use in production deployments, and support for them might be discontinued without notice.
+Rule-based models are experimental. They are not recommended for use in production deployments, and support for them might be discontinued with short notice.
 {: note}
 
 You will build a model that can find text in documents that matches the pattern `month day, year`. For example, the model would find the date reference *May 1, 2010*. Before you define the rule pattern itself, you will create artifacts that will help you build the pattern, including a dictionary class that recognizes month mentions and a regular expression class that recognizes year mentions in text.
