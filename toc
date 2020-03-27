@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="watson-knowledge-studio" category="ai" audience="service" href="/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutintro" path="watson-knowledge-studio"}
+{: .toc console-page="/developer/watson" product-page="https://www.ibm.com/cloud/watson-knowledge-studio/" subcollection="watson-knowledge-studio" category="ai" audience="service" href="/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutintro" path="watson-knowledge-studio"}
 Watson Knowledge Studio
 
     {: .navgroup id="learn"}
