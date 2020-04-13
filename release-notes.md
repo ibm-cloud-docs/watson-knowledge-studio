@@ -28,8 +28,8 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 The following new features and changes to {{site.data.keyword.knowledgestudiofull}} are available.
 {: shortdesc}
 
-## March 2019
-{: #march-2019}
+## March 2020
+{: #march-2020}
 
 **Enhanced pre-annotation workflow.**
   - Run multiple pre-annotators at once and configure the order of pre-annotators to resolve annotation conflicts between them. Existing pre-annotator results are preserved unless you remove them with the **Wipe** option.
