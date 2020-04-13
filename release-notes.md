@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-12-12"
+  years: 2015, 2020
+lastupdated: "2020-04-13"
 
 subcollection: watson-knowledge-studio
 
@@ -27,6 +27,13 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 
 The following new features and changes to {{site.data.keyword.knowledgestudiofull}} are available.
 {: shortdesc}
+
+## March 2019
+{: #march-2019}
+
+**Enhanced pre-annotation workflow.**
+  - Run multiple pre-annotators at once and configure the order of pre-annotators to resolve annotation conflicts between them. Existing pre-annotator results are preserved unless you remove them with the **Wipe** option.
+  - Human annotations are preserved when running pre-annotators, even when using the *Wipe* option.
 
 ## December 2019
 {: #december-2019}
