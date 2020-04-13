@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-08-13"
+  years: 2015, 2020
+lastupdated: "2020-04-13"
 
 subcollection: watson-knowledge-studio
 
@@ -30,13 +30,7 @@ Simplify the job of the human annotator by pre-annotating the documents in a wor
 
 Pre-annotation makes the job of human annotators easier because it covers the straightforward annotations, and gets the job of annotating the documents underway.
 
-The method that you use to pre-annotate documents in no way restricts the ways that you can use the resulting model. For example, just because you use the {{site.data.keyword.nlushort}} service to pre-annotate documents does not mean you must deploy the final machine learning model that you build to the {{site.data.keyword.nlushort}} service. Pre-annotation is solely meant to bootstrap the human annotation process.
-
-## Important notes
-{: #preannotation_notes}
-
-- Never run a pre-annotator on documents that human annotators have annotated because the annotations added by the human annotators will be removed.
-- You can run only one pre-annotator on documents. If you run one pre-annotator, and then run a second pre-annotator, the second pre-annotator will remove the annotations that were added by the first pre-annotator. Pick the pre-annotation method that best fits your use case, and use only that one pre-annotator.
+The method that you use to pre-annotate documents in no way restricts the ways that you can use the resulting model. For example, just because you use the {{site.data.keyword.nlushort}} service to pre-annotate documents does not mean you must deploy the final machine learning model that you build to the {{site.data.keyword.nlushort}} service.
 
 ## Pre-annotation methods
 {: #preannotation_methods}
@@ -65,6 +59,41 @@ Alternatively, you can upload already-annotated documents, and use them to start
 
 > **Note:** You *can* run a pre-annotator on documents that were added to the ground truth as part of the current workspace. Annotations that were added to the documents, reviewed, accepted, and promoted to ground truth within the current workspace are not stripped out.
 
+
+## Running multiple pre-annotators
+{: #running-pre-annotators}}
+
+{{site.data.keyword.knowledgestudioshort}} allows you to run multiple pre-annotators at once. First, you need to prepare the pre-annotation methods that you want to use. For details, see the following sections.
+
+- [{{site.data.keyword.nlushort}}](#wks_preannotnlu)
+- [Dictionaries](#wks_preannot)
+- [Machine learning model](#wks_preannotsire)
+- [Rules-based model](#wks_preannotrule)
+
+### Configuring the order of pre-annotators
+{: #preannotation-order}
+
+When multiple pre-annotators are used, the first annotation made to a span of text is saved for the results, even if other pre-annotators attempt to annotate the same span of text later in the order. This doesn't apply to human annotations, which are preserved regardless of pre-annotation order.
+
+For example, consider the example text `IBM Watson`. If a dictionary that is first in the order labels `IBM` as an `Organization` entity type, a machine learning model that is second in the order can't annotate `IBM Watson` as an `Software Brand` entity type, because that would override the earlier annotation made to `IBM`.
+
+You can view the current order of pre-annotators in the **Order** column on the **Machine Learning Model** > **Pre-annotation** page. To change the order, complete the following steps.
+
+1. Click **Order Settings**.
+1. Click the **Move up** and **Move down** arrow** buttons to move pre-annotation methods earlier or later in the order.
+1. Click **Save**. 
+1. Double check the **Order** column on the **Pre-annotation** page to make sure that it matches the order that you want.
+
+### Run pre-annotators
+{: #run-pre-annotators}
+
+1. After your pre-annotation methods are prepared and you have configured the order of your pre-annotators, click **Run Pre-annotators**.
+1. Select the pre-annotators that you want to use, then click **Next**.
+1. If you want to erase existing annotations made by pre-annotators before running the pre-annotator, select **Wipe previous pre-annotation results**. Human annotations are preserved even if this is selected.
+1. Select the document sets that you want to pre-annotate.
+1. Click **Run**.
+
+
 ## Pre-annotating documents with {{site.data.keyword.nlushort}}
 {: #wks_preannotnlu}
 
@@ -88,8 +117,8 @@ You must specify the entity types that you want the service to look for by mappi
 To use the {{site.data.keyword.nlushort}} service to pre-annotate documents, complete the following steps:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator and select your workspace.
-1. Select the **Machine Learning Model** > **Pre-annotation** > **Natural Language Understanding** tab.
-1. Click **Edit** to map each entity type that is defined on the **Entity Types** page to corresponding {{site.data.keyword.nlushort}} entity types.
+1. Go to the **Machine Learning Model** > **Pre-annotation** page.
+1. Click the overflow menu button in the Natural Language Understanding row, then click **Map entity types**.
 
     - The drop-down list of the {{site.data.keyword.nlushort}} entity types is pre-populated with entity types that are recognized by the {{site.data.keyword.nlushort}} service.
     - You must map at least one entity type.
@@ -123,9 +152,13 @@ To use the {{site.data.keyword.nlushort}} service to pre-annotate documents, com
     </table>
     {: #wks_preannotnlu__datasimpletable_cm1_y3g_fx}
 
-1. After mapping all the entity types that you want to apply, click **Apply This Pre-annotator**.
+1. After mapping all the entity types that you want to apply, go the **Machine Learning Model** > **Pre-annotation** page. Click **Run Pre-annotators**.
 
-    The **Apply This Pre-annotator** button is not available until you map at least one entity type.
+1. Select {{site.data.keyword.nlushort}}, then click **Next**.
+
+    The {{site.data.keyword.nlushort}} annotator is not available until you map at least one entity type.
+
+1. If you want to erase existing annotations made by pre-annotators before running the pre-annotator, select **Wipe previous pre-annotation results**. Human annotations are preserved even if this is selected.
 
 1. Select the check box for each document set that you want to pre-annotate.
 
@@ -138,9 +171,6 @@ To use the {{site.data.keyword.nlushort}} service to pre-annotate documents, com
 
     Pre-annotation is applied to individual documents without regard for the various document sets that a document might belong to. A document that overlaps between a selected document set and an unselected document set will be pre-annotated in both document sets.
 
-1. After you run the pre-annotator once, you can click **Apply This Pre-annotator** any time that you want to use it to pre-annotate additional document sets that you add to the corpus.
-
-    > **Restriction:** If you edit the type mapping definition of the {{site.data.keyword.nlushort}} pre-annotator, then you must re-create annotation tasks that include the pre-annotated document sets. Pre-annotation based on the changes that you make to the pre-annotator mapping definition cannot be applied to document sets that are already assigned to an annotation task.
 
 ### Results
 {: #wks_preannotnlu__export-warning}
@@ -175,15 +205,13 @@ To create an editable dictionary and pre-annotate documents:
 1. Click **Create Dictionary**, enter a name, and then click **Save**.
 1. From the **Entity type** list, select an entity type to associate with the dictionary.
 1. Add entries for the dictionary or upload a file that contains dictionary terms.
-1. Click **Machine Learning Model** > **Pre-annotation**.
-1. On the **Dictionaries** tab, click **Apply This Pre-annotator**.
+1. Go to the **Machine Learning Model** > **Pre-annotation** page.
+1. Click **Run Pre-annotators**.
+1. Select **Dictionaries**, then click **Next**.
+1. If you want to erase existing annotations made by pre-annotators before running the pre-annotator, select **Wipe previous pre-annotation results**. Human annotations are preserved even if this is selected.
 1. Select the check box for each document set that you want to pre-annotate and click **Run**.
 
     Pre-annotation is applied to individual documents without regard for the various document sets or annotation sets that a document might belong to. A document that overlaps between a selected document set and an unselected document set will be pre-annotated in both document sets.
-
-1. After the dictionary is created, click **Run** any time that you want to use the dictionary to pre-annotate additional document sets that you add to the corpus.
-
-    > **Restriction:** If you edit the dictionary to add or remove entries, you must re-create annotation tasks that include the pre-annotated document sets. Pre-annotation based on the changes that you make to the dictionary annotator cannot be applied to annotation sets that are already assigned to an annotation task.
 
 **Related information**:
 
@@ -207,13 +235,13 @@ After 10 to 30 documents are annotated, a machine learning model can be trained 
 To use an existing machine learning model to pre-annotate documents:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator and select your workspace.
-1. Select **Machine Learning Model** > **Versions**.
-1. To pre-annotate new documents, click **Run this model**.
+1. Go to the **Machine Learning Model** > **Pre-annotation** page.
+1. Click **Run Pre-annotators**.
+1. Select **Machine Learning Model**, then click **Next**.
+1. If you want to erase existing annotations made by pre-annotators before running the pre-annotator, select **Wipe previous pre-annotation results**. Human annotations are preserved even if this is selected.
 1. Select the check box for each document set that you want to pre-annotate and click **Run**.
 
     Pre-annotation is applied to individual documents without regard for the various document sets or annotation sets that a document might belong to. A document that overlaps between a selected document set and an unselected document set will be pre-annotated in both document sets.
-
-1. You can click **Run this model** any time that you want to use the machine learning model to pre-annotate additional document sets that you add to the corpus.
 
 ## Pre-annotating documents with the rule-based model
 {: #wks_preannotrule}
@@ -226,25 +254,26 @@ You can use an existing rule-based model to pre-annotate documents that you add 
 To use the rule-based model to pre-annotate documents, complete the following steps:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator and select your workspace.
+1. Go to the **Machine Learning Model** > **Pre-annotation** page.
 1. Select the **Rule-based Model** > **Versions** > **Rule-based Model** tab.
-1. If not already completed, click **Map entity types and classes** to map entity types that you defined in the {{site.data.keyword.knowledgestudioshort}} type system to one or more rule-based model classes.
+1. If not already completed, open the overflow menu in the Rule-based Model row and click **Map entity types and classes** to map entity types that you defined in the {{site.data.keyword.knowledgestudioshort}} type system to one or more rule-based model classes.
 1. Click **Edit** for each entity type you want to map.
 
     - The drop-down list of the **Class Name** column is pre-populated with classes that are associated with the rule-based model.
     - You must map at least one entity type to a class.
 
-1. On the **Rule-based Model** tab, click **Run this model**.
+1. On the **Machine Learning Model** > **Pre-annotation** page, click **Run Pre-annotators**.
 
-    The **Run this model** button is not available until you map at least one entity type to a class.
 
-1. Select the document sets or annotation sets that you want to pre-annotate. Ensure that the sets you select do not contain documents that have human annotations. Pre-annotators remove human annotation.
+    The Rule-based Model option is not available until you map at least one entity type to a class.
+
+
+1. If you want to erase existing annotations made by pre-annotators before running the pre-annotator, select **Wipe previous pre-annotation results**. Human annotations are preserved even if this is selected.
+
+1. Select the document sets or annotation sets that you want to pre-annotate. 
 1. Click **Run**.
 
     Pre-annotation is applied to individual documents without regard for the various document sets that a document might belong to. A document that overlaps between a selected document set and an unselected document will appear pre-annotated in both document sets.
-
-1. You can click **Run this model** any time that you want to use the rule-based model to pre-annotate additional document sets that you add to the corpus.
-
-    > **Restriction:** If you edit the entity type-to-class mapping of the rule-based model, then you must re-create annotation tasks that include the pre-annotated document sets. Pre-annotation based on the changes that you make to the pre-annotator mapping definition cannot be applied to document sets that are already assigned to an annotation task.
 
 ## Uploading pre-annotated documents
 {: #wks_uima}
