@@ -32,7 +32,7 @@ The following new features and changes to {{site.data.keyword.knowledgestudioful
 {: #march-2020}
 
 **Enhanced pre-annotation workflow.**
-  - Run multiple pre-annotators at once and configure the order of pre-annotators to resolve annotation conflicts between them. Existing pre-annotator results are preserved unless you remove them with the **Wipe** option.
+  - Run multiple pre-annotators at once and configure the order of pre-annotators to resolve annotation conflicts between them. Existing pre-annotator results are preserved unless you remove them with the *Wipe* option.
   - Human annotations are preserved when running pre-annotators, even when using the *Wipe* option.
 
 ## December 2019
