@@ -61,7 +61,7 @@ Alternatively, you can upload already-annotated documents, and use them to start
 
 
 ## Running multiple pre-annotators
-{: #running-pre-annotators}}
+{: #running-pre-annotators}
 
 {{site.data.keyword.knowledgestudioshort}} allows you to run multiple pre-annotators at once. First, you need to prepare the pre-annotation methods that you want to use. For details, see the following sections.
 
