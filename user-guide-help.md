@@ -1,25 +1,27 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-07-16"
+  years: 2015, 2020
+lastupdated: "2020-06-19"
 
 subcollection: watson-knowledge-studio
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
+{:deprecated: .deprecated}
+{:important: .important}
+{:note: .note}
 {:tip: .tip}
+{:preview: .preview}
+{:beta: .beta}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{:shortdesc: .shortdesc}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio?topic=knoweldge-studio-ts_user_contactingsupport){: new_window}.
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/knowledge-studio?topic=knowledge-studio-ts_user_contactingsupport).
 {: tip}
 
 # Troubleshooting the ground truth editor
@@ -37,7 +39,7 @@ Find out what to do if you have questions or need help. Where to go for help dep
 ## Using the ground truth editor
 {: #uh-ue}
 
-First, review the information in [Annotating documents](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-user-guide). If you still have questions about how to use the ground truth editor, check one of the developer communities, which are linked to from the bottom of the table of contents. If you can't find the answer to your question, post the question yourself.
+First, review the information in [Annotating documents](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-user-guide). If you still have questions about how to use the ground truth editor, check one of the developer communities, which are linked to from the bottom of the table of contents. If you can't find the answer to your question, post the question yourself.
 
 ## Annotation decisions
 {: #uh-ad}
@@ -50,8 +52,6 @@ Can't decide which entity type to assign to an ambiguous term?
 ## Related information
 {: #uh-ri}
 
-[Annotating documents](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-user-guide)
-
-[Dictionaries](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-dictionaries)
-
-[Type systems](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-typesystem)
+- [Annotating documents](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-user-guide)
+- [Dictionaries](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-dictionaries)
+- [Type systems](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-typesystem)

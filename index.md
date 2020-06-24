@@ -1,26 +1,27 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-11-26"
+  years: 2015, 2020
+lastupdated: "2020-06-24"
 
 subcollection: watson-knowledge-studio
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
+{:deprecated: .deprecated}
+{:important: .important}
+{:note: .note}
 {:tip: .tip}
+{:preview: .preview}
+{:beta: .beta}
 {:pre: .pre}
 {:codeblock: .codeblock}
-{:note: .note}
 {:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{:shortdesc: .shortdesc}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio?topic=knowledge-studio-index){: new_window}.
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/knowledge-studio?topic=knowledge-studio-wks_overview_full).
 {: tip}
 
 # About
@@ -53,24 +54,32 @@ A custom entities and relations model could be trained to recognize "2020 Lightn
 1. {{site.data.keyword.knowledgestudioshort}} uses the ground truth to train a model.
 1. The trained model is used to find entities, relations, and coreferences in new, never-seen-before documents.
 
-See [Creating a machine learning model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-ml_annotator) for more details.
+See [Creating a machine learning model](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-ml_annotator) for more details.
 
 ### Build a rule-based model
 {: #ibrb}
 
 {{site.data.keyword.knowledgestudioshort}} provides a rules editor that simplifies the process of finding and capturing common patterns in your documents as rules. You can then create a model that recognizes the rule patterns, and deploy it for use in other services.
 
-See [Creating a rule-based model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-rule-annotator) for more details.
+See [Creating a rule-based model](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-rule-annotator) for more details.
 
 ## Analyze text with advanced rules
 {: #advanced-rules}
 
-The advanced rules feature is Beta. The feature is in a trial stage of development and is not recommended for use in production environments.
+The advanced rules feature is Beta. The feature is in a trial stage of development and is not intended for use in production environments.
+{: beta}
+
+The visual advanced rules editor allows you to create text extractors with deeper customization potential than what is available in the entities and relations rules editor. A number of sample extractors are provided such as *Finance Actions* extractors and *Parts of Speech* extractors that can be edited and combined to create your own advanced rules model. You can analyze documents directly in the editor, or you can export your model to use with other services such as [{{site.data.keyword.nlushort}}](/docs/natural-language-understanding).
+
+To get started, see [Creating an advanced rules model](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-create-advanced-rules-model).
+
+## Identify custom categories
+{: #categories}
+
+The custom categories feature is experimental. The feature is subject to change or be discontinued with short notice. It is not intended to use custom categories in production environments.
 {: note}
 
-The visual advanced rules editor allows you to create text extractors with deeper customization potential than what is available in the entities and relations rules editor. A number of sample extractors are provided such as *Finance Actions* extractors and *Parts of Speech* extractors that can be edited and combined to create your own advanced rules model. You can analyze documents directly in the editor, or you can export your model to use with other services such as [{{site.data.keyword.nlushort}}](/docs/services/natural-language-understanding).
-
-To get started, see [Creating an advanced rules model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-create-advanced-rules-model).
+With a categories workspace, you can define a hierarchy of custom content categories and provide relevant key phrases that the service will use to categorize text content. You can deploy a custom categories model to use instead of the [standard categories](/docs/natural-language-understanding?topic=natural-language-understanding-categories-hierarchy) offered by {{site.data.keyword.nlushort}} and {{site.data.keyword.discoveryshort}}.
 
 ## Watson services integration
 {: #wks_watsoninteg}
@@ -79,12 +88,12 @@ Share domain artifacts and models between {{site.data.keyword.knowledgestudioful
 
 Use {{site.data.keyword.knowledgestudioshort}} to perform the following tasks:
 
-- Bootstrap annotation by using the {{site.data.keyword.nlushort}} service to automatically find and annotate entities in your documents. When human annotators begin to annotate the documents, they can see the annotations that were already made by the service and can review and add to them. See [Pre-annotating documents with {{site.data.keyword.nlushort}}](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-preannotation#wks_preannotnlu) for details.
-- Upload analyzed documents that are in [UIMA CAS XMI format](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-preannotation#wks_uimaweximport). For example, you can upload UIMA CAS XMI files that were exported from {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer content analytics collections or [{{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer Content Analytics Studio](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-preannotation#wks_uimawexstudio).
-- Deploy a [machine learning](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-publish-ml#wks_madiscovery) or [rule-based](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_rule_publish#wks_rule_discovery) model to use with the {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}} service.
-- Deploy a [machine learning](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-publish-ml#wks_manlu) or [rule-based](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_rule_publish#wks_rule_nlu) model to use with the {{site.data.keyword.nlushort}} service.
-- [Export a machine learning model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-publish-ml#wks_maexport) to use in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
-- [Export a rule-based model PEAR file](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_rule_publish#wks_rule_export) to use in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
+- Bootstrap annotation by using the {{site.data.keyword.nlushort}} service to automatically find and annotate entities in your documents. When human annotators begin to annotate the documents, they can see the annotations that were already made by the service and can review and add to them. See [Pre-annotating documents with {{site.data.keyword.nlushort}}](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-preannotation#wks_preannotnlu) for details.
+- Upload analyzed documents that are in [UIMA CAS XMI format](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-preannotation#wks_uimaweximport). For example, you can upload UIMA CAS XMI files that were exported from {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer content analytics collections or [{{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer Content Analytics Studio](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-preannotation#wks_uimawexstudio).
+- Deploy a [machine learning](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-publish-ml#wks_madiscovery) or [rule-based](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks_rule_publish#wks_rule_discovery) model to use with the {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}} service.
+- Deploy a [machine learning](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-publish-ml#wks_manlu) or [rule-based](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks_rule_publish#wks_rule_nlu) model to use with the {{site.data.keyword.nlushort}} service.
+- [Export a machine learning model](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-publish-ml#wks_maexport) to use in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
+- [Export a rule-based model PEAR file](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks_rule_publish#wks_rule_export) to use in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
 
 ## HIPAA support
 {: #ihi}

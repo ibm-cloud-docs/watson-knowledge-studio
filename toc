@@ -61,7 +61,7 @@ Watson Knowledge Studio
         evaluate-ml.md
         improve-ml.md
         publish-ml.md
-    
+        
     enabling-cross-sentence-relations.md
     managing-projects-and-extractors.md
     user-guide.md
@@ -70,6 +70,7 @@ Watson Knowledge Studio
     upgrade.md
     ha-dr.md
     /watson/watson-migrate
+    /watson/watson-keyservice
     /watson/watson-public-private-endpoints
     {: .navgroup-end}
 
@@ -82,4 +83,5 @@ Watson Knowledge Studio
     Developer community
         [StackOverflow](https://stackoverflow.com/search?q=watson-knowledge-studio)
         [WDC Slack channel](http://wdc-slack-inviter.mybluemix.net/)
+
     {: .navgroup-end}

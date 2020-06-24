@@ -1,25 +1,27 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-07-19"
+  years: 2015, 2020
+lastupdated: "2020-06-24"
 
 subcollection: watson-knowledge-studio
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
+{:deprecated: .deprecated}
+{:important: .important}
+{:note: .note}
 {:tip: .tip}
+{:preview: .preview}
+{:beta: .beta}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{:shortdesc: .shortdesc}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio?topic=knowledge-studio-typesystem){: new_window}.
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/knowledge-studio?topic=knowledge-studio-typesystem){: external}.
 {: tip}
 
 # Establishing a type system
@@ -35,7 +37,7 @@ A type system defines things that are interesting in your domain content that yo
 
 In {{site.data.keyword.knowledgestudioshort}}, you can create a type system from scratch or upload an existing type system. To jump-start a workspace, you might want to upload a type system that was created for a similar domain. You can then edit the type system to add or remove entity types or redefine the relationship types.
 
-A sample type system based on the *KLUE* type system is provided for you to use with the {{site.data.keyword.knowledgestudioshort}} tutorials. KLUE stands for Knowledge from Language Understanding and Extraction and was derived by {{site.data.keyword.IBM_notm}} Research based on the analysis of collections of news articles. You can download a sample KLUE type system from <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/en-klue2-types.json" download>here <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a>.
+A sample type system based on the *KLUE* type system is provided for you to use with the {{site.data.keyword.knowledgestudioshort}} tutorials. KLUE stands for Knowledge from Language Understanding and Extraction and was derived by {{site.data.keyword.IBM_notm}} Research based on the analysis of collections of news articles. You can download a sample KLUE type system from <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/en-klue2-types.json" download="en-klue2-types.json">here</a>.
 
 Many industries, such in domains like metallurgy, geology, market intelligence, life science, electronic health records, and oncology publish dictionaries or ontologies of domain-specific terminology. Consider referencing this type of resource to get an idea of the types of entities you might want to define in your own type system.
 
@@ -85,7 +87,7 @@ For some relation types, the order of entity mentions matters. For example, the 
 
 **Related concepts**:
 
-[Uploading resources from another workspace](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-exportimport)
+[Uploading resources from another workspace](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-exportimport)
 
 ## Adding a type system to the workspace
 {: #wks_projtypesys}
@@ -108,49 +110,49 @@ By convention, entity type names are specified in uppercase characters (`ORGANIZ
 ### Procedure
 {: #ts-pr}
 
-1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager and open the **Assets**> **Entity Types** page.
-1. Choose one of the following methods to create a type system:
+1.  Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager and open the **Assets**> **Entity Types** page.
+1.  Choose one of the following methods to create a type system:
 
     - Upload an existing type system:
 
-        1. On the **Entity Types** tab, click **Upload**.
+        1.  On the **Entity Types** tab, click **Upload**.
 
-            If you previously downloaded a type system from a {{site.data.keyword.knowledgestudioshort}} workspace, the type system is downloaded in `JSON` format. You can upload this type system to jump-start the creation of a workspace. For details, see [Uploading resources from another workspace](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-exportimport).
+            If you previously downloaded a type system from a {{site.data.keyword.knowledgestudioshort}} workspace, the type system is downloaded in `JSON` format. You can upload this type system to jump-start the creation of a workspace. For details, see [Uploading resources from another workspace](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-exportimport).
 
-            > **Note:** Regardless of the origin of the type system, the entries in it must meet the naming rules listed earlier.
+            Regardless of the origin of the type system, the entries in it must meet the naming rules listed earlier.
+            {: note}
 
-        1. Add, edit, and delete entity types and relation types the same way that you do when you create a type system from scratch.
-
+        1.  Add, edit, and delete entity types and relation types the same way that you do when you create a type system from scratch.
     - Create a type system from scratch:
 
-        1. On the **Entity Types** tab, click **Add Entity Type**.
-        1. Specify a descriptive entity type name, keeping in mind that the entity type is a label for annotating important spans of text (mentions) in your domain content. Keep the name short and representative, so human annotators can remember it easily.
+        1.  On the **Entity Types** tab, click **Add Entity Type**.
+        1.  Specify a descriptive entity type name, keeping in mind that the entity type is a label for annotating important spans of text (mentions) in your domain content. Keep the name short and representative, so human annotators can remember it easily.
 
             You can also optionally define roles and subtypes for the entity type:
-            - A role helps qualify the entity type in the context in which the mention occurs. For example, the mention `Software Engineer` might be labeled with the entity type `PEOPLE` and, in this context, by the role `OCCUPATION`. See [When to define roles](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-typesystem#wks_typesystem_roles) for more information.
+            - A role helps qualify the entity type in the context in which the mention occurs. For example, the mention `Software Engineer` might be labeled with the entity type `PEOPLE` and, in this context, by the role `OCCUPATION`. See [When to define roles](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-typesystem#wks_typesystem_roles) for more information.
             - A subtype helps further classify the entity type. For example, the entity type `GOVERNMENT` might have subtypes of `MILITARY` and `CIVILIAN`.
 
-            > **Note:** By defining a role or subtype for an entity, you are giving more options to the person who will associate type information to mentions at annotation time. The human annotator can apply an annotation that specifies the entity type only, or the entity type plus the role or subtype that you are defining now.
+            By defining a role or subtype for an entity, you are giving more options to the person who will associate type information to mentions at annotation time. The human annotator can apply an annotation that specifies the entity type only, or the entity type plus the role or subtype that you are defining now.{: note}
 
             Try to define enough entity types to capture the key concepts that you want to annotate, but not so many entity types that it becomes cumbersome for human annotators to apply the labels accurately.
 
-        1. Click **Mention Classes** and **Mention Types** to view the default mention classes and mention types. You cannot edit these values.
+        1.  Click **Mention Classes** and **Mention Types** to view the default mention classes and mention types. You cannot edit these values.
 
             The purpose of an attribute is to help label each mention by the type of thing that it is. A mention type indicates whether the mention is a name, nominal, or pronoun, and a mention class indicates whether the mention is specific, generic, or negated.
 
-        1. Open the **Assets**> **Relation Types** page and specify how two mentions can relate to each other.
+        1.  Open the **Assets**> **Relation Types** page and specify how two mentions can relate to each other.
 
             Order between the first and second entities in a relation type is usually relevant. For example, a `PERSON` entity can be an employee of an `ORGANIZATION` entity or a geo-political entity (**GPE**), such as `Mary` `employedBy` `{{site.data.keyword.IBM_notm}}`, but organizations and geo-political entities cannot be employed by a person. When a human annotator clicks an entity in the ground truth editor , the list of available relation types is controlled by what is defined in the type system.
 
             Do not define relation attributes. They are not used by the machine learning model. The model uses only the relation type and order, and ignores the relation attributes.
 
-        1. Use the **Edit** and **Delete** icons to modify entity types and their associated relation types, or to delete an entity type or relation type from the type system.
+        1.  Use the **Edit** and **Delete** icons to modify entity types and their associated relation types, or to delete an entity type or relation type from the type system.
 
             If you delete an entity that is used in a relation type definition, the relation type definition is also deleted.
 
 **Related tasks**:
 
-[Modifying a type system without losing human annotations](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-improve-ml#wks_projtypesysmod)
+[Modifying a type system without losing human annotations](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-improve-ml#wks_projtypesysmod)
 
 ## Type system creation guidelines
 {: #wks_typesys_guidelines}
@@ -197,7 +199,8 @@ Expect the type system to evolve with the experience of people trying to annotat
 
 When you test the model, you can review statistics that show how frequently the entity types and relation types occur in your sample documents. Be sure to review these statistics. To ensure that your application receives enough context to accurately annotate large collections of documents, your test data must include a large sampling of the most important entity types and relation types.
 
-> **Important:** After you train your first model, you will likely need to make modifications based on the performance statistics. However, to create a reliable statistical model for machine annotation, you want the type system to be as close to final as possible before you begin large-scale annotation tasks.
+After you train your first model, you will likely need to make modifications based on the performance statistics. However, to create a reliable statistical model for machine annotation, you want the type system to be as close to final as possible before you begin large-scale annotation tasks.
+{: important}
 
 ## When to define roles
 {: #wks_typesystem_roles}
@@ -228,14 +231,14 @@ As an example, let's assume that the following sentences occur in a source docum
 
 You can handle the type system design in two ways:
 
-1. Define two entity types: `MANUFACTURER` and `VEHICLE`. For the `MANUFACTURER` entity, define a `VEHICLE` role that can be used in addition to the default `MANUFACTURER` role.
+1.  Define two entity types: `MANUFACTURER` and `VEHICLE`. For the `MANUFACTURER` entity, define a `VEHICLE` role that can be used in addition to the default `MANUFACTURER` role.
 
     Using this type system, the sentences are annotated as follows:
     - a) The `Acme` is annotated as a `MANUFACTURER` entity, but with a role of `VEHICLE`, since it refers to an actual vehicle. So, its internal label is `MANUFACTURER-VEHICLE`.
     - b) The `sedan` is annotated as entity type `VEHICLE`. It is automatically assigned the `VEHICLE` role, since no other role is defined.
     - c) The `Acme` is annotated as entity type `MANUFACTURER` and `truck` is annotated as entity type `VEHICLE`. No roles are assigned, so the default roles are used.
 
-1. Define two entity types only without roles: `MANUFACTURER` and `VEHICLE`.
+1.  Define two entity types only without roles: `MANUFACTURER` and `VEHICLE`.
 
     Using this type system, the sentences are annotated as follows:
     - a) The `Acme` is annotated as entity type `VEHICLE`.
