@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-06-24"
+lastupdated: "2020-06-25"
 
 subcollection: watson-knowledge-studio
 
@@ -110,7 +110,7 @@ You can build an extractor by combining one or more of the following elements.
 
 Defining a new extractor using natural language processing (NLP) concepts such as tokenization and part-of-speech requires developing an extractor using the Annotation Query Language (AQL).
 
-To see the languages that are supported for tokenization and part-of-speech analysis, see [Multilingual Support for Text Analytics](https://www.ibm.com/support/knowledgecenter/SSPT3X_4.0.0/com.ibm.swg.im.infosphere.biginsights.text.doc/doc/ana_txtan_lang-support.html). For more information how to write AQL and available functions, see [Annotation Query Language reference](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-annotation-query-language-reference)
+To see the languages that are supported for tokenization and part-of-speech analysis, see [Multilingual Support for Text Analytics](https://www.ibm.com/support/knowledgecenter/SSPT3X_4.0.0/com.ibm.swg.im.infosphere.biginsights.text.doc/doc/ana_txtan_lang-support.html). For more information about how to write AQL and available functions, see [Annotation Query Language reference](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-annotation-query-language-reference)
 
 
 ### Creating a dictionary
@@ -174,13 +174,13 @@ To create an extractor that uses a regular expression:
 
 1. From the canvas toolbar, click ![New Regular Expression](images/new_extractor_regex.png "New Regular Expression icon").
 2. Enter a name for the regular expression. You can also add some descriptive information. Note that the information that you enter at the prompt is the name for the expression, not the expression itself.
-3. Select the regular expression on the canvas to open the **Extractor Properties** to the **Settings** tab. Specify a regular expression. See https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html for more information about syntax.
+3. Select the regular expression on the canvas to open the **Extractor Properties** to the **Settings** tab. Specify a regular expression. For more information about the syntax, see the [Class Pattern](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html){: external} Javadocc.
 4. Specify options for case sensitivity, [token range](), and special character handling. If, while designing a regular expression, you see false positives, provide more context by extending the pattern in the regular expression or adding context through a sequence pattern. For example, if your postal code expression matches additional terms, incorporate rules for which letters are permitted in specific positions.
 
 #### Regular expression examples
 {: #regular-expression-examples}
 
-The following are examples of regular Java expressions that might be used in specific instances. In the pattern descriptions, A represents a character and 9, a digit. For more information about Java syntax, see https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html.
+The following are examples of regular Java expressions that might be used in specific instances. In the pattern descriptions, A represents a character and 9, a digit. For more information about Java syntax, see [Class Pattern](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) Javadoc.
 
 - To select text that includes any ordinal number of one or more digits followed by `th`, `st`, `nd`, or `rd` (`21st`, `2nd`, `3rd`, and so forth), specify:
 

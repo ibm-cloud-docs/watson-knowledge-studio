@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-24"
+lastupdated: "2020-06-25"
 
 subcollection: watson-knowledge-studio
 
@@ -50,7 +50,7 @@ The following pre-annotators are available:
 
 - **Machine learning**
 
-    Uses a machine learning model to automatically annotate documents. This option is only available to you if you have created a machine learning model with {{site.data.keyword.knowledgestudioshort}} already. If you add a document set, you can run the machine learning annotator that you created previously to pre-annotate the new documents. If the new set of documents is similar to the documents that were used to train the machine learning annotator originally, then this is probably your best choice for pre-annotation.
+    Uses a machine learning model to automatically annotate documents. This option is only available if you have created a machine learning model with {{site.data.keyword.knowledgestudioshort}} already. If you add a document set, you can run the machine learning annotator that you created previously to pre-annotate the new documents. If the new set of documents is similar to the documents that were used to train the machine learning annotator originally, then this is probably your best choice for pre-annotation.
 
 - **Rule**
 
@@ -64,7 +64,7 @@ You *can* run a pre-annotator on documents that were added to the ground truth a
 ## Running multiple pre-annotators
 {: #running-pre-annotators}
 
-{{site.data.keyword.knowledgestudioshort}} allows you to run multiple pre-annotators at once. First, you need to prepare the pre-annotation methods that you want to use. For more information, see the following sections.
+{{site.data.keyword.knowledgestudioshort}} allows you to run multiple pre-annotators at once. First, you need to prepare the pre-annotation methods that you want to use. For more information, see the following sections:
 
 - [{{site.data.keyword.nlushort}}](#wks_preannotnlu)
 - [Dictionaries](#wks_preannot)
@@ -194,7 +194,7 @@ To help human annotators get started with their annotation tasks, you can create
 
 When a human annotator begins work on documents that were pre-annotated, it is likely that a number of mentions will already be marked by entity types based on the dictionary entries. The human annotator can change or remove the pre-annotated entity types and assign entity types to unannotated mentions. Pre-annotation by a dictionary does not annotate relations, coreferences. Relations and coreferences must be annotated by human annotators.
 
-This task shows how to create a dictionary that is editable. If you want to upload and pre-annotate your documents with a read-only dictionary, click the **Menu** icon next to the **Create Dictionary** button. Select **Upload Dictionary**.
+This task shows you how to create a dictionary that is editable. If you want to upload and pre-annotate your documents with a read-only dictionary, click the **Menu** icon next to the **Create Dictionary** button, and then select **Upload Dictionary**.
 {: tip}
 
 ### Procedure
@@ -228,7 +228,7 @@ You can use an existing machine learning model to pre-annotate documents that yo
 ### About this task
 {: #wks_preannotsire_about}
 
-After 10 to 30 documents are annotated, a machine learning model can be trained on the data. Don't use such a minimally trained model in a production. However, you can use the model to pre-annotate documents to help speed up the human annotation of subsequent documents. For example, if you add documents to the corpus after you train a machine learning model, you can use the model to pre-annotate the new document sets. Never run a pre-annotator on the same documents that have been annotated by a person. Pre-annotators remove human annotation.
+After 10 to 30 documents are annotated, a machine learning model can be trained on the data. Don't use such a minimally trained model in production. However, you can use the model to pre-annotate documents to help speed up the human annotation of subsequent documents. For example, if you add documents to the corpus after you train a machine learning model, you can use the model to pre-annotate the new document sets. Never run a pre-annotator on the same documents that have been annotated by a person. Pre-annotators remove human annotation.
 
 ### Procedure
 {: #wks_preannotsire_procedure}

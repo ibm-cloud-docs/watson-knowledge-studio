@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-23"
+lastupdated: "2020-06-25"
 
 subcollection: watson-knowledge-studio
 
@@ -54,7 +54,7 @@ Try to ensure that your training documents are truly representative of content t
 
 When you are ready to create and train the model, documents that you add to the workspace can be divided into sets that are used as training data, test data, and blind data. The separate data sets are important for assessing model performance.
 
-You can add documents in the following ways. For information about the supported document types, size limits, and other information, see [Creating a workspace > Summary of inputs, outputs, and limitations](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-create-project#wks_formats).
+You can add documents in the following ways. For more information about the supported document types, size limits, and other information, see [Creating a workspace > Summary of inputs, outputs, and limitations](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-create-project#wks_formats).
 
 - A two-column CSV file in UTF-8 format
 - Text files in UTF-8 format
@@ -91,7 +91,7 @@ After documents are annotated, the annotated documents are stored in `JSON` form
 
 To help train a model, you can upload documents that were pre-annotated by a UIMA analysis engine. The pre-annotated files must be in XMI serialization of UIMA Common Analysis Structure (UIMA CAS XMI) format and combined into a .zip file. For example, you can upload documents that were annotated in an {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer collection.
 
-A human annotator can revise, delete, and add annotations to these documents, or you can bypass human annotation and use these files to create training, test, and blind document sets for evaluating and improving the model performance. For details about how to create these files and requirements for uploading them, see [Uploading pre-annotated documents](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-preannotation#wks_uima).
+A human annotator can revise, delete, and add annotations to these documents, or you can bypass human annotation and use these files to create training, test, and blind document sets for evaluating and improving the model performance. For more information about how to create these files and requirements for uploading them, see [Uploading pre-annotated documents](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-preannotation#wks_uima).
 
 ### Anonymizing data
 {: #wks_anonymizing}
@@ -118,16 +118,18 @@ To add documents to a workspace:
 1.  Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager, and select your workspace.
 1.  Select the **Assets**> **Documents** > **Documentation sets** tab.
 1.  Click **Upload Document Sets** to add documents to the corpus.
-1.  Upload documents in one of the supported formats. For information about the supported document types, size limits, and other information, see  [Creating a workspace > Summary of inputs, outputs, and limitations](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-create-project#wks_formats).
+1.  Upload documents in one of the supported formats. For more information about the supported document types, size limits, and other information, see  [Creating a workspace > Summary of inputs, outputs, and limitations](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-create-project#wks_formats).
 
     **Notes about .zip files of documents downloaded from another workspace**
 
+    When annotated documents are imported, they are re-tokenized. This process can change what {{site.data.keyword.knowledgestudioshort}} considers to be the sentence boundaries. Because annotations are defined by sentence, some annotations might be invalidated during this process. After uploading documents from another workspace, do a quick review of the annotations to address any discrepancies.
+    {: important}
+
     - If you previously downloaded documents from a {{site.data.keyword.knowledgestudioshort}} workspace, drag the .zip file that contains the downloaded documents or click to locate and select the file. If you want to include annotations that were added to the documents before they were downloaded, ensure that the option to include ground truth is selected before you click **Upload**. Only annotations that were promoted to ground truth before the documents were downloaded will be imported.
-    - Restriction: When annotated documents are imported, they are re-tokenized. This process can change what {{site.data.keyword.knowledgestudioshort}} considers to be the sentence boundaries. Because annotations are defined by sentence, some annotations might be invalidated during this process. After uploading documents from another workspace, do a quick review of the annotations to address any discrepancies.
-    - You must upload the type system from the original workspace into the current workspace before you upload ground truth annotations. For details, see [Uploading resources from another workspace](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-exportimport).
+    - You must upload the type system from the original workspace into the current workspace before you upload ground truth annotations. For more information, see [Uploading resources from another workspace](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-exportimport).
 
     **Notes about .zip files of documents in UIMA CAS XMI format**
-      - If you previously downloaded annotated documents that are in UIMA CAS XMI format, you can upload the .zip file that contains the analyzed content. Specify that this is the type of content you want to upload before you click **Upload**. For details about how to create these files and requirements for uploading them, see [Uploading pre-annotated documents](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-preannotation#wks_uima).</p>
+      - If you previously downloaded annotated documents that are in UIMA CAS XMI format, you can upload the .zip file that contains the analyzed content. Specify that this is the type of content you want to upload before you click **Upload**. For more information about how to create these files and requirements for uploading them, see [Uploading pre-annotated documents](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-preannotation#wks_uima).</p>
 
 1.  After the documents have been added, click the document names to preview them and verify that the content looks OK. For example, verify that text files are in UTF-8 format and that no diacritical marks or character normalization issues are visible in the documents, and check for poor sentence breaks. If problems exist, you might need to pre-process the files before you add them to the corpus. You want the documents to be as clean and well-formatted as possible before dictionary or human annotation begins.
 
@@ -178,14 +180,14 @@ If the document you want to delete is associated with an annotation task and hum
     1.  Open the **Machine Learning Model** > **Annotations** page. Click the **Annotation Tasks** tab.
     1.  Find the annotation task that the document is associated with, click the **Show menu** icon on the task, and then click **Delete**.
 1.  Delete the document as described in [Deleting a document that has not been associated with an annotation task](#deletenotask).
-1.  After you delete the document, recreate the annotation task and associate the same annotation set, which now has one less document in it.
+1.  After you delete the document, re-create the annotation task and associate the same annotation set, which now has one less document in it.
 
 ### Deleting a document that is associated with an annotation task and human annotation has begun
 {: #deleteanno}
 
 If the document you want to delete is associated with an annotation task and human annotation *has begun*, complete these steps to delete the document.
 
-Do not delete a task if human annotation is in progress. If you do, you will lose the work that is in progress.
+Do not delete a task if human annotation is in progress or you will lose the work that is in progress.
 {: important}
 
 #### Procedure

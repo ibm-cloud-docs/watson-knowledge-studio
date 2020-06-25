@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-24"
+lastupdated: "2020-06-25"
 
 subcollection: watson-knowledge-studio
 
@@ -37,7 +37,7 @@ A type system defines things that are interesting in your domain content that yo
 
 In {{site.data.keyword.knowledgestudioshort}}, you can create a type system from scratch or upload an existing type system. To jump-start a workspace, you might want to upload a type system that was created for a similar domain. You can then edit the type system to add or remove entity types or redefine the relationship types.
 
-A sample type system based on the *KLUE* type system is provided for you to use with the {{site.data.keyword.knowledgestudioshort}} tutorials. KLUE stands for Knowledge from Language Understanding and Extraction and was derived by {{site.data.keyword.IBM_notm}} Research based on the analysis of collections of news articles. You can download a sample KLUE type system from <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/en-klue2-types.json" download="en-klue2-types.json">here</a>.
+A sample type system based on the *KLUE* type system is provided for you to use with the {{site.data.keyword.knowledgestudioshort}} tutorials. KLUE stands for Knowledge from Language Understanding and Extraction and was derived by {{site.data.keyword.IBM_notm}} Research based on the analysis of collections of news articles. <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/en-klue2-types.json" download="en-klue2-types.json">Download <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a> a sample KLUE type system.
 
 Many industries, such in domains like metallurgy, geology, market intelligence, life science, electronic health records, and oncology publish dictionaries or ontologies of domain-specific terminology. Consider referencing this type of resource to get an idea of the types of entities you might want to define in your own type system.
 
@@ -117,7 +117,7 @@ By convention, entity type names are specified in uppercase characters (`ORGANIZ
 
         1.  On the **Entity Types** tab, click **Upload**.
 
-            If you previously downloaded a type system from a {{site.data.keyword.knowledgestudioshort}} workspace, the type system is downloaded in `JSON` format. You can upload this type system to jump-start the creation of a workspace. For details, see [Uploading resources from another workspace](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-exportimport).
+            If you previously downloaded a type system from a {{site.data.keyword.knowledgestudioshort}} workspace, the type system is downloaded in JSON format. You can upload this type system to jump-start the creation of a workspace. For more information, see [Uploading resources from another workspace](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-exportimport).
 
             Regardless of the origin of the type system, the entries in it must meet the naming rules listed earlier.
             {: note}
@@ -132,7 +132,8 @@ By convention, entity type names are specified in uppercase characters (`ORGANIZ
             - A role helps qualify the entity type in the context in which the mention occurs. For example, the mention `Software Engineer` might be labeled with the entity type `PEOPLE` and, in this context, by the role `OCCUPATION`. See [When to define roles](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-typesystem#wks_typesystem_roles) for more information.
             - A subtype helps further classify the entity type. For example, the entity type `GOVERNMENT` might have subtypes of `MILITARY` and `CIVILIAN`.
 
-            By defining a role or subtype for an entity, you are giving more options to the person who will associate type information to mentions at annotation time. The human annotator can apply an annotation that specifies the entity type only, or the entity type plus the role or subtype that you are defining now.{: note}
+            By defining a role or subtype for an entity, you are giving more options to the person who will associate type information to mentions at annotation time. The human annotator can apply an annotation that specifies the entity type only, or the entity type plus the role or subtype that you are defining now.
+            {: note}
 
             Try to define enough entity types to capture the key concepts that you want to annotate, but not so many entity types that it becomes cumbersome for human annotators to apply the labels accurately.
 

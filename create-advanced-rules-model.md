@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-06-24"
+lastupdated: "2020-06-25"
 
 subcollection: watson-knowledge-studio
 
@@ -47,25 +47,25 @@ To view tutorials for creating extractors, click the **Get Help** button in the 
 ## Creating an advanced rules model
 {: #create-advanced-rules-model-procedure}
 
-Advanced rules models are comprised of text extractors that you design in the advanced rules workspace. The advanced rules workspace provides sample text extractors that are ready to use. 
+Advanced rules models are comprised of text extractors that you design in the advanced rules workspace. The advanced rules workspace provides sample text extractors that are ready to use.
 
 1. Create an advanced rules workspace
 
     1. [Launch the {{site.data.keyword.knowledgestudioshort}} application](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutintro#launching-the-knowledge-studio-application).
     1. If you already have other workspaces, click **Create workspace**.
-    1. Click **Create advanced rules workspace**. Enter a name for your workspace, then click **Create**. The advanced rules workspace will load after a few seconds.
+    1. Click **Create advanced rules workspace**. Enter a name for your workspace, then click **Create**. The advanced rules workspace loads after a few seconds.
 
 1. Create a new project (optional)
 
-    ![New project button](images/create-advanced-rules-project.png "Shows the New project button") 
+    ![New project button](images/create-advanced-rules-project.png "Shows the New project button")
     1. In the **Projects** tab of your workspace, click the **New** button.
     2. Enter a name for your project and click **Create**.
 
-    For more details, see [Managing projects and extractors](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-managing-projects-and-extractors)
+    For more information, see [Managing projects and extractors](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-managing-projects-and-extractors)
 
 1. Add documents to your project
 
-    ![Add Documents button](images/advanced-rules-add-documents.png "Shows the Add Documents button") 
+    ![Add Documents button](images/advanced-rules-add-documents.png "Shows the Add Documents button")
 
     1. Click the **Add Documents** button.
     2. Select the file type and language of your file.
@@ -74,15 +74,15 @@ Advanced rules models are comprised of text extractors that you design in the ad
 
 1. Create an extractor
 
-    1. Follow the tutorials from the **Get Help** menu for more information on how to create and run extractors. See [Managing projects and extractors > Creating an extractor](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-managing-projects-and-extractors#creating-an-extractor).
+    1. Follow the tutorials from the **Get Help** menu to create and run extractors. See [Managing projects and extractors > Creating an extractor](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-managing-projects-and-extractors#creating-an-extractor).
 
 1. Run your extractors on documents
 
-    1. Right-click the extractor on the canvas and click Run Selected from the menu. 
+    1. Right-click the extractor on the canvas and click Run Selected from the menu.
     2. Alternatively, select the extractor and click Run Selected from the extractor toolbar.
     3. To run multiple extractors, select them and click Run Selected in the toolbar. When the extractor has finished running, click the Results pane to view the output. The results are highlighted in the Documents pane as well.
 
-    For more details, see [Managing projects and extractors > Running an extractor](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-managing-projects-and-extractors#running-an-extractor)
+    For more information, see [Managing projects and extractors > Running an extractor](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-managing-projects-and-extractors#running-an-extractor)
 
 1. Export your model
 
@@ -94,6 +94,6 @@ Advanced rules models are comprised of text extractors that you design in the ad
 ### Uploading an advanced rules model to other services
 {: #uploading-to-other-services}
 
-After you export an advanced rules model, you can upload it to {{site.data.keyword.nlushort}}. See the following page for more details.
+After you export an advanced rules model, you can upload it to {{site.data.keyword.nlushort}}. For more information, see the following page.
 
 - {{site.data.keyword.nlushort}}: [Customizing > Analyzing text with advanced rules (Beta)](/docs/natural-language-understanding?topic=natural-language-understanding-customizing#advanced-rules).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-24"
+lastupdated: "2020-06-25"
 
 subcollection: watson-knowledge-studio
 
@@ -39,10 +39,10 @@ This tutorial should take approximately 5 minutes to finish. If you explore othe
 ## Before you begin
 {: #tba-pr}
 
-- You're using a supported browser. For information, see [Browser requirements](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-system-requirements).
+- You're using a supported browser. For more information, see [Browser requirements](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-system-requirements).
 - You successfully completed [Getting started with {{site.data.keyword.knowledgestudioshort}}](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutintro), which covers creating a workspace, creating a type system, and adding a dictionary.
 - You successfully completed [Creating a machine learning model](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutml_intro).
-- You must have at least one user ID in either the Admin or Project Manager role. For information about user roles, see [User roles in {{site.data.keyword.knowledgestudioshort}}](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-roles).
+- You must have at least one user ID in either the Admin or Project Manager role. For more information about user roles, see [User roles in {{site.data.keyword.knowledgestudioshort}}](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-roles).
 
 ## Results
 {: #results}
@@ -59,14 +59,15 @@ In this lesson, you will learn how to use a machine learning model to pre-annota
 
 After you train a machine learning model, you can use it to pre-annotate new documents that you add to the corpus.
 
-> **Attention:** Do not run a pre-annotator on documents that have been annotated by humans, but not been added to the ground truth yet. If you do, all current annotations will be stripped from the documents.
+Do not run a pre-annotator on documents that have been annotated by humans, but not been added to the ground truth yet. If you do, all current annotations will be stripped from the documents.
+{: important}
 
 In this tutorial, you can add a second set of documents by using the `documents-ml.csv` file. Do not re-add the `documents-new.csv` file, since this addition would result in duplicate documents in the ground truth. Duplication causes the following problems:
 
 - If annotations on each document do not match, they lower the quality of the machine learning model.
 - If annotations on each document match, they over-train the machine learning model on the duplicated files.
 
-For more information about pre-annotating documents, see [Bootstrapping annotation](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-preannotation), which covers additional methods of pre-annotation.
+For more information about pre-annotating documents, see [Bootstrapping annotation](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-preannotation). You can also read about other pre-annotation methods.
 
 ### Procedure
 {: #wks_tutboot_ml_procedure}

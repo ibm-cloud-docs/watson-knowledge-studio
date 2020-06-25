@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-24"
+lastupdated: "2020-06-25"
 
 subcollection: watson-knowledge-studio
 
@@ -149,7 +149,7 @@ You can now migrate {{site.data.keyword.knowledgestudioshort}} Cloud Foundry ser
 ### New features and changes
 {: #new-dec2018}
 
-- Introduced support to deploy the same machine learning model version to multiple service instances and general improvements to the **Version History and Deployment** page. For information about deploying multiple instances of the same model version see [Deploying the same model version to multiple services](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-publish-ml#wks_secdep)
+- Introduced support to deploy the same machine learning model version to multiple service instances and general improvements to the **Version History and Deployment** page. For more information about deploying multiple instances of the same model version see [Deploying the same model version to multiple services](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-publish-ml#wks_secdep)
 
 -  Added the `models` method to the {{site.data.keyword.nlushort}} service allowing users to list deployed {{site.data.keyword.knowledgestudioshort}} models.
 
@@ -159,7 +159,7 @@ You can now migrate {{site.data.keyword.knowledgestudioshort}} Cloud Foundry ser
 ### New features and changes
 {: #new-sept2018}
 
-- Introduced support for HTML, DOC, DOCX, and PDF files. For information about the supported document types, size limits, and other information, see  [Creating a workspace](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-create-project#cp-mlm). For information about adding documents for annotation, see [Adding documents to a workspace](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-documents-for-annotation#wks_projadd).
+- Introduced support for HTML, DOC, DOCX, and PDF files. For more information about the supported document types, size limits, and other information, see  [Creating a workspace](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-create-project#cp-mlm). For more information about adding documents for annotation, see [Adding documents to a workspace](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-documents-for-annotation#wks_projadd).
 
 ## August 2018
 {: #august2018}
@@ -181,7 +181,7 @@ You can now migrate {{site.data.keyword.knowledgestudioshort}} Cloud Foundry ser
 
   If the region supports instances managed by only one of the access management methods, you see only one list of models, because only one access management method is applicable.
 
-   To view the **Deployed Models** page, from the **Settings** menu in the top right menu bar, click **Manage deployed models**. For information about undeploying models on the **Deployed Models** page, see [Undeploying machine learning models](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-publish-ml#pm-um) and [Undeploying rule-based models](//docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks_rule_publish).
+   To view the **Deployed Models** page, from the **Settings** menu in the top right menu bar, click **Manage deployed models**. For more information about undeploying models on the **Deployed Models** page, see [Undeploying machine learning models](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-publish-ml#pm-um) and [Undeploying rule-based models](//docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks_rule_publish).
 
 - The navigation was changed to better align with the {{site.data.keyword.knowledgestudioshort}} workflow. Also, the following functionality was reorganized:
 
@@ -243,7 +243,7 @@ You can now migrate {{site.data.keyword.knowledgestudioshort}} Cloud Foundry ser
 ### New features and changes
 {: #new-march2018}
 
-- A **Deployed Models** page is available where you can view all the {{site.data.keyword.knowledgestudioshort}} models that are deployed to services in the spaces that you have access to. To view the **Deployed Models** page, from the **Settings** menu in the top right menu bar, click **Manage deployed models**. For information about undeploying and viewing models on the **Deployed Models** page, see [Undeploying models](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-publish-ml#pm-um) and [Undeploying rule-based models](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks_rule_publish#ramu-um).
+- A **Deployed Models** page is available where you can view all the {{site.data.keyword.knowledgestudioshort}} models that are deployed to services in the spaces that you have access to. To view the **Deployed Models** page, from the **Settings** menu in the top right menu bar, click **Manage deployed models**. For more information about undeploying and viewing models on the **Deployed Models** page, see [Undeploying models](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-publish-ml#pm-um) and [Undeploying rule-based models](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks_rule_publish#ramu-um).
 - A French translation of the {{site.data.keyword.knowledgestudioshort}} interface is now available.
 - {{site.data.keyword.alchemylanguagefull}} is no longer available as a pre-annotator. Instead of {{site.data.keyword.alchemylanguageshort}}, you can use {{site.data.keyword.nlushort}} to pre-annotate your documents. For more information, see [Bootstrapping annotation](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-preannotation).
 
@@ -253,10 +253,10 @@ You can now migrate {{site.data.keyword.knowledgestudioshort}} Cloud Foundry ser
 ### New features and changes
 {: #new-december2017}
 
-- {{site.data.keyword.knowledgestudioshort}} launched on {{site.data.keyword.cloud_notm}}. For information about the migration process and schedule, see [Migrating to {{site.data.keyword.cloud_notm}}](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-migrate).
-- Redesigned navigation. For details about the navigation changes, see [Table 2](#september2017) in the September 2017 release notes.
+- {{site.data.keyword.knowledgestudioshort}} launched on {{site.data.keyword.cloud_notm}}. For more information about the migration process and schedule, see [Migrating to {{site.data.keyword.cloud_notm}}](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-migrate).
+- Redesigned navigation. For more information about the navigation changes, see [Table 2](#september2017) in the September 2017 release notes.
 - Added {{site.data.keyword.nlufull}} as a pre-annotator.
-- Added user and storage management settings to the Service Details page. For information about adding users, see [Assembling a team](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-team). For information about setting storage limits, see [Troubleshooting > Storage space issues](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-troubleshooting#storage).
+- Added user and storage management settings to the Service Details page. For more information about adding users, see [Assembling a team](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-team). For more information about setting storage limits, see [Troubleshooting > Storage space issues](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-troubleshooting#storage).
 - Added a Performance page for model quality evaluation and guidance about how to improve quality.
 
 ## November 2017

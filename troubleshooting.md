@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-24"
+lastupdated: "2020-06-25"
 
 subcollection: watson-knowledge-studio
 
@@ -47,7 +47,7 @@ The answers to these questions typically lead to a good description of the probl
 ### What are the symptoms of the problem?
 {: #ts_overview_symptoms}
 
-When you describe a problem, the most obvious question is "What is the problem?" This question might seem straightforward; however, you can break it down into several more-focused questions that create a more descriptive picture of the problem. These questions can include the following aspects:
+When you describe a problem, the most obvious question is "What is the problem?" This question might seem straightforward. However, you can break it down into several more-focused questions that create a more descriptive picture of the problem. These questions can include the following aspects:
 
 - Who, or what, is reporting the problem?
 - What are the error codes and messages?
@@ -123,7 +123,7 @@ Create an account that is not included in the organization.
 
 If you need to use your current account for a {{site.data.keyword.knowledgestudioshort}} instance on a Lite plan and your user account is associated with a paid account, you can create a case. For more information, see [Contacting {{site.data.keyword.IBM_notm}} Support](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-troubleshooting#ts_contactingibmsupport).
 
-If you need to use your current account for a {{site.data.keyword.knowledgestudioshort}} instance on a Lite plan and your user account isn't associated with a paid account, post your issue to [StackOverflow](https://stackoverflow.com/search?q=watson-knowledge-studio){: external}. Tag the question, `watson-knowledge-studio`.
+If you need to use your current account for a {{site.data.keyword.knowledgestudioshort}} instance on a Lite plan and your user account isn't associated with a paid account, post your issue to [StackOverflow](https://stackoverflow.com/search?q=watson-knowledge-studio){: external}. Tag the question `watson-knowledge-studio`.
 
 ## Cannot access the application
 {: #wks_ts_access}
@@ -142,7 +142,9 @@ For more information about how to invite people to use your instance of the appl
 ### Human annotator
 {: #wks_ts_access_annotator}
 
-When someone invited you to an instance of {{site.data.keyword.knowledgestudioshort}} to serve as a human annotator, you likely received an email invitation. First, you must register with {{site.data.keyword.IBM_notm}} if you do not have {{site.data.keyword.IBM_notm}} registration credentials already. After you register with {{site.data.keyword.IBM_notm}} and accept the invitation, you are given access to the instance. However, after you are given access and before you can start to annotate documents, the administrator or a project manager of the instance must add you to a workspace and assign an annotation task to you. It is not until after you are assigned a task that you can perform any actions in the {{site.data.keyword.knowledgestudioshort}} instance. To annotate documents, use the ground truth editor. Use a Google Chrome browser for the best performance.
+When someone invited you to an instance of {{site.data.keyword.knowledgestudioshort}} to serve as a human annotator, you likely received an email invitation. First, you must register with {{site.data.keyword.IBM_notm}} if you do not have {{site.data.keyword.IBM_notm}} registration credentials already. After you register with {{site.data.keyword.IBM_notm}} and accept the invitation, you are given access to the instance.
+
+However, before you can start to annotate documents, the administrator or a project manager of the instance must add you to a workspace and assign an annotation task to you. It is not until after you are assigned a task that you can perform any actions in the {{site.data.keyword.knowledgestudioshort}} instance. To annotate documents, use the ground truth editor. Use the Google Chrome browser for the best performance.
 
 For help with the ground truth editor, see [Annotating documents](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-user-guide).
 
@@ -172,7 +174,7 @@ For more information about Beta services, see the [{{site.data.keyword.cloud_not
 
 {{site.data.keyword.IBM_notm}} releases experimental services and features for you to try out. These services might be unstable, change frequently in ways that are not compatible with earlier versions, and might be discontinued with short notice. These services and features are not intended for use in production environments.
 
-For the full details of service descriptions, see [{{site.data.keyword.cloud_notm}} service descriptions](https://www.ibm.com/software/sla/sladb.nsf/sla/bm?OpenDocument){: external}.
+For more information about service descriptions, see [{{site.data.keyword.cloud_notm}} service descriptions](https://www.ibm.com/software/sla/sladb.nsf/sla/bm?OpenDocument){: external}.
 
 ## Storage space issues
 {: #storage}

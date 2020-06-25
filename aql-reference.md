@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-24"
+lastupdated: "2020-06-25"
 
 subcollection: watson-knowledge-studio
 
@@ -29,9 +29,9 @@ Annotation Query Language (AQL) is the primary language used to create {{site.da
 - **Execution model**: The runtime component has a document-at-a-time execution model. The runtime component receives a collection of documents and runs the extractor on each document to extract information from that document.
 - **AQL statements**: By using AQL statements, you can create and then use modules, views, tables, dictionaries, and functions.
 - **Built-in functions**: AQL has a collection of built-in functions for use in extraction rules.
-- **The create function statement**: To perform operations on extracted values that are not supported by AQL, you can define custom functions to use in extraction rules called user-defined functions \(UDFs\).
+- **The create function statement**: To perform operations on extracted values that are not supported by AQL, you can define custom functions to use in extraction rules called user-defined functions (UDFs).
 
-## Annotation Query Language \(AQL\) syntax
+## Annotation Query Language (AQL) syntax
 {: #aql-syntax}
 
 Like many programming languages, AQL is based on common syntax and grammar.
@@ -43,11 +43,11 @@ The syntax of AQL is similar to that of SQL, but there are several important dif
 - AQL is case-sensitive.
 - AQL currently does not support advanced SQL features such as correlated subqueries and recursive queries.
 - AQL has a new statement type, `extract`, which is not present in SQL.
-- AQL does not allow keywords \(reserved words\) as view, column, or function names.
-- AQL allows, but does not require, regular expressions to be expressed in Perl syntax. Regular expressions begin with a slash \(`/`\) and end with a slash \(`/`\), as in Perl syntax. AQL also allows regular expressions that start with a single quotation mark \(`'`\) and end with a single quotation mark \(`'`\). For example, you can use `/regex/` instead of `'regex'` as the regular expression in AQL.
+- AQL does not allow keywords (reserved words) as view, column, or function names.
+- AQL allows, but does not require, regular expressions to be expressed in Perl syntax. Regular expressions begin with a slash (`/`) and end with a slash (`/`), as in Perl syntax. AQL also allows regular expressions that start with a single quotation mark (`'`) and end with a single quotation mark (`'`). For example, you can use `/regex/` instead of `'regex'` as the regular expression in AQL.
 
 - **Identifiers**: Identifiers are used to define the names of AQL objects, including names of modules, views, tables, dictionaries, functions, attributes, and function parameters.
-- **Reserved words**: Reserved words are words that have a fixed meaning within the context of the AQL structure, and cannot be redefined. Keywords are reserved words that have special meanings within the language syntax.
+- **Reserved words**: Reserved words are words that have a fixed meaning within the context of the AQL structure and cannot be redefined. Keywords are reserved words that have special meanings within the language syntax.
 - **Constants**: Constants are fixed values that can be one of these data types: String, Integer, Float, or Boolean.
 - **Comments**" Use comments to augment AQL code with basic descriptions to help others understand the code and to generate self-describing compiled modules.
 - **Expressions**: An AQL expression is a combination of one or more scalar values and functions that evaluates to a single scalar value.
@@ -61,11 +61,11 @@ AQL identifiers are case-sensitive. There are two types of identifiers:
 
 - **Simple identifier**
 
-    A simple identifier must start with a lowercase \(`a-z`\) or uppercase \(`A-Z`\) letter or the underscore character \(`_`\). Subsequent characters can be lowercase or uppercase letters, the underscore character, or digits \(`0-9`\). A simple identifier must be different from any AQL key word.
+    A simple identifier must start with a lowercase (`a-z`) or uppercase (`A-Z`) letter or the underscore character (`_`). Subsequent characters can be lowercase or uppercase letters, the underscore character, or digits (`0-9`). A simple identifier must be different from any AQL key word.
 
 - **Double-quoted identifier**
 
-    A double-quoted identifier starts and ends with a double quotation mark character \(`"`\). You can use any character between the beginning and ending double quotation mark characters. Double-quoted identifiers cannot contain a period \(`.`\) character. If a double quotation mark character occurs within name, it must be escaped by prefixing it with the backslash character \(\\\), for example `\”`.
+    A double-quoted identifier starts and ends with a double quotation mark character (`"`). You can use any character between the beginning and ending double quotation mark characters. Double-quoted identifiers cannot contain a period (`.`) character. If a double quotation mark character occurs within name, it must be escaped by prefixing it with the backslash character (\\), for example `\”`.
 
 ## Reserved words
 {: #aql-reserved}
@@ -218,7 +218,7 @@ Constants are used in the select list of a `select` or `extract` clause, or as a
 
 - **String constant**
 
-    A string that is enclosed in single quotation marks \(‘\), for example ‘a string’.
+    A string that is enclosed in single quotation marks (‘), for example ‘a string’.
 
 - **Integer constant**
 
@@ -245,11 +245,11 @@ Comments allow AQL developers to augment AQL code with basic descriptions, for e
 
 - **Single-line comments**
 
-    Single-line comments begin with double hyphens \(`--`\).
+    Single-line comments begin with double hyphens (`--`).
 
 - **Mulitple-line comments**
 
-    Multiple-line comments begin with a slash and an asterisk \(`/*`\) and end with an asterisk and a slash \(`*/\). Multiple-line comments cannot be nested. For example, the following nested mulitple-line comment is not allowed:
+    Multiple-line comments begin with a slash and an asterisk (`/*`) and end with an asterisk and a slash (`*`). Multiple-line comments cannot be nested. For example, the following nested mulitple-line comment is not allowed:
 
     ```
     /*
@@ -259,14 +259,14 @@ Comments allow AQL developers to augment AQL code with basic descriptions, for e
 
 - **AQL Doc comments**
 
-    AQL Doc comments provide a way to describe a module or an AQL object in plain language, and in an aspect-rich manner for contextual comprehension by other users. Unlike single-line comments and multiple line comments, which are ignored by the AQL Compiler, AQL Doc comments are serialized in the metadata of compiled modules \(.tam files\) and available for external consumption.
+    AQL Doc comments provide a way to describe a module or an AQL object in plain language, and in an aspect-rich manner for contextual comprehension by other users. Unlike single-line comments and multiple line comments, which are ignored by the AQL Compiler, AQL Doc comments are serialized in the metadata of compiled modules (.tam files) and available for external consumption.
 
     All comments in AQL Doc for statements and modules have the following format:
 
-    - The comment is in plain text \(no HTML tags are supported\).
-    - The comment begins with a forward slash followed by two asterisks \(`/**`\) and ends with an asterisk forward slash \(`*/`\). Optionally, each line can start with an asterisk \(`*`\).
+    - The comment is in plain text (no HTML tags are supported).
+    - The comment begins with a forward slash followed by two asterisks (`/**`) and ends with an asterisk forward slash (`*/`). Optionally, each line can start with an asterisk (`*`).
     - Any number of white spaces can be used before the asterisk.
-    - Special tags that are prefixed by an at symbol \(`@`\) can be used at the beginning of each line or after the optional asterisk.
+    - Special tags that are prefixed by an at symbol (`@`) can be used at the beginning of each line or after the optional asterisk.
     - AQL Doc comments cannot be nested.
     There are two levels of granularity within the AQL Doc system. The format for documenting each artifact is explained in detail in the topic that describes its statement and syntax.
 
@@ -322,7 +322,7 @@ where FollowsTok(F.name, L.name, 0, 0);
 
 ```
 
-This view identifies text that can be interpreted as a person’s full name \(for example, “Samuel Davis”, “Vicky Rosenberg”\). The expressions `F.name` and `L.name` are column-reference expressions that return the name column of the views `F` and `L`, respectively. The `from` statement defines views `F` and `L` as the local names for the views `FirstName` and `LastName` \(which define valid first and last names, and are not shown in this example\).
+This view identifies text that can be interpreted as a person’s full name (for example, “Samuel Davis”, “Vicky Rosenberg”). The expressions `F.name` and `L.name` are column-reference expressions that return the name column of the views `F` and `L`, respectively. The `from` statement defines views `F` and `L` as the local names for the views `FirstName` and `LastName` (which define valid first and last names, and are not shown in this example).
 
 ### Scalar function call
 
@@ -336,7 +336,7 @@ create view FamilyMembers as
 
 ```
 
-This view identifies potential family members by grouping people with the same last names together, printing all of the names, with the last names in lowercase characters \(for example, lastname keaton, firstnames \(Elyse, Alex, Diane\)\). The output of the `GetText` function calls are used as arguments to the `ToLowerCase` function call to display the names in lowercase. The `scalar` function call expressions in this example are: `ToLowerCase`, `(GetText(P.lastname)`, `ToLowerCase(GetText(P.firstname))`, and `GetText(P.lastname)`.
+This view identifies potential family members by grouping people with the same last names together, printing all of the names, with the last names in lowercase characters (for example, lastname keaton, firstnames (Elyse, Alex, Diane)). The output of the `GetText` function calls are used as arguments to the `ToLowerCase` function call to display the names in lowercase. The `scalar` function call expressions in this example are: `ToLowerCase`, `(GetText(P.lastname)`, `ToLowerCase(GetText(P.firstname))`, and `GetText(P.lastname)`.
 
 ### Aggregate function call
 
@@ -348,7 +348,7 @@ select Count(Person.lastname)
 from Person;
 ```
 
-The expression is simply `Count(Person.lastname)`. This expression will count the number of `Person.lastname` annotations in the document. An example of an aggregate function call with expression type scalar function call was seen in the previous example as `List(GetText(P.firstname))` with the `List` aggregate function taking a `GetText` scalar function as an argument to generate a list of first names. Aggregate function call expressions are only allowed as expressions in the `select` list of a `select` statement. Aggregate function call expressions are not allowed in the `select` list of an `extract` statement, or as arguments to a scalar or aggregate function call.
+The expression is simply `Count(Person.lastname)` and counts the number of `Person.lastname` annotations in the document. An example of an aggregate function call with expression type scalar function call exists in the previous example as `List(GetText(P.firstname))` with the `List` aggregate function taking a `GetText` scalar function as an argument to generate a list of first names. Aggregate function call expressions are only allowed as expressions in the `select` list of a `select` statement. Aggregate function call expressions are not allowed in the `select` list of an `extract` statement, or as arguments to a scalar or aggregate function call.
 
 ## Data model
 {: #aql-datamodel}
@@ -373,7 +373,7 @@ The fields of a tuple must belong to one of the built-in data types of AQL:
 
 - **ScalarList**
 
-    A collection of values of the same scalar type \(Integer, Float, Text, or Span\). A value of data type ScalarList can be obtained as a result of the AQL built-in aggregate function `List\(\)`, or as the result of a UDF.
+    A collection of values of the same scalar type (Integer, Float, Text, or Span). A value of data type ScalarList can be obtained as a result of the AQL built-in aggregate function `List()`, or as the result of a UDF.
 
 - **Span**
 
@@ -396,7 +396,7 @@ The fields of a tuple must belong to one of the built-in data types of AQL:
     A Span of \[x-x\] represents the span between the end of a character and the beginning of the next character. In the previous example, \[0-0\] is an empty string before the character `A`. Likewise, a Span of \[3-3\] is an empty string between the characters `e` and `l`.
     {: note}
 
-    A value of type Span can be obtained as a result of an `extract` statement, or a built-in scalar function, or a UDF.
+    A value of type Span can be obtained as a result of an `extract` statement or a built-in scalar function, or a UDF.
 
 - **Text**
 
@@ -426,7 +426,7 @@ An extractor consists of one or more AQL modules to create a collection of views
 
 ### `Document` view
 
-At the AQL module level, `Document` view is a special view that represents the current document that is being annotated by that module. When two or more modules are combined to form an extractor, the duplicate-free union of Document schemas of all modules is the required `Document` view. Use the `require document with columns` statement to specify the schema of the `Document` view. If this statement is absent from a module, the default schema that is assumed for the `Document` view is \(text Text, label Text\):
+At the AQL module level, `Document` view is a special view that represents the current document that is being annotated by that module. When two or more modules are combined to form an extractor, the duplicate-free union of Document schemas of all modules is the required `Document` view. Use the `require document with columns` statement to specify the schema of the `Document` view. If this statement is absent from a module, the default schema that is assumed for the `Document` view is (text Text, label Text):
 
 - **text**
 
@@ -475,7 +475,7 @@ The following statements are supported in AQL:
 
     The create function statement
 
-The syntax specifications in the AQL statements contain \[ \]. These specifications indicate that the square brackets, and the constructs that they hold, are optional when the corresponding syntax is used in writing a statement. In addition, they stand as place holders to define how to specify additional instances of a construct or argument.
+The syntax specifications in the AQL statements contain square brackets (`[ ]`). These specifications indicate that the square brackets and the constructs that they hold are optional when the corresponding syntax is used in writing a statement. In addition, they stand as place holders to define how to specify additional instances of a construct or argument.
 {: note}
 
 ## The `module` statement
@@ -497,14 +497,14 @@ module <module-name\>;
 
     Declares that the current file is part of the module that is named `<module-name\>`. The module name must be a simple identifier. Double-quoted identifiers are not allowed as module names.
 
-    Each AQL file inside the module must have exactly one module declaration, and this declaration must be the first statement in each file. This declaration establishes a namespace identical to the module-name. All views \(and other objects such as dictionaries, tables, and functions\) declared in AQL files inside this module are located inside this single namespace. They are accessible to all AQL files in this namespace.
+    Each AQL file inside the module must have exactly one module declaration, and this declaration must be the first statement in each file. This declaration establishes a namespace identical to the module-name. All views (and other objects such as dictionaries, tables, and functions) declared in AQL files inside this module are located inside this single namespace. They are accessible to all AQL files in this namespace.
 
     All of the files that are declared as part of the module `<module-name\>` must be inside a folder that is called `<module-name\>` to enforce this namespace. There is no ordering of the AQL files within this module folder. The AQL compiler examines all AQL files of the module and determines the right order to compile all views, dictionaries, tables, and functions declared in the module.
 
 ### Usage notes
 {: #aql-module-usage}
 
-- When the underlying AQL file is not located as part of a module \(modular AQL\) and is compiled in compatibility mode, this statement is not supported.
+- When the underlying AQL file is not located as part of a module (modular AQL) and is compiled in compatibility mode, this statement is not supported.
 - Circular dependencies between views are not allowed.
 - AQL modules do not support submodules.
 - AQL files within subfolders of the top-level module folder are ignored.
@@ -541,7 +541,7 @@ export view|dictionary|table|function <object-name\>;
 ### Description
 {: #aql-export-desc}
 
-- `view\|dictionary\|table\|function`
+- `view|dictionary|table|function`
 
     Defines the type of object to export. The object type can be a view, dictionary, table, or function.
 
@@ -558,7 +558,7 @@ export view|dictionary|table|function <object-name\>;
     select * from <imported_view_name_or_table_name>;
     ```
 
-- The `export view` and `output view` statements that are shown in the examples are orthogonal to each other. That is, an output view is not automatically an exported view, but it must be explicitly exported by using an `export` statement. An exported view is not automatically an output view, but it must be explicitly output by using the `output view` statement. In the examples, the `export` statement attempts to export the view PersonName.FirstName, which is an imported view. This attempt causes an error, which means that the developer must copy the imported view into a new view and then export that instead.
+- The `export view` and `output view` statements that are shown in the examples are orthogonal to each other. In other words, an output view is not automatically an exported view, but it must be explicitly exported by using an `export` statement. An exported view is not automatically an output view, but it must be explicitly output by using the `output view` statement. In the examples, the `export` statement attempts to export the view PersonName.FirstName, which is an imported view. This attempt causes an error, which means that the developer must copy the imported view into a new view and then export that instead.
 
 ### Examples
 {: #aql-reference-examples-2}
@@ -656,17 +656,17 @@ import view|dictionary|table|function <object-name\>
 
 - `<alias\>`
 
-    This form of the import statement, also known as `alias import`, imports the specified AQL object under the `<alias\>` name \(not the original name\) into the namespace of the current module. You can reference the imported element by using either an unqualified alias or an alias that is qualified with the current module name \(the module where the AQL object was imported\). You cannot use originalModule.elementName because the `alias import` statement imports the element under the alias name only and not under the qualified original name.
+    This form of the import statement, also known as `alias import`, imports the specified AQL object under the `<alias\>` name (not the original name) into the namespace of the current module. You can reference the imported element by using either an unqualified alias or an alias that is qualified with the current module name (the module where the AQL object was imported). You cannot use originalModule.elementName because the `alias import` statement imports the element under the alias name only and not under the qualified original name.
 
 ### Usage notes
 {: #aql-import-usage}
 
-- An import statement without an alias specification imports the specified AQL object into the current module. It makes the AQL object accessible to AQL statements defined in the current module under its qualified name `<original\_module\_name\>.<object-name\>.`
+- An import statement without an alias specification imports the specified AQL object into the current module. It makes the AQL object accessible to AQL statements defined in the current module under its qualified name `<original\_module\_name\>.<object-name\>`.
 - The import statement is only used to import AQL objects from modules other than the current module. An object that is declared in an AQL file of the module is visible to any other AQL file in that same module. An import statement puts objects in the context of the current module, and not in the context of the current file. Therefore, a view that is imported by 1.aql inside module A is made visible to 2.aql inside the same module without the need for any additional import statements.
 
 - All import statements must follow immediately after the module declaration, and must precede all other types of statements. Only those AQL objects that are explicitly exported from any module can be imported in another module. If this requirement is not observed, a compilation error results.
 
-- A compilation error is introduced when an `import view` statement introduces a naming conflict with any `create view` statement or other import statements within the same module \(not just within the current file\). This restriction applies to the `import` of other objects in addition to views.
+- A compilation error is introduced when an `import view` statement introduces a naming conflict with any `create view` statement or other import statements within the same module (not just within the current file). This restriction applies to the `import` of other objects in addition to views.
 - The AQL compiler adheres to the naming conventions that are used in previous versions of AQL:
     - A module cannot contain a view and a table with the same name.
     - A dictionary with the same name as a table or view is allowed.
@@ -721,7 +721,7 @@ output view PersonFirstName;
 
 **Example 3: Importing the view NotFirstname without using alias import**
 
-This sample import statement imports the qualified name personName.NotFirstName \(not the unqualified name of the view\) to the namespace of the current module, `person`. Always refer to the imported view by using only the qualified name. Any other mode of reference is flagged as compiler error.
+This sample import statement imports the qualified name personName.NotFirstName (not the unqualified name of the view) to the namespace of the current module, `person`. Always refer to the imported view by using only the qualified name. Any other mode of reference is flagged as compiler error.
 
 ```
 module person;
@@ -758,7 +758,7 @@ You can use the `import module` statement to import and reuse existing AQL modul
 
 - All import statements must follow immediately after the module declaration and must precede all other types of statements. Only those AQL objects that are explicitly exported from any module can be imported in another module. If this requirement is not observed, a compilation error results.
 
-- A compilation error is introduced when an `import view` statement introduces a naming conflict with any `create view` or other import statement within the same module \(not just within the current file\). This restriction applies to the `import` of other AQL objects in addition to views.
+- A compilation error is introduced when an `import view` statement introduces a naming conflict with any `create view` or other import statement within the same module (not just within the current file). This restriction applies to the `import` of other AQL objects in addition to views.
 - A compilation error is introduced when an AQL file inside a module tries to reference another exported view of a module without using the `import view` statement. The same applies to dictionaries, tables, or functions.
 - If two AQL files inside a module import the same view X from another module under two different aliases, for example, A and B, then the two aliases are treated synonymously. This rule applies also to tables, dictionaries, and functions.
 
@@ -888,13 +888,13 @@ require document with columns  <columnName\> <columnType\>
 
     Specifies additional column names and types to the schema of the `Document` view. They follow the same rules as `<columnName\>` and `<columnType\>`.
 
-In earlier versions of AQL, the schema of the special view `Document` was predefined to consist of either a single field \(text Text\) or two fields \(text text, label Text\). The choice between these schemas was decided at run time. By using the `require document with columns` statement, you can override the default input document schema at compile time.
+In earlier versions of AQL, the schema of the special view `Document` was predefined to consist of either a single field (text Text) or two fields (text text, label Text). The choice between these schemas was decided at run time. By using the `require document with columns` statement, you can override the default input document schema at compile time.
 
 ### Usage notes
 {: #aql-req-doc-usage}
 
 - For modular AQL code, the scope of any `require document with columns` statement is the module in which it is defined.
-- Only one `require document with columns` statement is allowed per AQL file. Within a single module, or a generic module, there can be zero, one, or multiple AQL files that have a `require document with columns` statement. All AQL files within a module merge their `require document with columns` statements at the level of the entire module to form a module-wide `require document with columns`. This statement defines the schema of the `Document` view for that module. If none of the AQL files of a module or a generic module contain a require statement, the module has a default schema for the view `Document`. This schema consists of two columns: \(text Text, label Text\). No default columns are established for the special view `Document` if at least one AQL file in the module has one `require document with columns` statement.
+- Only one `require document with columns` statement is allowed per AQL file. Within a single module, or a generic module, there can be zero, one, or multiple AQL files that have a `require document with columns` statement. All AQL files within a module merge their `require document with columns` statements at the level of the entire module to form a module-wide `require document with columns`. This statement defines the schema of the `Document` view for that module. If none of the AQL files of a module or a generic module contain a require statement, the module has a default schema for the view `Document`. This schema consists of two columns: (text Text, label Text). No default columns are established for the special view `Document` if at least one AQL file in the module has one `require document with columns` statement.
 - When multiple modules are combined to form an extractor, the schema of the `Document` view of the entire extractor is defined by the duplicate-free union of Document schemas for each module. An exception is raised when any column found across the multiple `require document with columns` statements is found to be conflicting in its type requirements across modules. For example, a module requires a column X with type Y when another module that is being loaded with it requires a column X with type Z.
 - An exception is raised when you run an extractor if the provided input document tuple does not contain all of the required columns. An exception is also raised if a column does not conform to its corresponding required type.
 - When the `require document with columns` statement is present inside a module, every column of the special view `Document` that is referenced must be declared in at least one of the `require document with columns` statements. The statement can be found in different AQL files within the same module. However, all such `require document with columns` statements would be merged at the level of the module to form a module-wide `require document with columns` statement.
@@ -957,7 +957,7 @@ socialsecurity.aql
         and socialSecurityNo Integer;
 ```
 
-The merged schema is \(firstName Text, lastName Text, socialSecurityNo Integer\).
+The merged schema is (firstName Text, lastName Text, socialSecurityNo Integer).
 
 ## The `create view` statement
 {: #aql-create-view}
@@ -995,7 +995,7 @@ create view <viewname\> as  (<select or extract statement\>) minus (<select or e
 ### Usage notes
 {: #aql-create-view-usage}
 
-- View names are case-sensitive. For example, Person, PERSON and person are different view names
+- View names are case-sensitive. For example, Person, PERSON, and person are different view names
 - Two views within the same AQL module cannot share a name, which would make them duplicates. However, two views with same name can exist in two different modules, since their fully qualified names are unique.
 - By default, a view that is defined by the `create view` statement is a non-output view until it is specified as an output view.
 - The `select` or `extract` statements of the `union all` and the `minus` forms, must have a compatible output schema. Two schemas are considered compatible for a `union` or `minus` operation if they have the same number of columns, the column names are in the same order, and they have compatible data types:
@@ -1012,7 +1012,7 @@ In the example below, the view `Phone` uses an `extract` statement to prepare it
 
 ```
 create view Phone as extract
-  regexes /\+?\([1-9]\d{2}\)\d{3}-\d{4}/
+  regexes /\+?([1-9]\d{2}\)\d{3}-\d{4}/
   and /\+?[Xx]\.?\d{4,5}/
   on D.text as num
 from Document D;
@@ -1029,7 +1029,7 @@ The view `AllPhoneNums` prepares a unionized set out of the tuples of `Phone` an
 ```
 create view Phone as
 extract
-    regex /\+?\([1-9]\d{2}\)\d{3}-\d{4}/
+    regex /\+?([1-9]\d{2}\)\d{3}-\d{4}/
     on D.text as match
 from Document D;
 
@@ -1079,7 +1079,7 @@ Instead of the expected output of an empty tuple list, the output is a set of re
 
 Although the contents of the `OneString` and `TheSameString` views seem identical, the actual text values have different underlying AQL objects. The type of `OneString.match` is 'Span over OneString.match'. The type of `TheSameString.match` is 'Span over TheSameString.match'. Since the field types are different, they are not compatible for comparison purposes.
 
-To obtain the wanted output of the empty tuple list, you must compare values of same type. In the following example, the GetString\(\) function converts span objects to string objects to pass compatible types to the `minus` operation.
+To obtain the wanted output of the empty tuple list, you must compare values of same type. In the following example, the `GetString()` function converts span objects to string objects to pass compatible types to the `minus` operation.
 
 ```
 create view Subtraction as
@@ -1110,7 +1110,7 @@ select P.num as num, LeftContextTok(P.num, 3) as lc
 from
 (
 extract
-    regexes /\+?\([1-9]\d{2}\)\d{3}-\d{4}/ and /\+?[Xx]\.?\d{4,5}/
+    regexes /\+?([1-9]\d{2}\)\d{3}-\d{4}/ and /\+?[Xx]\.?\d{4,5}/
     on D.text as num
 from Document D
 ) P;
@@ -1139,7 +1139,7 @@ output view <view-name\> [as '<alias\>'];
 
     Defines an `<alias\>` name for the output view. When the optional alias is not specified, the view is output under the following names:
 
-    - In modular AQL, the view is output under the name `<module-name\>.<view-name\>` where `<module-name\>` is the name of the module where the view is originally defined \(which can be different from the module where the view is output\).
+    - In modular AQL, the view is output under the name `<module-name\>.<view-name\>` where `<module-name\>` is the name of the module where the view is originally defined (which can be different from the module where the view is output).
     - In AQL 1.4 or earlier, the view is output under the name `<view-name\>`
     The `output ... as <alias\>` statement is useful when you customize an extractor for different domains. The use of the `<alias\>` name when you define an output view ensures that output names are identical across different implementations of the customization.
 
@@ -1161,7 +1161,7 @@ create view Person as
 output view Person;
 ```
 
-This behavior applies for any view output without an alias, regardless of whether the view is output in the module where it has been defined, or a module where it has been imported, even when it has been imported using an alias import. For example, in the output view `MyPerson`, this example results in the view being output under its original qualified name `personModule.Person` and not under its local alias `MyPerson`.
+This behavior applies for any view output without an alias, regardless of whether the view is output in the module where it has been defined, or a module where it has been imported, even when it has been imported using an alias import. For example, in the output view `MyPerson`, this example results in the view being output under its original qualified name `personModule.Person` and not under its local alias `MyPerson`
 
 ```
 module employeeModule;
@@ -1171,7 +1171,7 @@ import view Person from module personModule as MyPerson;
 output view MyPerson;
 ```
 
-- The output alias statement is useful when you build libraries of extractors where the same type of entity can have many different implementations, depending on the application domain or the language of the input documents. The main benefit of using an alias when you define an output view is to ensure a consistent nomenclature across output views. Consistent nomenclature is expected by the program logic of a user when you process multiple modules that each output a semantically similar view. In modular AQL, when an alias name is used in an `output view` statement, the tuples of a view are output under the specified alias name. For example, the following code would output the results under the alias name PersonAlias, and the alias name is not qualified with the module prefix.
+- The output alias statement is useful when you build libraries of extractors where the same type of entity can have many different implementations depending on the application domain or the language of the input documents. The main benefit of using an alias when you define an output view is to ensure a consistent nomenclature across output views. Consistent nomenclature is expected by the program logic of a user when you process multiple modules that each output a semantically similar view. In modular AQL, when an alias name is used in an `output view` statement, the tuples of a view are output under the specified alias name. For example, the following code would output the results under the alias name PersonAlias, and the alias name is not qualified with the module prefix.
 
 ```
 module personModule;
@@ -1189,7 +1189,7 @@ output view Person as 'PersonAlias';
 
 The following examples contain two modules, personModuleFrench and personModuleEnglish. Each module outputs a view, named PersonNameFrench and PersonNameEnglish. Suppose that there are similar modules, each of which outputs views that are semantic variants of an extractor for person names. These modules are customized for different languages with the variance in the customization of this view for a specified input language. Eventually, a user might want a program to use modules where the sought output view is named PersonName, irrespective of the modules that are processed. This expectation is normal, since each module that is customized for a language, domain, or another purpose is expected to produce various results. The consumer of these modules does not need to alter the algorithm of their program to accommodate for varying output view names when the underlying semantics are similar.
 
-In the example, because the alias PersonName is used, the consumer does not need to alter the view name that is sought. However, the results might vary depending on the modules that are processed. In the example, for instance, the resulting matches are French-based \(Example 1\) and English-based \(Example 2\).
+In the example, because the alias PersonName is used, the consumer does not need to alter the view name that is sought. However, the results might vary depending on the modules that are processed. In the example, for instance, the resulting matches are French-based (Example 1) and English-based (Example 2).
 
 **Example 1: Resulting matches are French-based**
 
@@ -1269,7 +1269,7 @@ from <from list>
 
 - `[having <having clause\>]`
 
-    Specifies a filtering predicate \(in the `<having clause\>`\) that is applied to each extracted output tuple. Note that the field names that are specified in the `<having clause\>` refer to any aliases that are specified in the `<select list\>`. This clause is optional.
+    Specifies a filtering predicate (in the `<having clause\>`) that is applied to each extracted output tuple. Note that the field names that are specified in the `<having clause\>` refer to any aliases that are specified in the `<select list\>`. This clause is optional.
 
 - `[consolidate on <column\>[using '<policy\>' ]]`
 
@@ -1396,7 +1396,7 @@ on <token spec>] <name>.<column>
 
 - `regex[es] /<regex1\>/`
 
-    Specifies the regular expressions to be used in the extraction. By default, AQL uses Perl syntax for regular expressions, which means that regular expression literals are enclosed in two forward slash \(//\) characters. Regular expression escape sequences take precedence over other escape characters. AQL allows regular expressions in SQL string syntax, so a regular expression for United States phone numbers can be expressed as either of the examples:
+    Specifies the regular expressions to be used in the extraction. By default, AQL uses Perl syntax for regular expressions, which means that regular expression literals are enclosed in two forward slash (//) characters. Regular expression escape sequences take precedence over other escape characters. AQL allows regular expressions in SQL string syntax, so a regular expression for United States phone numbers can be expressed as either of the examples:
 
     ```
     /\d{3}-\d{5}/
@@ -1461,7 +1461,7 @@ on <token spec>] <name>.<column>
         [and group <number> as <name>]*
     ```
 
-    To return only Group 0 \(the entire match\), you can use a shorter, alternative format as in Example 1. This format is equivalent to `return group 0 as <name>`. `<name>` can be a simple identifier or a double-quoted identifier.
+    To return only Group 0 (the entire match), you can use a shorter, alternative format as in Example 1. This format is equivalent to `return group 0 as <name>`. `<name>` can be a simple identifier or a double-quoted identifier.
 
 ### Usage notes
 {: #aql-regx-usage}
@@ -1593,7 +1593,7 @@ If no flag is specified, the dictionary will match based on any flag that was sp
 
 - Dictionaries are always evaluated on token boundaries. Specifically, a dictionary entry matches a region of text if the first token of the entry matches the first token of the text region, the second token of the entry matches the second token of the text region, and so on. Characters between two consecutive tokens are ignored.
 
-    For example, assume that you are using a simple white space based tokenization model that is appropriate for a language such as English. Also, assume that the input text is “Let’s go fishing!”. If a dictionary consists of the term `go fish`, there is no match in the text for `Let's go fishing!`. However, if the dictionary consists of the entry `go fishing` \(notice there are two white spaces between go and fishing\), there is one match in the text `Let's go fishing!`. White space specifies that `go` and `fishing` are two distinct tokens. If there are one or more white space characters between the two tokens `go` and `fishing` in the input text, there is a match.
+    For example, assume that you are using a simple white space based tokenization model that is appropriate for a language such as English. Also, assume that the input text is “Let’s go fishing!”. If a dictionary consists of the term `go fish`, there is no match in the text for `Let's go fishing!`. However, if the dictionary consists of the entry `go fishing` (notice there are two white spaces between go and fishing), there is one match in the text `Let's go fishing!`. White space specifies that `go` and `fishing` are two distinct tokens. If there are one or more white space characters between the two tokens `go` and `fishing` in the input text, there is a match.
 
     For each match of a dictionary entry with input text, the `extract dictionary` statement generates an output tuple.
 
@@ -1805,7 +1805,7 @@ blocks
 ### Usage notes
 {: #aql-blocks-usage}
 
-- If there are multiple overlapping blocks in the input spans, a block extraction statement returns all possible blocks. Use consolidation to filter out redundant blocks.
+- If the input scans contain multiple overlapping blocks in the input spans, a block extraction statement returns all possible blocks. Use consolidation to filter out redundant blocks.
 - An `extract` statement with block extraction specification yields blocks that each consist of an aggregation of values of a certain field from across multiple input tuples. Therefore, its select list cannot include fields from its input view.
 
 ### Examples
@@ -1938,8 +1938,8 @@ For English, the Multilingual tokenizer uses the part-of-speech tags that are li
 |`NNP`|Proper noun, singular|
 |`NNPS`|Proper noun, plural|
 |`EX`|Existential there|
-|`PRP`|Personal pronoun \(PP\)|
-|`PRP$`|Possessive pronoun \(PP$\)|
+|`PRP`|Personal pronoun (PP)|
+|`PRP$`|Possessive pronoun (PP$)|
 |`POS`|Possessive ending|
 |`RBS`|Adverb, superlative|
 |`RBR`|Adverb, comparative|
@@ -1965,12 +1965,12 @@ For English, the Multilingual tokenizer uses the part-of-speech tags that are li
 |`RP`|Particle|
 |`SYM`|Symbol|
 |`$`|Currency sign|
-|`'' ''`|\(double or single\) quotation mark|
-|`\(`|Left parenthesis \(round, square, curly, or angle bracket\)|
-|`\)`|Right parenthesis \(round, square, curly, or angle bracket\)|
+|`'' ''`|(double or single) quotation mark|
+|`(`|Left parenthesis (round, square, curly, or angle bracket)|
+|`)`|Right parenthesis (round, square, curly, or angle bracket)|
 |`,`|Comma|
-|`:`|Mid-sentence punctuation \(: ; -- -\)|
-|`.`|Sentence-final punctuation \(. ! ? ...\)|
+|`:`|Mid-sentence punctuation (: ; -- -)|
+|`.`|Sentence-final punctuation (. ! ? ...)|
 
 For Indo-European Languages other than English, the Multilingual tokenizer uses the part-of-speech tags that are listed in the following table.
 
@@ -2000,9 +2000,9 @@ For Chinese, the Multilingual tokenizer uses the part-of-speech tags that are li
 |`ac`|Complementary adjective|
 |`ag`|General adjective|
 |`b`|Distinction word|
-|`cbc`|Postposition \(after a clause\)|
-|`cbs`|Postposition \(after a sentence\)|
-|`cbw`|Postposition \(after a word\)|
+|`cbc`|Postposition (after a clause)|
+|`cbs`|Postposition (after a sentence)|
+|`cbw`|Postposition (after a word)|
 |`cf`|Preposed conjunction|
 |`cmc`|Conjunction between clauses|
 |`cms`|Conjunction between sentences|
@@ -2083,10 +2083,10 @@ For Chinese, the Multilingual tokenizer uses the part-of-speech tags that are li
 |`x`|Other|
 |`y`|Tone word|
 |`z`|State word|
-|`ADJ`|Adjective \(non-predicate\)|
+|`ADJ`|Adjective (non-predicate)|
 |`ADV`|Adverb|
 |`ASP`|Aspect Marker|
-|`AUX`|Verb \(Auxiliary\)|
+|`AUX`|Verb (Auxiliary)|
 |`CJ`|Conjunction|
 |`CL`|Classifier|
 |`CTM`|Modifier Clitic|
@@ -2113,13 +2113,13 @@ For Japanese, the Multilingual tokenizer uses the part-of-speech tags that are l
 |---|-----------|
 |`Michigo`|Unknown|
 |`Doushi`|Verb|
-|`AddV`|Formal Verb \(subsidiary verb\)|
-|`AddV2`|Formal Verb \(verbify\)|
+|`AddV`|Formal Verb (subsidiary verb)|
+|`AddV2`|Formal Verb (verbify)|
 |`Meishi`|Noun|
 |`FukushitekiMeishi`|Adverbial Noun|
 |`Josuushi`|Numeral Classifier|
 |`KeishikiMeishi`|Formal Noun|
-|`KoyuuKoyuuMeishi`|Unknown Proper Noun \(can be a start of phrase\)|
+|`KoyuuKoyuuMeishi`|Unknown Proper Noun (can be a start of phrase)|
 |`KoyuuMeishi`|Unknown Proper Noun|
 |`KoyuuMeishiSei`|Proper Noun - LastName|
 |`KoyuuMeishiMei`|Proper Noun - FirstName|
@@ -2127,10 +2127,10 @@ For Japanese, the Multilingual tokenizer uses the part-of-speech tags that are l
 |`KoyuuMeishiKuni`|Proper Noun - Country|
 |`KoyuuMeishiChimei`|Proper Noun - Place name|
 |`KoyuuMeishiSonota`|Proper Noun - Other|
-|`KoyuuMeishiSeimei`|Proper Noun - PersonName \(Lastname + Firstname\)|
+|`KoyuuMeishiSeimei`|Proper Noun - PersonName (Lastname + Firstname)|
 |`KeiyouDoushi`|Adjective Verb|
-|`AddAn`|Adjective Verb \(derivation\)|
-|`AddAn2`|Adjective Verb \(yet another derivation\)|
+|`AddAn`|Adjective Verb (derivation)|
+|`AddAn2`|Adjective Verb (yet another derivation)|
 |`Daimeishi`|Pronoun|
 |`AddA`|Formal adjective|
 |`Keiyoushi`|Adjective|
@@ -2142,45 +2142,45 @@ For Japanese, the Multilingual tokenizer uses the part-of-speech tags that are l
 |`SuushiSetsubi`|Suffix - Numeral|
 |`SuushiSettou`|Prefix - Numeral|
 |`Jodoushi`|Auxiliary Verb|
-|`AuxA1`|Auxiliary Verb \(adjective\)|
-|`AuxV`|Auxiliary Verb \(verbal\)|
-|`AuxV1`|Auxiliary Verb \(derivation\)|
-|`JodoushiDesu`|Auxiliary Verb \("desu"\)|
-|`PartAux`|Auxiliary Verb \(part of collocation\)|
-|`InyouJoshi`|Particles - case markers \(extract\)|
-|`JoshiNo`|Particles - case markers \("no"\)|
+|`AuxA1`|Auxiliary Verb (adjective)|
+|`AuxV`|Auxiliary Verb (verbal)|
+|`AuxV1`|Auxiliary Verb (derivation)|
+|`JodoushiDesu`|Auxiliary Verb ("desu")|
+|`PartAux`|Auxiliary Verb (part of collocation)|
+|`InyouJoshi`|Particles - case markers (extract)|
+|`JoshiNo`|Particles - case markers ("no")|
 |`KakuJoshi`|Particles - case markers|
-|`KakuJoshi1`|Particles - case markers \(connect with non-indeclinable words\)|
-|`ParticleAdnominal`|Particles - case markers \(collocation\)|
-|`ParticleV`|Particles - case markers \(collocation between verb and particles\)|
+|`KakuJoshi1`|Particles - case markers (connect with non-indeclinable words)|
+|`ParticleAdnominal`|Particles - case markers (collocation)|
+|`ParticleV`|Particles - case markers (collocation between verb and particles)|
 |`SetsuzokuJoshi`|Particles - conjunctive particles|
 |`FukuJoshi`|Particles - adverbial particles|
-|`FukuJoshi1`|Particles - adverbial particles \(anomalistic\)|
+|`FukuJoshi1`|Particles - adverbial particles (anomalistic)|
 |`ShuuJoshi`|Particles - sentence ending particles|
 |`FuteiJoshi`|Particles - indefinite particles|
 |`HeiretsuJoshi`|Particles - parallel markers|
-|`RentaiHeiretsuJoshi`|Particles - parallel markers \(parallel nouns\)|
+|`RentaiHeiretsuJoshi`|Particles - parallel markers (parallel nouns)|
 |`KeiJoshi`|Particles - binding particles|
-|`PartParticle`|Particles \(part of collocation\)|
-|`ParticleIdiomRy`|Particles - collocation particles \(not case markers\)|
+|`PartParticle`|Particles (part of collocation)|
+|`ParticleIdiomRy`|Particles - collocation particles (not case markers)|
 |`RentaiJoshi`|Particles - adnominal particle|
 |`JoukyouKa`|Particles - continuative particle|
-|`JoukyoukaFunc`|Particles - continuative particle \(collocation\)|
+|`JoukyoukaFunc`|Particles - continuative particle (collocation)|
 |`JunTaigen`|Particles - phrasal particles|
 |`Cushion`|Interjection|
 |`VInfl`|Inflection Suffix - verb|
 |`AddVInfl`|Inflection Suffix - adverb|
-|`PartVInfl`|Inflection Suffix - verb \(collocation\)|
+|`PartVInfl`|Inflection Suffix - verb (collocation)|
 |`AInfl`|Inflection Suffix - adjective|
 |`AnInfl`|Inflection Suffix - adjective verb|
 |`AuxInfl`|Inflection Suffix - auxiliary verb|
-|`PartAuxInfl`|Inflection Suffix - auxiliary verb \(collocation\)|
+|`PartAuxInfl`|Inflection Suffix - auxiliary verb (collocation)|
 |`PartVSuf`|Part of verb suffix|
 |`Kigou`|Symbol mark|
 |`HirakiKakko`|Punctuation - opened parenthesis|
 |`TojiKakko`|Punctuation - closed parenthesis|
-|`Kuten`|Punctuation - Japanese period \(full stop\)|
-|`Touten`|Punctuation - Japanese comma \(pause mark\)|
+|`Kuten`|Punctuation - Japanese period (full stop)|
+|`Touten`|Punctuation - Japanese comma (pause mark)|
 |`Delimiter`|Punctuation - Alphabet delimiter|
 |`SuujiComma`|Punctuation - Numeric delimiter|
 
@@ -2213,15 +2213,15 @@ For Korean, the Multilingual tokenizer uses the part-of-speech tags that are lis
 |`VAX`|Derived Adjective Using Suffix|
 |`MM`|Modifier - Adnominal|
 |`MMN`|Modifier - Adnominal for Number|
-|`MAG`|Modifier - Adverb \(General\)|
-|`MAJ`|Modifier - Adverb \(Conjunction\)|
+|`MAG`|Modifier - Adverb (General)|
+|`MAJ`|Modifier - Adverb (Conjunction)|
 |`IC`|Interjection|
-|`JKS`|Postpositional \(Subjective\)|
-|`JKG`|Postpositional \(Adnominal\)|
-|`JKO`|Postpositional \(Objective\)|
-|`JKB`|Postpositional \(Adverbial\)|
-|`JKV`|Postpositional \(Vocative\)|
-|`JKQ`|Postpositional \(Quotation\)|
+|`JKS`|Postpositional (Subjective)|
+|`JKG`|Postpositional (Adnominal)|
+|`JKO`|Postpositional (Objective)|
+|`JKB`|Postpositional (Adverbial)|
+|`JKV`|Postpositional (Vocative)|
+|`JKQ`|Postpositional (Quotation)|
 |`JX`|Auxiliary Postposition|
 |`JC`|Conjunctive Postposition|
 |`XPN`|Nominal Prefix|
@@ -2266,7 +2266,7 @@ For Turkish, the Multilingual tokenizer uses the part-of-speech tags that are li
 
 **Example 1: Using a part of speech tag directly in an extract statement**
 
-The view `EnglishNoun` extracts English nouns \(singular or mass\) or proper nouns \(singular\).
+The view `EnglishNoun` extracts English nouns (singular or mass) or proper nouns (singular).
 
 ```
 create view EnglishNoun
@@ -2387,7 +2387,7 @@ pattern <pattern specification> [return clause] [with inline_match on <viewname.
     extract pattern <P.name> (<Token>)  <Ph.phone> as match from ...
     ```
 
-    Use the \(min,max\) syntax to indicate the number of times each Atom repeats. You can also use the ? syntax to indicate that an Atom or repeating Atom is optional. Atoms, along with their indications for repeating and optional, are combined to create sequences.
+    Use the (min,max) syntax to indicate the number of times each Atom repeats. You can also use the ? syntax to indicate that an Atom or repeating Atom is optional. Atoms, along with their indications for repeating and optional, are combined to create sequences.
 
     Here is a more complex example that shows how to repeat elements. Find candidate hotel names by identifying occurrences of one to three capitalized words, followed by a 'Hotel' or 'hotel' token.
 
@@ -2471,10 +2471,10 @@ Specifically, an Atom can have six formats:
 
 - `[with language as <language code(s)\>]`
 
-    Specifies a comma-delimited list of two-letter language codes, such as en \(English\) or zh \(Chinese\) for the languages on which to evaluate the string. There will be no match on documents whose language code is not contained in this string. If the language parameter is omitted, the evaluation language defaults to one of the following language sets:
+    Specifies a comma-delimited list of two-letter language codes, such as en (English) or zh (Chinese) for the languages on which to evaluate the string. There will be no match on documents whose language code is not contained in this string. If the language parameter is omitted, the evaluation language defaults to one of the following language sets:
 
     - If it is declared, the language sets that are specified through the set default language statement in the containing module.
-    - The language sets that contain German \(de\), Spanish \(es\), English \(en\), French \(fr\), Italian \(it\), and the unspecified language \(x\_unspecified\)
+    - The language sets that contain German (de), Spanish (es), English (en), French (fr), Italian (it), and the unspecified language (x\_unspecified)
 
 ### Usage notes
 {: #aql-seq-ptn-usage}
@@ -2632,7 +2632,7 @@ select `<select list>`
 
     Defines a predicate to be applied on each tuple that is generated from the Cartesian product of all of the tuples in the relations in the `from` clause. This clause is optional.
 
-- `[consolidate on<column\>[using '<policy\>' [with priority from <column\> priority order]]]]`
+- `[consolidate on<column\>[using '<policy\>' [with priority from <column\> priority order]]]`
 
     Defines a consolidation policy to manage overlapping spans. This clause is optional.
 
@@ -2653,10 +2653,10 @@ select `<select list>`
 
 The semantics of the `select` statement are as follows:
 
-- Determine the input data \(in tuples\) by taking the Cartesian product of relations in the from list.
-- For each input tuple that is generated, filter it by applying the predicates in the \(optional\) `where` clause.
+- Determine the input data (in tuples) by taking the Cartesian product of relations in the from list.
+- For each input tuple that is generated, filter it by applying the predicates in the (optional) `where` clause.
 - If the optional `group by` clause is present, group tuples produced from the same document by the values specified in the group-by list and compute the result of the `aggregate` functions within the select list.
-- Consolidate any overlapping tuples, according to the policy defined in the \(optional\) `consolidation` clause. If the optional `order by` clause is present, order these tuples by the values of the order-by list.
+- Consolidate any overlapping tuples, according to the policy defined in the (optional) `consolidation` clause. If the optional `order by` clause is present, order these tuples by the values of the order-by list.
 - Compute all expressions within the `select` list on each tuple, and rename the columns as specified by the `as` clauses.
 - If the optional `limit` clause is present, limit the number of output tuples to the specified number of tuples for each document.
 
@@ -2776,7 +2776,7 @@ select
 
         Specify expressions that are composed of scalar function calls and must return the same type.
 
-    If the result of `<function1()\>` is true, then the result of the `case` expression is the result of `<expr1\>`, and none of the subsequent `when` clauses are evaluated. Otherwise, subsequent `when` clauses \(if any\) are evaluated in the same manner.
+    If the result of `<function1()\>` is true, then the result of the `case` expression is the result of `<expr1\>`, and none of the subsequent `when` clauses are evaluated. Otherwise, subsequent `when` clauses (if any) are evaluated in the same manner.
 
     When none of the conditions of the `when` clauses are satisfied, the result of this case expression is the result of the default expression `<expr\_default\>`. This expression is specified in the optional `else` clause. If the `[else]` clause is absent, the result of this `case` expression is `null`.
 
@@ -2806,7 +2806,7 @@ The following examples illustrate various forms of the select list.
 
 **Example 1: Explicit value assignment using a constant**
 
-This example shows the assignment of a constant value to a view attribute within the select list. The field that is called polarity indicates if the polarity of `PS.match` is positive or negative \(Notice the explicit assignment of a constant value to this attribute\).
+This example shows the assignment of a constant value to a view attribute within the select list. The field that is called polarity indicates if the polarity of `PS.match` is positive or negative (Notice the explicit assignment of a constant value to this attribute).
 
 ```
 create view PositiveSentimentsWithPolarity as
@@ -3128,7 +3128,7 @@ match: `John Doe`,
 priority: `2`
 ```
 
-Both spans have the same begin offset. When you consolidate by using the `LeftToRight` policy for ascending priority order, the tuple \(`match: John, priority: 1`\) is retained because it has the higher priority. When you consolidate by using the descending priority order, the tuple \(`match: John Doe, priority: 2`\) is retained. For example:
+Both spans have the same begin offset. When you consolidate by using the `LeftToRight` policy for ascending priority order, the tuple (`match: John, priority: 1`) is retained because it has the higher priority. When you consolidate by using the descending priority order, the tuple (`match: John Doe, priority: 2`) is retained. For example:
 
 ```
 create view ConsolidatePeopleWithPrioritiesAscending as
@@ -3238,14 +3238,14 @@ select ...
 
     Specifies a comma-delimited list of expressions.
 
-    The order is based on the values of a comma-delimited list of expressions. The order by clause supports expressions that return numeric \(Integer or Float\), Text, or Span data types. If an expression in the `order by` clause returns a type Span, the result tuples are compared by comparing the relevant span values. In the following example, the span values of the `person` field are compared.
+    The order is based on the values of a comma-delimited list of expressions. The order by clause supports expressions that return numeric (Integer or Float), Text, or Span data types. If an expression in the `order by` clause returns a type Span, the result tuples are compared by comparing the relevant span values. In the following example, the span values of the `person` field are compared.
 
     ```
     order by P.person
 
     ```
 
-    The `order by` clause treats nulls as unordered \(amongst themselves\). Nulls are ordered lower than other objects.
+    The `order by` clause treats nulls as unordered (amongst themselves). Nulls are ordered lower than other objects.
 
 ### Examples
 {: #aql-reference-examples-22}
@@ -3506,7 +3506,7 @@ detag Document.text as DetaggedDoc
 ## The `create dictionary` and `create external dictionary` statements
 {: #aql-create-dict}
 
-The `create dictionary` and `create external dictionary` statements are used to define dictionaries of words or phrases to identify matching terms across input text through extract statements or predicate functions. The `create dictionary` statement allows the specification of dictionary content in source AQL code, and the dictionary content is serialized inside the compiled representation of the module \(the .tam file\). The `create external dictionary` statement allows you to specify the dictionary content when the extractor is instantiated, instead of in source AQL code, and you do not have to recompile the module. Therefore, external dictionaries are powerful constructs that allow the AQL developer to expose customization points in a compiled module.
+The `create dictionary` and `create external dictionary` statements are used to define dictionaries of words or phrases to identify matching terms across input text through extract statements or predicate functions. The `create dictionary` statement allows the specification of dictionary content in source AQL code, and the dictionary content is serialized inside the compiled representation of the module (the .tam file). The `create external dictionary` statement allows you to specify the dictionary content when the extractor is instantiated, instead of in source AQL code, and you do not have to recompile the module. Therefore, external dictionaries are powerful constructs that allow the AQL developer to expose customization points in a compiled module.
 
 Dictionaries can be created from three sources:
 
@@ -3604,12 +3604,12 @@ The internal create dictionary statement has three syntactical forms, `from file
 
 - `'<language code(s)\>'`
 
-    Specifies a comma-delimited list of two-letter language codes, such as en \(English\) or zh \(Chinese\) for the languages, or for the document languages for external dictionaries, on which to evaluate the dictionary. The dictionary produces no results on documents whose language code is not contained in this string.
+    Specifies a comma-delimited list of two-letter language codes, such as en (English) or zh (Chinese) for the languages, or for the document languages for external dictionaries, on which to evaluate the dictionary. The dictionary produces no results on documents whose language code is not contained in this string.
 
     If the language parameter is omitted, the dictionary language defaults to one of the following language sets:
 
     - The language sets that are specified through the `set default language` statement, if it is declared, in the containing module.
-    - The language sets that contain German \(de\), Spanish \(es\), English \(en\), French \(fr\), Italian \(it\), and the unspecified language \(x\_unspecified\).
+    - The language sets that contain German (de), Spanish (es), English (en), French (fr), Italian (it), and the unspecified language (x\_unspecified).
 
 - `lemma_match`
 
@@ -3648,7 +3648,7 @@ The internal create dictionary statement has three syntactical forms, `from file
 - The `from file` and `from table` formats are recommended, especially when you anticipate modifying the entries, or when you have many entries. By using these formats, you can modify the contents of the dictionary without modifying the code.
 - When the `create dictionary` statement is processed by the modular AQL compiler, references to dictionary file locations specified in the `create dictionary ... from file` syntax must be relative to the root of the module in which this `create dictionary` statement is issued.
 - You can specify comments in a dictionary file by preceding the comment with the character `#`. Comments can start anywhere in a line.
-- If you want to specify comments that span multiple lines, you must precede each line with the comment character. If the comment character is part of a dictionary entry, you must escape it using the backslash character \(\\\), as in `\#`. If the backslash character is part of the dictionary entry, it must be escaped with itself, as in `\\`.
+- If you want to specify comments that span multiple lines, you must precede each line with the comment character. If the comment character is part of a dictionary entry, you must escape it using the backslash character (\\), as in `\#`. If the backslash character is part of the dictionary entry, it must be escaped with itself, as in `\\`.
 - For external dictionaries, when modules are being loaded, you must specify a list of URIs to external dictionaries, as required by the modules that are being loaded.
 
 - **Lemmatization of dictionaries**: The primary difference between the existing dictionary matching semantics and the lemmatized semantics is that the match is performed against the lemmatized form of the document, instead of the original form of the document.
@@ -3656,13 +3656,13 @@ The internal create dictionary statement has three syntactical forms, `from file
     There are additional prerequisites on the format of dictionary entries that belong to dictionary that has lemma match enabled.
 
     - A dictionary entry can contain one or more tokens, where each entry token is a lemma. To create a dictionary of lemmas, you can use the [GetLemma scalar function.
-    - The tokens of a dictionary entry should be separated by a white space. If the token consists of white spaces, then the white spaces should be escaped by using the backslash \( \\\) character.
+    - The tokens of a dictionary entry should be separated by a white space. If the token consists of white spaces, then the white spaces should be escaped by using the backslash ( \\) character.
 
 - The following table shows the differences between the `create external dictionary` statement and the `create dictionary` statement:
 
 |`create external dictionary`|`create dictionary`|
 |----------------------------|-------------------|
-|<ul><li>Defines a placeholder for a dictionary whose content is supplied at initialization time.</li></ul>|<ul><li>Requires that the content of the dictionary is available at compile time.</li><li>Serialized in the compiled representation \(.tam\) of a module.</li></ul>|
+|<ul><li>Defines a placeholder for a dictionary whose content is supplied at initialization time.</li></ul>|<ul><li>Requires that the content of the dictionary is available at compile time.</li><li>Serialized in the compiled representation (.tam) of a module.</li></ul>|
 
 ### Examples
 {: #aql-reference-examples-26}
@@ -3866,15 +3866,15 @@ create external table <table-name\>
 ### Usage notes
 {: #aql-cr-ext-tab-usage}
 
-- The compiled representation of the module contains metadata about the external objects \(views, dictionaries, and tables\) that the module defines.
+- The compiled representation of the module contains metadata about the external objects (views, dictionaries, and tables) that the module defines.
 - When modules are being loaded, you must specify a list of URIs to external tables, as required by the modules that are being loaded.
-- The supported format for the content of an external table is one CSV \( .csv\) file with header.
+- The supported format for the content of an external table is one CSV ( .csv) file with header.
 
 The following table shows the differences between the `create external table` statement and the `create table` statement:
 
 |`create external table`|`create table`|
 |-----------------------|--------------|
-|<ul><li>Defines a placeholder for a table whose content is supplied at initialization time.</li></ul>|<ul><li>Requires that the content of the table is available at compile time.</li><li>Serialized in the compiled representation \(.tam\) of a module.</li></ul>|
+|<ul><li>Defines a placeholder for a table whose content is supplied at initialization time.</li></ul>|<ul><li>Requires that the content of the table is available at compile time.</li><li>Serialized in the compiled representation (.tam) of a module.</li></ul>|
 
 ### Examples
 {: #aql-reference-examples-28}
@@ -3959,7 +3959,7 @@ external_name '<view_external_name>';
 
 - `'<view_external_name\>'`
 
-    Specifies the external name of the external view. External systems that populate tuples into the external view refer to the external view by the external name. The `'<view_external_name\>'` must be a String constant encased in single quotation marks \('ExternalName'\).
+    Specifies the external name of the external view. External systems that populate tuples into the external view refer to the external view by the external name. The `'<view_external_name\>'` must be a String constant encased in single quotation marks ('ExternalName').
 
 ### Examples
 {: #aql-reference-examples-29}
@@ -3976,7 +3976,7 @@ If the email is addressed to "Ena Smith," and the application makes this informa
 
 For example, you can write AQL rules to identify person tokens from the email metadata fields. You then use that information as strong clues when you decide whether a capitalized token in the email text is a person name. In general, the email metadata is not part of the actual email message, but the application can make this metadata available to the extractor by using an external view.
 
-This means that at run time, for each email that must be processed, the application can pass the email text as document text \(to populate the view `Document`\). It can also pass the extra metadata by using an appropriately defined external view.
+This means that at run time, for each email that must be processed, the application can pass the email text as document text (to populate the view `Document`). It can also pass the extra metadata by using an appropriately defined external view.
 
 The following statement defines an external view that is named `EmailMetadata`. The external view has a schema that contains three fields of type Text. At run time, the view `EmailMetadata` is automatically populated from an external type named `EmailMetadataSrc`. You can then reference the `EmailMetadata` view in your AQL rules, similarly to how you would reference any other view.
 
@@ -4061,7 +4061,7 @@ The content of external views can be specified in the following ways:
 AQL has a collection of built-in functions for use in extraction rules.
 
 - **Aggregate functions**
-Aggregate functions are used to implement operations \(such as counting, mathematical operations, and other operations\) across a set of input values. These functions return only one result.
+Aggregate functions are used to implement operations (such as counting, mathematical operations, and other operations) across a set of input values. These functions return only one result.
 - **Predicate functions**
 Predicate functions test a certain predicate over its input arguments and return a corresponding Boolean value.
 - **Scalar functions**
@@ -4070,7 +4070,7 @@ Scalar functions perform an operation over the values of a field across a set of
 ## Aggregate functions
 {: #aql-aggr-func}
 
-Aggregate functions are used to implement operations \(such as counting, mathematical operations, and other operations\) across a set of input values. These functions return only one result.
+Aggregate functions are used to implement operations (such as counting, mathematical operations, and other operations) across a set of input values. These functions return only one result.
 
 These functions can be used within the `select` list of a `select` statement but not within an `extract` statement.
 
@@ -4092,13 +4092,13 @@ The `argument` can be:
 
 |Aggregate function|Argument type|Return type|Return value|
 |------------------|-------------|-----------|------------|
-|Avg\(expression\)|Integer, Float|Float|The average of all input values or null if no rows are selected|
-|Count\(\*\)| |Integer|The number of all input rows|
-|Count\(expression\)|Any|Integer|The number of all non-null input values|
-|List\(expression\)|Integer, Float, Text, Span|List of scalar values of the same type as the input argument|An unordered list of non-null input values: a bag, not a set, hence might contain duplicates. An empty list if only null values are selected|
-|Max\(expression\)|Integer, Float, Text, Span|Same as the argument type|The maximum element across all input values or null if no rows are selected|
-|Min\(expression\)|Integer, Float, Text, Span|Same as the argument type|The minimum element across all input values or null if no rows are selected|
-|Sum\(expression\)|Integer, Float|Same as the argument type|The sum of all input values or null if no rows are selected|
+|Avg(expression)|Integer, Float|Float|The average of all input values or null if no rows are selected|
+|Count(\*)| |Integer|The number of all input rows|
+|Count(expression)|Any|Integer|The number of all non-null input values|
+|List(expression)|Integer, Float, Text, Span|List of scalar values of the same type as the input argument|An unordered list of non-null input values: a bag, not a set, hence might contain duplicates. An empty list if only null values are selected|
+|Max(expression)|Integer, Float, Text, Span|Same as the argument type|The maximum element across all input values or null if no rows are selected|
+|Min(expression)|Integer, Float, Text, Span|Same as the argument type|The minimum element across all input values or null if no rows are selected|
+|Sum(expression)|Integer, Float|Same as the argument type|The sum of all input values or null if no rows are selected|
 
 **Limitations of the current version:**
 
@@ -4295,7 +4295,7 @@ The flags string is formed by combining one or more of the following flags by us
 - DOTALL
 - LITERAL
 - MULTILINE
-- UNICODE \(meaningless without CASE\_INSENSITIVE\)
+- UNICODE (meaningless without CASE\_INSENSITIVE)
 - UNIX\_LINES
 
 An example of a flags string is
@@ -4410,7 +4410,7 @@ The `IsNull` function tests whether data is, or is not, null. It takes a single 
 
 ### MatchesDict
 
-The `MatchesDict` function takes a dictionary \(as in a dictionary extraction\), an optional flag specification, and a span as arguments:
+The `MatchesDict` function takes a dictionary (as in a dictionary extraction), an optional flag specification, and a span as arguments:
 
 ```
 MatchesDict('<dictionary>', ['<flags>', ]<span>)
@@ -4441,7 +4441,7 @@ The flags string is formed by combining a subset of these flags by using `|` as 
 - DOTALL
 - LITERAL
 - MULTILINE
-- UNICODE \(meaningless without CASE\_INSENSITIVE\)
+- UNICODE (meaningless without CASE\_INSENSITIVE)
 - UNIX\_LINES
 
 An example of a flags string is
@@ -4554,11 +4554,11 @@ The semantics of the function are as follows:
 
 - If either `span1` or `span2` is `null`, or the two spans are over different Text objects, the function returns `null`.
 - Otherwise, if `span1` is smaller than `span2` or the `IgnoreOrder` parameter is used, the function returns the shortest span that covers both `span1` and `span2`.
-- Otherwise \(`span1` is larger than `span2` and the `IgnoreOrder` is not used\), the function returns a runtime error.
+- Otherwise (`span1` is larger than `span2` and the `IgnoreOrder` is not used), the function returns a runtime error.
 
 Based on the definition of Span, the different scenarios of arguments to the `CombineSpans` function are as follows:
 
-- Span 2 is always after span 1. That is, left-to-right order is maintained:
+- Span 2 is always after span 1. In other words, left-to-right order is maintained:
 
     ```
     CombineSpans([0,7], [3,7]) returns the span [0,7]
@@ -4567,7 +4567,7 @@ Based on the definition of Span, the different scenarios of arguments to the `Co
     CombineSpans([0,7], [0,7]) returns the span [0,7]
     ```
 
-- Span 2 is not after span 1 i.e. left-to-right order is *not* maintained:
+- Span 2 is not after span 1. In other words, left-to-right order is *not* maintained:
 
     ```
     CombineSpans(‘IgnoreOrder’, [0,10], [0,7]) returns the span [0,10]
@@ -4613,16 +4613,16 @@ The `GetLemma` function takes a single Span or Text object as an argument and re
 
 The results of this function follow these rules:
 
-- If the input span starts at the beginning of a token and ends at the end of a token, the result will contain the sequence of lemmas that begins with the lemma of the first token, followed by a white space, followed by the lemma of the second token, followed by a white space, and so on \(for example, dog cat fish bird ...\). If the lemma for a token consists of white spaces, escape the white space by using the backslash character \( \\ \).
-- If the input span starts or ends with white space \(for example, it starts between two tokens or ends between two tokens\), the function ignores the beginning and trailing white space.
+- If the input span starts at the beginning of a token and ends at the end of a token, the result will contain the sequence of lemmas that begins with the lemma of the first token, followed by a white space, followed by the lemma of the second token, followed by a white space, and so on (for example, dog cat fish bird ...). If the lemma for a token consists of white spaces, escape the white space by using the backslash character ( \\ ).
+- If the input span starts or ends with white space (for example, it starts between two tokens or ends between two tokens), the function ignores the beginning and trailing white space.
 - If the input span starts in the middle of a token or ends in the middle of a token, then the output consists of the following content, in this order, separated by a white space:
     - The surface form of the first partial token if it exists.
-    - The sequence of lemmas that correspond to the first to last complete tokens. If the lemma for any of the complete tokens consists of white spaces, escape the white spaces by using the backslash character \( \\ \).
+    - The sequence of lemmas that correspond to the first to last complete tokens. If the lemma for any of the complete tokens consists of white spaces, escape the white spaces by using the backslash character ( \\ ).
     - The surface form of the last partial token if it exists.
 
 This function will return an error if the tokenizer that is being used is not capable of producing lemmas.
 
-You can use the GetLemma\(\) function to create dictionaries of lemmatized forms. Call GetLemma\(\) on an input that contains the terms whose lemmatized form you want to include in the dictionary.
+You can use the `GetLemma()` function to create dictionaries of lemmatized forms. Call `GetLemma()` on an input that contains the terms whose lemmatized form you want to include in the dictionary.
 
 ### GetLength
 
@@ -4644,9 +4644,9 @@ The `GetLengthTok` function takes a single span argument and returns the length 
 
 The `GetString` function takes a single AQL object as its argument and returns a Text object formed from the string representation of the object.
 
-For span and text arguments, the value returned are different from those returned by GetText\(\). For Text objects, the returned value includes single quotes surrounding the text string. For span objects, the returned value includes in addition offsets in brackets.
+For span and text arguments, the value returned are different from those returned by `GetText()`. For Text objects, the returned value includes single quotes surrounding the text string. For span objects, the returned value includes in addition offsets in brackets.
 
-For scalar lists, this function returns the GetString\(\) values of the elements of the list, concatenated with semicolons. For Integer, Float, Boolean, and String arguments, this function returns the value of the argument as a string. For `null` arguments, this function returns `null`.
+For scalar lists, this function returns the `GetString()` values of the elements of the list, concatenated with semicolons. For Integer, Float, Boolean, and String arguments, this function returns the value of the argument as a string. For `null` arguments, this function returns `null`.
 
 ### GetText
 
@@ -4740,11 +4740,11 @@ The `LeftContext` function takes a Span and an Integer as input:
 LeftContext(<input span>, <nchars>)
 ```
 
-The `LeftContext(<input span\>, <nchars\>)` function returns a new span that contains the nchars characters of the document immediately to the left of `<input span\>`. If the input span starts less than `<nchars\>` characters from the beginning of the document, then LeftContext\(\) returns a span that starts at the beginning of the document and continues until the beginning of the input span.
+The `LeftContext(<input span\>, <nchars\>)` function returns a new span that contains the nchars characters of the document immediately to the left of `<input span\>`. If the input span starts less than `<nchars\>` characters from the beginning of the document, then `LeftContext()` returns a span that starts at the beginning of the document and continues until the beginning of the input span.
 
-For example, LeftContext\(\[20, 30\], 10\) returns the span \[10, 20\]. The span LeftContext\(\[5, 10\], 10\) returns \[0, 5\].
+For example, LeftContext(\[20, 30\], 10) returns the span \[10, 20\]. The span LeftContext(\[5, 10\], 10) returns \[0, 5\].
 
-If the input starts on the first character of the document, LeftContext\(\) returns a zero-length span. Similarly, the `RightContext` function returns the text to the right of its input span. For both functions, if either argument is `null`, the function returns `null`.
+If the input starts on the first character of the document, `LeftContext()` returns a zero-length span. Similarly, the `RightContext` function returns the text to the right of its input span. For both functions, if either argument is `null`, the function returns `null`.
 
 ### LeftContextTok and RightContextTok
 
@@ -4790,7 +4790,7 @@ Remap(<N.name>)
 
 returns an equivalent span over the original HTML.
 
-If the span argument was produced by running the `detag` statement over an empty document, the function remaps the spans to the beginning of the document \(that is, Document.text\[0-0\]\). Also, if the `detag` statement produces an empty string, the function remaps the spans to the beginning of the document. The only part of AQL that produces such derived text object is the `detag` statement.
+If the span argument was produced by running the `detag` statement over an empty document, the function remaps the spans to the beginning of the document (in other words, Document.text\[0-0\]). Also, if the `detag` statement produces an empty string, the function remaps the spans to the beginning of the document. The only part of AQL that produces such derived text object is the `detag` statement.
 
 The following example illustrates the use of the `Remap` function:
 
@@ -4876,7 +4876,7 @@ If any input is `null`, the function returns `null`.
 
 ### ToLowerCase
 
-The `ToLowerCase` function takes a single object as its argument and returns a lowercase string representation of the object . The conversion to a string occurs in the same way that the GetString\(\) function performs the conversion.
+The `ToLowerCase` function takes a single object as its argument and returns a lowercase string representation of the object . The conversion to a string occurs in the same way that the `GetString()` function performs the conversion.
 
 The primary use of this function is to perform equality joins that are not case-sensitive:
 
@@ -4889,11 +4889,11 @@ If the input object is `null`, the function returns `null`.
 ## The `create` function statement
 {: #aql-create-func}
 
-To perform operations on extracted values that are not supported by AQL, you can define custom functions to use in extraction rules called user-defined functions \(UDFs\).
+To perform operations on extracted values that are not supported by AQL, you can define custom functions to use in extraction rules called user-defined functions (UDFs).
 
 AQL supports user-defined scalar functions and user-defined table functions. Java™ and PMML are the only supported implementation language for UDFs. A scalar function returns a single scalar value, and a table function returns one or more tuples, in other words, a table.
 
-There are four steps for using user-defined functions \(UDFs\):
+There are four steps for using user-defined functions (UDFs):
 
 1.  Implementing the function.
 2.  Declaring it in AQL.
@@ -4901,61 +4901,61 @@ There are four steps for using user-defined functions \(UDFs\):
 4.  Debugging the UDF.
 
 - **Implementing user-defined functions**
-AQL supports user-defined functions \(UDFs\) that are implemented in Java or PMML.
+AQL supports user-defined functions (UDFs) that are implemented in Java or PMML.
 - **Declaring user-defined functions**
 You can make the user-defined scalar functions and machine learning models from PMML files available to AQL by using the `create function` statement.
 - **Using user-defined functions**
 User-defined functions work in conjunction with AQL statements and clauses.
 - **Procedure to debug Java based UDFs**
-Since Java based user-defined functions \(UDFs\) are implemented as public methods in Java classes, you debug your UDFs in the same way that you debug your Java programs.
+Since Java based user-defined functions (UDFs) are implemented as public methods in Java classes, you debug your UDFs in the same way that you debug your Java programs.
 
 ## Implementing user-defined functions
 {: #aql-user-def-imp}
 
-AQL supports user-defined functions \(UDFs\) that are implemented in Java™ or PMML.
+AQL supports user-defined functions (UDFs) that are implemented in Java™ or PMML.
 
 This section specifically focuses on UDFs that are implemented in Java. For UDFs implemented in PMML, the machine learning model is stored inside the PMML XML file. Refer to the documentation of PMML for how to create these models: [http://dmg.org/pmml/v4-1/GeneralStructure.html]
 
-You can implement a Scalar UDF as a public method in a Java class. You can implement a table UDF as a public method in a Java class that extends the API com.ibm.avatar.api.udf.TableUDFBase. In addition, a table UDF can optionally override the method initState\(\) of the superclass com.ibm.avatar.api.udf.TableUDFBase.
+You can implement a Scalar UDF as a public method in a Java class. You can implement a table UDF as a public method in a Java class that extends the API com.ibm.avatar.api.udf.TableUDFBase. In addition, a table UDF can optionally override the method `initState()` of the superclass com.ibm.avatar.api.udf.TableUDFBase.
 
 If the UDF has an input parameter of type Span, Text, or ScalarList, or the return type of the UDF is Span, Text, or ScalarList, the Java class must import the classes com.ibm.avatar.algebra.datamodel.Span, com.ibm.avatar.algebra.datamodel.Text, or com.ibm.avatar.algebra.datamodel.ScalarList to compile.
 
 Table functions require additional APIs to provide output schema information. These APIs belong to the base class com.ibm.systemt.api.udf.TableUDFbase. If a subclass contains more than one table function, a separate Java object is created for each instance.
 
-For the UDF code to retrieve non-class resources from its JAR file, the only supported method is getResourceAsStream\(\). Other methods for accessing resources \(such as getResource\(\), getResources\(\), getSystemResource\(\)\) are not supported. For example, a UDF JAR file that contains the properties file my.properties in the package com.ibm.myproject.udfs, can access it with the following Java statement:
+For the UDF code to retrieve non-class resources from its JAR file, the only supported method is `getResourceAsStream()`. Other methods for accessing resources (such as `getResource()`, `getResources()`, `getSystemResource()`) are not supported. For example, a UDF JAR file that contains the properties file my.properties in the package com.ibm.myproject.udfs, can access it with the following Java statement:
 
 ```java
 InputStream in = this.getClass().getClassLoader().
-getResourceAsStream(“com/ibm/myproject/udfs/my.properties”);
+  getResourceAsStream(“com/ibm/myproject/udfs/my.properties”);
 ```
 
 ### Lifecycle of FUDs implemented in Java
 
-The following operations are performed when the extractor is compiled \(the CompileAQL.compile\(\) API\), instantiated \(OperatorGraph.createOG\(\) API\) and validated \(OperatorGraph.validateOG\(\) API\), exactly once for each create function statement in AQL:
+The following operations are performed when the extractor is compiled (the `CompileAQL.compile()` API), instantiated (`OperatorGraph.createOG()` API) and validated (`OperatorGraph.validateOG()` API), exactly once for each create function statement in AQL:
 
 1.  Load the Java class that contains the UDF method, using a fresh new class loader. The class is searched inside the UDF JAR specified in the corresponding create function statement. Any other classes that are required when loading this class are also searched inside the same UDF JAR, and if not found, the search is delegated to the classloader that instantiated the Runtime.
 2.  Create an instance of that class.
-3.  For table UDFs, invoke the method initState\(\).
+3.  For table UDFs, invoke the method `initState()`.
 
-Since those steps are performed for each create function statement, if a Java class contains multiple UDF methods \(and all methods are used in AQL in different create function statements\), then the class will be loaded multiple times, each time in a separate class loader \(Step 1\). Furthermore, multiple instances of the class are created \(Step 2\) and the method initState\(\) is called once for each instance \(Step 3\). The reason every UDF results in a separate class loader is to allow different UDFs to use different versions of the same class \(or library\).
+Since those steps are performed for each create function statement, if a Java class contains multiple UDF methods (and all methods are used in AQL in different create function statements), then the class will be loaded multiple times, each time in a separate class loader (Step 1). Furthermore, multiple instances of the class are created (Step 2) and the method `initState()` is called once for each instance (Step 3). The reason every UDF results in a separate class loader is to allow different UDFs to use different versions of the same class (or library).
 
-At runtime \(OperatorGraph.execute\(\) API\), the UDF class is not loaded again, because the class has already been loaded during extractor instantiation. The Java method that implements the UDF is invoked when necessary to compute pieces of the output. When the extractor is used within a single thread, that means there are anywhere from zero invocation to possibly many invocations for each input document \(and most likely multiple invocations throughout the life of the Operator Graph object\). When the extractor is shared across multiple threads, different threads can hit the method around the same time \(with different inputs\).
+At runtime (`OperatorGraph.execute()` API), the UDF class is not loaded again, because the class has already been loaded during extractor instantiation. The Java method that implements the UDF is invoked when necessary to compute pieces of the output. When the extractor is used within a single thread, that means there are anywhere from zero invocation to possibly many invocations for each input document (and most likely multiple invocations throughout the life of the Operator Graph object). When the extractor is shared across multiple threads, different threads can hit the method around the same time (with different inputs).
 
-If you require a specific part of the UDF code to be evaluated exactly once, for example, to initialize data structures needed by the UDF method across invocations, that code should not be placed in the UDF evaluation method, since that method is most likely executed multiple times throughout the life of the extractor \(like the OperatorGraph object\), and can be hit almost simultaneously when the extractor is shared across multiple threads. Instead:
+If you require a specific part of the UDF code to be evaluated exactly once, for example, to initialize data structures needed by the UDF method across invocations, that code should not be placed in the UDF evaluation method, since that method is most likely executed multiple times throughout the life of the extractor (like the OperatorGraph object), and can be hit almost simultaneously when the extractor is shared across multiple threads. Instead:
 
 1.  For scalar UDFs, follow standard Java programming principles. For example, place the code in a static block.
-2.  For table UDFs, place the code in the initState\(\) method, or follow standard Java programming principles. For example, place the code in a static block.
+2.  For table UDFs, place the code in the `initState()` method, or follow standard Java programming principles. For example, place the code in a static block.
 
-When doing so, remember that the class may be loaded multiple times during extractor compilation, instantiation and validation, as explained in Steps 1-3 above. If the code that initializes the UDF is placed in a static block, that code will be executed each time the class is loaded \(potentially multiple times\), therefore, introducing an overhead during compilation and operator graph instantiation. If the overhead is large, follow these best practices:
+When doing so, remember that the class may be loaded multiple times during extractor compilation, instantiation and validation, as explained in Steps 1-3 above. If the code that initializes the UDF is placed in a static block, that code will be executed each time the class is loaded (potentially multiple times), therefore, introducing an overhead during compilation and operator graph instantiation. If the overhead is large, follow these best practices:
 
 - To minimize overhead during compilation time, the best practice is to place compile time heavy resources like large dictionaries or UDFs with large initialization time in a separate AQL module and export them. Try compiling only the AQL modules that changed and other modules that depending on them.
 - To minimize overhead during operator graph instantiation and validation:
-    1.  If the initialization code is required by a single UDF method, then place that UDF method in a separate Java class \(and place the heavy instantiation code in a static initializer as before, or use some other mechanism that ensures the code is executed once\).
-    2.  If the initialization code is shared by multiple UDF methods, then the Runtime and AQL do not provide an explicit mechanism to ensure that initialization code is executed exactly once. In such a situation, if the initialization time is prohibitive, the only solution is to place the shared resources and initialization code on the system classpath. That is, place the initialization code in a new class MySeparateClass.java, and store the initialization result in a static variable of this class, such as MySeparateClass.myVar. Package MySeparateClass.java along with any resources needed during initialization in a JAR file and place that JAR on the system classpath. The UDF methods can refer to the initialized model using the MySeparateClass.myVar static variable. The initialization code will now be executed exactly once - when the class MySeparateClass.java is loaded by the system classloader.
+    1.  If the initialization code is required by a single UDF method, then place that UDF method in a separate Java class (and place the heavy instantiation code in a static initializer as before, or use some other mechanism that ensures the code is executed once).
+    2.  If the initialization code is shared by multiple UDF methods, then the Runtime and AQL do not provide an explicit mechanism to ensure that initialization code is executed exactly once. In such a situation, if the initialization time is prohibitive, the only solution is to place the shared resources and initialization code on the system classpath. In other words, place the initialization code in a new class MySeparateClass.java, and store the initialization result in a static variable of this class, such as MySeparateClass.myVar. Package MySeparateClass.java along with any resources needed during initialization in a JAR file and place that JAR on the system classpath. The UDF methods can refer to the initialized model using the MySeparateClass.myVar static variable. The initialization code will now be executed exactly once - when the class MySeparateClass.java is loaded by the system classloader.
 
 **Tip:**
 
-The compiled representation of a module \(the .tam file\) contains the serialized binary code of the UDF. Therefore, if the same UDF code is referenced by `create function` statements in two different modules, the UDF code is serialized in the compiled representation of both modules. In other words, the UDF code is serialized twice. In such cases, you can avoid the redundancy by creating a separate module that acts as a library of UDFs, and reuse that library in other modules. To create a library of UDFs, follow these steps:
+The compiled representation of a module (the `.tam` file) contains the serialized binary code of the UDF. Therefore, if the same UDF code is referenced by `create function` statements in two different modules, the UDF code is serialized in the compiled representation of both modules. In other words, the UDF code is serialized twice. In such cases, you can avoid the redundancy by creating a separate module that acts as a library of UDFs, and reuse that library in other modules. To create a library of UDFs, follow these steps:
 
 1.  Create one module.
 2.  Place all UDF JAR files inside that module.
@@ -5195,7 +5195,7 @@ language [java | pmml]
 
     The type of an input scalar parameter to the UDF, the type of a column in the schema of an input table to the UDF or in the schema of the output table of the UDF. Possible values for `<data-type\>` are Integer, Float, String, Text, Span, Boolean, or ScalarList.
 
-- `table \(<output-schema-definition\>) as locator`
+- `table (<output-schema-definition\>) as locator`
 
     This input type allows a function to take as input the entire contents of a given AQL view as computed on the current document. The locator parameter references views or tables as arguments.
 
@@ -5233,7 +5233,7 @@ language [java | pmml]
 
 Functions created from PMML files take a single table called a params as their argument and output a table. The implementation of the function will map input fields between the input and output schema declared in the create function statement and the schema specified in the PMML file. In other words, the **DataDictionary** section that describes the names and types of fields that can appear in the input and output records that the model produces and consumes, the **MiningSchema** section that tells which named files defined in the DataDictionary section are in each tuple that represents a feature vector ,and the **Output** section that tells which named fields defined in the **DataDictionary** section are present in each tuple of the external representation of the output of the model. These functions must be table functions; each row in the table will be passed to the PMML model and produce an output row.
 
-This schema information is necessary because the PMML and AQL type systems do not match perfectly. For example, PMML has several types to represent timestamps, while AQL currently requires users to encode timestamps as string values. The schema information also allows developers who know AQL but not PMML to understand the AQL rule set.
+    ]This schema information is necessary because the PMML and AQL type systems do not match perfectly. For example, PMML has several types to represent timestamps, while AQL currently requires users to encode timestamps as string values. The schema information also allows developers who know AQL but not PMML to understand the AQL rule set.
 
 The AQL compiler will check the input schema against the input schema of the PMML file to ensure that the two schemas are compatible. If the two schemas contain fields with the same name but incompatible types, compilation will fail with an appropriate error message. If the function’s input or output schemas contain extra or missing columns, the `resulting` function will ignore these columns and will not generate an error. The order of column names can be different between the AQL definition and the PMML file. If a column name appears in both input and output schemas but not in the PMML schema, then the values of that column will be passed through to the output of the function.
 
@@ -5242,7 +5242,7 @@ The AQL compiler will check the input schema against the input schema of the PMM
 
 **Example 1: Declaring scalar UDFs with scalar values as input using Java**
 
-The following example shows a `create function` statement that declares a function named udfCombineSpans. The user-defined function takes in two spans as input and returns a merged span similar to the first input span. The actual UDF Java™ function is packaged in a JAR file named udfs.jar, under the udfjars directory. The method that implements the function is combineSpans in class com.ibm.test.udfs.MiscScalarFunc. The method also declares a function udfSpanGreaterThan that returns true if the span is greater than the specified size.
+The following example shows a `create function` statement that declares a function named `udfCombineSpans`. The user-defined function takes in two spans as input and returns a merged span similar to the first input span. The actual UDF Java™ function is packaged in a JAR file named `udfs.jar`, under the `udfjars` directory. The method that implements the function is `combineSpans` in class `com.ibm.test.udfs.MiscScalarFunc`. The method also declares a function `udfSpanGreaterThan` that returns `true` if the span is greater than the specified size.
 
 ```
 /**
@@ -5460,7 +5460,7 @@ User-defined functions work in conjunction with AQL statements and clauses.
 
 User-defined scalar functions work in conjunction with AQL statements and clauses, similar to built-in functions. Specifically, scalar UDFs can be used in the `select`, `where`, `having`, `group by`, and `order by` clauses in the same way as built-in scalar functions, such as `GetBegin` and `LeftContext`. User-defined scalar functions that return a Boolean type can be used as predicates in `where` and `having` clauses.
 
-User-defined table functions \(table UDFs\) can be used within the `from` clause of a `select` statement or an `extract` statement.
+User-defined table functions (table UDFs) can be used within the `from` clause of a `select` statement or an `extract` statement.
 
 ### Examples
 {: #aql-reference-examples-33}

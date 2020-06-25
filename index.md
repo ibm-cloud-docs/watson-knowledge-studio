@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-24"
+lastupdated: "2020-06-25"
 
 subcollection: watson-knowledge-studio
 
@@ -69,7 +69,8 @@ See [Creating a rule-based model](/docs/watson-knowledge-studio?topic=watson-kno
 The advanced rules feature is Beta. The feature is in a trial stage of development and is not intended for use in production environments.
 {: beta}
 
-The visual advanced rules editor allows you to create text extractors with deeper customization potential than what is available in the entities and relations rules editor. A number of sample extractors are provided such as *Finance Actions* extractors and *Parts of Speech* extractors that can be edited and combined to create your own advanced rules model. You can analyze documents directly in the editor, or you can export your model to use with other services such as [{{site.data.keyword.nlushort}}](/docs/natural-language-understanding).
+The visual advanced rules editor allows you to create text extractors with deeper customization potential than what is available in the entities and relations rules editor. A number of sample extractors, such as *Finance Actions* extractors and *Parts of Speech*, are provided. You can edit and combine them to create your own advanced rules model.
+You can analyze documents directly in the editor, or you can export your model to use with other services such as [{{site.data.keyword.nlushort}}](/docs/natural-language-understanding).
 
 To get started, see [Creating an advanced rules model](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-create-advanced-rules-model).
 
@@ -79,7 +80,7 @@ To get started, see [Creating an advanced rules model](/docs/watson-knowledge-st
 The custom categories feature is experimental. The feature is subject to change or be discontinued with short notice. It is not intended to use custom categories in production environments.
 {: note}
 
-With a categories workspace, you can define a hierarchy of custom content categories and provide relevant key phrases that the service will use to categorize text content. You can deploy a custom categories model to use instead of the [standard categories](/docs/natural-language-understanding?topic=natural-language-understanding-categories-hierarchy) offered by {{site.data.keyword.nlushort}} and {{site.data.keyword.discoveryshort}}.
+With a categories workspace, you can define a hierarchy of custom content categories and provide relevant key phrases that the service uses to categorize text content. You can deploy a custom categories model to use instead of the [standard categories](/docs/natural-language-understanding?topic=natural-language-understanding-categories-hierarchy) offered by {{site.data.keyword.nlushort}} and {{site.data.keyword.discoveryshort}}.
 
 ## Watson services integration
 {: #wks_watsoninteg}

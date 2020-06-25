@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-24"
+lastupdated: "2020-06-25"
 
 subcollection: watson-knowledge-studio
 
@@ -31,7 +31,7 @@ Leverage a machine learning model that you trained with {{site.data.keyword.know
 
 You can deploy or export a machine learning model. A dictionary or {{site.data.keyword.nlushort}} pre-annotator can only be used to pre-annotate documents within {{site.data.keyword.knowledgestudioshort}}.
 
-Before a model can be deployed for use by a service, you must have a subscription to the service. {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} services are hosted on {{site.data.keyword.Bluemix_short}}, which is the cloud platform for {{site.data.keyword.IBM_notm}}. See [What is {{site.data.keyword.cloud_notm}}?](/docs/overview)for more information about the platform. To subscribe to one of the {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} services, create an account from the [{{site.data.keyword.cloud_notm}}](https://{DomainName}/){: external} website.
+Before you can deploy a model for use by a service, you must have a subscription to the service. {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} services are hosted on {{site.data.keyword.Bluemix_short}}, which is the cloud platform for {{site.data.keyword.IBM_notm}}. For more information about the platform, see [What is {{site.data.keyword.cloud_notm}}?](/docs/overview). To subscribe to one of the {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} services, create an account from the [{{site.data.keyword.cloud_notm}}](https://{DomainName}/){: external} website.
 
 For some of the services, you must know details about the service instance that you plan to deploy to, such as the {{site.data.keyword.cloud_notm}} space name and service instance name. The space and instance name information is available from the {{site.data.keyword.cloud_notm}} Services page.
 
@@ -88,7 +88,7 @@ When you are satisfied with the performance of the model, you can deploy a versi
 ### Before you begin
 {: #wks_manlu_prereqs}
 
-You must have a {{site.data.keyword.nlushort}} service to deploy to. And you must know the {{site.data.keyword.cloud_notm}} space and instance names that are associated with the service. If you do not remember the space or instance names, find them by logging in to {{site.data.keyword.cloud_notm}}. If you do not have an {{site.data.keyword.cloud_notm}} account, sign up for an account.
+You must have a {{site.data.keyword.nlushort}} service to deploy to. And you must know the {{site.data.keyword.cloud_notm}} space and instance names that are associated with the service. If you do not remember the space or instance names, find them by logging in to {{site.data.keyword.cloud_notm}}. If you do not have an {{site.data.keyword.cloud_notm}} account, sign up for one.
 
 ### About this task
 {: #wks_manlu_about}
@@ -106,7 +106,7 @@ To deploy a machine learning model to the {{site.data.keyword.nlushort}} service
 
     If there is only one working version of the model, create a snapshot of the current model. This versions the model, which enables you to deploy a version, while you continue to improve the current version. The option to deploy does not appear until you create at least one version.
 
-    Each version can be deployed to any number of service instances. Each deployed instance of a model version is given a unique **Model ID**, but is identical in all other ways.
+    Each version can be deployed to any number of service instances. Each deployed instance of a model version is given a unique **Model ID** but is identical in all other ways.
     {: tip}
 
 1. Click **Deploy**, choose to deploy it to {{site.data.keyword.nlushort}}, and then click **Next**.
@@ -303,7 +303,7 @@ You can use the model with the {{site.data.keyword.nlushort}} `GET /analyze` req
     ```
     {: codeblock}
 
-See the [{{site.data.keyword.nlushort}} documentation](/docs/natural-language-understanding){: external} for more details.
+For more information, see the [{{site.data.keyword.nlushort}} documentation](/docs/natural-language-understanding){: external}.
 
 ## Deploying the same model version to multiple services
 {: #wks_secdep}
@@ -318,7 +318,7 @@ If you want to undeploy a model or find a model ID, view the **Deployed Models**
 ### About this task
 {: #pm-att}
 
-What you see on the Deployed Models page depends on the [region](/docs/resources?topic=resources-services_region)that hosts your {{site.data.keyword.knowledgestudioshort}} instance. If the region supports instances managed by [IAM](/docs/iam?topic=iam-userroles)and [Cloud Foundry](/docs/iam?topic=iam-cfaccess) access management methods, you see a tab for each method. Models from instances that are managed by IAM are listed on the **Resource Groups** tab. Models from instances that are managed by Cloud Foundry are listed on the **Organizations** tab.
+What you see on the Deployed Models page depends on the [region](/docs/resources?topic=resources-services_region)that hosts your {{site.data.keyword.knowledgestudioshort}} instance. If the region supports instances managed by [IAM](/docs/iam?topic=iam-userroles) and [Cloud Foundry](/docs/iam?topic=iam-cfaccess) access management methods, you see a tab for each method. Models from instances that are managed by IAM are listed on the **Resource Groups** tab. Models from instances that are managed by Cloud Foundry are listed on the **Organizations** tab.
 
 If the region supports instances managed by only one of the access management methods, you see only one list of models, because only one access management method is applicable.
 
@@ -356,7 +356,7 @@ If you choose to identify relation types and annotate them, then you must define
 
 Now that the machine learning model is trained to recognize entities and relationships for a specific domain, you can leverage it in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
 
-Click [this link](https://www.youtube.com/watch?v=1VoS-xczBow&amp;feature=youtu.be){: external} to watch a less than 2 minute video that illustrates how to export a model and use it in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
+[Watch a brief video](https://www.youtube.com/watch?v=1VoS-xczBow&amp;feature=youtu.be){: external} that illustrates how to export a model and use it in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer.
 
 ### Procedure
 {: #wks_maexport_procedure}
@@ -374,7 +374,7 @@ To leverage a machine learning model in {{site.data.keyword.IBM_notm}} {{site.da
 1. Download the file to your local system.
 1. From the {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer application, import the model.
 
-    You can then map the model to a machine learning model in {{site.data.keyword.watson}} Explorer Content Analytics. After you perform the mapping step, when you crawl documents, the model finds instances of the entities and relations that your model understands. To learn how to import and configure the model in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer, see the technical document that describes the integration: [https://www.ibm.com/support/pages/node/597611](https://www.ibm.com/support/pages/node/597611){: external}.
+    You can then map the model to a machine learning model in {{site.data.keyword.watson}} Explorer Content Analytics. After you perform the mapping step, when you crawl documents, the model finds instances of the entities and relations that your model understands. For more information about how to import and configure the model in {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} Explorer, see the technical document that describes the integration: [Using machine-learning annotators from {{site.data.keyword.knowledgestudioshort}} in {{site.data.keyword.watson}} Explorer](https://www.ibm.com/support/pages/node/597611){: external}.
 
 #### Related tasks
 {: #wks_maexport_related}
