@@ -1,26 +1,24 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-12-12"
+  years: 2019, 2020
+lastupdated: "2020-06-24"
 
 subcollection: watson-knowledge-studio
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:tip: .tip}
-{:pre: .pre}
-{:warning: .warning}
+{:external: target="_blank" .external}
+{:deprecated: .deprecated}
 {:important: .important}
 {:note: .note}
+{:tip: .tip}
+{:preview: .preview}
+{:beta: .beta}
+{:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
 
 # Enabling cross-sentence relations (Experimental)
 {: #enabling-cross-sentence-relations}
@@ -64,6 +62,7 @@ Sentence 13.
 1. Click **Create**.
 
 In the new workspace, you will be able to annotate relations between pairs of entity mentions that exist within spans of six sentences.
+
 
 
 

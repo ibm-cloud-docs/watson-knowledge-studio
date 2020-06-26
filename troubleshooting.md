@@ -2,24 +2,25 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-01-30"
+lastupdated: "2020-06-25"
 
 subcollection: watson-knowledge-studio
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
+{:deprecated: .deprecated}
+{:important: .important}
+{:note: .note}
 {:tip: .tip}
+{:preview: .preview}
+{:beta: .beta}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio?topic=knowledge-studio-troubleshooting){: new_window}.
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/knowledge-studio?topic=knowledge-studio-troubleshooting).
 {: tip}
 
 # Troubleshooting, support, and FAQs
@@ -46,7 +47,7 @@ The answers to these questions typically lead to a good description of the probl
 ### What are the symptoms of the problem?
 {: #ts_overview_symptoms}
 
-When starting to describe a problem, the most obvious question is "What is the problem?" This question might seem straightforward; however, you can break it down into several more-focused questions that create a more descriptive picture of the problem. These questions can include:
+When you describe a problem, the most obvious question is "What is the problem?" This question might seem straightforward. However, you can break it down into several more-focused questions that create a more descriptive picture of the problem. These questions can include the following aspects:
 
 - Who, or what, is reporting the problem?
 - What are the error codes and messages?
@@ -64,12 +65,12 @@ The following questions help you to focus on where the problem occurs to isolate
 - Do all users have the problem?
 - (For multi-site installations.) Do all sites have the problem?
 
-If one layer reports the problem, the problem does not necessarily originate in that layer. Part of identifying where a problem originates is understanding the environment in which it exists. Take some time to completely describe the problem environment, including the operating system and version, all corresponding software and versions, and hardware information. Confirm that you are running within an environment that is a supported configuration; many problems can be traced back to incompatible levels of software that are not intended to run together or have not been fully tested together.
+If one layer reports the problem, the problem does not necessarily originate in that layer. Part of identifying where a problem originates is understanding the environment in which it exists. Take some time to completely describe the problem environment, including the operating system and version, all corresponding software and versions, and hardware information. Confirm that you are running within an environment that is a supported configuration. Many problems can be traced back to incompatible levels of software that are not intended to run together or were not fully tested together.
 
 ### When does the problem occur?
 {: #ts_overview_when}
 
-Develop a detailed timeline of events leading up to a failure, especially for those cases that are one-time occurrences. You can most easily develop a timeline by working backward: Start at the time an error was reported (as precisely as possible, even down to the millisecond), and work backward through the available logs and information. Typically, you need to look only as far as the first suspicious event that you find in a diagnostic log.
+Develop a detailed timeline of events that led up to a failure, especially for those cases that are one-time occurrences. You can most easily develop a timeline by working backward: Start at the time an error was reported (as precisely as possible, even down to the millisecond), and work backward through the available logs and information. Typically, you need to look only as far as the first suspicious event that you find in a diagnostic log.
 
 To develop a detailed timeline of events, answer these questions:
 
@@ -89,12 +90,12 @@ Knowing which systems and applications are running at the time that a problem oc
 - Does a certain sequence of events need to happen for the problem to occur?
 - Do any other applications fail at the same time?
 
-Answering these types of questions can help you explain the environment in which the problem occurs and correlate any dependencies. Remember that just because multiple problems might have occurred around the same time, the problems are not necessarily related.
+Answering these types of questions can help you explain the environment in which the problem occurs and correlate any dependencies. Just because multiple problems occurred around the same time, the problems are not necessarily related.
 
 ### Can the problem be reproduced?
 {: #ts_overview_reproduce}
 
-From a troubleshooting standpoint, the ideal problem is one that can be reproduced. Typically, when a problem can be reproduced you have a larger set of tools or procedures at your disposal to help you investigate. Consequently, problems that you can reproduce are often easier to debug and solve.
+From a troubleshooting standpoint, the ideal problem is one that can be reproduced. Typically, when a problem can be reproduced, you have a larger set of tools or procedures at your disposal to help you investigate. Therefore, problems that you can reproduce are often easier to debug and solve.
 
 However, problems that you can reproduce can have a disadvantage: If the problem is of significant business impact, you do not want it to recur. If possible, re-create the problem in a test or development environment, which typically offers you more flexibility and control during your investigation.
 
@@ -113,16 +114,16 @@ You try to create a {{site.data.keyword.knowledgestudioshort}} instance on the L
 ### Causes
 {: #wks_ts_lite_causes}
 
-{{site.data.keyword.knowledgestudioshort}} does not permit more than one Lite plan per organization.
+{{site.data.keyword.knowledgestudioshort}} does not support more than one Lite plan per organization.
 
 ### Resolving the problem
 {: #wks_ts_lite_resolve}
 
 Create an account that is not included in the organization.
 
-If you need to use your current account for a {{site.data.keyword.knowledgestudioshort}} instance on a Lite plan and your user account is associated with a paid account, you can create a case. For more information, see [Contacting {{site.data.keyword.IBM_notm}} Support](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-troubleshooting#ts_contactingibmsupport).
+If you need to use your current account for a {{site.data.keyword.knowledgestudioshort}} instance on a Lite plan and your user account is associated with a paid account, you can create a case. For more information, see [Contacting {{site.data.keyword.IBM_notm}} Support](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-troubleshooting#ts_contactingibmsupport).
 
-If you need to use your current account for a {{site.data.keyword.knowledgestudioshort}} instance on a Lite plan and your user account isn't associated with a paid account, post your issue to [{{site.data.keyword.IBM_notm}} Developer Answers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/watson-knowledge-studio/){: new_window}. Tag the question, **WATSON-KNOWLEDGE-STUDIO**.
+If you need to use your current account for a {{site.data.keyword.knowledgestudioshort}} instance on a Lite plan and your user account isn't associated with a paid account, post your issue to [StackOverflow](https://stackoverflow.com/search?q=watson-knowledge-studio){: external}. Tag the question `watson-knowledge-studio`.
 
 ## Cannot access the application
 {: #wks_ts_access}
@@ -134,16 +135,18 @@ You must have {{site.data.keyword.IBM_notm}} user registration credentials to re
 ### Administrator
 {: #wks_ts_access_administrator}
 
-Each {{site.data.keyword.knowledgestudioshort}} instance has an administrator role associated with it. The person who originally signs up to use the application is given the administrator role automatically. The administrator can invite other people.
+Each {{site.data.keyword.knowledgestudioshort}} instance has an administrator role that is associated with it. The person who originally signs up to use the application is given the administrator role automatically. The administrator can invite other people.
 
-For information about how to invite people to use your instance of the application, see [Assembling the team](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-team).
+For more information about how to invite people to use your instance of the application, see [Assembling the team](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-team).
 
 ### Human annotator
 {: #wks_ts_access_annotator}
 
-If you have been invited to someone's instance of {{site.data.keyword.knowledgestudioshort}} to serve as a human annotator, you likely received an email invitation. First, you must register with {{site.data.keyword.IBM_notm}} if you do not have {{site.data.keyword.IBM_notm}} registration credentials already. Once you register with {{site.data.keyword.IBM_notm}} and accept the invitation, you are given access to the instance. However, after you are given access and before you can start to annotate documents, the administrator or a project manager of the instance must add you to a workspace and assign an annotation task to you. It is not until after you have been assigned a task that you can perform any actions in the {{site.data.keyword.knowledgestudioshort}} instance. To annotate documents, use the ground truth editor. Use a Google Chrome browser for the best performance.
+When someone invited you to an instance of {{site.data.keyword.knowledgestudioshort}} to serve as a human annotator, you likely received an email invitation. First, you must register with {{site.data.keyword.IBM_notm}} if you do not have {{site.data.keyword.IBM_notm}} registration credentials already. After you register with {{site.data.keyword.IBM_notm}} and accept the invitation, you are given access to the instance.
 
-For help using the ground truth editor, see [Annotating documents](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-user-guide).
+However, before you can start to annotate documents, the administrator or a project manager of the instance must add you to a workspace and assign an annotation task to you. It is not until after you are assigned a task that you can perform any actions in the {{site.data.keyword.knowledgestudioshort}} instance. To annotate documents, use the ground truth editor. Use the Google Chrome browser for the best performance.
+
+For help with the ground truth editor, see [Annotating documents](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-user-guide).
 
 ## Data collection
 {: #content}
@@ -152,36 +155,36 @@ For Standard plans (Lite, Standard, Pro), by default, {{site.data.keyword.knowle
 
 To prevent {{site.data.keyword.knowledgestudioshort}} from using client data, you must opt out in at least one of two ways.
 
-- Deselect the **Data collection** checkbox on the Service Details page in the {{site.data.keyword.knowledgestudioshort}} application.
+- Clear the **Data collection** checkbox on the Service Details page in the {{site.data.keyword.knowledgestudioshort}} application.
 - As the owner of the {{site.data.keyword.knowledgestudioshort}} service instance, opt out of all data collection for Watson services at https://{DomainName}/watson/settings.
 
 For Premium plans and Dedicated accounts, {{site.data.keyword.knowledgestudioshort}} does not use client data to improve the service.
 
-For more information, see the latest [{{site.data.keyword.knowledgestudioshort}} service description ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/software/sla/sladb.nsf/searchsaas/?searchview&searchorder=4&searchmax=0&query=Knowledge+Studio){: new_window}.
+For more information, see the latest [{{site.data.keyword.knowledgestudioshort}} service description](https://www.ibm.com/software/sla/sladb.nsf/searchsaas/?searchview&searchorder=4&searchmax=0&query=Knowledge+Studio){: external}.
 
 ## Beta services and features: What does *Beta* mean?
 {: #beta}
 
-IBM releases Beta services and features for you to try out. These services are in a trial stage of development. These services and features are not recommended for use in production environments.
+IBM releases Beta services and features for you to try out. These services are in a trial stage of development. These services and features are not intended for use in production environments.
 
-For more information about Beta services, see the [{{site.data.keyword.cloud_notm}} documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/docs/get-support?topic=get-support-support-different-services#s-services-betaorcont){: new_window}. For the full details of Beta services, see the latest version of the [{{site.data.keyword.cloud_notm}} Service Description ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/software/sla/sladb.nsf/sla/bm?OpenDocument){: new_window}.
+For more information about Beta services, see the [{{site.data.keyword.cloud_notm}} documentation](/docs/get-support?topic=get-support-support-different-services#s-services-betaorcont){: external}. For the full details of Beta services, see the latest version of the [{{site.data.keyword.cloud_notm}} Service Description](https://www.ibm.com/software/sla/sladb.nsf/sla/bm?OpenDocument){: external}.
 
 ## Experimental services and features: What does *experimental* mean?
 {: #experimental}
 
-{{site.data.keyword.IBM_notm}} releases experimental services and features for you to try out. These services might be unstable, change frequently in ways that are not compatible with earlier versions, and might be discontinued with short notice. These services and features are not recommended for use in production environments.
+{{site.data.keyword.IBM_notm}} releases experimental services and features for you to try out. These services might be unstable, change frequently in ways that are not compatible with earlier versions, and might be discontinued with short notice. These services and features are not intended for use in production environments.
 
-For more information about experimental services, see the [{{site.data.keyword.cloud_notm}} documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/get-support?topic=get-support-support-different-services#s-services-exporcont){: new_window}. For the full details of experimental services, see the latest version of the [{{site.data.keyword.cloud_notm}} Service Description ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/software/sla/sladb.nsf/sla/bm?OpenDocument){: new_window}.
+For more information about service descriptions, see [{{site.data.keyword.cloud_notm}} service descriptions](https://www.ibm.com/software/sla/sladb.nsf/sla/bm?OpenDocument){: external}.
 
 ## Storage space issues
 {: #storage}
 
-Depending on your subscription plan, you might reach the storage limit specified for your plan and be prevented from performing tasks that you want to complete.
+Depending on your subscription plan, you might reach the storage limit that is specified for your plan and be prevented from completing tasks.
 
 ### Symptoms
 {: #storage_symptoms}
 
-You might see a message about having exceeded the allowed storage space when you attempt to perform one of these tasks:
+You might see a message about exceeding the allowed storage space when you attempt to perform one of these tasks:
 
 - Upload documents or dictionaries
 - Deploy a model or version a model
@@ -190,7 +193,7 @@ You might see a message about having exceeded the allowed storage space when you
 ### Causes
 {: #storage_causes}
 
-The storage limit has been met or would be exceeded if the action were to proceed.
+The storage limit is met or exceeded if the action proceeds.
 
 ### Resolving the problem
 {: #storage_resolve}
@@ -201,7 +204,7 @@ The largest consumers of storage space are machine learning and rule-based model
 - Delete any models that you do not need.
 - If your models are too important to delete, consider upgrading your plan to one that provides a larger allotment of storage space.
 
-After removing models or model versions, wait an hour before you retry the action that resulted in the error message. It can take up to an hour for the storage space that you freed up to be available for use.
+After you remove models or model versions, wait an hour before you retry the action that resulted in the error message. It can take up to an hour for the storage space that you freed up to be available for use.
 
 To manage your monthly bill, if the Admin role is assigned to you and you have a Premium or Standard account, you can set a storage limit on the Service Details page in {{site.data.keyword.knowledgestudioshort}}. To see the Service Details page and set the storage limit, from the top navigation bar in {{site.data.keyword.knowledgestudioshort}}, click the **Settings** icon, click the **View/modify service details** link, and then click the **Set storage limit** link.
 {: tip}
@@ -211,11 +214,11 @@ To manage your monthly bill, if the Admin role is assigned to you and you have a
 
 {{site.data.keyword.IBM_notm}} Support provides assistance with product defects, answers FAQs, and helps users resolve problems with the product.
 
-- **Lite plan customers not associated with a paid account**
+- **Lite plan customers who are not associated with a paid account**
 
     Get help and answers to questions by asking fellow members of the developer community. For links, see the "Developer community" section at the bottom of the table of contents.
 
-- **Customers associated with a paid account**
+- **Customers who are associated with a paid account**
 
     As a customer associated with a paid account, you, too, can ask questions and learn from other users' questions. The developer communities are open to everyone and are a great place to start. For links, see the "Developer community" section at the bottom of the table of contents.
 
@@ -223,6 +226,6 @@ To manage your monthly bill, if the Admin role is assigned to you and you have a
 
     You must be authorized to create support cases on the {{site.data.keyword.cloud_notm}} Service Portal.
 
-    1. Define the problem, gather background information, and determine the severity of the problem.
-    1. Gather diagnostic information, if possible.
-    1. Create a case on the [{{site.data.keyword.cloud_notm}} Service Portal ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson.service-now.com/wcp){: new_window}.
+    1.  Define the problem, gather background information, and determine the severity of the problem.
+    1.  Gather diagnostic information, if possible.
+    1.  Create a case on the [{{site.data.keyword.cloud_notm}} Service Portal](https://watson.service-now.com/wcp){: external}.

@@ -357,7 +357,7 @@ To annotate relation mentions between entity mentions in a document:
 1. Click **Relations**.
 1. To annotate a relation:
 
-    1. Click an entity mention in the text, and then click a second entity mention in the same sentence that you want to connect to the first mention.
+    1. Click an entity mention in the text, and then click a second entity mention.
     1. Either select the relation type that you want to apply from the pane on the right, or enter the keyboard shortcut for the relation type. The list of available relation types is constrained by the first entity mention that you select, and further constrained by the second entity mention. In some cases, only one relation type remains; you still must explicitly select the relation type to apply it.
 
         If annotation guidelines were previously connected to the workspace, and you want help with choosing the correct annotation to apply, click **View Guidelines**. Depending on the access permissions set up on the site where the guidelines are hosted, you might be able to update the guidelines after you open them, for example, to add clarifications and examples.
