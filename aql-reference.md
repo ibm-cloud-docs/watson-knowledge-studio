@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-07-09"
+lastupdated: "2020-07-14"
 
 subcollection: watson-knowledge-studio
 
@@ -1881,7 +1881,7 @@ part_of_speech
 
 - `[and mapping from <mapping table name\>]`
 
-    Specifies the name of an AQL table that maps raw part-of-speech tags such as "NN" to combinations of high-level parts of speech and flags. While the optional mapping table can have variable names, a part-of-speech mapping table is required to have these column names:
+    Specifies the name of an AQL table that maps raw part-of-speech tags such as "NOUN" to combinations of high-level parts of speech and flags. While the optional mapping table can have variable names, a part-of-speech mapping table is required to have these column names:
 
     - **tag**
 
@@ -1900,9 +1900,8 @@ part_of_speech
     ```
     create table POSMapping_EN(tag Text, basetag Text, flagstr Text)
     as values
-     ('NN','Noun','singular'),
-     ('NNP','Noun','singular,proper'),
-     ( 'VBG','Verb','presentParticiple');
+     ('CCONJ','CONJ','coordinating'),
+     ('SCONJ','CONJ','subordinating');
     ```
 
 - `<input column\>`
