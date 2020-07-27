@@ -1,0 +1,78 @@
+{
+    "wks_ts_lite": [
+        "unable to create lite wks instance",
+        "can't create watson knowledge studio instance with lite plan",
+        "my account is lite and I can't create a wks instance",
+        "error creating wks instance with lite plan",
+        "Error 331: We are unable to process your request. Please try again later or contact the IBM Helpdesk",
+        "getting error 331 tring to create another WKS instance",
+        "can't create another wks instance"
+    ],
+    "wks_ts_access": [
+        "can't access wks",
+        "problem accessing watson knowledge studio",
+        "can't access watson knowledge studio",
+        "what credentials do I need to access wks",
+        "need admin credentials to access watson knowledge studio",
+        "what does it mean to be a human annotator for wks",
+        "register as human annotator for my watson knowledge studio instance",
+        "how to invite people to use WKS instance"
+    ],
+    "content": [
+        "is client data public in wks",
+        "data used in watson knowledge studio",
+        "clear the data collection in wks",
+        "data collection for wks",
+        "opt out of wks data collection",
+        "account types use public data in watson knowledge studio",
+        "opting out of knowledge studio data collection"
+    ],
+    "beta": [
+        "whats beta mean",
+        "what does it mean for a service to be beta",
+        "describe beta",
+        "beta services upported",
+        "definition of beta for a service",
+        "support if a service is in beta"
+    ],
+    "experimental": [
+        "what does it mean for a service to be experimental",
+        "whats experimental",
+        "experimental mean for my service",
+        "support if a service is in experimental",
+        "experimental services supported"
+    ],
+    "storage": [
+        "error about exceeding storage space in wks",
+        "get more storage for watson knowledge studio",
+        "don't have enough space to run a model in wks",
+        "space exceeded error uploading wks documents",
+        "exceeding the allowed storage space in knowledge stuio",
+        "free up space in knowledge studio",
+        "how do I free space in wks"
+    ],
+    "uh-ac": [
+        "can't access the ground truth",
+        "problem accessing the wks ground truth",
+        "after being invited to the workspace I have a problem accessing wks",
+        "assign an annotation set to a user in wks",
+        "managing annotators in watson knowledge studio",
+        "unable to access ground truth editor"
+    ],
+    "uh-ue": [
+        "help using the wks ground truth editor",
+        "edit the watson knowledge studio ground truth",
+        "annotaing documents in the ground truth editor",
+        "annotate in ground truth editor",
+        "how to use the ground truth editor"
+    ],
+    "uh-ad": [
+        "can't decide which entry type to assign to a term in wks",
+        "ambiguous terms in watson knowledge studio",
+        "annotator decisions wks",
+        "choices in annotating watson knowledge studio",
+        "annotaion guidelines for wks",
+        "how to assign an entity to ambiguous terms",
+        "methodology for annotating documents"
+    ]
+}
