@@ -1,23 +1,24 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-03-19"
+  years: 2019, 2020
+lastupdated: "2020-08-03"
 
 subcollection: watson-knowledge-studio
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
+{:deprecated: .deprecated}
+{:important: .important}
+{:note: .note}
 {:tip: .tip}
+{:preview: .preview}
+{:beta: .beta}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
 
 # High availability and disaster recovery
 {: #ha-dr}
@@ -56,11 +57,9 @@ For models, understand which data can be backed up, restore and re-create necess
 
 Some data can be backed up, and some must be re-created:
 
-1. [Understand which data can be backed up](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-backup-restore#data)
-
-1. [Prepare for backup](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-backup-restore#prepare)
-
-1. [Download artifacts from the current instance](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-backup-restore#export)
+1. [Understand which data can be backed up](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-backup-restore#data)
+1. [Prepare for backup](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-backup-restore#prepare)
+1. [Download artifacts from the current instance](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-backup-restore#export)
 
 
 #### Restoring data, models, and tasks
@@ -68,10 +67,7 @@ Some data can be backed up, and some must be re-created:
 
 To recover from a disaster:
 
-1. [Recreate workspaces on the new instance](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-backup-restore#recreateproj)
-
-1. [Restore the workspace data](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-backup-restore#restoredata)
-
-1. [Restore the models](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-backup-restore#restoremodels)
-
-1. [Restore any incomplete annotation tasks](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-backup-restore#restoretasks)
+1. [Recreate workspaces on the new instance](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-backup-restore#recreateproj)
+1. [Restore the workspace data](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-backup-restore#restoredata)
+1. [Restore the models](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-backup-restore#restoremodels)
+1. [Restore any incomplete annotation tasks](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-backup-restore#restoretasks)

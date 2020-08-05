@@ -1,25 +1,26 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-07-19"
+  years: 2015, 2020
+lastupdated: "2020-08-03"
 
 subcollection: watson-knowledge-studio
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
+{:deprecated: .deprecated}
+{:important: .important}
+{:note: .note}
 {:tip: .tip}
+{:preview: .preview}
+{:beta: .beta}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio?topic=knowledge-studio-wks_rule_train){: new_window}.
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/knowledge-studio?topic=knowledge-studio-wks_rule_train).
 {: tip}
 
 # Creating the rule-based model
@@ -38,7 +39,7 @@ To create a rule-based model. complete the following steps:
 1. Click **Map entity types and classes**.
 1. Map the entity types from your type system to one or more classes that you used to define rules.
 
-  After the entity types are mapped, you can [deploy the rule-based model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_rule_publish) or use it to [pre-annotate documents](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-preannotation#wks_preannotrule) in the process of creating a machine learning model.
+  After the entity types are mapped, you can [deploy the rule-based model](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks_rule_publish) or use it to [pre-annotate documents](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-preannotation#wks_preannotrule) in the process of creating a machine learning model.
 
 ## Deleting a rule-based model
 {: #wks_rule_delete_model}

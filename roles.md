@@ -1,23 +1,24 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-07-16"
+  years: 2018, 2020
+lastupdated: "2020-08-03"
 
 subcollection: watson-knowledge-studio
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
+{:deprecated: .deprecated}
+{:important: .important}
+{:note: .note}
 {:tip: .tip}
+{:preview: .preview}
+{:beta: .beta}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
 
 # User roles in {{site.data.keyword.knowledgestudioshort}}
 {: #roles}
@@ -29,12 +30,12 @@ subcollection: watson-knowledge-studio
 {: #notes}
 
 - **{{site.data.keyword.cloud}} roles** are different from **{{site.data.keyword.knowledgestudioshort}} roles**.
-  - **{{site.data.keyword.cloud}} roles** control permissions for managing {{site.data.keyword.cloud_notm}} services. New service instances of {{site.data.keyword.knowledgestudioshort}} are managed with [{{site.data.keyword.cloud_notm}} Identity and Access Management (IAM)](https://{DomainName}/docs/iam) in all public regions. Some older service instances are managed with [Cloud Foundry](https://{DomainName}/docs/iam?topic=iam-cfaccess).
+  - **{{site.data.keyword.cloud}} roles** control permissions for managing {{site.data.keyword.cloud_notm}} services. New service instances of {{site.data.keyword.knowledgestudioshort}} are managed with [{{site.data.keyword.cloud_notm}} Identity and Access Management (IAM)](/docs/iam) in all public regions. Some older service instances are managed with [Cloud Foundry](/docs/iam?topic=iam-cfaccess).
   - **{{site.data.keyword.knowledgestudioshort}} roles** control access to {{site.data.keyword.knowledgestudioshort}} functionality and are managed in the {{site.data.keyword.knowledgestudioshort}} application.
 - The first user to launch the {{site.data.keyword.knowledgestudioshort}} application is assigned the **Admin** role.
-- Once assigned, user roles can't be downgraded from higher to lower levels of permissions. Admins can't be downgraded to project managers or human annotators, and project managers can't be downgraded to human annotators. For information about adding users, upgrading roles, and deactivating user accounts, see [Assembling a team](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-team).
+- Once assigned, user roles can't be downgraded from higher to lower levels of permissions. Admins can't be downgraded to project managers or human annotators, and project managers can't be downgraded to human annotators. For information about adding users, upgrading roles, and deactivating user accounts, see [Assembling a team](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-team).
 - To manage a workspace, project managers need to be assigned to the workspace by an admin.
-- Admins and project managers can perform the role of human annotators. They can also [directly annotate document sets](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-annotating-document-sets-directly) without creating annotation tasks.
+- Admins and project managers can perform the role of human annotators. They can also [directly annotate document sets](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-annotating-document-sets-directly) without creating annotation tasks.
 
 ## {{site.data.keyword.knowledgestudioshort}} role descriptions
 {: #descriptions}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-25"
+lastupdated: "2020-08-03"
 
 subcollection: watson-knowledge-studio
 
@@ -25,7 +25,7 @@ subcollection: watson-knowledge-studio
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/knowledge-studio?topic=knowledge-studio-documents-for-annotation){: external}.
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/knowledge-studio?topic=knowledge-studio-documents-for-annotation).
 {: tip}
 
 # Adding documents for annotation
@@ -67,7 +67,7 @@ You can add documents in the following ways. For more information about the supp
 ### CSV files
 {: #wks_sampledoc__wks_samplecsv}
 
-You can upload a two-column CSV file that contains sample text from your local machine. Upload one CSV file at a time. The first column in the CSV file specifies the file name of the document. The second column in the file contains the document text. For an example of the required format, see the <a href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/documents-new.csv" download>`documents-new.csv` <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a> file in the tutorial sample files.
+You can upload a two-column CSV file that contains sample text from your local machine. Upload one CSV file at a time. The first column in the CSV file specifies the file name of the document. The second column in the file contains the document text. For an example of the required format, see the <a href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/documents-new.csv" download>`documents-new.csv` <img src="../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a> file in the tutorial sample files.
 
 ### PDF files
 {: #doc-pdf}

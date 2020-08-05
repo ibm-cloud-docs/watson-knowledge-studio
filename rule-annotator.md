@@ -1,25 +1,26 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-09-27"
+  years: 2015, 2020
+lastupdated: "2020-08-03"
 
 subcollection: watson-knowledge-studio
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
+{:deprecated: .deprecated}
+{:important: .important}
+{:note: .note}
 {:tip: .tip}
+{:preview: .preview}
+{:beta: .beta}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio?topic=knowledge-studio-rule-annotator){: new_window}.
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](docs/knowledge-studio?topic=knowledge-studio-rule-annotator).
 {: tip}
 
 # Rules
@@ -69,7 +70,7 @@ The rule editor provides some tools that help you to define rules.
 
 Although the regex tool that is included in the rule editor recognizes expressions that follow the `java.util.regex.Pattern` syntax, the entire syntax is not supported. When using the regex tool, consider the following best practices:
 
-- Rules match only on token boundaries. You can't write rules that match a subsequence of a token. For more information, see [Tokenizers](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-create-project#wks_tokenizer).
+- Rules match only on token boundaries. You can't write rules that match a subsequence of a token. For more information, see [Tokenizers](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-create-project#wks_tokenizer).
 - Keep your regular expressions simple and clean.
 - Consider using dictionaries instead of regular expressions. Although you might think of a clever rule that can capture several expressions, in general, dictionary matching is faster than rules matching. Also, dictionaries are easier to maintain.
 - Instead of relying completely on regular expressions to match tokens, it's best to use a combination of dictionaries, regular expressions, and rules. For example, consider the scenario of matching a phone number in a sentence such as `My mobile is 123-456`. You might be able to write a rule that uses a regular expression to match that sentence. But in this case, the recommended method is to add a dictionary to find words such as _mobile_ and _phone_, write a simple regular expression that captures possible phone number sequences, and then create a rule to scan for a sequence of patterns, such as `dictionary term`+`text`+`regex` as shown in the example sentence, `My mobile is 123-456`.

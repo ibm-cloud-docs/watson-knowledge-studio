@@ -1,25 +1,26 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-08-14"
+  years: 2015, 2020
+lastupdated: "2020-08-03"
 
 subcollection: watson-knowledge-studio
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
+{:deprecated: .deprecated}
+{:important: .important}
+{:note: .note}
 {:tip: .tip}
+{:preview: .preview}
+{:beta: .beta}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio?topic=knowledge-studio-wks_rule_publish){: new_window}.
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/knowledge-studio?topic=knowledge-studio-wks_rule_publish).
 {: tip}
 
 # Using the rule-based model
@@ -28,20 +29,20 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 Leverage a rule-based model that you created with {{site.data.keyword.knowledgestudioshort}} by making it available to other {{site.data.keyword.watson}} applications.
 {: shortdesc}
 
-**Attention**: You can deploy a rule-based model to make it available for use in these services as an [experimental](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-troubleshooting#experimental) feature.
+**Attention**: You can deploy a rule-based model to make it available for use in these services as an [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-troubleshooting#experimental) feature.
 
-Before a model can be deployed for use by a service, you must have a subscription to the service. {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} services are hosted on {{site.data.keyword.Bluemix_notm}}, which is the cloud platform for {{site.data.keyword.IBM_notm}}. See [What is {{site.data.keyword.Bluemix_notm}}? ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/overview){: new_window} for more information about the platform. To subscribe to one of the {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} services, create an account from the [{{site.data.keyword.Bluemix_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/){: new_window} website.
+Before a model can be deployed for use by a service, you must have a subscription to the service. {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} services are hosted on {{site.data.keyword.Bluemix_notm}}, which is the cloud platform for {{site.data.keyword.IBM_notm}}. See [What is {{site.data.keyword.Bluemix_notm}}?](/docs/overview) for more information about the platform. To subscribe to one of the {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} services, create an account from the [{{site.data.keyword.Bluemix_notm}}](https://{DomainName}/){: external} website.
 
 For some of the services, you must know details about the service instance that you plan to deploy to, such as the {{site.data.keyword.Bluemix_notm}} space name and service instance name. The space and instance name information is available from the {{site.data.keyword.Bluemix_notm}} services page.
 
-You can also pre-annotate new documents with the rule-based model. See [Pre-annotating documents with the rule-based model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-preannotation#wks_preannotrule) for details.
+You can also pre-annotate new documents with the rule-based model. See [Pre-annotating documents with the rule-based model](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-preannotation#wks_preannotrule) for details.
 
 ## Deploying a rule-based model to IBM Watson Discovery
 {: #wks_rule_discovery}
 
 Deploy the model to enable an application that uses the {{site.data.keyword.discoveryshort}} service to use the rule-based model to find and extract entities during document enrichment.
 
-**Attention**: This is currently an [experimental](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-troubleshooting#experimental) feature of the service.
+**Attention**: This is currently an [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-troubleshooting#experimental) feature of the service.
 
 ### Before you begin
 {: #wks_rule_discovery_prereqs}
@@ -80,7 +81,7 @@ To use the deployed model, you must provide the model ID when it is requested du
 
 Deploy the rule-based model to enable an application that uses the {{site.data.keyword.nlushort}} service to use the model to find and extract entities that are relevant to your domain.
 
-**Attention**: This is currently an [experimental](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-troubleshooting#experimental) feature of the service.
+**Attention**: This is currently an [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-troubleshooting#experimental) feature of the service.
 
 ### Before you begin
 {: #wks_rule_prereqs}
@@ -116,7 +117,7 @@ To use the deployed model, you must specify the model ID of your custom model in
 
 You can use the model with the {{site.data.keyword.nlushort}} `GET /analyze` request to extract entities.
 
-See the [{{site.data.keyword.nlushort}} documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/natural-language-understanding){: new_window} for more details.
+See the [{{site.data.keyword.nlushort}} documentation](/docs/natural-language-understanding) for more details.
 
 ## Undeploying models
 {: #ramu-um}
@@ -126,7 +127,7 @@ If you want to undeploy a model or find a model ID, view the **Deployed Models**
 ### About this task
 {: #ramu-att}
 
-What you see on the Deployed Models page depends on the [region ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/resources?topic=resources-services_region){: new_window} that hosts your {{site.data.keyword.knowledgestudioshort}} instance. If the region supports instances managed by [IAM ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/iam?topic=iam-userroles){: new_window} and [Cloud Foundry ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/iam?topic=iam-cfaccess){: new_window} access management methods, you see a tab for each method. Models from instances that are managed by IAM are listed on the **Resource Groups** tab. Models from instances that are managed by Cloud Foundry are listed on the **Organizations** tab.
+What you see on the Deployed Models page depends on the [region](/docs/resources?topic=resources-services_region) that hosts your {{site.data.keyword.knowledgestudioshort}} instance. If the region supports instances managed by [IAM](/docs/iam?topic=iam-userroles) and [Cloud Foundry](/docs/iam?topic=iam-cfaccess) access management methods, you see a tab for each method. Models from instances that are managed by IAM are listed on the **Resource Groups** tab. Models from instances that are managed by Cloud Foundry are listed on the **Organizations** tab.
 
 If the region supports instances managed by only one of the access management methods, you see only one list of models, because only one access management method is applicable.
 

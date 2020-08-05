@@ -1,28 +1,26 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-04-23"
+  years: 2015, 2020
+lastupdated: "2020-08-03"
 
 subcollection: watson-knowledge-studio
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:tip: .tip}
+{:external: target="_blank" .external}
+{:deprecated: .deprecated}
 {:important: .important}
 {:note: .note}
+{:tip: .tip}
+{:preview: .preview}
+{:beta: .beta}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
-{:hide-dashboard: .hide-dashboard}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/services/knowledge-studio?topic=knowledge-studio-wks_tutintro).
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/knowledge-studio?topic=knowledge-studio-wks_tutintro).
 {: tip}
 
 # Getting started with {{site.data.keyword.knowledgestudioshort}}
@@ -34,14 +32,14 @@ This {{site.data.keyword.knowledgestudiofull}} tutorial helps you perform prereq
 ## Before you begin
 {: #prereq}
 
-- Confirm you're using a supported browser. For information, see [Browser requirements](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-system-requirements).
-- Confirm that you have at least one user ID that you can use in {{site.data.keyword.knowledgestudioshort}}. This user ID must have the Admin role. If you sign up for a Lite plan, as the only user, you will have the Admin role. For information about user roles, see [Assembling a team](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-team).
+- Confirm you're using a supported browser. For information, see [Browser requirements](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-system-requirements).
+- Confirm that you have at least one user ID that you can use in {{site.data.keyword.knowledgestudioshort}}. This user ID must have the Admin role. If you sign up for a Lite plan, as the only user, you will have the Admin role. For information about user roles, see [Assembling a team](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-team).
 
 ## Creating a service instance
 {: #instance}
 {: hide-dashboard}
 
-1. If you haven't already, [sign up for an {{site.data.keyword.ibmid}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}){: new_window} and log in to {{site.data.keyword.cloud_notm}}.
+1. If you haven't already, [sign up for an {{site.data.keyword.ibmid}}](https://{DomainName}){: external} and log in to {{site.data.keyword.cloud_notm}}.
 1. Go to the [{{site.data.keyword.knowledgestudioshort}}](https://{DomainName}/catalog/services/knowledge-studio) page in the {{site.data.keyword.cloud_notm}} catalog.
 1. Select a pricing plan, and click **Create**.
 {: hide-dashboard}
@@ -49,9 +47,9 @@ This {{site.data.keyword.knowledgestudiofull}} tutorial helps you perform prereq
 ## Launching the {{site.data.keyword.knowledgestudioshort}} application
 {: #launching-the-knowledge-studio-application}
 
-After creating a service instance, the user who created the service instance and any users with [{{site.data.keyword.cloud_notm}} roles](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-roles) that allow access to the service instance will be able to launch the {{site.data.keyword.knowledgestudioshort}} application with the following steps.
+After creating a service instance, the user who created the service instance and any users with [{{site.data.keyword.cloud_notm}} roles](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-roles) that allow access to the service instance will be able to launch the {{site.data.keyword.knowledgestudioshort}} application with the following steps.
 
-1. {: hide-dashboard} Go to the [{{site.data.keyword.cloud_notm}} resources ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/resources){: new_window} page. Log in with your {{site.data.keyword.ibmid}}.
+1. {: hide-dashboard} Go to the [{{site.data.keyword.cloud_notm}} resources](https://{DomainName}/resources){: external} page. Log in with your {{site.data.keyword.ibmid}}.
 1. {: hide-dashboard} Select **Services** and click on your {{site.data.keyword.knowledgestudioshort}} service instance to open the {{site.data.keyword.knowledgestudioshort}} service dashboard.
 1. Click **Launch tool** from the Manage page.
 
@@ -62,7 +60,7 @@ Example URL:
 https://gateway.watsonplatform.net/knowledge-studio/tools/app/zefz11/enf01h9le5c63p50/ui/#/`
 ```
 
-If you want to [add users to {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-team#team-add) but don't want to grant them an {{site.data.keyword.cloud_notm}} role that allows access to your service instance, share the application URL to provide access to the application.
+If you want to [add users to {{site.data.keyword.knowledgestudioshort}}](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-team#team-add) but don't want to grant them an {{site.data.keyword.cloud_notm}} role that allows access to your service instance, share the application URL to provide access to the application.
 {: tip}
 
 ## Lesson 1: Assigning user roles
@@ -73,19 +71,19 @@ In this lesson, you will learn about the different roles that you can assign to 
 ### About this task
 {: #wks_tutless1_about}
 
-The creation of a machine learning model requires input from subject matter experts, project managers, and users who can understand and interpret statistical models. Administrators assign roles to each user, such that they have appropriate authority for their tasks. For more information about user roles, see [Assembling a team](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-team).
+The creation of a machine learning model requires input from subject matter experts, project managers, and users who can understand and interpret statistical models. Administrators assign roles to each user, such that they have appropriate authority for their tasks. For more information about user roles, see [Assembling a team](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-team).
 
 ### Procedure
 {: #wks_tutless1_procedure}
 
-1. Log in to {{site.data.keyword.knowledgestudioshort}} with your administrator ID. If you have an existing {{site.data.keyword.knowledgestudioshort}} instance, you can find it on the {{site.data.keyword.cloud_notm}} [resources page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/resources){: new_window} under **Services**.
+1. Log in to {{site.data.keyword.knowledgestudioshort}} with your administrator ID. If you have an existing {{site.data.keyword.knowledgestudioshort}} instance, you can find it on the {{site.data.keyword.cloud_notm}} [resources page](https://{DomainName}/resources){: external} under **Services**.
 1. Click the **Settings** icon to open the Service Details page. The page lists all the user IDs that are registered as {{site.data.keyword.knowledgestudioshort}} users. Each user ID has one of the following roles (in decreasing order of included permissions):
 
     - Admin
     - Project Manager
     - Human Annotator
 
-    For information about user roles, see [User roles in {{site.data.keyword.knowledgestudioshort}}](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-roles).
+    For information about user roles, see [User roles in {{site.data.keyword.knowledgestudioshort}}](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-roles).
 
 1. Verify that there is at least one user with the Admin role. A user ID with this role can create workspaces, and act as a project manager or human annotator.
 1. If you have access to additional user IDs, verify that there are at least two users with the Human Annotator role.
@@ -106,12 +104,12 @@ In this lesson, you will learn how to create a workspace within {{site.data.keyw
 ### About this task
 {: #wks_tutless2_about}
 
-A workspace defines all the resources that are required to create a machine learning model, including training documents, the type system, dictionaries, and annotations that are added by human annotators. For more information about workspace creation, see [Creating a workspace](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-create-project).
+A workspace defines all the resources that are required to create a machine learning model, including training documents, the type system, dictionaries, and annotations that are added by human annotators. For more information about workspace creation, see [Creating a workspace](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-create-project).
 
 ### Procedure
 {: #wks_tutless2_procedure}
 
-1. {: hide-dashboard} As a {{site.data.keyword.knowledgestudioshort}} administrator, from your {{site.data.keyword.cloud_notm}} [resources ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/resources){:new_window} page, click the {{site.data.keyword.knowledgestudioshort}} service instance under **Services**.
+1. {: hide-dashboard} As a {{site.data.keyword.knowledgestudioshort}} administrator, from your {{site.data.keyword.cloud_notm}} [resources](https://{DomainName}/resources){:new_window} page, click the {{site.data.keyword.knowledgestudioshort}} service instance under **Services**.
 1. Click **Launch tool** from the Manage page.
 1. Click **Create Workspace**.
 1. Specify the details for the new workspace:
@@ -139,12 +137,12 @@ In this lesson, you will learn how to upload and modify a type system within {{s
 ### About this task
 {: #wks_tutless3_about}
 
-For more information about type systems, see [Type systems](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-typesystem#wks_typesystem).
+For more information about type systems, see [Type systems](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-typesystem#wks_typesystem).
 
 ### Procedure
 {: #wks_tutless3_procedure}
 
-1. Download the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/en-klue2-types.json" download="en-klue2-types.json">en-klue2-types.json <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a> file to your computer. This file contains an example KLUE type system.
+1. Download the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/en-klue2-types.json" download="en-klue2-types.json">en-klue2-types.json <img src="../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a> file to your computer. This file contains an example KLUE type system.
 1. Click **Assets**> **Entity Types**.
 1. On the Entity Types page, click **Upload**.
 1. Upload the `en-klue2-types.json` file from your computer. The uploaded type system is displayed in the table.
@@ -172,12 +170,12 @@ In this lesson, you will learn how to add a dictionary to a workspace in {{site.
 ### About this task
 {: #wks_tutless4_about}
 
-For more information about dictionaries, see [Adding dictionaries to a workspace](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-dictionaries#wks_projdictionaries).
+For more information about dictionaries, see [Adding dictionaries to a workspace](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-dictionaries#wks_projdictionaries).
 
 ### Procedure
 {: #wks_tutless4_procedure}
 
-1. Download the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/dictionary-items-organization.csv" download="dictionary-items-organization.csv">dictionary-items-organization.csv <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a> file to your computer. This file contains dictionary terms in CSV format, suitable for uploading into a {{site.data.keyword.knowledgestudioshort}} dictionary.
+1. Download the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/dictionary-items-organization.csv" download="dictionary-items-organization.csv">dictionary-items-organization.csv <img src="../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a> file to your computer. This file contains dictionary terms in CSV format, suitable for uploading into a {{site.data.keyword.knowledgestudioshort}} dictionary.
 1. Click **Assets** > **Dictionaries**.
 1. Click **Create Dictionary** to add a dictionary.
 
@@ -205,7 +203,7 @@ After you create a dictionary, you can use it to speed up human annotation tasks
 ## Next steps
 {: #wks_tutless_next}
 
-Learn how to [create a machine learning model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutml_intro).
+Learn how to [create a machine learning model](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutml_intro).
 
 ## Tutorial summary
 {: #wks_tutsum}

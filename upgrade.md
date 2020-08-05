@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-25"
+lastupdated: "2020-08-03"
 
 subcollection: watson-knowledge-studio
 
@@ -20,7 +20,7 @@ subcollection: watson-knowledge-studio
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.cloud_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/knowledge-studio?topic=knowledge-studio-upgrade){: external}.
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.cloud_notm}} Marketplace, [click this link](}/docs/knowledge-studio?topic=knowledge-studio-upgrade).
 {: tip}
 
 # Upgrading your pricing plan

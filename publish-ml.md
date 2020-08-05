@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-25"
+lastupdated: "2020-08-03"
 
 subcollection: watson-knowledge-studio
 
@@ -20,7 +20,7 @@ subcollection: watson-knowledge-studio
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/knowledge-studio?topic=knowledge-studio-publish-ml){: external}.
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/knowledge-studio?topic=knowledge-studio-publish-ml).
 {: tip}
 
 # Using the machine learning model
@@ -35,7 +35,7 @@ Before you can deploy a model for use by a service, you must have a subscription
 
 For some of the services, you must know details about the service instance that you plan to deploy to, such as the {{site.data.keyword.cloud_notm}} space name and service instance name. The space and instance name information is available from the {{site.data.keyword.cloud_notm}} Services page.
 
-You can also pre-annotate new documents with the machine learning model. See [Pre-annotating documents with the machine learning model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-preannotation#wks_preannotsire) for details.
+You can also pre-annotate new documents with the machine learning model. See [Pre-annotating documents with the machine learning model](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-preannotation#wks_preannotsire) for details.
 
 ## Deploying a machine learning model to IBM Watson Discovery
 {: #wks_madiscovery}
@@ -379,4 +379,4 @@ To leverage a machine learning model in {{site.data.keyword.IBM_notm}} {{site.da
 #### Related tasks
 {: #wks_maexport_related}
 
-[Exporting analyzed documents from {{site.data.keyword.watson}} Explorer Content Analytics](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-preannotation#wks_uimawexca)
+[Exporting analyzed documents from {{site.data.keyword.watson}} Explorer Content Analytics](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-preannotation#wks_uimawexca)

@@ -1,23 +1,24 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-07-27"
+  years: 2015, 2020
+lastupdated: "2020-08-03"
 
 subcollection: watson-knowledge-studio
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
+{:deprecated: .deprecated}
+{:important: .important}
+{:note: .note}
 {:tip: .tip}
+{:preview: .preview}
+{:beta: .beta}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
 
 # Information security
 {: #information-security}
@@ -32,20 +33,20 @@ The products, services, and other capabilities described herein are not suitable
 
 If you need to request GDPR support for {{site.data.keyword.cloud}} {{site.data.keyword.watson}} resources that are created
 
-- In the European Union, see [Requesting support for IBM Cloud Watson resources created in the European Union ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/watson?topic=watson-gdpr-sar#request-EU){: new_window}.
-- Outside the European Union, see [Requesting support for resources outside the European Union ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/watson?topic=watson-gdpr-sar#request-non-EU){: new_window}.
+- In the European Union, see [Requesting support for IBM Cloud Watson resources created in the European Union](/docs/watson?topic=watson-gdpr-sar#request-EU).
+- Outside the European Union, see [Requesting support for resources outside the European Union](/docs/watson?topic=watson-gdpr-sar#request-non-EU).
 
 ## European Union General Data Protection Regulation (GDPR)
 {: #gdpr}
 
 IBM is committed to providing our clients and partners with innovative data privacy, security and governance solutions to assist them on their journey to GDPR compliance.
 
-Learn more about IBM's own GDPR readiness journey and our GDPR capabilities and offerings to support your compliance journey [here ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/gdpr){: new_window}.
+Learn more about IBM's own GDPR readiness journey and our GDPR capabilities and offerings to support your compliance journey [here](http://www.ibm.com/gdpr){: external}.
 
 ## Health Insurance Portability and Accountability Act (HIPAA)
 {: #hipaa}
 
-US Health Insurance Portability and Accountability Act (HIPAA) support is available for Premium plans in the Washington, DC location created on or after 1 April 2019. See [Enabling EU and HIPAA supported settings](/docs/account?topic=account-eu-hipaa-supported#eu-hipaa-supported){: external} for more information.
+US Health Insurance Portability and Accountability Act (HIPAA) support is available for Premium plans in the Washington, DC location created on or after 1 April 2019. See [Enabling EU and HIPAA supported settings](/docs/account?topic=account-eu-hipaa-supported#eu-hipaa-supported) for more information.
 
 ## GDPR in {{site.data.keyword.knowledgestudioshort}}
 {: #gdpr-wks}
@@ -56,6 +57,6 @@ US Health Insurance Portability and Accountability Act (HIPAA) support is availa
 - Documents
 
 If you receive a request to delete data, complete the following steps:
-1. [Delete the applicable artifact](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-artifacts).
-1. [Retrain and redeploy the model](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-train-ml).
-1. [Delete previous versions of the model that used the deleted data](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-improve-ml#wks_maversions).
+1. [Delete the applicable artifact](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-artifacts).
+1. [Retrain and redeploy the model](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-train-ml).
+1. [Delete previous versions of the model that used the deleted data](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-improve-ml#wks_maversions).

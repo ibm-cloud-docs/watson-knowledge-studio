@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-25"
+lastupdated: "2020-08-04"
 
 subcollection: watson-knowledge-studio
 
@@ -206,6 +206,9 @@ To create an editable dictionary and pre-annotate documents, follow these steps:
 1.  Select the **Assets** > **Dictionaries** page.
 1.  Click **Create Dictionary**, enter a name, and then click **Save**.
 1.  From the **Entity type** list, select an entity type to associate with the dictionary.
+
+    You can also associate an entity type with the dictionary from the **Machine Learning Model** > **Pre-annotation** page. Click the overflow menu button in the Dictionaries row in the page, then click **Map entity types**.
+    {: note}
 1.  Add entries for the dictionary or upload a file that contains dictionary terms.
 1.  Go to the **Machine Learning Model** > **Pre-annotation** page.
 1.  Click **Run Pre-annotators**.
@@ -256,8 +259,10 @@ To use the rule-based model to pre-annotate documents, complete the following st
 
 1.  Log in as a {{site.data.keyword.knowledgestudioshort}} administrator and select your workspace.
 1.  Go to the **Machine Learning Model** > **Pre-annotation** page.
-1.  Select the **Rule-based Model** > **Versions** > **Rule-based Model** tab.
-1.  If not already completed, open the overflow menu in the Rule-based Model row and click **Map entity types and classes** to map entity types that you defined in the {{site.data.keyword.knowledgestudioshort}} type system to one or more rule-based model classes.
+1.  Click the overflow menu button in the Rule-based Model row in the page, then click **Map entity types and classes** to map entity types that you defined in the {{site.data.keyword.knowledgestudioshort}} type system to one or more rule-based model classes.
+
+    You can also open the mapping page by selecting the **Rule-based Model** > **Versions** > **Rule-based Model** tab.
+    {: note}
 1.  Click **Edit** for each entity type you want to map.
     - The drop-down list of the **Class Name** column is pre-populated with classes that are associated with the rule-based model.
     - You must map at least one entity type to a class.

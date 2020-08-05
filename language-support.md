@@ -1,25 +1,26 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-09-12"
+  years: 2015, 2020
+lastupdated: "2020-08-03"
 
 subcollection: watson-knowledge-studio
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
+{:deprecated: .deprecated}
+{:important: .important}
+{:note: .note}
 {:tip: .tip}
+{:preview: .preview}
+{:beta: .beta}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio?topic=knowledge-studio-language-support){: new_window}.
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/knowledge-studio?topic=knowledge-studio-language-support).
 {: tip}
 
 # Language support
@@ -45,7 +46,7 @@ You can train a model in the following languages:
 - Korean
 - Spanish
 
-Support includes the ability to add documents in these languages to a workspace, add dictionaries, run pre-annotation, use the ground truth editor to annotate documents, and train a machine learning model. When you select a language, the system applies language-specific templates to handle dictionary entries, text tokenization, and sentence segmentation. For information about how the system handles dictionaries in different languages, see [Dictionaries](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-dictionaries#wks_dictionaries).
+Support includes the ability to add documents in these languages to a workspace, add dictionaries, run pre-annotation, use the ground truth editor to annotate documents, and train a machine learning model. When you select a language, the system applies language-specific templates to handle dictionary entries, text tokenization, and sentence segmentation. For information about how the system handles dictionaries in different languages, see [Dictionaries](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-dictionaries#wks_dictionaries).
 
 > **Note:** The rule editor and rule-based model cannot handle bidirectional text, so cannot be used with Arabic documents.
 
@@ -67,4 +68,4 @@ Support includes the ability to add documents in these languages to a workspace,
 
 ### Related tasks
 
-[Configuring support for Arabic](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-wks_langsupp_ar)
+[Configuring support for Arabic](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks_langsupp_ar)

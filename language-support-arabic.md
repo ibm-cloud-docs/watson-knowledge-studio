@@ -1,25 +1,26 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-07-19"
+  years: 2015, 2020
+lastupdated: "2020-08-03"
 
 subcollection: watson-knowledge-studio
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
+{:deprecated: .deprecated}
+{:important: .important}
+{:note: .note}
 {:tip: .tip}
+{:preview: .preview}
+{:beta: .beta}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio?topic=knowledge-studio-wks_langsupp_ar){: new_window}.
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/knowledge-studio?topic=knowledge-studio-wks_langsupp_ar).
 {: tip}
 
 # Configuring support for Arabic
@@ -30,7 +31,7 @@ Read these guidelines to understand how {{site.data.keyword.knowledgestudioshort
 ## About this task
 {: #lsa-att}
 
-With respect to character shaping, the Arabic alphabet does not have capital letters, but letters can change shape depending on their position in the text string and the surrounding letters. Different operating systems and code page conversion programs handle letter shaping in different ways. Unshaped storage is a standard for Windows systems, and {{site.data.keyword.knowledgestudioshort}} presumes that Arabic text is stored unshaped. If you want to upload shaped text into {{site.data.keyword.knowledgestudioshort}}, you must first convert the text to unshaped form by using standard tools, such as the International Components for Unicode (ICU) API (see the ArabicShaping Class at [http://icu-project.org/apiref/icu4j/com/ibm/icu/text/ArabicShaping.html ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://icu-project.org/apiref/icu4j/com/ibm/icu/text/ArabicShaping.html){: new_window}).
+With respect to character shaping, the Arabic alphabet does not have capital letters, but letters can change shape depending on their position in the text string and the surrounding letters. Different operating systems and code page conversion programs handle letter shaping in different ways. Unshaped storage is a standard for Windows systems, and {{site.data.keyword.knowledgestudioshort}} presumes that Arabic text is stored unshaped. If you want to upload shaped text into {{site.data.keyword.knowledgestudioshort}}, you must first convert the text to unshaped form by using standard tools, such as the International Components for Unicode (ICU) API (see the ArabicShaping Class at [http://icu-project.org/apiref/icu4j/com/ibm/icu/text/ArabicShaping.html](http://icu-project.org/apiref/icu4j/com/ibm/icu/text/ArabicShaping.html){: external}).
 
 > **Important:** In some cases, lack of proper Arabic character shaping might cause content to be displayed incorrectly in the ground truth editor.
 
@@ -41,7 +42,7 @@ With respect to numeric shaping, {{site.data.keyword.knowledgestudioshort}} trea
 
 To configure numeric shaping in the Firefox browser:
 
-1. In the browser URL field, enter **about:config**. If you are shown a warning from Firefox, click the action to disregard the warning and continue. For information about editing **about:config** properties, see [http://kb.mozillazine.org/About:config_entries ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://kb.mozillazine.org/About:config_entries){: new_window}.
+1. In the browser URL field, enter **about:config**. If you are shown a warning from Firefox, click the action to disregard the warning and continue. For information about editing **about:config** properties, see [http://kb.mozillazine.org/About:config_entries](http://kb.mozillazine.org/About:config_entries){: external}.
 1. Type `bidi` in the search filter field.
 1. Select the **bidi.numeral** property, which controls how numerals are displayed, and press Enter.
 1. Change the value of this property as required. For example, enter `3` and then click **OK**.
@@ -57,4 +58,4 @@ To configure numeric shaping in the Firefox browser:
 ### Related reference
 {: #lsa-rr}
 
-[Language support](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-language-support)
+[Language support](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-language-support)

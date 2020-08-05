@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-25"
+lastupdated: "2020-08-04"
 
 subcollection: watson-knowledge-studio
 
@@ -94,13 +94,14 @@ For more information about pre-annotation with dictionaries, see [Pre-annotating
 
 1. Within your workspace, click **Assets** > **Dictionaries**.
 
-  The `Test dictionary` dictionary opens. The [Adding a dictionary](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutintro#wks_tutless4) lesson of the *Getting started with {{site.data.keyword.knowledgestudioshort}}* tutorial shows you how to create this dictionary.
+    The `Test dictionary` dictionary opens. The [Adding a dictionary](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutintro#wks_tutless4) lesson of the *Getting started with {{site.data.keyword.knowledgestudioshort}}* tutorial shows you how to create this dictionary.
 
 1. From the **Entity type** list, select the `ORGANIZATION` entity type to map it to the `Test dictionary` dictionary.
 
-  The [Creating a type system](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutintro#wks_tutless3) lesson of the *Getting started with {{site.data.keyword.knowledgestudioshort}}* tutorial shows how to create the type system that contains the `ORGANIZATION` entity type.
+    The [Creating a type system](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutintro#wks_tutless3) lesson of the *Getting started with {{site.data.keyword.knowledgestudioshort}}* tutorial shows how to create the type system that contains the `ORGANIZATION` entity type.
 
-1. On the **Machine Learning Model** > **Pre-annotation** > **Dictionaries** tab, click **Apply This Pre-annotator**.
+1. On the **Machine Learning Model** > **Pre-annotation** page, click **Run Pre-annotators**.
+1. Select **Dictionary**, then click **Next**.
 1. Select the document set that you created in [Lesson 1](#tut_lessml1).
 1. Click **Run**.
 
