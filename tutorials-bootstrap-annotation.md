@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-25"
+lastupdated: "2020-08-04"
 
 subcollection: watson-knowledge-studio
 
@@ -20,7 +20,7 @@ subcollection: watson-knowledge-studio
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](https://{DomainName}/docs/knowledge-studio?topic=knowledge-studio-wks_tutboot_intro){: external}.
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/knowledge-studio?topic=knowledge-studio-wks_tutboot_intro).
 {: tip}
 
 # Pre-annotating documents
@@ -81,8 +81,10 @@ For more information about pre-annotating documents, see [Bootstrapping annotati
 
     After you complete the following steps to pre-annotate the new documents, you can view the annotation set to see how the machine learning model annotated the documents. Typically, you assign annotation sets to one or more human annotators. For more information about creating and assigning annotation sets, see [Adding documents for annotation](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-documents-for-annotation).
 
-1. To pre-annotate the new documents, click **Machine Learning Model** > **Versions**, and then click **Run this model**.
-1. Select the document set that you added to the corpus, `documents-ml.csv`, and click **Run**.
+1. To pre-annotate the new documents:
+    - On the **Machine Learning Model** > **Pre-annotation** page click **Run Pre-annotators**.
+    - Select **Machine Learning Model**, then click **Next**.
+    - Select the document set that you added to the corpus, `documents-ml.csv`, and click **Run**.
 1. After the pre-annotation is complete, create a human annotation task that includes the annotation set you created.
 
     For more information about creating an annotation task, see [Annotation setup](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-annotate-documents).

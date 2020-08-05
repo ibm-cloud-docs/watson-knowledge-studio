@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-25"
+lastupdated: "2020-08-04"
 
 subcollection: watson-knowledge-studio
 
@@ -20,7 +20,7 @@ subcollection: watson-knowledge-studio
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/knowledge-studio?topic=knowledge-studio-wks_tutrule_intro){: external}.
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/knowledge-studio?topic=knowledge-studio-wks_tutrule_intro).
 {: tip}
 
 # Creating a rule-based model (Experimental)
@@ -75,7 +75,7 @@ In a later lesson, you will define a class based on this dictionary. When you cr
 ### Procedure
 {: #wks_tutless_rule1_procedure}
 
-1. Download the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/dictionary-items-month.csv" download>`dictionary-items-month.csv` <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a> file to your computer. This file contains dictionary terms in CSV format that are suitable for uploading into a {{site.data.keyword.knowledgestudioshort}} dictionary.
+1. Download the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/dictionary-items-month.csv" download>`dictionary-items-month.csv` <img src="../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a> file to your computer. This file contains dictionary terms in CSV format that are suitable for uploading into a {{site.data.keyword.knowledgestudioshort}} dictionary.
 1. Click **Assets** > **Dictionaries**.
 1. Click the **Create Dictionary** button to add a dictionary.
 1. In the **Name** field, type `Month dictionary` and click **Save** to create the dictionary. The new dictionary is created and automatically opened for editing.
@@ -97,7 +97,7 @@ For more information about adding documents, see [Adding documents for defining 
 ### Procedure
 {: #wks_tutless_rule2_procedure}
 
-1. Download the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/documents-new.csv" download>`documents-new.csv`<img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a> file to your computer. This file contains example documents suitable for uploading.
+1. Download the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/documents-new.csv" download>`documents-new.csv`<img src="../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a> file to your computer. This file contains example documents suitable for uploading.
 1. Click **Rule-based Model** > **Rules**.
 1. Click the **Add a document** icon, which is next to the **Documents** page heading.
 1. Click the **Upload CSV file** tab.
@@ -295,7 +295,10 @@ For more information about creating a rule-based model, see [Creating the rule-b
 
         ![Shows the user choosing the "RuleDate" class from the list.](images/rule-anno3.png "Shows the user choosing the "RuleDate" class from the list.")
 
-1. To pre-annotate document sets or annotation sets with the rule-based model, select the **Rule-based Model** tab and click **Run this model**.
+1. To pre-annotate document sets or annotation sets with the rule-based model:
+   - On the **Machine Learning Model** > **Pre-annotation** page, click **Run Pre-annotators**.
+   - Select **Rule-based Model**, then click **Next**.
+   - Select the document set that you added to the corpus, `documents-ml.csv`, and click **Run**.
 
    **Attention**: Run the rule-based model as a pre-annotator only on documents that were not already annotated by humans.
 

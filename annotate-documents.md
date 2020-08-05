@@ -1,25 +1,26 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-07-17"
+  years: 2015, 2020
+lastupdated: "2020-08-03"
 
 subcollection: watson-knowledge-studio
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
+{:deprecated: .deprecated}
+{:important: .important}
+{:note: .note}
 {:tip: .tip}
+{:preview: .preview}
+{:beta: .beta}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/services/knowledge-studio/annotate-documents.html){: new_window}.
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/knowledge-studio/annotate-documents.html).
 {: tip}
 
 # Annotation setup
@@ -36,7 +37,7 @@ Perform the following tasks to enable human annotators to access the workspace:
 
     > **Attention:** It is not until you explicitly assign tasks to human annotators that they can see your workspace when they log in to {{site.data.keyword.knowledgestudioshort}}.
 
-Your users (the human annotators) will need to become familiar with [Annotating documents](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-user-guide), which contains detailed information about how to annotate documents.
+Your users (the human annotators) will need to become familiar with [Annotating documents](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-user-guide), which contains detailed information about how to annotate documents.
 
 ## Model life cycle
 {: #wks_lifecycle}
@@ -97,7 +98,7 @@ This stage refers to exporting components that enable the model to run in machin
 
 Before human annotators can begin adding annotations to documents, the annotation process manager must create an annotation task.
 
-Admins and project managers can annotate ground truth document sets directly. See [Annotating document sets directly](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-annotating-document-sets-directly).
+Admins and project managers can annotate ground truth document sets directly. See [Annotating document sets directly](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-annotating-document-sets-directly).
 {: note}
 
 ### About this task
@@ -184,7 +185,7 @@ To specify visual preferences for working with the ground truth editor :
 #### Related tasks
 {: #wks_hapref_related}
 
-[Modifying a type system without losing human annotations](/docs/services/watson-knowledge-studio?topic=watson-knowledge-studio-improve-ml#wks_projtypesysmod)
+[Modifying a type system without losing human annotations](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-improve-ml#wks_projtypesysmod)
 
 ## Setting the IAA threshold
 {: #wks_haiaathresh}

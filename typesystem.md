@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-25"
+lastupdated: "2020-08-03"
 
 subcollection: watson-knowledge-studio
 
@@ -21,7 +21,7 @@ subcollection: watson-knowledge-studio
 {:screen: .screen}
 {:shortdesc: .shortdesc}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/knowledge-studio?topic=knowledge-studio-typesystem){: external}.
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/knowledge-studio?topic=knowledge-studio-typesystem).
 {: tip}
 
 # Establishing a type system
@@ -37,7 +37,7 @@ A type system defines things that are interesting in your domain content that yo
 
 In {{site.data.keyword.knowledgestudioshort}}, you can create a type system from scratch or upload an existing type system. To jump-start a workspace, you might want to upload a type system that was created for a similar domain. You can then edit the type system to add or remove entity types or redefine the relationship types.
 
-A sample type system based on the *KLUE* type system is provided for you to use with the {{site.data.keyword.knowledgestudioshort}} tutorials. KLUE stands for Knowledge from Language Understanding and Extraction and was derived by {{site.data.keyword.IBM_notm}} Research based on the analysis of collections of news articles. <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/en-klue2-types.json" download="en-klue2-types.json">Download <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a> a sample KLUE type system.
+A sample type system based on the *KLUE* type system is provided for you to use with the {{site.data.keyword.knowledgestudioshort}} tutorials. KLUE stands for Knowledge from Language Understanding and Extraction and was derived by {{site.data.keyword.IBM_notm}} Research based on the analysis of collections of news articles. <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/en-klue2-types.json" download="en-klue2-types.json">Download <img src="../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a> a sample KLUE type system.
 
 Many industries, such in domains like metallurgy, geology, market intelligence, life science, electronic health records, and oncology publish dictionaries or ontologies of domain-specific terminology. Consider referencing this type of resource to get an idea of the types of entities you might want to define in your own type system.
 
