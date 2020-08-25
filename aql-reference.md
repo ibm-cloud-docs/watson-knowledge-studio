@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-08-06"
+lastupdated: "2020-08-25"
 
 subcollection: watson-knowledge-studio
 
@@ -1923,7 +1923,7 @@ part_of_speech
 
 ### Parts of speech tags for languages
 
-For English, the Multilingual tokenizer uses the part-of-speech tags that are listed in the following table.
+For all supported languages, the Multilingual tokenizer uses the part-of-speech tags that are listed in the following table.
 
 | Tag     | Descriptions              |
 |---------|---------------------------|
