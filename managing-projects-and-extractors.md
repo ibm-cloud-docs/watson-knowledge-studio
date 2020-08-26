@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-06-25"
+lastupdated: "2020-08-25"
 
 subcollection: watson-knowledge-studio
 
@@ -539,19 +539,38 @@ Terms</span> tab on the <span class="ph uicontrol">Extractor Properties</span> p
 </table>
 
 
+## Deploy advanced rules model to {{site.data.keyword.nlushort}}
+{: #deploy-adv-rule-model-to-nlu-cloud}
 
+### Export advanced rules project
+{: #export-adv-rule-proj}
 
+These instructions detail how to export an advanced rules model from the {{site.data.keyword.knowledgestudiofull}} for {{site.data.keyword.icp4dfull_notm}} Advanced Rules Editor, but are common instructions for the public cloud.
 
+1. Open the **Advanced Rules** workspace
+1. Confirm that all models that you want to export are on the Canvas, and are not saved to the "Extractors" pane, except for provided extractors
+1. Right click the project that you want to export on the "Projects" pane
+1. Click `Export Project`
+   ![export](images/are-export-project.png)
+1. Check "Include Documents" if you need to, input a file name and click the `OK` button
+1. Choose `Save as File` on your browser's popup dialog, then a ZIP file is saved on your computer (usually in a "Download" folder)
 
+### Import advanced rules project
+{: #import-adv-rule-proj}
 
+These instructions detail how to import an advanced rules model to {{site.data.keyword.knowledgestudiofull}} on public cloud.
 
+1. Create an **Advanced Rules** workspace
+   - Complete step 1 of [Creating an advanced rules model](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-create-advanced-rules-model#create-advanced-rules-model-procedure)
+1. Right click somewhere in the "Projects" tab and click `Import Project`
+1. Input a project name, check "Include Documents" if you need to, and select a ZIP file exported in **Export advanced rules project** above
 
+### Export model file from project
+{: #export-model-from-proj}
 
+1. Complete step 6 of [Creating an advanced rule model](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-create-advanced-rules-model#create-advanced-rules-model-procedure)
 
+### Deploy and call model file to {{site.data.keyword.nlushort}}
+{: #deploy-and-call-model-to-nlu}
 
-
-
-
-
-
-
+1. Refer to the {{site.data.keyword.nlushort}} documentation for [Analyzing text with advanced rules (Beta)](/docs/natural-language-understanding?topic=natural-language-understanding-customizing#advanced-rules)
