@@ -23,6 +23,7 @@ Watson Knowledge Studio
     [Accessibility](/overview/overview-accessibility-platform#features-platform)
     activity-tracker-events.md
     aql-reference.md
+    model-build-deploy-path.md
     glossary.md
     language-support.md
     information-security.md
