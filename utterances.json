@@ -60,7 +60,7 @@
     "support if a service is in experimental",
     "experimental services supported"
   ],
-  "storage": [
+  "wks_ts_storage": [
     "error about exceeding storage space in wks",
     "get more storage for watson knowledge studio",
     "increase wks storage",
