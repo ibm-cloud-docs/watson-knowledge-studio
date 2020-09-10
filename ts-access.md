@@ -26,7 +26,7 @@ subcollection: watson-knowledge-studio
 # Why can't users access the application?
 {: #wks_ts_access}
 {: troubleshoot}
-{: support} <!-- Only add this attribute to entries that you want to display in the support center. -->
+{: support}
 
 Find out how to grant users access to {{site.data.keyword.knowledgestudioshort}} and address common access issues.
 {:shortdesc}
