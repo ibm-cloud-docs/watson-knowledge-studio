@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-08-27"
+lastupdated: "2020-08-31"
 
 keywords: troubleshooting storage for knowledge studio, troubleshoot storage space limits
 
@@ -26,7 +26,7 @@ subcollection: watson-knowledge-studio
 # How can I address storage space limits?
 {: #wks_ts_storage}
 {: troubleshoot}
-{: support} <!-- Only add this attribute to entries that you want to display in the support center. -->
+{: support}
 
 Depending on your subscription plan, you might reach the storage limit that is specified for your plan and be prevented from completing tasks.
 {:shortdesc}
