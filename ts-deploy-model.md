@@ -26,7 +26,7 @@ subcollection: watson-knowledge-studio
 # How do I troubleshoot an error when deploying a model?
 {: #wks_ts_exceeds_limit}
 {: troubleshoot}
-{: support} <!-- Only add this attribute to entries that you want to display in the support center. -->
+{: support}
 
 You try to deploy a custom model, but it fails with an error if you exceed a machine learning model limit. {:shortdesc}
 
