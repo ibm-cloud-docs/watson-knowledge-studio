@@ -43,30 +43,13 @@
     "account types use public data in watson knowledge studio",
     "opting out of knowledge studio data collection"
   ],
-  "beta": [
-    "whats beta mean",
-    "what does it mean for a service to be beta",
-    "describe beta",
-    "beta services upported",
-    "definition of beta for a service",
-    "what is knowledge studio beta",
-    "what does it mean for my wks service to be beta",
-    "support if a service is in beta"
-  ],
-  "experimental": [
-    "what does it mean for a service to be experimental",
-    "whats experimental",
-    "experimental mean for my service",
-    "support if a service is in experimental",
-    "experimental services supported"
-  ],
   "wks_ts_storage": [
     "error about exceeding storage space in wks",
     "get more storage for watson knowledge studio",
     "increase wks storage",
     "don't have enough space to run a model in wks",
     "space exceeded error uploading wks documents",
-    "wks error exceeding the allowed storage space",
+    "wks error exceeding the allowed space",
     "error 'exceeding the allowed storage space' in knowledge studio",
     "trying to upload docs to wks, and encounter error",
     "error about storage space uploading a doc in wks",
