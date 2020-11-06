@@ -62,7 +62,7 @@ Watson Knowledge Studio
         evaluate-ml.md
         improve-ml.md
         publish-ml.md
-        
+
     enabling-cross-sentence-relations.md
     managing-projects-and-extractors.md
     user-guide.md
@@ -70,7 +70,6 @@ Watson Knowledge Studio
     client-migration.md
     upgrade.md
     ha-dr.md
-    /watson/watson-migrate
     /watson/watson-keyservice
     /watson/watson-public-private-endpoints
     {: .navgroup-end}

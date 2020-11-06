@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-08-03"
+lastupdated: "2020-11-06"
 
 subcollection: watson-knowledge-studio
 
@@ -314,13 +314,6 @@ If you wish to deploy a specific version of the same machine learning model to m
 {: #pm-um}
 
 If you want to undeploy a model or find a model ID, view the **Deployed Models** page.
-
-### About this task
-{: #pm-att}
-
-What you see on the Deployed Models page depends on the [region](/docs/resources?topic=resources-services_region)that hosts your {{site.data.keyword.knowledgestudioshort}} instance. If the region supports instances managed by [IAM](/docs/iam?topic=iam-userroles) and [Cloud Foundry](/docs/iam?topic=iam-cfaccess) access management methods, you see a tab for each method. Models from instances that are managed by IAM are listed on the **Resource Groups** tab. Models from instances that are managed by Cloud Foundry are listed on the **Organizations** tab.
-
-If the region supports instances managed by only one of the access management methods, you see only one list of models, because only one access management method is applicable.
 
 ### Procedure
 {: #pm-pr}
