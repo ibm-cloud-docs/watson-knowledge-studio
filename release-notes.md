@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-25"
+lastupdated: "2020-11-06"
 
 subcollection: watson-knowledge-studio
 
@@ -141,7 +141,7 @@ The following new features and changes to {{site.data.keyword.knowledgestudioful
 ### Migrating Cloud Foundry service instances
 {: #migrating-cloud-foundry-instances}
 
-You can now migrate {{site.data.keyword.knowledgestudioshort}} Cloud Foundry service instances to a resource group. To learn more about the benefits of resource groups and how to migrate, see [Migrating Cloud Foundry service instances and apps to a resource group](/docs/resources?topic=resources-migrate#migrate).
+You can now migrate {{site.data.keyword.knowledgestudioshort}} Cloud Foundry service instances to a resource group.
 
 ## December 2018
 {: #dec2018}
@@ -221,7 +221,7 @@ You can now migrate {{site.data.keyword.knowledgestudioshort}} Cloud Foundry ser
 {: #new-may2018}
 
 - A configuration issue was fixed that caused service instances in Sydney region to not appear in US South region.
-- In the Deploy Model window, if the region you're deploying to supports both {{site.data.keyword.iamlong}} *resource groups* and Cloud Foundry *spaces*, to see the list, you will need to choose the method of access management that your service instance uses. For more information about Cloud Foundry and {{site.data.keyword.iamshort}}, see [Migrating Watson services from Cloud Foundry](/docs/watson-knowledge-studio?topic=watson-migrate).
+- In the Deploy Model window, if the region you're deploying to supports both {{site.data.keyword.iamlong}} *resource groups* and Cloud Foundry *spaces*, to see the list, you will need to choose the method of access management that your service instance uses.
 - Added the data collection setting on the Service Details page. For more information about data collection, see [Troubleshooting, support, and FAQs](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-troubleshooting#content)
 - Added Chinese (traditional) language support.
 - Users who have the Admin role can now see the number of workspaces that are used. This info is available on the Service Details page.
