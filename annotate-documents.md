@@ -137,6 +137,10 @@ To create an annotation task:
     1. Name the annotation set.
 
         As a good practice for evaluating a human annotator's work as the workspace progresses, you might want to create annotation set names that identify the human annotator assigned to the set. You cannot change the annotation set name after the set is created.
+        
+        The maximum size of the annotation set name is 256 characters.
+        {: tip}
+
     1. Click **Generate**.
 
 1. A list of available annotation sets is displayed under **Available Sets**, along with the names of the human annotators assigned to them. To add available sets to your annotation task, click **Add to task**.
