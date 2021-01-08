@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-08-25"
+  years: 2019, 2021
+lastupdated: "2021-01-05"
 
 subcollection: watson-knowledge-studio
 
@@ -554,6 +554,9 @@ These instructions detail how to export an advanced rules model from the {{site.
    ![export](images/are-export-project.png)
 1. Check "Include Documents" if you need to, input a file name and click the `OK` button
 1. Choose `Save as File` on your browser's popup dialog, then a ZIP file is saved on your computer (usually in a "Download" folder)
+
+When exporting an Advanced Rules Editor project, only concepts that exist on the Canvas are included in the exported ZIP file. If you want to include concepts that have been saved under Categories, please make sure to add those to the Canvas as well, before exporting.
+{: important}
 
 ### Import advanced rules project
 {: #import-adv-rule-proj}
