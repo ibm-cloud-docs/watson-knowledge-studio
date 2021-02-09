@@ -27,6 +27,7 @@ Watson Knowledge Studio
     glossary.md
     language-support.md
     information-security.md
+    ha-dr.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -69,7 +70,6 @@ Watson Knowledge Studio
     backup-restore.md
     client-migration.md
     upgrade.md
-    ha-dr.md
     /watson/watson-keyservice
     /watson/watson-public-private-endpoints
     {: .navgroup-end}
