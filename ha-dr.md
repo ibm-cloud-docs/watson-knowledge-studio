@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-08-03"
+  years: 2019, 2021
+lastupdated: "2021-02-09"
 
 subcollection: watson-knowledge-studio
 
@@ -20,7 +20,7 @@ subcollection: watson-knowledge-studio
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# High availability and disaster recovery
+# Understanding high availability and disaster recovery for {{site.data.keyword.knowledgestudioshort}}
 {: #ha-dr}
 
 {{site.data.keyword.knowledgestudiofull}} is highly available within multiple {{site.data.keyword.cloud_notm}} locations (for example, Dallas and Washington, DC). However, recovering from potential disasters that affect an entire location requires planning and preparation.
