@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-08-26"
+  years: 2015, 2021
+lastupdated: "2021-02-18"
 
 keywords: faqs, Frequently Asked Questions, Watson Knowledge Studio
 
@@ -77,3 +77,11 @@ When you revert to an older version of the machine learning model, all annotatio
 {: faq}
 
 You can backup and restore a workspace by following the steps in [Backing up and restoring data](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-backup-restore). These backup and restore tasks allow you to perform a manual data migration from one {{site.data.keyword.knowledgestudioshort}} instance to another, backing up your data from one instance and restoring it on another instance.
+
+## Experimental services and features: What does experimental mean?
+{: #experimental}
+{: faq}
+
+{{site.data.keyword.IBM_notm}} releases experimental services and features for you to try out. These services might be unstable, change frequently in ways that are not compatible with earlier versions, and might be discontinued with short notice. These services and features are not recommended for use in production environments.
+
+For more information about experimental services, see the [{{site.data.keyword.cloud_notm}} documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/get-support/servicessupport.html#s-services-exporcont){: new_window}. For the full details of experimental services, see the latest version of the [{{site.data.keyword.cloud_notm}} Service Description ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/software/sla/sladb.nsf/sla/bm?OpenDocument){: new_window}.
