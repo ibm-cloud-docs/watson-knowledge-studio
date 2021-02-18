@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-11-06"
+  years: 2015, 2021
+lastupdated: "2021-02-18"
 
 subcollection: watson-knowledge-studio
 
@@ -29,7 +29,7 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 Leverage a rule-based model that you created with {{site.data.keyword.knowledgestudioshort}} by making it available to other {{site.data.keyword.watson}} applications.
 {: shortdesc}
 
-You can deploy a rule-based model to make it available for use in these services as an [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-troubleshooting#experimental) feature.
+You can deploy a rule-based model to make it available for use in these services as an [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks-faqs#experimental) feature.
 {: note}
 
 Before a model can be deployed for use by a service, you must have a subscription to the service. {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} services are hosted on {{site.data.keyword.Bluemix_notm}}, which is the cloud platform for {{site.data.keyword.IBM_notm}}. See [What is {{site.data.keyword.Bluemix_notm}}?](/docs/overview) for more information about the platform. To subscribe to one of the {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} services, create an account from the [{{site.data.keyword.Bluemix_notm}}](https://{DomainName}/){: external} website.
@@ -43,7 +43,7 @@ You can also pre-annotate new documents with the rule-based model. See [Pre-anno
 
 Deploy the model to enable an application that uses the {{site.data.keyword.discoveryshort}} service to use the rule-based model to find and extract entities during document enrichment.
 
-This is currently an [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-troubleshooting#experimental) feature of the service.
+This is currently an [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks-faqs#experimental) feature of the service.
 {: note}
 
 ### Before you begin
@@ -83,7 +83,7 @@ To use the deployed model, you must provide the model ID when it is requested du
 
 Deploy the rule-based model to enable an application that uses the {{site.data.keyword.nlushort}} service to use the model to find and extract entities that are relevant to your domain.
 
-**Attention**: This is currently an [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-troubleshooting#experimental) feature of the service.
+**Attention**: This is currently an [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks-faqs#experimental) feature of the service.
 
 ### Before you begin
 {: #wks_rule_prereqs}
