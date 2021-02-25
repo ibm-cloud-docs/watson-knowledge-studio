@@ -64,37 +64,13 @@ To create a machine learning model:
 
 1. After the model is created, select one of the following actions:
 
-    <table summary="Each row in this table describes one option for a choice.">
-      <caption>Table 1. Document options</caption>
-      <tr>
-        <th style="vertical-align:bottom; text-align"left" id="d33883e137-option">Option</th>
-        <th style="vertical-align:bottom; text-align"left" id="d33883e137-desc">Description</th>
-      </tr>
-      <tr>
-        <td style="vertical-align:top; text-align"left" headers="d33883e137-option" id="d33883e139">
-          <p><strong>Log</strong></p>
-        </td>
-        <td style="vertical-align:top; text-align"left" headers="d33883e137-desc d33883e139">
-          <p>View the log file to see whether any problems occurred.</p>
-        </td>
-      </tr>
-      <tr>
-        <td style="vertical-align:top; text-align"left" headers="d33883e137-option" id="d33883e144">
-          <p><strong>Details</strong></p>
-        </td>
-        <td style="vertical-align:top; text-align"left" headers="d33883e137-desc d33883e144">
-          <p>View the annotation performance statistics, change the document sets that you want to use for training and testing the model, and create snapshot versions of the model artifacts.</p>
-        </td>
-      </tr>
-      <tr>
-        <td style="vertical-align:top; text-align"left" headers="d33883e137-option" id="d33883e149">
-          <p><strong>Export</strong></p>
-        </td>
-        <td style="vertical-align:top; text-align"left" headers="d33883e137-desc d33883e149">
-          <p>If you have a Standard plan or a Premium plan, you can export a <code>ZIP</code> file to your local system that contains the components that are required for the model to run in a machine learning runtime environment, such as {{site.data.keyword.watson}} Explorer.</p>
-        </td>
-      </tr>
-    </table>
+| Option | Description |
+|--------|-------------|
+| Log | View the log file to see whether any problems occurred. |
+| Details | View the annotation performance statistics, change the document sets that you want to use for training and testing the model, and create snapshot versions of the model artifacts. |
+| Export | If you have a Standard plan or a Premium plan, you can export a `ZIP` file to your local system that contains the components that are required for the model to run in a machine learning runtime environment, such as {{site.data.keyword.watson}} Explorer. |
+{: caption="Document options" caption-side="top"}
+{: summary="Each row in this table describes one option for a choice."}
 
 ## Evaluating annotations added by the model
 {: #wks_matest}
