@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-09-01"
+  years: 2021
+lastupdated: "2021-04-26"
 
 keywords: troubleshooting for knowledge studio, 
 
@@ -42,3 +42,5 @@ If the model does not show on the Deployed Models page, list the models in your 
 
 1. Use list models method to get model id(s)
 1. Use delete model method with model id
+
+If you see an error message other than this one, check Cloud Status for any service outages, then go to Support Center for more options to get help.
