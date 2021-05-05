@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-06-25"
+  years: 2015, 2021
+lastupdated: "2021-02-18"
 
 subcollection: watson-knowledge-studio
 
@@ -141,7 +141,7 @@ The following new features and changes to {{site.data.keyword.knowledgestudioful
 ### Migrating Cloud Foundry service instances
 {: #migrating-cloud-foundry-instances}
 
-You can now migrate {{site.data.keyword.knowledgestudioshort}} Cloud Foundry service instances to a resource group. To learn more about the benefits of resource groups and how to migrate, see [Migrating Cloud Foundry service instances and apps to a resource group](/docs/resources?topic=resources-migrate#migrate).
+You can now migrate {{site.data.keyword.knowledgestudioshort}} Cloud Foundry service instances to a resource group.
 
 ## December 2018
 {: #dec2018}
@@ -221,7 +221,7 @@ You can now migrate {{site.data.keyword.knowledgestudioshort}} Cloud Foundry ser
 {: #new-may2018}
 
 - A configuration issue was fixed that caused service instances in Sydney region to not appear in US South region.
-- In the Deploy Model window, if the region you're deploying to supports both {{site.data.keyword.iamlong}} *resource groups* and Cloud Foundry *spaces*, to see the list, you will need to choose the method of access management that your service instance uses. For more information about Cloud Foundry and {{site.data.keyword.iamshort}}, see [Migrating Watson services from Cloud Foundry](/docs/watson-knowledge-studio?topic=watson-migrate).
+- In the Deploy Model window, if the region you're deploying to supports both {{site.data.keyword.iamlong}} *resource groups* and Cloud Foundry *spaces*, to see the list, you will need to choose the method of access management that your service instance uses.
 - Added the data collection setting on the Service Details page. For more information about data collection, see [Troubleshooting, support, and FAQs](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-troubleshooting#content)
 - Added Chinese (traditional) language support.
 - Users who have the Admin role can now see the number of workspaces that are used. This info is available on the Service Details page.
@@ -275,9 +275,9 @@ You can now migrate {{site.data.keyword.knowledgestudioshort}} Cloud Foundry ser
 ### Changes
 {: #new-october2017}
 
-- Fixed the issue with the **Export** button not being enabled until you refreshed the browser window in the {{site.data.keyword.cloud_notm}} [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-troubleshooting#experimental) release.
-- Fixed the button labels and tooltips to match the changes for the terms _upload_ and _download_ in the {{site.data.keyword.cloud_notm}} [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-troubleshooting#experimental) release. These terms  are used instead of _import_ and _export_ when referring to type systems, documents, and dictionaries.
-- Fixed the delay in updating the descriptions on the {{site.data.keyword.knowledgestudioshort}} User Account Management page in the {{site.data.keyword.cloud_notm}} [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-troubleshooting#experimental) release.
+- Fixed the issue with the **Export** button not being enabled until you refreshed the browser window in the {{site.data.keyword.cloud_notm}} [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks-faqs#experimental) release.
+- Fixed the button labels and tooltips to match the changes for the terms _upload_ and _download_ in the {{site.data.keyword.cloud_notm}} [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks-faqs#experimental) release. These terms  are used instead of _import_ and _export_ when referring to type systems, documents, and dictionaries.
+- Fixed the delay in updating the descriptions on the {{site.data.keyword.knowledgestudioshort}} User Account Management page in the {{site.data.keyword.cloud_notm}} [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks-faqs#experimental) release.
 - In the pre-annotation section of the interface, made a couple GUI changes to clarify the functionality of the machine learning model, the rule-based model, the dictionary, and {{site.data.keyword.alchemylanguagefull}}. Changed the button label from **Run** to **Pre-annotate**, changed the title of the window from **Run Annotator** to **Run Pre-annotation**, and changed the error message to clarify that you can't add automated annotations after humans annotated the documents.
 - For projects or workspaces that use dictionary-based tokenizers, fixed an issue that showed empty sentences if you imported documents without ground truth.
 
@@ -287,14 +287,14 @@ You can now migrate {{site.data.keyword.knowledgestudioshort}} Cloud Foundry ser
 ### New features and changes
 {: #new-sept17}
 
-- Released a new front-end user experience for {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.cloud}} as an [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-troubleshooting#experimental) service. Changes include a reorganized navigation and a new model performance analysis page. For a summary of the navigation changes, see the table in the known issues.
+- Released a new front-end user experience for {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.cloud}} as an [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks-faqs#experimental) service. Changes include a reorganized navigation and a new model performance analysis page. For a summary of the navigation changes, see the table in the known issues.
 - Added Chinese (simplified) and Dutch language support.
 
 ### Known issues
 {: #issues-sept17}
 
 - For a rule-based model, after you map classes and entity types, the **Export** button is not enabled until you refresh the browser window.
-- For the {{site.data.keyword.cloud_notm}} [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-troubleshooting#experimental) release, some of the documentation terminology does not match the new interface. The documentation matches the interface in {{site.data.keyword.IBM_notm}} Marketplace. The following terms have changed in the [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-troubleshooting#experimental) release:
+- For the {{site.data.keyword.cloud_notm}} [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks-faqs#experimental) release, some of the documentation terminology does not match the new interface. The documentation matches the interface in {{site.data.keyword.IBM_notm}} Marketplace. The following terms have changed in the [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks-faqs#experimental) release:
 
 | Term in {{site.data.keyword.IBM_notm}} Marketplace | Term in {{site.data.keyword.cloud_notm}} | Notes |
 |----------|----------|----------|
@@ -302,7 +302,7 @@ You can now migrate {{site.data.keyword.knowledgestudioshort}} Cloud Foundry ser
 | _import_ and _export_ | _upload_ and _download_ | The terms _import_ and _export_ are now referred to as _upload_ and _download_ when used in terms of documents and entity types. The term _export_ is still used when referring to exporting a model to applications such as {{site.data.keyword.watson}} Explorer. |
 {: caption="Table 1. Terminology changes for {{site.data.keyword.cloud_notm}} version" caption-side="top"}
 
-- For the {{site.data.keyword.cloud_notm}} [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-troubleshooting#experimental) release, some of the documentation task steps do not match the new interface. The documentation matches the interface in {{site.data.keyword.IBM_notm}} Marketplace. The following table summarizes the navigation changes for the [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-troubleshooting#experimental) release:
+- For the {{site.data.keyword.cloud_notm}} [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks-faqs#experimental) release, some of the documentation task steps do not match the new interface. The documentation matches the interface in {{site.data.keyword.IBM_notm}} Marketplace. The following table summarizes the navigation changes for the [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks-faqs#experimental) release:
 
 | Feature | {{site.data.keyword.IBM_notm}} Marketplace location | {{site.data.keyword.cloud_notm}} location
 |----------|----------|----------|

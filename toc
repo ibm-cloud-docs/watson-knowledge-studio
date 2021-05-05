@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc console-page="/developer/watson" product-page="https://www.ibm.com/cloud/watson-knowledge-studio/" subcollection="watson-knowledge-studio" category="ai" audience="service" href="/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutintro" path="watson-knowledge-studio"}
+{: .toc product-page="https://www.ibm.com/cloud/watson-knowledge-studio/" subcollection="watson-knowledge-studio" category="ai" audience="service" href="/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutintro" path="watson-knowledge-studio"}
 Watson Knowledge Studio
 
     {: .navgroup id="learn"}
@@ -23,6 +23,7 @@ Watson Knowledge Studio
     [Accessibility](/overview/overview-accessibility-platform#features-platform)
     activity-tracker-events.md
     aql-reference.md
+    model-build-deploy-path.md
     glossary.md
     language-support.md
     information-security.md
@@ -61,7 +62,7 @@ Watson Knowledge Studio
         evaluate-ml.md
         improve-ml.md
         publish-ml.md
-        
+
     enabling-cross-sentence-relations.md
     managing-projects-and-extractors.md
     user-guide.md
@@ -69,7 +70,6 @@ Watson Knowledge Studio
     client-migration.md
     upgrade.md
     ha-dr.md
-    /watson/watson-migrate
     /watson/watson-keyservice
     /watson/watson-public-private-endpoints
     {: .navgroup-end}
@@ -77,9 +77,17 @@ Watson Knowledge Studio
     {: .navgroup id="help"}
     release-notes.md
     troubleshooting.md
-    user-guide-help.md
 
-    {: .topicgroup}
+    {: topicgroup}
+    Troubleshooting
+        user-guide-help.md
+        ts-storage.md
+        ts-access.md
+        ts-deploy-model.md
+
+    support.md
+
+    {: topicgroup}
     Developer community
         [StackOverflow](https://stackoverflow.com/search?q=watson-knowledge-studio)
         [WDC Slack channel](http://wdc-slack-inviter.mybluemix.net/)

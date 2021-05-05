@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-08-03"
+lastupdated: "2020-11-06"
 
 subcollection: watson-knowledge-studio
 
@@ -30,7 +30,7 @@ subcollection: watson-knowledge-studio
 {: #notes}
 
 - **{{site.data.keyword.cloud}} roles** are different from **{{site.data.keyword.knowledgestudioshort}} roles**.
-  - **{{site.data.keyword.cloud}} roles** control permissions for managing {{site.data.keyword.cloud_notm}} services. New service instances of {{site.data.keyword.knowledgestudioshort}} are managed with [{{site.data.keyword.cloud_notm}} Identity and Access Management (IAM)](/docs/iam) in all public regions. Some older service instances are managed with [Cloud Foundry](/docs/iam?topic=iam-cfaccess).
+  - **{{site.data.keyword.cloud}} roles** control permissions for managing {{site.data.keyword.cloud_notm}} services. New service instances of {{site.data.keyword.knowledgestudioshort}} are managed with [{{site.data.keyword.cloud_notm}} Identity and Access Management (IAM)](/docs/iam) in all public regions.
   - **{{site.data.keyword.knowledgestudioshort}} roles** control access to {{site.data.keyword.knowledgestudioshort}} functionality and are managed in the {{site.data.keyword.knowledgestudioshort}} application.
 - The first user to launch the {{site.data.keyword.knowledgestudioshort}} application is assigned the **Admin** role.
 - Once assigned, user roles can't be downgraded from higher to lower levels of permissions. Admins can't be downgraded to project managers or human annotators, and project managers can't be downgraded to human annotators. For information about adding users, upgrading roles, and deactivating user accounts, see [Assembling a team](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-team).

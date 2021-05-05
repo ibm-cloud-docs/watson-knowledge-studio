@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-07-14"
+lastupdated: "2020-08-25"
 
 subcollection: watson-knowledge-studio
 
@@ -1592,7 +1592,7 @@ If no flag is specified, the dictionary matches based on any flag that was speci
 
 - Dictionaries are always evaluated on token boundaries. Specifically, a dictionary entry matches a region of text if the first token of the entry matches the first token of the text region, the second token of the entry matches the second token of the text region, and so on. Characters between two consecutive tokens are ignored.
 
-    For example, assume that you are using a simple white-space based tokenization model that is appropriate for a language such as English. Also, assume that the input text is “Let’s go fishing!” If a dictionary consists of the term `go fish`, no match exists in the text for `Let's go fishing!`. However, if the dictionary consists of the entry `go fishing` (notice the two white spaces between go and fishing), one match exists in the text `Let's go fishing!`. White space specifies that `go` and `fishing` are two distinct tokens. If one or more white-space characters exists between the two tokens `go` and `fishing` in the input text, a match is made.
+    For example, assume that you are using a simple white-space based tokenization model that is appropriate for a language such as English. Also, assume that the input text is “Let’s go fishing!” If a dictionary consists of the term `go fish`, no match exists in the text for `Let's go fishing!`. However, if the dictionary consists of the entry `go  fishing` (notice the two white spaces between go and fishing), one match exists in the text `Let's go fishing!`. White space specifies that `go` and `fishing` are two distinct tokens. If one or more white-space characters exists between the two tokens `go` and `fishing` in the input text, a match is made.
 
     For each match of a dictionary entry with input text, the `extract dictionary` statement generates an output tuple.
 
@@ -1923,7 +1923,7 @@ part_of_speech
 
 ### Parts of speech tags for languages
 
-For English, the Multilingual tokenizer uses the part-of-speech tags that are listed in the following table.
+For all supported languages, the Multilingual tokenizer uses the part-of-speech tags that are listed in the following table.
 
 | Tag     | Descriptions              |
 |---------|---------------------------|
