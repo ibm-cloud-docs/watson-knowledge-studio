@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-01-05"
+lastupdated: "2021-05-05"
 
 subcollection: watson-knowledge-studio
 
@@ -49,7 +49,6 @@ The workspace consists of the following areas:
 
 ![Advanced rules editor workspace](images/advanced-rules-editor-workspace.png "Shows a diagram describing the sections of the advanced rules editor")
 
-
 ## Managing projects
 {: #managing-projects}
 
@@ -60,7 +59,6 @@ Use projects to develop and test extractors that support a specific solution or 
 - To rename a project, double-click it and edit the project name.
 
 ![New project button](images/create-advanced-rules-project.png "Shows the New project button")
-
 
 ## Managing extractors
 {: #managing-extractors}
@@ -93,7 +91,6 @@ Until an extractor is saved to the extractor library, you can access the extract
 
 To make an extractor available to all projects, click **Save Extractor** on the toolbar for the canvas. Custom extractors are saved on the **Extractors** tab in the `tauser` folder by default. As a best practice, save modified versions of a provided extractor in the same folder as the provided extractor.
 
-
 ## Creating an extractor
 {: #creating-an-extractor}
 
@@ -111,7 +108,6 @@ You can build an extractor by combining one or more of the following elements.
 Defining a new extractor using natural language processing (NLP) concepts such as tokenization and part-of-speech requires developing an extractor using the Annotation Query Language (AQL).
 
 To see the languages that are supported for tokenization and part-of-speech analysis, see [Multilingual Support for Text Analytics](https://www.ibm.com/support/knowledgecenter/SSPT3X_4.0.0/com.ibm.swg.im.infosphere.biginsights.text.doc/doc/ana_txtan_lang-support.html). For more information about how to write AQL and available functions, see [Annotation Query Language reference](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-annotation-query-language-reference)
-
 
 ### Creating a dictionary
 {: #creating-a-dictionary}
@@ -155,7 +151,6 @@ For best performance, use long or complex mapping tables in a second step, after
 4. Complete the two-column table manually or by loading from a file. The first column contains the terms to search for in the text and the second column lists the values to generate in the results. The maximum length for an entry is 1024 characters. If a term is repeated in the first column, only the first mapped value is used.
   - To specify the terms manually, click ![Add Term](images/add_term.jpg "Add Term icon"), enter the term and its mapped value, and press Enter.
   - To load terms from an ASCII or UTF-8 text file with each term and its mapped value, separated by a single comma, on a separate line, click ![Import Terms](images/import_terms.jpg "Import Terms icon"). If an error is displayed during the import, ensure that the file does not contain unprintable characters such as Line Feed or Backspace.
-
 
 ### Creating a literal
 {: #creating-a-literal}
@@ -231,7 +226,6 @@ To create a sequence pattern:
 3. Optional: Select the sequence on the canvas and rename it in **Extractor Properties** under **General**.
 4. Optional: If needed, repeat steps 1 and 2 to add additional elements to the pattern.
 
-
 #### Sequence pattern example
 {: #sequence-pattern-example}
 
@@ -248,7 +242,6 @@ To select references to military personnel:
 4. The final extractor rule is displayed on the canvas.
 
   ![](images/military_personnel.jpg "The Military Personnel sequence")
-
 
 #### Adding proximity rules
 {: #adding proximity rules}
@@ -363,7 +356,6 @@ You can transform the extractor output, for example, converting it all to lowerc
 
 If you apply **Trim**, **New Column From Single Column**, or **New Column From Two Columns** to a selected column and then subsequently select **Convert to String** or **Convert to Lowercase String**, you will not get yet another new column. The string transformations will be applied instead to the new column that was generated from the previous **Trim** or **New Column** choices.
 {: note}
-
 
 #### Hiding a column from the results display
 {: #hiding-a-column-from-the-results-display}
@@ -538,9 +530,11 @@ Terms</span> tab on the <span class="ph uicontrol">Extractor Properties</span> p
 </tbody>
 </table>
 
-
 ## Deploy advanced rules model to {{site.data.keyword.nlushort}}
 {: #deploy-adv-rule-model-to-nlu-cloud}
+
+Deploying an advanced rules model to {{site.data.keyword.nlushort}} is deprecated. As of June 10, 2021, you will not be able to deploy advanced rules models to {{site.data.keyword.nlushort}}.
+{: deprecated}
 
 ### Export advanced rules project
 {: #export-adv-rule-proj}

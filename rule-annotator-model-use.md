@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-02-18"
+lastupdated: "2021-05-05"
+
 
 subcollection: watson-knowledge-studio
 
@@ -80,6 +81,9 @@ To use the deployed model, you must provide the model ID when it is requested du
 
 ## Deploying a rule-based model to IBM Watson Natural Language Understanding
 {: #wks_rule_nlu}
+
+Uploading an advanced rules model to {{site.data.keyword.nlushort}} is deprecated. As of June 10, 2021, you will not be able to deploy advanced rules models to {{site.data.keyword.nlushort}}.
+{: deprecated}
 
 Deploy the rule-based model to enable an application that uses the {{site.data.keyword.nlushort}} service to use the model to find and extract entities that are relevant to your domain.
 

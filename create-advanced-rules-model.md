@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-01-05"
+lastupdated: "2021-05-05"
 
 subcollection: watson-knowledge-studio
 
@@ -13,6 +13,7 @@ subcollection: watson-knowledge-studio
 {:deprecated: .deprecated}
 {:important: .important}
 {:note: .note}
+{:deprecated: .deprecated}
 {:tip: .tip}
 {:preview: .preview}
 {:beta: .beta}
@@ -95,6 +96,9 @@ Advanced rules models are comprised of text extractors that you design in the ad
 
 ### Uploading an advanced rules model to other services
 {: #uploading-to-other-services}
+
+Uploading an advanced rules model to {{site.data.keyword.nlushort}} is deprecated. As of June 10, 2021, you will not be able to deploy advanced rules models to {{site.data.keyword.nlushort}}.
+{: deprecated}
 
 After you export an advanced rules model, you can upload it to {{site.data.keyword.nlushort}}. For more information, see the following page.
 
