@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-08-20"
+  years: 2018, 2021
+lastupdated: "2021-05-05"
 
 subcollection: watson-knowledge-studio
 
@@ -32,9 +32,11 @@ The table below shows supported model deployment paths **From** {{site.data.keyw
 |------------|-------|-----------------|-----------------|
 | Machine learning | Upload via {{site.data.keyword.discoveryshort}} UI | Deploy/Upload via UI <sup>1</sup> | Deploy via {{site.data.keyword.knowledgestudioshort}} UI |
 | Rule-based | Upload via {{site.data.keyword.discoveryshort}} UI | Deploy/Upload via UI <sup>1</sup> | Deploy via {{site.data.keyword.knowledgestudioshort}} UI |
-| Advanced rules | Upload via {{site.data.keyword.discoveryshort}} UI | Deploy/Upload via UI <sup>2</sup> | Deploy via API |
+| Advanced rules | Upload via {{site.data.keyword.discoveryshort}} UI | Deploy/Upload via UI <sup>2</sup> | Deploy via API <sup>3</sup> |
 {:caption="Table 1. Model deployment paths" caption-side="top"}
 
 <sup>1</sup> {{site.data.keyword.knowledgestudioshort}} UI for {{site.data.keyword.discoveryshort}} v1; {{site.data.keyword.discoveryshort}} UI for {{site.data.keyword.discoveryshort}} Premium v2
 
 <sup>2</sup> {{site.data.keyword.discoveryshort}} UI for {{site.data.keyword.discoveryshort}} Premium v2 only
+
+<sup>3</sup> Deploying an advanced rules model to {{site.data.keyword.nlushort}} is deprecated. As of June 10, 2021, you will not be able to deploy advanced rules models to {{site.data.keyword.nlushort}}.

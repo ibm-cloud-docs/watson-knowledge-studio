@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-08-03"
+  years: 2015, 2021
+lastupdated: "2021-05-05"
 
 subcollection: watson-knowledge-studio
 
@@ -29,7 +29,8 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 Leverage a rule-based model that you created with {{site.data.keyword.knowledgestudioshort}} by making it available to other {{site.data.keyword.watson}} applications.
 {: shortdesc}
 
-**Attention**: You can deploy a rule-based model to make it available for use in these services as an [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-troubleshooting#experimental) feature.
+You can deploy a rule-based model to make it available for use in these services as an [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks-faqs#experimental) feature.
+{: note}
 
 Before a model can be deployed for use by a service, you must have a subscription to the service. {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} services are hosted on {{site.data.keyword.Bluemix_notm}}, which is the cloud platform for {{site.data.keyword.IBM_notm}}. See [What is {{site.data.keyword.Bluemix_notm}}?](/docs/overview) for more information about the platform. To subscribe to one of the {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} services, create an account from the [{{site.data.keyword.Bluemix_notm}}](https://{DomainName}/){: external} website.
 
@@ -42,7 +43,8 @@ You can also pre-annotate new documents with the rule-based model. See [Pre-anno
 
 Deploy the model to enable an application that uses the {{site.data.keyword.discoveryshort}} service to use the rule-based model to find and extract entities during document enrichment.
 
-**Attention**: This is currently an [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-troubleshooting#experimental) feature of the service.
+This is currently an [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks-faqs#experimental) feature of the service.
+{: note}
 
 ### Before you begin
 {: #wks_rule_discovery_prereqs}
@@ -79,9 +81,12 @@ To use the deployed model, you must provide the model ID when it is requested du
 ## Deploying a rule-based model to IBM Watson Natural Language Understanding
 {: #wks_rule_nlu}
 
+Uploading an advanced rules model to {{site.data.keyword.nlushort}} is deprecated. As of June 10, 2021, you will not be able to deploy advanced rules models to {{site.data.keyword.nlushort}}.
+{: deprecated}
+
 Deploy the rule-based model to enable an application that uses the {{site.data.keyword.nlushort}} service to use the model to find and extract entities that are relevant to your domain.
 
-**Attention**: This is currently an [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-troubleshooting#experimental) feature of the service.
+**Attention**: This is currently an [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks-faqs#experimental) feature of the service.
 
 ### Before you begin
 {: #wks_rule_prereqs}
@@ -123,13 +128,6 @@ See the [{{site.data.keyword.nlushort}} documentation](/docs/natural-language-un
 {: #ramu-um}
 
 If you want to undeploy a model or find a model ID, view the **Deployed Models** page.
-
-### About this task
-{: #ramu-att}
-
-What you see on the Deployed Models page depends on the [region](/docs/resources?topic=resources-services_region) that hosts your {{site.data.keyword.knowledgestudioshort}} instance. If the region supports instances managed by [IAM](/docs/iam?topic=iam-userroles) and [Cloud Foundry](/docs/iam?topic=iam-cfaccess) access management methods, you see a tab for each method. Models from instances that are managed by IAM are listed on the **Resource Groups** tab. Models from instances that are managed by Cloud Foundry are listed on the **Organizations** tab.
-
-If the region supports instances managed by only one of the access management methods, you see only one list of models, because only one access management method is applicable.
 
 ### Procedure
 {: #ramu-pr}
