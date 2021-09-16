@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-02-18"
+lastupdated: "2021-09-16"
 
 keywords: faqs, Frequently Asked Questions, Watson Knowledge Studio
 
@@ -46,6 +46,12 @@ To prevent {{site.data.keyword.knowledgestudioshort}} from using client data, yo
 For Premium plans and Dedicated accounts, {{site.data.keyword.knowledgestudioshort}} does not use client data to improve the service.
 
 For more information, see the latest [{{site.data.keyword.knowledgestudioshort}} service description](https://www.ibm.com/software/sla/sladb.nsf/searchsaas/?searchview&searchorder=4&searchmax=0&query=Knowledge+Studio){: external}.
+
+## Can I deploy custom models across regions?
+{: #wks_cr_deploy}
+{: faq}
+
+Deployment of models across regions is not supported. A custom model can only be deployed to the same region as your Knowledge Studio instance.
 
 ## Can I access Knowledge Studio with an API?
 {: #wks_api_access}
