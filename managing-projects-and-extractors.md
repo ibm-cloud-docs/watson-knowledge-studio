@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2021
-lastupdated: "2021-05-05"
+  years: 2019, 2022
+lastupdated: "2022-03-14"
 
 subcollection: watson-knowledge-studio
 
@@ -170,7 +170,7 @@ To create an extractor that uses a regular expression:
 1. From the canvas toolbar, click ![New Regular Expression](images/new_extractor_regex.png "New Regular Expression icon").
 2. Enter a name for the regular expression. You can also add some descriptive information. Note that the information that you enter at the prompt is the name for the expression, not the expression itself.
 3. Select the regular expression on the canvas to open the **Extractor Properties** to the **Settings** tab. Specify a regular expression. For more information about the syntax, see the [Class Pattern](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html){: external} Javadocc.
-4. Specify options for case sensitivity, [token range](), and special character handling. If, while designing a regular expression, you see false positives, provide more context by extending the pattern in the regular expression or adding context through a sequence pattern. For example, if your postal code expression matches additional terms, incorporate rules for which letters are permitted in specific positions.
+4. Specify options for case sensitivity, token range, and special character handling. If, while designing a regular expression, you see false positives, provide more context by extending the pattern in the regular expression or adding context through a sequence pattern. For example, if your postal code expression matches additional terms, incorporate rules for which letters are permitted in specific positions.
 
 #### Regular expression examples
 {: #regular-expression-examples}
@@ -217,7 +217,7 @@ The following are examples of regular Java expressions that might be used in spe
 
 Often, you must assess the text for patterns that provide context for the terms of interest. For example, you might want to distinguish references to military or law enforcement personnel from references to civilians. When designing an extractor, several methods are available to identify and extract information on the basis of patterns in text. These methods can be used in a single extractor, or you can combine extractors.
 
-Before defining your own pattern to meet your needs, check to see if a [provided extractor]() can give you the desired results.
+Before defining your own pattern to meet your needs, check to see if a provided extractor can give you the desired results.
 
 To create a sequence pattern:
 
