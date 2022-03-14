@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-08-03"
+  years: 2015, 2022
+lastupdated: "2022-03-14"
 
 subcollection: watson-knowledge-studio
 
@@ -42,7 +42,8 @@ Before creating a workspace, answer these questions:
     - Rule-based model: Uses a declarative approach to finding entities in documents. This type of model is more predictable, and is easier to comprehend and maintain. However, it does not learn from new data. It can only find patterns it has been taught to look for.
     - Advanced Rules model: offers deeper customization for text analysis than rule-based models. See [Creating an advanced rules model](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-create-advanced-rules-model) for instructions.
 
-    > **Note:** You can also create one workspace that contains both one rule-based model and one machine learning model.
+    You can also create one workspace that contains both one rule-based model and one machine learning model.
+    {: tip}
 
 - **What services will use the model?**
 
@@ -55,7 +56,8 @@ To create a workspace, complete the following steps:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator, and click **Create Workspace**.
 
-    > **Note:** People with the project manager role can perform almost all tasks except creating a workspace. An administrator must create the workspace initially and assign project managers to it.
+    People with the project manager role can perform almost all tasks except creating a workspace. An administrator must create the workspace initially and assign project managers to it.
+    {: tip}
 
 1. Give the workspace a name. Choose a short name that reflects your domain content or the purpose of the model. If you need to, you can change the workspace name later.
 1. Identify the language of the documents in your workspace. The documents that you add to the workspace, and the dictionaries that you create or upload, must be in the language that you specify.
@@ -67,7 +69,8 @@ To create a workspace, complete the following steps:
 
     Only the names of people that you assigned to the project manager role from the User Account Management page for the instance are displayed. See [Assembling a team](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-team) for more information about adding users.
 
-    > **Note:** If you have a Lite plan subscription, skip this step. You cannot add other users, so you cannot assign anyone to the project manager role. You do not need a separate project manager. As an administrator, you can perform all the tasks that a project manager would typically perform.
+    If you have a Lite plan subscription, skip this step. You cannot add other users, so you cannot assign anyone to the project manager role. You do not need a separate project manager. As an administrator, you can perform all the tasks that a project manager would typically perform.
+    {: tip}
 
 1. Click **Create**.
 
@@ -120,380 +123,31 @@ For each stage of the model development process, this table summarizes the typic
 ### All model types
 {: #cp-amt}
 
-<table summary="This table provides a summary of input, output, and limitations for all model types.">
-  <caption>Table 1. All model types</caption>
-  <tr>
-    <th style="vertical-align:bottom; text-align:left" id="d25459e252">
-      Task
-    </th>
-    <th style="vertical-align:bottom; text-align:left" id="d25459e254">
-      Typical usage
-    </th>
-    <th style="vertical-align:bottom; text-align:left" id="d25459e256">
-      Supported input formats
-    </th>
-    <th style="vertical-align:bottom; text-align:left" id="d25459e258">
-      Supported output formats
-    </th>
-    <th style="vertical-align:bottom; text-align:left" id="d25459e260">
-      Limits and requirements
-    </th>
-  </tr>
-  <tr>
-    <td style="vertical-align:top; text-align:left" headers="d25459e252">
-      <p>Type system management</p>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e254">
-      <p>Create a type system or upload and modify an existing type system.</p>
-      <p>Define entity types and relation types for your domain.</p>
-      <p>You cannot see a visualization of the type system.</p>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e256">
-      <ul>
-        <li>
-          <p>JSON file that you downloaded from a {{site.data.keyword.knowledgestudioshort}} workspace</p>
-        </li>
-        <li>
-          <p>ZIP file that you downloaded from the Human Annotation Tool (HAT)</p>
-        </li>
-      </ul>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e258">
-      <ul>
-        <li>
-          <p>JSON</p>
-        </li>
-      </ul>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e260">
-      <p>To avoid visual overload for human annotation, define no more than 50 entity types and 50 relation types.</p>
-      <p>File size limitation for uploading a type system: 20 MB</p>
-    </td>
-  </tr>
-  <tr>
-    <td style="vertical-align:top; text-align:left" headers="d25459e252">
-      <p>Dictionary management</p>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e254">
-      <p>Upload a CSV dictionary file in read-only mode or a ZIP of dictionaries that you downloaded from another workspace.</p>
-      <p>Create a new dictionary, and then upload a CSV file of term entries or add term entries to it.</p>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e256">
-      <p>Dictionary file:</p>
-      <ul>
-        <li>
-          <p>CSV file in UTF-8 format</p>
-        </li>
-        <li>
-          <p>ZIP of dictionaries downloaded from another workspace</p>
-        </li>
-      </ul>
-      <p>Term entries file:</p>
-      <ul>
-        <li>
-          <p>CSV file in UTF-8 format</p>
-        </li>
-      </ul>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e258">
-      <ul>
-        <li>
-          <p>CSV file in UTF-8 format</p>
-        </li>
-        <li>
-          <p>ZIP of dictionaries to use in another workspace</p>
-        </li>
-      </ul>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e260">
-      <p>File size limitations:</p>
-      <ul>
-        <li>
-          <p>1 MB per CSV term entries file</p>
-        </li>
-        <li>
-          <p>16 MB per CSV read-only dictionary file</p>
-        </li>
-        <li>
-          <p>15,000 entries per dictionary, except a read-only dictionary</p>
-        </li>
-        <li>
-          <p>64 dictionaries per workspace</p>
-        </li>
-      </ul>
-    </td>
-  </tr>
-</table>
+Table 1: All model types
+| **Task** | **Typical usage** | **Supported input formats** | **Supported output formats** | **Limits and requirements** |
+| --- | --- | --- | --- | --- |
+| Type system management | Create a type system or upload and modify an existing type system. Define entity types and relation types for your domain. You cannot see a visualization of the type system. | <ul><li>JSON file that you downloaded from a {{site.data.keyword.knowledgestudioshort}} workspace.</li><li>ZIP file that you downloaded from the Human Annotation Tool (HAT)</li></ul> | JSON | To avoid visual overload for human annotation, define no more than 50 entity types and 50 relation types. File size limitation for uploading a type system: 20 MB |
+| Dictionary management | Upload a CSV dictionary file in read-only mode or a ZIP of dictionaries that you downloaded from another workspace. Create a new dictionary, and then upload a CSV file of term entries or add term entries to it. | Dictionary file: <ul><li>CSV file in UTF-8 format</li><li>ZIP of dictionaries downloaded from another workspace</li></ul>Term entries file:<ul><li>CSV file in UTF-8 format</li></ul> | <ul><li>CSV file in UTF-8 format</li><li>ZIP of dictionaries to use in another workspace</li></ul> | File size limitations:<ul><li>1 MB per CSV term entries file</li><li>16 MB per CSV read-only dictionary file</li><li>15,000 entries per dictionary, except a read-only dictionary</li><li>64 dictionaries per workspace</li></ul> |
 
  {: #wks_formats__datasimpletable_xxj_qr5_2y}
 
 ### Machine learning model
 {: #cp-mlm}
 
-<table summary="This table provides a summary of input, output, and limitations for the machine learning model.">
-  <caption>Table 2. Machine learning model</caption>
-  <tr>
-    <th style="vertical-align:botton; text-align:left" id="d25459e331">Task</th>
-    <th style="vertical-align:botton; text-align:left" id="d25459e333">Typical usage</th>
-    <th style="vertical-align:botton; text-align:left" id="d25459e335">Supported input formats</th>
-    <th style="vertical-align:botton; text-align:left" id="d25459e337">Supported output formats</th>
-    <th style="vertical-align:botton; text-align:left" id="d25459e339">Limits and requirements</th>
-  </tr>
-  <tr>
-    <td style="vertical-align:top; text-align:left" headers="d25459e331">
-      <p>Document management </p>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e333">
-      <p>Upload a small, representative subset of documents</p>
-      <p>Upload documents that contain annotations previously added by a human annotator, a machine learning model, or a UIMA analysis engine</p>
-      <p>You cannot ingest the entire corpus from {{site.data.keyword.ibmwatson_notm}} Explorer for calculating high value documents for annotation.</p>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e335">
-      <ul>
-        <li>
-          <p>CSV file in UTF-8 format</p>
-        </li>
-        <li>
-          <p>Text in UTF-8 format</p>
-        </li>
-        <li>
-          <p>HTML</p>
-        </li>
-        <li>
-          <p>PDF files (scanned and password-protected files are not supported)</p>
-        </li>
-        <li>
-          <p>Microsoft Word DOC or DOCX files (password-protected files are not supported)</p>
-        </li>
-        <li>
-          <p>ZIP file that contains documents downloaded from another workspace</p>
-        </li>
-        <li>
-          <p>ZIP file that contains documents in UIMA CAS XMI format</p>
-        </li>
-      </ul>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e337">
-      <ul>
-        <li>
-          <p>ZIP archive file of documents</p>
-        </li>
-      </ul>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e339">
-      <ul>
-        <li>
-          <p>40,000 characters per document</p>
-        </li>
-        <li>
-          <p>10,000 documents per workspace</p>
-        </li>
-        <li>
-          <p>1,000 document sets (including annotation sets) per workspace</p>
-        </li>
-        <li>
-          <p>5 MB per file and 200 MB per upload (TXT, PDF, DOC, DOCX, and HTML files)</p>
-        </li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td style="vertical-align:top; text-align:left" headers="d25459e331">
-      <p>Pre-annotation</p>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e333">
-       <p>Use a dictionary or {{site.data.keyword.nlufull}} pre-annotator to provide a starting point for human annotation.</p>
-       <p>You cannot re-annotate a corpus from {{site.data.keyword.ibmwatson_notm}} Explorer.</p>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e335">
-      <p>Raw documents.</p>
-      <p><b>Note:</b> Do not pre-annotate documents that a human annotator has already annotated, or you will lose the work done by the human annotator.</p>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e337">
-      <p>Partly-annotated documents</p>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e339">
-      <p>None</p>
-    </td>
-  </tr>
-  <tr>
-    <td style="vertical-align:top; text-align:left" headers="d25459e331">
-      <p>Document annotation</p>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e333">
-      <p>Manage human annotation</p><p>Annotate entities, relations, and coreference chains to create ground truth</p>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e335">
-      <p>Annotation task</p>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e337">
-      <p>Ground truth</p>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e339">
-      <ul>
-        <li>
-          <p>256 active annotation tasks per workspace</p>
-        </li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td style="vertical-align:top; text-align:left" headers="d25459e331">
-      <p>Training and refinement</p>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e333">
-      <p>Train a supervised machine learning model to extract domain-specific information from unstructured text.</p><p>Evaluate and improve a supervised machine learning model.</p>
-      <p>You cannot create a semi-supervised or unsupervised machine learning model.</p>
-      <p>You cannot do extensive feature engineering.</p>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e335">
-      <p>Not applicable</p>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e337">
-      <p>Machine learning model</p>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e339">
-      <ul>
-        <li>
-          <p>1 machine learning model per workspace</p>
-        </li>
-        <li>
-          <p>10 model versions per workspace</p>
-        </li>
-        <li>
-          <p>Maximum number of workspaces is determined by your subscription plan.</p>
-        </li>
-        <li>
-          <p>The maximum number of training actions you can perform per month is determined by your subscription plan.</p>
-        </li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td style="vertical-align:top; text-align:left" headers="d25459e331">
-      <p>Publication</p>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e333">
-      <p>Publish a machine learning model to use for performing text extraction in other {{site.data.keyword.watson}} applications.</p>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e335">
-      <p>Not applicable</p>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e337">
-      <ul>
-        <li>
-          <p>Model ID (for use in {{site.data.keyword.nlufull}} or {{site.data.keyword.discoveryfull}})</p>
-        </li>
-        <li>
-          <p>ZIP file (for use in {{site.data.keyword.ibmwatson_notm}} Explorer)</p>
-        </li>
-      </ul>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e339">
-      <p>To deploy to {{site.data.keyword.watson}} services, you must know the {{site.data.keyword.cloud_notm}} service space and instance names.</p>
-    </td>
-  </tr>
-</table>
+Table 2: Machine learning model
+| **Task** | **Typical usage** | **Supported input formats** | **Supported output formats** | **Limits and requirements** |
+| --- | --- | --- | --- | --- |
+| Document management | Upload a small, representative subset of documents Upload documents that contain annotations previously added by a human annotator, a machine learning model, or a UIMA analysis engine You cannot ingest the entire corpus from {{site.data.keyword.ibmwatson_notm}} Explorer for calculating high value documents for annotation. | <ul><li>CSV file in UTF-8 format</li><li>Text in UTF-8 format</li><li>HTML</li><li>PDF files (scanned and password-protected files are not supported)</li><li>Microsoft Word DOC or DOCX files (password-protected files are not supported)</li><li>ZIP file that contains documents downloaded from another workspace</li><li>ZIP file that contains documents in UIMA CAS XMI format</li></ul> | ZIP archive file of documents | <ul><li>40,000 characters per document</li><li>10,000 documents per workspace</li><li>1,000 document sets (including annotation sets) per workspace</li><li>5 MB per file and 200 MB per upload (TXT, PDF, DOC, DOCX, and HTML files)</li></ul> |
+| Pre-annotation | Use a dictionary or {{site.data.keyword.nlufull}} pre-annotator to provide a starting point for human annotation.<br></br>You cannot re-annotate a corpus from {{site.data.keyword.ibmwatson_notm}} Explorer. | Raw documents.<br></br>**Note**:</b> Do not pre-annotate documents that a human annotator has already annotated, or you will lose the work done by the human annotator.| Partly-annotated documents | None |
+| Document annotation | Manage human annotation. Annotate entities, relations, and coreference chains to create ground truth | Annotation task | Ground truth | <ul><li>256 active anntation tasks per workspace</li></ul> |
+| Training and refinement | Train a supervised machine learning model to extract domain-specific information from unstructured text. Evaluate and improve a supervised machine learning model. You cannot create a semi-supervised or unsupervised machine learning model. You cannot do extensive feature engineering. | Not applicable | Machine learning model | <ul><li>1 machine learning model per workspace</li><li>10 model versions per workspace</li><li>Maximum number of workspaces is determined by your deployment.</li><li>The maximum number of training actions you can perform per month is determined by your deployment.</li></ul> |
+| Publication | Export a machine learning model to use for performing text extraction in other Watson applications. | Not applicable | <ul><li>ZIP file</li></ul> | None |
 
 ### Rule-based model
 {: #cp-rbm}
 
-<table summary="This table provides a summary of input, output, and limitations for the rule-based model.">
-  <caption>Table 3. Rule-based model</caption>
-  <tr>
-    <th style="vertical-align:bottom; text-align:left" id="d25459e509">
-      Task
-    </th>
-    <th style="vertical-align:bottom; text-align:left" id="d25459e511">
-      Typical usage
-    </th>
-    <th style="vertical-align:bottom; text-align:left" id="d25459e513">
-      Supported input formats
-    </th>
-    <th style="vertical-align:bottom; text-align:left" id="d25459e515">
-      Supported output formats
-    </th>
-    <th style="vertical-align:bottom; text-align:left" id="d25459e517">
-      Limits and requirements
-    </th>
-  </tr>
-  <tr>
-    <td style="vertical-align:top; text-align:left" headers="d25459e509">
-      <p>Rule editor</p>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e511">
-      <p>Create or upload documents to the rule editor from which to define classes, regular expressions, and rules.</p>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e513">
-      <ul>
-        <li>
-          <p>Plain text (added in editor)</p>
-        </li>
-        <li>
-          <p>CSV file in UTF-8 format</p>
-        </li>
-        <li>
-          <p>Copied from the All document set</p>
-        </li>
-      </ul>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e515">
-      <p>None</p>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e517">
-      <ul>
-        <li>
-          <p>1 rule-based model per workspace</p>
-        </li>
-        <li>
-          <p>5,000 characters per document</p>
-        </li>
-        <li>
-          <p>100 documents per workspace</p>
-        </li>
-        <li>
-          <p>Maximum size of document title is 256 characters</p>
-        </li>
-        <li>
-          <p>200 rules per workspace</p>
-        </li>
-        <li>
-          <p>400 classes per workspace</p>
-        </li>
-        <li>
-          <p>100 regular expression group per workspace</p>
-        </li>
-        <li>
-          <p>100 regular expression entries per regular expression group</p>
-        </li>
-        <li>
-          <p>1,000 characters per regular expression entry</p>
-        </li>
-        <li>
-          <p>10 rule-based model versions per workspace</p>
-        </li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td style="vertical-align:top; text-align:left" headers="d25459e509">
-      <p>Publication</p>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e511">
-      <p>Publish a rule-based model to use for performing pattern recognition in other {{site.data.keyword.watson}} applications.</p>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e513">
-      <p>Not applicable</p>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e515">
-      <ul>
-        <li>
-          <p>Model ID (for use in {{site.data.keyword.nlufull}} or {{site.data.keyword.discoveryfull}})</p>
-        </li>
-      </ul>
-    </td>
-    <td style="vertical-align:top; text-align:left" headers="d25459e517">
-      <p>To deploy to {{site.data.keyword.watson}} services, you must know the {{site.data.keyword.cloud_notm}} service space and instance names.</p>
-    </td>
-  </tr>
-</table>
+Table 3: Rule-based model
+| **Task** | **Typical usage** | **Supported input formats** | **Supported output formats** | **Limits and requirements** |
+| --- | --- | --- | --- | --- |
+| Rule editor | Create or upload documents to the rule editor from which to define classes, regular expressions, and rules. | <ul><li>Plain text (added in editor)</li><li>CSV file in UTF-8 format</li><li>Copied from the All document set</li></ul> | None | <ul><li>1 rule-based model per workspace</li><li>5,000 characters per document</li><li>100 documents per workspace</li><li>Maximum size of document title is 256 characters</li><li>200 rules per workspace</li><li>400 classes per workspace</li><li>100 regular expression group per workspace</li><li>100 regular expression entries per regular expression group</li><li>1,000 characters per regular expression entry</li><li>5 rule-based model versions per workspace</li></ul> |
+| Publication | Publish a rule-based model to use for performing pattern recognition in other Watson applications. | Not applicable | <ul><li>PEAR file</li></ul> | Rule-based models can currently be exported to IBM Watson Discovery only |
