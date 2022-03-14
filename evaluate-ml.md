@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-08-03"
+  years: 2015, 2022
+lastupdated: "2022-03-14"
 
 subcollection: watson-knowledge-studio
 
@@ -85,21 +85,11 @@ To view performance statistics for how well the model was trained:
 
     For example, the following confusion matrix example shows results of a machine learning model run on documents that deal with traffic incidents.
 
-    <table summary="Incident report confusion matrix example">
-       <caption>Table 1. Confusion matrix example</caption>
-       <tr>
-        <th style="vertical-align:bottom; text-align:left" id="d15356e164">Entity Types</th>
-        <th style="vertical-align:bottom; text-align:center" id="d15356e166">MANUFACTURER</th>
-        <th style="vertical-align:bottom; text-align:center" id="d15356e168">MODEL</th>
-        <th style="vertical-align:bottom; text-align:center" id="d15356e170">O</th>
-      </tr>
-      <tr>
-        <td style="vertical-align:top; text-align:left" headers="d15356e164">MANUFACTURER</td>
-        <td style="vertical-align:top; text-align:center" headers="d15356e166">515</td>
-        <td style="vertical-align:top; text-align:center" headers="d15356e168">5</td>
-        <td style="vertical-align:top; text-align:center" headers="d15356e170">44</td>
-      </tr>
-    </table>
+      Table 1. Confusion matrix example
+
+    | Entity types | MANUFACTURER | MODEL | O |
+    | --- | :---: | :---: | --- |
+    | MANUFACTURER | 515 | 5 | 44 |
     {: #evaluate-ml__datasimpletable_yms_hff_cw}
 
     You can learn the following things from this matrix:
@@ -118,130 +108,18 @@ It's difficult to dictate rules for improving performance scores that would be a
 
 The following table suggests fixes for the most common machine learning model performance problems.
 
-<table summary="The table lists common problems down that first column and suggested fixes across the first row. X marks indicate which fix to apply to which problem.">
-    <caption>Table 2. Fixes for common performance problems</caption>
-    <tr>
-      <th style="vertical-align:bottom; text-align:left" id="d15356e221">Problem</th>
-      <th style="vertical-align:bottom; text-align:center" id="d15356e223">Add dictionaries</th>
-      <th style="vertical-align:bottom; text-align:center" id="d15356e225">Edit document sets</th>
-      <th style="vertical-align:bottom; text-align:center" id="d15356e227">Add type-specific documents</th>
-      <th style="vertical-align:bottom; text-align:center" id="d15356e229">Annotate corpus more</th>
-      <th style="vertical-align:bottom; text-align:center" id="d15356e231">Fix human annotations</th>
-      <th style="vertical-align:bottom; text-align:center" id="d15356e233">Enhance human annotator guidelines</th>
-      <th style="vertical-align:bottom; text-align:center" id="d15356e235">Update type system</th>
-      <th style="vertical-align:bottom; text-align:center" id="d15356e237">Investigate further</th>
-    </tr>
-    <tr>
-      <td style="vertical-align:top; text-align:left" headers="d15356e221">Low F1</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e223">X</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e225">X</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e227">X</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e231">X</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e233">X</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e235">X</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e237">X</td>
-    </tr>
-    <tr>
-      <td style="vertical-align:top; text-align:left" headers="d15356e221">Low precision</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e225"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e227"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e231">X</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e233">X</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e235">X</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e237">X</td>
-    </tr>
-    <tr>
-      <td style="vertical-align:top; text-align:left" headers="d15356e221">Low recall</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e223">X</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e225">X</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e227">X</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
-    </tr>
-    <tr>
-      <td style="vertical-align:top; text-align:left" headers="d15356e221">Low annotation %</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e225">X</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e227">X</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
-    </tr>
-    <tr>
-      <td style="vertical-align:top; text-align:left" headers="d15356e221">Low density</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e225">X</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e227">X</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
-    </tr>
-    <tr>
-      <td style="vertical-align:top; text-align:left" headers="d15356e221">Few documents of type</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e225"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e227">X</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e235">X</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
-    </tr>
-    <tr>
-      <td style="vertical-align:top; text-align:left" headers="d15356e221">Incorrect categorization</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e223">X</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e225"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e227"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e229"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e235">X</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
-    </tr>
-    <tr>
-      <td style="vertical-align:top; text-align:left" headers="d15356e221">Missed annotations </td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e223">X</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e225"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e227"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e229">X</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
-    </tr>
-    <tr>
-      <td style="vertical-align:top; text-align:left" headers="d15356e221">Gap between test and train results </td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e225">X</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e227"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e229"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e231"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e233"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e237"></td>
-    </tr>
-    <tr>
-      <td style="vertical-align:top; text-align:left" headers="d15356e221">Low F1 for testing training data</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e223"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e225"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e227"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e229"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e231">X</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e233">X</td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e235"></td>
-      <td style="vertical-align:top; text-align:center" headers="d15356e237">X</td>
-    </tr>
-</table>
+| Problem | Add dictionaries | Edit document sets | Add type-specific documents | Annotate corpus more | Fix human annotations | Enhance human annotator guidelines | Update type system | Investigate further |
+| --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Low F1 | X | X | X | X | X | X | X | X |
+| Low precision |  |  |  | X | X | X | X | X |
+| Low recall | X | X | X | X |  |  |  |  |
+| Low annotation % |  | X | X | X |  |  |  |  |
+| Low density |  | X | X | X |  |  |  |  |
+| Few documents of type |  |  | X | X |  |  | X |  |
+| Incorrect categorization | X |  |  |  |  |  | X |  |
+| Missed annotations | X |  |  | X |  |  |  |  |
+| Gap between test and train results |  | X |  |  |  |  |  |  |
+| Low F1 for testing training data |  |  |  |  | X | X |  | X |
 {: #evaluate-ml_cheat__datasimpletable_nhm_5ym_cw}
 
 ### Descriptions of fixes
@@ -287,7 +165,8 @@ The following table suggests fixes for the most common machine learning model pe
   - An existing type is never used by human annotators because it is never referenced in the documents. If the type is unlikely to ever be used in literature from this domain, then remove it from the type system.
   - Two types are often interchanged when human annotators annotate documents. Consider whether the two types could be consolidated into one type that accurately represents the concept or relationship. For example, if the type system contains both PERSON and PEOPLE, which are often used interchangeably, it might be best to use one type named PERSONPEOPLE that covers both cases instead of two separate types.
 
-    > **Attention:** Use caution when you update the type system. If you update it after human annotators have evaluated documentation sets that were associated with the old type system, the human annotators will have to re-evaluate the documentation sets. Be sure that the changes you need to make are significant enough to warrant such rework.
+    Use caution when you update the type system. If you update it after human annotators have evaluated documentation sets that were associated with the old type system, the human annotators will have to re-evaluate the documentation sets. Be sure that the changes you need to make are significant enough to warrant such rework.
+    {: important}
 
 - **Investigate further**
 
@@ -315,7 +194,8 @@ Tune the performance of your machine learning model by performing one or more of
 
 1. Identify commonly occurring types with low accuracy.
 
-    > **Note:** When analyzing relations, look at both the F1 score of the relation type itself and at the F1 score of each of the two entities that participates in the relationship.
+    When analyzing relations, look at both the F1 score of the relation type itself and at the F1 score of each of the two entities that participates in the relationship.
+    {: tip}
 
 1. Identify commonly confused types. This information can be found by looking at the numbers that are off the diagonal in the confusion matrix.
 1. Review errors where the machine learning model has high confidence.
