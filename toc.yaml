@@ -1,0 +1,109 @@
+---
+toc:
+  properties:
+    subcollection: watson-knowledge-studio
+    service-name: knowledge-studio
+    version: 2
+    category: ai
+    audience: service
+    href: /docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks_overview_full
+    console-page: /catalog/services/knowledge-studio
+    product-page: https://www.ibm.com/cloud/watson-knowledge-studio
+    path: watson-knowledge-studio
+    label: Knowledge Studio
+
+  entries:
+  - navgroup:
+      id: learn
+      topics:
+      - topicgroup:
+          label: Getting Started tutorials
+          topics:
+          - tutorials-create-project.md
+          - tutorials-create-ml-model.md
+          - tutorials-create-rule-model.md
+          - tutorials-bootstrap-annotation.md
+          - create-advanced-rules-model.md
+      - index.md
+      - system-requirements.md
+      - roles.md
+      - additional-resources.md
+      - topic: release-notes.md
+        navtitle: Release notes
+
+  - navgroup:
+      id: howto
+      topics:
+      - team.md
+      - create-project.md
+      - topicgroup:
+          label: Adding artifacts
+          topics:
+          - artifacts.md
+          - exportimport.md
+          - typesystem.md
+          - dictionaries.md
+      - language-support-arabic.md
+      - topicgroup:
+          label: Creating a rule-based model
+          topics:
+          - rule-annotator.md
+          - rule-annotator-add-doc.md
+          - rule-annotator-define-rule.md
+          - rule-annotator-model-create.md
+          - rule-annotator-model-use.md
+      - topicgroup:
+          label: Creating a machine learning model
+          topics:
+          - ml-annotator.md
+          - documents-for-annotation.md
+          - preannotation.md
+          - annotate-documents.md
+          - annotating-document-sets-directly.md
+          - build-groundtruth.md
+          - train-ml.md
+          - evaluate-ml.md
+          - improve-ml.md
+          - publish-ml.md
+      - enabling-cross-sentence-relations.md
+      - managing-projects-and-extractors.md
+      - user-guide.md
+      - backup-restore.md
+      - client-migration.md
+      - upgrade.md
+      - ha-dr.md
+      - /watson/watson-keyservice
+      - /watson/watson-public-private-endpoints
+
+  - navgroup:
+      id: reference
+      topics:
+      - activity-tracker-events.md
+      - aql-reference.md
+      - model-build-deploy-path.md
+      - glossary.md
+      - language-support.md
+      - information-security.md
+
+  - navgroup:
+      id: help
+      topics:
+      - troubleshooting.md
+      - topicgroup:
+        label: Troubleshooting
+        topics:
+        - user-guide-help.md
+        - ts-storage.md
+        - ts-access.md
+        - ts-deploy-model.md
+      - support.md
+      - topicgroup:
+          label: Developer community
+          links:
+          - link:
+              label: StackOverflow
+              href: https://stackoverflow.com/search?q=watson-knowledge-studio
+          - link:
+              label: WDC Slack channel
+              href: http://wdc-slack-inviter.mybluemix.net/
+      
