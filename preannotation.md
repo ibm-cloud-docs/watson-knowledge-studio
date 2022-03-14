@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-08-04"
+  years: 2015, 2021
+lastupdated: "2021-11-15"
 
 subcollection: watson-knowledge-studio
 
@@ -80,19 +80,19 @@ For example, consider the example text `IBM Watson`. If a dictionary that is fir
 
 You can view the current order of pre-annotators in the **Order** column on the **Machine Learning Model** > **Pre-annotation** page. To change the order, complete the following steps.
 
-1.  Click **Order Settings**.
-1.  Click the **Move up** and **Move down** arrow** buttons to move pre-annotation methods earlier or later in the order.
-1.  Click **Save**.
-1.  Double check the **Order** column on the **Pre-annotation** page to make sure that it matches the order that you want.
+1. Click **Order Settings**.
+1. Click the **Move up** and **Move down** arrow** buttons to move pre-annotation methods earlier or later in the order.
+1. Click **Save**.
+1. Double check the **Order** column on the **Pre-annotation** page to make sure that it matches the order that you want.
 
 ### Run pre-annotators
 {: #run-pre-annotators}
 
-1.  After your pre-annotation methods are prepared and you have configured the order of your pre-annotators, click **Run Pre-annotators**.
-1.  Select the pre-annotators that you want to use, and then click **Next**.
-1.  If you want to erase existing annotations made by pre-annotators before running the pre-annotator, select **Wipe previous pre-annotation results**. Human annotations are preserved even if this is selected.
-1.  Select the document sets that you want to pre-annotate.
-1.  Click **Run**.
+1. After your pre-annotation methods are prepared and you have configured the order of your pre-annotators, click **Run Pre-annotators**.
+1. Select the pre-annotators that you want to use, and then click **Next**.
+1. If you want to erase existing annotations made by pre-annotators before running the pre-annotator, select **Wipe previous pre-annotation results**. Human annotations are preserved even if this is selected.
+1. Select the document sets that you want to pre-annotate.
+1. Click **Run**.
 
 ## Pre-annotating documents with {{site.data.keyword.nlushort}}
 {: #wks_preannotnlu}
@@ -116,61 +116,40 @@ You must specify the entity types that you want the service to look for by mappi
 
 To use the {{site.data.keyword.nlushort}} service to pre-annotate documents, complete the following steps:
 
-1.  Log in as a {{site.data.keyword.knowledgestudioshort}} administrator and select your workspace.
-1.  Go to the **Machine Learning Model** > **Pre-annotation** page.
-1.  Click the overflow menu button in the Natural Language Understanding row, and then click **Map entity types**.
+1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator and select your workspace.
+1. Go to the **Machine Learning Model** > **Pre-annotation** page.
+1. Click the overflow menu button in the Natural Language Understanding row, and then click **Map entity types**.
 
     - The drop-down list of the {{site.data.keyword.nlushort}} entity types is pre-populated with entity types that are recognized by the {{site.data.keyword.nlushort}} service.
     - You must map at least one entity type.
     - You cannot map an {{site.data.keyword.nlushort}} entity type to a {{site.data.keyword.knowledgestudioshort}} entity role, only {{site.data.keyword.knowledgestudioshort}} entity types.
     - You can map more than one {{site.data.keyword.nlushort}} entity type to a single {{site.data.keyword.knowledgestudioshort}} entity type, or the other way around. For example, the following mappings are permitted:
 
-    <table summary="Sample mapping of entity types">
-    <caption>Table 1. Sample mapping of entity types</caption>
-      <tr>
-        <th style="vertical-align:bottom; text-align"left" id="d20428e292">Watson Knowledge Studio Entity Type</th>
-        <th style="vertical-align:bottom; text-align"left" id="d20428e298">{{site.data.keyword.nlushort}} Entity Type</th>
-      </tr>
-      <tr>
-        <td headers="d20428e292">
-          ENGINEER<br/>
-          SCIENTIST
-        </td>
-        <td headers="d20428e298">
-          Person
-        </td>
-      </tr>
-      <tr>
-        <td headers="d20428e292">
-          LOCATION
-        </td>
-        <td headers="d20428e298">
-          CityTown<br/>
-          Country
-        </td>
-      </tr>
-    </table>
+    Table 1. Sample mapping of entity types
+    | **Watson Knowledge Studio Entity Type** | **{{site.data.keyword.nlushort}} Entity Type** |
+    | --- | --- |
+    | ENGINEER<br></br>SCIENTIST | Person |
+    | LOCATION | CityTown<br></br>Country |
     {: #wks_preannotnlu__datasimpletable_cm1_y3g_fx}
 
-1.  After mapping all the entity types that you want to apply, go the **Machine Learning Model** > **Pre-annotation** page. Click **Run Pre-annotators**.
+1. After mapping all the entity types that you want to apply, go the **Machine Learning Model** > **Pre-annotation** page. Click **Run Pre-annotators**.
 
-1.  Select {{site.data.keyword.nlushort}}, and then click **Next**.
+1. Select {{site.data.keyword.nlushort}}, and then click **Next**.
 
     The {{site.data.keyword.nlushort}} annotator is not available until you map at least one entity type.
 
-1.  If you want to erase existing annotations made by pre-annotators before running the pre-annotator, select **Wipe previous pre-annotation results**. Human annotations are preserved even if this is selected.
+1. ore running the pre-annotator, select **Wipe previous pre-annotation results**. Human annotations are preserved even if this is selected.
 
-1.  Select the check box for each document set that you want to pre-annotate.
+1. Select the check box for each document set that you want to pre-annotate.
 
     If you are running this pre-annotator for the first time, first validate that the pre-annotator can find mentions of the mapped entities as expected. Create one document set that contains a representative document or documents from each distinct data source.
     {: tip}
 
-1.  Click **Run**.
+1. Click **Run**.
 
     If you are doing a validation check of the pre-annotator, then open the annotated documents and review the annotations that were added. Make sure a sufficient number of accurate annotations were created. If the annotations are accurate, then you can run the annotator again on more and larger document sets. If the annotations are not accurate, then consider mapping different {{site.data.keyword.nlushort}} entity types to your types. If the types do not naturally overlap, then the {{site.data.keyword.nlushort}} pre-annotator is not the best pre-annotator for you to use.
 
     Pre-annotation is applied to individual documents without regard for the various document sets that a document might belong to. A document that overlaps between a selected document set and an unselected document set will be pre-annotated in both document sets.
-
 
 ### Results
 {: #wks_preannotnlu__export-warning}
@@ -202,19 +181,19 @@ This task shows you how to create a dictionary that is editable. If you want to 
 
 To create an editable dictionary and pre-annotate documents, follow these steps:
 
-1.  Log in as a {{site.data.keyword.knowledgestudioshort}} administrator and select your workspace.
-1.  Select the **Assets** > **Dictionaries** page.
-1.  Click **Create Dictionary**, enter a name, and then click **Save**.
-1.  From the **Entity type** list, select an entity type to associate with the dictionary.
+1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator and select your workspace.
+1. Select the **Assets** > **Dictionaries** page.
+1. Click **Create Dictionary**, enter a name, and then click **Save**.
+1. From the **Entity type** list, select an entity type to associate with the dictionary.
 
     You can also associate an entity type with the dictionary from the **Machine Learning Model** > **Pre-annotation** page. Click the overflow menu button in the Dictionaries row in the page, then click **Map entity types**.
     {: note}
-1.  Add entries for the dictionary or upload a file that contains dictionary terms.
-1.  Go to the **Machine Learning Model** > **Pre-annotation** page.
-1.  Click **Run Pre-annotators**.
-1.  Select **Dictionaries**, and then click **Next**.
-1.  If you want to erase existing annotations made by pre-annotators before running the pre-annotator, select **Wipe previous pre-annotation results**. Human annotations are preserved even if this is selected.
-1.  Select the check box for each document set that you want to pre-annotate and click **Run**.
+1. Add entries for the dictionary or upload a file that contains dictionary terms.
+1. Go to the **Machine Learning Model** > **Pre-annotation** page.
+1. Click **Run Pre-annotators**.
+1. Select **Dictionaries**, and then click **Next**.
+1. If you want to erase existing annotations made by pre-annotators before running the pre-annotator, select **Wipe previous pre-annotation results**. Human annotations are preserved even if this is selected.
+1. Select the check box for each document set that you want to pre-annotate and click **Run**.
 
     Pre-annotation is applied to individual documents without regard for the various document sets or annotation sets that a document might belong to. A document that overlaps between a selected document set and an unselected document set will be pre-annotated in both document sets.
 
@@ -238,12 +217,12 @@ After 10 to 30 documents are annotated, a machine learning model can be trained 
 
 To use an existing machine learning model to pre-annotate documents:
 
-1.  Log in as a {{site.data.keyword.knowledgestudioshort}} administrator and select your workspace.
-1.  Go to the **Machine Learning Model** > **Pre-annotation** page.
-1.  Click **Run Pre-annotators**.
-1.  Select **Machine Learning Model**, and then click **Next**.
-1.  If you want to erase existing annotations made by pre-annotators before running the pre-annotator, select **Wipe previous pre-annotation results**. Human annotations are preserved even if this is selected.
-1.  Select the check box for each document set that you want to pre-annotate and click **Run**.
+1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator and select your workspace.
+1. Go to the **Machine Learning Model** > **Pre-annotation** page.
+1. Click **Run Pre-annotators**.
+1. Select **Machine Learning Model**, and then click **Next**.
+1. If you want to erase existing annotations made by pre-annotators before running the pre-annotator, select **Wipe previous pre-annotation results**. Human annotations are preserved even if this is selected.
+1. Select the check box for each document set that you want to pre-annotate and click **Run**.
 
     Pre-annotation is applied to individual documents without regard for the various document sets or annotation sets that a document might belong to. A document that overlaps between a selected document set and an unselected document set will be pre-annotated in both document sets.
 
@@ -257,21 +236,21 @@ You can use an existing rule-based model to pre-annotate documents that you add 
 
 To use the rule-based model to pre-annotate documents, complete the following steps:
 
-1.  Log in as a {{site.data.keyword.knowledgestudioshort}} administrator and select your workspace.
-1.  Go to the **Machine Learning Model** > **Pre-annotation** page.
-1.  Click the overflow menu button in the Rule-based Model row in the page, then click **Map entity types and classes** to map entity types that you defined in the {{site.data.keyword.knowledgestudioshort}} type system to one or more rule-based model classes.
+1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator and select your workspace.
+1. Go to the **Machine Learning Model** > **Pre-annotation** page.
+1. Click the overflow menu button in the Rule-based Model row in the page, then click **Map entity types and classes** to map entity types that you defined in the {{site.data.keyword.knowledgestudioshort}} type system to one or more rule-based model classes.
 
     You can also open the mapping page by selecting the **Rule-based Model** > **Versions** > **Rule-based Model** tab.
     {: note}
-1.  Click **Edit** for each entity type you want to map.
+1. Click **Edit** for each entity type you want to map.
     - The drop-down list of the **Class Name** column is pre-populated with classes that are associated with the rule-based model.
     - You must map at least one entity type to a class.
-1.  On the **Machine Learning Model** > **Pre-annotation** page, click **Run Pre-annotators**.
+1. On the **Machine Learning Model** > **Pre-annotation** page, click **Run Pre-annotators**.
 
     The Rule-based Model option is not available until you map at least one entity type to a class.
-1.  If you want to erase existing annotations made by pre-annotators before running the pre-annotator, select **Wipe previous pre-annotation results**. Human annotations are preserved even if this is selected.
-1.  Select the document sets or annotation sets that you want to pre-annotate.
-1.  Click **Run**.
+1. If you want to erase existing annotations made by pre-annotators before running the pre-annotator, select **Wipe previous pre-annotation results**. Human annotations are preserved even if this is selected.
+1. Select the document sets or annotation sets that you want to pre-annotate.
+1. Click **Run**.
 
     Pre-annotation is applied to individual documents without regard for the various document sets that a document might belong to. A document that overlaps between a selected document set and an unselected document will appear pre-annotated in both document sets.
 
@@ -296,16 +275,16 @@ You can export documents that were crawled and analyzed in {{site.data.keyword.I
 
 To get analyzed documents from a {{site.data.keyword.watson}} Explorer Content Analytics collection, follow these steps:
 
-1.  Open the Content Analytics administration console in a web browser.
-1.  On the Collections view, expand the collection that you want to export documents from. In the Parse and Index pane, ensure that the parse and index process is running, and then click the arrow icon for **Export analyzed document content and metadata**.
-1.  In the **Analyzed document export options** area, select **Export documents as XML files**, select the **Enable CAS as XMI format export** check box, specify the output path for where the exported data is to be written, and click **OK**.
-1.  Stop and restart the parse and index services for the collection, and then do one of the following steps:
+1. Open the Content Analytics administration console in a web browser.
+1. On the Collections view, expand the collection that you want to export documents from. In the Parse and Index pane, ensure that the parse and index process is running, and then click the arrow icon for **Export analyzed document content and metadata**.
+1. In the **Analyzed document export options** area, select **Export documents as XML files**, select the **Enable CAS as XMI format export** check box, specify the output path for where the exported data is to be written, and click **OK**.
+1. Stop and restart the parse and index services for the collection, and then do one of the following steps:
 
     - If the collection already contains indexed documents that you want to use for training the machine learning model in the document cache, restart a full index build.
     - If the collection does not contain indexed documents that you want to use for training the machine learning model, upload documents, configure at least one crawler to crawl the documents, and start the crawler.
 
-1.  In the **Export** area, check the status of the export request. The progress indicates how many documents are exported.
-1.  Go to the output folder that you specified when you configured export options. When documents are exported as XML files, the output folder name is based on the time stamp when the export occurs. The output folder contains XMI files (`*.xmi`) and the UIMA TypeSystem descriptor file (`exported_typesystem.xml`).
+1. In the **Export** area, check the status of the export request. The progress indicates how many documents are exported.
+1. Go to the output folder that you specified when you configured export options. When documents are exported as XML files, the output folder name is based on the time stamp when the export occurs. The output folder contains XMI files (`*.xmi`) and the UIMA TypeSystem descriptor file (`exported_typesystem.xml`).
 
 #### What to do next
 {: #wks_uimawexca__preUIMAimport}
@@ -327,13 +306,13 @@ You can export a collection of analyzed documents from {{site.data.keyword.watso
 
 To get analyzed documents from a Content Analytics Studio collection, follow these steps:
 
-1.  Launch Content Analytics Studio and open the Studio project.
-1.  Right-click a folder that contains documents that you want to use for training a machine learning model and select **Analyze Collection**.
-1.  Select a UIMA pipeline configuration file.
-1.  Go to the Collection Analysis view and click the **Save** icon in the Collection Analysis view. Specify the folder where the saved results are to be written and specify the file name.
-1.  Open the folder that you specified. The file extension of the saved file is `.annotations`.
-1.  Copy the `.annotations` file to your local file system and rename the file extension from `.annotations` to `.zip`.
-1.  Extract all files from the .zip file. The extracted contents include XMI files (`*.xmi`), the UIMA TypeSystem descriptor file (`TypeSystem.xml`), and other files.
+1. Launch Content Analytics Studio and open the Studio project.
+1. Right-click a folder that contains documents that you want to use for training a machine learning model and select **Analyze Collection**.
+1. Select a UIMA pipeline configuration file.
+1. Go to the Collection Analysis view and click the **Save** icon in the Collection Analysis view. Specify the folder where the saved results are to be written and specify the file name.
+1. Open the folder that you specified. The file extension of the saved file is `.annotations`.
+1. Copy the `.annotations` file to your local file system and rename the file extension from `.annotations` to `.zip`.
+1. Extract all files from the .zip file. The extracted contents include XMI files (`*.xmi`), the UIMA TypeSystem descriptor file (`TypeSystem.xml`), and other files.
 
 #### What to do next
 {: #wks_uimawexstudio_next}
@@ -355,7 +334,7 @@ The type system in your {{site.data.keyword.knowledgestudioshort}} workspace mus
 
 To map UIMA types to {{site.data.keyword.knowledgestudioshort}} entity types, follow these steps:
 
-1.  Create a file named `cas2di.tsv` in the folder that contains the UIMA TypeSystem descriptor file, such as `exported_typesystem.xml` or `TypeSystem.xml`.
+1. Create a file named `cas2di.tsv` in the folder that contains the UIMA TypeSystem descriptor file, such as `exported_typesystem.xml` or `TypeSystem.xml`.
 1.  Open the `cas2di.tsv` file with a text editor. Each line in the file specifies a single mapping. The format of the mapping depends on which annotator's annotations you want to map:
 
     - You can create mappings by using the basic format:
@@ -364,7 +343,7 @@ To map UIMA types to {{site.data.keyword.knowledgestudioshort}} entity types, fo
 
         The following example defines mappings between UIMA types produced by the Named Entity Recognition annotator in {{site.data.keyword.watson}} Explorer Content Analytics and entity types defined in a {{site.data.keyword.knowledgestudioshort}} type system:
 
-        ```
+        ```bash
         com.ibm.langware.Organization  ORGANIZATION
         com.ibm.langware.Person  PERSON
         com.ibm.langware.Location  LOCATION
@@ -373,7 +352,7 @@ To map UIMA types to {{site.data.keyword.knowledgestudioshort}} entity types, fo
 
         Another example defines a mapping between UIMA types produced by custom annotator that was created in {{site.data.keyword.watson}} Explorer Content Analytics Studio and {{site.data.keyword.knowledgestudioshort}} entity types:
 
-        ```
+        ```bash
         com.ibm.Person  PERSON
         com.ibm.Date  DATE
         ```
@@ -381,14 +360,14 @@ To map UIMA types to {{site.data.keyword.knowledgestudioshort}} entity types, fo
 
     - You can create mappings based on facets that are used in the Pattern Matcher annotator or Dictionary Lookup annotator in {{site.data.keyword.watson}} Explorer Content Analytics. In text analysis rule files (`*.pat`), the facet is represented as the category attribute. To define a mapping, use the following syntax:
 
-        ```
+        ```bash
         com.ibm.takmi.nlp.annotation_type.ContiguousContext:category={FACET_PATH}[TAB]{WKS_ENTITY_TYPE}
         ```
         {: screen}
 
         The following example, which applies to the Pattern Matcher and Dictionary Lookup annotators, defines a mapping between the category $.mykeyword.product and the {{site.data.keyword.knowledgestudioshort}} entity type PRODUCT:
 
-        ```
+        ```bash
         com.ibm.takmi.nlp.annotation_type.ContiguousContext:category=$.mykeyword.product PRODUCT
         ```
         {: screen}
@@ -422,17 +401,17 @@ UIMA analysis engines allow annotations to span sentences. In {{site.data.keywor
 
 To upload pre-annotated documents into a {{site.data.keyword.knowledgestudioshort}} workspace, follow these steps:
 
-1.  Create a .zip file that contains all of the files that are required by {{site.data.keyword.knowledgestudioshort}}.
+1. Create a .zip file that contains all of the files that are required by {{site.data.keyword.knowledgestudioshort}}.
 
-    1.  Select the folder that contains the XMI files, UIMA type system descriptor file, and `cas2di.tsv` file, or select all of the files in the folder.
-    1.  Create a .zip file that includes all files. Make sure the `cas2di.tsv` and UIMA type system descriptor files are stored in the root directory of the .zip file. These files cannot be stored in a subfolder within the .zip file or {{site.data.keyword.knowledgestudioshort}} will not be able to read them, and nothing will be imported.
+    1. Select the folder that contains the XMI files, UIMA type system descriptor file, and `cas2di.tsv` file, or select all of the files in the folder.
+    1. Create a .zip file that includes all files. Make sure the `cas2di.tsv` and UIMA type system descriptor files are stored in the root directory of the .zip file. These files cannot be stored in a subfolder within the .zip file or {{site.data.keyword.knowledgestudioshort}} will not be able to read them, and nothing will be imported.
 
         In Windows, you can right-click and select **Send to** > **Compressed (zipped) folder**.
 
-1.  Upload the .zip file into a {{site.data.keyword.knowledgestudioshort}} workspace.
+1. Upload the .zip file into a {{site.data.keyword.knowledgestudioshort}} workspace.
 
-    1.  Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager, open the workspace that you want to add the documents to, and open the **Assets**> **Documents** page.
-    1.  Click **Upload Document Sets**.
-    1.  Drag the .zip file that you created or click to locate and select the file.
-    1.  Select the check box to indicate that the .zip file contains UIMA CAS XMI files.
-    1.  Click **Upload**.
+    1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager, open the workspace that you want to add the documents to, and open the **Assets**> **Documents** page.
+    1. Click **Upload Document Sets**.
+    1. Drag the .zip file that you created or click to locate and select the file.
+    1. Select the check box to indicate that the .zip file contains UIMA CAS XMI files.
+    1. Click **Upload**.
