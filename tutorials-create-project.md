@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-08-03"
+  years: 2015, 2022
+lastupdated: "2022-03-14"
 
 subcollection: watson-knowledge-studio
 
@@ -49,8 +49,8 @@ This {{site.data.keyword.knowledgestudiofull}} tutorial helps you perform prereq
 
 After creating a service instance, the user who created the service instance and any users with [{{site.data.keyword.cloud_notm}} roles](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-roles) that allow access to the service instance will be able to launch the {{site.data.keyword.knowledgestudioshort}} application with the following steps.
 
-1. {: hide-dashboard} Go to the [{{site.data.keyword.cloud_notm}} resources](https://{DomainName}/resources){: external} page. Log in with your {{site.data.keyword.ibmid}}.
-1. {: hide-dashboard} Select **Services** and click on your {{site.data.keyword.knowledgestudioshort}} service instance to open the {{site.data.keyword.knowledgestudioshort}} service dashboard.
+1. Go to the [{{site.data.keyword.cloud_notm}} resources](https://{DomainName}/resources){: external} page. Log in with your {{site.data.keyword.ibmid}}.
+1. Select **Services** and click on your {{site.data.keyword.knowledgestudioshort}} service instance to open the {{site.data.keyword.knowledgestudioshort}} service dashboard.
 1. Click **Launch tool** from the Manage page.
 
 After you launch {{site.data.keyword.knowledgestudioshort}}, you can copy the URL and use it to launch the application directly.
@@ -109,7 +109,7 @@ A workspace defines all the resources that are required to create a machine lear
 ### Procedure
 {: #wks_tutless2_procedure}
 
-1. {: hide-dashboard} As a {{site.data.keyword.knowledgestudioshort}} administrator, from your {{site.data.keyword.cloud_notm}} [resources](https://{DomainName}/resources){:new_window} page, click the {{site.data.keyword.knowledgestudioshort}} service instance under **Services**.
+1. As a {{site.data.keyword.knowledgestudioshort}} administrator, from your {{site.data.keyword.cloud_notm}} [resources](https://{DomainName}/resources){: new_window} page, click the {{site.data.keyword.knowledgestudioshort}} service instance under **Services**.
 1. Click **Launch tool** from the Manage page.
 1. Click **Create Workspace**.
 1. Specify the details for the new workspace:
