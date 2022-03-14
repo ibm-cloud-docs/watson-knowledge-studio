@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-08-27"
+  years: 2022
+lastupdated: "2022-03-14"
 
 keywords: troubleshooting access for knowledge studio
 
@@ -29,13 +29,13 @@ subcollection: watson-knowledge-studio
 {: support}
 
 Find out how to grant users access to {{site.data.keyword.knowledgestudioshort}} and address common access issues.
-{:shortdesc}
+{: shortdesc}
 
 Users see a message such as "you are not authorized" when opening the Knowledge Studio application.
-{:tsSymptoms}
+{: tsSymptoms}
 
 Review the following scenarios to troubleshoot access problems:
-{:tsResolve}
+{: tsResolve}
 * Are you using a plan that allows for multiple users? Lite plans are limited to one user.  Select Standard or Premium plan to work with a team.
 
 * Are you using a supported browser? For information, see [Browser requirements](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-system-requirements).
