@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-08-03"
+  years: 2015, 2022
+lastupdated: "2022-03-14"
 
 subcollection: watson-knowledge-studio
 
@@ -56,37 +56,16 @@ To help you identify areas that require investigation, scores that fall below th
 
 The score in the **All** column is a *Fleiss Kappa score*. It represents how consistently the same annotation was applied by multiple human annotators across all overlapping documents in the task. The value, which can range up to 1 and even be negative, can help you identify weaknesses in the annotation guidelines or particular human annotators. The following guidelines (*Landis and Koch, 1977*) provide a starting point for assessing overall performance.
 
-<table style="width:60%" summary="This table provides general inter-annotator guidelines for assessing overall performance.">
-  <caption>Table 1. Inter-annotator guidelines</caption>
-  <tr>
-    <th style="vertical-align:bottom; text-align:center" id="d12741e148">Score</th>
-    <th style="vertical-align:bottom; text-align:center" id="d12741e150">Agreement level</th>
-  </tr>
-  <tr>
-    <td style="vertical-align:top; text-align:center" headers="d12741e148">&lt; 0</td>
-    <td style="vertical-align:top; text-align:center" headers="d12741e150">Poor</td>
-  </tr>
-  <tr>
-    <td style="vertical-align:top; text-align:center" headers="d12741e148">.01 - .20</td>
-    <td style="vertical-align:top; text-align:center" headers="d12741e150">Slight</td>
-  </tr>
-  <tr>
-    <td style="vertical-align:top; text-align:center" headers="d12741e148">.21 - .40</td>
-    <td style="vertical-align:top; text-align:center" headers="d12741e150">Fair</td>
-  </tr>
-  <tr>
-    <td style="vertical-align:top; text-align:center" headers="d12741e148">.41 - .60</td>
-    <td style="vertical-align:top; text-align:center" headers="d12741e150">Moderate</td>
-  </tr>
-  <tr>
-    <td style="vertical-align:top; text-align:center" headers="d12741e148">.61 - .80</td>
-    <td style="vertical-align:top; text-align:center" headers="d12741e150">Substantial</td>
-  </tr>
-  <tr>
-    <td style="vertical-align:top; text-align:center" headers="d12741e148">.81 - 1.0</td>
-    <td style="vertical-align:top; text-align:center" headers="d12741e150">Perfect</td>
-  </tr>
-</table>
+Table 1. Inter-annotator guidelines
+
+| **Score** | **Agreement level** |
+| --- | --- |
+| < 0 | Poor |
+| .01 -.20 | Slight |
+| .21 -.40 | Fair |
+| .41 - .60 | Moderate |
+| .61 - .80 | Substantial |
+| .81 - 1.0 | Perfect |
 
 The score in the other columns is an *F1 measure*. It represents the level of annotation consistency between a pair of human annotators. The value can range from 0 to 1, where perfect agreement is indicated by the score 1. What constitutes an acceptable level of agreement depends on your domain data and type system. But to provide an example, here are the F1 thresholds that project managers expect to be met or exceeded in projects that are based on the KLUE type system:
 
@@ -143,15 +122,15 @@ Here are a few examples of various ways that human annotators disagree:
 
 - **Mentions**
 
-    - Annotator_1 places a mention on a span of text; Annotator_2 does not.
-    - Annotator_1's index begins or ends before or after Annotator_2's (there is a partial overlap or subrange of text).
-    - Annotator_1 assigns an entity type that is different from the entity type that Annotator_2 assigned.
+  - Annotator_1 places a mention on a span of text; Annotator_2 does not.
+  - Annotator_1's index begins or ends before or after Annotator_2's (there is a partial overlap or subrange of text).
+  - Annotator_1 assigns an entity type that is different from the entity type that Annotator_2 assigned.
 
 - **Relations**
 
-    - Annotator_1 creates a relation between two mentions; Annotator_2 does not.
-    - Annotator_1 and Annotator_2 create a relation between the same mentions, but with a different relation type.
-    - Annotator_1 and Annotator_2 create a relation between the same mentions, but in the reverse order (rare, because the relation between the first mention and second mention is constrained by the type system).
+  - Annotator_1 creates a relation between two mentions; Annotator_2 does not.
+  - Annotator_1 and Annotator_2 create a relation between the same mentions, but with a different relation type.
+  - Annotator_1 and Annotator_2 create a relation between the same mentions, but in the reverse order (rare, because the relation between the first mention and second mention is constrained by the type system).
 
 - **Coreference chains**
 
@@ -165,7 +144,7 @@ Adjudication is a step that allows you to review annotation conflicts in overlap
 ### Before you begin
 {: #wks_haadjudicate_prereq}
 
-Click [this link ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.youtube.com/watch?v=EbexfsuXxoQ&amp;feature=youtu.be){: new_window} to watch a 3-minute video that illustrates how to adjudicate documents.
+[Watch](https://www.youtube.com/watch?v=EbexfsuXxoQ&amp;feature=youtu.be) a 3-minute video that illustrates how to adjudicate documents.
 
 ### About this task
 {: #wks_haadjudicate_about}
