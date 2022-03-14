@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-08-03"
+  years: 2015, 2022
+lastupdated: "2022-03-14"
 
 subcollection: watson-knowledge-studio
 
@@ -46,7 +46,7 @@ To define a rule, complete the following steps:
 
     For example, you might add a document named `My Document` that contains this single line of text:
 
-    ```
+    ```bash
     A 50-year-old driver was driving the 2017 Example Horizon.
     ```
     {: screen}
@@ -91,7 +91,7 @@ To define a rule, complete the following steps:
 
         For example, to capture a number that represents an age (up to age 99), you can specify `[0-9]{1,2}`. To capture expressions of time, like *12:30 AM*, you might specify this regular expression:
 
-        ```
+        ```bash
         (1[0-2]|0?[1-9]):([0-5][0-9])(\s+[AaPp][Mm])?
         ```
         {: screen}
@@ -111,7 +111,7 @@ To define a rule, complete the following steps:
 1. Open the document with the pattern that you want to capture as a rule. For example, if you created a document titled, `My Document` with the sample text that contains the phrase `50-year-old`, open that document.
 1. From the text in the document, select the characters that illustrate the pattern that you want to capture. For example, you can select the following words and hyphens (-):
 
-    ```
+    ```bash
     50-year-old
     ```
     {: screen}
@@ -128,235 +128,46 @@ To define a rule, complete the following steps:
 
     In the bottom layer of cells, click the first token to review its conditions. If you want to indicate that any token can be used in the current position in the pattern, then click **Open Properties**, and select **Allow any token**. Click **Close Properties**. If a token is a regex, such as `AGE_REGEX` in the example, **Allow any token** is not available.
 
-    > **Note:** The maximum number of group cells that can participate in a pattern is 15 when each cell has a repeat setting of 1 or less. Group cells include single tokens, annotations, or tokens where any token is allowed. The maximum number of total tokens allowed in a pattern is 20. Take the repeat setting of each cell into account as you define the pattern. For example, you can define a pattern that includes 15 tokens when each cell has a repeat setting of 1 or less. But, you can define no more than 4 tokens in the pattern if each one has a repeat setting of 1 or more because for each one, the token can repeat up to 5 times. Four tokens that are repeated 5 times brings you to the allowed maximum of 20.
+    The maximum number of group cells that can participate in a pattern is 15 when each cell has a repeat setting of 1 or less. Group cells include single tokens, annotations, or tokens where any token is allowed. The maximum number of total tokens allowed in a pattern is 20. Take the repeat setting of each cell into account as you define the pattern. For example, you can define a pattern that includes 15 tokens when each cell has a repeat setting of 1 or less. But, you can define no more than 4 tokens in the pattern if each one has a repeat setting of 1 or more because for each one, the token can repeat up to 5 times. Four tokens that are repeated 5 times brings you to the allowed maximum of 20.
 
     To indicate that a particular type of token is required, you can define the following types of condition settings:
+
     - **Repeat Setting**: Specifies how many times the current token must be included in the pattern. You can change the repeat setting, but only one repeat setting can be specified per token. The options are described in the following table.
 
-    <table summary="">
-      <caption>Table 1. Repeating settings</caption>
-      <tr>
-        <th style="vertical-align:bottom; text-align:left" id="d27028e471">
-          Setting option
-        </th>
-        <th style="vertical-align:bottom; text-align:left" id="d27028e473">
-          Description
-        </th>
-      </tr>
-      <tr>
-        <td headers="d27028e471">
-          <p>Required (Exactly 1)</p>
-        </td>
-        <td headers="d27028e473">
-          <p>This token must exist in the pattern one time. This option is applied by default, but can be changed.</p>
-        </td>
-      </tr>
-      <tr>
-        <td headers="d27028e471">
-          <p>Repeating 1 or more times</p>
-        </td>
-        <td headers="d27028e473">
-          <p>This token must exist in the pattern at least one time, and can repeat more times.</p>
-        </td>
-      </tr>
-      <tr>
-        <td headers="d27028e471">
-          <p>Repeating 0 or more times</p>
-        </td>
-        <td headers="d27028e473">
-          <p>This token can optionally repeat in the pattern many times, but does not have to repeat.</p>
-        </td>
-      </tr>
-      <tr>
-        <td headers="d27028e471">
-          <p>Occurring 0 or 1 time</p>
-        </td>
-        <td headers="d27028e473">
-          <p>This token is optional.</p>
-        </td>
-      </tr>
-      <tr>
-        <td headers="d27028e471">
-          <p>Advanced: _custom_</p>
-        </td>
-        <td headers="d27028e473">
-          <p>This token must repeat in the pattern the number of times that is specified here. To define a custom repeat setting, click <b>Open Properties</b>, select **Advanced**, and then select the exact number of repeats or range of repeats that you want to define.</p>
-          <p>
-            The maximum number of repeats that are allowed for a token is 5.</p>
-        </td>
-      </tr>
-    </table>
+      Table 1. Repeating settings
+      | **Setting option** | **Description** |
+      | --- | --- |
+      | Required (Exactly 1) | This token must exist in the pattern one time. This option is applied by default, but can be changed. |
+      | Repeating 1 or more times | This token must exist in the pattern at least one time, and can repeat more times. |
+      | Repeating 0 or more times | This token can optionally repeat in the pattern many times, but does not have to repeat. |
+      | Occurring 0 or 1 time | This token is optional. |
+      | Advanced: *custom* | This token must repeat in the pattern the number of times that is specified here. To define a custom repeat setting, click Open Properties, select Advanced, and then select the exact number of repeats or range of repeats that you want to define. The maximum number of repeats that are allowed for a token is 5. |
 
     - **Feature Setting**: At least one of the feature settings must be defined. You can add more features to add to the number of conditions that must be met for text to match this pattern. The options are described in the following table.
 
-    <table summary="">
-      <caption>Table 2. Feature settings</caption>
-      <tr>
-        <th style="vertical-align:bottom; text-align:left" id="d27028e512">
-          Setting option
-        </th>
-        <th style="vertical-align:bottom; text-align:left" id="d27028e514">
-          Condition it adds
-        </th>
-      </tr>
-      <tr>
-        <td headers="d27028e512">
-          <p>Text</p>
-        </td>
-        <td headers="d27028e514">
-          <p>Must match the exact text in this token. This option is applied by default. You can remove it, but only if you add a different setting as a condition or apply the Any token setting.</p>
-        </td>
-      </tr>
-      <tr>
-        <td headers="d27028e512">
-          <p>Length</p>
-        </td>
-        <td headers="d27028e514">
-          <p>Must match the character length of this token. The length is counted starting at 0 from in front of the first character.</p>
-        </td>
-      </tr>
-    </table>
+      Table 2. Feature settings
+      | **Setting option** | **Condition it adds** |
+      | --- | --- |
+      | Text | Must match the exact text in this token. This option is applied by default. You can remove it, but only if you add a different setting as a condition or apply the Any token setting. |
+      | Length | Must match the character length of this token. The length is counted starting at 0 from in front of the first character. |
 
     The rest of the options differ depending on the type of the token.
 
     - **Unannotated token that does not match a regex or dictionary term**: These settings are available for tokens that are not annotated and do not match a regex or dictionary term.
 
-    <table summary="">
-      <caption>Table 3. Unannotated token settings</caption>
-      <tr>
-        <th style="vertical-align:bottom; text-align:left" id="d27028e535">Setting option</th>
-        <th style="vertical-align:bottom; text-align:left" id="d27028e537">Description</th>
-      </tr>
-      <tr>
-        <td headers="d27028e535">
-          <p>Part of speech</p>
-        </td>
-        <td headers="d27028e537">
-          <p>Must be the same part of speech as this token. The following types are supported:</p>
-          <ul>
-            <li>
-              adjective
-            </li>
-            <li>
-              adposition
-            </li>
-            <li>
-              adverb
-            </li>
-            <li>
-              conjunction
-            </li>
-            <li>
-              determiner
-            </li>
-            <li>
-              interjection
-            </li>
-            <li>
-              noun
-            </li>
-            <li>
-              numeral
-            </li>
-            <li>
-              pronoun
-            </li>
-            <li>
-              residual
-            </li>
-            <li>
-              verb
-            </li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td headers="d27028e535">
-          <p>Lemma</p>
-        </td>
-        <td headers="d27028e537">
-          <p>Must have the same lemma as this token.</p>
-        </td>
-      </tr>
-      <tr>
-        <td headers="d27028e535">
-          <p>Character Type</p>
-        </td>
-        <td headers="d27028e537">
-          <p>Must have the same character type as this token. The following types are supported:</p>
-          <ul>
-            <li>
-              <p>Arabic: Contains a sequence of Arabic characters</p>
-            </li>
-            <li>
-              <p>ChineseNumeral: Contains only Chinese numerals</p>
-            </li>
-            <li>
-              <p>ClauseEndingPunctuation: Punctuation characters that separate one clause or sentence from the next</p>
-            </li>
-            <li>
-              <p>Han: Contains Han characters</p>
-            </li>
-            <li>
-              <p>Hangul: Contains Korean Hangul syllabic characters</p>
-            </li>
-            <li>
-              <p>Hebrew: Contains a sequence of Hebrew characters</p>
-            </li>
-            <li>
-              <p>Hiragana: Contains Japanese Hiragana syllabic characters</p>
-            </li>
-            <li>
-              <p>Ideographic: Contains an ideogram, or symbol representing an idea or thing</p>
-            </li>
-            <li>
-              <p>Katakana: Contains Japanese Katakana syllabic characters</p>
-            </li>
-            <li>
-              <p>Lowercase: Contains only lower case alphabetic characters</p>
-            </li>
-            <li>
-              <p>Numeric: Contains only numeric characters</p>
-            </li>
-            <li>
-              <p>Punctuation: One or more characters that provide punctuation in the text</p>
-            </li>
-            <li>
-              <p>Syllabic: Contains syllabic characters</p>
-            </li>
-            <li>
-              <p>Thai: Contains Thai characters</p>
-            </li>
-            <li>
-              <p>Titlecase: Starts with a single upper case alphabetic character, followed by one or more lower case alphabetic characters</p>
-            </li>
-            <li>
-              <p>Uppercase: A token containing only upper case alphabetic characters</p>
-            </li>
-          </ul>
-        </td>
-      </tr>
-    </table>
+      Table 3. Unannotated token settings
+      | **Setting option** | **Description** |
+      | --- | --- |
+      | Part of Speech | Must be the same part of speech as this token. The following types are supported:<ul><li>adjective</li><li>adposition</li><li>adverb</li><li>conjunction</li><li>determiner</li><li>interjection</li><li>noun</li><li>numeral</li><li>pronoun</li><li>residual</li><li>verb</li></ul> |
+      | Lemma | Must have the same lemma as this token. |
+      | Character Type | Must have the same character type as this token. The following types are supported:<ul><li>Arabic: Contains a sequence of Arabic characters</li><li>ChineseNumeral: Contains only Chinese numerals</li><li>ClauseEndingPunctuation: Punctuation characters that separate one clause or sentence from the next</li><li>Han: Contains Han characters</li><li>Hangul: Contains Korean Hangul syllabic characters</li><li>Hebrew: Contains a sequence of Hebrew characters</li><li>Hiragana: Contains Japanese Hiragana syllabic characters</li><li>Ideographic: Contains an ideogram, or symbol representing an idea or thing</li><li>Katakana: Contains Japanese Katakana syllabic characters</li><li>Lowercase: Contains only lower case alphabetic characters</li><li>Numeric: Contains only numeric characters</li><li>Punctuation: One or more characters that provide punctuation in the text</li><li>Syllabic: Contains syllabic characters</li><li>Thai: Contains Thai characters</li><li>Titlecase: Starts with a single upper case alphabetic character, followed by one or more lower case alphabetic characters</li><li>Uppercase: A token containing only upper case alphabetic characters |
 
     - **Rule Match:**
 
-    <table summary="">
-      <caption>Table 4. Rule matching</caption>
-      <tr>
-        <th style="vertical-align:bottom; text-align:left" id="d27028e617">
-          Setting option</th>
-        <th style="vertical-align:bottom; text-align:left" id="d27028e619">
-          Description</th>
-      </tr>
-      <tr>
-        <td headers="d27028e617">
-          <p>Rule Match</p>
-        </td>
-        <td headers="d27028e619">
-          <p>Must match the named class. Remember, a class can be derived from a regex, a dictionary, or a rule. If the class specified here was derived from a regular expression, for example, then this token must match the search pattern of the expression.</p>
-        </td>
-      </tr>
-    </table>
+      Table 4. Rule matching
+      | **Setting option** | **Description** |
+      | --- | --- |
+      | Rule Match | Must match the named class. Remember, a class can be derived from a regex, a dictionary, or a rule. If the class specified here was derived from a regular expression, for example, then this token must match the search pattern of the expression. |
 
 11. For tokens that have annotations that were added indirectly from a dictionary annotation or regular expression match, you can choose whether the pattern should require any word with the same annotation type or the actual underlying words that were annotated instead.
 
@@ -372,7 +183,8 @@ To define a rule, complete the following steps:
 
     Assign a class to the selected cell or cells. If the class you want to assign does not exist, you can add it. Type the class name into the **Assign class** field and press **Enter**.
 
-    > **Note:** You cannot add more than 10 classes for the rule.
+    You cannot add more than 10 classes for the rule.
+    {: tip}
 
     ![The "Create a rule" section showing the "Assign class" window that opens when you click a token. The window shows a field where you can enter the name of a new class, or select an existing class from the list.](images/rule_step6.png)
 
