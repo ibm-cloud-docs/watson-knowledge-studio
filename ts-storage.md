@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-08-31"
+  years: 2022
+lastupdated: "2022-03-14"
 
 keywords: troubleshooting storage for knowledge studio, troubleshoot storage space limits
 
@@ -29,20 +29,20 @@ subcollection: watson-knowledge-studio
 {: support}
 
 Depending on your subscription plan, you might reach the storage limit that is specified for your plan and be prevented from completing tasks.
-{:shortdesc}
+{: shortdesc}
 
 You might see a message about exceeding the allowed storage space when you attempt to perform one of these tasks:
-{:tsSymptoms}
+{: tsSymptoms}
 
 - Upload documents or dictionaries
 - Deploy a model or version a model
 - Run a pre-annotator on documents
 
 The storage limit is met or exceeded if the action proceeds.
-{:tsCauses}
+{: tsCauses}
 
 The largest consumers of storage space are machine learning and rule-based models. To free up space, you can take the following actions:
-{:tsResolve}
+{: tsResolve}
 
 - Delete snapshot versions of any models that you do not expect to need to revert to.
 - Delete any models that you do not need.
