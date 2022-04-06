@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-14"
+lastupdated: "2022-04-06"
 
 subcollection: watson-knowledge-studio
 
@@ -30,13 +30,9 @@ The table below shows supported model deployment paths **From** {{site.data.keyw
 
 | From: Public Cloud - {{site.data.keyword.knowledgestudioshort}} | To: {{site.data.keyword.icp4dfull_notm}} - {{site.data.keyword.discoveryfull}} | To: Public Cloud - {{site.data.keyword.discoveryfull}} | To: Public Cloud - {{site.data.keyword.nlufull}} |
 |------------|-------|-----------------|-----------------|
-| Machine learning | Upload via {{site.data.keyword.discoveryshort}} UI | Deploy/Upload via UI <sup>1</sup> | Deploy via {{site.data.keyword.knowledgestudioshort}} UI |
-| Rule-based | Upload via {{site.data.keyword.discoveryshort}} UI | Deploy/Upload via UI <sup>1</sup> | Deploy via {{site.data.keyword.knowledgestudioshort}} UI |
-| Advanced rules | Upload via {{site.data.keyword.discoveryshort}} UI | Deploy/Upload via UI <sup>2</sup> | Deploy via API <sup>3</sup> |
+| Machine learning | Upload via {{site.data.keyword.discoveryshort}} UI | Upload via UI | Deploy via {{site.data.keyword.knowledgestudioshort}} UI |
+| Rule-based | Upload via {{site.data.keyword.discoveryshort}} UI | Upload via UI | Deploy via {{site.data.keyword.knowledgestudioshort}} UI |
+| Advanced rules | Upload via {{site.data.keyword.discoveryshort}} UI | Upload via UI | Deploy via API <sup>1</sup> |
 {: caption="Table 1. Model deployment paths" caption-side="top"}
 
-<sup>1</sup> {{site.data.keyword.knowledgestudioshort}} UI for {{site.data.keyword.discoveryshort}} v1; {{site.data.keyword.discoveryshort}} UI for {{site.data.keyword.discoveryshort}} Premium v2 & Plus v2
-
-<sup>2</sup> {{site.data.keyword.discoveryshort}} UI for {{site.data.keyword.discoveryshort}} Premium v2 & Plus v2
-
-<sup>3</sup> Deploying an advanced rules model to {{site.data.keyword.nlushort}} is deprecated. As of June 10, 2021, you will not be able to deploy advanced rules models to {{site.data.keyword.nlushort}}.
+<sup>1</sup> Deploying an advanced rules model to {{site.data.keyword.nlushort}} is deprecated. As of June 10, 2021, you cannot deploy advanced rules models to {{site.data.keyword.nlushort}}.

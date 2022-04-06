@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-11-06"
+  years: 2015, 2022
+lastupdated: "2022-04-06"
 
 subcollection: watson-knowledge-studio
 
@@ -42,11 +42,6 @@ You can also pre-annotate new documents with the machine learning model. See [Pr
 
 When you are satisfied with the performance of the model, you can deploy a version of it to {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}}. This feature enables your applications to use the deployed machine learning model to enrich the insights that you get from your data to include the recognition of concepts and relations that are relevant to your domain.
 
-### Before you begin
-{: #wks_madiscovery_prereqs}
-
-You must have administrative access to a {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}} service instance, and know the {{site.data.keyword.cloud_notm}} space and instance names that are associated with it.
-
 ### About this task
 {: #wks_madiscovery_about}
 
@@ -55,7 +50,7 @@ When you deploy the machine learning model, you select the version of it that yo
 ### Procedure
 {: #wks_madiscovery_procedure}
 
-To deploy a machine learning model to {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}}, complete the following steps:
+To deploy a machine learning model, complete the following steps:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager, and select your workspace.
 1. Select **Machine Learning Model** > **Versions**.
@@ -73,12 +68,25 @@ To deploy a machine learning model to {{site.data.keyword.watson}} {{site.data.k
 
     If the model is still being deployed, the status indicates "deploying". After deployment completes, the status changes to "available" or "deployed" if the deployment was successful, or "error" if problems occurred.
 
-    Once available, make a note of the model ID (model_id). You will provide this ID to the {{site.data.keyword.discoveryshort}} service to enable the service to use your custom model.
+    Once available, make a note of the model ID (model_id).
 
 ### What to do next
 {: #wks_madiscovery_next}
 
-To use the deployed model, you must provide the model ID when it is requested during the {{site.data.keyword.discoveryshort}} service enrichment configuration process. For more information, see [Integrating with Watson Knowledge Studio](/docs/discovery?topic=discovery-integrating-with-wks) in the {{site.data.keyword.discoveryshort}} documentation.
+To use the model, you must export the model, and then import it into {{site.data.keyword.discoveryshort}}.
+
+1. Select **Machine Learning Model** > **Versions**.
+1. Click **Export current model**.
+
+    If you have a Lite plan subscription, no export option is available.
+
+    The model is saved as a ZIP file, and you are prompted to download the file.
+
+1. Download the file to your local system.
+1. From the {{site.data.keyword.discoveryshort}} service, follow the steps to create a Machine Learning enrichment, which include uploading the ZIP file. For more details, see [Machine Learning models](/docs/discovery-data?topic=discovery-data-domain#machinelearning){: external} in the {{site.data.keyword.discoveryshort}} v2 documentation.
+
+If you're using a {{site.data.keyword.discoveryshort}} v1 service instance, you must provide the model ID when it is requested during the {{site.data.keyword.discoveryshort}} service enrichment configuration process. For more information, see [Integrating you custom model with the {{site.data.keyword.discoveryshort}} tooling](/docs/discovery?topic=discovery-integrating-with-wks#integrate-customtooling){: external} in the {{site.data.keyword.discoveryshort}} v1 documentation.
+{: note}
 
 ## Deploying a machine learning model to IBM Watson Natural Language Understanding
 {: #wks_manlu}
