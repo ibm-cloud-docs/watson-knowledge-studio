@@ -85,7 +85,7 @@ To use the model, you must export the model, and then import it into {{site.data
 1. Download the file to your local system.
 1. From the {{site.data.keyword.discoveryshort}} service, follow the steps to create a Machine Learning enrichment, which include uploading the ZIP file. For more details, see [Machine Learning models](/docs/discovery-data?topic=discovery-data-domain#machinelearning){: external} in the {{site.data.keyword.discoveryshort}} v2 documentation.
 
-If you're using a {{site.data.keyword.discoveryshort}} v1 service instance, you must provide the model ID when it is requested during the {{site.data.keyword.discoveryshort}} service enrichment configuration process. For more information, see [Integrating you custom model with the {{site.data.keyword.discoveryshort}} tooling](/docs/discovery?topic=discovery-integrating-with-wks#integrate-customtooling){: external} in the {{site.data.keyword.discoveryshort}} v1 documentation.
+If you're using a {{site.data.keyword.discoveryshort}} v1 service instance, you must provide the model ID when it is requested during the {{site.data.keyword.discoveryshort}} service enrichment configuration process. For more information, see [Integrating your custom model with the {{site.data.keyword.discoveryshort}} tooling](/docs/discovery?topic=discovery-integrating-with-wks#integrate-customtooling){: external} in the {{site.data.keyword.discoveryshort}} v1 documentation.
 {: note}
 
 ## Deploying a machine learning model to IBM Watson Natural Language Understanding
