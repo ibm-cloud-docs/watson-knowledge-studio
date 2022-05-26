@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-03-14"
+lastupdated: "2022-05-26"
 
 subcollection: watson-knowledge-studio
 
@@ -107,7 +107,7 @@ You can build an extractor by combining one or more of the following elements.
 
 Defining a new extractor using natural language processing (NLP) concepts such as tokenization and part-of-speech requires developing an extractor using the Annotation Query Language (AQL).
 
-To see the languages that are supported for tokenization and part-of-speech analysis, see [Multilingual Support for Text Analytics](https://www.ibm.com/support/knowledgecenter/SSPT3X_4.0.0/com.ibm.swg.im.infosphere.biginsights.text.doc/doc/ana_txtan_lang-support.html). For more information about how to write AQL and available functions, see [Annotation Query Language reference](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-annotation-query-language-reference)
+For more information about how to write AQL and available functions, see [Annotation Query Language reference](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-annotation-query-language-reference)
 
 ### Creating a dictionary
 {: #creating-a-dictionary}
