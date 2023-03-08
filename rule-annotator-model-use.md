@@ -11,9 +11,6 @@ subcollection: watson-knowledge-studio
 
 {{site.data.keyword.attribute-definition-list}}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/knowledge-studio?topic=knowledge-studio-wks_rule_publish).
-{: tip}
-
 # Using the rule-based model
 {: #wks_rule_publish}
 
