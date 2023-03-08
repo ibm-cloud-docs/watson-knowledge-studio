@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-25"
+lastupdated: "2023-03-08"
 
 subcollection: watson-knowledge-studio
 
@@ -21,8 +21,6 @@ subcollection: watson-knowledge-studio
 {:screen: .screen}
 {:shortdesc: .shortdesc}
 
-This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/knowledge-studio?topic=knowledge-studio-wks_overview_full).
-{: tip}
 
 # About
 {: #wks_overview_full}
