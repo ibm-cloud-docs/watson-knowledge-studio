@@ -190,7 +190,7 @@ For more information about dictionaries, see [Adding dictionaries to a workspace
 1. In the **Part of Speech** column, select **Noun**.
 1. Click **Save**.
 
-    ![A screen capture of the Dictionaries page. The "IBM" dictionary entry is selected and its surface forms and part of speech are highlighted.](images/wks_tutdict4.png "A screen capture of the Dictionaries page. The "IBM" dictionary entry is selected and its surface forms and part of speech are highlighted.")
+    ![A screen capture of the Dictionaries page. The "IBM" dictionary entry is selected and its surface forms and part of speech are highlighted.](images/wks_tutdict4.png)
 
 ### What to do next
 {: #wks_tutless4_next}
