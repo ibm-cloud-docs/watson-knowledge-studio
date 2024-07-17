@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2023-03-08"
+  years: 2015, 2024
+lastupdated: "2024-07-17"
 
 subcollection: watson-knowledge-studio
 
@@ -21,11 +21,13 @@ subcollection: watson-knowledge-studio
 {:screen: .screen}
 {:shortdesc: .shortdesc}
 
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/knowledge-studio?topic=knowledge-studio-wks_overview_full).
+{: tip}
 
 # About
 {: #wks_overview_full}
 
-Use {{site.data.keyword.knowledgestudiofull}} to create a machine learning model that understands the linguistic nuances, meaning, and relationships specific to your industry or to create a rule-based model that finds entities in documents based on rules that you define.
+Use {{site.data.keyword.knowledgestudiofull}} to create a machine learning model that understands the linguistic nuances, meaning, and relationships specific to your industry, or to create a rule-based model that finds entities in documents based on rules that you define.
 {: shortdesc}
 
 ## Identify custom entities and relations
@@ -60,17 +62,6 @@ See [Creating a machine learning model](/docs/watson-knowledge-studio?topic=wats
 {{site.data.keyword.knowledgestudioshort}} provides a rules editor that simplifies the process of finding and capturing common patterns in your documents as rules. You can then create a model that recognizes the rule patterns, and deploy it for use in other services.
 
 See [Creating a rule-based model](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-rule-annotator) for more details.
-
-## Analyze text with advanced rules
-{: #advanced-rules}
-
-The advanced rules feature is Beta. The feature is in a trial stage of development and is not intended for use in production environments.
-{: beta}
-
-The visual advanced rules editor allows you to create text extractors with deeper customization potential than what is available in the entities and relations rules editor. A number of sample extractors, such as *Finance Actions* extractors and *Parts of Speech*, are provided. You can edit and combine them to create your own advanced rules model.
-You can analyze documents directly in the editor, or you can export your model to use with other services such as [{{site.data.keyword.nlushort}}](/docs/natural-language-understanding).
-
-To get started, see [Creating an advanced rules model](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-create-advanced-rules-model).
 
 ## Identify custom categories
 {: #categories}
