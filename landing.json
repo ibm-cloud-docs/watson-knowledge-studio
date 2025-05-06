@@ -29,6 +29,20 @@
     }
   ],
   "section_updates": {
-    "view_more": "/docs/watson-knowledge-studio?topic=watson-knowledge-studio-release-notes"
+    "view_more": "/docs/watson-knowledge-studio?topic=watson-knowledge-studio-release-notes",
+    "tiles": [
+      {
+        "date": "May 2025",
+        "title": "Rules editor and Dictionary suggestions on the editor UI will be ending on 30 June 2025"
+      },
+      {
+        "date": "May 2022",
+        "title": "Advanced Rules Editor (Beta) will be ending on 30 June 2022"
+      },
+      {
+        "date": "March 2020",
+        "title": "Enhanced pre-annotation workflow"
+      }
+    ]
   }
 }

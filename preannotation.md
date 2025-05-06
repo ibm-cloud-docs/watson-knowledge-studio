@@ -241,6 +241,7 @@ To use the rule-based model to pre-annotate documents, complete the following st
 
     You can also open the mapping page by selecting the **Rule-based Model** > **Versions** > **Rule-based Model** tab.
     {: note}
+
 1. Click **Edit** for each entity type you want to map.
     - The drop-down list of the **Class Name** column is pre-populated with classes that are associated with the rule-based model.
     - You must map at least one entity type to a class.
