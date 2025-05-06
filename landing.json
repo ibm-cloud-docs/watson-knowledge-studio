@@ -1,0 +1,34 @@
+{
+  "version": 2,
+  "title": "IBM Watson Knowledge Studio",
+  "introduction": "This documentation helps you use Watson Knowledge Studio.",
+  "product_page": "https://www.ibm.com/products",
+  "console_page": "/catalog/services/knowledge-studio",
+  "section_topics": {
+    "links": [
+      {
+        "title": "Getting started with Knowledge Studio",
+        "href": "/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutintro"
+      },
+      {
+        "title": "Machine learning model creation workflow",
+        "href": "/docs/watson-knowledge-studio?topic=watson-knowledge-studio-ml_annotator"
+      },
+      {
+        "title": "FAQs",
+        "href": "/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks-faqs"
+      }
+    ]
+  },
+  "section_highlights": [
+    {
+      "title": "Developer Community",
+      "description": "Knowledge Studio on Stack Overflow",
+      "href": "https://stackoverflow.com/search?q=watson-knowledge-studio",
+      "type": "training"
+    }
+  ],
+  "section_updates": {
+    "view_more": "/docs/watson-knowledge-studio?topic=watson-knowledge-studio-release-notes"
+  }
+}
