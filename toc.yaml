@@ -1,4 +1,3 @@
----
 toc:
   properties:
     subcollection: watson-knowledge-studio
@@ -11,7 +10,6 @@ toc:
     product-page: https://www.ibm.com/cloud/watson-knowledge-studio
     path: watson-knowledge-studio
     label: Knowledge Studio
-
   entries:
   - navgroup:
       id: learn
@@ -30,7 +28,6 @@ toc:
       - additional-resources.md
       - topic: release-notes.md
         navtitle: Release notes
-
   - navgroup:
       id: howto
       topics:
@@ -72,7 +69,8 @@ toc:
       - client-migration.md
       - upgrade.md
       - ha-dr.md
-
+      - include: /watson/watson-keyservice.md
+      - include: /watson/watson-public-private-endpoints.md
   - navgroup:
       id: reference
       topics:
@@ -82,18 +80,17 @@ toc:
       - glossary.md
       - language-support.md
       - information-security.md
-
   - navgroup:
       id: help
       topics:
       - troubleshooting.md
       - topicgroup:
-        label: Troubleshooting
-        topics:
-        - user-guide-help.md
-        - ts-storage.md
-        - ts-access.md
-        - ts-deploy-model.md
+         label: Troubleshooting
+         topics:
+          - user-guide-help.md
+          - ts-storage.md
+          - ts-access.md
+          - ts-deploy-model.md
       - support.md
       - topicgroup:
           label: Developer community
@@ -104,4 +101,3 @@ toc:
           - link:
               label: WDC Slack channel
               href: http://wdc-slack-inviter.mybluemix.net/
-      

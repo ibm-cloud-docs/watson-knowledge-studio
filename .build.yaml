@@ -1,0 +1,6 @@
+includes:
+  - https://github.ibm.com/cloud-docs/watson
+translation:
+  exclude:
+    byFilePath:
+      - watson/

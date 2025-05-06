@@ -20,6 +20,9 @@ subcollection: watson-knowledge-studio
 {:codeblock: .codeblock}
 {:screen: .screen}
 
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/knowledge-studio?topic=knowledge-studio-wks_tutboot_intro).
+{: tip}
+
 # Pre-annotating documents
 {: #wks_tutboot_intro}
 
@@ -39,7 +42,7 @@ This tutorial should take approximately 5 minutes to finish. If you explore othe
 - You're using a supported browser. For more information, see [Browser requirements](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-system-requirements).
 - You successfully completed [Getting started with {{site.data.keyword.knowledgestudioshort}}](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutintro), which covers creating a workspace, creating a type system, and adding a dictionary.
 - You successfully completed [Creating a machine learning model](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutml_intro).
-- You must have at least one user ID in either the Admin or Project Manager role. For more information about user roles, see [User roles in {{site.data.keyword.knowledgestudioshort}}](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-roles).
+- You have at least one user ID in either the Admin or Project Manager role. For more information about user roles, see [User roles in {{site.data.keyword.knowledgestudioshort}}](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-roles).
 
 ## Results
 {: #results}
@@ -70,7 +73,7 @@ For more information about pre-annotating documents, see [Bootstrapping annotati
 {: #wks_tutboot_ml_procedure}
 
 1.  Log in to {{site.data.keyword.knowledgestudioshort}} as the administrator.
-1.  Upload more documents to the workspace. You can use the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/documents-ml.csv" download>`documents-ml.csv`</a> file.
+1.  Upload more documents to the workspace. You can use the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/documents-ml.csv" download>`documents-ml.csv` <img src="../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a> file.
 
     For more information about adding documents to a workspace, see [Adding documents for annotation](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-documents-for-annotation).
 

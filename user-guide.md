@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-08-03"
+lastupdated: "2020-08-04"
 
 subcollection: watson-knowledge-studio
 
@@ -19,6 +19,10 @@ subcollection: watson-knowledge-studio
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
+
+
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/knowledge-studio?topic=knowledge-studio-user-guide).
+{: tip}
 
 # Annotating documents
 {: #user-guide}
@@ -172,7 +176,8 @@ When you open a document to annotate it, you might want to use the concordance t
 - Keep in mind that shorter entity mentions are better for training because it is easier for the machine learning model to recognize the shorter patterns and add the correct annotation tokens.
 - If you chose to use a dictionary-based tokenizer with the workspace, and want to handle compound terms and punctuation in your training data, you can add the terms to a dictionary and create a dictionary annotator to pre-annotate the occurrences. For example, to avoid sentence boundary breaks for terms that include punctuation, add terms like Yahoo! and Dr. to a dictionary. Likewise, if your training data includes hyphenated words or alphanumeric acronyms, like `Hi-C` or `MS-60-70`, add those terms to the dictionary. To annotate occurrences regardless of case, add the terms in lowercase (such as `hi-c`). To annotate variations, add the variations as surface forms (`MS-60-70` and `MS 60 70`).
 
-   **Important**: Do not use this approach if you are using the default tokenizer.
+   Do not use this approach if you are using the default tokenizer.
+   {: important}
 
 ### Procedure
 {: #wks_haentity_procedure}

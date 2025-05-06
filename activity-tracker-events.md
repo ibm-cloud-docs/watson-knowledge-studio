@@ -27,7 +27,7 @@ Use the {{site.data.keyword.cloudaccesstrailfull}} service to track how users an
 
 The {{site.data.keyword.cloudaccesstrailfull_notm}} service records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. For more information, see the  {{site.data.keyword.at_full_notm}} getting started tutorial [{{site.data.keyword.cloudaccesstrailshort}}](/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-getting-started).
 
-<!-- You can create different sections to group events by area. -->
+
 
 ## List of events
 {: #events}
@@ -51,7 +51,7 @@ The {{site.data.keyword.cloudaccesstrailfull_notm}} service records user-initiat
 | `knowledge-studio.dictionary.update` | Edit a dictionary (Create, edit, delete the dictionary entries and import *.csv* file into the dictionary)|
 | `knowledge-studio.dictionary.delete` | Delete a dictionary |
 | `knowledge-studio.workspace.delete` | Delete a workspace |
-{: caption="Table 1. Actions that generate events" caption-side="top"}
+{: caption="Actions that generate events" caption-side="top"}
 
 ## Where to view the events
 {: #where-to-view-events}

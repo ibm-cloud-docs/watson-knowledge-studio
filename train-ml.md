@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-08-03"
+  years: 2015, 2021
+lastupdated: "2021-02-24"
 
 subcollection: watson-knowledge-studio
 
@@ -19,6 +19,9 @@ subcollection: watson-knowledge-studio
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
+
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/knowledge-studio?topic=knowledge-studio-train-ml).
+{: tip}
 
 # Training the machine learning model
 {: #train-ml}
@@ -49,17 +52,20 @@ To create a machine learning model:
 1. Click **Train and evaluate**.
 1. Optional: To specify how you want to allocate documents from your document sets to be used by the system-level training, test, or blind sets, click **Edit settings**.
 
-    See [Document set management](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-improve-ml#wks_mamanagedata) for help determining which ratios to apply.
+    For more information about which ratios to apply, see [Document set management](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-improve-ml#wks_mamanagedata).
 
 1. Click **Train** to train the model, or click **Train & Evaluate** to train the model, evaluate annotations added by the machine learning model, and analyze the performance statistics.
 
-    > **Important:** Training a machine learning model can take several minutes or several hours, depending on the number of human annotations that exist and the total number of words across all documents.
+    Training a machine learning model can take several minutes or several hours, depending on the number of human annotations that exist and the total number of words across all documents.
+    {: tip}
 
 1. Select the document sets that you want to use for training the model.
 
-    > **Note:** The document sets must contain at least 10 annotated documents.
+    The document sets must contain at least 10 annotated documents.
+    {: tip}
 
 1. After the model is created, select one of the following actions:
+
 
 | Option | Description |
 |--------|-------------|

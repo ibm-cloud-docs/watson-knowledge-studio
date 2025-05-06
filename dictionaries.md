@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-08-04"
+  years: 2015, 2025
+lastupdated: "2025-05-06"
 
 subcollection: watson-knowledge-studio
 
@@ -20,6 +20,9 @@ subcollection: watson-knowledge-studio
 {:codeblock: .codeblock}
 {:screen: .screen}
 
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/knowledge-studio?topic=knowledge-studio-dictionaries).
+{: tip}
+
 # Creating dictionaries
 {: #dictionaries}
 
@@ -35,7 +38,8 @@ A dictionary is a list of words or phrases that are equivalent for information-e
 
 Consider this example: a dictionary entry contains the seven days of the week. To annotate a document, a human annotator assigns the entity type `DAY_OF_WEEK` to mentions of *Monday* and *Friday* in the text. Because the dictionary equates the seven days of the week, it helps ensure that a machine learning model correctly annotates occurrences of *Tuesday*, *Wednesday*, and the other days of the week in unseen documents at run time. In addition, equating these words also benefits information extraction in surrounding text. What the machine learning model learns from training examples about the texts near *Monday* and *Friday* gets applied to texts that the machine learning model sees near other days of the week because the dictionary states that these terms are equivalent for information-extraction purposes.
 
-> **Note:** You do not need to create a dictionary that contains days of the week information. Several general-purpose dictionaries like this are built in to the application. Other built-in dictionaries include countries, place names, number words, animals, plants, diseases, measurement words (such as *ounce* and *meter*), and salutation title words (such as *Mr.* and *Mrs.*). You cannot disable or edit built-in dictionaries.
+You do not need to create a dictionary that contains days of the week information. Several general-purpose dictionaries like this are built in to the application. Other built-in dictionaries include countries, place names, number words, animals, plants, diseases, measurement words (such as *ounce* and *meter*), and salutation title words (such as *Mr.* and *Mrs.*). You cannot disable or edit built-in dictionaries.
+{: tip}
 
 Avoid adding entries that have multiple meanings. For example, in a domain about auto racing, it makes sense to include the term *bank*, which refers to a road feature, only if financial institutions are not frequently discussed in the text also. If both senses of the word occur often in the source documents, then it is best to leave it out of both types of dictionaries: the dictionary that is associated with road features, and the dictionary that is associated with financial institutions.
 
@@ -89,7 +93,8 @@ The remaining lines in the file specify the dictionary entries, where:
     Specifies a code that identifies the part of speech. This part of speech information is used by the dictionary annotator to help with sentence tokenization.
     - `0` - Unknown
 
-        > **Note:** This code supports the scenario where you want to upload a large machine-generated dictionary that does not include part of speech information in each entry. You can assign *unknown* to all entries by default. Avoid using this code, if possible.
+        This code supports the scenario where you want to upload a large machine-generated dictionary that does not include part of speech information in each entry. You can assign *unknown* to all entries by default. Avoid using this code, if possible.
+        {: important}
 
     - `1` - Pronoun
     - `2` - Verb
@@ -104,7 +109,8 @@ The remaining lines in the file specify the dictionary entries, where:
 
     In English, noun (`3`), verb (`2`), and adjective (`4`) are the most common parts of speech that are used for dictionary entries.
 
-    > **Note:** The part of speech does not automatically determine the type of a mention. Do not assume that all nouns equate to entity type mentions and all verbs equate to relation type mentions. For example, *American* is an adjective but might be best annotated as entity type **GPE** (geopolitical entity) or `PERSON`. *Met* is a verb, but might be best annotated as an `EVENT_MEETING`.
+    The part of speech does not automatically determine the type of a mention. Do not assume that all nouns equate to entity type mentions and all verbs equate to relation type mentions. For example, *American* is an adjective but might be best annotated as entity type **GPE** (geopolitical entity) or `PERSON`. *Met* is a verb, but might be best annotated as an `EVENT_MEETING`.
+    {: tip}
 
     In other languages, such as German, which uses compound words, the accuracy of the part of speech information is even more important to help determine word boundaries.
 
@@ -222,6 +228,8 @@ Run the pre-annotator, which uses the dictionaries that you created to do a prel
 
 ## Adding dictionary suggestions
 {: #adding-dictionary-suggestions}
+
+
 
 As you add entries to your dictionary, {{site.data.keyword.knowledgestudioshort}} searches the documents in your workspace for similar dictionary entries that might be useful to you.
 
