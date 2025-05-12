@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-03-14"
+  years: 2020
+lastupdated: "2021-04-26"
 
 keywords: troubleshooting for knowledge studio, 
 
@@ -21,7 +21,7 @@ subcollection: watson-knowledge-studio
 {:note:.deprecated}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 
-<!-- You must add the troubleshoot content type in your attribute definitions AND on a new line under each troubleshooting topic H1 ID. -->
+
 
 # How do I troubleshoot an error when deploying a model?
 {: #wks_ts_exceeds_limit}
@@ -30,7 +30,7 @@ subcollection: watson-knowledge-studio
 
 You try to deploy a custom model, but it fails with an error if you exceed a machine learning model limit. {: shortdesc}
 
-When you try to deploy your custom model, the following error appears in a dialog: “owner exceeds allowable model limit” 
+When you try to deploy your custom model, the following error appears in a dialog: “owner exceeds allowable model limit”.
 {: tsSymptoms}
 
 To resolve the error, you must reduce the number of models by either undeploying or deleting a model. 

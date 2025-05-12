@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-03-14"
+  years: 2015, 2020
+lastupdated: "2020-08-04"
 
 subcollection: watson-knowledge-studio
 
@@ -19,6 +19,9 @@ subcollection: watson-knowledge-studio
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
+
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/knowledge-studio?topic=knowledge-studio-wks_tutintro).
+{: tip}
 
 # Getting started with {{site.data.keyword.knowledgestudioshort}}
 {: #wks_tutintro}
@@ -140,7 +143,7 @@ For more information about type systems, see [Type systems](/docs/watson-knowled
 {: #wks_tutless3_procedure}
 
 1. Download the <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/knowledge-studio/en-klue2-types.json" download="en-klue2-types.json">en-klue2-types.json <img src="../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a> file to your computer. This file contains an example KLUE type system.
-1. Click **Assets**> **Entity Types**.
+1. Click **Assets** > **Entity Types**.
 1. On the Entity Types page, click **Upload**.
 1. Upload the `en-klue2-types.json` file from your computer. The uploaded type system is displayed in the table.
 1. Browse the type system so you can see the data that was uploaded.

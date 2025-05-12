@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-09-16"
+  years: 2015, 2022
+lastupdated: "2022-05-26"
 
 keywords: faqs, Frequently Asked Questions, Watson Knowledge Studio
 
@@ -22,6 +22,9 @@ subcollection: watson-knowledge-studio
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:faq: data-hd-content-type='faq'}
+
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/knowledge-studio?topic=knowledge-studio-troubleshooting).
+{: tip}
 
 # FAQs for {{site.data.keyword.knowledgestudioshort}}
 {: #wks-faqs}
@@ -55,7 +58,7 @@ Deployment of models across regions is not supported. A custom model can only be
 {: faq}
 
 At this time, there is no API to interact with {{site.data.keyword.knowledgestudioshort}}.
-To launch the {{site.data.keyword.knowledgestudioshort}} application, you click **Launch tool** from within the Manage page for the {{site.data.keyword.knowledgestudioshort}} service instance in the {{site.data.keyword.cloud_notm}} console.  Or you can copy the tool URL and use it to launch the application directly.  For details, see [Launching the Knowledge Studio application](docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks_tutintro#launching-the-knowledge-studio-application).
+To launch the {{site.data.keyword.knowledgestudioshort}} application, you click **Launch tool** from within the Manage page for the {{site.data.keyword.knowledgestudioshort}} service instance in the {{site.data.keyword.cloud_notm}} console.  Or you can copy the tool URL and use it to launch the application directly.
 
 ## Can I change from a Standard to Lite plan?
 {: #wks_plan}

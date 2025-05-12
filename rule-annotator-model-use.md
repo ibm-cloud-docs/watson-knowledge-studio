@@ -1,15 +1,27 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-04-06"
-
+  years: 2015, 2021
+lastupdated: "2021-05-05"
 
 subcollection: watson-knowledge-studio
 
 ---
 
-{{site.data.keyword.attribute-definition-list}}
+{:shortdesc: .shortdesc}
+{:external: target="_blank" .external}
+{:deprecated: .deprecated}
+{:important: .important}
+{:note: .note}
+{:tip: .tip}
+{:preview: .preview}
+{:beta: .beta}
+{:pre: .pre}
+{:codeblock: .codeblock}
+{:screen: .screen}
+
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/knowledge-studio?topic=knowledge-studio-wks_rule_publish).
+{: tip}
 
 # Using the rule-based model
 {: #wks_rule_publish}
@@ -42,7 +54,7 @@ You must have administrative access to a {{site.data.keyword.watson}} {{site.dat
 ### Procedure
 {: #wks_rule_discovery_procedure}
 
-To deploy a rule-based model to {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}}, complete the following steps:
+To deploy a rule-based model to {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}} , complete the following steps:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager, and select your workspace.
 1. Select the **Rule-based Model** > **Versions** > **Rule-based Model** tab.
@@ -59,25 +71,12 @@ To deploy a rule-based model to {{site.data.keyword.watson}} {{site.data.keyword
 
     If the model is still being deployed, the status indicates "publishing". After deployment completes, the status changes to "available" if the deployment was successful, or "error" if problems occurred.
 
-    Once available, make a note of the model ID (model_id).
+    Once available, make a note of the model ID (model_id). You will provide this ID to the {{site.data.keyword.discoveryshort}} service to enable the service to use your custom model.
 
 ### What to do next
 {: #wks_rule_discovery_next}
 
-To use the model, you must export the model, and then import it into {{site.data.keyword.discoveryshort}}.
-
-1. Select the **Rule-based Model** > **Versions** > **Rule-based Model** tab.
-1. Click **Export current model**.
-
-    If you have a Lite plan subscription, no export option is available.
-
-    The model is saved as a PEAR file, and you are prompted to download the file. A PEAR (Processing Engine ARchive) file is the UIMA standard packaging format for UIMA components. The model is saved in PEAR format so it can be distributed and reused within UIMA applications.
-
-1. Download the file to your local system.
-1. From the {{site.data.keyword.discoveryshort}} service, follow the steps to create a Machine Learning enrichment, which include uploading the PEAR file. For more details, see [Machine Learning models](/docs/discovery-data?topic=discovery-data-domain#machinelearning){: external} in the {{site.data.keyword.discoveryshort}} v2 documentation.
-
-If you're using a {{site.data.keyword.discoveryshort}} v1 service instance, you must provide the model ID when it is requested during the {{site.data.keyword.discoveryshort}} service enrichment configuration process. For more information, see [Integrating your custom model with the {{site.data.keyword.discoveryshort}} tooling](/docs/discovery?topic=discovery-integrating-with-wks#integrate-customtooling){: external} in the {{site.data.keyword.discoveryshort}} v1 documentation.
-{: note}
+To use the deployed model, you must provide the model ID when it is requested during the {{site.data.keyword.discoveryshort}} service enrichment configuration process.
 
 ## Deploying a rule-based model to IBM Watson Natural Language Understanding
 {: #wks_rule_nlu}

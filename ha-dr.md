@@ -26,7 +26,7 @@ subcollection: watson-knowledge-studio
 {{site.data.keyword.knowledgestudiofull}} is highly available within multiple {{site.data.keyword.cloud_notm}} locations (for example, Dallas and Washington, DC). However, recovering from potential disasters that affect an entire location requires planning and preparation.
 {: shortdesc}
 
-You are responsible for understanding your configuration, customization, and usage of the service. You are also responsible for being ready to re-create an instance of the service in a new location and to restore your data in any location. See [How do I ensure zero downtime?](/docs/overview?topic=overview-zero-downtime#zero-downtime) for more information.
+You are responsible for understanding your configuration, customization, and usage of the service. You are also responsible for being ready to re-create an instance of the service in a new location and to restore your data in any location. For more information, see [How do I ensure zero downtime?](/docs/overview?topic=overview-zero-downtime#zero-downtime)
 
 ## High availability
 {: #hd-ha}
@@ -53,7 +53,7 @@ Re-creating models from saved data takes time. You can maintain parallel service
 For models, understand which data can be backed up, restore and re-create necessary artifacts, and then retrain and redeploy the models.
 
 #### Backing up data
-{: #hd-bud}
+{: #hd-backup}
 
 Some data can be backed up, and some must be re-created:
 

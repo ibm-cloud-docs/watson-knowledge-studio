@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-03-14"
+  years: 2020
+lastupdated: "2020-08-27"
 
 keywords: troubleshooting access for knowledge studio
 
@@ -21,7 +21,7 @@ subcollection: watson-knowledge-studio
 {:note:.deprecated}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 
-<!-- You must add the troubleshoot content type in your attribute definitions AND on a new line under each troubleshooting topic H1 ID. -->
+
 
 # Why can't users access the application?
 {: #wks_ts_access}

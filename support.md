@@ -10,7 +10,7 @@ subcollection: watson-knowledge-studio
 
 ---
 
-<!-- Common attributes used in the template are defined as follows: -->
+
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 {:external: target="_blank" .external}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-05-24"
+  years: 2015, 2025
+lastupdated: "2025-05-12"
 
 subcollection: watson-knowledge-studio
 
@@ -21,11 +21,26 @@ subcollection: watson-knowledge-studio
 {:screen: .screen}
 {:shortdesc: .shortdesc}
 
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/knowledge-studio?topic=knowledge-studio-release-notes).
+{: tip}
+
 # Release notes
 {: #release-notes}
 
 The following new features and changes to {{site.data.keyword.knowledgestudiofull}} are available.
 {: shortdesc}
+
+## May 2025
+{: #watson-knowledge-studio-may25}
+{: release-note}
+
+Rules editor will be ending on 30 June 2025.
+:    The rules editor feature will end on 30 June 2025. Existing rules can be edited and exported until that time. Rules models that are deployed on your {{site.data.keyword.nlufull}} instances can continue to run after that date. Rules models that are exported can also continue to run in {{site.data.keyword.discoveryfull}} after that date.
+
+    After 30 June 2025, you can use IBM watsonx.ai for [detecting entities with a custom dictionary](https://www.ibm.com/docs/en/watsonx/saas?topic=models-detecting-entities-custom-dictionary){: external} and [regular expressions](https://www.ibm.com/docs/en/watsonx/saas?topic=models-detecting-entities-regular-expressions){: external}.
+
+Dictionary suggestions on the editor UI will be ending on 30 June 2025.
+:    The dictionary suggestions on the dictionary editor UI will be ending on 30 June 2025. After 30 June 2025, you can still edit dictionaries, but the entry suggestions panel is not available after that date.
 
 ## May 2022
 {: #watson-knowledge-studio-may22}
@@ -256,7 +271,7 @@ Navigation changed to better align with the {{site.data.keyword.knowledgestudios
 | Tasks tab | Assets & Tools > Documents | Machine Learning Model > Annotation Tasks |
 | Versions page (machine learning model) | Model Management | Machine Learning Model |
 | Versions page (rule-based model) | Model Management | Rule-based Model |
-{: caption="Table 3. Navigation changes (July 2018)" caption-side="top"}
+{: caption="Navigation changes (July 2018)" caption-side="top"}
 
 ## May 2018
 {: #watson-knowledge-studio-may18}
@@ -405,7 +420,7 @@ Experimental Cloud release
 |----------|----------|----------|
 | _project_ | _workspace_ | This term was changed because {{site.data.keyword.cloud_notm}} also uses the term _project_ |
 | _import_ and _export_ | _upload_ and _download_ | The terms _import_ and _export_ are now referred to as _upload_ and _download_ when used in terms of documents and entity types. The term _export_ is still used when referring to exporting a model to applications such as {{site.data.keyword.watson}} Explorer. |
-{: caption="Table 1. Terminology changes for {{site.data.keyword.cloud_notm}} version" caption-side="top"}
+{: caption="Terminology changes for {{site.data.keyword.cloud_notm}} version" caption-side="top"}
 
 Experimental Cloud release documentation
 :   For the {{site.data.keyword.cloud_notm}} [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks-faqs#experimental) release, some of the documentation task steps do not match the new interface. The documentation matches the interface in {{site.data.keyword.IBM_notm}} Marketplace. The following table summarizes the navigation changes for the [experimental](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks-faqs#experimental) release:
@@ -424,7 +439,7 @@ Experimental Cloud release documentation
 |Statistics tab | Annotator Component > Details | Model Management > Performance |
 |Summary table (from the Statistics tab) | Annotator Component > Details | Model Management > Performance > Detailed Statistics link |
 |Type Mapping tab (for the rule-based model) | Annotator Component > Details | Model Management > Versions > Rule-based model type mapping |
-{: caption="Table 2. Navigation changes for {{site.data.keyword.cloud_notm}} version" caption-side="top"}
+{: caption="Navigation changes for {{site.data.keyword.cloud_notm}} version" caption-side="top"}
 
 ## July 2017
 {: #watson-knowledge-studio-jul17}

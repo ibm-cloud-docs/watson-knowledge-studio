@@ -46,7 +46,7 @@ subcollection: watson-knowledge-studio
 | Admin | Responsible for administrative tasks, which include managing users, resource consumption, and monthly charges. In large team settings, admins rarely participate in the model development process.
 | Project manager | Responsible for the overall organization of the workspace that she or he is assigned to. Tasks include creating the type system, managing assets, managing annotation work, evaluating the machine learning model, and deploying models. Users in this role need industry subject-matter expertise because they create the type system, teach the human annotators how to correctly apply the type system, and evaluate the model quality. |
 | Human annotator | Performs the labeling of the entity mentions and relationship mentions in the training documents that he or she is assigned to. The work is assigned to human annotators and monitored by the project manager. Human annotators may not have industry subject-matter expertise, as long as they are taught by the project manager how to correctly apply the type system. |
-{: caption="Table 1. Role descriptions" caption-side="top"}
+{: caption="Role descriptions" caption-side="top"}
 
 ## {{site.data.keyword.knowledgestudioshort}} role permissions
 {: #permissions}
@@ -67,4 +67,4 @@ To compare the permissions of each role, see the following table. One permission
 | Deploy and undeploy models to runtime services | &checkmark; | &checkmark; |  |
 | Annotate document sets directly | &checkmark; | &checkmark; | |
 | Perform document annotation in annotation tasks | &checkmark; | &checkmark; | &checkmark; |
-{: caption="Table 2. Role permissions" caption-side="top"}
+{: caption="Role permissions" caption-side="top"}

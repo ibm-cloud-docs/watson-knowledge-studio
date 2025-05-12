@@ -20,6 +20,9 @@ subcollection: watson-knowledge-studio
 {:codeblock: .codeblock}
 {:screen: .screen}
 
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/knowledge-studio?topic=knowledge-studio-wks_tutrule_intro).
+{: tip}
+
 # Creating a rule-based model (Experimental)
 {: #wks_tutrule_intro}
 
@@ -259,7 +262,7 @@ For more information about defining rules, see [Defining a rule](/docs/watson-kn
 
 1. In the **Rule name** field, enter `MyDateRule` and click **Save**.
 
-    After you save the rule, it is automatically applied to the sample documents. If the `Technology - computerworld.com` document is still open in the rule editor, you will see that the `February 3, 2009` text in the document is now annotated as a mention of the RuleDate class.
+    After you save the rule, it is automatically applied to the sample documents. If the `Technology - computerworld.com` document is still open in the rule editor, the `February 3, 2009` text in the document is now annotated as a mention of the RuleDate class.
 
     ![Shows text from the "Technology - computerworld.com" document with only the text "February 3, 2009" annotated as a mention of the "RuleDate" class.](images/rule-add10.png "Shows text from the "Technology - computerworld.com" document with only the text "February 3, 2009" annotated as a mention of the "RuleDate" class.")
 
@@ -270,7 +273,7 @@ For more information about defining rules, see [Defining a rule](/docs/watson-kn
 ## Lesson 8: Creating a rule-based model
 {: #wks_tutless_rule8}
 
-In this lesson, you will learn how to create a rule-based model.
+In this lesson, you learn how to create a rule-based model.
 
 ### About this task
 {: #wks_tutless_rule8_about}
@@ -297,7 +300,8 @@ For more information about creating a rule-based model, see [Creating the rule-b
    - Select **Rule-based Model**, then click **Next**.
    - Select the document set that you added to the corpus, `documents-ml.csv`, and click **Run**.
 
-   **Attention**: Run the rule-based model as a pre-annotator only on documents that were not already annotated by humans.
+   Run the rule-based model as a pre-annotator only on documents that were not already annotated by humans.
+   {: important}
 
 ## Tutorial summary
 {: #wks_tutrule_sum}

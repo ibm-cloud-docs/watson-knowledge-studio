@@ -1,14 +1,27 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-04-06"
+  years: 2015, 2021
+lastupdated: "2021-11-15"
 
 subcollection: watson-knowledge-studio
 
 ---
 
-{{site.data.keyword.attribute-definition-list}}
+{:shortdesc: .shortdesc}
+{:external: target="_blank" .external}
+{:deprecated: .deprecated}
+{:important: .important}
+{:note: .note}
+{:tip: .tip}
+{:preview: .preview}
+{:beta: .beta}
+{:pre: .pre}
+{:codeblock: .codeblock}
+{:screen: .screen}
+
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/knowledge-studio?topic=knowledge-studio-publish-ml).
+{: tip}
 
 # Using the machine learning model
 {: #publish-ml}
@@ -29,39 +42,14 @@ You can also pre-annotate new documents with the machine learning model. See [Pr
 
 When you are satisfied with the performance of the model, you can deploy a version of it to {{site.data.keyword.IBM_notm}} {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}}. This feature enables your applications to use the deployed machine learning model to enrich the insights that you get from your data to include the recognition of concepts and relations that are relevant to your domain.
 
-### About this task
-{: #wks_madiscovery_about}
 
-When you deploy the machine learning model, you select the version of it that you want to deploy.
 
 ### Procedure
 {: #wks_madiscovery_procedure}
 
-To deploy a machine learning model, complete the following steps:
+To deploy a machine learning model to {{site.data.keyword.watson}} {{site.data.keyword.discoveryshort}}, complete the following steps:
 
 1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator or project manager, and select your workspace.
-1. Select **Machine Learning Model** > **Versions**.
-1. Choose the version of the model that you want to deploy.
-
-    If there is only one working version of the model, create a snapshot of the current model. This versions the model, which enables you to deploy one version, while you continue to improve the current version. The option to deploy does not appear until you create at least one version.
-
-    Each version can be deployed to any number of service instances. Each deployed instance of a model version is given a unique **Model ID**, but is identical in all other ways.
-    {: tip}
-
-1. Click **Deploy**, choose to deploy it to {{site.data.keyword.discoveryshort}}, and then click **Next**.
-1. Select the {{site.data.keyword.cloud_notm}} space and instance. If necessary, select a different region.
-1. Click **Deploy**.
-1. The deployment process might take a few minutes. To check the status of the deployment, click **Status** on the **Versions** tab next to the version that you deployed.
-
-    If the model is still being deployed, the status indicates "deploying". After deployment completes, the status changes to "available" or "deployed" if the deployment was successful, or "error" if problems occurred.
-
-    Once available, make a note of the model ID (model_id).
-
-### What to do next
-{: #wks_madiscovery_next}
-
-To use the model, you must export the model, and then import it into {{site.data.keyword.discoveryshort}}.
-
 1. Select **Machine Learning Model** > **Versions**.
 1. Click **Export current model**.
 
@@ -70,10 +58,14 @@ To use the model, you must export the model, and then import it into {{site.data
     The model is saved as a ZIP file, and you are prompted to download the file.
 
 1. Download the file to your local system.
-1. From the {{site.data.keyword.discoveryshort}} service, follow the steps to create a Machine Learning enrichment, which include uploading the ZIP file. For more details, see [Machine Learning models](/docs/discovery-data?topic=discovery-data-domain#machinelearning){: external} in the {{site.data.keyword.discoveryshort}} v2 documentation.
+1. From the {{site.data.keyword.discoveryshort}} application, import the model.
 
-If you're using a {{site.data.keyword.discoveryshort}} v1 service instance, you must provide the model ID when it is requested during the {{site.data.keyword.discoveryshort}} service enrichment configuration process. For more information, see [Integrating your custom model with the {{site.data.keyword.discoveryshort}} tooling](/docs/discovery?topic=discovery-integrating-with-wks#integrate-customtooling){: external} in the {{site.data.keyword.discoveryshort}} v1 documentation.
-{: note}
+
+
+### What to do next
+{: #wks_madiscovery_next}
+
+See [Machine Learning models](/docs/discovery-data?topic=discovery-data-domain#machinelearning) in the {{site.data.keyword.discoveryshort}} documentation.
 
 ## Deploying a machine learning model to IBM Watson Natural Language Understanding
 {: #wks_manlu}

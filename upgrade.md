@@ -20,6 +20,9 @@ subcollection: watson-knowledge-studio
 {:codeblock: .codeblock}
 {:screen: .screen}
 
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.cloud_notm}} Marketplace, [click this link](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-upgrade).
+{: tip}
+
 # Upgrading your pricing plan
 {: #upgrade}
 

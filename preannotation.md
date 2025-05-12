@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-05-26"
+  years: 2015, 2025
+lastupdated: "2025-05-12"
 
 subcollection: watson-knowledge-studio
 
@@ -19,6 +19,9 @@ subcollection: watson-knowledge-studio
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
+
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/knowledge-studio?topic=knowledge-studio-preannotation).
+{: tip}
 
 # Bootstrapping annotation
 {: #preannotation}
@@ -223,6 +226,9 @@ To use an existing machine learning model to pre-annotate documents:
 ## Pre-annotating documents with the rule-based model
 {: #wks_preannotrule}
 
+Rules editor will be ending on 30 June 2025. See [Release notes](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-release-notes) for more details.
+{: important}
+
 You can use an existing rule-based model to pre-annotate documents that you add to your corpus.
 
 ### Procedure
@@ -236,6 +242,7 @@ To use the rule-based model to pre-annotate documents, complete the following st
 
     You can also open the mapping page by selecting the **Rule-based Model** > **Versions** > **Rule-based Model** tab.
     {: note}
+
 1. Click **Edit** for each entity type you want to map.
     - The drop-down list of the **Class Name** column is pre-populated with classes that are associated with the rule-based model.
     - You must map at least one entity type to a class.

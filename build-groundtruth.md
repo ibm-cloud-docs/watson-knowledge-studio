@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-03-14"
+  years: 2015, 2021
+lastupdated: "2021-11-15"
 
 subcollection: watson-knowledge-studio
 
@@ -19,6 +19,9 @@ subcollection: watson-knowledge-studio
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
+
+This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.data.keyword.cloud}}. To see the documentation for the previous version of {{site.data.keyword.knowledgestudioshort}} on {{site.data.keyword.IBM_notm}} Marketplace, [click this link](/docs/knowledge-studio?topic=knowledge-studio-build-groundtruth).
+{: tip}
 
 # Building the ground truth
 {: #build-groundtruth}
