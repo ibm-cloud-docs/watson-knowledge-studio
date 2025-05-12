@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-05-06"
+lastupdated: "2025-05-12"
 
 subcollection: watson-knowledge-studio
 
@@ -30,7 +30,17 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 The following new features and changes to {{site.data.keyword.knowledgestudiofull}} are available.
 {: shortdesc}
 
+## May 2025
+{: #watson-knowledge-studio-may25}
+{: release-note}
 
+Rules editor will be ending on 30 June 2025.
+:    The rules editor feature will end on 30 June 2025. Existing rules can be edited and exported until that time. Rules models that are deployed on your {{site.data.keyword.nlufull}} instances can continue to run after that date. Rules models that are exported can also continue to run in {{site.data.keyword.discoveryfull}} after that date.
+
+    After 30 June 2025, you can use IBM watsonx.ai for [detecting entities with a custom dictionary](https://www.ibm.com/docs/en/watsonx/saas?topic=models-detecting-entities-custom-dictionary){: external} and [regular expressions](https://www.ibm.com/docs/en/watsonx/saas?topic=models-detecting-entities-regular-expressions){: external}.
+
+Dictionary suggestions on the editor UI will be ending on 30 June 2025.
+:    The dictionary suggestions on the dictionary editor UI will be ending on 30 June 2025. After 30 June 2025, you can still edit dictionaries, but the entry suggestions panel is not available after that date.
 
 ## May 2022
 {: #watson-knowledge-studio-may22}

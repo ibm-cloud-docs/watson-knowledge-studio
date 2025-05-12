@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-05-06"
+lastupdated: "2025-05-12"
 
 subcollection: watson-knowledge-studio
 
@@ -26,7 +26,8 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 # Rules
 {: #rule-annotator}
 
-
+Rules editor will be ending on 30 June 2025. See [Release notes](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-release-notes) for more details.
+{: important}
 
 Create a rule-based model that can recognize patterns in your documents. Use rules to capture patterns that occur in documents and convey information about underlying entity types.
 {: shortdesc}

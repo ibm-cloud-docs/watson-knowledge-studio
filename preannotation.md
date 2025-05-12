@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-05-06"
+lastupdated: "2025-05-12"
 
 subcollection: watson-knowledge-studio
 
@@ -226,7 +226,8 @@ To use an existing machine learning model to pre-annotate documents:
 ## Pre-annotating documents with the rule-based model
 {: #wks_preannotrule}
 
-
+Rules editor will be ending on 30 June 2025. See [Release notes](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-release-notes) for more details.
+{: important}
 
 You can use an existing rule-based model to pre-annotate documents that you add to your corpus.
 

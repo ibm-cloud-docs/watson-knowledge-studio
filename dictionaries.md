@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-05-06"
+lastupdated: "2025-05-12"
 
 subcollection: watson-knowledge-studio
 
@@ -229,7 +229,8 @@ Run the pre-annotator, which uses the dictionaries that you created to do a prel
 ## Adding dictionary suggestions
 {: #adding-dictionary-suggestions}
 
-
+Dictionary suggestions on the editor UI will be ending on 30 June 2025. See [Release notes](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-release-notes) for more details.
+{: important}
 
 As you add entries to your dictionary, {{site.data.keyword.knowledgestudioshort}} searches the documents in your workspace for similar dictionary entries that might be useful to you.
 
