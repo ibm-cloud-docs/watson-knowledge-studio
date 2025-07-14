@@ -19,9 +19,7 @@ toc:
           topics:
           - tutorials-create-project.md
           - tutorials-create-ml-model.md
-          - tutorials-create-rule-model.md
           - tutorials-bootstrap-annotation.md
-          - create-advanced-rules-model.md
       - index.md
       - system-requirements.md
       - roles.md
@@ -42,14 +40,6 @@ toc:
           - dictionaries.md
       - language-support-arabic.md
       - topicgroup:
-          label: Creating a rule-based model
-          topics:
-          - rule-annotator.md
-          - rule-annotator-add-doc.md
-          - rule-annotator-define-rule.md
-          - rule-annotator-model-create.md
-          - rule-annotator-model-use.md
-      - topicgroup:
           label: Creating a machine learning model
           topics:
           - ml-annotator.md
@@ -63,7 +53,6 @@ toc:
           - improve-ml.md
           - publish-ml.md
       - enabling-cross-sentence-relations.md
-      - managing-projects-and-extractors.md
       - user-guide.md
       - backup-restore.md
       - client-migration.md
