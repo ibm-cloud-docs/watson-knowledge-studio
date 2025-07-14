@@ -66,7 +66,6 @@ Alternatively, you can upload already-annotated documents, and use them to start
 - [{{site.data.keyword.nlushort}}](#wks_preannotnlu)
 - [Dictionaries](#wks_preannot)
 - [Machine learning model](#wks_preannotsire)
-- [Rules-based model](#wks_preannotrule)
 
 ### Configuring the order of pre-annotators
 {: #preannotation-order}
@@ -222,38 +221,6 @@ To use an existing machine learning model to pre-annotate documents:
 1. Select the check box for each document set that you want to pre-annotate and click **Run**.
 
     Pre-annotation is applied to individual documents without regard for the various document sets or annotation sets that a document might belong to. A document that overlaps between a selected document set and an unselected document set will be pre-annotated in both document sets.
-
-## Pre-annotating documents with the rule-based model
-{: #wks_preannotrule}
-
-Rules editor will be ending on 30 June 2025. See [Release notes](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-release-notes) for more details.
-{: important}
-
-You can use an existing rule-based model to pre-annotate documents that you add to your corpus.
-
-### Procedure
-{: #wks_preannotrule_procedure}
-
-To use the rule-based model to pre-annotate documents, complete the following steps:
-
-1. Log in as a {{site.data.keyword.knowledgestudioshort}} administrator and select your workspace.
-1. Go to the **Machine Learning Model** > **Pre-annotation** page.
-1. Click the overflow menu button in the Rule-based Model row in the page, then click **Map entity types and classes** to map entity types that you defined in the {{site.data.keyword.knowledgestudioshort}} type system to one or more rule-based model classes.
-
-    You can also open the mapping page by selecting the **Rule-based Model** > **Versions** > **Rule-based Model** tab.
-    {: note}
-
-1. Click **Edit** for each entity type you want to map.
-    - The drop-down list of the **Class Name** column is pre-populated with classes that are associated with the rule-based model.
-    - You must map at least one entity type to a class.
-1. On the **Machine Learning Model** > **Pre-annotation** page, click **Run Pre-annotators**.
-
-    The Rule-based Model option is not available until you map at least one entity type to a class.
-1. If you want to erase existing annotations made by pre-annotators before running the pre-annotator, select **Wipe previous pre-annotation results**. Human annotations are preserved even if this is selected.
-1. Select the document sets or annotation sets that you want to pre-annotate.
-1. Click **Run**.
-
-    Pre-annotation is applied to individual documents without regard for the various document sets that a document might belong to. A document that overlaps between a selected document set and an unselected document will appear pre-annotated in both document sets.
 
 ## Uploading pre-annotated documents
 {: #wks_uima}
