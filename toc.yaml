@@ -5,7 +5,7 @@ toc:
     version: 2
     category: ai
     audience: service
-    href: /docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks_overview_full
+    href: /docs/watson-knowledge-studio
     console-page: /catalog/services/knowledge-studio
     product-page: https://www.ibm.com/cloud/watson-knowledge-studio
     path: watson-knowledge-studio
@@ -74,8 +74,8 @@ toc:
       topics:
       - troubleshooting.md
       - topicgroup:
-         label: Troubleshooting
-         topics:
+          label: Troubleshooting
+          topics:
           - user-guide-help.md
           - ts-storage.md
           - ts-access.md
