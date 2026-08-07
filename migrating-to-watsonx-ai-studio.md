@@ -37,7 +37,7 @@ subcollection: watson-knowledge-studio
 IBM Watson Knowledge Studio (WKS) is deprecated. The following timeline applies to all existing WKS customers:
 
 |Milestone|Date|Description|
-|---|---|---|---|
+|---|---|---|
 |End of marketing|31 July 2026|No new WKS instances can be provisioned or downloaded.|
 |End of support|31 July 2027|WKS can still be used but IBM support is no longer available.|
 |End of life|31 January 2028|WKS is decommissioned from IBM Cloud. All instances are permanently withdrawn.|
