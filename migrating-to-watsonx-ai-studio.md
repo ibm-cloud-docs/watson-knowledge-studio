@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2026
-lastupdated: "2026-07-17"
+lastupdated: "2026-08-07"
 
 subcollection: watson-knowledge-studio
 
@@ -34,11 +34,22 @@ subcollection: watson-knowledge-studio
 ## Overview
 {: #overview}
 
-IBM Watson Knowledge Studio (WKS) is a tool for training custom natural language processing (NLP) models to identify domain-specific entities and relations in unstructured text. WKS provided an end-to-end workflow including annotation, model training, and model deployment.
+IBM Watson Knowledge Studio (WKS) is deprecated. The following timeline applies to all existing WKS customers:
 
-With the deprecation of WKS, you can replicate this functionality by using watsonx.ai Studio with Watson NLP. Watson NLP is available as a Python library in watsonx.ai Studio and supports entity extraction, rule-based annotation, and model deployment as Python functions.
+|Milestone|Date|Description|
+|---|---|---|---|
+|End of marketing|31 July 2026|No new WKS instances can be provisioned or downloaded.|
+|End of support|31 July 2027|WKS can still be used but IBM support is no longer available.|
+|End of life|31 January 2028|WKS is decommissioned from IBM Cloud. All instances are permanently withdrawn.|
 
-**Note:** IBM does not provide a replacement UI product for the annotation (data labeling) workflow in WKS. You must migrate annotation workflows to supported open source tools. For more information, see the following Annotation sections.
+Existing customers must migrate their workloads before 31 January 2028.
+
+IBM Watson Knowledge Studio (WKS) is a tool for training custom natural language processing (NLP) models to identify domain-specific entities and relations in unstructured text. WKS provided a browser-based environment for managing type systems, annotating documents, training machine learning models, and deploying entity and relation extractors to services such as IBM Watson Natural Language Understanding and IBM Watson Discovery.
+
+The following migration steps describe how to migrate from WKS to IBM watsonx.ai and help you understand the functional mapping between WKS capabilities and watsonx.ai capabilities. The recommended migration path is to use watsonx.ai Prompt Lab for prompt engineering and watsonx.ai Tuning Studio for prompt tuning, by using IBM Granite foundation models. These capabilities replace the model training and customization functions that WKS provided.
+
+**Note:** IBM is not providing a replacement for the WKS annotation editor in the IBM Cloud UI. Customers who require text annotation tooling must use open-source tools such as Doccano or BRAT to prepare labeled training data before importing it into watsonx.ai.
+{: note}
 
 ## Migration process
 {: #migration-process}
