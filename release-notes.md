@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-05-12"
+lastupdated: "2026-08-07"
 
 subcollection: watson-knowledge-studio
 
@@ -29,6 +29,13 @@ This documentation is for {{site.data.keyword.knowledgestudiofull}} on {{site.da
 
 The following new features and changes to {{site.data.keyword.knowledgestudiofull}} are available.
 {: shortdesc}
+
+## July 2026
+{: #watson-knowledge-studio-july26}
+{: release-note}
+
+Migrate from IBM Watson Knowledge Studio to watsonx.ai
+:    IBM Watson Knowledge Studio is deprecated. Existing customers must migrate their workloads before the service is removed from IBM Cloud on 31 January 2028. The migration documentation includes the service withdrawal timeline and the guidance for using watsonx.ai Prmopt Lab for prompt engineering and watsonx.ai Tuning Studio for prompt tuning with IBM Granite foundation models. See [Migrating from Watson Knowledge Studio to watsonx.ai Studio with Watson NLP](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-migrating-from-watson-knowledge-studio-to-watsonxai-studio-with-watson-nlp).
 
 ## May 2025
 {: #watson-knowledge-studio-may25}
